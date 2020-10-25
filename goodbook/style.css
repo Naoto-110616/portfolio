@@ -1,0 +1,227 @@
+body{
+    font-family: 'Trebuchet;
+}
+.home{
+    background: #f0f2f5;
+    padding-top: 72px;
+    padding-bottom: 112px;
+    width: 100%;
+    height: 536px;
+}
+.center{
+    width: 980px;
+    height:420px;
+    margin: 0 auto;
+    padding: 20px 0px;
+}
+.massage{
+    text-align: left;
+}
+.formentire{
+    display: block;
+    height: 456px;
+    width: 396px;
+    float:right;
+}
+.form{
+    background: #fff;
+    width: 396px;
+    height: 328px;
+    margin: none;
+    display:inline-block;
+    text-align:center;
+    padding-top: 10px;
+    padding-bottom: 14px;
+    margin-top: 40px;
+    box-shadow: 0 0 8px gray;
+}
+.icon{
+    width: 250px;
+    padding-top: 40px;
+}
+.left{
+    display:inline-block;
+    width:50%;
+}
+.logo{
+    text-align: left;
+}
+.massage1{
+    font-size: 23px;
+}
+.email,.password{
+    width: 320px;
+    height: 22px;
+    padding: 14px 16px;
+    font-size: 17px;
+    border: 1px solid #dddfe2;
+}
+.emaildiv,.passworddiv{
+    padding: 6px 0;
+}
+.logindiv{
+    padding-top: 6px;
+}
+.login{
+    width: 356px;
+    height: 48px;
+    padding: 0 16px;
+    background: #1877f2;
+    color: #fff;
+    display: inline-block;
+    font-size: 20px;
+    border: none;
+    font-weight: bold;
+}
+.login:hover{
+    background: #0B61CA;
+}
+.forgotdiv{
+    margin-top: 16px;
+}
+.forgot{
+    color:#1877f2;
+    font-size: 13px;
+}
+.NewAccountdiv{
+    padding-top: 6px;
+    margin-top: 14px;
+}
+.NewAccount{
+    color:#fff;
+    background: #42b72a;
+    width: 189px;
+    height: 48px;
+    display: inline-block;
+    font-size: 15px;
+    border: none;
+    font-weight: bold;
+    line-height: 48px;
+}
+.NewAccount:hover{
+    background: #348C20;
+    text-decoration: none;
+}
+.form,.email,.password,.login,.NewAccount{
+    border-radius: 8px;
+}
+.createPagediv{
+    text-align: center;
+    font-size: 13px;
+    height: 20px;
+    margin-top: 28px;
+}
+.createPage{
+    color: #000;
+    font-size:13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.foo{
+    width: 100%;
+    height: 100%;
+}
+.foodiv{
+    width: 980px;
+    height: 136px;
+    margin: 0 auto;
+}
+.language{
+    list-style-type: none;
+    font-size: 12px;
+    height:20px;
+    text-align: left;
+    padding-top: 25px;
+}
+.listdiv{
+    width: 980px;
+}
+.list{
+    width: 1000px;
+    font-size: 12px;
+    text-align: left;
+    margin-top: 15px;
+    margin-left: -20px;
+}
+ul, footer a, .span{
+    color:#8a8d91;
+}
+.list li{
+    display: inline-block;
+    padding-left: 20px;
+    line-height: 1.6;
+}
+.language li{
+    display: inline-block;
+    padding-left: 10px;
+}
+.language li:first-child{
+    padding-left: 0;
+}
+.spandiv{
+    margin-top: 20px;
+}
+.span{
+    font-size: 11px;
+}
+a:link{
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+a:active{
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+input[type="text"]:focus {
+    border: 1px solid #1877f2;
+    outline: 0;
+}
+:focus::placeholder{
+    color: #A3AFC1;
+}
+.boder1{
+    padding-top: 8px;
+    border-bottom: 1px solid #A3AFC1;
+    display: block;
+    width: 356px;
+    text-align: center;
+    margin:8px 20px;
+}
+.boder1,.boder2{
+    padding-top: 8px;
+    border-bottom: 1px solid #DDE1E8;
+}
+.portfolio-top{
+    margin-top: 16px;
+    padding-bottom: 12px;
+}
+.portfolio{
+    font-size: 11px;
+}
+
+/*バリデーション*/
+.help-block{
+    font-size:14px;
+    margin-left: 10px;
+}
+/*エラー時*/
+.has-error input, .has-error textarea{
+    border: 1px solid #ff4d4b;
+}
+.has-error .help-block, .has-error label{
+    color: #ff4d4b;
+}
+/*サクセス時*/
+.has-success input, .has-success textarea{
+    border: 1px solid #2fb4ce;
+}
+.has-success .help-block, .has-success label{
+    color: #2fb4ce;
+}
