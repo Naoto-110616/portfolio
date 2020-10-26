@@ -69,7 +69,7 @@
                     <li>CSS</li>
                 </ul>
                 <h3>Github Repo</h3>
-                <div>
+                <div class="githab_url_div">
                     <a href="https://github.com/Naoto-110616/portfolio">https://github.com/Naoto-110616/portfolio</a>
                 </div>
             </section>
