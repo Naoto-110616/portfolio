@@ -68,7 +68,7 @@
                     <li>HTML</li>
                     <li>CSS</li>
                 </ul>
-                <h2>Github Repo</h2>
+                <h3>Github Repo</h3>
                 <div>
                     <a href="https://github.com/Naoto-110616/portfolio">https://github.com/Naoto-110616/portfolio</a>
                 </div>
