@@ -83,6 +83,9 @@ table td, table th{
 .icon{
     width: 250px;
 }
+.github_urldiv{
+    margin-top: 10px;
+}
 .footer {
     background-color: #333;
     color: #fff;
