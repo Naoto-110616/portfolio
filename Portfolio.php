@@ -23,7 +23,9 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><a href="skillsheet/skillsheet.php">Skillsheet</a></td>
+                                <td>
+                                <a href="skillsheet/skillsheet.php">Skillsheet</a>
+                                </td>
                                 <td>8時間</td>
                                 <td>
                                     <div>HTML</div>
@@ -32,7 +34,9 @@
                                 <td>模写</td>
                             </tr>
                             <tr>
-                                <td><a href="goodbook/login.html">goodbook</a></td>
+                                <td>
+                                <a href="goodbook/login.html">goodbook</a>
+                                </td>
                                 <td>8時間</td>
                                 <td>
                                     <div>HTML</div>
