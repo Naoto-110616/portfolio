@@ -1,0 +1,32 @@
+body{
+    font-family: Verdana;
+}
+.head_left{
+    width: 320px;
+    height: 60px;
+    background: black;
+    position: fixed;
+    display: flex;
+}
+.icon_div{
+    margin: auto;
+}
+.icon{
+    width: 70px;
+}
+.serch_div{
+    margin: auto;
+}
+.serch{
+    width: 240px;
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+
+}
+.ul_div{
+    width: 1680px;
+    height: 60px;
+    background: red;
+    display: flex;
+}

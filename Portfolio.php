@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header><h1><a href="Portfolio.php">Portfolio</a></h1></header>
@@ -28,8 +28,7 @@
                                 </td>
                                 <td>8時間</td>
                                 <td>
-                                    <div>HTML</div>
-                                    <div>CSS</div>
+                                    <div>HTML/CSS</div>
                                 </td>
                                 <td>模写</td>
                             </tr>
@@ -39,8 +38,7 @@
                                 </td>
                                 <td>8時間</td>
                                 <td>
-                                    <div>HTML</div>
-                                    <div>CSS</div>
+                                    <div>HTML/CSS</div>
                                 </td>
                                 <td>模写</td>
                             </tr>
@@ -53,6 +51,7 @@
                                     <div>javascript</div>
                                     <div>jQuaery</div>
                                     <div>SQL</div>
+                                    <div>Github</div>
                                 </td>
                                 <td>模写</td>
                             </tr>
