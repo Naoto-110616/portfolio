@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Facebook - Login</title>
+    <title>Facebook - Registration</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
 </head>
@@ -27,27 +27,28 @@
                     <form action="/login/">
                         <div>
                             <div class="emaildiv">
-                                <input class="email" type="text" name="email" id="email" placeholder="Email or Phone Number" autofocus="1">
+                                <input class="email" type="text" name="email" id="email" placeholder="Email" autofocus="1">
                                 <div class="help-block"></div>
                             </div>
                             <div class="passworddiv">
                                 <input class="password" type="text" name="password" id="password" placeholder="Password">
                                 <div class="help-block"></div>
                             </div>
+                            <div class="password_retypediv">
+                                <input class="password_retype" type="text" name="password_retype" id="password_retype" placeholder="Password retype">
+                                <div class="help-block"></div>
+                            </div>
                         </div>
                         <div class="logindiv">
-                            <button class="login" value="Log In" name="login" type="button" style="cursor:pointer" onclick="location.href='homepage.html'">
-                                Log In
+                            <button class="login" value="Log In" name="login" type="button" style="cursor:pointer" onclick="location.href='login.html'">
+                                Sing Up
                             </button>
-                        </div>
-                        <div class="forgotdiv">
-                            <a href="" class="forgot">Forgot Password?</a>
                         </div>
                         <div class="boder1">
                             <p class="box"></p>
                         </div>
-                        <div class="NewAccountdiv">
-                            <a href="registration_page.php" class="NewAccount">Creat New Account</a>
+                        <div class="login_pagediv">
+                            <a href="login.html" class="login_page">Login Page</a>
                         </div>
                     </form>
                 </div>
