@@ -1,3 +1,70 @@
+<?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
+
+if(!empty($_POST)){
+    
+    define('MSG01','入力必須');
+    define('MSG02','Emailの形式ではありません');
+    define('MSG03','パスワード(再入力)があっていません');
+    define('MSG04','半角英数字のみ');
+    
+    $err_msg = array();
+    
+    if(empty($_POST['email'])){
+        $err_msg['email'] = MSG01;
+    }
+    if(empty($_POST['pass'])){
+        $err_msg['pass'] = MSG01;
+    }
+    if(empty($_POST['pass_retype'])){
+        $err_msg['pass_retype'] = MSG01;
+    }
+    
+    if(empty($err_msg)){
+        
+        $email = $_POST['email'];
+        $pass = $_POST['pass'];
+        $pass_re = $_POST['pass_retype'];
+        
+        if(!preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/", $email)){
+            $err_msg['email'] = MSG02;
+        }
+        if($pass !== $pass_re){
+            $err_msg['pass'] = MSG03;
+        }
+        
+        if(empty($err_msg)){
+            
+            if(!preg_match("/^[a-zA-Z0-9]+$/",$pass)){
+                $err_msg['pass'] = MSG04;
+            }
+            if(empty($err_msg)){
+                
+                $dsn = 'mysql:dbname=goodbook;host=localhost;charset=utf8';
+                $user = 'root';
+                $password = 'root';
+                $options =array(
+                    
+                    PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,
+                    PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC,
+                    PDO::MYSQL_ATTR_USE_BUFFERED_QUERY=>true,
+                    );
+                
+                    $dbh = new PDO($dsn, $user, $password, $options);
+                    
+                    $stmt = $dbh->prepare('INSERT INTO users (email, pass, login_time) VALES (:email, :pass, :login_time)');
+                    
+                    $stmt->execute(array(':email'=>$email, ':pass'=>$pass, 'login_time'=>date('Y-m-d H:i:s')));
+                    
+                    header('Location:login.php');
+            }
+        }
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -24,31 +91,44 @@
             </div>
             <div class="formentire">
                 <div class="form">
-                    <form action="/login/">
+                    <form method="post">
                         <div>
                             <div class="emaildiv">
-                                <input class="email" type="text" name="email" id="email" placeholder="Email" autofocus="1">
+                                <input class="email" type="text" name="email" id="email" placeholder="Email" autofocus="1" value="<?php if(!empty($_POST['email'])){
+                                    echo $_POST['email'];
+                            }?>">
                                 <div class="help-block"></div>
+                                <span class="err_msg"><?php if(!empty($err_msg['email'])){
+                                    echo $err_msg['email'];
+                            }?></span>
                             </div>
                             <div class="passworddiv">
-                                <input class="password" type="text" name="password" id="password" placeholder="Password">
+                                <input class="password" type="password" name="pass" placeholder="Password" value="<?php if(!empty($_POST['pass'])){
+                                    echo $_POST['pass'];
+                            }?>">
                                 <div class="help-block"></div>
+                                <span class="err_msg"><?php if(!empty($err_msg['pass'])){
+                                    echo $err_msg['pass'];
+                            }?></span>
                             </div>
                             <div class="password_retypediv">
-                                <input class="password_retype" type="text" name="password_retype" id="password_retype" placeholder="Password retype">
+                                <input class="password_retype" type="password" name="pass_retype" placeholder="Password retype" value="<?php if(!empty($_POST['pass_retype'])){
+                                    echo $_POST['pass_retype'];
+                            }?>">
                                 <div class="help-block"></div>
+                                <span class="err_msg"><?php if(!empty($err_msg['pass_retype'])){
+                                    echo $err_msg['pass_retype'];
+                            }?></span>
                             </div>
                         </div>
-                        <div class="logindiv">
-                            <button class="login" value="Log In" name="login" type="button" style="cursor:pointer" onclick="location.href='login.html'">
-                                Sing Up
-                            </button>
+                        <div class="singupdiv">
+                            <input class="singup" value="Sing Up" name="singup" type="submit" style="cursor:pointer" onclick="location.href='login.html'">
                         </div>
                         <div class="boder1">
                             <p class="box"></p>
                         </div>
                         <div class="login_pagediv">
-                            <a href="login.html" class="login_page">Login Page</a>
+                            <a href="login.php" class="login_page">Login Page</a>
                         </div>
                     </form>
                 </div>

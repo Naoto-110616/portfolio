@@ -32,7 +32,6 @@ body {
 .form {
     background: #fff;
     width: 396px;
-    height: 328px;
     margin: none;
     display: inline-block;
     text-align: center;
@@ -63,8 +62,7 @@ body {
 .email,
 .password,
 .password_retype {
-    width: 320px;
-    height: 22px;
+    width: 80%;
     padding: 14px 16px;
     font-size: 17px;
     border: 1px solid #dddfe2;
@@ -76,12 +74,14 @@ body {
     padding: 6px 0;
 }
 
-.logindiv {
+.logindiv,
+.singupdiv {
     padding-top: 6px;
 }
 
-.login {
-    width: 356px;
+.login,
+.singup {
+    width: 80%;
     height: 48px;
     padding: 0 16px;
     background: #1877f2;
@@ -136,7 +136,8 @@ body {
 .password_retype,
 .login,
 .NewAccount,
-.login_page {
+.login_page,
+.singup {
     border-radius: 8px;
 }
 
@@ -271,6 +272,7 @@ input[type="text"]:focus {
 .help-block {
     font-size: 14px;
     margin-left: 10px;
+    margin-top: 5px;
 }
 
 /*エラー時*/
