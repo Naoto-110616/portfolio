@@ -70,7 +70,7 @@ if(!empty($_POST)){
 
 <head>
     <meta charset="UTF-8">
-    <title>Facebook - Registration</title>
+    <title>goodbook - Registration</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
 </head>
@@ -122,7 +122,7 @@ if(!empty($_POST)){
                             </div>
                         </div>
                         <div class="singupdiv">
-                            <input class="singup" value="Sing Up" name="singup" type="submit" style="cursor:pointer" onclick="location.href='login.html'">
+                            <input class="singup" value="Sing Up" name="singup" type="submit" style="cursor:pointer" onclick="location.href=login.php">
                         </div>
                         <div class="boder1">
                             <p class="box"></p>

@@ -1,9 +1,36 @@
+<?php
+
+error_reporting(E_ALL);
+ini_set("display_errors", 'On');
+
+if(!empty($_POST)){
+    
+    $email = $_POST['email'];
+    $pass = $_POST['pass'];
+    
+    $dsn = 'mysql:dbname=goodbook;host=localhost;charset=utf8';
+    $user= 'root';
+    $password = 'root';
+    $options = array(
+    
+        PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC,
+        PDO::MYSQL_ATTR_USE_BUFFERED_QUERY=>true,
+    );
+    
+    $dbh= new PDO($dsn, $user, $password, $options);
+    
+    $stmt= $dbh->prepare('SELECT * FROM users WHERE email =:email AND pass=:pass')
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
     <meta charset="UTF-8">
-    <title>Facebook - Login</title>
+    <title>goodbook - Login</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
 </head>
@@ -17,28 +44,26 @@
                 </div>
                 <div class="massage">
                     <h2 class="massage1">
-                        Connect with friends and the world <br>
+                        Cannect with friends and the world <br>
                         around you on Facebook.
                     </h2>
                 </div>
             </div>
             <div class="formentire">
                 <div class="form">
-                    <form action="/login/">
+                    <form action="homepage.php" method="post">
                         <div>
                             <div class="emaildiv">
-                                <input class="email" type="text" name="email" id="email" placeholder="Email or Phone Number" autofocus="1">
+                                <input class="email" type="text" name="email" id="email" placeholder="Email or Phone Number" autofocus="1" value="<?php if(!empty($_POST['email'])) echo $_POST['email'];?>">
                                 <div class="help-block"></div>
                             </div>
                             <div class="passworddiv">
-                                <input class="password" type="text" name="password" id="password" placeholder="Password">
+                                <input class="password" type="password" name="password" id="password" placeholder="Password" value="<?php if(!empty($_POST['pass'])) echo $_POST['pass'];?>">
                                 <div class="help-block"></div>
                             </div>
                         </div>
                         <div class="logindiv">
-                            <button class="login" value="Log In" name="login" type="button" style="cursor:pointer" onclick="location.href='homepage.html'">
-                                Log In
-                            </button>
+                            <input class="login " type="submit" value="Login" name='login' style="cursor:pointer" onclick="location.href=homepage.php">
                         </div>
                         <div class="forgotdiv">
                             <a href="" class="forgot">Forgot Password?</a>
