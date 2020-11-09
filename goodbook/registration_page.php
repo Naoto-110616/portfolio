@@ -54,7 +54,7 @@ if(!empty($_POST)){
                 
                     $dbh = new PDO($dsn, $user, $password, $options);
                     
-                    $stmt = $dbh->prepare('INSERT INTO users (email, pass, login_time) VALES (:email, :pass, :login_time)');
+                    $stmt = $dbh->prepare('INSERT INTO users (email, pass, login_time) VALUES (:email, :pass, :login_time)');
                     
                     $stmt->execute(array(':email'=>$email, ':pass'=>$pass, 'login_time'=>date('Y-m-d H:i:s')));
                     
