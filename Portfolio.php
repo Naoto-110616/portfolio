@@ -40,9 +40,12 @@
                                 <td>
                                     <a href="goodbook/login.php">goodbook</a>
                                 </td>
-                                <td>8時間</td>
+                                <td>15日</td>
                                 <td>
                                     <div>HTML/CSS</div>
+                                    <div>javascript</div>
+                                    <div>jQuaery</div>
+                                    <div>PHP</div>
                                 </td>
                                 <td>模写</td>
                             </tr>
@@ -74,6 +77,8 @@
                 <ul>
                     <li>HTML</li>
                     <li>CSS</li>
+                    <li>jQuery</li>
+                    <li>PHP</li>
                 </ul>
                 <h3>Github Repo</h3>
                 <div class="github_urldiv">
