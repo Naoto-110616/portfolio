@@ -11,7 +11,7 @@ if(empty($_SESSION['login'])) header("Location:login.php");
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
@@ -44,6 +44,7 @@ if(empty($_SESSION['login'])) header("Location:login.php");
             <li></li>
         </ul>
     </div>
+
 
     <?php }else{ ?>
 

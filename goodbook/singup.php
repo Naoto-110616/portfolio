@@ -9,6 +9,7 @@ if(!empty($_POST)){
     define('MSG02','Emailの形式ではありません');
     define('MSG03','パスワード(再入力)があっていません');
     define('MSG04','半角英数字のみ');
+    define('MSG05','6文字以上');
     
     $err_msg = array();
     
@@ -39,6 +40,8 @@ if(!empty($_POST)){
             
             if(!preg_match("/^[a-zA-Z0-9]+$/",$pass)){
                 $err_msg['pass'] = MSG04;
+            }elseif(mb_strlen($pass) < 6){
+                $err_msg['pass'] = MSG05;
             }
             if(empty($err_msg)){
                 
@@ -70,7 +73,7 @@ if(!empty($_POST)){
 
 <head>
     <meta charset="UTF-8">
-    <title>goodbook - Registration</title>
+    <title>goodbook - Sing up</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
 </head>
@@ -93,7 +96,7 @@ if(!empty($_POST)){
                 <div class="form">
                     <form method="post">
                         <div>
-                            <div class="emaildiv">
+                            <div class="emaildiv" action='login.php'>
                                 <input class="email" type="text" name="email" id="email" placeholder="Email" autofocus="1" value="<?php if(!empty($_POST['email'])){
                                     echo $_POST['email'];
                             }?>">
@@ -122,7 +125,7 @@ if(!empty($_POST)){
                             </div>
                         </div>
                         <div class="singupdiv">
-                            <input class="singup" value="Sing Up" name="singup" type="submit" style="cursor:pointer" onclick="location.href=login.php">
+                            <input class="singup" value="Sing Up" name="singup" type="submit" style="cursor:pointer">
                         </div>
                         <div class="boder1">
                             <p class="box"></p>
