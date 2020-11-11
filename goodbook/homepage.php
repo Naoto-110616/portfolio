@@ -46,11 +46,6 @@ if(empty($_SESSION['login'])) header("Location:login.php");
     </div>
 
 
-    <?php }else{ ?>
-
-    <p>ログインしていないと見れません。</p>
-
-    <?php } ?>
 </body>
 
 </html>
