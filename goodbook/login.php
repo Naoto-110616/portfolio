@@ -3,66 +3,60 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 'On');
 
-if(!empty($_POST)){
-
-    define('MSG01','入力必須');
-    define('MSG02','emailの形式ではありません');
-    define('MSG03','半角英数字のみ');
-    define('MSG04','6文字以上');
+if (!empty($_POST)) {
+    define('MSG01', '入力必須');
+    define('MSG02', 'emailの形式ではありません');
+    define('MSG03', '半角英数字のみ');
+    define('MSG04', '6文字以上');
 
     $err_msg = array();
     
-    if(empty($_POST['email'])){
+    if (empty($_POST['email'])) {
         $err_msg['email'] = MSG01;
     }
-    if(empty($_POST['pass'])){
+    if (empty($_POST['pass'])) {
         $err_msg['pass'] = MSG01;
     }
-    if(empty($err_msg)){
+    if (empty($err_msg)) {
+        $email = $_POST['email'];
+        $pass = $_POST['pass'];
         
-    $email = $_POST['email'];
-    $pass = $_POST['pass'];
-        
-        if(!preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/", $email)){
+        if (!preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/", $email)) {
             $err_msg['email'] = MSG02;
         }
-        if(empty($err_msg)){
-            
-            if(!preg_match("/^[a-zA-Z0-9]+$/",$pass)){
+        if (empty($err_msg)) {
+            if (!preg_match("/^[a-zA-Z0-9]+$/", $pass)) {
                 $err_msg['pass'] = MSG03;
-            }elseif(mb_strlen($pass) < 6){
+            } elseif (mb_strlen($pass) < 6) {
                 $err_msg['pass'] = MSG04;
             }
             
-            if(empty($err_msg)){
-                
-    $dsn = 'mysql:dbname=goodbook;host=localhost;charset=utf8';
-    $user = 'root';
-    $password = 'root';
-    $options = array(
+            if (empty($err_msg)) {
+                $dsn = 'mysql:dbname=goodbook;host=localhost;charset=utf8';
+                $user = 'root';
+                $password = 'root';
+                $options = array(
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
         PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true,
     );
 
-    $dbh = new PDO($dsn, $user, $password, $options);
+                $dbh = new PDO($dsn, $user, $password, $options);
     
-    $stmt = $dbh->prepare('SELECT * FROM users WHERE email = :email AND pass = :pass');
+                $stmt = $dbh->prepare('SELECT * FROM users WHERE email = :email AND pass = :pass');
 
-    $stmt->execute(array(':email' => $email, ':pass' => $pass));
+                $stmt->execute(array(':email' => $email, ':pass' => $pass));
 
-    $result = 0;
+                $result = 0;
 
-    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+                $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if(!empty($result)){
+                if (!empty($result)) {
+                    session_start();
 
-        session_start();
+                    $_SESSION['login'] = true;
 
-        $_SESSION['login'] = true;
-
-        header("Location:homepage.php");
-    
+                    header("Location:homepage.php");
                 }
             }
         }
@@ -101,18 +95,24 @@ if(!empty($_POST)){
                     <form method="post">
                         <div>
                             <div class="emaildiv">
-                                <input class="email" type="text" name="email" placeholder="Email" autofocus="1" value="<?php if(!empty($_POST['email'])) echo $_POST['email'];?>">
+                                <input class="email" type="text" name="email" placeholder="Email" autofocus="1" value="<?php if (!empty($_POST['email'])) {
+    echo $_POST['email'];
+}?>">
                                 <div class="help-block"></div>
-                                <span class="err_msg"><?php if(!empty($err_msg['email'])){
-                                    echo $err_msg['email'];
-                            }?></span>
+                                <span class="err_msg"><?php if (!empty($err_msg['email'])) {
+    echo $err_msg['email'];
+}?>
+                                </span>
                             </div>
                             <div class="passworddiv">
-                                <input class="password" type="password" name="pass" placeholder="Password" value="<?php if(!empty($_POST['pass'])) echo $_POST['pass'];?>">
+                                <input class="password" type="password" name="pass" placeholder="Password" value="<?php if (!empty($_POST['pass'])) {
+    echo $_POST['pass'];
+}?>">
                                 <div class="help-block"></div>
-                                <span class="err_msg"><?php if(!empty($err_msg['pass'])){
-                                    echo $err_msg['pass'];
-                            }?></span>
+                                <span class="err_msg"><?php if (!empty($err_msg['pass'])) {
+    echo $err_msg['pass'];
+}?>
+                                </span>
                             </div>
                         </div>
                         <div class="logindiv">

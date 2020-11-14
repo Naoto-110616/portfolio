@@ -3,12 +3,14 @@
  //E_STRICTレベル以外のエラーを報告する
 error_reporting(E_ALL);
  //画面にエラーを表示させるか
-ini_set('display_errors','On');
+ini_set('display_errors', 'On');
 
 session_start();
 
 //ログインしてなければ、login画面へ戻す
-if(empty($_SESSION['login'])) header("Location:login.php");
+if (empty($_SESSION['login'])) {
+    header("Location:login.php");
+}
 
 ?>
 
@@ -24,7 +26,9 @@ if(empty($_SESSION['login'])) header("Location:login.php");
 
 <body>
 
-    <?php if(!empty($_SESSION['login']))?>
+    <?php if (!empty($_SESSION['login'])) {
+    ;
+}?>
 
 
     <div class="head_left">
