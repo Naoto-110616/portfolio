@@ -10,7 +10,7 @@ if (!empty($_POST)) {
     define('MSG04', '6文字以上');
 
     $err_msg = array();
-    
+
     if (empty($_POST['email'])) {
         $err_msg['email'] = MSG01;
     }
@@ -20,7 +20,7 @@ if (!empty($_POST)) {
     if (empty($err_msg)) {
         $email = $_POST['email'];
         $pass = $_POST['pass'];
-        
+
         if (!preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/", $email)) {
             $err_msg['email'] = MSG02;
         }
@@ -30,7 +30,7 @@ if (!empty($_POST)) {
             } elseif (mb_strlen($pass) < 6) {
                 $err_msg['pass'] = MSG04;
             }
-            
+
             if (empty($err_msg)) {
                 $dsn = 'mysql:dbname=goodbook;host=localhost;charset=utf8';
                 $user = 'root';
@@ -42,7 +42,7 @@ if (!empty($_POST)) {
     );
 
                 $dbh = new PDO($dsn, $user, $password, $options);
-    
+
                 $stmt = $dbh->prepare('SELECT * FROM users WHERE email = :email AND pass = :pass');
 
                 $stmt->execute(array(':email' => $email, ':pass' => $pass));
@@ -192,7 +192,7 @@ if (!empty($_POST)) {
                 <span class="span">goodbook © 2020</span>
             </div>
             <div class="portfolio-top">
-                <p><a href="../Portfolio.php" class="portfolio">portfolio top</a></p>
+                <p><a href="../Portfolio.html" class="portfolio">portfolio top</a></p>
             </div>
         </div>
     </footer>

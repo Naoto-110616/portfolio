@@ -297,3 +297,7 @@ input[type="password"]:focus {
 .has-success label {
     color: #2fb4ce;
 }
+
+.err_msg{
+    color:#ff4d4b;
+}

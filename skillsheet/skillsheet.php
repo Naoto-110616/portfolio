@@ -199,7 +199,7 @@
             <p>お時間いただき、ありがとうございました。</p>
             <div>これまでの経験を活かして、業務を進めて参ります。</div>
             <div>よろしくお願いします。</div>
-            <p><a href="../Portfolio.php">Portfolio トップページへ</a></p>
+            <p><a href="../Portfolio.html">Portfolio トップページへ</a></p>
         </div>
     </footer>
 </body>

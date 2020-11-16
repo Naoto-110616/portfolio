@@ -9,9 +9,9 @@ if (!empty($_POST)) {
     define('MSG03', 'パスワード(再入力)があっていません');
     define('MSG04', '半角英数字のみ');
     define('MSG05', '6文字以上');
-    
+
     $err_msg = array();
-    
+
     if (empty($_POST['email'])) {
         $err_msg['email'] = MSG01;
     }
@@ -21,19 +21,19 @@ if (!empty($_POST)) {
     if (empty($_POST['pass_retype'])) {
         $err_msg['pass_retype'] = MSG01;
     }
-    
+
     if (empty($err_msg)) {
         $email = $_POST['email'];
         $pass = $_POST['pass'];
         $pass_re = $_POST['pass_retype'];
-        
+
         if (!preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/", $email)) {
             $err_msg['email'] = MSG02;
         }
         if ($pass !== $pass_re) {
             $err_msg['pass'] = MSG03;
         }
-        
+
         if (empty($err_msg)) {
             if (!preg_match("/^[a-zA-Z0-9]+$/", $pass)) {
                 $err_msg['pass'] = MSG04;
@@ -45,18 +45,18 @@ if (!empty($_POST)) {
                 $user = 'root';
                 $password = 'root';
                 $options =array(
-                    
+
                     PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,
                     PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC,
                     PDO::MYSQL_ATTR_USE_BUFFERED_QUERY=>true,
                     );
-                
+
                 $dbh = new PDO($dsn, $user, $password, $options);
-                    
+
                 $stmt = $dbh->prepare('INSERT INTO users (email, pass, login_time) VALUES (:email, :pass, :login_time)');
-                    
+
                 $stmt->execute(array(':email'=>$email, ':pass'=>$pass, 'login_time'=>date('Y-m-d H:i:s')));
-                    
+
                 header('Location:login.php');
             }
         }
@@ -199,7 +199,7 @@ if (!empty($_POST)) {
                 <span class="span">goodbook © 2020</span>
             </div>
             <div class="portfolio-top">
-                <p><a href="../Portfolio.php" class="portfolio">portfolio top</a></p>
+                <p><a href="../Portfolio.html" class="portfolio">portfolio top</a></p>
             </div>
         </div>
     </footer>
