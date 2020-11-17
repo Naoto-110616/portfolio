@@ -4,11 +4,11 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 
 if (!empty($_POST)) {
-    define('MSG01', '入力必須');
-    define('MSG02', 'Emailの形式ではありません');
-    define('MSG03', 'パスワード(再入力)があっていません');
-    define('MSG04', '半角英数字のみ');
-    define('MSG05', '6文字以上');
+    define('MSG01', 'Input Required');
+    define('MSG02', 'Not in the form of email');
+    define('MSG03', 'password (retype) does not match');
+    define('MSG04', 'Half-width alphanumeric characters only');
+    define('MSG05', '6 characters or more');
 
     $err_msg = array();
 
@@ -33,32 +33,28 @@ if (!empty($_POST)) {
         if ($pass !== $pass_re) {
             $err_msg['pass'] = MSG03;
         }
-
+        if (!preg_match("/^[a-zA-Z0-9]+$/", $pass)) {
+            $err_msg['pass'] = MSG04;
+        } elseif (mb_strlen($pass) < 6) {
+            $err_msg['pass'] = MSG05;
+        }
         if (empty($err_msg)) {
-            if (!preg_match("/^[a-zA-Z0-9]+$/", $pass)) {
-                $err_msg['pass'] = MSG04;
-            } elseif (mb_strlen($pass) < 6) {
-                $err_msg['pass'] = MSG05;
-            }
-            if (empty($err_msg)) {
-                $dsn = 'mysql:dbname=goodbook;host=localhost;charset=utf8';
-                $user = 'root';
-                $password = 'root';
-                $options =array(
+            $dsn = 'mysql:dbname=goodbook;host=localhost;charset=utf8';
+            $user = 'root';
+            $password = 'root';
+            $options =array(
+                PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,
+                PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC,
+                PDO::MYSQL_ATTR_USE_BUFFERED_QUERY=>true,
+            );
 
-                    PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,
-                    PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC,
-                    PDO::MYSQL_ATTR_USE_BUFFERED_QUERY=>true,
-                    );
+            $dbh = new PDO($dsn, $user, $password, $options);
 
-                $dbh = new PDO($dsn, $user, $password, $options);
+            $stmt = $dbh->prepare('INSERT INTO users (email, pass, login_time) VALUES (:email, :pass, :login_time)');
 
-                $stmt = $dbh->prepare('INSERT INTO users (email, pass, login_time) VALUES (:email, :pass, :login_time)');
+            $stmt->execute(array(':email'=>$email, ':pass'=>$pass, 'login_time'=>date('Y-m-d H:i:s')));
 
-                $stmt->execute(array(':email'=>$email, ':pass'=>$pass, 'login_time'=>date('Y-m-d H:i:s')));
-
-                header('Location:login.php');
-            }
+            header('Location:login.php');
         }
     }
 }

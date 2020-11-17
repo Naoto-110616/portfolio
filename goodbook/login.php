@@ -4,10 +4,10 @@ error_reporting(E_ALL);
 ini_set("display_errors", 'On');
 
 if (!empty($_POST)) {
-    define('MSG01', '入力必須');
-    define('MSG02', 'emailの形式ではありません');
-    define('MSG03', '半角英数字のみ');
-    define('MSG04', '6文字以上');
+    define('MSG01', 'Input Required');
+    define('MSG02', 'Not in the form of email');
+    define('MSG03', 'Half-width alphanumeric characters only');
+    define('MSG04', '6 characters or more');
 
     $err_msg = array();
 
@@ -24,40 +24,37 @@ if (!empty($_POST)) {
         if (!preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/", $email)) {
             $err_msg['email'] = MSG02;
         }
+        if (!preg_match("/^[a-zA-Z0-9]+$/", $pass)) {
+            $err_msg['pass'] = MSG03;
+        } elseif (mb_strlen($pass) < 6) {
+            $err_msg['pass'] = MSG04;
+        }
         if (empty($err_msg)) {
-            if (!preg_match("/^[a-zA-Z0-9]+$/", $pass)) {
-                $err_msg['pass'] = MSG03;
-            } elseif (mb_strlen($pass) < 6) {
-                $err_msg['pass'] = MSG04;
-            }
+            $dsn = 'mysql:dbname=goodbook;host=localhost;charset=utf8';
+            $user = 'root';
+            $password = 'root';
+            $options = array(
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+                PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true,
+            );
 
-            if (empty($err_msg)) {
-                $dsn = 'mysql:dbname=goodbook;host=localhost;charset=utf8';
-                $user = 'root';
-                $password = 'root';
-                $options = array(
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-        PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true,
-    );
+            $dbh = new PDO($dsn, $user, $password, $options);
 
-                $dbh = new PDO($dsn, $user, $password, $options);
+            $stmt = $dbh->prepare('SELECT * FROM users WHERE email = :email AND pass = :pass');
 
-                $stmt = $dbh->prepare('SELECT * FROM users WHERE email = :email AND pass = :pass');
+            $stmt->execute(array(':email' => $email, ':pass' => $pass));
 
-                $stmt->execute(array(':email' => $email, ':pass' => $pass));
+            $result = 0;
 
-                $result = 0;
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-                $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            if (!empty($result)) {
+                session_start();
 
-                if (!empty($result)) {
-                    session_start();
+                $_SESSION['login'] = true;
 
-                    $_SESSION['login'] = true;
-
-                    header("Location:homepage.php");
-                }
+                header("Location:homepage.php");
             }
         }
     }
