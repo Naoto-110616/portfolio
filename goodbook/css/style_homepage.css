@@ -2,6 +2,7 @@ body {
   font-family: Verdana;
 }
 .header {
+  position: fixed;
   display: flex;
   background-color: #333333;
 }
@@ -59,11 +60,30 @@ body {
 .header_right_icon {
   margin: 15px;
 }
+.main {
+  /* margin-top: 60px; */
+}
+.main_div {
+  display: flex;
+}
 #wrapper {
-  height: 554px;
   width: 360px;
   overflow-y: scroll;
 }
 #contents {
-  background-color: cadetblue;
+  background-color: #191919;
+}
+.main_left_icon {
+  display: flex;
+  color: #dddddd;
+}
+.main_center {
+  height: 2000px;
+  width: 896px;
+  padding: 0px 32px;
+  background: #191919;
+}
+.main_right {
+  width: 360px;
+  background-color: #191919;
 }
