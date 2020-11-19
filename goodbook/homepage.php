@@ -34,27 +34,131 @@ if (empty($_SESSION['login'])) {
             </div>
             <div class="serch_div">
                 <label>
-                    <input type="serch" class="serch" placeholder="goodbook search">
+                    <input type="serch" class="serch" placeholder=" goodbook search">
                 </label>
             </div>
         </div>
-        <div class="ul_div">
-            <ul class="header_ul">
-                <li class="header_icon"><i class="fas fa-home fa-2x"></i></li>
-                <li class="header_icon"><i class=" fas fa-user-friends fa-2x"></i></li>
-                <li class="header_icon"><i class=" fas fa-tv fa-2x"></i></li>
-                <li class="header_icon"><i class=" fas fa-users fa-2x"></i></li>
-                <li class="header_icon"><i class=" fas fa-dice-d6 fa-2x"></i></li>
-            </ul>
+        <div class="head_center">
+            <span class="header_center_icon"><i class="fas fa-home fa-2x"></i></span>
+            <span class="header_center_icon"><i class="fas fa-user-friends fa-2x"></i></span>
+            <span class="header_center_icon"><i class="fas fa-tv fa-2x"></i></span>
+            <span class="header_center_icon"><i class="fas fa-users fa-2x"></i></span>
+            <span class="header_center_icon"><i class="fas fa-dice-d6 fa-2x"></i></span>
         </div>
         <div class="head_right">
             <span class="header_right_icon"><i class="fas fa-user-circle fa-2x"></i></span>
             <span class="header_right_icon"><i class="fas fa-plus-circle fa-2x"></i></span>
-            <span class="header_right_icon"><i class="fas fa-comment-medical fa-2x"></i></span>
+            <span class="header_right_icon"><i class="far fa-comment-dots fa-2x"></i></i></span>
             <span class="header_right_icon"><i class="fas fa-bell fa-2x"></i></span>
             <span class="header_right_icon"><i class="fas fa-caret-down fa-2x"></i></span>
         </div>
     </header>
+    <div class="body">
+        <div id="wrapper">
+            <div id="contents">
+                <ul>
+                    <li>
+                        <div><i class="fas fa-user-circle fa-2x"></i></div>
+                        <div>name</div>
+                    </li>
+                    <li>
+                        <div><i class="fas fa-heartbeat fa-2x"></i></div>
+                        <div></div>
+                    </li>
+                    <li>
+                        <div><i class="far fa-user fa-2x"></i></div>
+                        <div></div>
+                    </li>
+                    <li>
+                        <div><i class="fas fa-users fa-2x"></i></div>
+                        <div></div>
+                    </li>
+                    <li>
+                        <div><i class="fas fa-video fa-2x"></i></div>
+                        <div></div>
+                    </li>
+                    <li>
+                        <div><i class="far fa-calendar-alt fa-2x"></i></div>
+                        <div></div>
+                    </li>
+                    <li>
+                        <div><i class="far fa-clock fa-2x"></i></div>
+                        <div></div>
+                    </li>
+                    <li>
+                        <div><i class="fas fa-tag fa-2x"></i></div>
+                        <div></div>
+                    </li>
+                    <li>
+                        <div><i class="fab fa-font-awesome-flag fa-2x"></i></div>
+                        <div></div>
+                    </li>
+                    <li>
+                        <div><i class="fas fa-briefcase fa-2x"></i></div>
+                        <div></div>
+                    </li>
+                    <li>
+                        <div><i class="fas fa-wallet fa-2x"></i></div>
+                        <div></div>
+                    </li>
+                    <li>
+                        <div><i class="fas fa-comment-dots fa-2x"></i></div>
+                        <div></div>
+                    </li>
+                    <li>
+                        <div><i class="far fa-comment-dots fa-2x"></i></div>
+                        <div></div>
+                    </li>
+                    <li>
+                        <div><i class="fas fa-cube fa-2x"></i></div>
+                        <div></div>
+                    </li>
+                    <li>
+                        <div><i class="far fa-star fa-2x"></i></div>
+                        <div></div>
+                    </li>
+                    <li>
+                        <div><i class="fas fa-gamepad fa-2x"></i></div>
+                        <div></div>
+                    </li>
+                    <li>
+                        <div><i class="fas fa-bullhorn fa-2x"></i></div>
+                        <div></div>
+                    </li>
+                    <li>
+                        <div><i class="fas fa-signal fa-2x"></i></div>
+                        <div></div>
+                    </li>
+                    <li>
+                        <div><i class="fas fa-ad fa-2x"></i></div>
+                        <div></div>
+                    </li>
+                    <li>
+                        <div><i class="fas fa-ticket-alt fa-2x"></i></div>
+                        <div></div>
+                    </li>
+                    <li>
+                        <div><i class="fas fa-users fa-2x"></i></div>
+                        <div></div>
+                    </li>
+                    <li>
+                        <div><i class="far fa-sun fa-2x"></i></div>
+                        <div></div>
+                    </li>
+                    <li>
+                        <div><i class="fab fa-gratipay fa-2x"></i></div>
+                        <div></div>
+                    </li>
+                    <li>
+                        <div><i class="fas fa-solar-panel fa-2x"></i></div>
+                        <div></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div></div>
+        <div></div>
+    </div>
 
 </body>
 
