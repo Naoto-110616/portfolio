@@ -60,101 +60,104 @@ if (empty($_SESSION['login'])) {
                     <ul>
                         <li class="main_left_icon">
                             <div><i class="fas fa-user-circle fa-2x"></i></div>
-                            <div><span>name</span></div>
+                            <div class="icon_name_div"><span class="icon_name">name</span></div>
                         </li>
                         <li class="main_left_icon">
                             <div><i class="fas fa-heartbeat fa-2x"></i></div>
-                            <div><span>covid19 Information Center</span></div>
+                            <div class="icon_name_div"><span class="icon_name">covid19 Information Center</span></div>
                         </li>
                         <li class="main_left_icon">
                             <div><i class="far fa-user fa-2x"></i></div>
-                            <div><span>Find a friend</span></div>
+                            <div class="icon_name_div"><span class="icon_name">Find a friend</span></div>
                         </li>
                         <li class="main_left_icon">
                             <div><i class="fas fa-users fa-2x"></i></div>
-                            <div><span>group</span></div>
+                            <div class="icon_name_div"><span class="icon_name">group</span></div>
                         </li>
                         <li class="main_left_icon">
                             <div><i class="fas fa-video fa-2x"></i></div>
-                            <div><span>video</span></div>
+                            <div class="icon_name_div"><span class="icon_name">video</span></div>
                         </li>
                         <li class="main_left_icon">
                             <div><i class="far fa-calendar-alt fa-2x"></i></div>
-                            <div><span>event</span></div>
+                            <div class="icon_name_div"><span class="icon_name">event</span></div>
                         </li>
                         <li class="main_left_icon">
                             <div><i class="far fa-clock fa-2x"></i></div>
-                            <div><span>memories</span></div>
+                            <div class="icon_name_div"><span class="icon_name">memories</span></div>
                         </li>
                         <li class="main_left_icon">
                             <div><i class="fas fa-tag fa-2x"></i></div>
-                            <div><span>saved</span></div>
+                            <div class="icon_name_div"><span class="icon_name">saved</span></div>
                         </li>
                         <li class="main_left_icon">
                             <div><i class="fab fa-font-awesome-flag fa-2x"></i></div>
-                            <div><span>page</span></div>
+                            <div class="icon_name_div"><span class="icon_name">page</span></div>
                         </li>
                         <li class="main_left_icon">
                             <div><i class="fas fa-briefcase fa-2x"></i></div>
-                            <div><span>jpb offer</span></div>
+                            <div class="icon_name_div"><span class="icon_name">jpb offer</span></div>
                         </li>
                         <li class="main_left_icon">
                             <div><i class="fas fa-wallet fa-2x"></i></div>
-                            <div><span>pay</span></div>
+                            <div class="icon_name_div"><span class="icon_name">pay</span></div>
                         </li>
                         <li class="main_left_icon">
                             <div><i class="fas fa-comment-dots fa-2x"></i></div>
-                            <div><span>massenger</span></div>
+                            <div class="icon_name_div"><span class="icon_name">massenger</span></div>
                         </li>
                         <li class="main_left_icon">
                             <div><i class="far fa-comment-dots fa-2x"></i></div>
-                            <div><span>massenger kids</span></div>
+                            <div class="icon_name_div"><span class="icon_name">massenger kids</span></div>
                         </li>
                         <li class="main_left_icon">
                             <div><i class="fas fa-cube fa-2x"></i></div>
-                            <div><span>Oculus</span></div>
+                            <div class="icon_name_div"><span class="icon_name">Oculus</span></div>
                         </li>
                         <li class="main_left_icon">
                             <div><i class="far fa-star fa-2x"></i></div>
-                            <div><span>favorite</span></div>
+                            <div class="icon_name_div"><span class="icon_name">favorite</span></div>
                         </li>
                         <li class="main_left_icon">
                             <div><i class="fas fa-gamepad fa-2x"></i></div>
-                            <div><span>game</span></div>
+                            <div class="icon_name_div"><span class="icon_name">game</span></div>
                         </li>
                         <li class="main_left_icon">
                             <div><i class="fas fa-bullhorn fa-2x"></i></div>
-                            <div><span>advertising center</span></div>
+                            <div class="icon_name_div"><span class="icon_name">advertising center</span></div>
                         </li>
                         <li class="main_left_icon">
                             <div><i class="fas fa-signal fa-2x"></i></div>
-                            <div><span>advertising manage</span></div>
+                            <div class="icon_name_div"><span class="icon_name">advertising manage</span></div>
                         </li>
                         <li class="main_left_icon">
                             <div><i class="fas fa-ad fa-2x"></i></div>
-                            <div><span>advertising activity</span></div>
+                            <div class="icon_name_div"><span class="icon_name">advertising activity</span></div>
                         </li>
                         <li class="main_left_icon">
                             <div><i class="fas fa-ticket-alt fa-2x"></i></div>
-                            <div><span>curpon</span></div>
+                            <div class="icon_name_div"><span class="icon_name">curpon</span></div>
                         </li>
                         <li class="main_left_icon">
                             <div><i class="fas fa-users fa-2x"></i></div>
-                            <div><span>List of friends</span></div>
+                            <div class="icon_name_div"><span class="icon_name">List of friends</span></div>
                         </li>
                         <li class="main_left_icon">
                             <div><i class="fas fa-cloud-sun fa-2x"></i></div>
-                            <div><span>wether</span></div>
+                            <div class="icon_name_div"><span class="icon_name">wether</span></div>
                         </li>
                         <li class="main_left_icon">
                             <div><i class="fab fa-gratipay fa-2x"></i></div>
-                            <div><span>donation campaign</span></div>
+                            <div class="icon_name_div"><span class="icon_name">donation campaign</span></div>
                         </li>
                         <li class="main_left_icon">
                             <div><i class="fas fa-solar-panel fa-2x"></i></div>
-                            <div><span>Configuration</span></div>
+                            <div class="icon_name_div"><span class="icon_name">Configuration</span></div>
                         </li>
                     </ul>
+                </div>
+                <div class="copyright">
+                    <span>privacy</span>
                 </div>
             </div>
             <div class="main_center">
