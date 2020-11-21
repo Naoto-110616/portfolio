@@ -73,6 +73,7 @@ body {
 }
 #wrapper {
   width: 33%;
+  height: 720px;
   overflow-y: scroll;
 }
 .main_left_icon {

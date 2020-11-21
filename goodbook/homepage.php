@@ -156,9 +156,9 @@ if (empty($_SESSION['login'])) {
                         </li>
                     </ul>
                 </div>
-                <div class="copyright">
-                    <span>privacy</span>
-                </div>
+            </div>
+            <div class="copyright">
+                <span>privacy</span>
             </div>
             <div class="main_center">
                 <div>
