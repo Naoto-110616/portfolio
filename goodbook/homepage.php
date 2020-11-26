@@ -283,6 +283,12 @@ if (empty($_SESSION['login'])) {
                     </div>
                 </div>
             </div>
+            <div class="main_left">
+                <p>dsljkfl;aksjf;lksjdf;lkajsfl;k</p>
+                <p>dsljkfl;aksjf;lksjdf;lkajsfl;k</p>
+                <p>dsljkfl;aksjf;lksjdf;lkajsfl;k</p>
+                <p>dsljkfl;aksjf;lksjdf;lkajsfl;k</p>
+            </div>
         </div>
     </main>
 </body>

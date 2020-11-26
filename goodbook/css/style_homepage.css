@@ -97,6 +97,10 @@ body {
   overflow-y: scroll;
   margin-left: 20%;
 }
+.main_left {
+  height: 100%;
+  width: 20%;
+}
 p {
   color: #dddddd;
 }
