@@ -1,5 +1,9 @@
+html {
+  height: 100%;
+}
 body {
   font-family: Verdana;
+  height: 100%;
 }
 .header {
   position: fixed;
@@ -69,10 +73,12 @@ body {
   background-color: #191919;
 }
 .main_div {
+  height: 100%;
   display: flex;
 }
 #wrapper {
-  width: 33%;
+  position: fixed;
+  width: 20%;
   height: 720px;
   overflow-y: scroll;
 }
@@ -84,17 +90,13 @@ body {
 .icon_name_div {
   margin: 5px 10px;
 }
-.copyright {
-  width: 33%;
-  height: 22px;
-  padding: 16px;
-  color: #dddddd;
-}
 .main_center {
   height: 100%;
   width: 80%;
   padding: 0px 32px;
+  overflow-y: scroll;
+  margin-left: 20%;
 }
-.main_right {
-  width: 35%;
+p {
+  color: #dddddd;
 }
