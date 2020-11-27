@@ -42,17 +42,17 @@ if (!empty($_POST)) {
             $dsn = 'mysql:dbname=goodbook;host=localhost;charset=utf8';
             $user = 'root';
             $password = 'root';
-            $options =array(
-                PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,
-                PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC,
-                PDO::MYSQL_ATTR_USE_BUFFERED_QUERY=>true,
+            $options = array(
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+                PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true,
             );
 
             $dbh = new PDO($dsn, $user, $password, $options);
 
             $stmt = $dbh->prepare('INSERT INTO users (email, pass, login_time) VALUES (:email, :pass, :login_time)');
 
-            $stmt->execute(array(':email'=>$email, ':pass'=>$pass, 'login_time'=>date('Y-m-d H:i:s')));
+            $stmt->execute(array(':email' => $email, ':pass' => $pass, 'login_time' => date('Y-m-d H:i:s')));
 
             header('Location:login.php');
         }
@@ -89,35 +89,33 @@ if (!empty($_POST)) {
                     <form method="post">
                         <div>
                             <div class="emaildiv" action='login.php'>
-                                <input class="email" type="text" name="email" id="email" placeholder="Email"
-                                    autofocus="1" value="<?php if (!empty($_POST['email'])) {
-    echo $_POST['email'];
-}?>">
+                                <input class="email" type="text" name="email" id="email" placeholder="Email" autofocus="1" value="<?php if (!empty($_POST['email'])) {
+                                                                                                                                        echo $_POST['email'];
+                                                                                                                                    } ?>">
                                 <div class="help-block"></div>
                                 <span class="err_msg"><?php if (!empty($err_msg['email'])) {
-    echo $err_msg['email'];
-}?>
+                                                            echo $err_msg['email'];
+                                                        } ?>
                                 </span>
                             </div>
                             <div class="passworddiv">
                                 <input class="password" type="password" name="pass" placeholder="Password" value="<?php if (!empty($_POST['pass'])) {
-    echo $_POST['pass'];
-}?>">
+                                                                                                                        echo $_POST['pass'];
+                                                                                                                    } ?>">
                                 <div class="help-block"></div>
                                 <span class="err_msg"><?php if (!empty($err_msg['pass'])) {
-    echo $err_msg['pass'];
-}?>
+                                                            echo $err_msg['pass'];
+                                                        } ?>
                                 </span>
                             </div>
                             <div class="password_retypediv">
-                                <input class="password_retype" type="password" name="pass_retype"
-                                    placeholder="Password retype" value="<?php if (!empty($_POST['pass_retype'])) {
-    echo $_POST['pass_retype'];
-}?>">
+                                <input class="password_retype" type="password" name="pass_retype" placeholder="Password retype" value="<?php if (!empty($_POST['pass_retype'])) {
+                                                                                                                                            echo $_POST['pass_retype'];
+                                                                                                                                        } ?>">
                                 <div class="help-block"></div>
                                 <span class="err_msg"><?php if (!empty($err_msg['pass_retype'])) {
-    echo $err_msg['pass_retype'];
-}?>
+                                                            echo $err_msg['pass_retype'];
+                                                        } ?>
                                 </span>
                             </div>
                         </div>
