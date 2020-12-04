@@ -97,200 +97,75 @@ if (empty($_SESSION['login'])) {
                             <div><i class="fas fa-briefcase fa-2x"></i></div>
                             <div class="icon_name_div"><span class="icon_name">job offer</span></div>
                         </li>
-                        <div class="content">
-                            <ul>
-                                <li class="main_left_icon">
-                                    <div><i class="fas fa-wallet fa-2x"></i></div>
-                                    <div class="icon_name_div"><span class="icon_name">pay</span></div>
-                                </li>
-                                <li class="main_left_icon">
-                                    <div><i class="fas fa-comment-dots fa-2x"></i></div>
-                                    <div class="icon_name_div"><span class="icon_name">massenger</span></div>
-                                </li>
-                                <li class="main_left_icon">
-                                    <div><i class="far fa-comment-dots fa-2x"></i></div>
-                                    <div class="icon_name_div"><span class="icon_name">massenger kids</span></div>
-                                </li>
-                                <li class="main_left_icon">
-                                    <div><i class="fas fa-cube fa-2x"></i></div>
-                                    <div class="icon_name_div"><span class="icon_name">Oculus</span></div>
-                                </li>
-                                <li class="main_left_icon">
-                                    <div><i class="far fa-star fa-2x"></i></div>
-                                    <div class="icon_name_div"><span class="icon_name">favorite</span></div>
-                                </li>
-                                <li class="main_left_icon">
-                                    <div><i class="fas fa-gamepad fa-2x"></i></div>
-                                    <div class="icon_name_div"><span class="icon_name">game</span></div>
-                                </li>
-                                <li class="main_left_icon">
-                                    <div><i class="fas fa-bullhorn fa-2x"></i></div>
-                                    <div class="icon_name_div"><span class="icon_name">advertising center</span></div>
-                                </li>
-                                <li class="main_left_icon">
-                                    <div><i class="fas fa-signal fa-2x"></i></div>
-                                    <div class="icon_name_div"><span class="icon_name">advertising manage</span></div>
-                                </li>
-                                <li class="main_left_icon">
-                                    <div><i class="fas fa-ad fa-2x"></i></div>
-                                    <div class="icon_name_div"><span class="icon_name">advertising activity</span></div>
-                                </li>
-                                <li class="main_left_icon">
-                                    <div><i class="fas fa-ticket-alt fa-2x"></i></div>
-                                    <div class="icon_name_div"><span class="icon_name">curpon</span></div>
-                                </li>
-                                <li class="main_left_icon">
-                                    <div><i class="fas fa-users fa-2x"></i></div>
-                                    <div class="icon_name_div"><span class="icon_name">List of friends</span></div>
-                                </li>
-                                <li class="main_left_icon">
-                                    <div><i class="fas fa-cloud-sun fa-2x"></i></div>
-                                    <div class="icon_name_div"><span class="icon_name">wether</span></div>
-                                </li>
-                                <li class="main_left_icon">
-                                    <div><i class="fab fa-gratipay fa-2x"></i></div>
-                                    <div class="icon_name_div"><span class="icon_name">donation campaign</span></div>
-                                </li>
-                                <li class="main_left_icon">
-                                    <div><i class="fas fa-solar-panel fa-2x"></i></div>
-                                    <div class="icon_name_div"><span class="icon_name">Configuration</span></div>
-                                </li>
-                            </ul>
-                            <div class="button">
-                                <li class="main_left_icon">
-                                    <div><i class="fas fa-arrow-circle-down fa-2x"></i></div>
-                                    <div class="icon_name_div"><span class="icon_name">more</span></div>
-                                </li>
-                            </div>
-                        </div>
-                    </ul>
+                        <li class="main_left_icon">
+                            <div><i class="fas fa-wallet fa-2x"></i></div>
+                            <div class="icon_name_div"><span class="icon_name">pay</span></div>
+                        </li>
+                        <li class="main_left_icon">
+                            <div><i class="fas fa-comment-dots fa-2x"></i></div>
+                            <div class="icon_name_div"><span class="icon_name">massenger</span></div>
+                        </li>
+                        <li class="main_left_icon">
+                            <div><i class="far fa-comment-dots fa-2x"></i></div>
+                            <div class="icon_name_div"><span class="icon_name">massenger kids</span></div>
+                        </li>
+                        <li class="main_left_icon">
+                            <div><i class="fas fa-cube fa-2x"></i></div>
+                            <div class="icon_name_div"><span class="icon_name">Oculus</span></div>
+                        </li>
+                        <li class="main_left_icon">
+                            <div><i class="far fa-star fa-2x"></i></div>
+                            <div class="icon_name_div"><span class="icon_name">favorite</span></div>
+                        </li>
+                        <li class="main_left_icon">
+                            <div><i class="fas fa-gamepad fa-2x"></i></div>
+                            <div class="icon_name_div"><span class="icon_name">game</span></div>
+                        </li>
+                        <li class="main_left_icon">
+                            <div><i class="fas fa-bullhorn fa-2x"></i></div>
+                            <div class="icon_name_div"><span class="icon_name">advertising center</span></div>
+                        </li>
+                        <li class="main_left_icon">
+                            <div><i class="fas fa-signal fa-2x"></i></div>
+                            <div class="icon_name_div"><span class="icon_name">advertising manage</span></div>
+                        </li>
+                        <li class="main_left_icon">
+                            <div><i class="fas fa-ad fa-2x"></i></div>
+                            <div class="icon_name_div"><span class="icon_name">advertising activity</span></div>
+                        </li>
+                        <li class="main_left_icon">
+                            <div><i class="fas fa-ticket-alt fa-2x"></i></div>
+                            <div class="icon_name_div"><span class="icon_name">curpon</span></div>
+                        </li>
+                        <li class="main_left_icon">
+                            <div><i class="fas fa-users fa-2x"></i></div>
+                            <div class="icon_name_div"><span class="icon_name">List of friends</span></div>
+                        </li>
+                        <li class="main_left_icon">
+                            <div><i class="fas fa-cloud-sun fa-2x"></i></div>
+                            <div class="icon_name_div"><span class="icon_name">wether</span></div>
+                        </li>
+                        <li class="main_left_icon">
+                            <div><i class="fab fa-gratipay fa-2x"></i></div>
+                            <div class="icon_name_div"><span class="icon_name">donation campaign</span></div>
+                        </li>
+                        <li class="main_left_icon">
+                            <div><i class="fas fa-solar-panel fa-2x"></i></div>
+                            <div class="icon_name_div"><span class="icon_name">Configuration</span></div>
+                        </li>
                 </div>
             </div>
+            </ul>
             <div class="main_center">
-                <div>
-                    <div>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
-                        <p>sldfkjl;askjfl;kasjdl;fkjsal;kdfjl;sakdjfl;ksjdfl;ksajdfl;kjsl;dfkjsl;adkfjl;ksdjf;lkasjdfl;kjs;dlfkjasdlkfj</p>
+                <div class="main_center_position">
+                    <div id="wrapper">
+                        <div class="main_center_element">
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="main_right">
-
+                <p>;ldksajfkl;sadjflksdjflksjdfkl;sjadl;ffjl</p>
             </div>
         </div>
     </main>
