@@ -54,7 +54,7 @@ if (empty($_SESSION['login'])) {
     </header>
     <main class="main">
         <div class="main_div">
-            <div id="wrapper">
+            <div id="main_left_wrapper">
                 <div id="contents">
                     <ul>
                         <li class="main_left_icon">
@@ -158,8 +158,13 @@ if (empty($_SESSION['login'])) {
             </ul>
             <div class="main_center">
                 <div class="main_center_position">
-                    <div id="wrapper">
-                        <div class="main_center_element">
+                    <div class="main_center_element">
+                        <div class="main_icon">
+                            <span class="main_center_icon"><i class="fas fa-plus-circle fa-2x"></i></span>
+                            <div class="main_center_comment">
+                                <p class="comment_make_stories">ストーリーズを作成</p>
+                                <p>写真や動画，メッセージをシェアしよう</p>
+                            </div>
                         </div>
                     </div>
                 </div>

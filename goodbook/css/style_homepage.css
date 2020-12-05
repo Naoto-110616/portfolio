@@ -4,6 +4,7 @@ html {
 body {
   font-family: Verdana;
   height: 100%;
+  color: #c1c1c1;
 }
 .header {
   position: fixed;
@@ -76,7 +77,7 @@ body {
   display: flex;
   height: 90%;
 }
-#wrapper {
+#main_left_wrapper {
   position: fixed;
   height: 100%;
   overflow-y: scroll;
@@ -90,13 +91,14 @@ body {
   margin: 5px 10px;
 }
 .main_center {
-  padding: 5px 32px;
+  padding: 15px 32px;
   overflow-y: scroll;
   margin-left: 20%;
   margin-right: 20%;
   flex-grow: 1;
   height: 100%;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 .main_left {
   height: 100%;
@@ -105,18 +107,46 @@ body {
 p {
   color: #dddddd;
 =======
+=======
+.main_center_position {
+  height: 100%;
+  width: 100%;
+}
+>>>>>>> develop
 .main_center_element {
-  background-color: #333333;
-  height: auto;
-  width: auto;
+  background-color: #4c4c4c;
+  height: 8%;
+  width: 70%;
   margin: 0 auto;
+<<<<<<< HEAD
+>>>>>>> develop
+=======
+  border-radius: 10px;
+  overflow: hidden;
+}
+.main_icon {
+  margin-left: 15px;
+  padding: 14px;
+  height: 30px;
+  width: 30px;
+}
+.main_center_icon {
+  color: #c1c1c1;
+  float: left;
+}
+.main_center_comment {
+  margin-left: 5px;
+  height: 35px;
+  width: 320px;
+  padding-left: 45px;
+}
+.comment_make_stories {
+  font-weight: bold;
+  margin-bottom: 2px;
 >>>>>>> develop
 }
 .main_right {
   position: fixed;
   height: 100%;
   left: 1225px;
-}
-p {
-  color: #dddddd;
 }
