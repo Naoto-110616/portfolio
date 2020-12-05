@@ -112,15 +112,31 @@ p {
   height: 100%;
   width: 100%;
 }
+<<<<<<< HEAD
 >>>>>>> develop
 .main_center_element {
+=======
+.main_center_element1 {
+>>>>>>> develop
   background-color: #4c4c4c;
   height: 8%;
   width: 70%;
   margin: 0 auto;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> develop
 =======
+=======
+  margin-bottom: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.main_center_element2 {
+  background-color: #4c4c4c;
+  height: 16%;
+  width: 70%;
+  margin: 0 auto;
+>>>>>>> develop
   border-radius: 10px;
   overflow: hidden;
 }
@@ -129,21 +145,32 @@ p {
   padding: 14px;
   height: 30px;
   width: 30px;
+  float: left;
 }
 .main_center_icon {
   color: #c1c1c1;
   float: left;
 }
-.main_center_comment {
+.main_center_comment1 {
   margin-left: 5px;
   height: 35px;
   width: 320px;
   padding-left: 45px;
 }
+.main_center_comment2 {
+  height: 35px;
+  width: 320px;
+  float: left;
+}
 .comment_make_stories {
   font-weight: bold;
   margin-bottom: 2px;
 >>>>>>> develop
+}
+.border {
+  padding-top: 8px;
+  border-bottom: 1px solid #c1c1c1;
+  width: 80%;
 }
 .main_right {
   position: fixed;
