@@ -158,14 +158,24 @@ if (empty($_SESSION['login'])) {
             </ul>
             <div class="main_center">
                 <div class="main_center_position">
-                    <div class="main_center_element">
+                    <div class="main_center_element1">
                         <div class="main_icon">
                             <span class="main_center_icon"><i class="fas fa-plus-circle fa-2x"></i></span>
-                            <div class="main_center_comment">
+                            <div class="main_center_comment1">
                                 <p class="comment_make_stories">ストーリーズを作成</p>
                                 <p>写真や動画，メッセージをシェアしよう</p>
                             </div>
                         </div>
+                    </div>
+                    <div class="main_center_element2">
+                        <div class="main_icon">
+                            <span class="main_center_icon"><i class="fas fa-user-circle fa-2x"></i></span>
+                        </div>
+                        <div class="main_center_comment2">
+                            <p class="comment_make_stories">ストーリーズを作成</p>
+                            <p>写真や動画，メッセージをシェアしよう</p>
+                        </div>
+                        <div class="border"></div>
                     </div>
                 </div>
             </div>
