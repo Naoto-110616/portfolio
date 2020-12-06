@@ -102,28 +102,27 @@ body {
   height: 100%;
   width: 100%;
 }
-.main_center_element1 {
+.main_center_element {
   background-color: #4c4c4c;
-  height: 8%;
   width: 70%;
   margin: 0 auto;
-  margin-bottom: 30px;
   border-radius: 10px;
+}
+.main_center_element1 {
+  height: 8%;
+  margin-bottom: 30px;
   overflow: hidden;
 }
 .main_center_element2 {
-  background-color: #4c4c4c;
-  height: 16%;
-  width: 70%;
-  margin: 0 auto;
-  border-radius: 10px;
-  overflow: hidden;
+  height: 15%;
+}
+.main_center_element2_share {
+  width: 100%;
+  height: 47%;
 }
 .main_icon {
   margin-left: 15px;
   padding: 14px;
-  height: 30px;
-  width: 30px;
   float: left;
 }
 .main_center_icon {
@@ -131,14 +130,12 @@ body {
   float: left;
 }
 .main_center_comment1 {
-  margin-left: 5px;
-  height: 35px;
-  width: 320px;
-  padding-left: 45px;
+  margin-top: 2.5%;
+  float: left;
 }
 .main_center_comment2 {
-  height: 35px;
-  width: 320px;
+  margin-top: 21px;
+  padding: 2px;
   float: left;
 }
 .comment_make_stories {
@@ -147,11 +144,35 @@ body {
 }
 .border {
   padding-top: 8px;
-  border-bottom: 1px solid #c1c1c1;
-  width: 80%;
+  border-bottom: 1px solid #8c8c8c;
+  width: 85%;
+  margin: auto;
 }
 .main_right {
   position: fixed;
   height: 100%;
   left: 1225px;
+}
+.main_center_element2_share2 {
+  width: 80%;
+  height: 30%;
+  margin: auto;
+  margin-top: 10px;
+}
+.live_video,
+.video,
+.activity,
+.live_video_subject,
+.video_subject,
+.activity_subject {
+  margin-left: 14px;
+  float: left;
+}
+.main_live_video_icon,
+.main_video_icon,
+.main_activity_icon,
+.live_video_subject,
+.video_subject,
+.activity_subject {
+  margin-top: 10px;
 }

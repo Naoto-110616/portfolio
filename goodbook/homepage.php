@@ -158,24 +158,39 @@ if (empty($_SESSION['login'])) {
             </ul>
             <div class="main_center">
                 <div class="main_center_position">
-                    <div class="main_center_element1">
+                    <div class="main_center_element main_center_element1">
                         <div class="main_icon">
                             <span class="main_center_icon"><i class="fas fa-plus-circle fa-2x"></i></span>
-                            <div class="main_center_comment1">
-                                <p class="comment_make_stories">ストーリーズを作成</p>
-                                <p>写真や動画，メッセージをシェアしよう</p>
-                            </div>
                         </div>
-                    </div>
-                    <div class="main_center_element2">
-                        <div class="main_icon">
-                            <span class="main_center_icon"><i class="fas fa-user-circle fa-2x"></i></span>
-                        </div>
-                        <div class="main_center_comment2">
+                        <div class="main_center_comment1">
                             <p class="comment_make_stories">ストーリーズを作成</p>
                             <p>写真や動画，メッセージをシェアしよう</p>
                         </div>
+                    </div>
+                    <div class="main_center_element main_center_element2">
+                        <div class="main_center_element2_share">
+                            <div class="main_icon">
+                                <span class="main_center_icon"><i class="fas fa-user-circle fa-2x"></i></span>
+                            </div>
+                            <div class="main_center_comment2">
+                                <p class="comment_make_stories">あなたのその気持ち，シェアしよう</p>
+                            </div>
+                        </div>
                         <div class="border"></div>
+                        <div class="main_center_element2_share2">
+                            <div class="live_video">
+                                <span class="main_center_icon main_live_video_icon"><i class="fas fa-video fa-lg"></i></span>
+                                <p class="live_video_subject">live video</p>
+                            </div>
+                            <div class="video">
+                                <span class="main_center_icon main_video_icon"><i class="far fa-images fa-lg"></i></span>
+                                <p class="video_subject">picture video</p>
+                            </div>
+                            <div class="activity">
+                                <span class="main_center_icon main_activity_icon"><i class="far fa-smile-wink fa-lg"></i></span>
+                                <p class="activity_subject">activity mood</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
