@@ -215,3 +215,20 @@ p {
 .activity_subject {
   margin-top: 10px;
 }
+.menu__item {
+  cursor: pointer;
+  display: block;
+}
+.menu__item__link {
+  display: block;
+}
+.menu__item__link {
+  display: flex;
+  text-decoration: none;
+}
+.submenu {
+  display: none;
+}
+.submenu__item {
+  color: #c1c1c1;
+}
