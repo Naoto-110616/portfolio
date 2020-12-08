@@ -79,7 +79,7 @@ body {
 }
 #main_left_wrapper {
   position: fixed;
-  height: 100%;
+  height: 90%;
   overflow-y: scroll;
 }
 .main_left_icon {
@@ -187,11 +187,6 @@ p {
   width: 85%;
   margin: auto;
 }
-.main_right {
-  position: fixed;
-  height: 100%;
-  left: 1225px;
-}
 .main_center_element2_share2 {
   width: 80%;
   height: 30%;
@@ -200,11 +195,14 @@ p {
 }
 .live_video,
 .video,
-.activity,
+.activity {
+  margin-left: 25px;
+  float: left;
+}
 .live_video_subject,
 .video_subject,
 .activity_subject {
-  margin-left: 14px;
+  margin-left: 5px;
   float: left;
 }
 .main_live_video_icon,
@@ -231,4 +229,30 @@ p {
 }
 .submenu__item {
   color: #c1c1c1;
+}
+.main_right {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 1225px;
+}
+.ad_div {
+  width: 100%;
+}
+.ad_title {
+  margin: 15px 0px;
+}
+.ad_subject {
+  float: left;
+  margin: 10px 0;
+}
+.ad_img {
+  height: 10%;
+  width: 10%;
+  border-radius: 15px;
+  float: left;
+}
+.ad_subtitle {
+  width: 100%;
+  height: 100%;
 }

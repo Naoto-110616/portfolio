@@ -1,5 +1,5 @@
 $(function(){
-    $('.js-menu__item__link').each(function(){
+    $('.js-menu__item__link_open').each(function(){
         $(this).on('click',function(){
             $("+.submenu",this).slideToggle();
             $("i",this).toggleClass("fas fa-arrow-circle-down fa-2x");

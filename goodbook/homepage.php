@@ -95,7 +95,7 @@ if (empty($_SESSION['login'])) {
                         </li>
                         <ul class="menu">
                             <li class="menu__item">
-                                <a class="main_left_icon menu__item__link js-menu__item__link" href="">
+                                <a class="main_left_icon menu__item__link js-menu__item__link_open" href="">
                                     <div><i class="fas fa-arrow-circle-down fa-2x"></i></div>
                                     <div class="icon_name_div"><span class="icon_name">more</span></div>
                                 </a>
@@ -173,8 +173,8 @@ if (empty($_SESSION['login'])) {
                             <span class="main_center_icon"><i class="fas fa-plus-circle fa-2x"></i></span>
                         </div>
                         <div class="main_center_comment1">
-                            <p class="comment_make_stories">ストーリーズを作成</p>
-                            <p>写真や動画，メッセージをシェアしよう</p>
+                            <p class="comment_make_stories">Create stories</p>
+                            <p>Share photos, videos and messages</p>
                         </div>
                     </div>
                     <div class="main_center_element main_center_element2">
@@ -183,22 +183,22 @@ if (empty($_SESSION['login'])) {
                                 <span class="main_center_icon"><i class="fas fa-user-circle fa-2x"></i></span>
                             </div>
                             <div class="main_center_comment2">
-                                <p class="comment_make_stories">あなたのその気持ち，シェアしよう</p>
+                                <p class="comment_make_stories">Let's share your feelings</p>
                             </div>
                         </div>
                         <div class="border"></div>
                         <div class="main_center_element2_share2">
                             <div class="live_video">
                                 <span class="main_center_icon main_live_video_icon"><i class="fas fa-video fa-lg"></i></span>
-                                <p class="live_video_subject">live video</p>
+                                <p class="live_video_subject">LiveVideo</p>
                             </div>
                             <div class="video">
                                 <span class="main_center_icon main_video_icon"><i class="far fa-images fa-lg"></i></span>
-                                <p class="video_subject">picture video</p>
+                                <p class="video_subject">Picture&Video</p>
                             </div>
                             <div class="activity">
                                 <span class="main_center_icon main_activity_icon"><i class="far fa-smile-wink fa-lg"></i></span>
-                                <p class="activity_subject">activity mood</p>
+                                <p class="activity_subject">Activity</p>
                             </div>
                         </div>
                     </div>
@@ -213,10 +213,32 @@ if (empty($_SESSION['login'])) {
 =======
             <div class="main_right">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> develop
 =======
                 <p>;ldksajfkl;sadjflksdjflksjdfkl;sjadl;ffjl</p>
+>>>>>>> develop
+=======
+                <div class="ad_div">
+                    <div class="ad_title">
+                        <p>Advertising</p>
+                    </div>
+                    <div class="ad_subject">
+                        <img class="ad_img" src="img/81kDFHRqmYL._AC_SL1500_.jpg" alt="">
+                        <div class="ad_subtitle">
+                            <p class="ad_album_name">First Love</p>
+                            <p class="ad_album_year">1999</p>
+                        </div>
+                    </div>
+                    <div class="ad_subject">
+                        <img class="ad_img" src="img/A1OgtUoT7SL._AC_SL1500_.jpg" alt="">
+                        <div class="ad_subtitle">
+                            <p class="ad_album_name">初恋</p>
+                            <p class="ad_album_year">2018</p>
+                        </div>
+                    </div>
+                </div>
 >>>>>>> develop
             </div>
         </div>
