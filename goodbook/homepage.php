@@ -178,7 +178,7 @@ if (empty($_SESSION['login'])) {
                         </div>
                     </div>
                     <div class="main_center_element main_center_element2">
-                        <div class="main_center_element2_share">
+                        <div class="main_center_element2_share1">
                             <div class="main_icon">
                                 <span class="main_center_icon"><i class="fas fa-user-circle fa-2x"></i></span>
                             </div>
@@ -202,6 +202,22 @@ if (empty($_SESSION['login'])) {
                             </div>
                         </div>
                     </div>
+                    <div class="main_center_element main_center_element3">
+                        <div class="icon_img_div">
+                            <img class="icon_img" src="img/A1OgtUoT7SL._AC_SL1500_.jpg" alt="">
+                            <div class="user_name_div">
+                                <p>utada hikaru</p>
+                                <p class="time_line">12hour before</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="main_center_img" src="img/Time.jpg" alt="">
+                        </div>
+                    </div>
+                    <section class="themas">
+                        <div class=>
+                        </div>
+                    </section>
                 </div>
             </div>
             <div class="main_right">
