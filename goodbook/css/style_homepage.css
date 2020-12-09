@@ -32,7 +32,7 @@ body {
   height: 40px;
   border-radius: 25px;
   border: none;
-  background-color: #4c4c4c;
+  background-color: #494949;
   outline: none;
   font-size: 16px;
   color: #c1c1c1;
@@ -116,6 +116,7 @@ p {
 <<<<<<< HEAD
 >>>>>>> develop
 .main_center_element {
+<<<<<<< HEAD
 =======
 .main_center_element1 {
 >>>>>>> develop
@@ -123,7 +124,11 @@ p {
 .main_center_element {
 >>>>>>> develop
   background-color: #4c4c4c;
+=======
+  background-color: #303030;
+>>>>>>> develop
   width: 70%;
+  height: 10%;
   margin: 0 auto;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -135,10 +140,10 @@ p {
 =======
 >>>>>>> develop
   border-radius: 10px;
+  margin-bottom: 30px;
 }
 .main_center_element1 {
   height: 8%;
-  margin-bottom: 30px;
   overflow: hidden;
 }
 .main_center_element2 {
@@ -153,10 +158,19 @@ p {
 =======
   height: 15%;
 }
-.main_center_element2_share {
+.main_center_element3 {
+  height: 70%;
+}
+.main_center_element2_share1 {
   width: 100%;
   height: 47%;
 >>>>>>> develop
+}
+.main_center_element2_share2 {
+  width: 80%;
+  height: 30%;
+  margin: auto;
+  margin-top: 10px;
 }
 .main_icon {
   margin-left: 15px;
@@ -186,12 +200,6 @@ p {
   border-bottom: 1px solid #8c8c8c;
   width: 85%;
   margin: auto;
-}
-.main_center_element2_share2 {
-  width: 80%;
-  height: 30%;
-  margin: auto;
-  margin-top: 10px;
 }
 .live_video,
 .video,
@@ -229,6 +237,31 @@ p {
 }
 .submenu__item {
   color: #c1c1c1;
+}
+.icon_img_div {
+  height: 50px;
+  width: 95%;
+  margin: auto;
+  padding: 10px;
+}
+.icon_img {
+  float: left;
+
+  height: 50px;
+  width: 50px;
+  border-radius: 75px;
+}
+.user_name_div {
+  width: 200px;
+  margin-left: 55px;
+}
+.time_line {
+  margin-top: 10px;
+  font-size: 12px;
+}
+.main_center_img {
+  height: 100%;
+  width: 100%;
 }
 .main_right {
   position: fixed;
