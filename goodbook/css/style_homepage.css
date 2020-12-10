@@ -14,8 +14,6 @@ body {
   background-color: #333333;
 }
 .head_left {
-  width: 30%;
-  height: 60px;
   display: flex;
 }
 .icon_div {
@@ -58,10 +56,7 @@ body {
 }
 .head_right {
   width: 33%;
-  height: 60px;
-  padding-right: 16px;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 .header_right_icon {
@@ -91,10 +86,8 @@ body {
   margin: 5px 10px;
 }
 .main_center {
-  padding: 15px 32px;
-  overflow-y: scroll;
-  margin-left: 20%;
-  margin-right: 20%;
+  padding-top: 20px;
+  margin: 0 20%;
   flex-grow: 1;
   height: 100%;
 }
@@ -115,18 +108,19 @@ body {
   overflow: hidden;
 }
 .main_center_element2 {
-  height: 15%;
+  height: 13%;
 }
 .main_center_element3 {
   height: 70%;
 }
 .main_center_element2_share1 {
-  width: 100%;
-  height: 47%;
+  margin: auto;
+  width: 95%;
+  height: 45%;
 }
 .main_center_element2_share2 {
-  width: 80%;
-  height: 30%;
+  width: 70%;
+  height: 30px;
   margin: auto;
   margin-top: 10px;
 }
@@ -224,7 +218,7 @@ body {
   position: fixed;
   height: 100%;
   width: 100%;
-  left: 1225px;
+  left: 1400px;
 }
 .ad_div {
   width: 100%;
@@ -237,8 +231,8 @@ body {
   margin: 10px 0;
 }
 .ad_img {
-  height: 10%;
-  width: 10%;
+  height: 9%;
+  width: 9%;
   border-radius: 15px;
   float: left;
 }
