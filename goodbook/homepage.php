@@ -204,14 +204,14 @@ if (empty($_SESSION['login'])) {
                     </div>
                     <div class="main_center_element main_center_element3">
                         <div class="icon_img_div">
-                            <img class="icon_img" src="img/A1OgtUoT7SL._AC_SL1500_.jpg" alt="">
+                            <img class="icon_img" src="img/homepage_img/A1OgtUoT7SL._AC_SL1500_.jpg" alt="">
                             <div class="user_name_div">
                                 <p>utada hikaru</p>
-                                <p class="time_line">12hour before</p>
+                                <p class="time_line">12hour ago</p>
                             </div>
                         </div>
                         <div>
-                            <img class="main_center_img" src="img/Time.jpg" alt="">
+                            <img class="main_center_img" src="img/homepage_img/Time.jpg" alt="">
                         </div>
                     </div>
                     <section class="themas">
@@ -241,14 +241,14 @@ if (empty($_SESSION['login'])) {
                         <p>Advertising</p>
                     </div>
                     <div class="ad_subject">
-                        <img class="ad_img" src="img/81kDFHRqmYL._AC_SL1500_.jpg" alt="">
+                        <img class="ad_img" src="img/homepage_img/81kDFHRqmYL._AC_SL1500_.jpg" alt="">
                         <div class="ad_subtitle">
                             <p class="ad_album_name">First Love</p>
                             <p class="ad_album_year">1999</p>
                         </div>
                     </div>
                     <div class="ad_subject">
-                        <img class="ad_img" src="img/A1OgtUoT7SL._AC_SL1500_.jpg" alt="">
+                        <img class="ad_img" src="img/homepage_img/A1OgtUoT7SL._AC_SL1500_.jpg" alt="">
                         <div class="ad_subtitle">
                             <p class="ad_album_name">初恋</p>
                             <p class="ad_album_year">2018</p>
