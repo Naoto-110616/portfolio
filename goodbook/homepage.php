@@ -211,7 +211,22 @@ if (empty($_SESSION['login'])) {
                             </div>
                         </div>
                         <div>
-                            <img class="main_center_img" src="img/homepage_img/Time.jpg" alt="">
+                            <p class="main_center_comment">ロックダウン中のロンドンで自宅のリビングと作業部屋だけで撮った「Time」のMVやっと<br>
+                                公開です！みんな(と言ってもスタッフは2.5人)で直前にテスト受けて。初日は男性スタッフも一人いたんだけど二日目は彼が来れなくなって、私を含む女性３人だけで撤収までがんばった</p>
+                        </div>
+                        <div class="main_center_mv_div">
+                            <!-- <img class="main_center_img" src="img/homepage_img/Time.jpg" alt=""> -->
+                            <iframe class="main_center_mv" src="https://www.youtube.com/embed/1ksh8x9bIPI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="main_center_icon_bottom_div">
+                            <img class="main_center_icon_bottom" src="img/homepage_img/download-2.svg" alt="">
+                            <img class="main_center_icon_bottom" src="img/homepage_img/download-1.svg" alt="">
+                            <img class="main_center_icon_bottom" src="img/homepage_img/download.svg" alt="">
+                            <p>143</p>
+                        </div>
+                        <div class="main_center_comment_share_div">
+                            <p>comment</p>
+                            <p>share</p>
                         </div>
                     </div>
                     <section class="themas">
