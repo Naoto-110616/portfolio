@@ -210,21 +210,44 @@ body {
   margin-top: 10px;
   font-size: 12px;
 }
+.main_center_comment {
+  margin: 10px;
+}
+.main_center_mv_div {
+  height: 70%;
+  margin: 0 auto;
+}
+.main_center_mv {
+  width: 100%;
+  height: 400px;
+}
 .main_center_img {
   height: 100%;
   width: 100%;
+}
+.main_center_icon_bottom_div {
+  margin-left: 10px;
+}
+.main_center_icon_bottom {
+  height: 20px;
+  width: 20px;
+  float: left;
+}
+.main_center_comment_share_div {
+  float: right;
 }
 .main_right {
   position: fixed;
   height: 100%;
   width: 100%;
-  left: 1400px;
+  left: 1350px;
 }
 .ad_div {
   width: 100%;
 }
 .ad_title {
-  margin: 15px 0px;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 .ad_subject {
   float: left;
