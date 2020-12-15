@@ -173,32 +173,32 @@ if (empty($_SESSION['login'])) {
                             <span class="main_center_icon"><i class="fas fa-plus-circle fa-2x"></i></span>
                         </div>
                         <div class="main_center_comment1">
-                            <p class="comment_make_stories">Create stories</p>
+                            <p class="comment_make_stories1">Create stories</p>
                             <p>Share photos, videos and messages</p>
                         </div>
                     </div>
                     <div class="main_center_element main_center_element2">
                         <div class="main_center_element2_share1">
-                            <div class="main_icon">
+                            <div class="main_icon2">
                                 <span class="main_center_icon"><i class="fas fa-user-circle fa-2x"></i></span>
-                            </div>
-                            <div class="main_center_comment2">
-                                <p class="comment_make_stories">Let's share your feelings</p>
+                                <div class="main_center_comment2">
+                                    <p class="comment_make_stories">Let's share your feelings</p>
+                                </div>
                             </div>
                         </div>
                         <div class="border"></div>
                         <div class="main_center_element2_share2">
-                            <div class="live_video">
+                            <div class="main_center_element2_icon_div">
                                 <span class="main_center_icon main_live_video_icon"><i class="fas fa-video fa-lg"></i></span>
-                                <p class="live_video_subject">LiveVideo</p>
+                                <p class="icon_button live_video_subject">LiveVideo</p>
                             </div>
-                            <div class="video">
+                            <div class="main_center_element2_icon_div">
                                 <span class="main_center_icon main_video_icon"><i class="far fa-images fa-lg"></i></span>
-                                <p class="video_subject">Picture&Video</p>
+                                <p class="icon_button video_subject">Picture&Video</p>
                             </div>
-                            <div class="activity">
+                            <div class="main_center_element2_icon_div">
                                 <span class="main_center_icon main_activity_icon"><i class="far fa-smile-wink fa-lg"></i></span>
-                                <p class="activity_subject">Activity</p>
+                                <p class="icon_button activity_subject">Activity</p>
                             </div>
                         </div>
                     </div>
@@ -215,18 +215,142 @@ if (empty($_SESSION['login'])) {
                                 公開です！みんな(と言ってもスタッフは2.5人)で直前にテスト受けて。初日は男性スタッフも一人いたんだけど二日目は彼が来れなくなって、私を含む女性３人だけで撤収までがんばった</p>
                         </div>
                         <div class="main_center_mv_div">
-                            <!-- <img class="main_center_img" src="img/homepage_img/Time.jpg" alt=""> -->
                             <iframe class="main_center_mv" src="https://www.youtube.com/embed/1ksh8x9bIPI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <div class="main_center_icon_bottom_div">
-                            <img class="main_center_icon_bottom" src="img/homepage_img/download-2.svg" alt="">
-                            <img class="main_center_icon_bottom" src="img/homepage_img/download-1.svg" alt="">
-                            <img class="main_center_icon_bottom" src="img/homepage_img/download.svg" alt="">
-                            <p>143</p>
+                            <div class="main_center_icon_bottom">
+                                <div class="main_center_icon_button_div">
+                                    <img class="main_center_icon_button" src="img/homepage_img/download-2.svg" alt="">
+                                </div>
+                                <div class="main_center_icon_button_div">
+                                    <img class="main_center_icon_button" src="img/homepage_img/download-1.svg" alt="">
+                                </div>
+                                <div class="main_center_icon_button_div">
+                                    <img class="main_center_icon_button" src="img/homepage_img/download.svg" alt="">
+                                </div>
+                                <div class="main_center_icon_button_div">
+                                    <p>143</p>
+                                </div>
+                            </div>
+                            <div class="main_center_comment_share_div">
+                                <p>comment</p>
+                            </div>
+                            <div class="border"></div>
+                            <div class="main_center_element2_share2">
+                                <div class="main_center_element2_icon_div">
+                                    <span class="main_center_icon main_live_video_icon"><i class="far fa-thumbs-up fa-lg"></i></span>
+                                    <p class="icon_button good_subject">good</p>
+                                </div>
+                                <div class="main_center_element2_icon_div">
+                                    <span class="main_center_icon main_video_icon"><i class="far fa-comment fa-lg"></i></span>
+                                    <p class="icon_button comment_subject">comment</p>
+                                </div>
+                                <div class="main_center_element2_icon_div">
+                                    <span class="main_center_icon main_activity_icon"><i class="fas fa-reply fa-lg"></i></span>
+                                    <p class="icon_button share_subject">share</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="main_center_comment_share_div">
-                            <p>comment</p>
-                            <p>share</p>
+                    </div>
+                    <div class="main_center_element main_center_element3">
+                        <div class="icon_img_div">
+                            <img class="icon_img" src="img/homepage_img/unnamed.jpg" alt="">
+                            <div class="user_name_div">
+                                <p>ChilledCow</p>
+                                <p class="time_line">1day ago</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="main_center_comment">Thank you for listening, I hope you will have a good time here:)</p>
+                        </div>
+                        <div class="main_center_mv_div">
+                            <iframe class="main_center_mv" src="https://www.youtube.com/embed/5qap5aO4i9A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="main_center_icon_bottom_div">
+                            <div class="main_center_icon_bottom">
+                                <div class="main_center_icon_button_div">
+                                    <img class="main_center_icon_button" src="img/homepage_img/download-2.svg" alt="">
+                                </div>
+                                <div class="main_center_icon_button_div">
+                                    <img class="main_center_icon_button" src="img/homepage_img/download-1.svg" alt="">
+                                </div>
+                                <div class="main_center_icon_button_div">
+                                    <img class="main_center_icon_button" src="img/homepage_img/download.svg" alt="">
+                                </div>
+                                <div class="main_center_icon_button_div">
+                                    <p>13</p>
+                                </div>
+                            </div>
+                            <div class="main_center_comment_share_div">
+                                <p>comment</p>
+                            </div>
+                            <div class="border"></div>
+                            <div class="main_center_element2_share2">
+                                <div class="main_center_element2_icon_div">
+                                    <span class="main_center_icon main_live_video_icon"><i class="far fa-thumbs-up fa-lg"></i></span>
+                                    <p class="icon_button good_subject">good</p>
+                                </div>
+                                <div class="main_center_element2_icon_div">
+                                    <span class="main_center_icon main_video_icon"><i class="far fa-comment fa-lg"></i></span>
+                                    <p class="icon_button comment_subject">comment</p>
+                                </div>
+                                <div class="main_center_element2_icon_div">
+                                    <span class="main_center_icon main_activity_icon"><i class="fas fa-reply fa-lg"></i></span>
+                                    <p class="icon_button share_subject">share</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_center_element main_center_element3">
+                        <div class="icon_img_div">
+                            <img class="icon_img" src="img/homepage_img/27750828_1871209329618352_2558236254488818924_n.jpg" alt="">
+                            <div class="user_name_div">
+                                <p>Amazon</p>
+                                <p class="time_line">3day ago</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="main_center_comment">
+                                【Amazon 年末の贈り物セール】
+                                12月14日まで開催中❗️中小企業の販売商品も多数登場🎁
+                                「中小企業を応援 ホリデーギフト特集」では、400社以上の販売事業者様より、クリスマス🎄や年末年始🎍などホリデーシーズンのギフトをご紹介しています。</p>
+                        </div>
+                        <div class="main_center_img_div">
+                            <img class="main_center_img" src="img/homepage_img/safe_image.jpeg" alt="">
+                        </div>
+                        <div class="main_center_icon_bottom_div">
+                            <div class="main_center_icon_bottom">
+                                <div class="main_center_icon_button_div">
+                                    <img class="main_center_icon_button" src="img/homepage_img/download-2.svg" alt="">
+                                </div>
+                                <div class="main_center_icon_button_div">
+                                    <img class="main_center_icon_button" src="img/homepage_img/download-1.svg" alt="">
+                                </div>
+                                <div class="main_center_icon_button_div">
+                                    <img class="main_center_icon_button" src="img/homepage_img/download.svg" alt="">
+                                </div>
+                                <div class="main_center_icon_button_div">
+                                    <p>123</p>
+                                </div>
+                            </div>
+                            <div class="main_center_comment_share_div">
+                                <p>comment</p>
+                            </div>
+                            <div class="border"></div>
+                            <div class="main_center_element2_share2">
+                                <div class="main_center_element2_icon_div">
+                                    <span class="main_center_icon main_live_video_icon"><i class="far fa-thumbs-up fa-lg"></i></span>
+                                    <p class="icon_button good_subject">good</p>
+                                </div>
+                                <div class="main_center_element2_icon_div">
+                                    <span class="main_center_icon main_video_icon"><i class="far fa-comment fa-lg"></i></span>
+                                    <p class="icon_button comment_subject">comment</p>
+                                </div>
+                                <div class="main_center_element2_icon_div">
+                                    <span class="main_center_icon main_activity_icon"><i class="fas fa-reply fa-lg"></i></span>
+                                    <p class="icon_button share_subject">share</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <section class="themas">
@@ -256,14 +380,18 @@ if (empty($_SESSION['login'])) {
                         <p>Advertising</p>
                     </div>
                     <div class="ad_subject">
-                        <img class="ad_img" src="img/homepage_img/81kDFHRqmYL._AC_SL1500_.jpg" alt="">
+                        <div class="ad_img_div">
+                            <img class="ad_img" src="img/homepage_img/81kDFHRqmYL._AC_SL1500_.jpg" alt="">
+                        </div>
                         <div class="ad_subtitle">
                             <p class="ad_album_name">First Love</p>
                             <p class="ad_album_year">1999</p>
                         </div>
                     </div>
                     <div class="ad_subject">
-                        <img class="ad_img" src="img/homepage_img/A1OgtUoT7SL._AC_SL1500_.jpg" alt="">
+                        <div class="ad_img_div">
+                            <img class="ad_img" src="img/homepage_img/A1OgtUoT7SL._AC_SL1500_.jpg" alt="">
+                        </div>
                         <div class="ad_subtitle">
                             <p class="ad_album_name">初恋</p>
                             <p class="ad_album_year">2018</p>
