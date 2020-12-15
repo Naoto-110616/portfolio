@@ -84,85 +84,21 @@ body {
   flex-grow: 1;
   height: 100%;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-.main_left {
-  height: 100%;
-  width: 20%;
-}
-p {
-  color: #dddddd;
-=======
-=======
 .main_center_position {
   width: 100%;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> develop
 .main_center_element {
-<<<<<<< HEAD
-=======
-.main_center_element1 {
->>>>>>> develop
-=======
-.main_center_element {
->>>>>>> develop
-  background-color: #4c4c4c;
-=======
   background-color: #303030;
->>>>>>> develop
   width: 70%;
   margin: 0 auto;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> develop
-=======
-=======
-  margin-bottom: 30px;
-=======
->>>>>>> develop
   border-radius: 10px;
   margin-bottom: 30px;
 }
 .main_center_element1 {
   overflow: hidden;
 }
-<<<<<<< HEAD
-.main_center_element2 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  background-color: #4c4c4c;
-  height: 16%;
-  width: 70%;
-  margin: 0 auto;
->>>>>>> develop
-  border-radius: 10px;
-  overflow: hidden;
-=======
-  height: 15%;
-=======
-  height: 13%;
->>>>>>> develop
-}
-.main_center_element3 {
-  height: 70%;
-}
-.main_center_element2_share1 {
-<<<<<<< HEAD
-  width: 100%;
-  height: 47%;
->>>>>>> develop
-=======
-  margin: auto;
-  width: 95%;
-  height: 45%;
->>>>>>> develop
-=======
 .main_center_element2_share1 {
   width: 95%;
->>>>>>> develop
 }
 .main_center_element2_share2 {
   padding-bottom: 15px;
@@ -194,7 +130,6 @@ p {
 .comment_make_stories2 {
   font-weight: bold;
   margin-bottom: 2px;
->>>>>>> develop
 }
 .comment_make_stories2 {
   float: left;

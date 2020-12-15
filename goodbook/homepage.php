@@ -359,22 +359,7 @@ if (empty($_SESSION['login'])) {
                     </section>
                 </div>
             </div>
-<<<<<<< HEAD
-            <div class="main_left">
-                <p>dsljkfl;aksjf;lksjdf;lkajsfl;k</p>
-                <p>dsljkfl;aksjf;lksjdf;lkajsfl;k</p>
-                <p>dsljkfl;aksjf;lksjdf;lkajsfl;k</p>
-                <p>dsljkfl;aksjf;lksjdf;lkajsfl;k</p>
-=======
             <div class="main_right">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> develop
-=======
-                <p>;ldksajfkl;sadjflksdjflksjdfkl;sjadl;ffjl</p>
->>>>>>> develop
-=======
                 <div class="ad_div">
                     <div class="ad_title">
                         <p>Advertising</p>
@@ -398,7 +383,6 @@ if (empty($_SESSION['login'])) {
                         </div>
                     </div>
                 </div>
->>>>>>> develop
             </div>
         </div>
     </main>
