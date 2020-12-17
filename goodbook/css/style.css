@@ -1,6 +1,5 @@
 body {
     font-family: 'Trebuchet;
-
 }
 
 .home {
@@ -90,8 +89,9 @@ body {
     font-size: 20px;
     border: none;
     font-weight: bold;
+    cursor:pointer;
 }
-
+.singup:hover,
 .login:hover {
     background: #0B61CA;
 }

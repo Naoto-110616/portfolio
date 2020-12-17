@@ -113,7 +113,7 @@ if (!empty($_POST)) {
                             </div>
                         </div>
                         <div class="logindiv">
-                            <input class="login " type="submit" value="Login" name='login' style="cursor:pointer">
+                            <input class="login " type="submit" value="Login" name='login'>
                         </div>
                         <div class="forgotdiv">
                             <a href="" class="forgot">Forgot Password?</a>
