@@ -120,7 +120,7 @@ if (!empty($_POST)) {
                             </div>
                         </div>
                         <div class="singupdiv">
-                            <input class="singup" value="Sing Up" name="singup" type="submit" style="cursor:pointer">
+                            <input class="singup" value="Sing Up" name="singup" type="submit">
                         </div>
                         <div class="boder1">
                             <p class="box"></p>
