@@ -41,7 +41,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 .header_center_icon {
   margin: 0px 30px;
 }
@@ -157,7 +156,6 @@ body {
   margin-top: 10px;
 }
 .menu__item {
-  cursor: pointer;
   display: block;
 }
 .menu__item__link {
@@ -244,4 +242,13 @@ body {
 }
 .ad_subtitle {
   width: 100%;
+}
+.icon_name:hover,
+.left_icon:hover,
+.header_center_icon:hover,
+.header_right_icon:hover,
+.main_center_comment1,
+.main_center_icon,
+.main_center_element2_icon_div {
+  cursor: pointer;
 }

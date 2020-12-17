@@ -29,7 +29,7 @@ if (empty($_SESSION['login'])) {
     <header class="header">
         <div class="head_left">
             <div class="icon_div">
-                <img class="icon" src="img/Facebook-Logo1.png">
+                <a href="login.php"><img class="icon" src="img/Facebook-Logo1.png"></a>
             </div>
             <div class="serch_div">
                 <label>
@@ -58,39 +58,39 @@ if (empty($_SESSION['login'])) {
                 <div id="contents">
                     <ul>
                         <li class="main_left_icon">
-                            <div><i class="fas fa-user-circle fa-2x"></i></div>
+                            <div><i class="left_icon fas fa-user-circle fa-2x"></i></div>
                             <div class="icon_name_div"><span class="icon_name">name</span></div>
                         </li>
                         <li class="main_left_icon">
-                            <div><i class="fas fa-heartbeat fa-2x"></i></div>
+                            <div><i class="left_icon fas fa-heartbeat fa-2x"></i></div>
                             <div class="icon_name_div"><span class="icon_name">covid19 Information Center</span></div>
                         </li>
                         <li class="main_left_icon">
-                            <div><i class="far fa-user fa-2x"></i></div>
+                            <div><i class="left_icon far fa-user fa-2x"></i></div>
                             <div class="icon_name_div"><span class="icon_name">Find a friend</span></div>
                         </li>
                         <li class="main_left_icon">
-                            <div><i class="fas fa-users fa-2x"></i></div>
+                            <div><i class="left_icon fas fa-users fa-2x"></i></div>
                             <div class="icon_name_div"><span class="icon_name">group</span></div>
                         </li>
                         <li class="main_left_icon">
-                            <div><i class="fas fa-video fa-2x"></i></div>
+                            <div><i class="left_icon fas fa-video fa-2x"></i></div>
                             <div class="icon_name_div"><span class="icon_name">video</span></div>
                         </li>
                         <li class="main_left_icon">
-                            <div><i class="far fa-calendar-alt fa-2x"></i></div>
+                            <div><i class="left_icon far fa-calendar-alt fa-2x"></i></div>
                             <div class="icon_name_div"><span class="icon_name">event</span></div>
                         </li>
                         <li class="main_left_icon">
-                            <div><i class="far fa-clock fa-2x"></i></div>
+                            <div><i class="left_icon far fa-clock fa-2x"></i></div>
                             <div class="icon_name_div"><span class="icon_name">memories</span></div>
                         </li>
                         <li class="main_left_icon">
-                            <div><i class="fas fa-tag fa-2x"></i></div>
+                            <div><i class="left_icon fas fa-tag fa-2x"></i></div>
                             <div class="icon_name_div"><span class="icon_name">saved</span></div>
                         </li>
                         <li class="main_left_icon">
-                            <div><i class="fab fa-font-awesome-flag fa-2x"></i></div>
+                            <div><i class="left_icon fab fa-font-awesome-flag fa-2x"></i></div>
                             <div class="icon_name_div"><span class="icon_name">page</span></div>
                         </li>
                         <ul class="menu">
@@ -101,63 +101,63 @@ if (empty($_SESSION['login'])) {
                                 </a>
                                 <ul class="submenu">
                                     <li class="main_left_icon submenu__item">
-                                        <div><i class="fas fa-briefcase fa-2x"></i></div>
+                                        <div><i class="left_icon fas fa-briefcase fa-2x"></i></div>
                                         <div class="icon_name_div"><span class="icon_name">job offer</span></div>
                                     </li>
                                     <li class="main_left_icon submenu__item">
-                                        <div><i class="fas fa-wallet fa-2x"></i></div>
+                                        <div><i class="left_icon fas fa-wallet fa-2x"></i></div>
                                         <div class="icon_name_div"><span class="icon_name">pay</span></div>
                                     </li>
                                     <li class="main_left_icon submenu__item">
-                                        <div><i class="fas fa-comment-dots fa-2x"></i></div>
+                                        <div><i class="left_icon fas fa-comment-dots fa-2x"></i></div>
                                         <div class="icon_name_div"><span class="icon_name">massenger</span></div>
                                     </li>
                                     <li class="main_left_icon submenu__item">
-                                        <div><i class="far fa-comment-dots fa-2x"></i></div>
+                                        <div><i class="left_icon far fa-comment-dots fa-2x"></i></div>
                                         <div class="icon_name_div"><span class="icon_name">massenger kids</span></div>
                                     </li>
                                     <li class="main_left_icon submenu__item">
-                                        <div><i class="fas fa-cube fa-2x"></i></div>
+                                        <div><i class="left_icon fas fa-cube fa-2x"></i></div>
                                         <div class="icon_name_div"><span class="icon_name">Oculus</span></div>
                                     </li>
                                     <li class="main_left_icon submenu__item">
-                                        <div><i class="far fa-star fa-2x"></i></div>
+                                        <div><i class="left_icon far fa-star fa-2x"></i></div>
                                         <div class="icon_name_div"><span class="icon_name">favorite</span></div>
                                     </li>
                                     <li class="main_left_icon submenu__item">
-                                        <div><i class="fas fa-gamepad fa-2x"></i></div>
+                                        <div><i class="left_icon fas fa-gamepad fa-2x"></i></div>
                                         <div class="icon_name_div"><span class="icon_name">game</span></div>
                                     </li>
                                     <li class="main_left_icon submenu__item">
-                                        <div><i class="fas fa-bullhorn fa-2x"></i></div>
+                                        <div><i class="left_icon fas fa-bullhorn fa-2x"></i></div>
                                         <div class="icon_name_div"><span class="icon_name">advertising center</span></div>
                                     </li>
                                     <li class="main_left_icon submenu__item">
-                                        <div><i class="fas fa-signal fa-2x"></i></div>
+                                        <div><i class="left_icon fas fa-signal fa-2x"></i></div>
                                         <div class="icon_name_div"><span class="icon_name">advertising manage</span></div>
                                     </li>
                                     <li class="main_left_icon submenu__item">
-                                        <div><i class="fas fa-ad fa-2x"></i></div>
+                                        <div><i class="left_icon fas fa-ad fa-2x"></i></div>
                                         <div class="icon_name_div"><span class="icon_name">advertising activity</span></div>
                                     </li>
                                     <li class="main_left_icon submenu__item">
-                                        <div><i class="fas fa-ticket-alt fa-2x"></i></div>
+                                        <div><i class="left_icon fas fa-ticket-alt fa-2x"></i></div>
                                         <div class="icon_name_div"><span class="icon_name">curpon</span></div>
                                     </li>
                                     <li class="main_left_icon submenu__item">
-                                        <div><i class="fas fa-users fa-2x"></i></div>
+                                        <div><i class="left_icon fas fa-users fa-2x"></i></div>
                                         <div class="icon_name_div"><span class="icon_name">List of friends</span></div>
                                     </li>
                                     <li class="main_left_icon submenu__item">
-                                        <div><i class="fas fa-cloud-sun fa-2x"></i></div>
+                                        <div><i class="left_icon fas fa-cloud-sun fa-2x"></i></div>
                                         <div class="icon_name_div"><span class="icon_name">wether</span></div>
                                     </li>
                                     <li class="main_left_icon submenu__item">
-                                        <div><i class="fab fa-gratipay fa-2x"></i></div>
+                                        <div><i class="left_icon fab fa-gratipay fa-2x"></i></div>
                                         <div class="icon_name_div"><span class="icon_name">donation campaign</span></div>
                                     </li>
                                     <li class="main_left_icon submenu__item">
-                                        <div><i class="fas fa-solar-panel fa-2x"></i></div>
+                                        <div><i class="left_icon fas fa-solar-panel fa-2x"></i></div>
                                         <div class="icon_name_div"><span class="icon_name">Configuration</span></div>
                                     </li>
                                 </ul>
@@ -254,6 +254,55 @@ if (empty($_SESSION['login'])) {
                     </div>
                     <div class="main_center_element main_center_element3">
                         <div class="icon_img_div">
+                            <img class="icon_img" src="img/homepage_img/A1OgtUoT7SL._AC_SL1500_.jpg" alt="">
+                            <div class="user_name_div">
+                                <p>utada hikaru</p>
+                                <p class="time_line">22hour ago</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="main_center_comment">The music video reveal for "Time" is scheduled at 9 PM (Japan time) on July 28! The premiere will take place on YouTube... so stay tuned!! </p>
+                        </div>
+                        <div class="main_center_mv_div">
+                            <a href="https://www.utadahikaru.jp/"><img class="main_center_img" src="img/homepage_img/Time.jpg" alt=""></a>
+                        </div>
+                        <div class="main_center_icon_bottom_div">
+                            <div class="main_center_icon_bottom">
+                                <div class="main_center_icon_button_div">
+                                    <img class="main_center_icon_button" src="img/homepage_img/download-2.svg" alt="">
+                                </div>
+                                <div class="main_center_icon_button_div">
+                                    <img class="main_center_icon_button" src="img/homepage_img/download-1.svg" alt="">
+                                </div>
+                                <div class="main_center_icon_button_div">
+                                    <img class="main_center_icon_button" src="img/homepage_img/download.svg" alt="">
+                                </div>
+                                <div class="main_center_icon_button_div">
+                                    <p>123</p>
+                                </div>
+                            </div>
+                            <div class="main_center_comment_share_div">
+                                <p>comment</p>
+                            </div>
+                            <div class="border"></div>
+                            <div class="main_center_element2_share2">
+                                <div class="main_center_element2_icon_div">
+                                    <span class="main_center_icon main_live_video_icon"><i class="far fa-thumbs-up fa-lg"></i></span>
+                                    <p class="icon_button good_subject">good</p>
+                                </div>
+                                <div class="main_center_element2_icon_div">
+                                    <span class="main_center_icon main_video_icon"><i class="far fa-comment fa-lg"></i></span>
+                                    <p class="icon_button comment_subject">comment</p>
+                                </div>
+                                <div class="main_center_element2_icon_div">
+                                    <span class="main_center_icon main_activity_icon"><i class="fas fa-reply fa-lg"></i></span>
+                                    <p class="icon_button share_subject">share</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_center_element main_center_element3">
+                        <div class="icon_img_div">
                             <img class="icon_img" src="img/homepage_img/unnamed.jpg" alt="">
                             <div class="user_name_div">
                                 <p>ChilledCow</p>
@@ -316,7 +365,7 @@ if (empty($_SESSION['login'])) {
                                 「中小企業を応援 ホリデーギフト特集」では、400社以上の販売事業者様より、クリスマス🎄や年末年始🎍などホリデーシーズンのギフトをご紹介しています。</p>
                         </div>
                         <div class="main_center_img_div">
-                            <img class="main_center_img" src="img/homepage_img/safe_image.jpeg" alt="">
+                            <a href="https://www.amazon.co.jp/"><img class="main_center_img" src="img/homepage_img/safe_image.jpeg" alt=""></a>
                         </div>
                         <div class="main_center_icon_bottom_div">
                             <div class="main_center_icon_bottom">
@@ -366,7 +415,7 @@ if (empty($_SESSION['login'])) {
                     </div>
                     <div class="ad_subject">
                         <div class="ad_img_div">
-                            <img class="ad_img" src="img/homepage_img/81kDFHRqmYL._AC_SL1500_.jpg" alt="">
+                            <a href="https://www.google.com/search?rlz=1C5CHFA_enJP900JP900&sxsrf=ALeKk03ZpY1gsFNg6wqYADde3Y9WmOWwmA:1608209392169&q=%E5%AE%87%E5%A4%9A%E7%94%B0%E3%83%92%E3%82%AB%E3%83%AB+First+Love&stick=H4sIAAAAAAAAAONgFuLUz9U3MMw2LsxS4oIwky2rCrWEfEuLM5Mdi0oyi0tC8h1zkkpzF7HKPl3X_nTJrOdTNjxunvS4afXj5tUKbplFxSUKPvllqTtYGQFDmp0DUAAAAA&sa=X&ved=2ahUKEwifqK3shtXtAhWRGqYKHd2zA4MQxA0wHXoECBEQBw&biw=1680&bih=939"><img class="ad_img" src="img/homepage_img/81kDFHRqmYL._AC_SL1500_.jpg" alt=""></a>
                         </div>
                         <div class="ad_subtitle">
                             <p class="ad_album_name">First Love</p>
@@ -375,7 +424,7 @@ if (empty($_SESSION['login'])) {
                     </div>
                     <div class="ad_subject">
                         <div class="ad_img_div">
-                            <img class="ad_img" src="img/homepage_img/A1OgtUoT7SL._AC_SL1500_.jpg" alt="">
+                            <a href="https://www.google.com/search?sa=X&rlz=1C5CHFA_enJP900JP900&biw=1680&bih=939&sxsrf=ALeKk01ra0Rl6IMM_evvpYkyOo8ImhmLGg:1608209396637&q=%E5%AE%87%E5%A4%9A%E7%94%B0%E3%83%92%E3%82%AB%E3%83%AB+%E5%88%9D%E6%81%8B&stick=H4sIAAAAAAAAAAFPALD_CAMSCS9tLzAxazNxaiINL2cvMTFmNXRnZ195cyoSTXVzaWNBcnRpc3RUb0FsYnVtogUZ5a6H5aSa55Sw44OS44Kr44OrIOWIneaBi7gFAbhKTfxPAAAA&npsic=0&ved=2ahUKEwjD8b3uhtXtAhXhwosBHfVgD9UQ-BYwGXoECAYQPw&tbs=kac:1,kac_so:0"><img class="ad_img" src="img/homepage_img/A1OgtUoT7SL._AC_SL1500_.jpg" alt=""></a>
                         </div>
                         <div class="ad_subtitle">
                             <p class="ad_album_name">初恋</p>
