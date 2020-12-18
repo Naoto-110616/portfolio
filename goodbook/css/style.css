@@ -105,14 +105,14 @@ body {
     font-size: 13px;
 }
 
-.NewAccountdiv,
-.login_pagediv {
+.newAccountdiv,
+.loginPagediv {
     padding-top: 6px;
     margin-top: 14px;
 }
 
-.NewAccount,
-.login_page {
+.newAccountPage,
+.loginPage {
     color: #fff;
     background: #42b72a;
     width: 189px;
@@ -124,8 +124,8 @@ body {
     line-height: 48px;
 }
 
-.NewAccount,
-.login_page:hover {
+.newAccountPage:hover,
+.loginPage:hover {
     background: #348C20;
     text-decoration: none;
 }
@@ -135,8 +135,8 @@ body {
 .password,
 .password_retype,
 .login,
-.NewAccount,
-.login_page,
+.newAccountPage,
+.loginPage,
 .singup {
     border-radius: 8px;
 }
@@ -218,23 +218,18 @@ footer a,
 a:link {
     text-decoration: none;
 }
-
 a:visited {
     text-decoration: none;
 }
-
 a:hover {
     text-decoration: underline;
 }
-
 a:active {
     text-decoration: none;
 }
-
 a {
     text-decoration: none;
 }
-
 input[type="text"]:focus,
 input[type="password"]:focus {
     border: 1px solid #1877f2;
