@@ -57,6 +57,7 @@ if (!empty($_POST)) {
                 header("Location:homepage.php");
             }
         }
+        $err_msg["email"] = "Not registered";
     }
 }
 
@@ -90,19 +91,21 @@ if (!empty($_POST)) {
             <div class="formentire">
                 <div class="form">
                     <form method="post">
-                        <div>
-                            <div class="emaildiv">
-                                <input class="email" type="text" name="email" placeholder="Email" autofocus="1" value="<?php if (!empty($_POST['email'])) {echo $_POST['email'];} ?>">
-                                <div class="help-block"></div>
-                                <span class="err_msg"><?php if (!empty($err_msg['email'])) {echo $err_msg['email'];} ?>
-                                </span>
-                            </div>
-                            <div class="passworddiv">
-                                <input class="password" type="password" name="pass" placeholder="Password" value="<?php if (!empty($_POST['pass'])) {echo $_POST['pass'];} ?>">
-                                <div class="help-block"></div>
-                                <span class="err_msg"><?php if (!empty($err_msg['pass'])) {echo $err_msg['pass'];} ?>
-                                </span>
-                            </div>
+                        <div class="emaildiv">
+                            <label for="email">
+                                <input class="email" type="text" name="email" id="email" placeholder="Email" autofocus="1" value="<?php if (!empty($_POST['email'])) echo $_POST['email']; ?>">
+                            </label>
+                            <div class="help-block"></div>
+                            <span class="err_msg"><?php if (!empty($err_msg['email'])) echo $err_msg['email']; ?>
+                            </span>
+                        </div>
+                        <div class="passworddiv">
+                            <label for="password">
+                                <input class="password" type="password" name="pass" id="password" placeholder="Password" value="<?php if (!empty($_POST['pass'])) echo $_POST['pass']; ?>">
+                            </label>
+                            <div class="help-block"></div>
+                            <span class="err_msg"><?php if (!empty($err_msg['pass'])) echo $err_msg['pass']; ?>
+                            </span>
                         </div>
                         <div class="logindiv">
                             <input class="login " type="submit" value="Login" name='login'>
