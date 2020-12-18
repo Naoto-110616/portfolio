@@ -247,8 +247,8 @@ body {
 .left_icon:hover,
 .header_center_icon:hover,
 .header_right_icon:hover,
-.main_center_comment1,
-.main_center_icon,
-.main_center_element2_icon_div {
+.main_center_comment1:hover,
+.main_center_icon:hover,
+.main_center_element2_icon_div:hover {
   cursor: pointer;
 }
