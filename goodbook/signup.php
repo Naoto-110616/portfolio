@@ -89,33 +89,21 @@ if (!empty($_POST)) {
                     <form method="post">
                         <div>
                             <div class="emaildiv" action='login.php'>
-                                <input class="email" type="text" name="email" id="email" placeholder="Email" autofocus="1" value="<?php if (!empty($_POST['email'])) {
-                                                                                                                                        echo $_POST['email'];
-                                                                                                                                    } ?>">
+                                <input class="email" type="text" name="email" id="email" placeholder="Email" autofocus="1" value="<?php if (!empty($_POST['email'])) {echo $_POST['email'];} ?>">
                                 <div class="help-block"></div>
-                                <span class="err_msg"><?php if (!empty($err_msg['email'])) {
-                                                            echo $err_msg['email'];
-                                                        } ?>
+                                <span class="err_msg"><?php if (!empty($err_msg['email'])) {echo $err_msg['email'];} ?>
                                 </span>
                             </div>
                             <div class="passworddiv">
-                                <input class="password" type="password" name="pass" placeholder="Password" value="<?php if (!empty($_POST['pass'])) {
-                                                                                                                        echo $_POST['pass'];
-                                                                                                                    } ?>">
+                                <input class="password" type="password" name="pass" placeholder="Password" value="<?php if (!empty($_POST['pass'])) {echo $_POST['pass'];} ?>">
                                 <div class="help-block"></div>
-                                <span class="err_msg"><?php if (!empty($err_msg['pass'])) {
-                                                            echo $err_msg['pass'];
-                                                        } ?>
+                                <span class="err_msg"><?php if (!empty($err_msg['pass'])) {echo $err_msg['pass'];} ?>
                                 </span>
                             </div>
                             <div class="password_retypediv">
-                                <input class="password_retype" type="password" name="pass_retype" placeholder="Password retype" value="<?php if (!empty($_POST['pass_retype'])) {
-                                                                                                                                            echo $_POST['pass_retype'];
-                                                                                                                                        } ?>">
+                                <input class="password_retype" type="password" name="pass_retype" placeholder="Password retype" value="<?php if (!empty($_POST['pass_retype'])) {echo $_POST['pass_retype'];} ?>">
                                 <div class="help-block"></div>
-                                <span class="err_msg"><?php if (!empty($err_msg['pass_retype'])) {
-                                                            echo $err_msg['pass_retype'];
-                                                        } ?>
+                                <span class="err_msg"><?php if (!empty($err_msg['pass_retype'])) {echo $err_msg['pass_retype'];} ?>
                                 </span>
                             </div>
                         </div>

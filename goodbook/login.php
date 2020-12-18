@@ -92,23 +92,15 @@ if (!empty($_POST)) {
                     <form method="post">
                         <div>
                             <div class="emaildiv">
-                                <input class="email" type="text" name="email" placeholder="Email" autofocus="1" value="<?php if (!empty($_POST['email'])) {
-                                                                                                                            echo $_POST['email'];
-                                                                                                                        } ?>">
+                                <input class="email" type="text" name="email" placeholder="Email" autofocus="1" value="<?php if (!empty($_POST['email'])) {echo $_POST['email'];} ?>">
                                 <div class="help-block"></div>
-                                <span class="err_msg"><?php if (!empty($err_msg['email'])) {
-                                                            echo $err_msg['email'];
-                                                        } ?>
+                                <span class="err_msg"><?php if (!empty($err_msg['email'])) {echo $err_msg['email'];} ?>
                                 </span>
                             </div>
                             <div class="passworddiv">
-                                <input class="password" type="password" name="pass" placeholder="Password" value="<?php if (!empty($_POST['pass'])) {
-                                                                                                                        echo $_POST['pass'];
-                                                                                                                    } ?>">
+                                <input class="password" type="password" name="pass" placeholder="Password" value="<?php if (!empty($_POST['pass'])) {echo $_POST['pass'];} ?>">
                                 <div class="help-block"></div>
-                                <span class="err_msg"><?php if (!empty($err_msg['pass'])) {
-                                                            echo $err_msg['pass'];
-                                                        } ?>
+                                <span class="err_msg"><?php if (!empty($err_msg['pass'])) {echo $err_msg['pass'];} ?>
                                 </span>
                             </div>
                         </div>
