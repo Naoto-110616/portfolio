@@ -85,7 +85,7 @@ if (!empty($_POST)) {
                 </div>
             </div>
             <div class="formentire">
-                <div class="form">
+                <section class="form">
                     <form method="post">
                         <div>
                             <div class="emaildiv" action='login.php'>
@@ -125,11 +125,11 @@ if (!empty($_POST)) {
                         <div class="boder1">
                             <p class="box"></p>
                         </div>
-                        <div class="login_pagediv">
-                            <a href="login.php" class="login_page">Login Page</a>
+                        <div class="loginPagediv">
+                            <a href="login.php" class="loginPage">Login Page</a>
                         </div>
                     </form>
-                </div>
+                </section>
                 <div class="createPagediv">
                     <a href="" class="createPage">Create a Page</a> for a celebrity, band or business.
                 </div>

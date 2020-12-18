@@ -121,8 +121,8 @@ if (!empty($_POST)) {
                         <div class="boder1">
                             <p class="box"></p>
                         </div>
-                        <div class="NewAccountdiv">
-                            <a href="singup.php" class="NewAccount">Creat New Account</a>
+                        <div class="newAccountdiv">
+                            <a href="signup.php" class="newAccountPage">Creat New Account</a>
                         </div>
                     </form>
                 </div>
