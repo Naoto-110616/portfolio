@@ -3,59 +3,96 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 
+define('MSG01', 'Input Required');
+define('MSG02', 'Not in the form of email');
+define('MSG03', 'password (retype) does not match');
+define('MSG04', 'Half-width alphanumeric characters only');
+define('MSG05', '6 characters or more');
+
+$err_msg = array();
+$dbh;
+
+function validRequired($str, $key)
+{
+    if (empty($str)) {
+        global $err_msg;
+        $err_msg[$key] = MSG01;
+    }
+}
+function validEmail($str, $key)
+{
+    if (!preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/", $str)) {
+        global $err_msg;
+        $err_msg[$key] = MSG02;
+    }
+}
+function validMatch($str1, $str2, $key)
+{
+    if ($str1 !== $str2) {
+        global $err_msg;
+        $err_msg[$key] = MSG03;
+    }
+}
+function validHalf($str, $key)
+{
+    if (!preg_match("/^[a-zA-Z0-9]+$/", $str)) {
+        global $err_msg;
+        $err_msg[$key] = MSG04;
+    }
+}
+function validMinLen($str, $key, $min = 6)
+{
+    if (mb_strlen($str) < $min) {
+        global $err_msg;
+        $err_msg[$key] = MSG05;
+    }
+}
+function dbConnect()
+{
+    $dsn = 'mysql:dbname=goodbook;host=localhost;charset=utf8';
+    $user = 'root';
+    $password = 'root';
+    $options = array(
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+        PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true,
+    );
+    global $dbh;
+    $dbh = new PDO($dsn, $user, $password, $options);
+}
+function acountSignUp($email, $pass, $dbh)
+{
+    $stmt = $dbh->prepare('INSERT INTO users (email, pass, login_time) VALUES (:email, :pass, :login_time)');
+
+    $stmt->execute(array(':email' => $email, ':pass' => $pass, 'login_time' => date('Y-m-d H:i:s')));
+
+    header('Location:login.php');
+}
+
 if (!empty($_POST)) {
-    define('MSG01', 'Input Required');
-    define('MSG02', 'Not in the form of email');
-    define('MSG03', 'password (retype) does not match');
-    define('MSG04', 'Half-width alphanumeric characters only');
-    define('MSG05', '6 characters or more');
 
-    $err_msg = array();
+    $email = $_POST['email'];
+    $pass = $_POST['pass'];
+    $pass_retype = $_POST['pass_retype'];
 
-    if (empty($_POST['email'])) {
-        $err_msg['email'] = MSG01;
-    }
-    if (empty($_POST['pass'])) {
-        $err_msg['pass'] = MSG01;
-    }
-    if (empty($_POST['pass_retype'])) {
-        $err_msg['pass_retype'] = MSG01;
-    }
+    validRequired($email, "email");
+    validRequired($pass, "pass");
+    validRequired($pass_retype, "pass_retype");
 
     if (empty($err_msg)) {
-        $email = $_POST['email'];
-        $pass = $_POST['pass'];
-        $pass_re = $_POST['pass_retype'];
 
-        if (!preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/", $email)) {
-            $err_msg['email'] = MSG02;
-        }
-        if ($pass !== $pass_re) {
-            $err_msg['pass'] = MSG03;
-        }
-        if (!preg_match("/^[a-zA-Z0-9]+$/", $pass)) {
-            $err_msg['pass'] = MSG04;
-        } elseif (mb_strlen($pass) < 6) {
-            $err_msg['pass'] = MSG05;
-        }
-        if (empty($err_msg)) {
-            $dsn = 'mysql:dbname=goodbook;host=localhost;charset=utf8';
-            $user = 'root';
-            $password = 'root';
-            $options = array(
-                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-                PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true,
-            );
+        validEmail($email, "email");
+        validHalf($pass, "pass");
+        validMinLen($pass, "pass");
+    }
+    if (empty($err_msg)) {
 
-            $dbh = new PDO($dsn, $user, $password, $options);
+        validMatch($pass, $pass_retype, "pass");
+    }
+    if (empty($err_msg)) {
 
-            $stmt = $dbh->prepare('INSERT INTO users (email, pass, login_time) VALUES (:email, :pass, :login_time)');
-
-            $stmt->execute(array(':email' => $email, ':pass' => $pass, 'login_time' => date('Y-m-d H:i:s')));
-
-            header('Location:login.php');
-        }
+        dbConnect();
+        acountSignUp($email, $pass, $dbh);
     }
 }
 ?>
@@ -88,7 +125,7 @@ if (!empty($_POST)) {
                 <section class="form">
                     <form method="post">
                         <div class="emaildiv" action='login.php'>
-                            <label for="email">
+                            <label for="email" class="<?php if (!empty($err_msg['email'])) echo 'err'; ?>">
                                 <input class="email" type="text" name="email" id="email" placeholder="Email" autofocus="1" value="<?php if (!empty($_POST['email'])) echo $_POST['email']; ?>">
                             </label>
                             <div class="help-block"></div>
@@ -96,7 +133,7 @@ if (!empty($_POST)) {
                             </span>
                         </div>
                         <div class="passworddiv">
-                            <label for="password">
+                            <label for="password" class="<?php if (!empty($err_msg['pass'])) echo 'err'; ?>">
                                 <input class="password" type="password" name="pass" id="password" placeholder="Password" value="<?php if (!empty($_POST['pass'])) echo $_POST['pass']; ?>">
                             </label>
                             <div class="help-block"></div>
@@ -104,7 +141,7 @@ if (!empty($_POST)) {
                             </span>
                         </div>
                         <div class="password_retypediv">
-                            <label for="password_retype">
+                            <label for="password_retype" class="<?php if (!empty($err_msg['pass_retype'])) echo 'err'; ?>">
                                 <input class="password_retype" type="password" name="pass_retype" id="password_retype" placeholder="Password retype" value="<?php if (!empty($_POST['pass_retype'])) echo $_POST['pass_retype']; ?>">
                             </label>
                             <div class="help-block"></div>
