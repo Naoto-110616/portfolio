@@ -8,7 +8,6 @@ define('MSG02', 'Not in the form of email');
 define('MSG03', 'Half-width alphanumeric characters only');
 define('MSG04', '6 characters or more');
 
-$dbh;
 $err_msg = array();
 
 function validRequired($str, $key)
@@ -49,8 +48,8 @@ function dbConnect()
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
         PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true,
     );
-    global $dbh;
     $dbh = new PDO($dsn, $user, $password, $options);
+    return $dbh;
 }
 function login($email, $pass, $dbh)
 {
@@ -84,7 +83,7 @@ if (!empty($_POST)) {
         validMinLen($pass, "pass");
 
         if (empty($err_msg)) {
-            dbConnect();
+            $dbh = dbConnect();
             login($email, $pass, $dbh);
         }
     }
