@@ -7,6 +7,8 @@ define('MSG01', 'Input Required');
 define('MSG02', 'Not in the form of email');
 define('MSG03', 'Half-width alphanumeric characters only');
 define('MSG04', '6 characters or more');
+define('MSG05', 'An error has occurred, Please try again after a while');
+
 
 $err_msg = array();
 
@@ -83,8 +85,13 @@ if (!empty($_POST)) {
         validMinLen($pass, "pass");
 
         if (empty($err_msg)) {
-            $dbh = dbConnect();
-            login($email, $pass, $dbh);
+            try {
+                $dbh = dbConnect();
+                login($email, $pass, $dbh);
+            } catch (Exception $e) {
+                error_log("error:" . $e->getMessage());
+                $err_msg["email"] = MSG05;
+            }
         }
     }
 }
@@ -111,7 +118,7 @@ if (!empty($_POST)) {
                 </div>
                 <div class="massage">
                     <h2 class="massage1">
-                        Cannect with friends and the world <br>
+                        Connect with friends and the world <br>
                         around you on goodbook.
                     </h2>
                 </div>

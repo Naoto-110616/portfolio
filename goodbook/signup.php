@@ -12,7 +12,6 @@ define('MSG06', 'This email is already registered');
 define('MSG07', 'An error has occurred, Please try again after a while');
 
 $err_msg = array();
-$dbh;
 
 function validRequired($str, $key)
 {
@@ -51,6 +50,7 @@ function validMinLen($str, $key, $min = 6)
 }
 function validEmailDup($email, $key)
 {
+
     global $err_msg;
     try {
         $dbh = dbConnect();
@@ -67,9 +67,12 @@ function validEmailDup($email, $key)
     }
 }
 function queryPost($dbh, $sql, $data)
+// queryとは問い合わせ，sqlのqはqueryのq
 {
     $stmt = $dbh->prepare($sql);
+    // stmtにdbhからprepareでsqlを準備
     $stmt->execute($data);
+    // $stmtから$dataに入ったものを実行
     return $stmt;
 }
 function dbConnect()
@@ -89,7 +92,7 @@ function signUp($email, $pass, $dbh)
 {
     $stmt = $dbh->prepare('INSERT INTO users (email, pass, login_time) VALUES (:email, :pass, :login_time)');
 
-    $stmt->execute(array(':email' => $email, ':pass' => $pass, 'login_time' => date('Y-m-d H:i:s')));
+    $stmt->execute(array(':email' => $email, ':pass' => password_hash($pass, PASSWORD_DEFAULT), 'login_time' => date('Y-m-d H:i:s')));
 
     header('Location:login.php');
 }
@@ -117,8 +120,13 @@ if (!empty($_POST)) {
     }
     if (empty($err_msg)) {
 
-        dbConnect();
-        signUp($email, $pass, $dbh);
+        try {
+            $dbh = dbConnect();
+            signUp($email, $pass, $dbh);
+        } catch (Exception $e) {
+            error_log("error:" . $e->getMessage());
+            $err_msg["email"] = MSG07;
+        }
     }
 }
 ?>
@@ -143,7 +151,7 @@ if (!empty($_POST)) {
                 <div class="massage">
                     <h2 class="massage1">
                         Connect with friends and the world <br>
-                        around you on Facebook.
+                        around you on goodbook.
                     </h2>
                 </div>
             </div>
