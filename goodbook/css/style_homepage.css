@@ -125,6 +125,9 @@ body {
   margin-left: 10px;
   float: left;
 }
+.main_center_comment3 {
+  padding: 13px;
+}
 .comment_make_stories1,
 .comment_make_stories2 {
   font-weight: bold;
@@ -215,6 +218,10 @@ body {
 }
 .main_center_comment_share_div {
   float: right;
+}
+.main_center_element_pdiv {
+  text-align: center;
+  margin: 10px 0;
 }
 .main_right {
   position: fixed;

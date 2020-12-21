@@ -1,74 +1,6 @@
 <?php
 
-error_reporting(E_ALL);
-ini_set("display_errors", 'On');
-
-define('MSG01', 'Input Required');
-define('MSG02', 'Not in the form of email');
-define('MSG03', 'Half-width alphanumeric characters only');
-define('MSG04', '6 characters or more');
-
-$err_msg = array();
-
-function validRequired($str, $key)
-{
-    if (empty($str)) {
-        global $err_msg;
-        $err_msg[$key] = MSG01;
-    }
-}
-function validEmail($str, $key)
-{
-    if (!preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/", $str)) {
-        global $err_msg;
-        $err_msg[$key] = MSG02;
-    }
-}
-function validHalf($str, $key)
-{
-    if (!preg_match("/^[a-zA-Z0-9]+$/", $str)) {
-        global $err_msg;
-        $err_msg[$key] = MSG03;
-    }
-}
-function validMinLen($str, $key, $min = 6)
-{
-    if (mb_strlen($str) < $min) {
-        global $err_msg;
-        $err_msg[$key] = MSG04;
-    }
-}
-function dbConnect()
-{
-    $dsn = 'mysql:dbname=goodbook;host=localhost;charset=utf8';
-    $user = 'root';
-    $password = 'root';
-    $options = array(
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-        PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true,
-    );
-    $dbh = new PDO($dsn, $user, $password, $options);
-    return $dbh;
-}
-function login($email, $pass, $dbh)
-{
-    $stmt = $dbh->prepare('SELECT * FROM users WHERE email = :email AND pass = :pass');
-
-    $stmt->execute(array(':email' => $email, ':pass' => $pass));
-
-    $result = 0;
-
-    $result = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    if (!empty($result)) {
-        session_start();
-
-        $_SESSION['login'] = true;
-
-        header("Location:homepage.php");
-    }
-}
+require("function.php");
 
 if (!empty($_POST)) {
     $email = $_POST['email'];
@@ -79,15 +11,23 @@ if (!empty($_POST)) {
 
     if (empty($err_msg)) {
         validEmail($email, "email");
+        validMaxLen($email, "email");
         validHalf($pass, "pass");
+        validMaxLen($pass, "pass");
         validMinLen($pass, "pass");
 
         if (empty($err_msg)) {
-            $dbh = dbConnect();
-            login($email, $pass, $dbh);
+            try {
+                $dbh = dbConnect();
+                login($email, $pass, $dbh, "email", "pass");
+            } catch (Exception $e) {
+                error_log("error:" . $e->getMessage());
+                $err_msg["email"] = MSG09;
+            }
         }
     }
 }
+
 
 ?>
 
