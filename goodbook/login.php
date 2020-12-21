@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 error_reporting(E_ALL);
 ini_set("display_errors", 'On');
 
@@ -71,6 +72,9 @@ function login($email, $pass, $dbh)
         header("Location:homepage.php");
     }
 }
+=======
+require("function.php");
+>>>>>>> develop
 
 if (!empty($_POST)) {
     $email = $_POST['email'];
@@ -81,20 +85,30 @@ if (!empty($_POST)) {
 
     if (empty($err_msg)) {
         validEmail($email, "email");
+        validMaxLen($email, "email");
         validHalf($pass, "pass");
+        validMaxLen($pass, "pass");
         validMinLen($pass, "pass");
 
         if (empty($err_msg)) {
             try {
                 $dbh = dbConnect();
+<<<<<<< HEAD
                 login($email, $pass, $dbh);
             } catch (Exception $e) {
                 error_log("error:" . $e->getMessage());
                 $err_msg["email"] = MSG05;
+=======
+                login($email, $pass, $dbh, "email", "pass");
+            } catch (Exception $e) {
+                error_log("error:" . $e->getMessage());
+                $err_msg["email"] = MSG09;
+>>>>>>> develop
             }
         }
     }
 }
+
 
 ?>
 

@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 
@@ -96,6 +97,9 @@ function signUp($email, $pass, $dbh)
 
     header('Location:login.php');
 }
+=======
+require("function.php");
+>>>>>>> develop
 
 if (!empty($_POST)) {
 
@@ -110,22 +114,36 @@ if (!empty($_POST)) {
     if (empty($err_msg)) {
 
         validEmail($email, "email");
+        validMaxLen($email, "email");
         validEmailDup($email, "email");
+
         validHalf($pass, "pass");
+        validMaxLen($pass, "pass");
         validMinLen($pass, "pass");
+
+        validMaxLen($pass_retype, "pass_retype");
+        validMinLen($pass_retype, "pass_retype");
     }
     if (empty($err_msg)) {
 
         validMatch($pass, $pass_retype, "pass");
     }
     if (empty($err_msg)) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> develop
         try {
             $dbh = dbConnect();
             signUp($email, $pass, $dbh);
         } catch (Exception $e) {
+<<<<<<< HEAD
             error_log("error:" . $e->getMessage());
             $err_msg["email"] = MSG07;
+=======
+            error_log("error" . $e->getMessage());
+            $err_msg["mail"] = MSG09;
+>>>>>>> develop
         }
     }
 }
@@ -150,7 +168,11 @@ if (!empty($_POST)) {
                 </div>
                 <div class="massage">
                     <h2 class="massage1">
+<<<<<<< HEAD
                         Connect with friends and the world <br>
+=======
+                        Cannect with friends and the world <br>
+>>>>>>> develop
                         around you on goodbook.
                     </h2>
                 </div>

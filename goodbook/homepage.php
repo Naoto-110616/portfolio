@@ -54,7 +54,7 @@ if (empty($_SESSION['login'])) {
             <span class="header_right_icon"><i class="fas fa-caret-down fa-2x"></i></span>
         </div>
     </header>
-    <main class="main">
+    <article class="main">
         <div class="main_div">
             <nav>
                 <section id="main_left_wrapper">
@@ -438,6 +438,16 @@ if (empty($_SESSION['login'])) {
                             </div>
                         </div>
                     </section>
+                    <section class="main_center_element main_center_element4">
+                        <div class="main_center_comment3">
+                            <div class="main_center_element_pdiv">
+                                <p class="comment_make_stories1">That's all for posting</p>
+                            </div>
+                            <div class="main_center_element_pdiv">
+                                <p>Add more friends to see more posts in your newsfeed</p>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
             <div class="main_right">
@@ -470,7 +480,7 @@ if (empty($_SESSION['login'])) {
                 </div>
             </div>
         </div>
-    </main>
+    </article>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="js/homepage.js"></script>
 </body>
