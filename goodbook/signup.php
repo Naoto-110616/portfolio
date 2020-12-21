@@ -1,105 +1,6 @@
 <?php
 
-<<<<<<< HEAD
-error_reporting(E_ALL);
-ini_set('display_errors', 'On');
-
-define('MSG01', 'Input Required');
-define('MSG02', 'Not in the form of email');
-define('MSG03', 'password (retype) does not match');
-define('MSG04', 'Half-width alphanumeric characters only');
-define('MSG05', '6 characters or more');
-define('MSG06', 'This email is already registered');
-define('MSG07', 'An error has occurred, Please try again after a while');
-
-$err_msg = array();
-
-function validRequired($str, $key)
-{
-    if (empty($str)) {
-        global $err_msg;
-        $err_msg[$key] = MSG01;
-    }
-}
-function validEmail($str, $key)
-{
-    if (!preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/", $str)) {
-        global $err_msg;
-        $err_msg[$key] = MSG02;
-    }
-}
-function validMatch($str1, $str2, $key)
-{
-    if ($str1 !== $str2) {
-        global $err_msg;
-        $err_msg[$key] = MSG03;
-    }
-}
-function validHalf($str, $key)
-{
-    if (!preg_match("/^[a-zA-Z0-9]+$/", $str)) {
-        global $err_msg;
-        $err_msg[$key] = MSG04;
-    }
-}
-function validMinLen($str, $key, $min = 6)
-{
-    if (mb_strlen($str) < $min) {
-        global $err_msg;
-        $err_msg[$key] = MSG05;
-    }
-}
-function validEmailDup($email, $key)
-{
-
-    global $err_msg;
-    try {
-        $dbh = dbConnect();
-        $sql = "SELECT count(*) FROM users WHERE email = :email";
-        $data = array(":email" => $email);
-        $stmt = queryPost($dbh, $sql, $data);
-        $restult = $stmt->fetch(PDO::FETCH_ASSOC);
-        if (!empty(array_shift($restult))) {
-            $err_msg[$key] = MSG06;
-        }
-    } catch (Exception $e) {
-        error_log("error:" . $e->getMessage());
-        $err_msg[$key] = MSG07;
-    }
-}
-function queryPost($dbh, $sql, $data)
-// queryとは問い合わせ，sqlのqはqueryのq
-{
-    $stmt = $dbh->prepare($sql);
-    // stmtにdbhからprepareでsqlを準備
-    $stmt->execute($data);
-    // $stmtから$dataに入ったものを実行
-    return $stmt;
-}
-function dbConnect()
-{
-    $dsn = 'mysql:dbname=goodbook;host=localhost;charset=utf8';
-    $user = 'root';
-    $password = 'root';
-    $options = array(
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-        PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true,
-    );
-    $dbh = new PDO($dsn, $user, $password, $options);
-    return $dbh;
-}
-function signUp($email, $pass, $dbh)
-{
-    $stmt = $dbh->prepare('INSERT INTO users (email, pass, login_time) VALUES (:email, :pass, :login_time)');
-
-    $stmt->execute(array(':email' => $email, ':pass' => password_hash($pass, PASSWORD_DEFAULT), 'login_time' => date('Y-m-d H:i:s')));
-
-    header('Location:login.php');
-}
-=======
 require("function.php");
->>>>>>> develop
 
 if (!empty($_POST)) {
 
@@ -129,21 +30,12 @@ if (!empty($_POST)) {
         validMatch($pass, $pass_retype, "pass");
     }
     if (empty($err_msg)) {
-<<<<<<< HEAD
-
-=======
->>>>>>> develop
         try {
             $dbh = dbConnect();
             signUp($email, $pass, $dbh);
         } catch (Exception $e) {
-<<<<<<< HEAD
-            error_log("error:" . $e->getMessage());
-            $err_msg["email"] = MSG07;
-=======
             error_log("error" . $e->getMessage());
             $err_msg["mail"] = MSG09;
->>>>>>> develop
         }
     }
 }
@@ -168,11 +60,7 @@ if (!empty($_POST)) {
                 </div>
                 <div class="massage">
                     <h2 class="massage1">
-<<<<<<< HEAD
                         Connect with friends and the world <br>
-=======
-                        Cannect with friends and the world <br>
->>>>>>> develop
                         around you on goodbook.
                     </h2>
                 </div>
