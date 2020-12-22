@@ -259,3 +259,7 @@ body {
 .main_center_element2_icon_div:hover {
   cursor: pointer;
 }
+header i:hover,
+#contents i:hover {
+  color: #2d88ff;
+}

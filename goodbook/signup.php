@@ -3,6 +3,7 @@
 require("function.php");
 
 if (!empty($_POST)) {
+    // debug('POST送信があります。');
 
     $email = $_POST['email'];
     $pass = $_POST['pass'];
@@ -30,6 +31,8 @@ if (!empty($_POST)) {
         validMatch($pass, $pass_retype, "pass");
     }
     if (empty($err_msg)) {
+        // debug('バリデーョンOKです。');
+
         try {
             $dbh = dbConnect();
             signUp($email, $pass, $dbh);
@@ -76,7 +79,7 @@ if (!empty($_POST)) {
                             <span class="err_msg"><?php if (!empty($err_msg['email'])) echo $err_msg['email']; ?>
                             </span>
                         </div>
-                        <div class="passworddiv">
+                        <div class="signupinput passworddiv">
                             <label for="password" class="<?php if (!empty($err_msg['pass'])) echo 'err'; ?>">
                                 <input class="password" type="password" name="pass" id="password" placeholder="Password" value="<?php if (!empty($_POST['pass'])) echo $_POST['pass']; ?>">
                             </label>
@@ -84,7 +87,7 @@ if (!empty($_POST)) {
                             <span class="err_msg"><?php if (!empty($err_msg['pass'])) echo $err_msg['pass']; ?>
                             </span>
                         </div>
-                        <div class="password_retypediv">
+                        <div class="signupinput password_retypediv">
                             <label for="password_retype" class="<?php if (!empty($err_msg['pass_retype'])) echo 'err'; ?>">
                                 <input class="password_retype" type="password" name="pass_retype" id="password_retype" placeholder="Password retype" value="<?php if (!empty($_POST['pass_retype'])) echo $_POST['pass_retype']; ?>">
                             </label>
@@ -92,7 +95,7 @@ if (!empty($_POST)) {
                             <span class="err_msg"><?php if (!empty($err_msg['pass_retype'])) echo $err_msg['pass_retype']; ?>
                             </span>
                         </div>
-                        <div class="singupdiv">
+                        <div class="signupinput singupdiv">
                             <input class="singup" value="Sing Up" name="singup" type="submit">
                         </div>
                         <div class="boder1">

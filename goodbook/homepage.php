@@ -1,13 +1,7 @@
 <?php
 
-error_reporting(E_ALL);
-ini_set('display_errors', 'On');
+require("function.php");
 
-session_start();
-
-if (empty($_SESSION['login'])) {
-    header("Location:login.php");
-}
 
 ?>
 
@@ -23,8 +17,6 @@ if (empty($_SESSION['login'])) {
 </head>
 
 <body>
-    <?php if (!empty($_SESSION['login'])) {;
-    } ?>
 
     <header class="header">
         <div class="head_left">
