@@ -13,6 +13,50 @@ ini_set('log_errors', 'On');
 ini_set('error_log', 'php.log');
 
 
+//================================
+// デバッグ
+//================================
+//デバッグフラグ
+$debug_flg = true;
+//デバッグログ関数
+function debug($str)
+{
+    global $debug_flg;
+    if (!empty($debug_flg)) {
+        error_log('debug：' . $str);
+    }
+}
+
+//================================
+// session準備・session有効期限を延ばす
+//================================
+//sessionfileの置き場を変更する（/var/tmp/以下に置くと30日は削除されない）
+session_save_path("/var/tmp/");
+//ガーベージコレクションが削除するセッションの有効期限を設定（30日以上経っているものに対してだけ１００分の１の確率で削除）
+ini_set('session.gc_maxlifetime', 60 * 60 * 24 * 30);
+//ブラウザを閉じても削除されないようにクッキー自体の有効期限を延ばす
+ini_set('session.cookie_lifetime ', 60 * 60 * 24 * 30);
+//セッションを使う
+session_start();
+//現在のセッションIDを新しく生成したものと置き換える（なりすましのセキュリティ対策）
+session_regenerate_id();
+
+
+//================================
+// 画面表示処理開始ログ吐き出し関数
+//================================
+function debugLogStart()
+{
+    debug('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始');
+    debug('session ID：' . session_id());
+    debug('session variable：' . print_r($_SESSION, true));
+    debug('現在日時タイムスタンプ：' . time());
+    if (!empty($_SESSION['login_date']) && !empty($_SESSION['login_limit'])) {
+        debug('ログイン期限日時タイムスタンプ：' . ($_SESSION['login_date'] + $_SESSION['login_limit']));
+    }
+}
+
+
 // -----------------------------------
 //定数
 // -----------------------------------
@@ -130,21 +174,36 @@ function queryPost($dbh, $sql, $data)
     return $stmt;
 }
 // login 関数
-function login($email, $pass, $dbh, $key1, $key2)
+function login($email, $pass, $dbh, $pass_save, $key1, $key2)
 {
-    $stmt = $dbh->prepare('SELECT * FROM users WHERE email = :email AND pass = :pass');
-
-    $stmt->execute(array(':email' => $email, ':pass' => $pass));
-
-    $result = 0;
-
+    $sql = "SELECT pass,id FROM users WHERE email = :email";
+    $data = array(':email' => $email);
+    $stmt = queryPost($dbh, $sql, $data);
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    debug('クエリ結果の中身：' . print_r($result, true));
+    if (!empty($result) && password_verify($pass, array_shift($result))) {
+        debug('パスワードがマッチしました。');
 
-    if (!empty($result)) {
-        session_start();
+        //ログイン有効期限（デフォルトを１時間とする）
+        $sesLimit = 60 * 60;
+        // 最終ログイン日時を現在日時に
+        $_SESSION['login_date'] = time(); //time関数は1970年1月1日 00:00:00 を0として、1秒経過するごとに1ずつ増加させた値が入る
 
-        $_SESSION['login'] = true;
+        // ログイン保持にチェックがある場合
+        if ($pass_save) {
+            debug('ログイン保持にチェックがあります。');
+            // ログイン有効期限を30日にしてセット
+            $_SESSION['login_limit'] = $sesLimit * 24 * 30;
+        } else {
+            debug('ログイン保持にチェックはありません。');
+            // 次回からログイン保持しないので、ログイン有効期限を1時間後にセット
+            $_SESSION['login_limit'] = $sesLimit;
+        }
+        // ユーザーIDを格納
+        $_SESSION['user_id'] = $result['id'];
 
+        debug('Contents of session variables：' . print_r($_SESSION, true));
+        debug('Move to Home page');
         header("Location:homepage.php");
     } else {
         global $err_msg;
@@ -155,9 +214,24 @@ function login($email, $pass, $dbh, $key1, $key2)
 // user登録関数
 function signUp($email, $pass, $dbh)
 {
-    $stmt = $dbh->prepare('INSERT INTO users (email, pass, login_time) VALUES (:email, :pass, :login_time)');
-
-    $stmt->execute(array(':email' => $email, ':pass' => password_hash($pass, PASSWORD_DEFAULT), 'login_time' => date('Y-m-d H:i:s')));
-
+    $sql = 'INSERT INTO users (email, pass, login_time) VALUES (:email, :pass, :login_time)';
+    $data = array(
+        ':email' => $email,
+        ':pass' => password_hash($pass, PASSWORD_DEFAULT),
+        'login_time' => date('Y-m-d H:i:s')
+    );
+    queryPost($dbh, $sql, $data);
     header('Location:login.php');
+}
+
+
+// -----------------------------------
+// other
+// -----------------------------------
+
+function showVariable($variable)
+{
+    echo "<pre>";
+    echo var_dump($variable);
+    echo "<pre>";
 }

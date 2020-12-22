@@ -2,9 +2,19 @@
 
 require("function.php");
 
+debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
+debug('「　ログインページ　');
+debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
+debugLogStart();
+
+
 if (!empty($_POST)) {
+    debug('POST送信があります。');
+
     $email = $_POST['email'];
     $pass = $_POST['pass'];
+    $pass_save = (!empty($_POST['pass_save'])) ? true : false; //ショートハンド（略記法）という書き方
+
 
     validRequired($email, "email");
     validRequired($pass, "pass");
@@ -17,9 +27,11 @@ if (!empty($_POST)) {
         validMinLen($pass, "pass");
 
         if (empty($err_msg)) {
+            debug('バリデーションOKです。');
+
             try {
                 $dbh = dbConnect();
-                login($email, $pass, $dbh, "email", "pass");
+                login($email, $pass, $dbh, $pass_save, "email", "pass");
             } catch (Exception $e) {
                 error_log("error:" . $e->getMessage());
                 $err_msg["email"] = MSG09;
@@ -59,7 +71,7 @@ if (!empty($_POST)) {
             <div class="formentire">
                 <div class="form">
                     <form method="post">
-                        <div class="emaildiv">
+                        <div class="logininput emaildiv">
                             <label for="email" class="<?php if (!empty($err_msg['email'])) echo 'err'; ?>">
                                 <input class="email" type="text" name="email" id="email" placeholder="Email" autofocus="1" value="<?php if (!empty($_POST['email'])) echo $_POST['email']; ?>">
                             </label>
@@ -67,7 +79,7 @@ if (!empty($_POST)) {
                             <span class="err_msg"><?php if (!empty($err_msg['email'])) echo $err_msg['email']; ?>
                             </span>
                         </div>
-                        <div class="passworddiv">
+                        <div class="logininput passworddiv">
                             <label for="password" class="<?php if (!empty($err_msg['pass'])) echo 'err'; ?>">
                                 <input class="password" type="password" name="pass" id="password" placeholder="Password" value="<?php if (!empty($_POST['pass'])) echo $_POST['pass']; ?>">
                             </label>
@@ -75,8 +87,15 @@ if (!empty($_POST)) {
                             <span class="err_msg"><?php if (!empty($err_msg['pass'])) echo $err_msg['pass']; ?>
                             </span>
                         </div>
-                        <div class="logindiv">
-                            <input class="login " type="submit" value="Login" name='login'>
+                        <div class="logininput checkboxdiv">
+                            <label>
+                                <input type="checkbox" name="pass_save">Skip login next time
+                            </label>
+                        </div>
+                        <div class="logininput logindiv">
+                            <label for="login">
+                                <input class="login " type="submit" value="Login" name='login' id="login">
+                            </label>
                         </div>
                         <div class="forgotdiv">
                             <a href="" class="forgot">Forgot Password?</a>

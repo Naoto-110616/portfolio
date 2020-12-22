@@ -53,9 +53,8 @@ body {
     font-size: 17px;
     border: 1px solid #dddfe2;
 }
-.emaildiv,
-.passworddiv,
-.password_retypediv {
+.logininput,
+.signupinput {
     padding: 6px 0;
 }
 .logindiv,

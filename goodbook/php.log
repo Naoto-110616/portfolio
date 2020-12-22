@@ -1,0 +1,1766 @@
+[21-Dec-2020 13:55:39 Asia/Tokyo] PHP Notice:  session_start(): A session had already been started - ignoring in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 188
+[21-Dec-2020 13:59:05 Asia/Tokyo] PHP Notice:  session_start(): A session had already been started - ignoring in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 188
+[21-Dec-2020 13:59:20 Asia/Tokyo] PHP Notice:  session_start(): A session had already been started - ignoring in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 188
+[21-Dec-2020 13:59:49 Asia/Tokyo] PHP Warning:  session_regenerate_id(): Cannot regenerate session id - session is not active in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 42
+[21-Dec-2020 13:59:49 Asia/Tokyo] PHP Notice:  Undefined variable: _SESSION in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 52
+[21-Dec-2020 13:59:49 Asia/Tokyo] PHP Warning:  session_regenerate_id(): Cannot regenerate session id - session is not active in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 42
+[21-Dec-2020 13:59:49 Asia/Tokyo] PHP Notice:  Undefined variable: _SESSION in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 52
+[21-Dec-2020 13:59:53 Asia/Tokyo] PHP Warning:  session_regenerate_id(): Cannot regenerate session id - session is not active in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 42
+[21-Dec-2020 13:59:53 Asia/Tokyo] PHP Notice:  Undefined variable: _SESSION in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 52
+[21-Dec-2020 14:00:17 Asia/Tokyo] PHP Notice:  Undefined variable: _SESSION in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 52
+[21-Dec-2020 14:00:20 Asia/Tokyo] PHP Notice:  Undefined variable: _SESSION in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 52
+[21-Dec-2020 14:00:20 Asia/Tokyo] PHP Notice:  Undefined variable: _SESSION in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 52
+[21-Dec-2020 14:05:37 Asia/Tokyo] error:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'password' in 'field list'
+[21-Dec-2020 14:06:41 Asia/Tokyo] error:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'password' in 'field list'
+[21-Dec-2020 14:09:33 Asia/Tokyo] PHP Notice:  session_start(): A session had already been started - ignoring in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 184
+[21-Dec-2020 14:10:07 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function debug() in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php:5
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 5
+[21-Dec-2020 14:10:13 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function debug() in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php:5
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 5
+[21-Dec-2020 14:10:20 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function debug() in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php:5
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 5
+[21-Dec-2020 14:10:21 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function debug() in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php:5
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 5
+[21-Dec-2020 14:26:00 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 51
+[21-Dec-2020 14:26:00 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 52
+[21-Dec-2020 14:26:01 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 51
+[21-Dec-2020 14:26:01 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 52
+[21-Dec-2020 14:26:02 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 51
+[21-Dec-2020 14:26:02 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 52
+[21-Dec-2020 14:26:02 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 51
+[21-Dec-2020 14:26:02 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 52
+[21-Dec-2020 14:26:03 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 51
+[21-Dec-2020 14:26:03 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 52
+[21-Dec-2020 14:26:17 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 51
+[21-Dec-2020 14:26:17 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 52
+[21-Dec-2020 14:27:40 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 44
+[21-Dec-2020 14:27:40 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 45
+[21-Dec-2020 14:27:41 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 44
+[21-Dec-2020 14:27:41 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 45
+[21-Dec-2020 14:29:20 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 192
+[21-Dec-2020 14:29:20 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 193
+[21-Dec-2020 14:38:11 Asia/Tokyo] error:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[21-Dec-2020 14:38:12 Asia/Tokyo] error:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[21-Dec-2020 14:39:52 Asia/Tokyo] error:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'password' in 'field list'
+[21-Dec-2020 14:39:54 Asia/Tokyo] error:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'password' in 'field list'
+[21-Dec-2020 14:40:27 Asia/Tokyo] error:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[21-Dec-2020 14:40:28 Asia/Tokyo] error:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[21-Dec-2020 14:40:28 Asia/Tokyo] error:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[21-Dec-2020 14:40:31 Asia/Tokyo] error:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[21-Dec-2020 14:40:32 Asia/Tokyo] error:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[21-Dec-2020 14:40:39 Asia/Tokyo] error:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[21-Dec-2020 14:41:29 Asia/Tokyo] error:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[21-Dec-2020 14:41:30 Asia/Tokyo] error:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[21-Dec-2020 14:43:07 Asia/Tokyo] error:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'password' in 'field list'
+[21-Dec-2020 14:43:08 Asia/Tokyo] error:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'password' in 'field list'
+[21-Dec-2020 14:43:10 Asia/Tokyo] error:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'password' in 'field list'
+[21-Dec-2020 15:17:19 Asia/Tokyo] PHP Notice:  Undefined variable: pass_save in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 192
+[21-Dec-2020 15:17:19 Asia/Tokyo] PHP Notice:  Undefined index: id in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 202
+[21-Dec-2020 15:17:47 Asia/Tokyo] PHP Notice:  Undefined variable: pass_save in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 192
+[21-Dec-2020 15:17:47 Asia/Tokyo] PHP Notice:  Undefined index: id in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 202
+[21-Dec-2020 15:31:04 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 15:31:06 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 15:31:07 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 15:31:07 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 15:31:07 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 15:31:08 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 15:31:08 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 15:31:08 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 15:31:09 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 15:31:10 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 15:31:11 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 15:32:37 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function showVariabel() in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php:67
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 67
+[21-Dec-2020 15:33:15 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to undefined function showVariabel() in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php:79
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 79
+[21-Dec-2020 15:35:28 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 69
+[21-Dec-2020 15:35:29 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 69
+[21-Dec-2020 15:36:10 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 69
+[21-Dec-2020 15:36:10 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 15:36:10 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 72
+[21-Dec-2020 15:36:40 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 69
+[21-Dec-2020 15:36:40 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 15:36:40 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 72
+[21-Dec-2020 15:36:41 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 69
+[21-Dec-2020 15:36:41 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 15:36:41 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 72
+[21-Dec-2020 15:36:41 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 69
+[21-Dec-2020 15:36:41 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 15:36:41 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 72
+[21-Dec-2020 15:36:42 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 69
+[21-Dec-2020 15:36:42 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 15:36:42 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 72
+[21-Dec-2020 15:40:57 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 69
+[21-Dec-2020 15:40:57 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 15:40:57 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 72
+[21-Dec-2020 15:40:58 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 69
+[21-Dec-2020 15:40:58 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 15:40:58 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 72
+[21-Dec-2020 15:40:58 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 69
+[21-Dec-2020 15:40:58 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 15:40:58 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 72
+[21-Dec-2020 15:41:30 Asia/Tokyo] PHP Notice:  Undefined variable: dbh in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 69
+[21-Dec-2020 15:41:30 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 15:41:30 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 71
+[21-Dec-2020 15:41:30 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 72
+[21-Dec-2020 15:41:31 Asia/Tokyo] PHP Notice:  Undefined variable: dbh in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 69
+[21-Dec-2020 15:41:31 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 15:41:31 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 71
+[21-Dec-2020 15:41:31 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 72
+[21-Dec-2020 15:41:36 Asia/Tokyo] PHP Notice:  Undefined variable: dbh in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 69
+[21-Dec-2020 15:41:36 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 15:41:36 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 71
+[21-Dec-2020 15:41:36 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 72
+[21-Dec-2020 15:41:39 Asia/Tokyo] PHP Notice:  Undefined variable: dbh in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 69
+[21-Dec-2020 15:41:39 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 15:41:39 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 71
+[21-Dec-2020 15:41:39 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 72
+[21-Dec-2020 15:41:43 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 15:41:43 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 71
+[21-Dec-2020 15:41:43 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 72
+[21-Dec-2020 15:41:44 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 15:41:44 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 71
+[21-Dec-2020 15:41:44 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 72
+[21-Dec-2020 15:41:44 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 15:41:44 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 71
+[21-Dec-2020 15:41:44 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 72
+[21-Dec-2020 15:41:47 Asia/Tokyo] PHP Notice:  Undefined variable: dbh in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 69
+[21-Dec-2020 15:41:47 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 15:41:47 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 71
+[21-Dec-2020 15:41:47 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 72
+[21-Dec-2020 15:41:49 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 15:41:49 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 71
+[21-Dec-2020 15:41:49 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 72
+[21-Dec-2020 15:42:30 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 43
+[21-Dec-2020 15:42:30 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 44
+[21-Dec-2020 15:42:31 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 43
+[21-Dec-2020 15:42:31 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 44
+[21-Dec-2020 15:45:28 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 43
+[21-Dec-2020 15:45:28 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 44
+[21-Dec-2020 15:45:29 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 43
+[21-Dec-2020 15:45:29 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 44
+[21-Dec-2020 15:45:30 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 43
+[21-Dec-2020 15:45:30 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 44
+[21-Dec-2020 15:45:30 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 43
+[21-Dec-2020 15:45:30 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 44
+[21-Dec-2020 15:45:30 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 43
+[21-Dec-2020 15:45:30 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 44
+[21-Dec-2020 15:45:33 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 43
+[21-Dec-2020 15:45:33 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 44
+[21-Dec-2020 15:46:35 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 43
+[21-Dec-2020 15:46:35 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 44
+[21-Dec-2020 15:46:41 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 43
+[21-Dec-2020 15:46:41 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 44
+[21-Dec-2020 15:46:42 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 43
+[21-Dec-2020 15:46:42 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 44
+[21-Dec-2020 15:46:42 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 43
+[21-Dec-2020 15:46:42 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 44
+[21-Dec-2020 15:46:42 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 43
+[21-Dec-2020 15:46:42 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 44
+[21-Dec-2020 15:46:42 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 43
+[21-Dec-2020 15:46:42 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 44
+[21-Dec-2020 15:46:43 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 43
+[21-Dec-2020 15:46:43 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 44
+[21-Dec-2020 15:46:45 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 43
+[21-Dec-2020 15:46:45 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 44
+[21-Dec-2020 15:46:47 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 43
+[21-Dec-2020 15:46:47 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 44
+[21-Dec-2020 15:46:47 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 43
+[21-Dec-2020 15:46:47 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 44
+[21-Dec-2020 15:46:47 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 43
+[21-Dec-2020 15:46:47 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 44
+[21-Dec-2020 15:47:03 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 44
+[21-Dec-2020 15:47:03 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 44
+[21-Dec-2020 15:47:13 Asia/Tokyo] PHP Notice:  Undefined variable: key1 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 43
+[21-Dec-2020 15:47:13 Asia/Tokyo] PHP Notice:  Undefined variable: key2 in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 44
+[21-Dec-2020 15:57:59 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on string in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php:172
+Stack trace:
+#0 /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php(181): queryPost('aaaaaa', 'SELECT pass FRO...', Array)
+#1 /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php(32): login('siodeitadaku@gm...', 'aaaaaa', Object(PDO), 'email', 'pass')
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 172
+[21-Dec-2020 15:59:00 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on string in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php:172
+Stack trace:
+#0 /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php(181): queryPost('aaaaaa', 'SELECT pass FRO...', Array)
+#1 /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php(32): login('siodeitadaku@gm...', 'aaaaaa', Object(PDO), 'email', 'pass')
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 172
+[21-Dec-2020 16:00:55 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 67
+[21-Dec-2020 16:00:55 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 68
+[21-Dec-2020 16:00:55 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 69
+[21-Dec-2020 16:00:59 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on string in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php:172
+Stack trace:
+#0 /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php(181): queryPost('aaaaaa', 'SELECT pass FRO...', Array)
+#1 /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php(32): login('siodeitadaku@gm...', 'aaaaaa', Object(PDO), 'email', 'pass')
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 172
+[21-Dec-2020 16:01:08 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 67
+[21-Dec-2020 16:01:08 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 68
+[21-Dec-2020 16:01:08 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 69
+[21-Dec-2020 16:01:10 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on string in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php:172
+Stack trace:
+#0 /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php(181): queryPost('aaaaaa', 'SELECT pass FRO...', Array)
+#1 /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php(32): login('siodeitadaku@gm...', 'aaaaaa', Object(PDO), 'email', 'pass')
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 172
+[21-Dec-2020 16:02:00 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 67
+[21-Dec-2020 16:02:00 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 68
+[21-Dec-2020 16:02:00 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 69
+[21-Dec-2020 16:02:02 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on string in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php:172
+Stack trace:
+#0 /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php(181): queryPost('aaaaaa', 'SELECT pass FRO...', Array)
+#1 /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php(32): login('siodeitadaku@gm...', 'aaaaaa', Object(PDO), 'email', 'pass')
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 172
+[21-Dec-2020 16:02:21 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on string in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php:172
+Stack trace:
+#0 /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php(181): queryPost('aaaaaa', 'SELECT pass FRO...', Array)
+#1 /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php(32): login('siodeitadaku@gm...', 'aaaaaa', Object(PDO), 'email', 'pass')
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 172
+[21-Dec-2020 16:02:29 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 67
+[21-Dec-2020 16:02:29 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 68
+[21-Dec-2020 16:02:29 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 69
+[21-Dec-2020 16:02:31 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on string in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php:172
+Stack trace:
+#0 /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php(181): queryPost('aaaaaa', 'SELECT pass FRO...', Array)
+#1 /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php(32): login('siodeitadaku@gm...', 'aaaaaa', Object(PDO), 'email', 'pass')
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 172
+[21-Dec-2020 16:02:37 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 67
+[21-Dec-2020 16:02:37 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 68
+[21-Dec-2020 16:02:37 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 69
+[21-Dec-2020 16:02:39 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 67
+[21-Dec-2020 16:02:39 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 68
+[21-Dec-2020 16:02:39 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 69
+[21-Dec-2020 16:02:39 Asia/Tokyo] PHP Notice:  Undefined variable: email in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 16:02:39 Asia/Tokyo] PHP Notice:  Undefined variable: pass in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 71
+[21-Dec-2020 16:02:43 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on string in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php:172
+Stack trace:
+#0 /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php(181): queryPost('aaaaaa', 'SELECT pass FRO...', Array)
+#1 /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php(32): login('siodeitadaku@gm...', 'aaaaaa', Object(PDO), 'email', 'pass')
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 172
+[21-Dec-2020 16:02:46 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 67
+[21-Dec-2020 16:02:46 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 68
+[21-Dec-2020 16:02:46 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 69
+[21-Dec-2020 16:02:46 Asia/Tokyo] PHP Notice:  Undefined variable: email in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 70
+[21-Dec-2020 16:02:46 Asia/Tokyo] PHP Notice:  Undefined variable: pass in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 71
+[21-Dec-2020 16:03:33 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 67
+[21-Dec-2020 16:03:33 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 68
+[21-Dec-2020 16:03:33 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 69
+[21-Dec-2020 16:03:37 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on string in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php:172
+Stack trace:
+#0 /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php(181): queryPost('aaaaaa', 'SELECT pass FRO...', Array)
+#1 /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php(32): login('siodeitadaku@gm...', 'aaaaaa', Object(PDO), 'email', 'pass')
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 172
+[21-Dec-2020 16:03:44 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 67
+[21-Dec-2020 16:03:44 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 68
+[21-Dec-2020 16:03:44 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 69
+[21-Dec-2020 16:03:45 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 67
+[21-Dec-2020 16:03:45 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 68
+[21-Dec-2020 16:03:45 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 69
+[21-Dec-2020 16:03:46 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 67
+[21-Dec-2020 16:03:46 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 68
+[21-Dec-2020 16:03:46 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 69
+[21-Dec-2020 16:03:50 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on string in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php:172
+Stack trace:
+#0 /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php(181): queryPost('aaaaaaaaa', 'SELECT pass FRO...', Array)
+#1 /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php(32): login('siodeitadaku@gm...', 'aaaaaaaaa', Object(PDO), 'email', 'pass')
+#2 {main}
+  thrown in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 172
+[21-Dec-2020 16:04:44 Asia/Tokyo] PHP Notice:  Undefined variable: dbh in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 82
+[21-Dec-2020 16:04:44 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 83
+[21-Dec-2020 16:04:44 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:04:44 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:07:53 Asia/Tokyo] PHP Warning:  Illegal string offset 'id' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 88
+[21-Dec-2020 16:08:11 Asia/Tokyo] PHP Warning:  Illegal string offset 'id' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:08:20 Asia/Tokyo] PHP Warning:  Illegal string offset 'id' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:08:20 Asia/Tokyo] PHP Warning:  Illegal string offset 'pass' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:08:32 Asia/Tokyo] PHP Warning:  Illegal string offset 'id' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:08:32 Asia/Tokyo] PHP Warning:  Illegal string offset 'pass' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:08:34 Asia/Tokyo] PHP Notice:  Undefined variable: dbh in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 82
+[21-Dec-2020 16:08:34 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 83
+[21-Dec-2020 16:08:34 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:08:34 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:08:34 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:08:34 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:08:34 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 86
+[21-Dec-2020 16:08:34 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 87
+[21-Dec-2020 16:08:34 Asia/Tokyo] PHP Notice:  Undefined variable: pass in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 88
+[21-Dec-2020 16:08:34 Asia/Tokyo] PHP Notice:  Undefined variable: email in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 89
+[21-Dec-2020 16:08:42 Asia/Tokyo] PHP Warning:  Illegal string offset 'id' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:08:42 Asia/Tokyo] PHP Warning:  Illegal string offset 'pass' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:08:50 Asia/Tokyo] PHP Warning:  Illegal string offset 'id' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:08:50 Asia/Tokyo] PHP Warning:  Illegal string offset 'pass' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:09:28 Asia/Tokyo] error:SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+[21-Dec-2020 16:09:28 Asia/Tokyo] PHP Warning:  Illegal string offset 'id' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:09:28 Asia/Tokyo] PHP Warning:  Illegal string offset 'pass' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:09:28 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 86
+[21-Dec-2020 16:09:28 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 87
+[21-Dec-2020 16:10:01 Asia/Tokyo] error:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[21-Dec-2020 16:10:01 Asia/Tokyo] PHP Warning:  Illegal string offset 'id' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:10:01 Asia/Tokyo] PHP Warning:  Illegal string offset 'pass' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:10:01 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 86
+[21-Dec-2020 16:10:01 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 87
+[21-Dec-2020 16:10:03 Asia/Tokyo] error:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[21-Dec-2020 16:10:03 Asia/Tokyo] PHP Warning:  Illegal string offset 'id' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:10:03 Asia/Tokyo] PHP Warning:  Illegal string offset 'pass' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:10:03 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 86
+[21-Dec-2020 16:10:03 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 87
+[21-Dec-2020 16:10:04 Asia/Tokyo] error:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[21-Dec-2020 16:10:04 Asia/Tokyo] PHP Warning:  Illegal string offset 'id' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:10:04 Asia/Tokyo] PHP Warning:  Illegal string offset 'pass' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:10:04 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 86
+[21-Dec-2020 16:10:04 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 87
+[21-Dec-2020 16:10:04 Asia/Tokyo] error:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[21-Dec-2020 16:10:04 Asia/Tokyo] PHP Warning:  Illegal string offset 'id' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:10:04 Asia/Tokyo] PHP Warning:  Illegal string offset 'pass' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:10:04 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 86
+[21-Dec-2020 16:10:04 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 87
+[21-Dec-2020 16:10:04 Asia/Tokyo] error:SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[21-Dec-2020 16:10:04 Asia/Tokyo] PHP Warning:  Illegal string offset 'id' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:10:04 Asia/Tokyo] PHP Warning:  Illegal string offset 'pass' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:10:04 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 86
+[21-Dec-2020 16:10:04 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 87
+[21-Dec-2020 16:10:25 Asia/Tokyo] PHP Warning:  Illegal string offset 'id' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:10:25 Asia/Tokyo] PHP Warning:  Illegal string offset 'pass' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:10:26 Asia/Tokyo] PHP Warning:  Illegal string offset 'id' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:10:26 Asia/Tokyo] PHP Warning:  Illegal string offset 'pass' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:11:13 Asia/Tokyo] PHP Notice:  Undefined variable: dbh in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 82
+[21-Dec-2020 16:11:13 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 83
+[21-Dec-2020 16:11:13 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:11:13 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:11:13 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:11:13 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:11:13 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 86
+[21-Dec-2020 16:11:13 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 87
+[21-Dec-2020 16:11:14 Asia/Tokyo] PHP Notice:  Undefined variable: dbh in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 82
+[21-Dec-2020 16:11:14 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 83
+[21-Dec-2020 16:11:14 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:11:14 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:11:14 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:11:14 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:11:14 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 86
+[21-Dec-2020 16:11:14 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 87
+[21-Dec-2020 16:11:17 Asia/Tokyo] PHP Warning:  Illegal string offset 'id' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:11:17 Asia/Tokyo] PHP Warning:  Illegal string offset 'pass' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:12:13 Asia/Tokyo] PHP Warning:  Illegal string offset 'id' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:12:13 Asia/Tokyo] PHP Warning:  Illegal string offset 'pass' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:12:15 Asia/Tokyo] PHP Warning:  Illegal string offset 'id' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:12:15 Asia/Tokyo] PHP Warning:  Illegal string offset 'pass' in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:12:31 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 83
+[21-Dec-2020 16:12:31 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:12:31 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:12:31 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:12:31 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:12:31 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 86
+[21-Dec-2020 16:12:31 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 87
+[21-Dec-2020 16:12:32 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 83
+[21-Dec-2020 16:12:32 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:12:32 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:12:32 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:12:32 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:12:32 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 86
+[21-Dec-2020 16:12:32 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 87
+[21-Dec-2020 16:13:03 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 83
+[21-Dec-2020 16:13:03 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:13:03 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:13:03 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:13:03 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:13:03 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 86
+[21-Dec-2020 16:13:03 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 87
+[21-Dec-2020 16:13:04 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 83
+[21-Dec-2020 16:13:04 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:13:04 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:13:04 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:13:04 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:13:04 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 86
+[21-Dec-2020 16:13:04 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 87
+[21-Dec-2020 16:13:23 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 83
+[21-Dec-2020 16:13:23 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:13:23 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:13:23 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:13:23 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:13:23 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 86
+[21-Dec-2020 16:13:23 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 87
+[21-Dec-2020 16:14:13 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 83
+[21-Dec-2020 16:14:13 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:14:13 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:14:13 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:14:13 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:14:13 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 86
+[21-Dec-2020 16:14:13 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 87
+[21-Dec-2020 16:14:14 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 83
+[21-Dec-2020 16:14:14 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:14:14 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:14:14 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:14:14 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:14:14 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 86
+[21-Dec-2020 16:14:14 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 87
+[21-Dec-2020 16:14:22 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 83
+[21-Dec-2020 16:14:22 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:14:22 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:14:22 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:14:22 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:14:22 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 86
+[21-Dec-2020 16:14:22 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 87
+[21-Dec-2020 16:14:24 Asia/Tokyo] PHP Notice:  Undefined variable: dbh in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 82
+[21-Dec-2020 16:14:24 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 83
+[21-Dec-2020 16:14:24 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:14:24 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:14:24 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:14:24 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:14:24 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 86
+[21-Dec-2020 16:14:24 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 87
+[21-Dec-2020 16:14:30 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 83
+[21-Dec-2020 16:14:30 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:14:30 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:14:30 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:14:30 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:14:30 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 86
+[21-Dec-2020 16:14:30 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 87
+[21-Dec-2020 16:14:32 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 83
+[21-Dec-2020 16:14:32 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:14:32 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:14:32 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:14:32 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:14:32 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 86
+[21-Dec-2020 16:14:32 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 87
+[21-Dec-2020 16:14:38 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 83
+[21-Dec-2020 16:14:38 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:14:38 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:14:38 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:14:38 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:14:38 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 86
+[21-Dec-2020 16:14:38 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 87
+[21-Dec-2020 16:14:39 Asia/Tokyo] PHP Notice:  Undefined variable: dbh in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 82
+[21-Dec-2020 16:14:39 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 83
+[21-Dec-2020 16:14:39 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:14:39 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:14:39 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:14:39 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:14:39 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 86
+[21-Dec-2020 16:14:39 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 87
+[21-Dec-2020 16:16:01 Asia/Tokyo] PHP Notice:  Undefined variable: dbh in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 82
+[21-Dec-2020 16:16:01 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 83
+[21-Dec-2020 16:16:01 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:16:01 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:16:01 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:16:01 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:16:01 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 86
+[21-Dec-2020 16:16:01 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 87
+[21-Dec-2020 16:16:05 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 83
+[21-Dec-2020 16:16:05 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:16:05 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:16:05 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:16:05 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:16:05 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 86
+[21-Dec-2020 16:16:05 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 87
+[21-Dec-2020 16:16:07 Asia/Tokyo] PHP Notice:  Undefined variable: dbh in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 82
+[21-Dec-2020 16:16:07 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 83
+[21-Dec-2020 16:16:07 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:16:07 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:16:07 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:16:07 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:16:07 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 86
+[21-Dec-2020 16:16:07 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 87
+[21-Dec-2020 16:16:42 Asia/Tokyo] PHP Notice:  Undefined variable: dbh in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 82
+[21-Dec-2020 16:16:42 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 83
+[21-Dec-2020 16:16:42 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:16:42 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:16:42 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:16:42 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:16:42 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 86
+[21-Dec-2020 16:16:42 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 87
+[21-Dec-2020 16:16:50 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 83
+[21-Dec-2020 16:16:50 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:16:50 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:16:50 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:16:50 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:16:50 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 86
+[21-Dec-2020 16:16:50 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 87
+[21-Dec-2020 16:16:52 Asia/Tokyo] PHP Notice:  Undefined variable: dbh in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 82
+[21-Dec-2020 16:16:52 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 83
+[21-Dec-2020 16:16:52 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:16:52 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 84
+[21-Dec-2020 16:16:52 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:16:52 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 85
+[21-Dec-2020 16:16:52 Asia/Tokyo] PHP Notice:  Undefined variable: stmt in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 86
+[21-Dec-2020 16:16:52 Asia/Tokyo] PHP Notice:  Undefined variable: result in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 87
+[21-Dec-2020 16:18:35 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 16:18:35 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 16:18:35 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 16:18:35 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 16:18:35 Asia/Tokyo] デバッグ：session ID：2088l650mfo04cn7o9r9n03lh3
+[21-Dec-2020 16:18:35 Asia/Tokyo] デバッグ：session variable：Array
+(
+)
+
+[21-Dec-2020 16:18:35 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608535115
+[21-Dec-2020 16:18:35 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 16:18:43 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 16:18:43 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 16:18:43 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 16:18:43 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 16:18:43 Asia/Tokyo] デバッグ：session ID：l24tiurf46hkhjcnlaf6cekg7b
+[21-Dec-2020 16:18:43 Asia/Tokyo] デバッグ：session variable：Array
+(
+)
+
+[21-Dec-2020 16:18:43 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608535123
+[21-Dec-2020 16:18:43 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 16:18:43 Asia/Tokyo] デバッグ：バリデーションOKです。
+[21-Dec-2020 16:18:43 Asia/Tokyo] デバッグ：クエリ結果の中身：Array
+(
+    [pass] => $2y$10$kCpZqGcu4r/zBwVeJ.vxdedogLEA.oGo7HA5.a2QCfsMNQxJgkOwy
+    [id] => 43
+)
+
+[21-Dec-2020 16:18:44 Asia/Tokyo] デバッグ：パスワードがマッチしました。
+[21-Dec-2020 16:18:44 Asia/Tokyo] デバッグ：マイページへ遷移します。
+[21-Dec-2020 16:18:45 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 16:18:45 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 16:18:45 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 16:18:45 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 16:18:45 Asia/Tokyo] デバッグ：session ID：b4m987qgl0f0069te5pps7pnlm
+[21-Dec-2020 16:18:45 Asia/Tokyo] デバッグ：session variable：Array
+(
+)
+
+[21-Dec-2020 16:18:45 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608535125
+[21-Dec-2020 16:19:04 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 16:19:04 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 16:19:04 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 16:19:04 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 16:19:04 Asia/Tokyo] デバッグ：session ID：fovjn4i6or23gof6cpai3glpd8
+[21-Dec-2020 16:19:04 Asia/Tokyo] デバッグ：session variable：Array
+(
+)
+
+[21-Dec-2020 16:19:04 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608535144
+[21-Dec-2020 16:19:04 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 16:19:04 Asia/Tokyo] デバッグ：バリデーションOKです。
+[21-Dec-2020 16:19:04 Asia/Tokyo] デバッグ：クエリ結果の中身：Array
+(
+    [pass] => $2y$10$F0atE22z5a5Z5uR/g/5KzeaWCxvWuUQddI4rfIQ9jaECrXDFZkvd6
+    [id] => 42
+)
+
+[21-Dec-2020 16:19:04 Asia/Tokyo] デバッグ：パスワードがマッチしました。
+[21-Dec-2020 16:19:04 Asia/Tokyo] デバッグ：マイページへ遷移します。
+[21-Dec-2020 16:19:15 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 16:19:15 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 16:19:15 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 16:19:15 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 16:19:15 Asia/Tokyo] デバッグ：session ID：585q4k0sclna31b8svm79ul7ub
+[21-Dec-2020 16:19:15 Asia/Tokyo] デバッグ：session variable：Array
+(
+)
+
+[21-Dec-2020 16:19:15 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608535155
+[21-Dec-2020 16:21:35 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 16:21:35 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 16:21:35 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 16:21:35 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 16:21:35 Asia/Tokyo] デバッグ：session ID：kivh1isrhvtg2hld7eolidmik2
+[21-Dec-2020 16:21:35 Asia/Tokyo] デバッグ：session variable：Array
+(
+)
+
+[21-Dec-2020 16:21:35 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608535295
+[21-Dec-2020 16:21:35 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 16:21:35 Asia/Tokyo] デバッグ：バリデーションOKです。
+[21-Dec-2020 16:21:35 Asia/Tokyo] デバッグ：クエリ結果の中身：Array
+(
+    [pass] => $2y$10$kCpZqGcu4r/zBwVeJ.vxdedogLEA.oGo7HA5.a2QCfsMNQxJgkOwy
+    [id] => 43
+)
+
+[21-Dec-2020 16:21:35 Asia/Tokyo] デバッグ：パスワードがマッチしました。
+[21-Dec-2020 16:21:35 Asia/Tokyo] デバッグ：マイページへ遷移します。
+[21-Dec-2020 17:06:41 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:06:41 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:06:41 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:06:41 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:06:41 Asia/Tokyo] デバッグ：session ID：3sqh8oigoq2t0pregimda9otpu
+[21-Dec-2020 17:06:41 Asia/Tokyo] デバッグ：session variable：Array
+(
+)
+
+[21-Dec-2020 17:06:41 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608538001
+[21-Dec-2020 17:06:45 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:06:45 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:06:45 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:06:45 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:06:45 Asia/Tokyo] デバッグ：session ID：k7lckv12hdesnopie6v85lg2ev
+[21-Dec-2020 17:06:45 Asia/Tokyo] デバッグ：session variable：Array
+(
+)
+
+[21-Dec-2020 17:06:45 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608538005
+[21-Dec-2020 17:06:45 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:06:45 Asia/Tokyo] デバッグ：バリデーションOKです。
+[21-Dec-2020 17:06:45 Asia/Tokyo] デバッグ：クエリ結果の中身：Array
+(
+    [pass] => $2y$10$kCpZqGcu4r/zBwVeJ.vxdedogLEA.oGo7HA5.a2QCfsMNQxJgkOwy
+    [id] => 43
+)
+
+[21-Dec-2020 17:06:45 Asia/Tokyo] デバッグ：パスワードがマッチしました。
+[21-Dec-2020 17:06:45 Asia/Tokyo] デバッグ：ログイン保持にチェックはありません。
+[21-Dec-2020 17:06:45 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_date] => 1608538005
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:06:45 Asia/Tokyo] デバッグ：マイページへ遷移します。
+[21-Dec-2020 17:14:45 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:14:45 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:14:45 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:14:45 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:14:45 Asia/Tokyo] デバッグ：session ID：3kdvdt1e981u2cq4rkg1964ski
+[21-Dec-2020 17:14:45 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608538005
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:14:45 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608538485
+[21-Dec-2020 17:14:45 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608541605
+[21-Dec-2020 17:14:55 Asia/Tokyo] PHP Notice:  Undefined variable: data in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/signup.php on line 38
+[21-Dec-2020 17:14:55 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function execute() on null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php:219
+Stack trace:
+#0 /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/signup.php(38): signUp('tttt@ttt', 'tttttt', Object(PDO), NULL)
+#1 {main}
+  thrown in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 219
+[21-Dec-2020 17:15:28 Asia/Tokyo] PHP Notice:  Undefined variable: data in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/signup.php on line 38
+[21-Dec-2020 17:15:28 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function execute() on null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php:218
+Stack trace:
+#0 /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/signup.php(38): signUp('tttt@ttt', 'tttttt', Object(PDO), NULL)
+#1 {main}
+  thrown in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 218
+[21-Dec-2020 17:17:24 Asia/Tokyo] PHP Notice:  Undefined variable: data in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/signup.php on line 38
+[21-Dec-2020 17:17:24 Asia/Tokyo] PHP Fatal error:  Uncaught Error: Call to a member function execute() on null in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php:219
+Stack trace:
+#0 /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/signup.php(38): signUp('tttt@ttt', 'tttttt', Object(PDO), NULL)
+#1 {main}
+  thrown in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/function.php on line 219
+[21-Dec-2020 17:18:01 Asia/Tokyo] PHP Notice:  Undefined variable: data in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/signup.php on line 38
+[21-Dec-2020 17:18:02 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:18:02 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:18:02 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:18:02 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:18:02 Asia/Tokyo] デバッグ：session ID：p5t703g1gekkju0ejt9pm0cjo5
+[21-Dec-2020 17:18:02 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608538005
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:18:02 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608538682
+[21-Dec-2020 17:18:02 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608541605
+[21-Dec-2020 17:20:34 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:20:34 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:20:34 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:20:34 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:20:34 Asia/Tokyo] デバッグ：session ID：r5bh1va44d2kf6mdo8gj9e35p2
+[21-Dec-2020 17:20:34 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608538005
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:20:34 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608538834
+[21-Dec-2020 17:20:34 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608541605
+[21-Dec-2020 17:20:59 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:20:59 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:20:59 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:20:59 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:20:59 Asia/Tokyo] デバッグ：session ID：2nauq7scl55prjjf4mhv9in11q
+[21-Dec-2020 17:20:59 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608538005
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:20:59 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608538859
+[21-Dec-2020 17:20:59 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608541605
+[21-Dec-2020 17:21:16 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:21:16 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:21:16 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:21:16 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:21:16 Asia/Tokyo] デバッグ：session ID：5lv05bd2me2t0k7a8s9heh9ks0
+[21-Dec-2020 17:21:16 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608538005
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:21:16 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608538876
+[21-Dec-2020 17:21:16 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608541605
+[21-Dec-2020 17:23:04 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:23:04 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:23:04 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:23:04 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:23:04 Asia/Tokyo] デバッグ：session ID：hlea78h237c01gql7517n7i9on
+[21-Dec-2020 17:23:04 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608538005
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:23:04 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608538984
+[21-Dec-2020 17:23:04 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608541605
+[21-Dec-2020 17:23:04 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:23:04 Asia/Tokyo] デバッグ：バリデーションOKです。
+[21-Dec-2020 17:23:04 Asia/Tokyo] デバッグ：クエリ結果の中身：Array
+(
+    [pass] => $2y$10$kCpZqGcu4r/zBwVeJ.vxdedogLEA.oGo7HA5.a2QCfsMNQxJgkOwy
+    [id] => 43
+)
+
+[21-Dec-2020 17:23:04 Asia/Tokyo] デバッグ：パスワードがマッチしました。
+[21-Dec-2020 17:23:04 Asia/Tokyo] デバッグ：ログイン保持にチェックはありません。
+[21-Dec-2020 17:23:04 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_date] => 1608538984
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:23:04 Asia/Tokyo] デバッグ：マイページへ遷移します。
+[21-Dec-2020 17:23:06 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:23:06 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:23:06 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:23:06 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:23:06 Asia/Tokyo] デバッグ：session ID：k3rp3drugtrstll1dcc2gpfq02
+[21-Dec-2020 17:23:06 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608538984
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:23:06 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608538986
+[21-Dec-2020 17:23:06 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608542584
+[21-Dec-2020 17:23:21 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:23:21 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:23:21 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:23:21 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:23:21 Asia/Tokyo] デバッグ：session ID：5fmq99ums95p1qiv3vtvu1n762
+[21-Dec-2020 17:23:21 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608538984
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:23:21 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539001
+[21-Dec-2020 17:23:21 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608542584
+[21-Dec-2020 17:23:21 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:23:21 Asia/Tokyo] デバッグ：バリデーションOKです。
+[21-Dec-2020 17:23:21 Asia/Tokyo] デバッグ：クエリ結果の中身：Array
+(
+    [pass] => $2y$10$kCpZqGcu4r/zBwVeJ.vxdedogLEA.oGo7HA5.a2QCfsMNQxJgkOwy
+    [id] => 43
+)
+
+[21-Dec-2020 17:23:21 Asia/Tokyo] デバッグ：パスワードがマッチしました。
+[21-Dec-2020 17:23:21 Asia/Tokyo] デバッグ：ログイン保持にチェックはありません。
+[21-Dec-2020 17:23:21 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_date] => 1608539001
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:23:21 Asia/Tokyo] デバッグ：マイページへ遷移します。
+[21-Dec-2020 17:25:51 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:25:51 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:25:51 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:25:51 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:25:51 Asia/Tokyo] デバッグ：session ID：nmoc8ds9nf4quhpkvp94qh8svs
+[21-Dec-2020 17:25:51 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539001
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:25:51 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539151
+[21-Dec-2020 17:25:51 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608542601
+[21-Dec-2020 17:25:52 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:25:52 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:25:52 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:25:52 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:25:52 Asia/Tokyo] デバッグ：session ID：urvhncq3t9dkv64sockt20for1
+[21-Dec-2020 17:25:52 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539001
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:25:52 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539152
+[21-Dec-2020 17:25:52 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608542601
+[21-Dec-2020 17:25:52 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:26:44 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:26:44 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:26:44 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:26:44 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:26:44 Asia/Tokyo] デバッグ：session ID：5dtof3gfdjm6k3r54virkn235q
+[21-Dec-2020 17:26:44 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539001
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:26:44 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539204
+[21-Dec-2020 17:26:44 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608542601
+[21-Dec-2020 17:26:44 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:26:45 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:26:45 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:26:45 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:26:45 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:26:45 Asia/Tokyo] デバッグ：session ID：dqpsr49bo2igpejlaf7rj5rums
+[21-Dec-2020 17:26:45 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539001
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:26:45 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539205
+[21-Dec-2020 17:26:45 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608542601
+[21-Dec-2020 17:26:45 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:27:03 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:27:03 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:27:03 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:27:03 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:27:03 Asia/Tokyo] デバッグ：session ID：genj3f97d4647b5uqkpl8jvc39
+[21-Dec-2020 17:27:03 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539001
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:27:03 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539223
+[21-Dec-2020 17:27:03 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608542601
+[21-Dec-2020 17:27:03 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:27:44 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:27:44 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:27:44 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:27:44 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:27:44 Asia/Tokyo] デバッグ：session ID：c1cvmtt6vuaieb0upgqquhrpnh
+[21-Dec-2020 17:27:44 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539001
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:27:44 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539264
+[21-Dec-2020 17:27:44 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608542601
+[21-Dec-2020 17:27:44 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:28:13 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:28:13 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:28:13 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:28:13 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:28:13 Asia/Tokyo] デバッグ：session ID：l8jo0ijg0veqq2ojs8316u7mp7
+[21-Dec-2020 17:28:13 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539001
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:28:13 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539293
+[21-Dec-2020 17:28:13 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608542601
+[21-Dec-2020 17:28:13 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:28:19 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:28:19 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:28:19 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:28:19 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:28:19 Asia/Tokyo] デバッグ：session ID：idtf5q8hr2hkh3q2elqu48f7gt
+[21-Dec-2020 17:28:19 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539001
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:28:19 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539299
+[21-Dec-2020 17:28:19 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608542601
+[21-Dec-2020 17:28:22 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:28:22 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:28:22 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:28:22 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:28:22 Asia/Tokyo] デバッグ：session ID：e4925a12vm12a9i9g7po760rjd
+[21-Dec-2020 17:28:22 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539001
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:28:22 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539302
+[21-Dec-2020 17:28:22 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608542601
+[21-Dec-2020 17:28:22 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:29:38 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:29:38 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:29:38 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:29:38 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:29:38 Asia/Tokyo] デバッグ：session ID：7b5q6o4g888e8i4lljlo7k107o
+[21-Dec-2020 17:29:38 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539001
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:29:38 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539378
+[21-Dec-2020 17:29:38 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608542601
+[21-Dec-2020 17:29:38 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:29:40 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:29:40 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:29:40 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:29:40 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:29:40 Asia/Tokyo] デバッグ：session ID：t5l63mcdb1rmkq18kev2mgheib
+[21-Dec-2020 17:29:40 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539001
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:29:40 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539380
+[21-Dec-2020 17:29:40 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608542601
+[21-Dec-2020 17:29:40 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:29:42 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:29:42 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:29:42 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:29:42 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:29:42 Asia/Tokyo] デバッグ：session ID：4a2q0kqv83th4de7keaje367id
+[21-Dec-2020 17:29:42 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539001
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:29:42 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539382
+[21-Dec-2020 17:29:42 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608542601
+[21-Dec-2020 17:29:43 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:29:43 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:29:43 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:29:43 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:29:43 Asia/Tokyo] デバッグ：session ID：l22qbd2bn6dikuuj12iavbv6g8
+[21-Dec-2020 17:29:43 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539001
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:29:43 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539383
+[21-Dec-2020 17:29:43 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608542601
+[21-Dec-2020 17:29:43 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:30:37 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:30:37 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:30:37 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:30:37 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:30:37 Asia/Tokyo] デバッグ：session ID：oov34efga6p38rmnm4psdltlgt
+[21-Dec-2020 17:30:37 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539001
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:30:37 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539437
+[21-Dec-2020 17:30:37 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608542601
+[21-Dec-2020 17:30:37 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:30:39 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:30:39 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:30:39 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:30:39 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:30:39 Asia/Tokyo] デバッグ：session ID：43tcpqopb8bj2ca04jr387kgd2
+[21-Dec-2020 17:30:39 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539001
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:30:39 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539439
+[21-Dec-2020 17:30:39 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608542601
+[21-Dec-2020 17:30:40 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:30:40 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:30:40 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:30:40 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:30:40 Asia/Tokyo] デバッグ：session ID：efc40om2nvlmcjd532vsbiqd3a
+[21-Dec-2020 17:30:40 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539001
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:30:40 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539440
+[21-Dec-2020 17:30:40 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608542601
+[21-Dec-2020 17:30:40 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:32:15 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:32:15 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:32:15 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:32:15 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:32:15 Asia/Tokyo] デバッグ：session ID：sck5a76ulrpv39p9ljhka5fmfn
+[21-Dec-2020 17:32:15 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539001
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:32:15 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539535
+[21-Dec-2020 17:32:15 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608542601
+[21-Dec-2020 17:32:15 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:32:17 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:32:17 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:32:17 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:32:17 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:32:17 Asia/Tokyo] デバッグ：session ID：edknmggich78cjt6n4g2utudt7
+[21-Dec-2020 17:32:17 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539001
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:32:17 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539537
+[21-Dec-2020 17:32:17 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608542601
+[21-Dec-2020 17:32:17 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:32:19 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:32:19 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:32:19 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:32:19 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:32:19 Asia/Tokyo] デバッグ：session ID：sh3qfl8i9dhvb1nn47544sovb9
+[21-Dec-2020 17:32:19 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539001
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:32:19 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539539
+[21-Dec-2020 17:32:19 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608542601
+[21-Dec-2020 17:32:20 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:32:20 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:32:20 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:32:20 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:32:20 Asia/Tokyo] デバッグ：session ID：99neh78s0aj89dvdqkoda0urn2
+[21-Dec-2020 17:32:20 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539001
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:32:20 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539540
+[21-Dec-2020 17:32:20 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608542601
+[21-Dec-2020 17:32:20 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:32:36 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:32:36 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:32:36 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:32:36 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:32:36 Asia/Tokyo] デバッグ：session ID：igdnhmpdrms4bg775o5c515slb
+[21-Dec-2020 17:32:36 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539001
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:32:36 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539556
+[21-Dec-2020 17:32:36 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608542601
+[21-Dec-2020 17:32:36 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:32:42 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:32:42 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:32:42 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:32:42 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:32:42 Asia/Tokyo] デバッグ：session ID：aa6eqcd3mlfh1sg22ncmjucjcp
+[21-Dec-2020 17:32:42 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539001
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:32:42 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539562
+[21-Dec-2020 17:32:42 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608542601
+[21-Dec-2020 17:32:42 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:32:43 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:32:43 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:32:43 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:32:43 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:32:43 Asia/Tokyo] デバッグ：session ID：if8a5vos6i9eptq5pr39n3bao4
+[21-Dec-2020 17:32:43 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539001
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:32:43 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539563
+[21-Dec-2020 17:32:43 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608542601
+[21-Dec-2020 17:32:43 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:33:27 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:33:27 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:33:27 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:33:27 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:33:27 Asia/Tokyo] デバッグ：session ID：e3ei870f2893830pggbcj8vvl8
+[21-Dec-2020 17:33:27 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539001
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:33:27 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539607
+[21-Dec-2020 17:33:27 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608542601
+[21-Dec-2020 17:33:37 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:33:37 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:33:37 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:33:37 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:33:37 Asia/Tokyo] デバッグ：session ID：dat1l833ulk38shn6f8j0d3dri
+[21-Dec-2020 17:33:37 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539001
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:33:37 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539617
+[21-Dec-2020 17:33:37 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608542601
+[21-Dec-2020 17:33:37 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:33:37 Asia/Tokyo] デバッグ：バリデーションOKです。
+[21-Dec-2020 17:33:37 Asia/Tokyo] デバッグ：クエリ結果の中身：Array
+(
+    [pass] => $2y$10$kCpZqGcu4r/zBwVeJ.vxdedogLEA.oGo7HA5.a2QCfsMNQxJgkOwy
+    [id] => 43
+)
+
+[21-Dec-2020 17:33:38 Asia/Tokyo] デバッグ：パスワードがマッチしました。
+[21-Dec-2020 17:33:38 Asia/Tokyo] デバッグ：ログイン保持にチェックがあります。
+[21-Dec-2020 17:33:38 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_date] => 1608539618
+    [login_limit] => 2592000
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:33:38 Asia/Tokyo] デバッグ：マイページへ遷移します。
+[21-Dec-2020 17:33:57 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:33:57 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:33:57 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:33:57 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:33:57 Asia/Tokyo] デバッグ：session ID：04k2khqn8k102df1rl8dsmuo84
+[21-Dec-2020 17:33:57 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539618
+    [login_limit] => 2592000
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:33:57 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539637
+[21-Dec-2020 17:33:57 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1611131618
+[21-Dec-2020 17:33:59 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:33:59 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:33:59 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:33:59 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:33:59 Asia/Tokyo] デバッグ：session ID：a69os3789tabk2dju7k9p07eeb
+[21-Dec-2020 17:33:59 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539618
+    [login_limit] => 2592000
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:33:59 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539639
+[21-Dec-2020 17:33:59 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1611131618
+[21-Dec-2020 17:33:59 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:34:03 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:34:03 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:34:03 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:34:03 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:34:03 Asia/Tokyo] デバッグ：session ID：fe1ic3vbqsn5uh3f846er57g9e
+[21-Dec-2020 17:34:03 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539618
+    [login_limit] => 2592000
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:34:03 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539643
+[21-Dec-2020 17:34:03 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1611131618
+[21-Dec-2020 17:34:03 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:34:03 Asia/Tokyo] デバッグ：バリデーションOKです。
+[21-Dec-2020 17:34:03 Asia/Tokyo] デバッグ：クエリ結果の中身：Array
+(
+    [pass] => $2y$10$kCpZqGcu4r/zBwVeJ.vxdedogLEA.oGo7HA5.a2QCfsMNQxJgkOwy
+    [id] => 43
+)
+
+[21-Dec-2020 17:34:03 Asia/Tokyo] デバッグ：パスワードがマッチしました。
+[21-Dec-2020 17:34:03 Asia/Tokyo] デバッグ：ログイン保持にチェックはありません。
+[21-Dec-2020 17:34:03 Asia/Tokyo] デバッグ：セッション変数の中身：Array
+(
+    [login_date] => 1608539643
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:34:03 Asia/Tokyo] デバッグ：マイページへ遷移します。
+[21-Dec-2020 17:35:43 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:35:43 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:35:43 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:35:43 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:35:43 Asia/Tokyo] デバッグ：session ID：tql6egfnopllc63945en6fqldt
+[21-Dec-2020 17:35:43 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539643
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:35:43 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539743
+[21-Dec-2020 17:35:43 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608543243
+[21-Dec-2020 17:35:48 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:35:48 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:35:48 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:35:48 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:35:48 Asia/Tokyo] デバッグ：session ID：688qq6g2hh5jc7d15inng4vnpb
+[21-Dec-2020 17:35:48 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539643
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:35:48 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539748
+[21-Dec-2020 17:35:48 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608543243
+[21-Dec-2020 17:35:48 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:35:48 Asia/Tokyo] デバッグ：バリデーションOKです。
+[21-Dec-2020 17:35:48 Asia/Tokyo] デバッグ：クエリ結果の中身：Array
+(
+    [pass] => $2y$10$kCpZqGcu4r/zBwVeJ.vxdedogLEA.oGo7HA5.a2QCfsMNQxJgkOwy
+    [id] => 43
+)
+
+[21-Dec-2020 17:35:48 Asia/Tokyo] デバッグ：パスワードがマッチしました。
+[21-Dec-2020 17:35:48 Asia/Tokyo] デバッグ：ログイン保持にチェックはありません。
+[21-Dec-2020 17:35:48 Asia/Tokyo] デバッグ：Contents of session variables：Array
+(
+    [login_date] => 1608539748
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:35:48 Asia/Tokyo] デバッグ：Move to My Page。
+[21-Dec-2020 17:35:59 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:35:59 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:35:59 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:35:59 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:35:59 Asia/Tokyo] デバッグ：session ID：kfrtvu782bfik4o8eqjll0vdih
+[21-Dec-2020 17:35:59 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539748
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:35:59 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539759
+[21-Dec-2020 17:35:59 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608543348
+[21-Dec-2020 17:36:09 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:36:09 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:36:09 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:36:09 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:36:09 Asia/Tokyo] デバッグ：session ID：f4tospt9fud39u1r8n0jm6pg6q
+[21-Dec-2020 17:36:09 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539748
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:36:09 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539769
+[21-Dec-2020 17:36:09 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1608543348
+[21-Dec-2020 17:36:09 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:36:09 Asia/Tokyo] デバッグ：バリデーションOKです。
+[21-Dec-2020 17:36:09 Asia/Tokyo] デバッグ：クエリ結果の中身：Array
+(
+    [pass] => $2y$10$kCpZqGcu4r/zBwVeJ.vxdedogLEA.oGo7HA5.a2QCfsMNQxJgkOwy
+    [id] => 43
+)
+
+[21-Dec-2020 17:36:10 Asia/Tokyo] デバッグ：パスワードがマッチしました。
+[21-Dec-2020 17:36:10 Asia/Tokyo] デバッグ：ログイン保持にチェックがあります。
+[21-Dec-2020 17:36:10 Asia/Tokyo] デバッグ：Contents of session variables：Array
+(
+    [login_date] => 1608539770
+    [login_limit] => 2592000
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:36:10 Asia/Tokyo] デバッグ：Move to My Page。
+[21-Dec-2020 17:37:50 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:37:50 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:37:50 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:37:50 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:37:50 Asia/Tokyo] デバッグ：session ID：31vp92clhrd0nri0ka89c62qqm
+[21-Dec-2020 17:37:50 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539859
+    [login_limit] => 2592000
+    [user_id] => 1
+)
+
+[21-Dec-2020 17:37:50 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539870
+[21-Dec-2020 17:37:50 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1611131859
+[21-Dec-2020 17:37:51 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:37:51 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:37:51 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:37:51 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:37:51 Asia/Tokyo] デバッグ：session ID：38891iagbo7s1b2rvs3mqa4tdv
+[21-Dec-2020 17:37:51 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539859
+    [login_limit] => 2592000
+    [user_id] => 1
+)
+
+[21-Dec-2020 17:37:51 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539871
+[21-Dec-2020 17:37:51 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1611131859
+[21-Dec-2020 17:37:51 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:37:52 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:37:52 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:37:52 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:37:52 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:37:52 Asia/Tokyo] デバッグ：session ID：g9t86ir5j33m7gav6gihj92hhq
+[21-Dec-2020 17:37:52 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539859
+    [login_limit] => 2592000
+    [user_id] => 1
+)
+
+[21-Dec-2020 17:37:52 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539872
+[21-Dec-2020 17:37:52 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1611131859
+[21-Dec-2020 17:37:52 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:37:57 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:37:57 Asia/Tokyo] デバッグ：「　ログインページ　
+[21-Dec-2020 17:37:57 Asia/Tokyo] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:37:57 Asia/Tokyo] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:37:57 Asia/Tokyo] デバッグ：session ID：296eoaphlc7afiv3edfgg0bs19
+[21-Dec-2020 17:37:57 Asia/Tokyo] デバッグ：session variable：Array
+(
+    [login_date] => 1608539859
+    [login_limit] => 2592000
+    [user_id] => 1
+)
+
+[21-Dec-2020 17:37:57 Asia/Tokyo] デバッグ：現在日時タイムスタンプ：1608539877
+[21-Dec-2020 17:37:57 Asia/Tokyo] デバッグ：ログイン期限日時タイムスタンプ：1611131859
+[21-Dec-2020 17:37:57 Asia/Tokyo] デバッグ：POST送信があります。
+[21-Dec-2020 17:37:57 Asia/Tokyo] デバッグ：バリデーションOKです。
+[21-Dec-2020 17:37:57 Asia/Tokyo] デバッグ：クエリ結果の中身：Array
+(
+    [pass] => $2y$10$kCpZqGcu4r/zBwVeJ.vxdedogLEA.oGo7HA5.a2QCfsMNQxJgkOwy
+    [id] => 43
+)
+
+[21-Dec-2020 17:37:58 Asia/Tokyo] デバッグ：パスワードがマッチしました。
+[21-Dec-2020 17:37:58 Asia/Tokyo] デバッグ：ログイン保持にチェックはありません。
+[21-Dec-2020 17:37:58 Asia/Tokyo] デバッグ：Contents of session variables：Array
+(
+    [login_date] => 1608539878
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:37:58 Asia/Tokyo] デバッグ：Move to My Page。
+[21-Dec-2020 17:40:58 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:40:58 Asia/Tokyo] debug：「　ログインページ　
+[21-Dec-2020 17:40:58 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:40:58 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:40:58 Asia/Tokyo] debug：session ID：q6c48ifgtshnj0k2t9lp5kqp1a
+[21-Dec-2020 17:40:58 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1608539946
+    [login_limit] => 3600
+    [user_id] => 1
+)
+
+[21-Dec-2020 17:40:58 Asia/Tokyo] debug：現在日時タイムスタンプ：1608540058
+[21-Dec-2020 17:40:58 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1608543546
+[21-Dec-2020 17:41:26 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:41:26 Asia/Tokyo] debug：「　ログインページ　
+[21-Dec-2020 17:41:26 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:41:26 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:41:26 Asia/Tokyo] debug：session ID：7i1nsjfjgqkadjdbmvmgjqc0ug
+[21-Dec-2020 17:41:26 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1608539946
+    [login_limit] => 3600
+    [user_id] => 1
+)
+
+[21-Dec-2020 17:41:26 Asia/Tokyo] debug：現在日時タイムスタンプ：1608540086
+[21-Dec-2020 17:41:26 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1608543546
+[21-Dec-2020 17:41:26 Asia/Tokyo] debug：POST送信があります。
+[21-Dec-2020 17:41:49 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:41:49 Asia/Tokyo] debug：「　ログインページ　
+[21-Dec-2020 17:41:49 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:41:49 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:41:49 Asia/Tokyo] debug：session ID：i7a6q9koeviji6h8chpd3bjkgk
+[21-Dec-2020 17:41:49 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[21-Dec-2020 17:41:49 Asia/Tokyo] debug：現在日時タイムスタンプ：1608540109
+[21-Dec-2020 17:41:49 Asia/Tokyo] debug：POST送信があります。
+[21-Dec-2020 17:41:49 Asia/Tokyo] debug：バリデーションOKです。
+[21-Dec-2020 17:41:49 Asia/Tokyo] debug：クエリ結果の中身：Array
+(
+    [pass] => $2y$10$kCpZqGcu4r/zBwVeJ.vxdedogLEA.oGo7HA5.a2QCfsMNQxJgkOwy
+    [id] => 43
+)
+
+[21-Dec-2020 17:41:49 Asia/Tokyo] debug：パスワードがマッチしました。
+[21-Dec-2020 17:41:49 Asia/Tokyo] debug：ログイン保持にチェックがあります。
+[21-Dec-2020 17:41:49 Asia/Tokyo] debug：Contents of session variables：Array
+(
+    [login_date] => 1608540109
+    [login_limit] => 2592000
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:41:49 Asia/Tokyo] debug：Move to My Page。
+[21-Dec-2020 17:42:40 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:42:40 Asia/Tokyo] debug：「　ログインページ　
+[21-Dec-2020 17:42:40 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:42:40 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:42:40 Asia/Tokyo] debug：session ID：nsd3me1qil0bc6iff5dur3tfs9
+[21-Dec-2020 17:42:40 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1608540109
+    [login_limit] => 2592000
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:42:40 Asia/Tokyo] debug：現在日時タイムスタンプ：1608540160
+[21-Dec-2020 17:42:40 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611132109
+[21-Dec-2020 17:42:41 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:42:41 Asia/Tokyo] debug：「　ログインページ　
+[21-Dec-2020 17:42:41 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:42:41 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:42:41 Asia/Tokyo] debug：session ID：kp92dhhr1la712sj8ofb7k35ml
+[21-Dec-2020 17:42:41 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1608540109
+    [login_limit] => 2592000
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:42:41 Asia/Tokyo] debug：現在日時タイムスタンプ：1608540161
+[21-Dec-2020 17:42:41 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611132109
+[21-Dec-2020 17:42:41 Asia/Tokyo] debug：POST送信があります。
+[21-Dec-2020 17:42:45 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:42:45 Asia/Tokyo] debug：「　ログインページ　
+[21-Dec-2020 17:42:45 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:42:45 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:42:45 Asia/Tokyo] debug：session ID：1atjjpgn9vmg6qekgmrkgdttto
+[21-Dec-2020 17:42:45 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1608540109
+    [login_limit] => 2592000
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:42:45 Asia/Tokyo] debug：現在日時タイムスタンプ：1608540165
+[21-Dec-2020 17:42:45 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611132109
+[21-Dec-2020 17:42:45 Asia/Tokyo] debug：POST送信があります。
+[21-Dec-2020 17:42:45 Asia/Tokyo] debug：バリデーションOKです。
+[21-Dec-2020 17:42:45 Asia/Tokyo] debug：クエリ結果の中身：Array
+(
+    [pass] => $2y$10$kCpZqGcu4r/zBwVeJ.vxdedogLEA.oGo7HA5.a2QCfsMNQxJgkOwy
+    [id] => 43
+)
+
+[21-Dec-2020 17:42:45 Asia/Tokyo] debug：パスワードがマッチしました。
+[21-Dec-2020 17:42:45 Asia/Tokyo] debug：ログイン保持にチェックはありません。
+[21-Dec-2020 17:42:45 Asia/Tokyo] debug：Contents of session variables：Array
+(
+    [login_date] => 1608540165
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:42:45 Asia/Tokyo] debug：Move to Home page
+[21-Dec-2020 17:43:54 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:43:54 Asia/Tokyo] debug：「　ログインページ　
+[21-Dec-2020 17:43:54 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:43:54 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:43:54 Asia/Tokyo] debug：session ID：uqe8va7inns0v7ie50msik1212
+[21-Dec-2020 17:43:54 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1608540165
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:43:54 Asia/Tokyo] debug：現在日時タイムスタンプ：1608540234
+[21-Dec-2020 17:43:54 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1608543765
+[21-Dec-2020 17:44:10 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:44:10 Asia/Tokyo] debug：「　ログインページ　
+[21-Dec-2020 17:44:10 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:44:10 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:44:10 Asia/Tokyo] debug：session ID：3hrtghbqek6o9ur0lf58npilio
+[21-Dec-2020 17:44:10 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1608540165
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:44:10 Asia/Tokyo] debug：現在日時タイムスタンプ：1608540250
+[21-Dec-2020 17:44:10 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1608543765
+[21-Dec-2020 17:44:24 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:44:24 Asia/Tokyo] debug：「　ログインページ　
+[21-Dec-2020 17:44:24 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:44:24 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:44:24 Asia/Tokyo] debug：session ID：l8a662pj9duetqavcfa83et5mp
+[21-Dec-2020 17:44:24 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1608540165
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:44:24 Asia/Tokyo] debug：現在日時タイムスタンプ：1608540264
+[21-Dec-2020 17:44:24 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1608543765
+[21-Dec-2020 17:44:29 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:44:29 Asia/Tokyo] debug：「　ログインページ　
+[21-Dec-2020 17:44:29 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:44:29 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:44:29 Asia/Tokyo] debug：session ID：2q2v8rhsk3dhr6lg6p5crcs2f0
+[21-Dec-2020 17:44:29 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1608540165
+    [login_limit] => 3600
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:44:29 Asia/Tokyo] debug：現在日時タイムスタンプ：1608540269
+[21-Dec-2020 17:44:29 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1608543765
+[21-Dec-2020 17:44:29 Asia/Tokyo] debug：POST送信があります。
+[21-Dec-2020 17:44:29 Asia/Tokyo] debug：バリデーションOKです。
+[21-Dec-2020 17:44:29 Asia/Tokyo] debug：クエリ結果の中身：Array
+(
+    [pass] => $2y$10$kCpZqGcu4r/zBwVeJ.vxdedogLEA.oGo7HA5.a2QCfsMNQxJgkOwy
+    [id] => 43
+)
+
+[21-Dec-2020 17:44:29 Asia/Tokyo] debug：パスワードがマッチしました。
+[21-Dec-2020 17:44:29 Asia/Tokyo] debug：ログイン保持にチェックがあります。
+[21-Dec-2020 17:44:29 Asia/Tokyo] debug：Contents of session variables：Array
+(
+    [login_date] => 1608540269
+    [login_limit] => 2592000
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:44:29 Asia/Tokyo] debug：Move to Home page
+[21-Dec-2020 17:48:51 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:48:51 Asia/Tokyo] debug：「　ログインページ　
+[21-Dec-2020 17:48:51 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:48:51 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:48:51 Asia/Tokyo] debug：session ID：48mu0a25256h44en3dom53kcuo
+[21-Dec-2020 17:48:51 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1608540269
+    [login_limit] => 2592000
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:48:51 Asia/Tokyo] debug：現在日時タイムスタンプ：1608540531
+[21-Dec-2020 17:48:51 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611132269
+[21-Dec-2020 17:48:59 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:48:59 Asia/Tokyo] debug：「　ログインページ　
+[21-Dec-2020 17:48:59 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:48:59 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:48:59 Asia/Tokyo] debug：session ID：lth058ht18mhuld549f2bnofak
+[21-Dec-2020 17:48:59 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1608540269
+    [login_limit] => 2592000
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:48:59 Asia/Tokyo] debug：現在日時タイムスタンプ：1608540539
+[21-Dec-2020 17:48:59 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611132269
+[21-Dec-2020 17:49:01 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:49:01 Asia/Tokyo] debug：「　ログインページ　
+[21-Dec-2020 17:49:01 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:49:01 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:49:01 Asia/Tokyo] debug：session ID：no7ouh8j6dgc41j8b9avkj4qha
+[21-Dec-2020 17:49:01 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1608540269
+    [login_limit] => 2592000
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:49:01 Asia/Tokyo] debug：現在日時タイムスタンプ：1608540541
+[21-Dec-2020 17:49:01 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611132269
+[21-Dec-2020 17:51:09 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:51:09 Asia/Tokyo] debug：「　ログインページ　
+[21-Dec-2020 17:51:09 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:51:09 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:51:09 Asia/Tokyo] debug：session ID：471mp1t644q1a0rh3i97446f0p
+[21-Dec-2020 17:51:09 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1608540269
+    [login_limit] => 2592000
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:51:09 Asia/Tokyo] debug：現在日時タイムスタンプ：1608540669
+[21-Dec-2020 17:51:09 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611132269
+[21-Dec-2020 17:54:58 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:54:58 Asia/Tokyo] debug：「　ログインページ　
+[21-Dec-2020 17:54:58 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:54:58 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:54:58 Asia/Tokyo] debug：session ID：u1kk52iee4ho8qv90mt0ko6ndm
+[21-Dec-2020 17:54:58 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1608540269
+    [login_limit] => 2592000
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:54:58 Asia/Tokyo] debug：現在日時タイムスタンプ：1608540898
+[21-Dec-2020 17:54:58 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611132269
+[21-Dec-2020 17:55:33 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:55:33 Asia/Tokyo] debug：「　ログインページ　
+[21-Dec-2020 17:55:33 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:55:33 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:55:33 Asia/Tokyo] debug：session ID：dqrr645f6qtqhkm8qlqu5hk8i8
+[21-Dec-2020 17:55:33 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1608540269
+    [login_limit] => 2592000
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:55:33 Asia/Tokyo] debug：現在日時タイムスタンプ：1608540933
+[21-Dec-2020 17:55:33 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611132269
+[21-Dec-2020 17:55:44 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:55:44 Asia/Tokyo] debug：「　ログインページ　
+[21-Dec-2020 17:55:44 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:55:44 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:55:44 Asia/Tokyo] debug：session ID：pe2eeihm5np42dj4md2bhhfq6n
+[21-Dec-2020 17:55:44 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1608540269
+    [login_limit] => 2592000
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:55:44 Asia/Tokyo] debug：現在日時タイムスタンプ：1608540944
+[21-Dec-2020 17:55:44 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611132269
+[21-Dec-2020 17:55:48 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:55:48 Asia/Tokyo] debug：「　ログインページ　
+[21-Dec-2020 17:55:48 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:55:48 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:55:48 Asia/Tokyo] debug：session ID：m7hvlo5k8i50ml2vqj47s610i5
+[21-Dec-2020 17:55:48 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1608540269
+    [login_limit] => 2592000
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:55:48 Asia/Tokyo] debug：現在日時タイムスタンプ：1608540948
+[21-Dec-2020 17:55:48 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611132269
+[21-Dec-2020 17:55:48 Asia/Tokyo] debug：POST送信があります。
+[21-Dec-2020 17:55:54 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:55:54 Asia/Tokyo] debug：「　ログインページ　
+[21-Dec-2020 17:55:54 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:55:54 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:55:54 Asia/Tokyo] debug：session ID：g4loo1robp7qffrbrlvfoe0ou9
+[21-Dec-2020 17:55:54 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1608540269
+    [login_limit] => 2592000
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:55:54 Asia/Tokyo] debug：現在日時タイムスタンプ：1608540954
+[21-Dec-2020 17:55:54 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611132269
+[21-Dec-2020 17:55:54 Asia/Tokyo] debug：POST送信があります。
+[21-Dec-2020 17:56:07 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:56:07 Asia/Tokyo] debug：「　ログインページ　
+[21-Dec-2020 17:56:07 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[21-Dec-2020 17:56:07 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[21-Dec-2020 17:56:07 Asia/Tokyo] debug：session ID：6vj806njscr9nh7pepksa8ujfg
+[21-Dec-2020 17:56:07 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1608540269
+    [login_limit] => 2592000
+    [user_id] => 43
+)
+
+[21-Dec-2020 17:56:07 Asia/Tokyo] debug：現在日時タイムスタンプ：1608540967
+[21-Dec-2020 17:56:07 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611132269
+[21-Dec-2020 17:56:07 Asia/Tokyo] debug：POST送信があります。
+[21-Dec-2020 17:56:07 Asia/Tokyo] debug：バリデーションOKです。
+[21-Dec-2020 17:56:07 Asia/Tokyo] debug：クエリ結果の中身：Array
+(
+    [pass] => $2y$10$F0atE22z5a5Z5uR/g/5KzeaWCxvWuUQddI4rfIQ9jaECrXDFZkvd6
+    [id] => 42
+)
+
+[21-Dec-2020 17:56:07 Asia/Tokyo] debug：パスワードがマッチしました。
+[21-Dec-2020 17:56:07 Asia/Tokyo] debug：ログイン保持にチェックはありません。
+[21-Dec-2020 17:56:07 Asia/Tokyo] debug：Contents of session variables：Array
+(
+    [login_date] => 1608540967
+    [login_limit] => 3600
+    [user_id] => 42
+)
+
+[21-Dec-2020 17:56:07 Asia/Tokyo] debug：Move to Home page
