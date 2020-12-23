@@ -7,6 +7,7 @@ debug('「　ログインページ　');
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
 debugLogStart();
 
+require("auth.php");
 
 if (!empty($_POST)) {
     debug('POST送信があります。');

@@ -48,10 +48,15 @@ session_regenerate_id();
 function debugLogStart()
 {
     debug('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始');
+    // session idの表示
     debug('session ID：' . session_id());
+    // print_rで$_SESSIONの中身を表示
     debug('session variable：' . print_r($_SESSION, true));
+    // time関数で現在のタイムスタンプで表示
     debug('現在日時タイムスタンプ：' . time());
+    // login_date=現在のタイムスタンプ,login_limit=残りのloginしておける時間
     if (!empty($_SESSION['login_date']) && !empty($_SESSION['login_limit'])) {
+        // 上の二つに値が合った場合，loginしておける期日=(login_date+login_limit)を表示
         debug('ログイン期限日時タイムスタンプ：' . ($_SESSION['login_date'] + $_SESSION['login_limit']));
     }
 }
@@ -173,6 +178,7 @@ function queryPost($dbh, $sql, $data)
     $stmt->execute($data);
     return $stmt;
 }
+
 // login 関数
 function login($email, $pass, $dbh, $pass_save, $key1, $key2)
 {
@@ -201,9 +207,9 @@ function login($email, $pass, $dbh, $pass_save, $key1, $key2)
         }
         // ユーザーIDを格納
         $_SESSION['user_id'] = $result['id'];
-
+        // 変数$_SESSIONの中身を表示
         debug('Contents of session variables：' . print_r($_SESSION, true));
-        debug('Move to Home page');
+        debug('Move to Homepage');
         header("Location:homepage.php");
     } else {
         global $err_msg;
@@ -211,6 +217,7 @@ function login($email, $pass, $dbh, $pass_save, $key1, $key2)
         $err_msg[$key2] = MSG07;
     }
 }
+
 // user登録関数
 function signUp($email, $pass, $dbh)
 {
@@ -229,9 +236,9 @@ function signUp($email, $pass, $dbh)
 // other
 // -----------------------------------
 
-function showVariable($variable)
+function showVariable($var)
 {
     echo "<pre>";
-    echo var_dump($variable);
+    echo var_dump($var);
     echo "<pre>";
 }
