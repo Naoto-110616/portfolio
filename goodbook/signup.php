@@ -63,7 +63,7 @@ if (!empty($_POST)) {
                 </div>
                 <div class="massage">
                     <h2 class="massage1">
-                        Cannect with friends and the world <br>
+                        Connect with friends and the world <br>
                         around you on goodbook.
                     </h2>
                 </div>
