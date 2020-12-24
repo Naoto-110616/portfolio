@@ -1,3 +1,4 @@
+// main_leftのmenuの表示，非表示
 $(function(){
     $('.js-menu__item__link_open').each(function(){
         $(this).on('click',function(){
@@ -12,4 +13,11 @@ $(function(){
             return false;
         });
     });
+});
+
+// accountMenuの表示，非表示
+$(function () {
+  $('.accountMenu_button').click(function () {
+      $('.accountMenu').toggle();
+  });
 });

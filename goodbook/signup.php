@@ -2,12 +2,28 @@
 
 require("function.php");
 
+debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
+debug("「 signup");
+debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
+debugLogStart();
+
 if (!empty($_POST)) {
-    // debug('POST送信があります。');
+    debug('POST送信があります。');
 
     $email = $_POST['email'];
     $pass = $_POST['pass'];
     $pass_retype = $_POST['pass_retype'];
+
+    validEmail($email, "email");
+    validMaxLen($email, "email");
+    validEmailDup($email, "email");
+
+    validHalf($pass, "pass");
+    validMaxLen($pass, "pass");
+    validMinLen($pass, "pass");
+
+    validMaxLen($pass_retype, "pass_retype");
+    validMinLen($pass_retype, "pass_retype");
 
     validRequired($email, "email");
     validRequired($pass, "pass");
@@ -15,23 +31,10 @@ if (!empty($_POST)) {
 
     if (empty($err_msg)) {
 
-        validEmail($email, "email");
-        validMaxLen($email, "email");
-        validEmailDup($email, "email");
-
-        validHalf($pass, "pass");
-        validMaxLen($pass, "pass");
-        validMinLen($pass, "pass");
-
-        validMaxLen($pass_retype, "pass_retype");
-        validMinLen($pass_retype, "pass_retype");
-    }
-    if (empty($err_msg)) {
-
         validMatch($pass, $pass_retype, "pass");
     }
     if (empty($err_msg)) {
-        // debug('バリデーョンOKです。');
+        debug('バリデーョンOKです。');
 
         try {
             $dbh = dbConnect();
@@ -40,8 +43,12 @@ if (!empty($_POST)) {
             error_log("error" . $e->getMessage());
             $err_msg["mail"] = MSG09;
         }
+    } else {
+        debug('バリデーョンNGです。');
     }
 }
+debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
+
 ?>
 
 <!DOCTYPE html>
@@ -112,67 +119,7 @@ if (!empty($_POST)) {
             </div>
         </div>
     </div>
-    <footer class="foo">
-        <div class="foodiv">
-            <ul class="language">
-                <li>English(US)</li>
-                <li class="interval"><a href="">日本語</a></li>
-                <li class="interval"><a href="">Português (Brasil)</a></li>
-                <li class="interval"><a href="">中文(简体)</a></li>
-                <li class="interval"><a href="">Tiếng Việt</a></li>
-                <li class="interval"><a href="">Español</a></li>
-                <li class="interval"><a href="">Bahasa Indonesia</a></li>
-                <li class="interval"><a href="">한국어</a></li>
-                <li class="interval"><a href="">Français (France)</a></li>
-                <li class="interval"><a href="">Deutsch</a></li>
-                <li class="interval"><a href="">Italiano</a></li>
-            </ul>
-            <div class="boder2">
-                <p class="box"></p>
-            </div>
-            <div class="listdiv">
-                <ul class="list">
-                    <li class="interval"><a href="">Sign Up</a></li>
-                    <li class="interval"><a href="">Log In</a></li>
-                    <li class="interval"><a href="">Messenger</a></li>
-                    <li class="interval"><a href="">Facebook Lite</a></li>
-                    <li class="interval"><a href="">Watch</a></li>
-                    <li class="interval"><a href="">People</a></li>
-                    <li class="interval"><a href="">Pages</a></li>
-                    <li class="interval"><a href="">Page Categories</a></li>
-                    <li class="interval"><a href="">Places</a></li>
-                    <li class="interval"><a href="">Games</a></li>
-                    <li class="interval"><a href="">Locations</a></li>
-                    <li class="interval"><a href="">Marketplace</a></li>
-                    <li class="interval"><a href="">Facebook Pay</a></li>
-                    <li class="interval"><a href="">Groups</a></li>
-                    <li class="interval"><a href="">Oculus</a></li>
-                    <li class="interval"><a href="">Portal</a></li>
-                    <li class="interval"><a href="">Instagram</a></li>
-                    <li class="interval"><a href="">Local</a></li>
-                    <li class="interval"><a href="">Fundraisers</a></li>
-                    <li class="interval"><a href="">Services</a></li>
-                    <li class="interval"><a href="">Voting Information Center</a></li>
-                    <li class="interval"><a href="">About</a></li>
-                    <li class="interval"><a href="">Create Ad</a></li>
-                    <li class="interval"><a href="">Create Page</a></li>
-                    <li class="interval"><a href="">Developers</a></li>
-                    <li class="interval"><a href="">Careers</a></li>
-                    <li class="interval"><a href="">Privacy</a></li>
-                    <li class="interval"><a href="">Cookies</a></li>
-                    <li class="interval"><a href="">Ad Choices</a></li>
-                    <li class="interval"><a href="">Terms</a></li>
-                    <li class="interval"><a href="">Help</a></li>
-                </ul>
-            </div>
-            <div class="spandiv">
-                <span class="span">goodbook © 2020</span>
-            </div>
-            <div class="portfolio-top">
-                <p><a href="../Portfolio.html" class="portfolio">portfolio top</a></p>
-            </div>
-        </div>
-    </footer>
+    <?php require("login&signup_footer.php") ?>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="js/main.js"></script>
 </body>

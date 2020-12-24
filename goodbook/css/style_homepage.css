@@ -4,6 +4,7 @@ body {
 }
 .header {
   position: fixed;
+  z-index: 9;
   top: 0;
   display: flex;
   width: 100%;
@@ -56,6 +57,48 @@ body {
 }
 .header_right_icon {
   margin: 15px;
+}
+.accountMenu {
+  position: absolute;
+  display: block;
+  width: 360px;
+  right: 0;
+  display: none;
+  background-color: #303030;
+  border-radius: 20px;
+  margin-top: 15px;
+  padding: 5px;
+}
+.myprofile {
+  display: flex;
+  margin-bottom: 13px;
+}
+.myicon {
+  margin-left: 10px;
+}
+.myInfo {
+  margin: 15px;
+}
+.feedback,
+.Menu_element {
+  display: flex;
+  padding: 0 19px;
+}
+.feedback_comment {
+  margin: 15px;
+}
+.Menu_element_comment {
+  margin: 22px;
+}
+.feedbackIcon,
+.Menu_elementIcon {
+  margin-top: 17px;
+}
+a,
+a:active,
+a:focus {
+  color: #dddddd;
+  text-decoration: none;
 }
 .main {
   margin-top: 60px;
@@ -143,6 +186,13 @@ body {
   border-bottom: 2px solid #565656;
   width: 95%;
   margin: auto;
+}
+.accountMenuBorder {
+  border-bottom: 2px solid #565656;
+  width: 90%;
+  margin: auto;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 .main_center_element2_icon_div {
   float: left;
@@ -260,6 +310,9 @@ body {
   cursor: pointer;
 }
 header i:hover,
-#contents i:hover {
+.main_left_icon:hover,
+.Menu_element:hover,
+.myprofile:hover,
+.feedback:hover {
   color: #2d88ff;
 }

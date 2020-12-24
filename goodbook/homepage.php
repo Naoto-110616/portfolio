@@ -2,7 +2,6 @@
 
 require("function.php");
 
-
 ?>
 
 <!DOCTYPE html>
@@ -17,35 +16,7 @@ require("function.php");
 </head>
 
 <body>
-
-    <header class="header">
-        <div class="head_left">
-            <nav>
-                <div class="icon_div">
-                    <a href="login.php"><img class="icon" src="img/Facebook-Logo1.png" alt="goodbook_icon"></a>
-                </div>
-            </nav>
-            <div class="serch_div">
-                <label>
-                    <input type="serch" class="serch" placeholder=" goodbook search">
-                </label>
-            </div>
-        </div>
-        <div class="head_center">
-            <span class="header_center_icon"><i class="fas fa-home fa-2x"></i></span>
-            <span class="header_center_icon"><i class="fas fa-user-friends fa-2x"></i></span>
-            <span class="header_center_icon"><i class="fas fa-tv fa-2x"></i></span>
-            <span class="header_center_icon"><i class="fas fa-users fa-2x"></i></span>
-            <span class="header_center_icon"><i class="fas fa-dice-d6 fa-2x"></i></span>
-        </div>
-        <div class="head_right">
-            <span class="header_right_icon"><i class="fas fa-user-circle fa-2x"></i></span>
-            <span class="header_right_icon"><i class="fas fa-plus-circle fa-2x"></i></span>
-            <span class="header_right_icon"><i class="far fa-comment-dots fa-2x"></i></i></span>
-            <span class="header_right_icon"><i class="fas fa-bell fa-2x"></i></span>
-            <span class="header_right_icon"><i class="fas fa-caret-down fa-2x"></i></span>
-        </div>
-    </header>
+    <?php require("homepage_header.php") ?>
     <article class="main">
         <div class="main_div">
             <nav>
