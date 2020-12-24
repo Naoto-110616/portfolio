@@ -1,9 +1,9 @@
 <?php
 
 
-// -----------------------------------
+//================================
 // log
-// -----------------------------------
+//================================
 
 // errorlevel
 error_reporting(E_ALL);
@@ -16,6 +16,7 @@ ini_set('error_log', 'php.log');
 //================================
 // デバッグ
 //================================
+
 //デバッグフラグ
 $debug_flg = true;
 //デバッグログ関数
@@ -30,6 +31,7 @@ function debug($str)
 //================================
 // session準備・session有効期限を延ばす
 //================================
+
 //sessionfileの置き場を変更する（/var/tmp/以下に置くと30日は削除されない）
 session_save_path("/var/tmp/");
 //ガーベージコレクションが削除するセッションの有効期限を設定（30日以上経っているものに対してだけ１００分の１の確率で削除）
@@ -62,9 +64,9 @@ function debugLogStart()
 }
 
 
-// -----------------------------------
+//================================
 //定数
-// -----------------------------------
+//================================
 
 // errormessageを定数に設定
 define('MSG01', 'Input Required');
@@ -78,9 +80,9 @@ define('MSG08', 'This email is already registered');
 define('MSG09', 'An error has occurred, Please try again after a while');
 
 
-// -----------------------------------
-// validation function
-// -----------------------------------
+//================================
+// validation 関数
+//================================
 
 // errormessage格納用の配列
 $err_msg = array();
@@ -152,9 +154,9 @@ function validMaxLen($str, $key, $max = 255)
 }
 
 
-// -----------------------------------
+//================================
 // data base
-// -----------------------------------
+//================================
 
 // db接続関数
 function dbConnect()
@@ -228,13 +230,15 @@ function signUp($email, $pass, $dbh)
         'login_time' => date('Y-m-d H:i:s')
     );
     queryPost($dbh, $sql, $data);
-    header('Location:login.php');
+    debug('Contents of session variables：' . print_r($_SESSION, true));
+    debug('Move to login page');
+    header('Location:homepage/login.php');
 }
 
 
-// -----------------------------------
+//================================
 // other
-// -----------------------------------
+//================================
 
 function showVariable($var)
 {
