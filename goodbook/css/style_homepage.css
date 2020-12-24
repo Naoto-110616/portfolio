@@ -27,10 +27,10 @@ body {
   height: 40px;
   border-radius: 25px;
   border: none;
-  background-color: #494949;
   outline: none;
   font-size: 16px;
   color: #c1c1c1;
+  background-color: #494949;
 }
 .serch::placeholder {
   color: #c1c1c1;
@@ -63,7 +63,7 @@ body {
   display: block;
   width: 360px;
   right: 0;
-  display: none;
+  /* display: none; */
   background-color: #303030;
   border-radius: 20px;
   margin-top: 15px;
@@ -315,4 +315,48 @@ header i:hover,
 .myprofile:hover,
 .feedback:hover {
   color: #2d88ff;
+}
+.Retentioncolor_blue {
+  color: #2d88ff;
+}
+
+/* darkmode切り替え */
+.lightColor1 {
+  color: #c1c1c1;
+}
+.lightBackColor1 {
+  background-color: #c1c1c1;
+}
+.lightColor2 {
+  color: #dddddd;
+}
+.lightBackColor2 {
+  background-color: #dddddd;
+}
+.darkColor1 {
+  color: #333333;
+}
+.darkBackColor1 {
+  background-color: #333333;
+}
+.darkColor2 {
+  color: #494949;
+}
+.darkBackColor2 {
+  background-color: #494949;
+}
+.darkColor3 {
+  color: #191919;
+}
+.darkBackColor3 {
+  background-color: #191919;
+}
+.darkColor4 {
+  color: #303030;
+}
+.darkBackColor4 {
+  background-color: #303030;
+}
+.borderDarkColor {
+  border-bottom: 2px solid #494949;
 }

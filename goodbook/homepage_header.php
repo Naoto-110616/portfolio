@@ -65,12 +65,12 @@
                             <p>help and support</p>
                         </div>
                     </div>
-                    <div class="Menu_element display">
+                    <div class="Menu_element darkMode">
                         <div class="Menu_elementIcon">
                             <i class="far fa-moon fa-2x"></i>
                         </div>
                         <div class="Menu_element_comment">
-                            <p>display setting</p>
+                            <p>dark mode off</p>
                         </div>
                     </div>
                     <a href="logout.php">
