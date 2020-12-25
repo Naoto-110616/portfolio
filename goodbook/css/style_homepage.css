@@ -63,7 +63,7 @@ body {
   display: block;
   width: 360px;
   right: 0;
-  /* display: none; */
+  display: none;
   background-color: #303030;
   border-radius: 20px;
   margin-top: 15px;
@@ -94,9 +94,9 @@ body {
 .Menu_elementIcon {
   margin-top: 17px;
 }
-a,
-a:active,
-a:focus {
+.logout,
+.logout:active,
+.logout:focus {
   color: #dddddd;
   text-decoration: none;
 }
@@ -108,7 +108,7 @@ a:focus {
   display: flex;
 }
 #main_left_wrapper {
-  height: 90%;
+  height: 94%;
   position: fixed;
   overflow-y: scroll;
 }
@@ -311,9 +311,9 @@ a:focus {
 }
 header i:hover,
 .main_left_icon:hover,
-.Menu_element:hover,
 .myprofile:hover,
-.feedback:hover {
+.feedback:hover,
+.Menu_element:hover {
   color: #2d88ff;
 }
 .Retentioncolor_blue {
@@ -359,4 +359,7 @@ header i:hover,
 }
 .borderDarkColor {
   border-bottom: 2px solid #494949;
+}
+.shadow {
+  box-shadow: 0 0 8px grey;
 }

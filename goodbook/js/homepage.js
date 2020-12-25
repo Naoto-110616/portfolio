@@ -1,4 +1,4 @@
-// main_leftのmenuの表示，非表示
+// main_left_menuの表示，非表示
 $(function(){
     $('.js-menu__item__link_open').each(function(){
         $(this).on('click',function(){
@@ -15,12 +15,16 @@ $(function(){
     });
 });
 
+// ====================
+// accountMenu
+// ====================
 // accountMenuの表示，非表示
 $(function () {
   $('.accountMenu_button').click(function () {
       $('.accountMenu').toggle();
   });
 });
+
 //ボタンの色保持
 $(function() {
   $(".accountMenu_button").click(function() {
@@ -28,25 +32,32 @@ $(function() {
     $(this).toggleClass("Retentioncolor_blue");
   });
 });
+
 // ダークモード切り替え
 $(function() {
   $(".darkMode").click(function() {
-    // cssでテキスト上に背景色をon/off
+    if ($("p",this).text() === 'dark mode off') {
+      $("p",this).text("dark mode on");
+    } else {
+      $("p",this).text("dark mode off");
+    }
+    $(".header").toggleClass("shadow");
     $(".header_center_icon").toggleClass("darkColor2");
-    $(".serch").toggleClass("lightBackColor1");
-    $(".serch").toggleClass("darkColor2");
-    $("serch::placeholder").toggleClass("darkColor2");
+    $(".serch").toggleClass("lightBackColor1 darkColor2");
     $("body").toggleClass("darkColor2");
     $(".icon_button").toggleClass("darkColor1");
-    $("i").toggleClass("darkColor1");
+    $(".main_left_icon").toggleClass("darkColor1");
     $(".header").toggleClass("lightBackColor2");
+    $(".header_right_icon").toggleClass("darkColor1");
     $(".main").toggleClass("lightBackColor1");
-    $(".main_center_element").toggleClass("lightBackColor2");
-    $(".icon_name").toggleClass("darkColor1");
+    $(".main_center_element").toggleClass("lightBackColor2 shadow");
+    $(".main_center_icon").toggleClass("darkColor2");
     $("a").toggleClass("darkColor2");
     $("a:active").toggleClass("darkColor2");
     $("a:focus").toggleClass("darkColor2");
-    $(".accountMenu").toggleClass("lightBackColor2");
-    $(".accountMenu").toggleClass("darkColor2");
+    $(".logout").toggleClass("darkColor2");
+    $(".logout:active").toggleClass("darkColor2");
+    $(".logout:focus").toggleClass("darkColor2");
+    $(".accountMenu").toggleClass("lightBackColor2 darkColor2 shadow");
   });
 });
