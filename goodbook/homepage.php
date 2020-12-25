@@ -60,7 +60,7 @@ require("function.php");
                                 <div class="icon_name_div"><span class="icon_name">page</span></div>
                             </li>
                             <ul class="menu">
-                                <li class="menu__item">
+                                <li class="menu_item">
                                     <a class="main_left_icon menu__item__link js-menu__item__link_open" href="">
                                         <div><i class="fas fa-arrow-circle-down fa-2x"></i></div>
                                         <div class="icon_name_div"><span class="icon_name">more</span></div>

@@ -6,7 +6,7 @@
             </div>
         </nav>
         <div class="serch_div">
-            <label>
+            <label class="serch">
                 <input type="serch" class="serch" placeholder=" goodbook search">
             </label>
         </div>
@@ -73,7 +73,7 @@
                             <p>dark mode off</p>
                         </div>
                     </div>
-                    <a href="logout.php">
+                    <a class="logout" href="logout.php">
                         <div class="Menu_element logout">
                             <div class="Menu_elementIcon">
                                 <i class="fas fa-door-open fa-2x"></i>
