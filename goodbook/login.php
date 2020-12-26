@@ -52,24 +52,14 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 <head>
     <meta charset="UTF-8">
     <title>goodbook - Login</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="home">
         <div class="center">
-            <div class="left">
-                <div class="logo">
-                    <img class="icon" src="img/Facebook-Logo1.png">
-                </div>
-                <div class="massage">
-                    <h2 class="massage1">
-                        Connect with friends and the world <br>
-                        around you on goodbook.
-                    </h2>
-                </div>
-            </div>
+            <?php require("logo_title.php") ?>
             <div class="formentire">
                 <div class="form">
                     <form method="post">
