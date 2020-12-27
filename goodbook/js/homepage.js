@@ -5,25 +5,18 @@ $(function(){
             $("+.submenu",this).slideToggle();
             $("i",this).toggleClass("fas fa-arrow-circle-down fa-2x");
             $("i",this).toggleClass("fas fa-arrow-circle-up fa-2x");
+            $(this).toggleClass("Retentioncolor_blue");
             if ($("span",this).text() === 'close') {
+                // $(this).toggleClass("darkColor2");
                 $("span",this).text("more");
-              } else {
+            } else {
+                // $(this).removeClass("darkColor2");
                 $("span",this).text("close");
               }
             return false;
         });
     });
 });
-
-// // footer位置保持
-// $(function() {
-//   var $ftr = $('#footer');
-//   if (window.innerHeight > $ftr.offset().top + $ftr.outerHeight()) {
-//     $ftr.attr({
-//       'style': 'position:fixed; top:' + (window.innerHeight - $ftr.outerHeight()) + 'px;'
-//     });
-//   }
-// });
 
 // ====================
 // accountMenu
@@ -38,7 +31,6 @@ $(function () {
 //ボタンの色保持
 $(function() {
   $(".accountMenu_button").click(function() {
-    // cssでテキスト上に背景色をon/off
     $(this).toggleClass("Retentioncolor_blue");
   });
 });
@@ -69,7 +61,7 @@ $(function() {
     $(".logout:active").toggleClass("darkColor2");
     $(".logout:focus").toggleClass("darkColor2");
     $(".accountMenu").toggleClass("lightBackColor2 darkColor2 shadow");
-    $(".withdraw_window").toggleClass("lightBackColor1");
+    $(".withdraw_main").toggleClass("lightBackColor1");
     $(".withdraw_page_width").toggleClass("lightBackColor2 darkColor2 shadow");
     $(".withdraw_window input").toggleClass("shadow");
   });

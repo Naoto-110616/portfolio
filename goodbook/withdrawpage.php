@@ -8,6 +8,22 @@ debug('「「「「「「「「「「「「「「「「「「「「「「「「�
 debugLogStart();
 
 require("auth.php");
+
+//================================
+// 画面処理
+//================================
+// post送信されていた場合
+if (!empty($_POST)) {
+    debug('POST送信があります。');
+    //例外処理
+    try {
+        withdraw("err");
+    } catch (Exception $e) {
+        error_log('error:' . $e->getMessage());
+        $err_msg["err"] = MSG09;
+    }
+}
+debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
 ?>
 
 <?php
@@ -18,7 +34,7 @@ require("goodbook_head.php");
 <body>
     <?php require("goodbook_header.php"); ?>
     <div class="overall">
-        <article class="main">
+        <article class="withdraw_main">
             <section class="withdraw_window">
                 <div class="withdraw_page_padding">
                     <div class="withdraw_page_width">
@@ -75,23 +91,28 @@ require("goodbook_head.php");
                                 </div>
                             </div>
                             <div class="button_div">
-                                <div class="withdraw_beneath">
-                                    <div class="cancel_button">
-                                        <label for="cancel">
-                                            <input type="button" onclick="location.href='homepage.php'" value="cancel"></input>
-                                        </label>
+                                <form action="" method="post">
+                                    <div class="withdraw_beneath">
+                                        <div class="cancel_button">
+                                            <label for="cancel">
+                                                <input type="button" onclick="location.href='homepage.php'" value="cancel"></input>
+                                            </label>
+                                        </div>
+                                        <div class="withdraw_button">
+                                            <label for="withdraw">
+                                                <input type="submit" name="withdraw" value="account withdraw"></input>
+                                            </label>
+                                        </div>
                                     </div>
-                                    <div class="withdraw_button">
-                                        <label for="withdraw">
-                                            <input type="submit" name="withdraw" value="account withdraw"></input>
-                                        </label>
-                                    </div>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            <?php
+            if (!empty($err_msg['err'])) echo $err_msg['err'];
+            ?>
         </article>
     </div>
     <footer id="footer">

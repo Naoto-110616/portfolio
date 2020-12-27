@@ -132,11 +132,7 @@ body {
   padding-top: 20px;
   margin: 0 20%;
   flex-grow: 1;
-  /* height: 100%; */
 }
-/* .main_center_position {
-  width: 100%;
-} */
 .main_center_element {
   background-color: #303030;
   width: 70%;
@@ -229,9 +225,6 @@ body {
 .submenu {
   display: none;
 }
-.submenu__item {
-  color: #c1c1c1;
-}
 .icon_img_div {
   height: 50px;
   width: 95%;
@@ -310,12 +303,12 @@ body {
 }
 
 /* withdrawpage */
-.withdraw_page_padding {
-  padding-top: 35px;
-  padding-bottom: 383px;
-}
-.withdraw_window {
+.withdraw_main {
   background-color: #191919;
+  height: 100vh;
+}
+.withdraw_page_padding {
+  padding-top: 95px;
 }
 .withdraw_page_width {
   width: 550px;
