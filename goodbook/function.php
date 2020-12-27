@@ -109,7 +109,7 @@ function validEmailDup($email, $key)
     global $err_msg;
     try {
         $dbh = dbConnect();
-        $sql = "SELECT count(*) FROM users WHERE email = :email";
+        $sql = "SELECT count(*) FROM users WHERE email = :email AND delete_flg = 0 ";
         $data = array(":email" => $email);
         $stmt = queryPost($dbh, $sql, $data);
         $restult = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -184,7 +184,7 @@ function queryPost($dbh, $sql, $data)
 // login 関数
 function login($email, $pass, $dbh, $pass_save, $key1, $key2)
 {
-    $sql = "SELECT pass,id FROM users WHERE email = :email";
+    $sql = "SELECT pass,id FROM users WHERE email = :email AND delete_flg = 0 ";
     $data = array(':email' => $email);
     $stmt = queryPost($dbh, $sql, $data);
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -248,7 +248,30 @@ function signUp($email, $pass, $dbh, $key)
     }
 }
 
+// withdraw関数
+function withdraw($key)
+{
+    // DBへ接続
+    $dbh = dbConnect();
+    // SQL文作成
+    $sql1 = 'UPDATE users SET  delete_flg = 1 WHERE id = :us_id';
+    // データ流し込み
+    $data = array(':us_id' => $_SESSION['user_id']);
+    // クエリ実行
+    $stmt1 = queryPost($dbh, $sql1, $data);
 
+    // クエリ実行成功の場合（最悪userテーブルのみ削除成功していれば良しとする）
+    if ($stmt1) {
+        //セッション削除
+        session_destroy();
+        debug('セッション変数の中身：' . print_r($_SESSION, true));
+        debug('トップページへ遷移します。');
+        header("Location:login.php");
+    } else {
+        debug('クエリが失敗しました。');
+        $err_msg[$key] = MSG09;
+    }
+}
 //================================
 // other
 //================================
