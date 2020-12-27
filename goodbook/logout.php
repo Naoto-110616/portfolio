@@ -3,7 +3,7 @@
 require('function.php');
 
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
-debug('「　ログアウトページ　');
+debug('「　logout page　');
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
 debugLogStart();
 

@@ -16,45 +16,38 @@ if (!empty($_POST)) {
     $pass = $_POST['pass'];
     $pass_save = (!empty($_POST['pass_save'])) ? true : false; //ショートハンド（略記法）という書き方
 
-
-
-    validEmail($email, "email");
-    validMaxLen($email, "email");
-    validHalf($pass, "pass");
-    validMaxLen($pass, "pass");
-    validMinLen($pass, "pass");
-
     validRequired($email, "email");
     validRequired($pass, "pass");
     if (empty($err_msg)) {
-        debug('バリデーションOKです。');
+        validEmail($email, "email");
+        validMaxLen($email, "email");
+        validHalf($pass, "pass");
+        validMaxLen($pass, "pass");
+        validMinLen($pass, "pass");
 
-        try {
-            $dbh = dbConnect();
-            login($email, $pass, $dbh, $pass_save, "email", "pass");
-        } catch (Exception $e) {
-            error_log("error:" . $e->getMessage());
-            $err_msg["email"] = MSG09;
+
+        if (empty($err_msg)) {
+            debug('バリデーションOKです。');
+
+            try {
+                $dbh = dbConnect();
+                login($email, $pass, $dbh, $pass_save, "email", "pass");
+            } catch (Exception $e) {
+                error_log("error:" . $e->getMessage());
+                $err_msg["email"] = MSG09;
+            }
+        } else {
+            debug('バリデーョンNGです。');
         }
-    } else {
-        debug('バリデーョンNGです。');
     }
 }
 debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
-
-
 ?>
 
-
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <title>goodbook - Login</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+<?php
+$siteTitle = "Login";
+require("head.php");
+?>
 
 <body>
     <div class="home">
