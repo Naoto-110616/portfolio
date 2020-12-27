@@ -3,6 +3,7 @@
 //================================
 // ログイン認証・自動ログアウト
 //================================
+
 // ログインしている場合
 if (!empty($_SESSION['login_date'])) {
     debug('ログイン済みユーザーです。');
@@ -19,9 +20,18 @@ if (!empty($_SESSION['login_date'])) {
         debug('ログイン有効期限以内です。');
         //最終ログイン日時を現在日時に更新
         $_SESSION['login_date'] = time();
-        debug('Move to Homepage');
-        header("Location:homepage.php");
+
+        //現在実行中のスクリプトファイル名がlogin.phpの場合
+        //$_SERVER['PHP_SELF']はドメインからのパスを返すため、今回だと[/goodbook/login.php]が返ってくるので、
+        //さらにbasename関数を使うことでファイル名だけを取り出せる
+        if (basename($_SERVER['PHP_SELF']) === 'login.php') {
+            debug('Move to Homepage');
+            header("Location:homepage.php");
+        }
     }
 } else {
     debug('未ログインユーザーです。');
+    if (basename($_SERVER['PHP_SELF']) !== 'login.php') {
+        header("Location:login.php"); //ログインページへ
+    }
 }

@@ -3,7 +3,7 @@
 require("function.php");
 
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
-debug("「 signup");
+debug("「 signup page");
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
 debugLogStart();
 
@@ -14,52 +14,49 @@ if (!empty($_POST)) {
     $pass = $_POST['pass'];
     $pass_retype = $_POST['pass_retype'];
 
-    validEmail($email, "email");
-    validMaxLen($email, "email");
-    validEmailDup($email, "email");
-
-    validHalf($pass, "pass");
-    validMaxLen($pass, "pass");
-    validMinLen($pass, "pass");
-
-    validMaxLen($pass_retype, "pass_retype");
-    validMinLen($pass_retype, "pass_retype");
-
     validRequired($email, "email");
     validRequired($pass, "pass");
     validRequired($pass_retype, "pass_retype");
 
     if (empty($err_msg)) {
+        validEmail($email, "email");
+        validMaxLen($email, "email");
+        validEmailDup($email, "email");
 
-        validMatch($pass, $pass_retype, "pass");
-    }
-    if (empty($err_msg)) {
-        debug('バリデーョンOKです。');
+        validHalf($pass, "pass");
+        validMaxLen($pass, "pass");
+        validMinLen($pass, "pass");
 
-        try {
-            $dbh = dbConnect();
-            signUp($email, $pass, $dbh);
-        } catch (Exception $e) {
-            error_log("error" . $e->getMessage());
-            $err_msg["mail"] = MSG09;
+        validMaxLen($pass_retype, "pass_retype");
+        validMinLen($pass_retype, "pass_retype");
+
+        if (empty($err_msg)) {
+
+            validMatch($pass, $pass_retype, "pass");
+
+            if (empty($err_msg)) {
+                debug('バリデーョンOKです。');
+
+                try {
+                    $dbh = dbConnect();
+                    signUp($email, $pass, $dbh, "email");
+                } catch (Exception $e) {
+                    error_log("error" . $e->getMessage());
+                    $err_msg["mail"] = MSG09;
+                }
+            } else {
+                debug('バリデーョンNGです。');
+            }
         }
-    } else {
-        debug('バリデーョンNGです。');
     }
 }
 debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
-
 ?>
 
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <title>goodbook - Sing up</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+<?php
+$siteTitle = "Sign up";
+require("head.php");
+?>
 
 <body>
     <div class="home">

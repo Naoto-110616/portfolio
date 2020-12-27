@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
@@ -194,15 +194,10 @@
             </article>
         </div>
     </main>
-    <footer class="footer">
-        <div class="content">
-            <h2>skillsheet</h2>
-            <p>お時間いただき、ありがとうございました。</p>
-            <div>これまでの経験を活かして、業務を進めて参ります。</div>
-            <div>よろしくお願いします。</div>
-            <p><a href="../Portfolio.html">Portfolio トップページへ</a></p>
-        </div>
-    </footer>
+    <?php
+    $href = "../Portfolio.php";
+    require("../home_footer.php");
+    ?>
 </body>
 
 </html>

@@ -221,7 +221,7 @@ function login($email, $pass, $dbh, $pass_save, $key1, $key2)
 }
 
 // user登録関数
-function signUp($email, $pass, $dbh)
+function signUp($email, $pass, $dbh, $key)
 {
     $sql = 'INSERT INTO users (email, pass, login_time) VALUES (:email, :pass, :login_time)';
     $data = array(
@@ -229,10 +229,23 @@ function signUp($email, $pass, $dbh)
         ':pass' => password_hash($pass, PASSWORD_DEFAULT),
         'login_time' => date('Y-m-d H:i:s')
     );
-    queryPost($dbh, $sql, $data);
-    debug('Contents of session variables：' . print_r($_SESSION, true));
-    debug('Move to login page');
-    header('Location:homepage/login.php');
+    $stmt = queryPost($dbh, $sql, $data);
+
+    // singup後すぐにhomepageへ遷移する処理
+    if ($stmt) {
+        // session time default 1時間
+        $sesLimit = 60 * 60;
+        // 最終login日時を現在の時間に設定
+        $_SESSION["login_data"] = time();
+        $_SESSION["login_limit"] = $sesLimit;
+        // user_idを格納
+        $_SESSION["user_id"] = $dbh->lastInsertId();
+        debug('Contents of session variables：' . print_r($_SESSION, true));
+        header('Location:homepage.php');
+    } else {
+        error_log("The query failed");
+        $err_msg[$key] = MSG09;
+    }
 }
 
 

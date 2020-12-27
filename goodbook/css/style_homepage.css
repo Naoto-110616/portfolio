@@ -1,6 +1,6 @@
 body {
   font-family: Verdana;
-  color: #c1c1c1;
+  color: #dddddd;
 }
 .header {
   position: fixed;
@@ -9,6 +9,7 @@ body {
   display: flex;
   width: 100%;
   background-color: #333333;
+  border-bottom: solid 1px #4c4c4c;
 }
 .head_left {
   display: flex;
@@ -29,11 +30,11 @@ body {
   border: none;
   outline: none;
   font-size: 16px;
-  color: #c1c1c1;
+  color: #dddddd;
   background-color: #494949;
 }
 .serch::placeholder {
-  color: #c1c1c1;
+  color: #dddddd;
 }
 .head_center {
   width: 100%;
@@ -42,13 +43,16 @@ body {
   align-items: center;
   justify-content: center;
 }
+.to_homepage {
+  color: #dddddd;
+}
 .header_center_icon {
-  margin: 0px 30px;
+  margin: 0px 55px;
 }
 .header_center_icon,
 .header_right_icon {
   display: inline;
-  color: #dddddd;
+  font-size: 14px;
 }
 .head_right {
   width: 33%;
@@ -75,6 +79,10 @@ body {
 }
 .myicon {
   margin-left: 10px;
+}
+.account_menu_a {
+  color: #dddddd;
+  display: flex;
 }
 .myInfo {
   margin: 15px;
@@ -124,11 +132,11 @@ body {
   padding-top: 20px;
   margin: 0 20%;
   flex-grow: 1;
-  height: 100%;
+  /* height: 100%; */
 }
-.main_center_position {
+/* .main_center_position {
   width: 100%;
-}
+} */
 .main_center_element {
   background-color: #303030;
   width: 70%;
@@ -300,20 +308,127 @@ body {
 .ad_subtitle {
   width: 100%;
 }
+
+/* withdrawpage */
+.withdraw_page_padding {
+  padding-top: 35px;
+  padding-bottom: 383px;
+}
+.withdraw_window {
+  background-color: #191919;
+}
+.withdraw_page_width {
+  width: 550px;
+  background-color: #000000;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+}
+.withdraw_page_inside_padding {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: solid 1px #4c4c4c;
+  border-radius: 4px;
+}
+.withdraw_window_title {
+  margin-top: 12px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.withdraw_window_title h2 {
+  margin-bottom: 10px;
+}
+.withdraw_border {
+  border-bottom: 2px solid #565656;
+}
+.padding_inside {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  margin-bottom: 14px;
+}
+.withdraw_content {
+  padding-top: 22px;
+}
+.withdraw_comment {
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: normal;
+}
+.withdraw_icon {
+  padding-right: 12px;
+}
+#withdraw_icon {
+  width: 30px;
+}
+.content_comment {
+  width: 277px;
+}
+.subject {
+  font-weight: bolder;
+  font-size: 16px;
+  line-height: normal;
+}
+.comment {
+  font-size: 14px;
+  line-height: normal;
+}
+.withdraw_icon,
+.content_comment {
+  display: table-cell;
+  font-size: 22px;
+  vertical-align: top;
+}
+.withdraw_icon {
+  padding-top: 4px;
+}
+.account_cancellation_button,
+.download_information_button {
+  vertical-align: middle;
+  padding-left: 40px;
+}
+.button_div {
+  height: 40px;
+  border-top: solid 1px #4c4c4c;
+}
+.cancel_button,
+.withdraw_button {
+  margin-right: 15px;
+}
+.withdraw_beneath {
+  display: flex;
+  float: right;
+  margin: 10px 0;
+}
+.withdraw_window input {
+  padding: 4px 4px;
+  background-color: #4c4c4c;
+  border: none;
+  color: #dddddd;
+  outline: none;
+  border-radius: 2px;
+}
+.withdraw_window input:hover {
+  background-color: #333333;
+}
+
+/* hover */
 .icon_name:hover,
 .left_icon:hover,
 .header_center_icon:hover,
 .header_right_icon:hover,
 .main_center_comment1:hover,
 .main_center_icon:hover,
-.main_center_element2_icon_div:hover {
+.main_center_element2_icon_div:hover,
+.withdraw_window input:hover {
   cursor: pointer;
 }
 header i:hover,
 .main_left_icon:hover,
 .myprofile:hover,
 .feedback:hover,
-.Menu_element:hover {
+.Menu_element:hover,
+.account_menu_a:hover {
   color: #2d88ff;
 }
 .Retentioncolor_blue {

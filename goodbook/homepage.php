@@ -2,21 +2,22 @@
 
 require("function.php");
 
+debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
+debug('「　home page　');
+debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
+debugLogStart();
+
+require("auth.php");
+
 ?>
 
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <title>goodbook</title>
-    <link rel="stylesheet" href="css/style_homepage.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-</head>
+<?php
+$siteTitle = "homepage";
+require("goodbook_head.php");
+?>
 
 <body>
-    <?php require("homepage_header.php") ?>
+    <?php require("goodbook_header.php") ?>
     <article class="main">
         <div class="main_div">
             <nav>

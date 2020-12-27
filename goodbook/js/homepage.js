@@ -15,6 +15,16 @@ $(function(){
     });
 });
 
+// // footer位置保持
+// $(function() {
+//   var $ftr = $('#footer');
+//   if (window.innerHeight > $ftr.offset().top + $ftr.outerHeight()) {
+//     $ftr.attr({
+//       'style': 'position:fixed; top:' + (window.innerHeight - $ftr.outerHeight()) + 'px;'
+//     });
+//   }
+// });
+
 // ====================
 // accountMenu
 // ====================
@@ -43,10 +53,10 @@ $(function() {
     }
     $(".header").toggleClass("shadow");
     $(".header_center_icon").toggleClass("darkColor2");
-    $(".serch").toggleClass("lightBackColor1 darkColor2");
     $("body").toggleClass("darkColor2");
     $(".icon_button").toggleClass("darkColor1");
-    $(".main_left_icon").toggleClass("darkColor1");
+    $(".main_left_icon").toggleClass("darkColor2");
+    $(".js-menu__item__link_open").toggleClass("darkColor2");
     $(".header").toggleClass("lightBackColor2");
     $(".header_right_icon").toggleClass("darkColor1");
     $(".main").toggleClass("lightBackColor1");
@@ -59,5 +69,8 @@ $(function() {
     $(".logout:active").toggleClass("darkColor2");
     $(".logout:focus").toggleClass("darkColor2");
     $(".accountMenu").toggleClass("lightBackColor2 darkColor2 shadow");
+    $(".withdraw_window").toggleClass("lightBackColor1");
+    $(".withdraw_page_width").toggleClass("lightBackColor2 darkColor2 shadow");
+    $(".withdraw_window input").toggleClass("shadow");
   });
 });

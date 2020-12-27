@@ -12,14 +12,16 @@
         </div>
     </div>
     <div class="head_center">
-        <div class="header_center_icon"><i class="fas fa-home fa-2x"></i></div>
+        <a class="to_homepage" href="homepage.php">
+            <div class="header_center_icon"><i class="fas fa-home fa-2x"></i></div>
+        </a>
         <div class="header_center_icon"><i class="fas fa-user-friends fa-2x"></i></div>
         <div class="header_center_icon"><i class="fas fa-tv fa-2x"></i></div>
         <div class="header_center_icon"><i class="fas fa-users fa-2x"></i></div>
         <div class="header_center_icon"><i class="fas fa-dice-d6 fa-2x"></i></div>
     </div>
     <div class="head_right">
-        <div class="header_right_icon"><i class="fas fa-user-circle fa-2x"></i></div>
+        <div class="header_right_icon"> <a class="account_menu_a to_mypage" href="mypage.php"><i class="fas fa-user-circle fa-2x"></i></a></div>
         <div class="header_right_icon"><i class="fas fa-plus-circle fa-2x"></i></div>
         <div class="header_right_icon"><i class="far fa-comment-dots fa-2x"></i></i></div>
         <div class="header_right_icon"><i class="fas fa-bell fa-2x"></i></div>
@@ -29,13 +31,15 @@
             </div>
             <div class="accountMenu">
                 <div class="myprofile">
-                    <div class="myicon">
-                        <i class="fas fa-user-circle fa-4x"></i>
-                    </div>
-                    <div class="myInfo">
-                        <p>My name</p>
-                        <p>View my profile</p>
-                    </div>
+                    <a class="account_menu_a to_mypage" href="mypage.php">
+                        <div class="myicon">
+                            <i class="fas fa-user-circle fa-4x"></i>
+                        </div>
+                        <div class="myInfo">
+                            <p>My name</p>
+                            <p>View my profile</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="accountMenuBorder"></div>
                 <div class="feedback">
@@ -58,16 +62,18 @@
                         </div>
                     </div>
                     <div class="Menu_element help_support">
-                        <div class="Menu_elementIcon">
-                            <i class="far fa-question-circle fa-2x"></i>
-                        </div>
-                        <div class="Menu_element_comment">
-                            <p>help and support</p>
-                        </div>
+                        <a class="account_menu_a to_withdrawpage" href="withdrawpage.php">
+                            <div class="Menu_elementIcon">
+                                <i class="far fa-question-circle fa-2x"></i>
+                            </div>
+                            <div class="Menu_element_comment">
+                                <p>withdraw</p>
+                            </div>
+                        </a>
                     </div>
                     <div class="Menu_element darkMode">
                         <div class="Menu_elementIcon">
-                            <i class="far fa-moon fa-2x"></i>
+                            <i class="fas fa-adjust fa-2x"></i>
                         </div>
                         <div class="Menu_element_comment">
                             <p>dark mode off</p>
