@@ -17537,3 +17537,503 @@ Stack trace:
 [27-Dec-2020 23:11:06 Asia/Tokyo] debug：ログイン済みユーザーです。
 [27-Dec-2020 23:11:06 Asia/Tokyo] debug：ログイン有効期限以内です。
 [27-Dec-2020 23:11:06 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[28-Dec-2020 14:19:05 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:19:05 Asia/Tokyo] debug：「　withdraw page　
+[28-Dec-2020 14:19:05 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:19:05 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:19:05 Asia/Tokyo] debug：session ID：kftc06ld09vms0f6062mfcjg5p
+[28-Dec-2020 14:19:05 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609078266
+    [login_limit] => 3600
+    [user_id] => 51
+)
+
+[28-Dec-2020 14:19:05 Asia/Tokyo] debug：現在日時タイムスタンプ：1609132745
+[28-Dec-2020 14:19:05 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1609081866
+[28-Dec-2020 14:19:05 Asia/Tokyo] debug：ログイン済みユーザーです。
+[28-Dec-2020 14:19:05 Asia/Tokyo] debug：ログイン有効期限オーバーです。
+[28-Dec-2020 14:19:05 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[28-Dec-2020 14:19:05 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:19:05 Asia/Tokyo] debug：「　login page　
+[28-Dec-2020 14:19:05 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:19:05 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:19:05 Asia/Tokyo] debug：session ID：stn0hl40pfk8e691hbl20kdbja
+[28-Dec-2020 14:19:05 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[28-Dec-2020 14:19:05 Asia/Tokyo] debug：現在日時タイムスタンプ：1609132745
+[28-Dec-2020 14:19:05 Asia/Tokyo] debug：未ログインユーザーです。
+[28-Dec-2020 14:19:05 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[28-Dec-2020 14:19:11 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:19:11 Asia/Tokyo] debug：「　login page　
+[28-Dec-2020 14:19:11 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:19:11 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:19:11 Asia/Tokyo] debug：session ID：srrmsc8vdltjks07ps99f26ihi
+[28-Dec-2020 14:19:11 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[28-Dec-2020 14:19:11 Asia/Tokyo] debug：現在日時タイムスタンプ：1609132751
+[28-Dec-2020 14:19:11 Asia/Tokyo] debug：未ログインユーザーです。
+[28-Dec-2020 14:19:11 Asia/Tokyo] debug：POST送信があります。
+[28-Dec-2020 14:19:11 Asia/Tokyo] debug：バリデーションOKです。
+[28-Dec-2020 14:19:11 Asia/Tokyo] debug：クエリ結果の中身：Array
+(
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [id] => 51
+)
+
+[28-Dec-2020 14:19:12 Asia/Tokyo] debug：パスワードがマッチしました。
+[28-Dec-2020 14:19:12 Asia/Tokyo] debug：ログイン保持にチェックがあります。
+[28-Dec-2020 14:19:12 Asia/Tokyo] debug：Contents of session variables：Array
+(
+    [login_date] => 1609132752
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[28-Dec-2020 14:19:12 Asia/Tokyo] debug：Move to Homepage
+[28-Dec-2020 14:19:12 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[28-Dec-2020 14:19:12 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:19:12 Asia/Tokyo] debug：「　home page　
+[28-Dec-2020 14:19:12 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:19:12 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:19:12 Asia/Tokyo] debug：session ID：chjq8sni19plb7h2923bgnbnp2
+[28-Dec-2020 14:19:12 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609132752
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[28-Dec-2020 14:19:12 Asia/Tokyo] debug：現在日時タイムスタンプ：1609132752
+[28-Dec-2020 14:19:12 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611724752
+[28-Dec-2020 14:19:12 Asia/Tokyo] debug：ログイン済みユーザーです。
+[28-Dec-2020 14:19:12 Asia/Tokyo] debug：ログイン有効期限以内です。
+[28-Dec-2020 14:19:45 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:19:45 Asia/Tokyo] debug：「　home page　
+[28-Dec-2020 14:19:45 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:19:45 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:19:45 Asia/Tokyo] debug：session ID：kp8sl17kf6a9dhdvv7eq8l5rjm
+[28-Dec-2020 14:19:45 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609132752
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[28-Dec-2020 14:19:45 Asia/Tokyo] debug：現在日時タイムスタンプ：1609132785
+[28-Dec-2020 14:19:45 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611724752
+[28-Dec-2020 14:19:45 Asia/Tokyo] debug：ログイン済みユーザーです。
+[28-Dec-2020 14:19:45 Asia/Tokyo] debug：ログイン有効期限以内です。
+[28-Dec-2020 14:19:50 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:19:50 Asia/Tokyo] debug：「　withdraw page　
+[28-Dec-2020 14:19:50 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:19:50 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:19:50 Asia/Tokyo] debug：session ID：ocjs8gb6t3suat080cjijf0hue
+[28-Dec-2020 14:19:50 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609132785
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[28-Dec-2020 14:19:50 Asia/Tokyo] debug：現在日時タイムスタンプ：1609132790
+[28-Dec-2020 14:19:50 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611724785
+[28-Dec-2020 14:19:50 Asia/Tokyo] debug：ログイン済みユーザーです。
+[28-Dec-2020 14:19:50 Asia/Tokyo] debug：ログイン有効期限以内です。
+[28-Dec-2020 14:19:50 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[28-Dec-2020 14:21:28 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:21:28 Asia/Tokyo] debug：「　withdraw page　
+[28-Dec-2020 14:21:28 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:21:28 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:21:28 Asia/Tokyo] debug：session ID：tan0ebj6tj78gmb8pbk5bo83or
+[28-Dec-2020 14:21:28 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609132790
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[28-Dec-2020 14:21:28 Asia/Tokyo] debug：現在日時タイムスタンプ：1609132888
+[28-Dec-2020 14:21:28 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611724790
+[28-Dec-2020 14:21:28 Asia/Tokyo] debug：ログイン済みユーザーです。
+[28-Dec-2020 14:21:28 Asia/Tokyo] debug：ログイン有効期限以内です。
+[28-Dec-2020 14:21:28 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[28-Dec-2020 14:21:46 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:21:46 Asia/Tokyo] debug：「　withdraw page　
+[28-Dec-2020 14:21:46 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:21:46 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:21:46 Asia/Tokyo] debug：session ID：jemj0r9quejmid76uc3dehcn8a
+[28-Dec-2020 14:21:46 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609132888
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[28-Dec-2020 14:21:46 Asia/Tokyo] debug：現在日時タイムスタンプ：1609132906
+[28-Dec-2020 14:21:46 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611724888
+[28-Dec-2020 14:21:46 Asia/Tokyo] debug：ログイン済みユーザーです。
+[28-Dec-2020 14:21:46 Asia/Tokyo] debug：ログイン有効期限以内です。
+[28-Dec-2020 14:21:46 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[28-Dec-2020 14:22:09 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:22:09 Asia/Tokyo] debug：「　home page　
+[28-Dec-2020 14:22:09 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:22:09 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:22:09 Asia/Tokyo] debug：session ID：16955goencchl3oe00c6b4uaf2
+[28-Dec-2020 14:22:09 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609132906
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[28-Dec-2020 14:22:09 Asia/Tokyo] debug：現在日時タイムスタンプ：1609132929
+[28-Dec-2020 14:22:09 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611724906
+[28-Dec-2020 14:22:09 Asia/Tokyo] debug：ログイン済みユーザーです。
+[28-Dec-2020 14:22:09 Asia/Tokyo] debug：ログイン有効期限以内です。
+[28-Dec-2020 14:25:33 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:25:33 Asia/Tokyo] debug：「　login page　
+[28-Dec-2020 14:25:33 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:25:33 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:25:33 Asia/Tokyo] debug：session ID：6h588lsk5vv85gfavj061gvr69
+[28-Dec-2020 14:25:33 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609132929
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[28-Dec-2020 14:25:33 Asia/Tokyo] debug：現在日時タイムスタンプ：1609133133
+[28-Dec-2020 14:25:33 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611724929
+[28-Dec-2020 14:25:33 Asia/Tokyo] debug：ログイン済みユーザーです。
+[28-Dec-2020 14:25:33 Asia/Tokyo] debug：ログイン有効期限以内です。
+[28-Dec-2020 14:25:33 Asia/Tokyo] debug：Move to Homepage
+[28-Dec-2020 14:25:33 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[28-Dec-2020 14:25:33 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:25:33 Asia/Tokyo] debug：「　home page　
+[28-Dec-2020 14:25:33 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:25:33 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:25:33 Asia/Tokyo] debug：session ID：i13aol0tfu9d2b4go04cupr6uq
+[28-Dec-2020 14:25:33 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609133133
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[28-Dec-2020 14:25:33 Asia/Tokyo] debug：現在日時タイムスタンプ：1609133133
+[28-Dec-2020 14:25:33 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611725133
+[28-Dec-2020 14:25:33 Asia/Tokyo] debug：ログイン済みユーザーです。
+[28-Dec-2020 14:25:33 Asia/Tokyo] debug：ログイン有効期限以内です。
+[28-Dec-2020 14:26:22 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:26:22 Asia/Tokyo] debug：「　home page　
+[28-Dec-2020 14:26:22 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:26:22 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:26:22 Asia/Tokyo] debug：session ID：itsj5vl1hlb8rpv4i87nu1jvr0
+[28-Dec-2020 14:26:22 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609133133
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[28-Dec-2020 14:26:22 Asia/Tokyo] debug：現在日時タイムスタンプ：1609133182
+[28-Dec-2020 14:26:22 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611725133
+[28-Dec-2020 14:26:22 Asia/Tokyo] debug：ログイン済みユーザーです。
+[28-Dec-2020 14:26:22 Asia/Tokyo] debug：ログイン有効期限以内です。
+[28-Dec-2020 14:26:26 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:26:26 Asia/Tokyo] debug：「　logout page　
+[28-Dec-2020 14:26:26 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:26:26 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:26:26 Asia/Tokyo] debug：session ID：skequr889cmv3qopnde0s1hu77
+[28-Dec-2020 14:26:26 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609133182
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[28-Dec-2020 14:26:26 Asia/Tokyo] debug：現在日時タイムスタンプ：1609133186
+[28-Dec-2020 14:26:26 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611725182
+[28-Dec-2020 14:26:26 Asia/Tokyo] debug：ログアウトします。
+[28-Dec-2020 14:26:26 Asia/Tokyo] debug：ログインページへ遷移します。
+[28-Dec-2020 14:26:26 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:26:26 Asia/Tokyo] debug：「　login page　
+[28-Dec-2020 14:26:26 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:26:26 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:26:26 Asia/Tokyo] debug：session ID：0576692o7dtk5t6k5q7ps5u23m
+[28-Dec-2020 14:26:26 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[28-Dec-2020 14:26:26 Asia/Tokyo] debug：現在日時タイムスタンプ：1609133186
+[28-Dec-2020 14:26:26 Asia/Tokyo] debug：未ログインユーザーです。
+[28-Dec-2020 14:26:26 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[28-Dec-2020 14:26:28 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:26:28 Asia/Tokyo] debug：「 signup page
+[28-Dec-2020 14:26:28 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:26:28 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:26:28 Asia/Tokyo] debug：session ID：3n9cjrnbu1p4ftib2qpl76ua0p
+[28-Dec-2020 14:26:28 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[28-Dec-2020 14:26:28 Asia/Tokyo] debug：現在日時タイムスタンプ：1609133188
+[28-Dec-2020 14:26:28 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[28-Dec-2020 14:26:29 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:26:29 Asia/Tokyo] debug：「　login page　
+[28-Dec-2020 14:26:29 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:26:29 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:26:29 Asia/Tokyo] debug：session ID：2jff12738n3tsth62un3qon4a6
+[28-Dec-2020 14:26:29 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[28-Dec-2020 14:26:29 Asia/Tokyo] debug：現在日時タイムスタンプ：1609133189
+[28-Dec-2020 14:26:29 Asia/Tokyo] debug：未ログインユーザーです。
+[28-Dec-2020 14:26:29 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[28-Dec-2020 14:27:04 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:27:04 Asia/Tokyo] debug：「　login page　
+[28-Dec-2020 14:27:04 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:27:04 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:27:04 Asia/Tokyo] debug：session ID：pl5jn2c9pdcoprv88bn2rf9c7v
+[28-Dec-2020 14:27:04 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[28-Dec-2020 14:27:04 Asia/Tokyo] debug：現在日時タイムスタンプ：1609133224
+[28-Dec-2020 14:27:04 Asia/Tokyo] debug：未ログインユーザーです。
+[28-Dec-2020 14:27:04 Asia/Tokyo] debug：POST送信があります。
+[28-Dec-2020 14:27:04 Asia/Tokyo] debug：バリデーションOKです。
+[28-Dec-2020 14:27:04 Asia/Tokyo] debug：クエリ結果の中身：Array
+(
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [id] => 51
+)
+
+[28-Dec-2020 14:27:04 Asia/Tokyo] debug：パスワードがマッチしました。
+[28-Dec-2020 14:27:04 Asia/Tokyo] debug：ログイン保持にチェックがあります。
+[28-Dec-2020 14:27:04 Asia/Tokyo] debug：Contents of session variables：Array
+(
+    [login_date] => 1609133224
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[28-Dec-2020 14:27:04 Asia/Tokyo] debug：Move to Homepage
+[28-Dec-2020 14:27:04 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[28-Dec-2020 14:27:04 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:27:04 Asia/Tokyo] debug：「　home page　
+[28-Dec-2020 14:27:04 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:27:04 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:27:04 Asia/Tokyo] debug：session ID：lru1920kb2l3rvjsfu6m9eqh1u
+[28-Dec-2020 14:27:04 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609133224
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[28-Dec-2020 14:27:04 Asia/Tokyo] debug：現在日時タイムスタンプ：1609133224
+[28-Dec-2020 14:27:04 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611725224
+[28-Dec-2020 14:27:04 Asia/Tokyo] debug：ログイン済みユーザーです。
+[28-Dec-2020 14:27:04 Asia/Tokyo] debug：ログイン有効期限以内です。
+[28-Dec-2020 14:29:15 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:29:15 Asia/Tokyo] debug：「　home page　
+[28-Dec-2020 14:29:15 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:29:15 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:29:15 Asia/Tokyo] debug：session ID：rl5l262fngjthgfdrk9v1r3uj2
+[28-Dec-2020 14:29:15 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609133224
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[28-Dec-2020 14:29:15 Asia/Tokyo] debug：現在日時タイムスタンプ：1609133355
+[28-Dec-2020 14:29:15 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611725224
+[28-Dec-2020 14:29:15 Asia/Tokyo] debug：ログイン済みユーザーです。
+[28-Dec-2020 14:29:15 Asia/Tokyo] debug：ログイン有効期限以内です。
+[28-Dec-2020 14:29:20 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:29:20 Asia/Tokyo] debug：「　my page　
+[28-Dec-2020 14:29:20 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:29:20 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:29:20 Asia/Tokyo] debug：session ID：6tpf471vo15l4ace0usp0q2ku7
+[28-Dec-2020 14:29:20 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609133355
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[28-Dec-2020 14:29:20 Asia/Tokyo] debug：現在日時タイムスタンプ：1609133360
+[28-Dec-2020 14:29:20 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611725355
+[28-Dec-2020 14:29:20 Asia/Tokyo] debug：ログイン済みユーザーです。
+[28-Dec-2020 14:29:20 Asia/Tokyo] debug：ログイン有効期限以内です。
+[28-Dec-2020 14:29:29 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:29:29 Asia/Tokyo] debug：「　withdraw page　
+[28-Dec-2020 14:29:29 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:29:29 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:29:29 Asia/Tokyo] debug：session ID：ckcmrbsc52ftcro5dnffqm8k9j
+[28-Dec-2020 14:29:29 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609133360
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[28-Dec-2020 14:29:29 Asia/Tokyo] debug：現在日時タイムスタンプ：1609133369
+[28-Dec-2020 14:29:29 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611725360
+[28-Dec-2020 14:29:29 Asia/Tokyo] debug：ログイン済みユーザーです。
+[28-Dec-2020 14:29:29 Asia/Tokyo] debug：ログイン有効期限以内です。
+[28-Dec-2020 14:29:29 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[28-Dec-2020 14:29:55 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:29:55 Asia/Tokyo] debug：「　withdraw page　
+[28-Dec-2020 14:29:55 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:29:55 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:29:55 Asia/Tokyo] debug：session ID：mkl5hpsfncs9aa5rjuvml4b42a
+[28-Dec-2020 14:29:55 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609133369
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[28-Dec-2020 14:29:55 Asia/Tokyo] debug：現在日時タイムスタンプ：1609133395
+[28-Dec-2020 14:29:55 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611725369
+[28-Dec-2020 14:29:55 Asia/Tokyo] debug：ログイン済みユーザーです。
+[28-Dec-2020 14:29:55 Asia/Tokyo] debug：ログイン有効期限以内です。
+[28-Dec-2020 14:29:55 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[28-Dec-2020 14:34:17 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:34:17 Asia/Tokyo] debug：「　logout page　
+[28-Dec-2020 14:34:17 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:34:17 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:34:17 Asia/Tokyo] debug：session ID：8gtm2eds0c66qmk04gj76mq215
+[28-Dec-2020 14:34:17 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609133395
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[28-Dec-2020 14:34:17 Asia/Tokyo] debug：現在日時タイムスタンプ：1609133657
+[28-Dec-2020 14:34:17 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611725395
+[28-Dec-2020 14:34:17 Asia/Tokyo] debug：ログアウトします。
+[28-Dec-2020 14:34:17 Asia/Tokyo] debug：ログインページへ遷移します。
+[28-Dec-2020 14:34:17 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:34:17 Asia/Tokyo] debug：「　login page　
+[28-Dec-2020 14:34:17 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:34:17 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:34:17 Asia/Tokyo] debug：session ID：4lv75vv2pqtft0thcma2ti9v9f
+[28-Dec-2020 14:34:17 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[28-Dec-2020 14:34:17 Asia/Tokyo] debug：現在日時タイムスタンプ：1609133657
+[28-Dec-2020 14:34:17 Asia/Tokyo] debug：未ログインユーザーです。
+[28-Dec-2020 14:34:17 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[28-Dec-2020 14:34:32 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:34:32 Asia/Tokyo] debug：「　login page　
+[28-Dec-2020 14:34:32 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:34:32 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:34:32 Asia/Tokyo] debug：session ID：8c9399a53qdvebi2r9hhjjo9qp
+[28-Dec-2020 14:34:32 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[28-Dec-2020 14:34:32 Asia/Tokyo] debug：現在日時タイムスタンプ：1609133672
+[28-Dec-2020 14:34:32 Asia/Tokyo] debug：未ログインユーザーです。
+[28-Dec-2020 14:34:32 Asia/Tokyo] debug：POST送信があります。
+[28-Dec-2020 14:34:32 Asia/Tokyo] debug：バリデーションOKです。
+[28-Dec-2020 14:34:32 Asia/Tokyo] debug：クエリ結果の中身：Array
+(
+    [pass] => $2y$10$F0atE22z5a5Z5uR/g/5KzeaWCxvWuUQddI4rfIQ9jaECrXDFZkvd6
+    [id] => 42
+)
+
+[28-Dec-2020 14:34:32 Asia/Tokyo] debug：パスワードがマッチしました。
+[28-Dec-2020 14:34:32 Asia/Tokyo] debug：ログイン保持にチェックがあります。
+[28-Dec-2020 14:34:32 Asia/Tokyo] debug：Contents of session variables：Array
+(
+    [login_date] => 1609133672
+    [login_limit] => 2592000
+    [user_id] => 42
+)
+
+[28-Dec-2020 14:34:32 Asia/Tokyo] debug：Move to Homepage
+[28-Dec-2020 14:34:32 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[28-Dec-2020 14:34:32 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:34:32 Asia/Tokyo] debug：「　home page　
+[28-Dec-2020 14:34:32 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:34:32 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:34:32 Asia/Tokyo] debug：session ID：i3ta92u3ioqldl65dodfahpm3u
+[28-Dec-2020 14:34:32 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609133672
+    [login_limit] => 2592000
+    [user_id] => 42
+)
+
+[28-Dec-2020 14:34:32 Asia/Tokyo] debug：現在日時タイムスタンプ：1609133672
+[28-Dec-2020 14:34:32 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611725672
+[28-Dec-2020 14:34:32 Asia/Tokyo] debug：ログイン済みユーザーです。
+[28-Dec-2020 14:34:32 Asia/Tokyo] debug：ログイン有効期限以内です。
+[28-Dec-2020 14:34:38 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:34:38 Asia/Tokyo] debug：「　withdraw page　
+[28-Dec-2020 14:34:38 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:34:38 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:34:38 Asia/Tokyo] debug：session ID：55gmmflkn7d43s6vhk8sstl1cl
+[28-Dec-2020 14:34:38 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609133672
+    [login_limit] => 2592000
+    [user_id] => 42
+)
+
+[28-Dec-2020 14:34:38 Asia/Tokyo] debug：現在日時タイムスタンプ：1609133678
+[28-Dec-2020 14:34:38 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611725672
+[28-Dec-2020 14:34:38 Asia/Tokyo] debug：ログイン済みユーザーです。
+[28-Dec-2020 14:34:38 Asia/Tokyo] debug：ログイン有効期限以内です。
+[28-Dec-2020 14:34:38 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[28-Dec-2020 14:34:39 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:34:39 Asia/Tokyo] debug：「　withdraw page　
+[28-Dec-2020 14:34:39 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:34:39 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:34:39 Asia/Tokyo] debug：session ID：kq7ltrsb15n4p7qvnanl3at48e
+[28-Dec-2020 14:34:39 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609133678
+    [login_limit] => 2592000
+    [user_id] => 42
+)
+
+[28-Dec-2020 14:34:39 Asia/Tokyo] debug：現在日時タイムスタンプ：1609133679
+[28-Dec-2020 14:34:39 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611725678
+[28-Dec-2020 14:34:39 Asia/Tokyo] debug：ログイン済みユーザーです。
+[28-Dec-2020 14:34:39 Asia/Tokyo] debug：ログイン有効期限以内です。
+[28-Dec-2020 14:34:39 Asia/Tokyo] debug：POST送信があります。
+[28-Dec-2020 14:34:39 Asia/Tokyo] debug：セッション変数の中身：Array
+(
+    [login_date] => 1609133679
+    [login_limit] => 2592000
+    [user_id] => 42
+)
+
+[28-Dec-2020 14:34:39 Asia/Tokyo] debug：トップページへ遷移します。
+[28-Dec-2020 14:34:39 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[28-Dec-2020 14:34:39 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:34:39 Asia/Tokyo] debug：「　login page　
+[28-Dec-2020 14:34:39 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[28-Dec-2020 14:34:39 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[28-Dec-2020 14:34:39 Asia/Tokyo] debug：session ID：7rfq28vts5uk7mjorc20fm1v87
+[28-Dec-2020 14:34:39 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[28-Dec-2020 14:34:39 Asia/Tokyo] debug：現在日時タイムスタンプ：1609133679
+[28-Dec-2020 14:34:39 Asia/Tokyo] debug：未ログインユーザーです。
+[28-Dec-2020 14:34:39 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

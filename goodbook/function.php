@@ -109,7 +109,7 @@ function validEmailDup($email, $key)
     global $err_msg;
     try {
         $dbh = dbConnect();
-        $sql = "SELECT count(*) FROM users WHERE email = :email AND delete_flg = 0 ";
+        $sql = "SELECT count(*) FROM users WHERE email = :email AND delete_flg = 0";
         $data = array(":email" => $email);
         $stmt = queryPost($dbh, $sql, $data);
         $restult = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -254,14 +254,14 @@ function withdraw($key)
     // DBへ接続
     $dbh = dbConnect();
     // SQL文作成
-    $sql1 = 'UPDATE users SET  delete_flg = 1 WHERE id = :us_id';
+    $sql = 'UPDATE users SET  delete_flg = 1 WHERE id = :us_id';
     // データ流し込み
     $data = array(':us_id' => $_SESSION['user_id']);
     // クエリ実行
-    $stmt1 = queryPost($dbh, $sql1, $data);
+    $stmt = queryPost($dbh, $sql, $data);
 
-    // クエリ実行成功の場合（最悪userテーブルのみ削除成功していれば良しとする）
-    if ($stmt1) {
+    // クエリ実行成功の場合
+    if ($stmt) {
         //セッション削除
         session_destroy();
         debug('セッション変数の中身：' . print_r($_SESSION, true));
@@ -272,6 +272,46 @@ function withdraw($key)
         $err_msg[$key] = MSG09;
     }
 }
+
+//================================
+// ログイン認証・自動ログアウト
+//================================
+
+function auth()
+{
+    // ログインしている場合
+    if (!empty($_SESSION['login_date'])) {
+        debug('ログイン済みユーザーです。');
+
+        // 現在日時が最終ログイン日時＋有効期限を超えていた場合
+        if (($_SESSION['login_date'] + $_SESSION['login_limit']) < time()) {
+            debug('ログイン有効期限オーバーです。');
+
+            // セッションを削除（ログアウトする）
+            session_destroy();
+            // ログインページへ
+            header("Location:login.php");
+        } else {
+            debug('ログイン有効期限以内です。');
+            //最終ログイン日時を現在日時に更新
+            $_SESSION['login_date'] = time();
+
+            //現在実行中のスクリプトファイル名がlogin.phpの場合
+            //$_SERVER['PHP_SELF']はドメインからのパスを返すため、今回だと[/goodbook/login.php]が返ってくるので、
+            //さらにbasename関数を使うことでファイル名だけを取り出せる
+            if (basename($_SERVER['PHP_SELF']) === 'login.php') {
+                debug('Move to Homepage');
+                header("Location:homepage.php");
+            }
+        }
+    } else {
+        debug('未ログインユーザーです。');
+        if (basename($_SERVER['PHP_SELF']) !== 'login.php') {
+            header("Location:login.php"); //ログインページへ
+        }
+    }
+}
+
 //================================
 // other
 //================================
