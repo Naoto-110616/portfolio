@@ -7,7 +7,7 @@ debug('「　withdraw page　');
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
 debugLogStart();
 
-require("auth.php");
+auth();
 
 //================================
 // 画面処理
@@ -45,7 +45,7 @@ require("goodbook_head.php");
                             </div>
                             <div class="padding_inside">
                                 <div class="withdraw_comment">
-                                    <p>Facebookアカウントを完全に削除したい場合は、Facebookにお知らせください。削除プロセスが開始すると、アカウントの再開や、これまでに追加したコンテンツや情報は一切取得できなくなります。
+                                    <p>goodbookアカウントを完全に削除したい場合は、goodbookにお知らせください。削除プロセスが開始すると、アカウントの再開や、これまでに追加したコンテンツや情報は一切取得できなくなります。
                                     </p>
                                 </div>
                                 <div class="withdraw_border"></div>
@@ -57,7 +57,7 @@ require("goodbook_head.php");
                                                     <div class="withdraw_icon"><i id="withdraw_icon" class="far fa-comments fa-lg"></i></div>
                                                     <div class="content_comment">
                                                         <p class="subject"> 利用解除なら、引き続きMessengerを利用できます</p>
-                                                        <p class="comment">Facebookアカウントを削除すると、Messengerとそのメッセージも同時に削除されるため、ご注意ください。</p>
+                                                        <p class="comment">goodbookアカウントを削除すると、Messengerとそのメッセージも同時に削除されるため、ご注意ください。</p>
                                                     </div>
                                                 </td>
                                                 <td class="account_cancellation_button">
@@ -76,8 +76,8 @@ require("goodbook_head.php");
                                                 <td>
                                                     <div class="withdraw_icon"><i　id="withdraw_icon" class="fas fa-download fa-lg"></i></div>
                                                     <div class="content_comment">
-                                                        <p class="subject"> Facebookデータをダウンロード</p>
-                                                        <p class="comment">あなたは1件の投稿などの情報をFacebookにアップロードしています。アカウントと一緒に完全に削除される前に、このコンテンツをダウンロードできます。</p>
+                                                        <p class="subject"> goodbookデータをダウンロード</p>
+                                                        <p class="comment">あなたは1件の投稿などの情報をgoodbookにアップロードしています。アカウントと一緒に完全に削除される前に、このコンテンツをダウンロードできます。</p>
                                                     </div>
                                                 </td>
                                                 <td class=" download_information_button">

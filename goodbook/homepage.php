@@ -7,7 +7,8 @@ debug('「　home page　');
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
 debugLogStart();
 
-require("auth.php");
+auth();
+
 
 ?>
 
