@@ -21,7 +21,7 @@
         <div class="header_center_icon"><i class="fas fa-dice-d6 fa-2x"></i></div>
     </div>
     <div class="head_right">
-        <div class="header_right_icon"> <a class="account_menu_a to_mypage" href="mypage.php"><i class="fas fa-user-circle fa-2x"></i></a></div>
+        <div class="header_right_icon"><a class="account_menu_a to_mypage" href="mypage.php"><i class="fas fa-user-circle fa-2x"></i></a></div>
         <div class="header_right_icon"><i class="fas fa-plus-circle fa-2x"></i></div>
         <div class="header_right_icon"><i class="far fa-comment-dots fa-2x"></i></i></div>
         <div class="header_right_icon"><i class="fas fa-bell fa-2x"></i></div>

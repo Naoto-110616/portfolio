@@ -55,7 +55,7 @@
             <span class="span">goodbook © 2020</span>
         </div>
         <div class="portfolio-top">
-            <p><a href="../Portfolio.html" class="portfolio">portfolio top</a></p>
+            <p><a href="../Portfolio.php" class="portfolio">portfolio top</a></p>
         </div>
     </div>
 </footer>
