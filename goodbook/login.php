@@ -15,7 +15,7 @@ if (!empty($_POST)) {
 
     $email = $_POST['email'];
     $pass = $_POST['pass'];
-    $pass_save = (!empty($_POST['pass_save'])) ? true : false; //ショートハンド（略記法）という書き方
+    $pass_save = (!empty($_POST['pass_save'])) ? true : false;
 
     validRequired($email, "email");
     validRequired($pass, "pass");

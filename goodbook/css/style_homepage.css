@@ -302,7 +302,10 @@ body {
   width: 100%;
 }
 
+/* 「「「「「「「「「「「「「「「「「 */
 /* withdrawpage */
+/* 「「「「「「「「「「「「「「「「「 */
+
 .withdraw_main {
   background-color: #191919;
   height: 100vh;
@@ -396,8 +399,8 @@ body {
 .withdraw_window input {
   padding: 4px 4px;
   background-color: #4c4c4c;
-  border: none;
   color: #dddddd;
+  border: none;
   outline: none;
   border-radius: 2px;
 }
@@ -405,15 +408,227 @@ body {
   background-color: #333333;
 }
 
+/* 「「「「「「「「「「「「「「「「「 */
+/* mypage */
+/* 「「「「「「「「「「「「「「「「「 */
+.mypage_main {
+  background-color: #191919;
+  margin-top: 60px;
+  height: 1000px;
+}
+.main_top_content_overall {
+  background-color: #333333;
+}
+.main_top_cover_photo_div {
+  max-width: 940px;
+  height: 350px;
+  background-color: #191919;
+  margin: 0 auto;
+  border-radius: 0 0 10px 10px;
+  /* background-image: url();
+  background-size: cover; */
+}
+/* .background_image {
+  background-image: url();
+} */
+.main_top_cover_photo {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.cover_photo_change_button {
+  position: absolute;
+  top: 300px;
+  left: 770px;
+}
+.cover_photo_change_button input {
+  padding: 10px;
+  background-color: #303030;
+  color: #dddddd;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+}
+.cover_photo_change_button input:hover {
+  background-color: #4c4c4c;
+  cursor: pointer;
+}
+.main_top_content_user_name_div {
+  width: 100%;
+  height: 100px;
+  position: relative;
+}
+.main_top_content_user_name {
+  margin: 0 auto;
+  max-width: 500px;
+}
+.main_top_content_user_name i {
+  width: 141px;
+  font-size: 145px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -130px;
+  bottom: 0px;
+  margin: auto;
+}
+.main_top_content_user_name h1 {
+  font-size: 50px;
+  text-align: center;
+  padding-top: 20px;
+}
+.mypage_border {
+  max-width: 900px;
+  border-bottom: 2px solid #565656;
+  margin: 0 auto;
+}
+.main_top_content_user_info {
+  max-width: 900px;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+}
+.main_top_content_user_info_inside {
+  position: relative;
+  display: flex;
+  height: 60px;
+}
+.main_top_content_user_info_list1 {
+  position: absolute;
+  display: flex;
+  top: 12px;
+}
+.main_top_content_user_info_list2 {
+  position: absolute;
+  display: flex;
+  top: 12px;
+  left: 670px;
+}
+.info_list {
+  padding: 10px;
+}
+.edit {
+  display: flex;
+  padding: 10px;
+}
+.info_list:hover,
+.edit:hover {
+  background-color: #565656;
+  border-radius: 10px;
+}
+
+.profile_edit_screen_overall {
+  position: absolute;
+  display: none;
+  top: 0;
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: rgb(0, 0, 0, 50%);
+}
+.plofile_edit_form_div {
+  position: absolute;
+  width: 800px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 70px;
+  margin: 0 auto;
+  z-index: 11;
+}
+.plofile_edit_form {
+  width: 85%;
+  background-color: #303030;
+  overflow-y: scroll;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+.plofile_edit_form_title {
+  height: 50px;
+  position: relative;
+}
+.edit_title {
+  width: 150px;
+  position: absolute;
+  font-size: 25px;
+  top: 12px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.x-circle {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  bottom: 0;
+  right: 15px;
+  top: 9px;
+}
+body.fixed {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+.edit_plofile_form_div {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+.plofile_edit_form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+.plofile_edit_form label,
+.plofile_edit_form input,
+.plofile_edit_form input:focus {
+  font-size: 17px;
+  display: block;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  color: #dddddd;
+}
+.plofile_edit_form #text {
+  margin-bottom: 2px;
+}
+.plofile_edit_form input,
+.plofile_edit_form input:focus {
+  background-color: #4c4c4c;
+  border-radius: 10px;
+}
+input[type="number"] {
+  width: 100px;
+}
+input[type="submit"] {
+  width: 130px;
+  text-align: center;
+  float: right;
+}
+input[type="submit"]:hover {
+  background-color: #565656;
+}
+.plofile_edit_form span {
+  font-size: 12px;
+}
+
+/* 「「「「「「「「「「「「「「「「「 */
 /* hover */
-.icon_name:hover,
-.left_icon:hover,
-.header_center_icon:hover,
-.header_right_icon:hover,
-.main_center_comment1:hover,
-.main_center_icon:hover,
-.main_center_element2_icon_div:hover,
-.withdraw_window input:hover {
+/* 「「「「「「「「「「「「「「「「「 */
+.icon_name,
+.left_icon,
+.header_center_icon,
+.header_right_icon,
+.main_center_comment1,
+.main_center_icon,
+.main_center_element2_icon_div,
+.withdraw_window input,
+.info_list,
+.edit,
+input[type="submit"] {
   cursor: pointer;
 }
 header i:hover,
@@ -428,7 +643,9 @@ header i:hover,
   color: #2d88ff;
 }
 
+/* 「「「「「「「「「「「「「「「「「 */
 /* darkmode切り替え */
+/* 「「「「「「「「「「「「「「「「「 */
 .lightColor1 {
   color: #c1c1c1;
 }
