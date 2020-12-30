@@ -28,7 +28,8 @@ $(function () {
   });
 });
 
-// plofile edit モーダルウィンドウの表示，非表示ボタン
+// profile editモーダルウィンドウの表示，非表示ボタン
+
 $(function () {
   $(".edit").click(function () {
     $(".profile_edit_screen_overall").toggle();

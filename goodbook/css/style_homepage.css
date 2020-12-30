@@ -414,7 +414,6 @@ body {
 .mypage_main {
   background-color: #191919;
   margin-top: 60px;
-  height: 1000px;
 }
 .main_top_content_overall {
   background-color: #333333;
@@ -517,7 +516,53 @@ body {
   border-radius: 10px;
 }
 
-.profile_edit_screen_overall {
+/* 「「「「「「「「「「「
+main lower part
+ 「「「「「「「「「「「　*/
+
+.main_lower_part {
+  max-width: 950px;
+  height: 400px;
+  margin: 0 auto;
+}
+.main_lower_inside {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  background-color: #191919;
+}
+.my_profile {
+  width: 40%;
+  top: 15px;
+  border-radius: 10px;
+  position: absolute;
+  background-color: #333333;
+}
+.myprofile_inside {
+  padding: 0 20px;
+}
+.myprofile_title {
+  display: inline-block;
+  margin: 10px 0;
+}
+.myprofile_inside h2 {
+  font-size: 22px;
+}
+.profile_list {
+  display: flex;
+}
+.profile_list p:first-child {
+  margin-right: 15px;
+}
+.profile_list {
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.profile_edit_screen_overall,
+.profile_screen_overall {
   position: absolute;
   display: none;
   top: 0;
@@ -528,7 +573,7 @@ body {
   overflow-y: scroll;
   background-color: rgb(0, 0, 0, 50%);
 }
-.plofile_edit_form_div {
+.profile_edit_form_div {
   position: absolute;
   width: 800px;
   bottom: 0;
@@ -538,19 +583,19 @@ body {
   margin: 0 auto;
   z-index: 11;
 }
-.plofile_edit_form {
+.profile_edit_form {
   width: 85%;
   background-color: #303030;
   overflow-y: scroll;
   border-radius: 10px;
   margin: 0 auto;
 }
-.plofile_edit_form_title {
+.profile_edit_form_title {
   height: 50px;
   position: relative;
 }
 .edit_title {
-  width: 150px;
+  width: 155px;
   position: absolute;
   font-size: 25px;
   top: 12px;
@@ -572,19 +617,19 @@ body.fixed {
   height: 100%;
   left: 0;
 }
-.edit_plofile_form_div {
+.edit_profile_form_div {
   max-width: 500px;
   margin: 0 auto;
   margin-top: 25px;
 }
-.plofile_edit_form input {
+.profile_edit_form input {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
 }
-.plofile_edit_form label,
-.plofile_edit_form input,
-.plofile_edit_form input:focus {
+.profile_edit_form label,
+.profile_edit_form input,
+.profile_edit_form input:focus {
   font-size: 17px;
   display: block;
   outline: none;
@@ -592,11 +637,11 @@ body.fixed {
   box-sizing: border-box;
   color: #dddddd;
 }
-.plofile_edit_form #text {
+.profile_edit_form #text {
   margin-bottom: 2px;
 }
-.plofile_edit_form input,
-.plofile_edit_form input:focus {
+.profile_edit_form input,
+.profile_edit_form input:focus {
   background-color: #4c4c4c;
   border-radius: 10px;
 }
@@ -611,7 +656,7 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #565656;
 }
-.plofile_edit_form span {
+.profile_edit_form span {
   font-size: 12px;
 }
 
@@ -687,4 +732,16 @@ header i:hover,
 }
 .shadow {
   box-shadow: 0 0 8px grey;
+}
+
+/* error時の変化 */
+.area-msg {
+  color: #ff4d4b;
+}
+.edit_profile_form .area-msg {
+  margin-bottom: 15px;
+}
+label.err input {
+  color: #000000;
+  background-color: #f7dcd9;
 }
