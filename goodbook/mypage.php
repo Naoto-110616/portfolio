@@ -81,23 +81,7 @@ if (!empty($_POST)) {
 
             //例外処理
             try {
-                // DBへ接続
-                $dbh = dbConnect();
-                // SQL文作成
-                $sql = 'UPDATE users  SET username = :u_name, tel = :tel, zip = :zip, addr = :addr, age = :age, email = :email WHERE id = :u_id';
-                $data = array(':u_name' => $username, ':tel' => $tel, ':zip' => $zip, ':addr' => $addr, ':age' => $age, ':email' => $email, ':u_id' => $dbFormData['id']);
-                // クエリ実行
-                $stmt = queryPost($dbh, $sql, $data);
-
-                // クエリ成功の場合
-                if ($stmt) {
-                    debug('クエリ成功。');
-                    debug('マイページへ遷移します。');
-                    header("Location:mypage.php"); //マイページへ
-                } else {
-                    debug('クエリに失敗しました。');
-                    $err_msg['common'] = MSG08;
-                }
+                editProfile($username, $tel, $zip, $addr, $age, $email, $dbFormData, "common");
             } catch (Exception $e) {
                 error_log('エラー発生:' . $e->getMessage());
                 $err_msg['common'] = MSG07;
@@ -109,7 +93,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ?>
 
 <?php
-$siteTitle = 'プロフィール編集';
+$siteTitle = 'mypage';
 require('goodbook_head.php');
 ?>
 
@@ -153,7 +137,7 @@ require('goodbook_head.php');
                             <div class="main_top_content main_top_content_user_info_list2">
                                 <div class="edit">
                                     <i class="fas fa-pen"></i>
-                                    <span>editplofile</span>
+                                    <span>editprofile</span>
                                 </div>
                                 <div class="info_list"><i class="fas fa-eye"></i></div>
                                 <div class="info_list"><i class="fas fa-search"></i></div>
@@ -165,27 +149,65 @@ require('goodbook_head.php');
             </div>
         </article>
         <article>
+            <div class="main_lower_part">
+                <div class="main_lower_inside">
+                    <div class="my_profile">
+                        <div class="myprofile_inside">
+                            <div class="myprofile_title">
+                                <h2>myprofile</h2>
+                            </div>
+                            <div class="mypage_border"></div>
+                            <div class="profile_list">
+                                <p>name</p>
+                                <p><?php echo getFormData('username'); ?></p>
+                            </div>
+                            <div class="profile_list">
+                                <p>tel</p>
+                                <p><?php echo getFormData('tel'); ?></p>
+                            </div>
+                            <div class="profile_list">
+                                <p>zip code</p>
+                                <p><?php echo getFormData('zip'); ?></p>
+                            </div>
+                            <div class="profile_list">
+                                <p>addr</p>
+                                <p><?php echo getFormData('addr'); ?></p>
+                            </div>
+                            <div class="profile_list">
+                                <p>age</p>
+                                <p><?php echo getFormData('age'); ?></p>
+                            </div>
+                            <div class="profile_list">
+                                <p>email</p>
+                                <p><?php echo getFormData('email'); ?></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="profile_edit_modalwindow">
             <div class="profile_edit_screen_overall">
-                <div class="plofile_edit_form_div">
-                    <div class="plofile_edit_form">
-                        <div class="plofile_edit_form_title">
+                <div class="profile_edit_form_div">
+                    <div class="profile_edit_form">
+                        <div class="profile_edit_form_title">
                             <div class="edit_title">
-                                <h1>edit plofile</h1>
+                                <h1>edit profile</h1>
                             </div>
                             <div class="x-circle">
                                 <i class="far fa-times-circle fa-2x"></i>
                             </div>
                         </div>
                         <div class="mypage_border"></div>
-                        <div class="edit_plofile_form_div">
-                            <form action="" method="post" class="edit_plofile_form">
+                        <div class="edit_profile_form_div">
+                            <form action="" method="post" class="edit_profile_form">
                                 <div class="area-msg">
                                     <?php
                                     if (!empty($err_msg['common'])) echo $err_msg['common'];
                                     ?>
                                 </div>
                                 <label class="<?php if (!empty($err_msg['username'])) echo 'err'; ?>">name
-                                    <input name="username" type="text" value="<?php echo getFormData('username'); ?>">
+                                    <input name="username" type="text" value="">
                                 </label>
                                 <div class="area-msg">
                                     <?php
@@ -193,15 +215,15 @@ require('goodbook_head.php');
                                     ?>
                                 </div>
                                 <label class="<?php if (!empty($err_msg['tel'])) echo 'err'; ?>">tel<span> Please enter without hyphens</span>
-                                    <input name="tel" type="text" value="<?php echo getFormData('tel'); ?>">
+                                    <input name="tel" type="text" value="">
                                 </label>
                                 <div class="area-msg">
                                     <?php
                                     if (!empty($err_msg['tel'])) echo $err_msg['tel'];
                                     ?>
                                 </div>
-                                <label class="<?php if (!empty($err_msg['zip'])) echo 'err'; ?>">zip num<span> Please enter without hyphens</span>
-                                    <input name="zip" type="text" value="<?php echo getFormData('zip'); ?>">
+                                <label class="<?php if (!empty($err_msg['zip'])) echo 'err'; ?>">zip code<span> Please enter without hyphens</span>
+                                    <input name="zip" type="text" value="">
                                 </label>
                                 <div class="area-msg">
                                     <?php
@@ -209,15 +231,15 @@ require('goodbook_head.php');
                                     ?>
                                 </div>
                                 <label class="<?php if (!empty($err_msg['addr'])) echo 'err'; ?>">address
-                                    <input name="addr" type="text" value="<?php echo getFormData('addr'); ?>">
+                                    <input name="addr" type="text" value="">
                                 </label>
                                 <div class="area-msg">
                                     <?php
-                                    if (!empty($err_msg['addr'])) echo $err_maddr['addr'];
+                                    if (!empty($err_msg['addr'])) echo $err_msg['addr'];
                                     ?>
                                 </div>
                                 <label class="<?php if (!empty($err_msg['age'])) echo 'err'; ?>">age
-                                    <input name="age" type="number" value="<?php echo getFormData('age'); ?>">
+                                    <input name="age" type="number" value="">
                                 </label>
                                 <div class="area-msg">
                                     <?php
@@ -225,7 +247,7 @@ require('goodbook_head.php');
                                     ?>
                                 </div>
                                 <label class="<?php if (!empty($err_msg['email'])) echo 'err'; ?>">Email
-                                    <input name="email" type="text" value="<?php echo getFormData('email'); ?>">
+                                    <input name="email" type="text" value="">
                                 </label>
                                 <div class="area-msg">
                                     <?php
