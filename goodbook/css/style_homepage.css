@@ -518,27 +518,27 @@ body {
 
 /* 「「「「「「「「「「「
 main lower part
- 「「「「「「「「「「「　*/
-
+「「「「「「「「「「「　*/
+.content_flex {
+  display: flex;
+}
 .main_lower_part {
   max-width: 950px;
-  height: 400px;
   margin: 0 auto;
 }
 .main_lower_inside {
   position: relative;
   width: 100%;
   height: 100%;
-  padding: 0 20px;
+  padding: 10px 20px;
   box-sizing: border-box;
   background-color: #191919;
 }
 .my_profile {
-  width: 40%;
-  top: 15px;
+  width: 375px;
   border-radius: 10px;
-  position: absolute;
   background-color: #333333;
+  margin-right: 10px;
 }
 .myprofile_inside {
   padding: 0 20px;
@@ -557,8 +557,60 @@ main lower part
   margin-right: 15px;
 }
 .profile_list {
-  margin-bottom: 15px;
   margin-top: 10px;
+}
+#email {
+  padding-bottom: 10px;
+}
+.share_post {
+  width: 525px;
+  height: 85px;
+  background-color: #333333;
+  border-radius: 10px;
+}
+.share_post_inside {
+  padding: 0 20px;
+}
+.share_post_content {
+  display: flex;
+  margin: 5px 0;
+}
+.share_icon_div {
+  margin-right: 5px;
+}
+.share_feelings {
+  margin: 10px 0;
+}
+.share_list {
+  display: flex;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.share_list i {
+  margin-right: 4px;
+}
+
+.panel {
+  background-color: #e9e9e9;
+  border: 1px solid #cccccc;
+  font-weight: bold;
+  color: gray;
+}
+
+.themes .swiper-container {
+  width: 95%;
+  height: 200px;
+  padding: 10px;
+}
+.themes .swiper-slide {
+  border-radius: 10px;
+  text-align: center;
+  /* each item size is decided by the number of panels shown */
+  /* width: 500px; */
+}
+.themes {
+  margin-bottom: 10px;
 }
 
 .profile_edit_screen_overall,
