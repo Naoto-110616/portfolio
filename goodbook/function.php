@@ -418,6 +418,31 @@ function auth()
     }
 }
 
+function getUserInfo($u_id)
+{
+    debug('ユーザー情報を取得します。');
+    //例外処理
+    try {
+        // DBへ接続
+        $dbh = dbConnect();
+        // SQL文作成
+        $sql = 'SELECT * FROM users  WHERE id = :u_id';
+        $data = array(':u_id' => $u_id);
+        // クエリ実行
+        $stmt = queryPost($dbh, $sql, $data);
+
+        // クエリ成功の場合
+        if ($stmt) {
+            debug('クエリ成功。');
+        } else {
+            debug('クエリに失敗しました。');
+        }
+    } catch (Exception $e) {
+        error_log('エラー発生:' . $e->getMessage());
+    }
+    // クエリ結果のデータを返却
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+}
 //================================
 // other
 //================================

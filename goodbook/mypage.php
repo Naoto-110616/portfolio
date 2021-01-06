@@ -96,6 +96,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 $siteTitle = 'mypage';
 require('goodbook_head.php');
 ?>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
 
 <body>
     <?php require("goodbook_header.php") ?>
@@ -120,20 +121,20 @@ require('goodbook_head.php');
                                 <i class="fas fa-user-circle fa-2x"></i>
                             </div>
                             <div>
-                                <h1>user name</h1>
+                                <h1><?php echo $dbFormData["username"]; ?></h1>
                             </div>
                         </div>
                     </div>
                     <div class="mypage_border"></div>
                     <div class="main_top_content main_top_content_user_info">
                         <div class="main_top_content main_top_content_user_info_inside">
-                            <div class="main_top_content main_top_content_user_info_list1">
+                            <nav class="main_top_content main_top_content_user_info_list1">
                                 <div class="info_list"><span>post</span></div>
                                 <div class="info_list"><span>data</span></div>
                                 <div class="info_list"><span>friends</span></div>
                                 <div class="info_list"><span>photos</span></div>
                                 <div class="info_list"><span>other</span></div>
-                            </div>
+                            </nav>
                             <div class="main_top_content main_top_content_user_info_list2">
                                 <div class="edit">
                                     <i class="fas fa-pen"></i>
@@ -151,35 +152,97 @@ require('goodbook_head.php');
         <article>
             <div class="main_lower_part">
                 <div class="main_lower_inside">
-                    <div class="my_profile">
-                        <div class="myprofile_inside">
-                            <div class="myprofile_title">
-                                <h2>myprofile</h2>
+                    <section class="themes">
+                        <!-- スライダー全体を括るメインコンテナ -->
+                        <div class="swiper-container">
+                            <!-- 全スライドをまとめるラッパー -->
+                            <div class="swiper-wrapper">
+                                <!-- 各スライド -->
+                                <div class="swiper-slide panel">Sample1</div>
+                                <div class="swiper-slide panel">Sample2</div>
+                                <div class="swiper-slide panel">Sample3</div>
+                                <div class="swiper-slide panel">Sample4</div>
+                                <div class="swiper-slide panel">Sample5</div>
+                                <div class="swiper-slide panel">Sample6</div>
+                                <div class="swiper-slide panel">Sample7</div>
+                                <div class="swiper-slide panel">Sample8</div>
+                                <div class="swiper-slide panel">Sample9</div>
+                                <div class="swiper-slide panel">Sample10</div>
+                                <div class="swiper-slide panel">Sample11</div>
+                                <div class="swiper-slide panel">Sample12</div>
+                                <div class="swiper-slide panel">Sample13</div>
+                                <div class="swiper-slide panel">Sample14</div>
+                                <div class="swiper-slide panel">Sample15</div>
+                                <div class="swiper-slide panel">Sample16</div>
+                                <div class="swiper-slide panel">Sample17</div>
+                                <div class="swiper-slide panel">Sample18</div>
                             </div>
-                            <div class="mypage_border"></div>
-                            <div class="profile_list">
-                                <p>name</p>
-                                <p><?php echo getFormData('username'); ?></p>
+                        </div>
+                    </section>
+                    <div class="content_flex">
+                        <div class="my_profile">
+                            <div class="myprofile_inside">
+                                <div class="myprofile_title">
+                                    <h2>myprofile</h2>
+                                </div>
+                                <div class="mypage_border"></div>
+                                <div class="profile_list">
+                                    <p>name</p>
+                                    <p><?php echo $dbFormData["username"]; ?></p>
+                                </div>
+                                <div class="profile_list">
+                                    <p>tel</p>
+                                    <p><?php echo $dbFormData["tel"]; ?></p>
+                                </div>
+                                <div class="profile_list">
+                                    <p>zip code</p>
+                                    <p><?php echo $dbFormData["zip"]; ?></p>
+                                </div>
+                                <div class="profile_list">
+                                    <p>addr</p>
+                                    <p><?php echo $dbFormData["addr"]; ?></p>
+                                </div>
+                                <div class="profile_list">
+                                    <p>age</p>
+                                    <p><?php echo $dbFormData['age']; ?></p>
+                                </div>
+                                <div class="profile_list" id="email">
+                                    <p>email</p>
+                                    <p><?php echo $dbFormData['email']; ?></p>
+                                </div>
                             </div>
-                            <div class="profile_list">
-                                <p>tel</p>
-                                <p><?php echo getFormData('tel'); ?></p>
-                            </div>
-                            <div class="profile_list">
-                                <p>zip code</p>
-                                <p><?php echo getFormData('zip'); ?></p>
-                            </div>
-                            <div class="profile_list">
-                                <p>addr</p>
-                                <p><?php echo getFormData('addr'); ?></p>
-                            </div>
-                            <div class="profile_list">
-                                <p>age</p>
-                                <p><?php echo getFormData('age'); ?></p>
-                            </div>
-                            <div class="profile_list">
-                                <p>email</p>
-                                <p><?php echo getFormData('email'); ?></p>
+                        </div>
+                        <div class="share_post">
+                            <div class="share_post_inside">
+                                <div class="share_post_content">
+                                    <div class="share_icon_div">
+                                        <i class="fas fa-user-circle fa-2x"></i>
+                                    </div>
+                                    <div class="share_feelings">
+                                        <h3 class="">Let's share your feelings</h3>
+                                    </div>
+                                </div>
+                                <div class="mypage_border"></div>
+                                <div class="share_list">
+                                    <div class="share_list">
+                                        <div class="">
+                                            <i class="fas fa-video fa-lg"></i>
+                                        </div>
+                                        <p class="">LiveVideo</p>
+                                    </div>
+                                    <div class="share_list">
+                                        <div class="">
+                                            <i class="far fa-images fa-lg"></i>
+                                        </div>
+                                        <p class="">Picture&Video</p>
+                                    </div>
+                                    <div class="share_list">
+                                        <div class="">
+                                            <i class="far fa-smile-wink fa-lg"></i>
+                                        </div>
+                                        <p class="">Activity</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -207,7 +270,7 @@ require('goodbook_head.php');
                                     ?>
                                 </div>
                                 <label class="<?php if (!empty($err_msg['username'])) echo 'err'; ?>">name
-                                    <input name="username" type="text" value="">
+                                    <input name="username" type="text" value="<?php echo getFormData("username"); ?>">
                                 </label>
                                 <div class="area-msg">
                                     <?php
@@ -215,7 +278,7 @@ require('goodbook_head.php');
                                     ?>
                                 </div>
                                 <label class="<?php if (!empty($err_msg['tel'])) echo 'err'; ?>">tel<span> Please enter without hyphens</span>
-                                    <input name="tel" type="text" value="">
+                                    <input name="tel" type="text" value="<?php echo getFormData("tel"); ?>">
                                 </label>
                                 <div class="area-msg">
                                     <?php
@@ -223,7 +286,7 @@ require('goodbook_head.php');
                                     ?>
                                 </div>
                                 <label class="<?php if (!empty($err_msg['zip'])) echo 'err'; ?>">zip code<span> Please enter without hyphens</span>
-                                    <input name="zip" type="text" value="">
+                                    <input name="zip" type="text" value="<?php echo getFormData("zip"); ?>">
                                 </label>
                                 <div class="area-msg">
                                     <?php
@@ -231,7 +294,7 @@ require('goodbook_head.php');
                                     ?>
                                 </div>
                                 <label class="<?php if (!empty($err_msg['addr'])) echo 'err'; ?>">address
-                                    <input name="addr" type="text" value="">
+                                    <input name="addr" type="text" value="<?php echo getFormData("addr"); ?>">
                                 </label>
                                 <div class="area-msg">
                                     <?php
@@ -239,7 +302,7 @@ require('goodbook_head.php');
                                     ?>
                                 </div>
                                 <label class="<?php if (!empty($err_msg['age'])) echo 'err'; ?>">age
-                                    <input name="age" type="number" value="">
+                                    <input name="age" type="number" value="<?php echo getFormData("age"); ?>">
                                 </label>
                                 <div class="area-msg">
                                     <?php
@@ -247,7 +310,7 @@ require('goodbook_head.php');
                                     ?>
                                 </div>
                                 <label class="<?php if (!empty($err_msg['email'])) echo 'err'; ?>">Email
-                                    <input name="email" type="text" value="">
+                                    <input name="email" type="text" value="<?php echo getFormData("email"); ?>">
                                 </label>
                                 <div class="area-msg">
                                     <?php
@@ -264,6 +327,9 @@ require('goodbook_head.php');
             </div>
         </article>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="js/homepage.js"></script>
 </body>
