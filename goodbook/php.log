@@ -19837,3 +19837,1557 @@ Stack trace:
 [06-Jan-2021 13:35:34 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612499734
 [06-Jan-2021 13:35:34 Asia/Tokyo] debug：ログイン済みユーザーです。
 [06-Jan-2021 13:35:34 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 13:46:16 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:46:16 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 13:46:16 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:46:16 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 13:46:16 Asia/Tokyo] debug：session ID：99ro6ajkmjfi9g7rda18fq3g4u
+[06-Jan-2021 13:46:16 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609907734
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 13:46:16 Asia/Tokyo] debug：現在日時タイムスタンプ：1609908376
+[06-Jan-2021 13:46:16 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612499734
+[06-Jan-2021 13:46:16 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 13:46:16 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 13:46:16 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 13:46:16 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 13:46:16 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => 尚斗
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 13:46:16 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：session ID：0tc7nlor2nu7aqs8fd450e8ikd
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609908376
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：現在日時タイムスタンプ：1609908382
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612500376
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => 尚斗
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：POST送信があります。
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：POST情報：Array
+(
+    [username] => 尚斗
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [age] => 21
+    [email] => siodeitadaku@gmail.com
+)
+
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：バリデーションOKです。
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：マイページへ遷移します。
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：session ID：pedrgnl13q93jrguqijbh8je19
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609908382
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：現在日時タイムスタンプ：1609908382
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612500382
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => 尚斗
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 13:46:22 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 13:48:50 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:48:50 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 13:48:50 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:48:50 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 13:48:50 Asia/Tokyo] debug：session ID：srns42sgvtks1drg70e7iln2ou
+[06-Jan-2021 13:48:50 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609908382
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 13:48:50 Asia/Tokyo] debug：現在日時タイムスタンプ：1609908530
+[06-Jan-2021 13:48:50 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612500382
+[06-Jan-2021 13:48:50 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 13:48:50 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 13:48:50 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 13:48:50 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 13:48:50 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => 尚斗
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 13:48:50 Asia/Tokyo] debug：POST送信があります。
+[06-Jan-2021 13:48:50 Asia/Tokyo] debug：POST情報：Array
+(
+    [username] => 尚斗
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [age] => 21
+    [email] => qqqqqq@qqq
+)
+
+[06-Jan-2021 13:48:50 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：session ID：mriukusvgmhei8g4ikuj6p6jfa
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609908530
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：現在日時タイムスタンプ：1609908549
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612500530
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => 尚斗
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：POST送信があります。
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：POST情報：Array
+(
+    [username] => 尚斗
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [age] => 21
+    [email] => siodeitadaku@gmail.com
+)
+
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：バリデーションOKです。
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：マイページへ遷移します。
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：session ID：7o43p2uo9hgqvkqcuh6h6qbsef
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609908549
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：現在日時タイムスタンプ：1609908549
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612500549
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => 尚斗
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 13:49:09 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 13:52:44 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:52:44 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 13:52:44 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:52:44 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 13:52:44 Asia/Tokyo] debug：session ID：estff8i3kaqgnp6mqq0f2hh375
+[06-Jan-2021 13:52:44 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[06-Jan-2021 13:52:44 Asia/Tokyo] debug：現在日時タイムスタンプ：1609908764
+[06-Jan-2021 13:52:44 Asia/Tokyo] debug：未ログインユーザーです。
+[06-Jan-2021 13:52:44 Asia/Tokyo] PHP Notice:  Undefined index: user_id in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 18
+[06-Jan-2021 13:52:44 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 13:52:44 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 13:52:44 Asia/Tokyo] debug：取得したユーザー情報：
+[06-Jan-2021 13:52:44 Asia/Tokyo] debug：POST送信があります。
+[06-Jan-2021 13:52:44 Asia/Tokyo] debug：POST情報：Array
+(
+    [username] => 尚斗
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [age] => 21
+    [email] => siodeitadaku@gmail.com
+)
+
+[06-Jan-2021 13:52:44 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type bool in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 38
+[06-Jan-2021 13:52:44 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type bool in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 43
+[06-Jan-2021 13:52:44 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type bool in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 48
+[06-Jan-2021 13:52:44 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type bool in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 53
+[06-Jan-2021 13:52:44 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type bool in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 58
+[06-Jan-2021 13:52:44 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type bool in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 65
+[06-Jan-2021 13:52:44 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 13:52:44 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type bool in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 123
+[06-Jan-2021 13:52:44 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type bool in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 190
+[06-Jan-2021 13:52:44 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type bool in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 194
+[06-Jan-2021 13:52:44 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type bool in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 198
+[06-Jan-2021 13:52:44 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type bool in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 202
+[06-Jan-2021 13:52:44 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type bool in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 206
+[06-Jan-2021 13:52:44 Asia/Tokyo] PHP Notice:  Trying to access array offset on value of type bool in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 210
+[06-Jan-2021 13:52:44 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:52:44 Asia/Tokyo] debug：「　login page　
+[06-Jan-2021 13:52:44 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:52:44 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 13:52:44 Asia/Tokyo] debug：session ID：jj5pqrc49hh3rkkktq5nub9t1m
+[06-Jan-2021 13:52:44 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[06-Jan-2021 13:52:44 Asia/Tokyo] debug：現在日時タイムスタンプ：1609908764
+[06-Jan-2021 13:52:44 Asia/Tokyo] debug：未ログインユーザーです。
+[06-Jan-2021 13:52:44 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 13:52:49 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:52:49 Asia/Tokyo] debug：「　login page　
+[06-Jan-2021 13:52:49 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:52:49 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 13:52:49 Asia/Tokyo] debug：session ID：u2vud231n2kva0na2rasepada3
+[06-Jan-2021 13:52:49 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[06-Jan-2021 13:52:49 Asia/Tokyo] debug：現在日時タイムスタンプ：1609908769
+[06-Jan-2021 13:52:49 Asia/Tokyo] debug：未ログインユーザーです。
+[06-Jan-2021 13:52:49 Asia/Tokyo] debug：POST送信があります。
+[06-Jan-2021 13:52:49 Asia/Tokyo] debug：バリデーションOKです。
+[06-Jan-2021 13:52:49 Asia/Tokyo] debug：クエリ結果の中身：Array
+(
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [id] => 51
+)
+
+[06-Jan-2021 13:52:50 Asia/Tokyo] debug：パスワードがマッチしました。
+[06-Jan-2021 13:52:50 Asia/Tokyo] debug：ログイン保持にチェックがあります。
+[06-Jan-2021 13:52:50 Asia/Tokyo] debug：Contents of session variables：Array
+(
+    [login_date] => 1609908770
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 13:52:50 Asia/Tokyo] debug：Move to Homepage
+[06-Jan-2021 13:52:50 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 13:52:50 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:52:50 Asia/Tokyo] debug：「　home page　
+[06-Jan-2021 13:52:50 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:52:50 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 13:52:50 Asia/Tokyo] debug：session ID：vt592vr9e6jff7a3h3ejsa1jcf
+[06-Jan-2021 13:52:50 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609908770
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 13:52:50 Asia/Tokyo] debug：現在日時タイムスタンプ：1609908770
+[06-Jan-2021 13:52:50 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612500770
+[06-Jan-2021 13:52:50 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 13:52:50 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 13:52:52 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:52:52 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 13:52:52 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:52:52 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 13:52:52 Asia/Tokyo] debug：session ID：0k1eq8t5tmjv9j6p5hh5btgojt
+[06-Jan-2021 13:52:52 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609908770
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 13:52:52 Asia/Tokyo] debug：現在日時タイムスタンプ：1609908772
+[06-Jan-2021 13:52:52 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612500770
+[06-Jan-2021 13:52:52 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 13:52:52 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 13:52:52 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 13:52:52 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 13:52:52 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => 尚斗
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 13:52:52 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：session ID：dav4t67jd36d0h6n9ev849pfvg
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609908772
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：現在日時タイムスタンプ：1609908774
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612500772
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => 尚斗
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：POST送信があります。
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：POST情報：Array
+(
+    [username] => 尚斗
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [age] => 21
+    [email] => siodeitadaku@gmail.com
+)
+
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：バリデーションOKです。
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：マイページへ遷移します。
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：session ID：gtec59tll00f24foes888vctet
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609908774
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：現在日時タイムスタンプ：1609908774
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612500774
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => 尚斗
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 13:52:54 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：session ID：7vvrvfi352mdpohao9vnn5cmgm
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609908774
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：現在日時タイムスタンプ：1609908781
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612500774
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => 尚斗
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：POST送信があります。
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：POST情報：Array
+(
+    [username] => おお
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [age] => 21
+    [email] => siodeitadaku@gmail.com
+)
+
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：バリデーションOKです。
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：マイページへ遷移します。
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：session ID：0f0qo5gtmr5rc7qqe148itencn
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609908781
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：現在日時タイムスタンプ：1609908781
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612500781
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => おお
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 13:53:01 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：session ID：6s20n7b15fbi4t930tg3gff9rm
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609908781
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：現在日時タイムスタンプ：1609908791
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612500781
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => おお
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：POST送信があります。
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：POST情報：Array
+(
+    [username] => okawa
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [age] => 21
+    [email] => siodeitadaku@gmail.com
+)
+
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：バリデーションOKです。
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：マイページへ遷移します。
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：session ID：vu0pr13cqb04k5ikg6moki9r3u
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609908791
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：現在日時タイムスタンプ：1609908791
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612500791
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => okawa
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 13:53:11 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 13:53:50 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:53:50 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 13:53:50 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:53:50 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 13:53:50 Asia/Tokyo] debug：session ID：u70kndtlj2uoj9h53kpgmsg1fq
+[06-Jan-2021 13:53:50 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609908791
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 13:53:50 Asia/Tokyo] debug：現在日時タイムスタンプ：1609908830
+[06-Jan-2021 13:53:50 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612500791
+[06-Jan-2021 13:53:50 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 13:53:50 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 13:53:50 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 13:53:50 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 13:53:50 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => okawa
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 13:53:50 Asia/Tokyo] debug：POST送信があります。
+[06-Jan-2021 13:53:50 Asia/Tokyo] debug：POST情報：Array
+(
+    [username] => 
+    [tel] => 
+    [zip] => 
+    [addr] => 
+    [age] => 
+    [email] => 
+)
+
+[06-Jan-2021 13:53:50 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 13:54:00 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:54:00 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 13:54:00 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:54:00 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 13:54:00 Asia/Tokyo] debug：session ID：ebgkjr09ej2fba6040ugr68mqg
+[06-Jan-2021 13:54:00 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609908830
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 13:54:00 Asia/Tokyo] debug：現在日時タイムスタンプ：1609908840
+[06-Jan-2021 13:54:00 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612500830
+[06-Jan-2021 13:54:00 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 13:54:00 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 13:54:00 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 13:54:00 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 13:54:00 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => okawa
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 13:54:00 Asia/Tokyo] debug：POST送信があります。
+[06-Jan-2021 13:54:00 Asia/Tokyo] debug：POST情報：Array
+(
+    [username] => 
+    [tel] => 
+    [zip] => 
+    [addr] => 
+    [age] => 
+    [email] => 
+)
+
+[06-Jan-2021 13:54:00 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：session ID：0atig7f3r1cqj497qt8v1r9rek
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609908840
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：現在日時タイムスタンプ：1609908854
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612500840
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => okawa
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：POST送信があります。
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：POST情報：Array
+(
+    [username] => ookawa
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [age] => 21
+    [email] => siodeitadaku@gmail.com
+)
+
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：バリデーションOKです。
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：マイページへ遷移します。
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：session ID：adjs1ug65lljl68bgbfrm41i5k
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609908854
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：現在日時タイムスタンプ：1609908854
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612500854
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => ookawa
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 13:54:14 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：session ID：kicb71e6i6kcsd4geihgn0g7di
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609908854
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：現在日時タイムスタンプ：1609908864
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612500854
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => ookawa
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：POST送信があります。
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：POST情報：Array
+(
+    [username] => okawa
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [age] => 21
+    [email] => siodeitadaku@gmail.com
+)
+
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：バリデーションOKです。
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：マイページへ遷移します。
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：session ID：ffu086qf97frm38o41kbc4asgu
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609908864
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：現在日時タイムスタンプ：1609908864
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612500864
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => okawa
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 13:54:24 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 14:00:03 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 14:00:03 Asia/Tokyo] debug：「　login page　
+[06-Jan-2021 14:00:03 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 14:00:03 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 14:00:03 Asia/Tokyo] debug：session ID：1bui8dj476q2eltvbsb6j70k7b
+[06-Jan-2021 14:00:03 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609908864
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 14:00:03 Asia/Tokyo] debug：現在日時タイムスタンプ：1609909203
+[06-Jan-2021 14:00:03 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612500864
+[06-Jan-2021 14:00:03 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 14:00:03 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 14:00:03 Asia/Tokyo] debug：Move to Homepage
+[06-Jan-2021 14:00:03 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 14:00:03 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 14:00:03 Asia/Tokyo] debug：「　home page　
+[06-Jan-2021 14:00:03 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 14:00:03 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 14:00:03 Asia/Tokyo] debug：session ID：6fnalmhubil52cs2jv2u24i264
+[06-Jan-2021 14:00:03 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609909203
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 14:00:03 Asia/Tokyo] debug：現在日時タイムスタンプ：1609909203
+[06-Jan-2021 14:00:03 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612501203
+[06-Jan-2021 14:00:03 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 14:00:03 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 14:00:07 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 14:00:07 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 14:00:07 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 14:00:07 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 14:00:07 Asia/Tokyo] debug：session ID：t6de3mmr3nahfd7722rgnnkgnv
+[06-Jan-2021 14:00:07 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609909203
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 14:00:07 Asia/Tokyo] debug：現在日時タイムスタンプ：1609909207
+[06-Jan-2021 14:00:07 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612501203
+[06-Jan-2021 14:00:07 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 14:00:07 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 14:00:07 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 14:00:07 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 14:00:07 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => okawa
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 14:00:07 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 14:40:24 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 14:40:24 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 14:40:24 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 14:40:24 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 14:40:24 Asia/Tokyo] debug：session ID：2kb64grphd6giq4t91h2hnma9b
+[06-Jan-2021 14:40:24 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609909207
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 14:40:24 Asia/Tokyo] debug：現在日時タイムスタンプ：1609911624
+[06-Jan-2021 14:40:24 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612501207
+[06-Jan-2021 14:40:24 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 14:40:24 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 14:40:24 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 14:40:25 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 14:40:25 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => okawa
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 14:40:25 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 14:41:01 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 14:41:01 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 14:41:01 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 14:41:01 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 14:41:01 Asia/Tokyo] debug：session ID：u3a602pmhihvaiv62mlniuvi9i
+[06-Jan-2021 14:41:01 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609911624
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 14:41:01 Asia/Tokyo] debug：現在日時タイムスタンプ：1609911661
+[06-Jan-2021 14:41:01 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612503624
+[06-Jan-2021 14:41:01 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 14:41:01 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 14:41:01 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 14:41:01 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 14:41:01 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => okawa
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 14:41:01 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 14:41:02 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 14:41:02 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 14:41:02 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 14:41:02 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 14:41:02 Asia/Tokyo] debug：session ID：i6lk3ie1u8hevgodtm8j8s1k3u
+[06-Jan-2021 14:41:02 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609911661
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 14:41:02 Asia/Tokyo] debug：現在日時タイムスタンプ：1609911662
+[06-Jan-2021 14:41:02 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612503661
+[06-Jan-2021 14:41:02 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 14:41:02 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 14:41:02 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 14:41:02 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 14:41:02 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => okawa
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 14:41:02 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 14:41:05 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 14:41:05 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 14:41:05 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 14:41:05 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 14:41:05 Asia/Tokyo] debug：session ID：9gieq2857khe8718pclfn53b56
+[06-Jan-2021 14:41:05 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609911662
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 14:41:05 Asia/Tokyo] debug：現在日時タイムスタンプ：1609911665
+[06-Jan-2021 14:41:05 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612503662
+[06-Jan-2021 14:41:05 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 14:41:05 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 14:41:05 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 14:41:05 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 14:41:05 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => okawa
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 14:41:05 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 14:56:04 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 14:56:04 Asia/Tokyo] debug：「　home page　
+[06-Jan-2021 14:56:04 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 14:56:04 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 14:56:04 Asia/Tokyo] debug：session ID：pdjsm093je8628bch8fvdfomp6
+[06-Jan-2021 14:56:04 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609911665
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 14:56:04 Asia/Tokyo] debug：現在日時タイムスタンプ：1609912564
+[06-Jan-2021 14:56:04 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612503665
+[06-Jan-2021 14:56:04 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 14:56:04 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 14:57:07 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 14:57:07 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 14:57:07 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 14:57:07 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 14:57:07 Asia/Tokyo] debug：session ID：j9gr9ur7e2331chebr6f9bqoip
+[06-Jan-2021 14:57:07 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609912564
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 14:57:07 Asia/Tokyo] debug：現在日時タイムスタンプ：1609912627
+[06-Jan-2021 14:57:07 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612504564
+[06-Jan-2021 14:57:07 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 14:57:07 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 14:57:07 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 14:57:07 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 14:57:07 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => okawa
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 14:57:07 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 14:57:10 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 14:57:10 Asia/Tokyo] debug：「　withdraw page　
+[06-Jan-2021 14:57:10 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 14:57:10 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 14:57:10 Asia/Tokyo] debug：session ID：3s45k5jtk7aad8llkoignv25pk
+[06-Jan-2021 14:57:10 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609912627
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 14:57:10 Asia/Tokyo] debug：現在日時タイムスタンプ：1609912630
+[06-Jan-2021 14:57:10 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612504627
+[06-Jan-2021 14:57:10 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 14:57:10 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 14:57:10 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 14:57:19 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 14:57:19 Asia/Tokyo] debug：「　home page　
+[06-Jan-2021 14:57:19 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 14:57:19 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 14:57:19 Asia/Tokyo] debug：session ID：jch99gfto7q7rvgcu9v54m8umk
+[06-Jan-2021 14:57:19 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609912630
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 14:57:19 Asia/Tokyo] debug：現在日時タイムスタンプ：1609912639
+[06-Jan-2021 14:57:19 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612504630
+[06-Jan-2021 14:57:19 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 14:57:19 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 20:59:22 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 20:59:22 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 20:59:22 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 20:59:22 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 20:59:22 Asia/Tokyo] debug：session ID：2u41pp9qupigjd9cm0o7a0m6he
+[06-Jan-2021 20:59:22 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609912639
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 20:59:22 Asia/Tokyo] debug：現在日時タイムスタンプ：1609934362
+[06-Jan-2021 20:59:22 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612504639
+[06-Jan-2021 20:59:22 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 20:59:22 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 20:59:22 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 20:59:22 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 20:59:22 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => okawa
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 20:59:22 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 20:59:26 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 20:59:26 Asia/Tokyo] debug：「　withdraw page　
+[06-Jan-2021 20:59:26 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 20:59:26 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 20:59:26 Asia/Tokyo] debug：session ID：15a1vn6isc6i169oqg9u6mempi
+[06-Jan-2021 20:59:26 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609934362
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 20:59:26 Asia/Tokyo] debug：現在日時タイムスタンプ：1609934366
+[06-Jan-2021 20:59:26 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612526362
+[06-Jan-2021 20:59:26 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 20:59:26 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 20:59:26 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 20:59:28 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 20:59:28 Asia/Tokyo] debug：「　home page　
+[06-Jan-2021 20:59:28 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 20:59:28 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 20:59:28 Asia/Tokyo] debug：session ID：84uuj0r82sc1m3m1b010gcdudv
+[06-Jan-2021 20:59:28 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609934366
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 20:59:28 Asia/Tokyo] debug：現在日時タイムスタンプ：1609934368
+[06-Jan-2021 20:59:28 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612526366
+[06-Jan-2021 20:59:28 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 20:59:28 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 20:59:34 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 20:59:34 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 20:59:34 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 20:59:34 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 20:59:34 Asia/Tokyo] debug：session ID：sme40h86r06akme3n6c1f9kj7q
+[06-Jan-2021 20:59:34 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609934368
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 20:59:34 Asia/Tokyo] debug：現在日時タイムスタンプ：1609934374
+[06-Jan-2021 20:59:34 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612526368
+[06-Jan-2021 20:59:34 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 20:59:34 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 20:59:34 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 20:59:34 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 20:59:34 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => okawa
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 20:59:34 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 20:59:57 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 20:59:57 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 20:59:57 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 20:59:57 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 20:59:57 Asia/Tokyo] debug：session ID：dcb498n3vr4mgkrson71u95ode
+[06-Jan-2021 20:59:57 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609934374
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 20:59:57 Asia/Tokyo] debug：現在日時タイムスタンプ：1609934397
+[06-Jan-2021 20:59:57 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612526374
+[06-Jan-2021 20:59:57 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 20:59:57 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 20:59:57 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 20:59:57 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 20:59:57 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => okawa
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 20:59:57 Asia/Tokyo] debug：POST送信があります。
+[06-Jan-2021 20:59:57 Asia/Tokyo] debug：POST情報：Array
+(
+    [username] => okawa
+    [tel] => 09050193951
+    [zip] => 547-0011
+    [addr] => 長吉出戸
+    [age] => 21
+    [email] => siodeitadaku@gmail.com
+)
+
+[06-Jan-2021 20:59:57 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：session ID：lgeg5g8pc4k42qtlv8rpdr2a1g
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609934397
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：現在日時タイムスタンプ：1609934410
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612526397
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => okawa
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：POST送信があります。
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：POST情報：Array
+(
+    [username] => okawa
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸
+    [age] => 21
+    [email] => siodeitadaku@gmail.com
+)
+
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：バリデーションOKです。
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：マイページへ遷移します。
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：session ID：fdp9spgsotaebaep2eundfbvid
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609934410
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：現在日時タイムスタンプ：1609934410
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612526410
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => okawa
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 21:00:10 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：session ID：ahfpvjh5jg1lerf0r6t2o5uml6
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609934410
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：現在日時タイムスタンプ：1609934427
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612526410
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => okawa
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：POST送信があります。
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：POST情報：Array
+(
+    [username] => okawa
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸
+    [age] => 21
+    [email] => siodeitadaku@gmail
+)
+
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：バリデーションOKです。
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：マイページへ遷移します。
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：session ID：u2vh1ndudip3tbhaniekjfughh
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609934427
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：現在日時タイムスタンプ：1609934427
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612526427
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => okawa
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸
+    [email] => siodeitadaku@gmail
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 21:00:27 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：session ID：ovukqc526jh13hu7aoog6mi0mo
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609934427
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：現在日時タイムスタンプ：1609934446
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612526427
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => okawa
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸
+    [email] => siodeitadaku@gmail
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：POST送信があります。
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：POST情報：Array
+(
+    [username] => okawa
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸
+    [age] => 21
+    [email] => siodeitadaku@gmail.com
+)
+
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：バリデーションOKです。
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：マイページへ遷移します。
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：「 my page　
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：session ID：pr9r6n9hc64pr8un6b09h89eem
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1609934446
+    [login_limit] => 2592000
+    [user_id] => 51
+)
+
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：現在日時タイムスタンプ：1609934446
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1612526446
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：ログイン済みユーザーです。
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：ログイン有効期限以内です。
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：ユーザー情報を取得します。
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：クエリ成功。
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => okawa
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[06-Jan-2021 21:00:46 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
