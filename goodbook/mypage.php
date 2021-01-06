@@ -32,36 +32,34 @@ if (!empty($_POST)) {
     $age = $_POST['age'];
     $email = $_POST['email'];
 
-    validRequired($username, "username");
-    validRequired($tel, "tel");
-    validRequired($zip, "zip");
-    validRequired($addr, "addr");
-    validRequired($age, "age");
-    validRequired($email, "email");
-
     if (empty($err_msg)) {
         //DBの情報と入力情報が異なる場合にバリデーションを行う
         if ($dbFormData['username'] !== $username) {
             //名前の最大文字数チェック
             validMaxLen($username, 'username');
+            validRequired($username, "username");
         }
         if ($dbFormData['tel'] !== $tel) {
             //TEL形式チェック
             validTel($tel, 'tel');
+            validRequired($tel, "tel");
         }
         if ($dbFormData['addr'] !== $addr) {
             //住所の最大文字数チェック
             validMaxLen($addr, 'addr');
+            validRequired($addr, "addr");
         }
         if ((int)$dbFormData['zip'] !== $zip) { //DBデータをint型にキャスト（型変換）して比較
             //郵便番号形式チェック
             validZip($zip, 'zip');
+            validRequired($zip, "zip");
         }
         if ($dbFormData['age'] !== $age) {
             //年齢の最大文字数チェック
             validMaxLen($age, 'age');
             //年齢の半角数字チェック
             validNumber($age, 'age');
+            validRequired($age, "age");
         }
         if ($dbFormData['email'] !== $email) {
             //emailの最大文字数チェック
@@ -84,7 +82,7 @@ if (!empty($_POST)) {
                 editProfile($username, $tel, $zip, $addr, $age, $email, $dbFormData, "common");
             } catch (Exception $e) {
                 error_log('エラー発生:' . $e->getMessage());
-                $err_msg['common'] = MSG07;
+                $err_msg['common'] = MSG09;
             }
         }
     }
@@ -103,47 +101,45 @@ require('goodbook_head.php');
     <div class="mypage_main">
         <article>
             <div class="main_top_content_overall">
-                <div>
-                    <div class="main_top_content">
-                        <div class="main_top_content main_top_cover_photo_div">
-                            <div class="main_top_cover_photo">
-                                <div class="cover_photo_change_button">
-                                    <label for="">
-                                        <input type="button" name="cover_photo_change" value="change cover photo">
-                                    </label>
-                                </div>
+                <div class="main_top_content">
+                    <div class="main_top_content main_top_cover_photo_div">
+                        <div class="main_top_cover_photo">
+                            <div class="cover_photo_change_button">
+                                <label for="">
+                                    <input type="button" name="cover_photo_change" value="change cover photo">
+                                </label>
                             </div>
                         </div>
                     </div>
-                    <div class="main_top_content main_top_content_user_name_div">
-                        <div class="main_top_content main_top_content_user_name">
-                            <div>
-                                <i class="fas fa-user-circle fa-2x"></i>
-                            </div>
-                            <div>
-                                <h1><?php echo $dbFormData["username"]; ?></h1>
-                            </div>
+                </div>
+                <div class="main_top_content main_top_content_user_name_div">
+                    <div class="main_top_content main_top_content_user_name">
+                        <div>
+                            <i class="fas fa-user-circle fa-2x"></i>
+                        </div>
+                        <div>
+                            <h1><?php echo $dbFormData["username"]; ?></h1>
                         </div>
                     </div>
-                    <div class="mypage_border"></div>
-                    <div class="main_top_content main_top_content_user_info">
-                        <div class="main_top_content main_top_content_user_info_inside">
-                            <nav class="main_top_content main_top_content_user_info_list1">
-                                <div class="info_list"><span>post</span></div>
-                                <div class="info_list"><span>data</span></div>
-                                <div class="info_list"><span>friends</span></div>
-                                <div class="info_list"><span>photos</span></div>
-                                <div class="info_list"><span>other</span></div>
-                            </nav>
-                            <div class="main_top_content main_top_content_user_info_list2">
-                                <div class="edit">
-                                    <i class="fas fa-pen"></i>
-                                    <span>editprofile</span>
-                                </div>
-                                <div class="info_list"><i class="fas fa-eye"></i></div>
-                                <div class="info_list"><i class="fas fa-search"></i></div>
-                                <div class="info_list"><i class="fas fa-ellipsis-h"></i></div>
+                </div>
+                <div class="mypage_border"></div>
+                <div class="main_top_content main_top_content_user_info">
+                    <div class="main_top_content main_top_content_user_info_inside">
+                        <nav class="main_top_content main_top_content_user_info_list1">
+                            <div class="info_list"><span>post</span></div>
+                            <div class="info_list"><span>data</span></div>
+                            <div class="info_list"><span>friends</span></div>
+                            <div class="info_list"><span>photos</span></div>
+                            <div class="info_list"><span>other</span></div>
+                        </nav>
+                        <div class="main_top_content main_top_content_user_info_list2">
+                            <div class="edit">
+                                <i class="fas fa-pen"></i>
+                                <span>editprofile</span>
                             </div>
+                            <div class="info_list"><i class="fas fa-eye"></i></div>
+                            <div class="info_list"><i class="fas fa-search"></i></div>
+                            <div class="info_list"><i class="fas fa-ellipsis-h"></i></div>
                         </div>
                     </div>
                 </div>
