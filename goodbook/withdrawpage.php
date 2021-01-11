@@ -115,11 +115,6 @@ require("goodbook_head.php");
             ?>
         </article>
     </div>
-    <footer id="footer">
-        <div>
-
-        </div>
-    </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="js/homepage.js"></script>
 </body>

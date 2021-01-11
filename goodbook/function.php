@@ -80,6 +80,10 @@ define('MSG08', 'This email is already registered');
 define('MSG09', 'An error has occurred, Please try again after a while');
 define('MSG10', 'Not in the form of phone num');
 define('MSG11', 'Not in the form of zip code');
+define('MSG12', '古いパスワードが違います');
+define('MSG13', '古いパスワードと同じです');
+define('SUC01', 'パスワードを変更しました');
+define('SUC02', 'プロフィールを変更しました');
 
 
 //================================
@@ -179,6 +183,24 @@ function validNumber($str, $key)
         $err_msg[$key] = MSG11;
     }
 }
+//パスワードチェック
+function validPass($str, $key)
+{
+    //半角英数字チェック
+    validHalf($str, $key);
+    //最大文字数チェック
+    validMaxLen($str, $key);
+    //最小文字数チェック
+    validMinLen($str, $key);
+}
+//エラーメッセージ表示
+function getErrMsg($key)
+{
+    global $err_msg;
+    if (!empty($err_msg[$key])) {
+        return $err_msg[$key];
+    }
+}
 
 
 //================================
@@ -254,7 +276,7 @@ function signUp($email, $pass, $dbh, $key)
     $data = array(
         ':email' => $email,
         ':pass' => password_hash($pass, PASSWORD_DEFAULT),
-        'login_time' => date('Y-m-d H:i:s')
+        'login_time' => date('Y-m-d H:i:s'),
     );
     $stmt = queryPost($dbh, $sql, $data);
 
@@ -263,7 +285,7 @@ function signUp($email, $pass, $dbh, $key)
         // session time default 1時間
         $sesLimit = 60 * 60;
         // 最終login日時を現在の時間に設定
-        $_SESSION["login_data"] = time();
+        $_SESSION["login_date"] = time();
         $_SESSION["login_limit"] = $sesLimit;
         // user_idを格納
         $_SESSION["user_id"] = $dbh->lastInsertId();
@@ -319,6 +341,46 @@ function editProfile($username, $tel, $zip, $addr, $age, $email, $dbFormData, $k
     } else {
         debug('クエリに失敗しました。');
         $err_msg[$key] = MSG09;
+    }
+}
+
+// chenge pass 関数
+function chengePass($dbh, $userData, $pass_new)
+{
+    // SQL文作成
+    $sql = 'UPDATE users SET pass = :pass WHERE id = :id';
+    $data = array(':id' => $_SESSION['user_id'], ':pass' => password_hash($pass_new, PASSWORD_DEFAULT));
+    // クエリ実行
+    $stmt = queryPost($dbh, $sql, $data);
+
+    // クエリ成功の場合
+    if ($stmt) {
+        debug('クエリ成功。');
+        $_SESSION['msg_success'] = SUC01;
+
+        //メールを送信
+        $username = ($userData['username']) ? $userData['username'] : '名無し';
+        $from = 'info@webukatu.com';
+        $to = $userData['email'];
+        $subject = 'パスワード変更通知｜WEBUKATUMARKET';
+        //EOTはEndOfFileの略。ABCでもなんでもいい。先頭の<<<の後の文字列と合わせること。最後のEOTの前後に空白など何も入れてはいけない。
+        //EOT内の半角空白も全てそのまま半角空白として扱われるのでインデントはしないこと
+        $comment = <<<EOT
+{$username}　さん
+パスワードが変更されました。
+
+////////////////////////////////////////
+ウェブカツマーケットカスタマーセンター
+URL  http://webukatu.com/
+E-mail info@webukatu.com
+////////////////////////////////////////
+EOT;
+        sendMail($from, $to, $subject, $comment);
+
+        header("Location:mypage.php"); //マイページへ
+    } else {
+        debug('クエリに失敗しました。');
+        $err_msg['common'] = MSG07;
     }
 }
 
@@ -408,6 +470,27 @@ function auth()
         debug('未ログインユーザーです。');
         if (basename($_SERVER['PHP_SELF']) !== 'login.php') {
             header("Location:login.php"); //ログインページへ
+        }
+    }
+}
+
+//================================
+// メール送信
+//================================
+function sendMail($from, $to, $subject, $comment)
+{
+    if (!empty($to) && !empty($subject) && !empty($comment)) {
+        //文字化けしないように設定（お決まりパターン）
+        mb_language("Japanese"); //現在使っている言語を設定する
+        mb_internal_encoding("UTF-8"); //内部の日本語をどうエンコーディング（機械が分かる言葉へ変換）するかを設定
+
+        //メールを送信（送信結果はtrueかfalseで返ってくる）
+        $result = mb_send_mail($to, $subject, $comment, "From: " . $from);
+        //送信結果を判定
+        if ($result) {
+            debug('メールを送信しました。');
+        } else {
+            debug('【エラー発生】メールの送信に失敗しました。');
         }
     }
 }

@@ -1,305 +1,308 @@
 body {
-  font-family: Verdana;
-  color: #dddddd;
+	font-family: Verdana;
+	color: #dddddd;
 }
 .header {
-  position: fixed;
-  z-index: 9;
-  top: 0;
-  display: flex;
-  width: 100%;
-  background-color: #333333;
-  border-bottom: solid 1px #4c4c4c;
+	position: fixed;
+	z-index: 9;
+	top: 0;
+	display: flex;
+	width: 100%;
+	background-color: #333333;
+	border-bottom: solid 1px #4c4c4c;
+}
+a {
+	color: #dddddd;
 }
 .head_left {
-  display: flex;
+	display: flex;
 }
 .icon_div {
-  margin: auto;
+	margin: auto;
 }
 .icon {
-  width: 70px;
+	width: 70px;
 }
 .serch_div {
-  margin: auto;
+	margin: auto;
 }
 .serch {
-  width: 240px;
-  height: 40px;
-  border-radius: 25px;
-  border: none;
-  outline: none;
-  font-size: 16px;
-  color: #dddddd;
-  background-color: #494949;
+	width: 240px;
+	height: 40px;
+	border-radius: 25px;
+	border: none;
+	outline: none;
+	font-size: 16px;
+	color: #dddddd;
+	background-color: #494949;
 }
 .serch::placeholder {
-  color: #dddddd;
+	color: #dddddd;
 }
 .head_center {
-  width: 100%;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	width: 100%;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .to_homepage {
-  color: #dddddd;
+	color: #dddddd;
 }
 .header_center_icon {
-  margin: 0px 55px;
+	margin: 0px 55px;
 }
 .header_center_icon,
 .header_right_icon {
-  display: inline;
-  font-size: 14px;
+	display: inline;
+	font-size: 14px;
 }
 .head_right {
-  width: 33%;
-  display: flex;
-  justify-content: center;
+	width: 33%;
+	display: flex;
+	justify-content: center;
 }
 .header_right_icon {
-  margin: 15px;
+	margin: 15px;
 }
 .accountMenu {
-  position: absolute;
-  display: block;
-  width: 360px;
-  right: 0;
-  display: none;
-  background-color: #303030;
-  border-radius: 20px;
-  margin-top: 15px;
-  padding: 5px;
+	position: absolute;
+	display: block;
+	width: 360px;
+	right: 0;
+	display: none;
+	background-color: #303030;
+	border-radius: 20px;
+	margin-top: 15px;
+	padding: 5px;
 }
 .myprofile {
-  display: flex;
-  margin-bottom: 13px;
+	display: flex;
+	margin-bottom: 13px;
 }
 .myicon {
-  margin-left: 10px;
+	margin-left: 10px;
 }
 .account_menu_a {
-  color: #dddddd;
-  display: flex;
+	color: #dddddd;
+	display: flex;
 }
 .myInfo {
-  margin: 15px;
+	margin: 15px;
 }
 .feedback,
 .Menu_element {
-  display: flex;
-  padding: 0 19px;
+	display: flex;
+	padding: 0 19px;
 }
 .feedback_comment {
-  margin: 15px;
+	margin: 15px;
 }
 .Menu_element_comment {
-  margin: 22px;
+	margin: 22px;
 }
 .feedbackIcon,
 .Menu_elementIcon {
-  margin-top: 17px;
+	margin-top: 17px;
 }
 .logout,
 .logout:active,
 .logout:focus {
-  color: #dddddd;
-  text-decoration: none;
+	color: #dddddd;
+	text-decoration: none;
 }
 .main {
-  margin-top: 60px;
-  background-color: #191919;
+	margin-top: 60px;
+	background-color: #191919;
 }
 .main_div {
-  display: flex;
+	display: flex;
 }
 #main_left_wrapper {
-  height: 94%;
-  position: fixed;
-  overflow-y: scroll;
+	height: 94%;
+	position: fixed;
+	overflow-y: scroll;
 }
 .main_left_icon {
-  display: flex;
-  color: #dddddd;
-  margin: 20px;
+	display: flex;
+	color: #dddddd;
+	margin: 20px;
 }
 .icon_name_div {
-  margin: 5px 10px;
+	margin: 5px 10px;
 }
 .main_center {
-  padding-top: 20px;
-  margin: 0 20%;
-  flex-grow: 1;
+	padding-top: 20px;
+	margin: 0 20%;
+	flex-grow: 1;
 }
 .main_center_element {
-  background-color: #303030;
-  width: 70%;
-  margin: 0 auto;
-  border-radius: 10px;
-  margin-bottom: 30px;
+	background-color: #303030;
+	width: 70%;
+	margin: 0 auto;
+	border-radius: 10px;
+	margin-bottom: 30px;
 }
 .main_center_element1 {
-  overflow: hidden;
+	overflow: hidden;
 }
 .main_center_element2_share1 {
-  width: 95%;
+	width: 95%;
 }
 .main_center_element2_share2 {
-  padding-bottom: 15px;
-  overflow: hidden;
-  justify-content: center;
-  display: flex;
+	padding-bottom: 15px;
+	overflow: hidden;
+	justify-content: center;
+	display: flex;
 }
 .main_icon {
-  float: left;
+	float: left;
 }
 .main_icon,
 .main_icon2 {
-  margin-left: 15px;
-  padding: 14px;
+	margin-left: 15px;
+	padding: 14px;
 }
 .main_center_icon {
-  color: #c1c1c1;
-  float: left;
+	color: #c1c1c1;
+	float: left;
 }
 .main_center_comment1 {
-  margin-top: 11px;
+	margin-top: 11px;
 }
 .main_center_comment2 {
-  margin-top: 7px;
-  margin-left: 10px;
-  float: left;
+	margin-top: 7px;
+	margin-left: 10px;
+	float: left;
 }
 .main_center_comment3 {
-  padding: 13px;
+	padding: 13px;
 }
 .comment_make_stories1,
 .comment_make_stories2 {
-  font-weight: bold;
-  margin-bottom: 2px;
+	font-weight: bold;
+	margin-bottom: 2px;
 }
 .comment_make_stories2 {
-  float: left;
-  margin-left: 17px;
-  margin-top: 8px;
+	float: left;
+	margin-left: 17px;
+	margin-top: 8px;
 }
 .border {
-  padding-top: 30px;
-  border-bottom: 2px solid #565656;
-  width: 95%;
-  margin: auto;
+	padding-top: 30px;
+	border-bottom: 2px solid #565656;
+	width: 95%;
+	margin: auto;
 }
 .accountMenuBorder {
-  border-bottom: 2px solid #565656;
-  width: 90%;
-  margin: auto;
-  margin-top: 2px;
-  margin-bottom: 2px;
+	border-bottom: 2px solid #565656;
+	width: 90%;
+	margin: auto;
+	margin-top: 2px;
+	margin-bottom: 2px;
 }
 .main_center_element2_icon_div {
-  float: left;
-  margin: 0px 60px;
+	float: left;
+	margin: 0px 60px;
 }
 .icon_button {
-  margin-left: 5px;
-  float: left;
+	margin-left: 5px;
+	float: left;
 }
 .main_live_video_icon,
 .main_video_icon,
 .main_activity_icon,
 .icon_button {
-  margin-top: 10px;
+	margin-top: 10px;
 }
 .menu__item {
-  display: block;
+	display: block;
 }
 .menu__item__link {
-  display: block;
+	display: block;
 }
 .menu__item__link {
-  display: flex;
-  text-decoration: none;
+	display: flex;
+	text-decoration: none;
 }
 .submenu {
-  display: none;
+	display: none;
 }
 .icon_img_div {
-  height: 50px;
-  width: 95%;
-  margin: auto;
-  padding: 10px;
+	height: 50px;
+	width: 95%;
+	margin: auto;
+	padding: 10px;
 }
 .icon_img {
-  float: left;
+	float: left;
 
-  height: 50px;
-  width: 50px;
-  border-radius: 75px;
+	height: 50px;
+	width: 50px;
+	border-radius: 75px;
 }
 .user_name_div {
-  width: 200px;
-  margin-left: 55px;
+	width: 200px;
+	margin-left: 55px;
 }
 .time_line {
-  margin-top: 10px;
-  font-size: 12px;
+	margin-top: 10px;
+	font-size: 12px;
 }
 .main_center_comment {
-  margin: 10px;
+	margin: 10px;
 }
 .main_center_mv {
-  width: 100%;
-  height: 400px;
+	width: 100%;
+	height: 400px;
 }
 .main_center_img {
-  width: 100%;
+	width: 100%;
 }
 .main_center_icon_bottom_div {
-  margin: 12px 15px;
-  overflow: hidden;
+	margin: 12px 15px;
+	overflow: hidden;
 }
 .main_center_icon_bottom {
-  float: left;
+	float: left;
 }
 .main_center_icon_button_div {
-  float: left;
-  width: 18px;
+	float: left;
+	width: 18px;
 }
 .main_center_comment_share_div {
-  float: right;
+	float: right;
 }
 .main_center_element_pdiv {
-  text-align: center;
-  margin: 10px 0;
+	text-align: center;
+	margin: 10px 0;
 }
 .main_right {
-  position: fixed;
-  width: 100%;
-  left: 1350px;
+	position: fixed;
+	width: 100%;
+	left: 1350px;
 }
 .ad_div {
-  width: 100%;
+	width: 100%;
 }
 .ad_title {
-  margin-top: 15px;
-  margin-bottom: 10px;
+	margin-top: 15px;
+	margin-bottom: 10px;
 }
 .ad_subject {
-  float: left;
-  margin: 10px 0;
+	float: left;
+	margin: 10px 0;
 }
 .ad_img_div {
-  float: left;
+	float: left;
 }
 .ad_img {
-  width: 9%;
-  border-radius: 15px;
-  float: left;
+	width: 9%;
+	border-radius: 15px;
+	float: left;
 }
 .ad_subtitle {
-  width: 100%;
+	width: 100%;
 }
 
 /* 「「「「「「「「「「「「「「「「「 */
@@ -307,411 +310,458 @@ body {
 /* 「「「「「「「「「「「「「「「「「 */
 
 .withdraw_main {
-  background-color: #191919;
-  height: 100vh;
+	background-color: #191919;
+	height: 100vh;
 }
 .withdraw_page_padding {
-  padding-top: 95px;
+	padding-top: 95px;
 }
 .withdraw_page_width {
-  width: 550px;
-  background-color: #000000;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 4px;
+	width: 550px;
+	background-color: #000000;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 4px;
 }
 .withdraw_page_inside_padding {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  border: solid 1px #4c4c4c;
-  border-radius: 4px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: solid 1px #4c4c4c;
+	border-radius: 4px;
 }
 .withdraw_window_title {
-  margin-top: 12px;
-  margin-left: 16px;
-  margin-right: 16px;
+	margin-top: 12px;
+	margin-left: 16px;
+	margin-right: 16px;
 }
 .withdraw_window_title h2 {
-  margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 .withdraw_border {
-  border-bottom: 2px solid #565656;
+	border-bottom: 2px solid #565656;
 }
 .padding_inside {
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 16px;
-  margin-bottom: 14px;
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-top: 16px;
+	margin-bottom: 14px;
 }
 .withdraw_content {
-  padding-top: 22px;
+	padding-top: 22px;
 }
 .withdraw_comment {
-  font-size: 14px;
-  margin-bottom: 10px;
-  line-height: normal;
+	font-size: 14px;
+	margin-bottom: 10px;
+	line-height: normal;
 }
 .withdraw_icon {
-  padding-right: 12px;
+	padding-right: 12px;
 }
 #withdraw_icon {
-  width: 30px;
+	width: 30px;
 }
 .content_comment {
-  width: 277px;
+	width: 277px;
 }
 .subject {
-  font-weight: bolder;
-  font-size: 16px;
-  line-height: normal;
+	font-weight: bolder;
+	font-size: 16px;
+	line-height: normal;
 }
 .comment {
-  font-size: 14px;
-  line-height: normal;
+	font-size: 14px;
+	line-height: normal;
 }
 .withdraw_icon,
 .content_comment {
-  display: table-cell;
-  font-size: 22px;
-  vertical-align: top;
+	display: table-cell;
+	font-size: 22px;
+	vertical-align: top;
 }
 .withdraw_icon {
-  padding-top: 4px;
+	padding-top: 4px;
 }
 .account_cancellation_button,
 .download_information_button {
-  vertical-align: middle;
-  padding-left: 40px;
+	vertical-align: middle;
+	padding-left: 40px;
 }
 .button_div {
-  height: 40px;
-  border-top: solid 1px #4c4c4c;
+	height: 40px;
+	border-top: solid 1px #4c4c4c;
 }
 .cancel_button,
 .withdraw_button {
-  margin-right: 15px;
+	margin-right: 15px;
 }
 .withdraw_beneath {
-  display: flex;
-  float: right;
-  margin: 10px 0;
+	display: flex;
+	float: right;
+	margin: 10px 0;
 }
 .withdraw_window input {
-  padding: 4px 4px;
-  background-color: #4c4c4c;
-  color: #dddddd;
-  border: none;
-  outline: none;
-  border-radius: 2px;
+	padding: 4px 4px;
+	background-color: #4c4c4c;
+	color: #dddddd;
+	border: none;
+	outline: none;
+	border-radius: 2px;
 }
 .withdraw_window input:hover {
-  background-color: #333333;
+	background-color: #333333;
 }
 
 /* 「「「「「「「「「「「「「「「「「 */
 /* mypage */
 /* 「「「「「「「「「「「「「「「「「 */
 .mypage_main {
-  background-color: #191919;
-  margin-top: 60px;
+	background-color: #191919;
+	margin-top: 60px;
 }
 .main_top_content_overall {
-  background-color: #333333;
+	background-color: #333333;
 }
 .main_top_cover_photo_div {
-  max-width: 940px;
-  height: 350px;
-  background-color: #191919;
-  margin: 0 auto;
-  border-radius: 0 0 10px 10px;
-  /* background-image: url();
+	max-width: 940px;
+	height: 350px;
+	background-color: #191919;
+	margin: 0 auto;
+	border-radius: 0 0 10px 10px;
+	/* background-image: url();
   background-size: cover; */
 }
 /* .background_image {
   background-image: url();
 } */
 .main_top_cover_photo {
-  width: 100%;
-  height: 100%;
-  position: relative;
+	width: 100%;
+	height: 100%;
+	position: relative;
 }
 .cover_photo_change_button {
-  position: absolute;
-  top: 300px;
-  left: 770px;
+	position: absolute;
+	top: 300px;
+	left: 770px;
 }
 .cover_photo_change_button input {
-  padding: 10px;
-  background-color: #303030;
-  color: #dddddd;
-  outline: none;
-  border: none;
-  border-radius: 2px;
+	padding: 10px;
+	background-color: #303030;
+	color: #dddddd;
+	outline: none;
+	border: none;
+	border-radius: 2px;
 }
 .cover_photo_change_button input:hover {
-  background-color: #4c4c4c;
-  cursor: pointer;
+	background-color: #4c4c4c;
+	cursor: pointer;
 }
 .main_top_content_user_name_div {
-  width: 100%;
-  height: 100px;
-  position: relative;
+	width: 100%;
+	height: 100px;
+	position: relative;
 }
 .main_top_content_user_name {
-  margin: 0 auto;
-  max-width: 500px;
+	margin: 0 auto;
+	max-width: 500px;
 }
 .main_top_content_user_name i {
-  width: 141px;
-  font-size: 145px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -130px;
-  bottom: 0px;
-  margin: auto;
+	width: 141px;
+	font-size: 145px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -130px;
+	bottom: 0px;
+	margin: auto;
 }
 .main_top_content_user_name h1 {
-  font-size: 50px;
-  text-align: center;
-  padding-top: 20px;
+	font-size: 50px;
+	text-align: center;
+	padding-top: 20px;
 }
 .mypage_border {
-  max-width: 900px;
-  border-bottom: 2px solid #565656;
-  margin: 0 auto;
+	max-width: 900px;
+	border-bottom: 2px solid #565656;
+	margin: 0 auto;
 }
 .main_top_content_user_info {
-  max-width: 900px;
-  height: 60px;
-  margin: 0 auto;
-  display: flex;
+	max-width: 900px;
+	height: 60px;
+	margin: 0 auto;
+	display: flex;
 }
 .main_top_content_user_info_inside {
-  position: relative;
-  display: flex;
-  height: 60px;
+	position: relative;
+	display: flex;
+	height: 60px;
 }
 .main_top_content_user_info_list1 {
-  position: absolute;
-  display: flex;
-  top: 12px;
+	position: static;
+	display: flex;
+	padding: 10px 10px 10px 0px;
 }
 .main_top_content_user_info_list2 {
-  position: absolute;
-  display: flex;
-  top: 12px;
-  left: 670px;
+	position: absolute;
+	display: flex;
+	top: 12px;
+	left: 670px;
 }
 .info_list {
-  padding: 10px;
+	padding: 10px;
 }
 .edit {
-  display: flex;
-  padding: 10px;
+	display: flex;
+	padding: 10px;
 }
 .info_list:hover,
 .edit:hover {
-  background-color: #565656;
-  border-radius: 10px;
+	background-color: #565656;
+	border-radius: 10px;
 }
 
 /* 「「「「「「「「「「「
 main lower part
 「「「「「「「「「「「　*/
 .content_flex {
-  display: flex;
+	display: flex;
 }
 .main_lower_part {
-  max-width: 950px;
-  margin: 0 auto;
+	max-width: 950px;
+	margin: 0 auto;
 }
 .main_lower_inside {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding: 10px 20px;
-  box-sizing: border-box;
-  background-color: #191919;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	background-color: #191919;
 }
 .my_profile {
-  width: 375px;
-  border-radius: 10px;
-  background-color: #333333;
-  margin-right: 10px;
+	width: 375px;
+	border-radius: 10px;
+	background-color: #333333;
+	margin-right: 10px;
 }
 .myprofile_inside {
-  padding: 0 20px;
+	padding: 0 20px;
 }
 .myprofile_title {
-  display: inline-block;
-  margin: 10px 0;
+	display: inline-block;
+	margin: 10px 0;
 }
 .myprofile_inside h2 {
-  font-size: 22px;
+	font-size: 22px;
 }
 .profile_list {
-  display: flex;
+	display: flex;
 }
 .profile_list p:first-child {
-  margin-right: 15px;
+	margin-right: 15px;
 }
 .profile_list {
-  margin-top: 10px;
+	margin-top: 10px;
 }
 #email {
-  padding-bottom: 10px;
+	padding-bottom: 10px;
 }
 .share_post {
-  width: 525px;
-  height: 85px;
-  background-color: #333333;
-  border-radius: 10px;
+	width: 525px;
+	height: 85px;
+	background-color: #333333;
+	border-radius: 10px;
 }
 .share_post_inside {
-  padding: 0 20px;
+	padding: 0 20px;
 }
 .share_post_content {
-  display: flex;
-  margin: 5px 0;
+	display: flex;
+	margin: 5px 0;
 }
 .share_icon_div {
-  margin-right: 5px;
+	margin-right: 5px;
 }
 .share_feelings {
-  margin: 10px 0;
+	margin: 10px 0;
 }
 .share_list {
-  display: flex;
-  margin: auto;
-  margin-top: 5px;
-  margin-bottom: 5px;
+	display: flex;
+	margin: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 .share_list i {
-  margin-right: 4px;
+	margin-right: 4px;
 }
 
 .panel {
-  background-color: #e9e9e9;
-  border: 1px solid #cccccc;
-  font-weight: bold;
-  color: gray;
+	background-color: #e9e9e9;
+	border: 1px solid #cccccc;
+	font-weight: bold;
+	color: gray;
 }
 
 .themes .swiper-container {
-  width: 95%;
-  height: 200px;
-  padding: 10px;
+	width: 95%;
+	height: 200px;
+	padding: 10px;
 }
 .themes .swiper-slide {
-  border-radius: 10px;
-  text-align: center;
-  /* each item size is decided by the number of panels shown */
-  /* width: 500px; */
+	border-radius: 10px;
+	text-align: center;
+	/* each item size is decided by the number of panels shown */
+	/* width: 500px; */
 }
 .themes {
-  margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .profile_edit_screen_overall,
 .profile_screen_overall {
-  position: absolute;
-  display: none;
-  top: 0;
-  z-index: 10;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll;
-  background-color: rgb(0, 0, 0, 50%);
+	position: absolute;
+	display: none;
+	top: 0;
+	z-index: 10;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	background-color: rgb(0, 0, 0, 50%);
 }
 .profile_edit_form_div {
-  position: absolute;
-  width: 800px;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  top: 70px;
-  margin: 0 auto;
-  z-index: 11;
+	position: absolute;
+	width: 800px;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	top: 70px;
+	margin: 0 auto;
+	z-index: 11;
 }
 .profile_edit_form {
-  width: 85%;
-  background-color: #303030;
-  overflow-y: scroll;
-  border-radius: 10px;
-  margin: 0 auto;
+	width: 85%;
+	background-color: #303030;
+	overflow-y: scroll;
+	border-radius: 10px;
+	margin: 0 auto;
 }
 .profile_edit_form_title {
-  height: 50px;
-  position: relative;
+	height: 50px;
+	position: relative;
 }
 .edit_title {
-  width: 155px;
-  position: absolute;
-  font-size: 25px;
-  top: 12px;
-  left: 0;
-  right: 0;
-  margin: auto;
+	width: 155px;
+	position: absolute;
+	font-size: 25px;
+	top: 12px;
+	left: 0;
+	right: 0;
+	margin: auto;
 }
 .x-circle {
-  width: 32px;
-  height: 32px;
-  position: absolute;
-  bottom: 0;
-  right: 15px;
-  top: 9px;
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	bottom: 0;
+	right: 15px;
+	top: 9px;
 }
 body.fixed {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  left: 0;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
 }
 .edit_profile_form_div {
-  max-width: 500px;
-  margin: 0 auto;
-  margin-top: 25px;
+	max-width: 500px;
+	margin: 0 auto;
+	margin-top: 25px;
 }
 .profile_edit_form input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 15px;
 }
 .profile_edit_form label,
 .profile_edit_form input,
 .profile_edit_form input:focus {
-  font-size: 17px;
-  display: block;
-  outline: none;
-  border: none;
-  box-sizing: border-box;
-  color: #dddddd;
+	font-size: 17px;
+	display: block;
+	outline: none;
+	border: none;
+	box-sizing: border-box;
+	color: #dddddd;
 }
 .profile_edit_form #text {
-  margin-bottom: 2px;
+	margin-bottom: 2px;
 }
 .profile_edit_form input,
 .profile_edit_form input:focus {
-  background-color: #4c4c4c;
-  border-radius: 10px;
+	background-color: #4c4c4c;
+	border-radius: 10px;
 }
 input[type="number"] {
-  width: 100px;
+	width: 100px;
 }
 input[type="submit"] {
-  width: 130px;
-  text-align: center;
-  float: right;
+	width: 130px;
+	text-align: center;
+	float: right;
 }
 input[type="submit"]:hover {
-  background-color: #565656;
+	background-color: #565656;
 }
 .profile_edit_form span {
-  font-size: 12px;
+	font-size: 12px;
 }
 
+/* 「「「「「「「「「「「「「「「「「 */
+/* passEditPage */
+/* 「「「「「「「「「「「「「「「「「 */
+.passRemind_main {
+	color: #dddddd;
+	background-color: #191919;
+	height: 100vh;
+}
+.inside {
+	padding: 10px;
+}
+.passRemind_window {
+	overflow: hidden;
+	width: 550px;
+	margin: auto;
+	background-color: #404040;
+	border-radius: 5px;
+}
+.passEditMassge {
+	margin-bottom: 10px;
+}
+.editPassform {
+	display: block;
+	box-sizing: border-box;
+	margin-bottom: 15px;
+	padding: 10px;
+	width: 100%;
+	height: 60px;
+	border: none;
+	background: #f6f5f5;
+	font-size: 18px;
+	border-radius: 5px;
+}
+.editPassButton {
+	background-color: #4c4c4c;
+	color: #dddddd;
+	border: none;
+	outline: none;
+	border-radius: 2px;
+	padding: 5px;
+}
+.toMypage {
+	margin: 70px 0 0 370px;
+}
+.padding-top {
+	padding-top: 95px;
+}
 /* 「「「「「「「「「「「「「「「「「 */
 /* hover */
 /* 「「「「「「「「「「「「「「「「「 */
@@ -725,8 +775,9 @@ input[type="submit"]:hover {
 .withdraw_window input,
 .info_list,
 .edit,
+.fa-times-circle,
 input[type="submit"] {
-  cursor: pointer;
+	cursor: pointer;
 }
 header i:hover,
 .main_left_icon:hover,
@@ -734,66 +785,66 @@ header i:hover,
 .feedback:hover,
 .Menu_element:hover,
 .account_menu_a:hover {
-  color: #2d88ff;
+	color: #2d88ff;
 }
 .Retentioncolor_blue {
-  color: #2d88ff;
+	color: #2d88ff;
 }
 
 /* 「「「「「「「「「「「「「「「「「 */
 /* darkmode切り替え */
 /* 「「「「「「「「「「「「「「「「「 */
 .lightColor1 {
-  color: #c1c1c1;
+	color: #c1c1c1;
 }
 .lightBackColor1 {
-  background-color: #c1c1c1;
+	background-color: #c1c1c1;
 }
 .lightColor2 {
-  color: #dddddd;
+	color: #dddddd;
 }
 .lightBackColor2 {
-  background-color: #dddddd;
+	background-color: #dddddd;
 }
 .darkColor1 {
-  color: #333333;
+	color: #333333;
 }
 .darkBackColor1 {
-  background-color: #333333;
+	background-color: #333333;
 }
 .darkColor2 {
-  color: #494949;
+	color: #494949;
 }
 .darkBackColor2 {
-  background-color: #494949;
+	background-color: #494949;
 }
 .darkColor3 {
-  color: #191919;
+	color: #191919;
 }
 .darkBackColor3 {
-  background-color: #191919;
+	background-color: #191919;
 }
 .darkColor4 {
-  color: #303030;
+	color: #303030;
 }
 .darkBackColor4 {
-  background-color: #303030;
+	background-color: #303030;
 }
 .borderDarkColor {
-  border-bottom: 2px solid #494949;
+	border-bottom: 2px solid #494949;
 }
 .shadow {
-  box-shadow: 0 0 8px grey;
+	box-shadow: 0 0 8px grey;
 }
 
 /* error時の変化 */
 .area-msg {
-  color: #ff4d4b;
+	color: #ff4d4b;
 }
 .edit_profile_form .area-msg {
-  margin-bottom: 15px;
+	margin-bottom: 15px;
 }
 label.err input {
-  color: #000000;
-  background-color: #f7dcd9;
+	color: #000000;
+	background-color: #f7dcd9;
 }
