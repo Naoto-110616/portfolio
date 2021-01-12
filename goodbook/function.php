@@ -80,10 +80,10 @@ define('MSG08', 'This email is already registered');
 define('MSG09', 'An error has occurred, Please try again after a while');
 define('MSG10', 'Not in the form of phone num');
 define('MSG11', 'Not in the form of zip code');
-define('MSG12', '古いパスワードが違います');
-define('MSG13', '古いパスワードと同じです');
-define('SUC01', 'パスワードを変更しました');
-define('SUC02', 'プロフィールを変更しました');
+define('MSG12', 'The old password is wrong');
+define('MSG13', 'Same as the old password');
+define('SUC01', 'Password changed');
+define('SUC02', 'Profile chenged');
 
 
 //================================
@@ -322,7 +322,7 @@ function withdraw($key)
     }
 }
 
-// edit plofile関数
+// edit profile関数
 function editProfile($username, $tel, $zip, $addr, $age, $email, $dbFormData, $key)
 {
     // DBへ接続
@@ -336,6 +336,7 @@ function editProfile($username, $tel, $zip, $addr, $age, $email, $dbFormData, $k
     // クエリ成功の場合
     if ($stmt) {
         debug('クエリ成功。');
+        $_SESSION['msg_success'] = SUC02;
         debug('マイページへ遷移します。');
         header("Location:mypage.php");
     } else {
@@ -504,4 +505,17 @@ function showVariable($var)
     echo "<pre>";
     echo var_dump($var);
     echo "<pre>";
+}
+
+//sessionを１回だけ取得できる
+function getSessionFlash($key)
+{
+    if (!empty($_SESSION[$key])) {
+        $data = $_SESSION[$key];
+        $_SESSION[$key] = '';
+        return $data;
+    } else {
+        $data = "none";
+        return $data;
+    }
 }

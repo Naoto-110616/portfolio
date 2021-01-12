@@ -96,8 +96,14 @@ require('goodbook_head.php');
 ?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
 
+
 <body>
     <?php require("goodbook_header.php") ?>
+    <p id="js-show-msg" style="display:none;" class="msg-slide">
+        <?php
+        echo getSessionFlash('msg_success');
+        ?>
+    </p>
     <div class="mypage_main">
         <article>
             <div class="main_top_content_overall">
@@ -160,24 +166,24 @@ require('goodbook_head.php');
                             <!-- 全スライドをまとめるラッパー -->
                             <div class="swiper-wrapper">
                                 <!-- 各スライド -->
-                                <div class="swiper-slide panel">Sample1</div>
-                                <div class="swiper-slide panel">Sample2</div>
-                                <div class="swiper-slide panel">Sample3</div>
-                                <div class="swiper-slide panel">Sample4</div>
-                                <div class="swiper-slide panel">Sample5</div>
-                                <div class="swiper-slide panel">Sample6</div>
-                                <div class="swiper-slide panel">Sample7</div>
-                                <div class="swiper-slide panel">Sample8</div>
-                                <div class="swiper-slide panel">Sample9</div>
-                                <div class="swiper-slide panel">Sample10</div>
-                                <div class="swiper-slide panel">Sample11</div>
-                                <div class="swiper-slide panel">Sample12</div>
-                                <div class="swiper-slide panel">Sample13</div>
-                                <div class="swiper-slide panel">Sample14</div>
-                                <div class="swiper-slide panel">Sample15</div>
-                                <div class="swiper-slide panel">Sample16</div>
-                                <div class="swiper-slide panel">Sample17</div>
-                                <div class="swiper-slide panel">Sample18</div>
+                                <div class="swiper-slide panel"></div>
+                                <div class="swiper-slide panel"></div>
+                                <div class="swiper-slide panel"></div>
+                                <div class="swiper-slide panel"></div>
+                                <div class="swiper-slide panel"></div>
+                                <div class="swiper-slide panel"></div>
+                                <div class="swiper-slide panel"></div>
+                                <div class="swiper-slide panel"></div>
+                                <div class="swiper-slide panel"></div>
+                                <div class="swiper-slide panel"></div>
+                                <div class="swiper-slide panel"></div>
+                                <div class="swiper-slide panel"></div>
+                                <div class="swiper-slide panel"></div>
+                                <div class="swiper-slide panel"></div>
+                                <div class="swiper-slide panel"></div>
+                                <div class="swiper-slide panel"></div>
+                                <div class="swiper-slide panel"></div>
+                                <div class="swiper-slide panel"></div>
                             </div>
                         </div>
                     </section>
@@ -334,6 +340,17 @@ require('goodbook_head.php');
     <script src="js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="js/homepage.js"></script>
+    <script>
+        // メッセージ表示
+        var $jsShowMsg = $("#js-show-msg");
+        var msg = $jsShowMsg.text();
+        if (msg.replace(/^[\s　]+|[\s　]+$/g, "").length) {
+            $jsShowMsg.slideToggle("slow");
+            setTimeout(function() {
+                $jsShowMsg.slideToggle("slow");
+            }, 5000);
+        }
+    </script>
 </body>
 
 </html>

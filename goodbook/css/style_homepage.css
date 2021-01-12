@@ -596,18 +596,19 @@ main lower part
 
 .panel {
 	background-color: #e9e9e9;
-	border: 1px solid #cccccc;
 	font-weight: bold;
 	color: gray;
+	background-image: url("../img/homepage_img/sample_icon.png");
+	background-size: contain;
 }
 
 .themes .swiper-container {
 	width: 95%;
-	height: 200px;
+	height: 164px;
 	padding: 10px;
 }
 .themes .swiper-slide {
-	border-radius: 10px;
+	border-radius: 20px;
 	text-align: center;
 	/* each item size is decided by the number of panels shown */
 	/* width: 500px; */
@@ -742,7 +743,6 @@ input[type="submit"]:hover {
 	margin-bottom: 15px;
 	padding: 10px;
 	width: 100%;
-	height: 60px;
 	border: none;
 	background: #f6f5f5;
 	font-size: 18px;
@@ -837,7 +837,7 @@ header i:hover,
 	box-shadow: 0 0 8px grey;
 }
 
-/* error時の変化 */
+/* msg */
 .area-msg {
 	color: #ff4d4b;
 }
@@ -847,4 +847,14 @@ header i:hover,
 label.err input {
 	color: #000000;
 	background-color: #f7dcd9;
+}
+.msg-slide {
+	color: black;
+	position: fixed;
+	width: 100%;
+	height: 45px;
+	background: rgba(122, 206, 230, 0.6);
+	text-align: center;
+	font-size: 19px;
+	line-height: 40px;
 }
