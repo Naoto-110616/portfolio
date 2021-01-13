@@ -9,16 +9,11 @@ debugLogStart();
 
 auth();
 
-//================================
-// 画面処理
-//================================
-// post送信されていた場合
-
 debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
 ?>
 
 <?php
-$siteTitle = "Send password reissue email";
+$siteTitle = "email auth";
 require("goodbook_head.php");
 ?>
 
@@ -41,7 +36,7 @@ require("goodbook_head.php");
                 </div>
             </div>
             <div class="toMypage">
-                <a href="passRemindSend.php">&lt; Resend password reissue email</a>
+                <a href="passRemindSend.php">&lt; To Resend password reissue email</a>
             </div>
         </section>
     </div>

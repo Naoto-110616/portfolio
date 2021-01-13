@@ -9,16 +9,11 @@ debugLogStart();
 
 auth();
 
-//================================
-// 画面処理
-//================================
-// post送信されていた場合
-
 debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
 ?>
 
 <?php
-$siteTitle = "Send password reissue email";
+$siteTitle = "Send password email";
 require("goodbook_head.php");
 ?>
 

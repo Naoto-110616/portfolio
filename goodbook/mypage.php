@@ -124,13 +124,7 @@ require('goodbook_head.php');
                             <i class="fas fa-user-circle fa-2x"></i>
                         </div>
                         <div>
-                            <h1><?php
-                                if (empty($dbFormData['username'])) {
-                                    echo "Not entered";
-                                } else {
-                                    echo $dbFormData["username"];
-                                };
-                                ?></h1>
+                            <h1><?php userInfoDisplay($dbFormData, "username") ?></h1>
                         </div>
                     </div>
                 </div>
@@ -142,7 +136,7 @@ require('goodbook_head.php');
                             <div class="info_list"><span>data</span></div>
                             <div class="info_list"><span>friends</span></div>
                             <div class="info_list"><span>photos</span></div>
-                            <div class="info_list"><a href="passRemindSend.php"><span>change password</span></a></div>
+                            <div class="info_list"><a href="passSetting.php"><span>password</span></a></div>
                         </nav>
                         <div class="main_top_content main_top_content_user_info_list2">
                             <div class="edit">
@@ -196,27 +190,27 @@ require('goodbook_head.php');
                                 <div class="mypage_border"></div>
                                 <div class="profile_list">
                                     <p>name</p>
-                                    <p><?php echo $dbFormData["username"]; ?></p>
+                                    <p><?php userInfoDisplay($dbFormData, "username"); ?></p>
                                 </div>
                                 <div class="profile_list">
                                     <p>tel</p>
-                                    <p><?php echo $dbFormData["tel"]; ?></p>
+                                    <p><?php userInfoDisplay($dbFormData, "tel"); ?></p>
                                 </div>
                                 <div class="profile_list">
                                     <p>zip code</p>
-                                    <p><?php echo $dbFormData["zip"]; ?></p>
+                                    <p><?php userInfoDisplay($dbFormData, "zip"); ?></p>
                                 </div>
                                 <div class="profile_list">
                                     <p>addr</p>
-                                    <p><?php echo $dbFormData["addr"]; ?></p>
+                                    <p><?php userInfoDisplay($dbFormData, "addr"); ?></p>
                                 </div>
                                 <div class="profile_list">
                                     <p>age</p>
-                                    <p><?php echo $dbFormData['age']; ?></p>
+                                    <p><?php userInfoDisplay($dbFormData, "age"); ?></p>
                                 </div>
                                 <div class="profile_list" id="email">
                                     <p>email</p>
-                                    <p><?php echo $dbFormData['email']; ?></p>
+                                    <p><?php userInfoDisplay($dbFormData, "email"); ?></p>
                                 </div>
                             </div>
                         </div>
@@ -274,55 +268,61 @@ require('goodbook_head.php');
                             <form action="" method="post" class="edit_profile_form">
                                 <div class="area-msg">
                                     <?php
-                                    if (!empty($err_msg['common'])) echo $err_msg['common'];
+                                    echo getErrMsg("common");
                                     ?>
                                 </div>
-                                <label class="<?php if (!empty($err_msg['username'])) echo 'err'; ?>">name
+                                <label class="<?php echo getErrMsglabel("username"); ?>">
+                                    name
                                     <input name="username" type="text" value="<?php echo getFormData("username"); ?>">
                                 </label>
                                 <div class="area-msg">
                                     <?php
-                                    if (!empty($err_msg['username'])) echo $err_msg['username'];
+                                    echo getErrMsg("username");
                                     ?>
                                 </div>
-                                <label class="<?php if (!empty($err_msg['tel'])) echo 'err'; ?>">tel<span> Please enter without hyphens</span>
+                                <label class="<?php echo getErrMsglabel("tel"); ?>">
+                                    tel<span> Please enter without hyphens</span>
                                     <input name="tel" type="text" value="<?php echo getFormData("tel"); ?>">
                                 </label>
                                 <div class="area-msg">
                                     <?php
-                                    if (!empty($err_msg['tel'])) echo $err_msg['tel'];
+                                    echo getErrMsg("tel");
                                     ?>
                                 </div>
-                                <label class="<?php if (!empty($err_msg['zip'])) echo 'err'; ?>">zip code<span> Please enter without hyphens</span>
+                                <label class="<?php echo getErrMsglabel("zip"); ?>">
+                                    zip code<span> Please enter without hyphens</span>
                                     <input name="zip" type="text" value="<?php echo getFormData("zip"); ?>">
                                 </label>
                                 <div class="area-msg">
                                     <?php
-                                    if (!empty($err_msg['zip'])) echo $err_msg['zip'];
+                                    echo getErrMsg("zip");
                                     ?>
                                 </div>
-                                <label class="<?php if (!empty($err_msg['addr'])) echo 'err'; ?>">address
+                                <label class="<?php echo getErrMsglabel("addr"); ?>">
+                                    address
                                     <input name="addr" type="text" value="<?php echo getFormData("addr"); ?>">
                                 </label>
                                 <div class="area-msg">
                                     <?php
-                                    if (!empty($err_msg['addr'])) echo $err_msg['addr'];
+                                    echo getErrMsg("addr");
                                     ?>
                                 </div>
-                                <label class="<?php if (!empty($err_msg['age'])) echo 'err'; ?>">age
+                                <label class="<?php echo getErrMsglabel("age"); ?>">
+                                    age
                                     <input name="age" type="number" value="<?php echo getFormData("age"); ?>">
                                 </label>
                                 <div class="area-msg">
                                     <?php
-                                    if (!empty($err_msg['age'])) echo $err_msg['age'];
+                                    echo getErrMsg("age");
                                     ?>
                                 </div>
-                                <label class="<?php if (!empty($err_msg['email'])) echo 'err'; ?>">Email
+                                <label class="<?php echo getErrMsglabel("email"); ?>">
+                                    Email
                                     <input name="email" type="text" value="<?php echo getFormData("email"); ?>">
                                 </label>
                                 <div class="area-msg">
                                     <?php
-                                    if (!empty($err_msg['email'])) echo $err_msg['email'];
+                                    echo getErrMsg("email");
                                     ?>
                                 </div>
                                 <label>
@@ -340,17 +340,6 @@ require('goodbook_head.php');
     <script src="js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="js/homepage.js"></script>
-    <script>
-        // メッセージ表示
-        var $jsShowMsg = $("#js-show-msg");
-        var msg = $jsShowMsg.text();
-        if (msg.replace(/^[\s　]+|[\s　]+$/g, "").length) {
-            $jsShowMsg.slideToggle("slow");
-            setTimeout(function() {
-                $jsShowMsg.slideToggle("slow");
-            }, 5000);
-        }
-    </script>
 </body>
 
 </html>

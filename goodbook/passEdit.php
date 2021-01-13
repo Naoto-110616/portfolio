@@ -70,7 +70,7 @@ if (!empty($_POST)) {
 }
 ?>
 <?php
-$siteTitle = "Send password reissue email";
+$siteTitle = "password edit";
 require("goodbook_head.php");
 ?>
 
@@ -87,7 +87,7 @@ require("goodbook_head.php");
                                 echo getErrMsg('common');
                                 ?>
                             </div>
-                            <label class="<?php if (!empty($err_msg['pass_old'])) echo 'err'; ?>">
+                            <label class="<?php echo getErrMsglabel("pass_old"); ?>">
                                 Old Password
                                 <input class="editPassform" type="password" name="pass_old" value="<?php echo getFormData('pass_old'); ?>">
                             </label>
@@ -96,7 +96,7 @@ require("goodbook_head.php");
                                 echo getErrMsg('pass_old');
                                 ?>
                             </div>
-                            <label class="<?php if (!empty($err_msg['pass_new'])) echo 'err'; ?>">
+                            <label class="<?php echo getErrMsglabel("pass_new"); ?>">
                                 New Password
                                 <input class="editPassform" type="password" name="pass_new" value="<?php echo getFormData('pass_new'); ?>">
                             </label>
@@ -105,7 +105,7 @@ require("goodbook_head.php");
                                 echo getErrMsg('pass_new');
                                 ?>
                             </div>
-                            <label class="<?php if (!empty($err_msg['pass_new_re'])) echo 'err'; ?>">
+                            <label class="<?php echo getErrMsglabel("pass_new_re"); ?>">
                                 New Password（retype）
                                 <input class="editPassform" type="password" name="pass_new_re" value="<?php echo getFormData('pass_new_re'); ?>">
                             </label>

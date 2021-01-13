@@ -201,8 +201,22 @@ function getErrMsg($key)
         return $err_msg[$key];
     }
 }
-
-
+function getErrMsglabel($key)
+{
+    global $err_msg;
+    if (!empty($err_msg[$key])) {
+        return "err";
+    }
+}
+// userinfo表示
+function userInfoDisplay($dbFormData, $key)
+{
+    if (empty($dbFormData[$key])) {
+        echo "Not entered";
+    } else {
+        echo $dbFormData[$key];
+    };
+}
 //================================
 // data base
 //================================
@@ -500,13 +514,6 @@ function sendMail($from, $to, $subject, $comment)
 // other
 //================================
 
-function showVariable($var)
-{
-    echo "<pre>";
-    echo var_dump($var);
-    echo "<pre>";
-}
-
 //sessionを１回だけ取得できる
 function getSessionFlash($key)
 {
@@ -514,8 +521,12 @@ function getSessionFlash($key)
         $data = $_SESSION[$key];
         $_SESSION[$key] = '';
         return $data;
-    } else {
-        $data = "none";
-        return $data;
     }
+}
+
+function showVariable($var)
+{
+    echo "<pre>";
+    echo var_dump($var);
+    echo "<pre>";
 }

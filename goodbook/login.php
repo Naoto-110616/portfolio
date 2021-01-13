@@ -58,19 +58,19 @@ require("head.php");
                 <div class="form">
                     <form method="post">
                         <div class="logininput emaildiv">
-                            <label for="email" class="<?php if (!empty($err_msg['email'])) echo 'err'; ?>">
+                            <label for="email" class="<?php echo getErrMsglabel("email"); ?>">
                                 <input class="email" type="text" name="email" id="email" placeholder="Email" autofocus="1" value="<?php if (!empty($_POST['email'])) echo $_POST['email']; ?>">
                             </label>
                             <div class="help-block"></div>
-                            <span class="err_msg"><?php if (!empty($err_msg['email'])) echo $err_msg['email']; ?>
+                            <span class="err_msg"><?php echo getErrMsg("email") ?>
                             </span>
                         </div>
                         <div class="logininput passworddiv">
-                            <label for="password" class="<?php if (!empty($err_msg['pass'])) echo 'err'; ?>">
+                            <label for="password" class="<?php echo getErrMsglabel("pass"); ?>">
                                 <input class="password" type="password" name="pass" id="password" placeholder="Password" value="<?php if (!empty($_POST['pass'])) echo $_POST['pass']; ?>">
                             </label>
                             <div class="help-block"></div>
-                            <span class="err_msg"><?php if (!empty($err_msg['pass'])) echo $err_msg['pass']; ?>
+                            <span class="err_msg"><?php echo getErrMsg("pass"); ?>
                             </span>
                         </div>
                         <div class="logininput checkboxdiv">
