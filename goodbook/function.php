@@ -82,8 +82,12 @@ define('MSG10', 'Not in the form of phone num');
 define('MSG11', 'Not in the form of zip code');
 define('MSG12', 'The old password is wrong');
 define('MSG13', 'Same as the old password');
+define('MSG14', '文字で入力してください');
+define('MSG15', '正しくありません');
+define('MSG16', '有効期限が切れています');
 define('SUC01', 'Password changed');
 define('SUC02', 'Profile chenged');
+define('SUC03', 'メールを送信しました');
 
 
 //================================
@@ -141,6 +145,14 @@ function validHalf($str, $key)
     if (!preg_match("/^[a-zA-Z0-9]+$/", $str)) {
         global $err_msg;
         $err_msg[$key] = MSG04;
+    }
+}
+//固定長チェック
+function validLength($str, $key, $len = 8)
+{
+    if (mb_strlen($str) !== $len) {
+        global $err_msg;
+        $err_msg[$key] = $len . MSG14;
     }
 }
 // validation password最小文字数check
@@ -376,6 +388,9 @@ function editProfile($username, $tel, $zip, $addr, $age, $email, $dbFormData, $k
     }
 }
 
+//================================
+// password
+//================================
 // chenge pass 関数
 function chengePass($dbh, $userData, $pass_new)
 {
@@ -413,6 +428,108 @@ function chengePass($dbh, $userData, $pass_new)
     } else {
         debug('クエリに失敗しました。');
         $err_msg['common'] = MSG07;
+    }
+}
+function passRemindSend($dbh, $email)
+{
+    // SQL文作成
+    $sql = 'SELECT count(*) FROM users WHERE email = :email AND delete_flg = 0';
+    $data = array(':email' => $email);
+    // クエリ実行
+    $stmt = queryPost($dbh, $sql, $data);
+    // クエリ結果の値を取得
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    // EmailがDBに登録されている場合
+    if ($stmt && array_shift($result)) {
+        debug('クエリ成功。DB登録あり。');
+        $_SESSION['msg_success'] = SUC03;
+
+        $auth_key = makeRandKey(); //認証キー生成
+
+        //メールを送信
+        $from = 'info@webukatu.com';
+        $to = $email;
+        $subject = '【パスワード再発行認証】｜WEBUKATUMARKET';
+        //EOTはEndOfFileの略。ABCでもなんでもいい。先頭の<<<の後の文字列と合わせること。最後のEOTの前後に空白など何も入れてはいけない。
+        //EOT内の半角空白も全てそのまま半角空白として扱われるのでインデントはしないこと
+        $comment = <<<EOT
+    本メールアドレス宛にパスワード再発行のご依頼がありました。
+    下記のURLにて認証キーをご入力頂くとパスワードが再発行されます。
+
+    パスワード再発行認証キー入力ページ：http://localhost:8888/webservice_practice07/passRemindRecieve.php
+    認証キー：{$auth_key}
+    ※認証キーの有効期限は30分となります
+
+    認証キーを再発行されたい場合は下記ページより再度再発行をお願い致します。
+    http://localhost:8888/webservice_practice07/passRemindSend.php
+
+    ////////////////////////////////////////
+    ウェブカツマーケットカスタマーセンター
+    URL  http://webukatu.com/
+    E-mail info@webukatu.com
+    ////////////////////////////////////////
+    EOT;
+        sendMail($from, $to, $subject, $comment);
+
+        //認証に必要な情報をセッションへ保存
+        $_SESSION['auth_key'] = $auth_key;
+        $_SESSION['auth_email'] = $email;
+        $_SESSION['auth_key_limit'] = time() + (60 * 30); //現在時刻より30分後のUNIXタイムスタンプを入れる
+        debug('セッション変数の中身：' . print_r($_SESSION, true));
+
+        header("Location:passRemindRecieve.php"); //認証キー入力ページへ
+
+    } else {
+        debug('クエリに失敗したかDBに登録のないEmailが入力されました。');
+        $err_msg['common'] = MSG09;
+    }
+}
+
+function passRemindRecieve($dbh, $pass)
+{
+    // SQL文作成
+    $sql = 'UPDATE users SET pass = :pass WHERE email = :email AND delete_flg = 0';
+    $data = array(':email' => $_SESSION['auth_email'], ':pass' => password_hash($pass, PASSWORD_DEFAULT));
+    // クエリ実行
+    $stmt = queryPost($dbh, $sql, $data);
+
+    // クエリ成功の場合
+    if ($stmt) {
+        debug('クエリ成功。');
+
+        //メールを送信
+        $from = 'info@webukatu.com';
+        $to = $_SESSION['auth_email'];
+        $subject = '【パスワード再発行完了】｜WEBUKATUMARKET';
+        //EOTはEndOfFileの略。ABCでもなんでもいい。先頭の<<<の後の文字列と合わせること。最後のEOTの前後に空白など何も入れてはいけない。
+        //EOT内の半角空白も全てそのまま半角空白として扱われるのでインデントはしないこと
+        $comment = <<<EOT
+    本メールアドレス宛にパスワードの再発行を致しました。
+    下記のURLにて再発行パスワードをご入力頂き、ログインください。
+
+    ログインページ：http://localhost:8888/webservice_practice07/login.php
+    再発行パスワード：{$pass}
+    ※ログイン後、パスワードのご変更をお願い致します
+
+    ////////////////////////////////////////
+    ウェブカツマーケットカスタマーセンター
+    URL  http://webukatu.com/
+    E-mail info@webukatu.com
+    ////////////////////////////////////////
+    EOT;
+        sendMail($from, $to, $subject, $comment);
+
+        //セッション削除
+        session_unset();
+        $_SESSION['msg_success'] = SUC03;
+        debug('セッション変数の中身：' . print_r($_SESSION, true));
+
+        header("Location:login.php"); //ログインページへ
+
+    } else {
+        debug('クエリに失敗しました。');
+        $err_msg['common'] = MSG09;
     }
 }
 
@@ -562,6 +679,17 @@ function getSessionFlash($key)
         return $data;
     }
 }
+//認証キー生成
+function makeRandKey($length = 8)
+{
+    static $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJLKMNOPQRSTUVWXYZ0123456789';
+    $str = '';
+    for ($i = 0; $i < $length; ++$i) {
+        $str .= $chars[mt_rand(0, 61)];
+    }
+    return $str;
+}
+
 
 function showVariable($var)
 {

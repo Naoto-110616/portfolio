@@ -33765,3 +33765,2130 @@ Stack trace:
 [14-Jan-2021 15:11:28 Asia/Tokyo] debug：ユーザー情報を取得します。
 [14-Jan-2021 15:11:28 Asia/Tokyo] debug：クエリ成功。
 [14-Jan-2021 15:11:28 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[14-Jan-2021 14:23:58 UTC] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[14-Jan-2021 14:23:58 UTC] debug：「　login page　
+[14-Jan-2021 14:23:58 UTC] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[14-Jan-2021 14:23:58 UTC] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[14-Jan-2021 14:23:58 UTC] debug：session ID：cj8gcfou7htmlel4t4gbps45s7
+[14-Jan-2021 14:23:58 UTC] debug：session variable：Array
+(
+)
+
+[14-Jan-2021 14:23:58 UTC] debug：現在日時タイムスタンプ：1610634238
+[14-Jan-2021 14:23:58 UTC] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[14-Jan-2021 14:24:09 UTC] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[14-Jan-2021 14:24:09 UTC] debug：「　login page　
+[14-Jan-2021 14:24:09 UTC] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[14-Jan-2021 14:24:09 UTC] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[14-Jan-2021 14:24:09 UTC] debug：session ID：tknf0ovfabbej0fu1pb4h0pajr
+[14-Jan-2021 14:24:09 UTC] debug：session variable：Array
+(
+)
+
+[14-Jan-2021 14:24:09 UTC] debug：現在日時タイムスタンプ：1610634249
+[14-Jan-2021 14:24:09 UTC] debug：POST送信があります。
+[14-Jan-2021 14:24:09 UTC] debug：input check OK.
+[14-Jan-2021 14:24:09 UTC] debug：バリデーションOKです。
+[14-Jan-2021 14:24:09 UTC] error:SQLSTATE[HY000] [1049] Unknown database 'goodbook'
+[14-Jan-2021 14:24:09 UTC] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[14-Jan-2021 14:24:12 UTC] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[14-Jan-2021 14:24:12 UTC] debug：「　login page　
+[14-Jan-2021 14:24:12 UTC] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[14-Jan-2021 14:24:12 UTC] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[14-Jan-2021 14:24:12 UTC] debug：session ID：2pe6vobpd8qfpsam83plii7qjh
+[14-Jan-2021 14:24:12 UTC] debug：session variable：Array
+(
+)
+
+[14-Jan-2021 14:24:12 UTC] debug：現在日時タイムスタンプ：1610634252
+[14-Jan-2021 14:24:12 UTC] debug：POST送信があります。
+[14-Jan-2021 14:24:12 UTC] debug：input check OK.
+[14-Jan-2021 14:24:12 UTC] debug：バリデーションOKです。
+[14-Jan-2021 14:24:12 UTC] error:SQLSTATE[HY000] [1049] Unknown database 'goodbook'
+[14-Jan-2021 14:24:12 UTC] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[14-Jan-2021 14:25:29 UTC] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[14-Jan-2021 14:25:29 UTC] debug：「　login page　
+[14-Jan-2021 14:25:29 UTC] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[14-Jan-2021 14:25:29 UTC] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[14-Jan-2021 14:25:29 UTC] debug：session ID：ce94se22q93m7lakqlh7f3hia9
+[14-Jan-2021 14:25:29 UTC] debug：session variable：Array
+(
+)
+
+[14-Jan-2021 14:25:29 UTC] debug：現在日時タイムスタンプ：1610634329
+[14-Jan-2021 14:25:29 UTC] debug：POST送信があります。
+[14-Jan-2021 14:25:29 UTC] debug：input check OK.
+[14-Jan-2021 14:25:29 UTC] debug：バリデーションOKです。
+[14-Jan-2021 14:25:29 UTC] debug：クエリ結果の中身：Array
+(
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [id] => 51
+)
+
+[14-Jan-2021 14:25:29 UTC] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[14-Jan-2021 14:25:35 UTC] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[14-Jan-2021 14:25:35 UTC] debug：「　login page　
+[14-Jan-2021 14:25:35 UTC] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[14-Jan-2021 14:25:35 UTC] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[14-Jan-2021 14:25:35 UTC] debug：session ID：vj5omcvsie6acvi9r938p0kvjp
+[14-Jan-2021 14:25:35 UTC] debug：session variable：Array
+(
+)
+
+[14-Jan-2021 14:25:35 UTC] debug：現在日時タイムスタンプ：1610634335
+[14-Jan-2021 14:25:35 UTC] debug：POST送信があります。
+[14-Jan-2021 14:25:35 UTC] debug：input check OK.
+[14-Jan-2021 14:25:35 UTC] debug：バリデーションOKです。
+[14-Jan-2021 14:25:35 UTC] debug：クエリ結果の中身：Array
+(
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [id] => 51
+)
+
+[14-Jan-2021 14:25:35 UTC] debug：パスワードがマッチしました。
+[14-Jan-2021 14:25:35 UTC] debug：ログイン保持にチェックはありません。
+[14-Jan-2021 14:25:35 UTC] debug：Contents of session variables：Array
+(
+    [login_date] => 1610634335
+    [login_limit] => 3600
+    [user_id] => 51
+)
+
+[14-Jan-2021 14:25:35 UTC] debug：Move to Homepage
+[14-Jan-2021 14:25:35 UTC] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[14-Jan-2021 14:25:35 UTC] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[14-Jan-2021 14:25:35 UTC] debug：「　home page　
+[14-Jan-2021 14:25:35 UTC] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[14-Jan-2021 14:25:35 UTC] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[14-Jan-2021 14:25:35 UTC] debug：session ID：rsp4q9kdppsas1g28rr9moqb0e
+[14-Jan-2021 14:25:35 UTC] debug：session variable：Array
+(
+    [login_date] => 1610634335
+    [login_limit] => 3600
+    [user_id] => 51
+)
+
+[14-Jan-2021 14:25:35 UTC] debug：現在日時タイムスタンプ：1610634335
+[14-Jan-2021 14:25:35 UTC] debug：ログイン期限日時タイムスタンプ：1610637935
+[14-Jan-2021 14:25:35 UTC] debug：ログイン済みユーザーです。
+[14-Jan-2021 14:25:35 UTC] debug：ログイン有効期限以内です。
+[14-Jan-2021 14:25:35 UTC] debug：ユーザー情報を取得します。
+[14-Jan-2021 14:25:35 UTC] debug：クエリ成功。
+[14-Jan-2021 14:25:39 UTC] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[14-Jan-2021 14:25:39 UTC] debug：「 my page　
+[14-Jan-2021 14:25:39 UTC] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[14-Jan-2021 14:25:39 UTC] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[14-Jan-2021 14:25:39 UTC] debug：session ID：0j24kcieam9o45k114bmrdea1n
+[14-Jan-2021 14:25:39 UTC] debug：session variable：Array
+(
+    [login_date] => 1610634335
+    [login_limit] => 3600
+    [user_id] => 51
+)
+
+[14-Jan-2021 14:25:39 UTC] debug：現在日時タイムスタンプ：1610634339
+[14-Jan-2021 14:25:39 UTC] debug：ログイン期限日時タイムスタンプ：1610637935
+[14-Jan-2021 14:25:39 UTC] debug：ログイン済みユーザーです。
+[14-Jan-2021 14:25:39 UTC] debug：ログイン有効期限以内です。
+[14-Jan-2021 14:25:39 UTC] debug：ユーザー情報を取得します。
+[14-Jan-2021 14:25:39 UTC] debug：クエリ成功。
+[14-Jan-2021 14:25:39 UTC] debug：取得したユーザー情報：Array
+(
+    [id] => 51
+    [username] => okawa
+    [age] => 21
+    [tel] => 09050193951
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [login_time] => 2020-12-27 23:02:57
+    [delete_flg] => 0
+    [update_date] => 2020-12-29 23:50:34
+)
+
+[14-Jan-2021 14:25:39 UTC] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[14-Jan-2021 14:25:43 UTC] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[14-Jan-2021 14:25:43 UTC] debug：「　passSettingpage　
+[14-Jan-2021 14:25:43 UTC] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[14-Jan-2021 14:25:43 UTC] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[14-Jan-2021 14:25:43 UTC] debug：session ID：rmlc527g0ejdgjvo7kbvj5gopq
+[14-Jan-2021 14:25:43 UTC] debug：session variable：Array
+(
+    [login_date] => 1610634339
+    [login_limit] => 3600
+    [user_id] => 51
+)
+
+[14-Jan-2021 14:25:43 UTC] debug：現在日時タイムスタンプ：1610634343
+[14-Jan-2021 14:25:43 UTC] debug：ログイン期限日時タイムスタンプ：1610637939
+[14-Jan-2021 14:25:43 UTC] debug：ログイン済みユーザーです。
+[14-Jan-2021 14:25:43 UTC] debug：ログイン有効期限以内です。
+[14-Jan-2021 14:25:43 UTC] debug：ユーザー情報を取得します。
+[14-Jan-2021 14:25:43 UTC] debug：クエリ成功。
+[14-Jan-2021 14:25:43 UTC] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[15-Jan-2021 00:13:33 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 00:13:33 Asia/Tokyo] debug：「　login page　
+[15-Jan-2021 00:13:33 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 00:13:33 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 00:13:33 Asia/Tokyo] debug：session ID：b96lg3mmeggj8p5ndlmm18et9p
+[15-Jan-2021 00:13:33 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+)
+
+[15-Jan-2021 00:13:33 Asia/Tokyo] debug：現在日時タイムスタンプ：1610637213
+[15-Jan-2021 00:13:33 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[15-Jan-2021 00:13:39 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 00:13:39 Asia/Tokyo] debug：「　passRemindSendpage　
+[15-Jan-2021 00:13:39 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 00:13:39 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 00:13:39 Asia/Tokyo] debug：session ID：3l93gifdbin49uhj0bk4jit62t
+[15-Jan-2021 00:13:39 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+)
+
+[15-Jan-2021 00:13:39 Asia/Tokyo] debug：現在日時タイムスタンプ：1610637219
+[15-Jan-2021 00:13:39 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 11
+[15-Jan-2021 00:13:39 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 00:13:39 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 00:13:39 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[15-Jan-2021 00:48:21 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 00:48:21 Asia/Tokyo] debug：「　login page　
+[15-Jan-2021 00:48:21 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 00:48:21 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 00:48:21 Asia/Tokyo] debug：session ID：ldiiq9a1lnl568pite19lkptfn
+[15-Jan-2021 00:48:21 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 00:48:21 Asia/Tokyo] debug：現在日時タイムスタンプ：1610639301
+[15-Jan-2021 00:48:21 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[15-Jan-2021 00:48:37 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 00:48:37 Asia/Tokyo] debug：「　login page　
+[15-Jan-2021 00:48:37 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 00:48:37 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 00:48:37 Asia/Tokyo] debug：session ID：2n16slu37doeplh85jhao249d0
+[15-Jan-2021 00:48:37 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 00:48:37 Asia/Tokyo] debug：現在日時タイムスタンプ：1610639317
+[15-Jan-2021 00:48:37 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 00:48:37 Asia/Tokyo] debug：input check OK.
+[15-Jan-2021 00:48:37 Asia/Tokyo] debug：バリデーションOKです。
+[15-Jan-2021 00:48:37 Asia/Tokyo] debug：クエリ結果の中身：Array
+(
+    [pass] => $2y$10$nh0Yn67s4P7t5lbiB9lY9.toVQaw8z/SED.Zy4v89IQ90txgds4xm
+    [id] => 51
+)
+
+[15-Jan-2021 00:48:37 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[15-Jan-2021 00:48:40 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 00:48:40 Asia/Tokyo] debug：「　passRemindSendpage　
+[15-Jan-2021 00:48:40 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 00:48:40 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 00:48:40 Asia/Tokyo] debug：session ID：bo1hj5rhgo3dpsp6l8dofm1c7d
+[15-Jan-2021 00:48:40 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 00:48:40 Asia/Tokyo] debug：現在日時タイムスタンプ：1610639320
+[15-Jan-2021 00:48:40 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/Github/portfolio/goodbook/passRemindSend.php on line 11
+[15-Jan-2021 00:48:40 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 00:48:40 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 00:48:40 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[15-Jan-2021 00:48:44 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 00:48:44 Asia/Tokyo] debug：「　passRemindSendpage　
+[15-Jan-2021 00:48:44 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 00:48:44 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 00:48:44 Asia/Tokyo] debug：session ID：ubbkfobf1kta0989g5vfm3jmeh
+[15-Jan-2021 00:48:44 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 00:48:44 Asia/Tokyo] debug：現在日時タイムスタンプ：1610639324
+[15-Jan-2021 00:48:44 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/Github/portfolio/goodbook/passRemindRecieve.php on line 11
+[15-Jan-2021 00:48:44 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 00:48:44 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 00:48:44 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[15-Jan-2021 00:48:45 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 00:48:45 Asia/Tokyo] debug：「　cange password page　
+[15-Jan-2021 00:48:45 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 00:48:45 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 00:48:45 Asia/Tokyo] debug：session ID：44fnfots4da78pieqik37pjecm
+[15-Jan-2021 00:48:45 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 00:48:45 Asia/Tokyo] debug：現在日時タイムスタンプ：1610639325
+[15-Jan-2021 00:48:45 Asia/Tokyo] debug：未ログインユーザーです。
+[15-Jan-2021 00:48:45 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/Github/portfolio/goodbook/passEdit.php on line 18
+[15-Jan-2021 00:48:45 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 00:48:45 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 00:48:45 Asia/Tokyo] debug：取得したユーザー情報：
+[15-Jan-2021 00:48:45 Asia/Tokyo] PHP Warning:  Undefined variable $dbFormData in /Applications/MAMP/htdocs/Github/portfolio/goodbook/goodbook_header.php on line 39
+[15-Jan-2021 00:48:45 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 00:48:45 Asia/Tokyo] debug：「　login page　
+[15-Jan-2021 00:48:45 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 00:48:45 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 00:48:45 Asia/Tokyo] debug：session ID：kulcteec1vrmgtk9r78q0h4okf
+[15-Jan-2021 00:48:45 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 00:48:45 Asia/Tokyo] debug：現在日時タイムスタンプ：1610639325
+[15-Jan-2021 00:48:45 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[15-Jan-2021 00:49:25 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 00:49:25 Asia/Tokyo] debug：「　login page　
+[15-Jan-2021 00:49:25 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 00:49:25 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 00:49:25 Asia/Tokyo] debug：session ID：jgpt2v731d70lbqr3k3andod0o
+[15-Jan-2021 00:49:25 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 00:49:25 Asia/Tokyo] debug：現在日時タイムスタンプ：1610639365
+[15-Jan-2021 00:49:25 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[15-Jan-2021 01:00:31 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:31 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:00:31 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:31 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:00:31 Asia/Tokyo] debug：session ID：jlapesr1lb9ittpttge5nl59nt
+[15-Jan-2021 01:00:31 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+)
+
+[15-Jan-2021 01:00:31 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640031
+[15-Jan-2021 01:00:31 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:00:31 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:00:31 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:00:34 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:34 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:00:34 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:34 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:00:34 Asia/Tokyo] debug：session ID：utt0kgfagjbnagjiesrs6dsild
+[15-Jan-2021 01:00:34 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+)
+
+[15-Jan-2021 01:00:34 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640034
+[15-Jan-2021 01:00:34 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindRecieve.php on line 14
+[15-Jan-2021 01:00:34 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:00:34 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:00:34 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:34 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:00:34 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:34 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:00:34 Asia/Tokyo] debug：session ID：c4sh9i9pu3dkqh1vbg6b6vn9oi
+[15-Jan-2021 01:00:34 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+)
+
+[15-Jan-2021 01:00:34 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640034
+[15-Jan-2021 01:00:34 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:00:34 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:00:34 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:00:35 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:35 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:00:35 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:35 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:00:35 Asia/Tokyo] debug：session ID：28goodp4u65fmq80ofspei5drv
+[15-Jan-2021 01:00:35 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+)
+
+[15-Jan-2021 01:00:35 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640035
+[15-Jan-2021 01:00:35 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindRecieve.php on line 14
+[15-Jan-2021 01:00:35 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:00:35 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：session ID：1k8bmf2l2k5kon3hj6rqn3mv7q
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+)
+
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640036
+[15-Jan-2021 01:00:36 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：session ID：160lvup875ab8pavo28vm84rc8
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+)
+
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640036
+[15-Jan-2021 01:00:36 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindRecieve.php on line 14
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：session ID：o3saaetov908fepfe7j8kkd5fr
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+)
+
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640036
+[15-Jan-2021 01:00:36 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：session ID：hfoo7psrl2kklv7abruc95tmul
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+)
+
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640036
+[15-Jan-2021 01:00:36 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindRecieve.php on line 14
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：session ID：p0fotfgjqu04heqsvci5ibbj35
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+)
+
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640036
+[15-Jan-2021 01:00:36 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：session ID：qghar6v9ciu9a203se4g4famu6
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+)
+
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640036
+[15-Jan-2021 01:00:36 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindRecieve.php on line 14
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：session ID：95hbipgg8adgvd2lhinjupljig
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+)
+
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640036
+[15-Jan-2021 01:00:36 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：session ID：g50pfq9cot7mh2h1i0uvujkc5p
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+)
+
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640036
+[15-Jan-2021 01:00:36 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindRecieve.php on line 14
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：session ID：vpf0tagjoamiu8bce1lfrnj932
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+)
+
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640036
+[15-Jan-2021 01:00:36 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:00:36 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：session ID：1fg2ef8eoci7h1k8tqnfqqhvj7
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+)
+
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640037
+[15-Jan-2021 01:00:37 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindRecieve.php on line 14
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：session ID：c6ff3m0tf6b4r9bbub2n4hovo0
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+)
+
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640037
+[15-Jan-2021 01:00:37 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：session ID：cl7enjlkb0km6kcee4fb4t2gdi
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+)
+
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640037
+[15-Jan-2021 01:00:37 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindRecieve.php on line 14
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：session ID：c63ss0i611vp2k916tdarjtqs8
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+)
+
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640037
+[15-Jan-2021 01:00:37 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:00:37 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:00:41 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:41 Asia/Tokyo] debug：「 my page　
+[15-Jan-2021 01:00:41 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:41 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:00:41 Asia/Tokyo] debug：session ID：6bip90c7hrj9u6pbucvpaeeb7v
+[15-Jan-2021 01:00:41 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+)
+
+[15-Jan-2021 01:00:41 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640041
+[15-Jan-2021 01:00:41 Asia/Tokyo] debug：未ログインユーザーです。
+[15-Jan-2021 01:00:41 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 18
+[15-Jan-2021 01:00:41 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:00:41 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:00:41 Asia/Tokyo] debug：取得したユーザー情報：
+[15-Jan-2021 01:00:41 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[15-Jan-2021 01:00:41 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:41 Asia/Tokyo] debug：「　login page　
+[15-Jan-2021 01:00:41 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:41 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:00:41 Asia/Tokyo] debug：session ID：0n20bs327gdmnvueqo0n847lnd
+[15-Jan-2021 01:00:41 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+)
+
+[15-Jan-2021 01:00:41 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640041
+[15-Jan-2021 01:00:41 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[15-Jan-2021 01:00:46 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:46 Asia/Tokyo] debug：「　login page　
+[15-Jan-2021 01:00:46 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:46 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:00:46 Asia/Tokyo] debug：session ID：rmft23qs5243smov3bf4vti2qh
+[15-Jan-2021 01:00:46 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+)
+
+[15-Jan-2021 01:00:46 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640046
+[15-Jan-2021 01:00:46 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:00:46 Asia/Tokyo] debug：input check OK.
+[15-Jan-2021 01:00:46 Asia/Tokyo] debug：バリデーションOKです。
+[15-Jan-2021 01:00:46 Asia/Tokyo] debug：クエリ結果の中身：
+[15-Jan-2021 01:00:46 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[15-Jan-2021 01:00:49 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:49 Asia/Tokyo] debug：「 signup page
+[15-Jan-2021 01:00:49 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:49 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:00:49 Asia/Tokyo] debug：session ID：ok1rf139luo4t34amffbu6r696
+[15-Jan-2021 01:00:49 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+)
+
+[15-Jan-2021 01:00:49 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640049
+[15-Jan-2021 01:00:49 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[15-Jan-2021 01:00:58 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:58 Asia/Tokyo] debug：「 signup page
+[15-Jan-2021 01:00:58 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:00:58 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:00:58 Asia/Tokyo] debug：session ID：2m9dup9l46l25hmf3vgsn9jqen
+[15-Jan-2021 01:00:58 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+)
+
+[15-Jan-2021 01:00:58 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640058
+[15-Jan-2021 01:00:58 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:00:58 Asia/Tokyo] debug：input check OK.
+[15-Jan-2021 01:00:58 Asia/Tokyo] debug：バリデーョンOKです。
+[15-Jan-2021 01:00:58 Asia/Tokyo] errorSQLSTATE[HY000]: General error: 1364 Field 'username' doesn't have a default value
+[15-Jan-2021 01:00:58 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[15-Jan-2021 01:01:00 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:01:00 Asia/Tokyo] debug：「 signup page
+[15-Jan-2021 01:01:00 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:01:00 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:01:00 Asia/Tokyo] debug：session ID：8muhod8ats9o5mpqpc8ctgv07k
+[15-Jan-2021 01:01:00 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+)
+
+[15-Jan-2021 01:01:00 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640060
+[15-Jan-2021 01:01:00 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:01:00 Asia/Tokyo] debug：input check OK.
+[15-Jan-2021 01:01:00 Asia/Tokyo] debug：バリデーョンOKです。
+[15-Jan-2021 01:01:00 Asia/Tokyo] errorSQLSTATE[HY000]: General error: 1364 Field 'username' doesn't have a default value
+[15-Jan-2021 01:01:00 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[15-Jan-2021 01:01:01 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:01:01 Asia/Tokyo] debug：「 signup page
+[15-Jan-2021 01:01:01 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:01:01 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:01:01 Asia/Tokyo] debug：session ID：ocni8s9ul67tl0uqa8sn6rqfrh
+[15-Jan-2021 01:01:01 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+)
+
+[15-Jan-2021 01:01:01 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640061
+[15-Jan-2021 01:01:01 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:01:01 Asia/Tokyo] debug：input check OK.
+[15-Jan-2021 01:01:01 Asia/Tokyo] debug：バリデーョンOKです。
+[15-Jan-2021 01:01:01 Asia/Tokyo] errorSQLSTATE[HY000]: General error: 1364 Field 'username' doesn't have a default value
+[15-Jan-2021 01:01:01 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[15-Jan-2021 01:01:26 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:01:26 Asia/Tokyo] debug：「 signup page
+[15-Jan-2021 01:01:26 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:01:26 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:01:26 Asia/Tokyo] debug：session ID：9qkbijmtr4jk40b6crgsmkiau3
+[15-Jan-2021 01:01:26 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+)
+
+[15-Jan-2021 01:01:26 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640086
+[15-Jan-2021 01:01:26 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:01:26 Asia/Tokyo] debug：input check OK.
+[15-Jan-2021 01:01:26 Asia/Tokyo] debug：バリデーョンOKです。
+[15-Jan-2021 01:01:26 Asia/Tokyo] errorSQLSTATE[HY000]: General error: 1364 Field 'username' doesn't have a default value
+[15-Jan-2021 01:01:26 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[15-Jan-2021 01:02:58 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:02:58 Asia/Tokyo] debug：「 signup page
+[15-Jan-2021 01:02:58 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:02:58 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:02:58 Asia/Tokyo] debug：session ID：p9aspj8qva7b5tme1j548btdvi
+[15-Jan-2021 01:02:58 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+)
+
+[15-Jan-2021 01:02:58 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640178
+[15-Jan-2021 01:02:58 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:02:58 Asia/Tokyo] debug：input check OK.
+[15-Jan-2021 01:02:58 Asia/Tokyo] debug：バリデーョンOKです。
+[15-Jan-2021 01:02:58 Asia/Tokyo] debug：Contents of session variables：Array
+(
+    [msg_success] => 
+    [login_date] => 1610640178
+    [login_limit] => 3600
+    [user_id] => 52
+)
+
+[15-Jan-2021 01:02:58 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[15-Jan-2021 01:02:58 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:02:58 Asia/Tokyo] debug：「　home page　
+[15-Jan-2021 01:02:58 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:02:58 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:02:58 Asia/Tokyo] debug：session ID：ltb3b2apii4fupki96tnp0932o
+[15-Jan-2021 01:02:58 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+    [login_date] => 1610640178
+    [login_limit] => 3600
+    [user_id] => 52
+)
+
+[15-Jan-2021 01:02:58 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640178
+[15-Jan-2021 01:02:58 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1610643778
+[15-Jan-2021 01:02:58 Asia/Tokyo] debug：ログイン済みユーザーです。
+[15-Jan-2021 01:02:58 Asia/Tokyo] debug：ログイン有効期限以内です。
+[15-Jan-2021 01:02:58 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:02:58 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:03:06 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:03:06 Asia/Tokyo] debug：「　logout page　
+[15-Jan-2021 01:03:06 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:03:06 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:03:06 Asia/Tokyo] debug：session ID：nm30rt6b7oivtmocljssrhcc0j
+[15-Jan-2021 01:03:06 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+    [login_date] => 1610640178
+    [login_limit] => 3600
+    [user_id] => 52
+)
+
+[15-Jan-2021 01:03:06 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640186
+[15-Jan-2021 01:03:06 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1610643778
+[15-Jan-2021 01:03:06 Asia/Tokyo] debug：ログアウトします。
+[15-Jan-2021 01:03:06 Asia/Tokyo] debug：ログインページへ遷移します。
+[15-Jan-2021 01:03:06 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:03:06 Asia/Tokyo] debug：「　login page　
+[15-Jan-2021 01:03:06 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:03:06 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:03:06 Asia/Tokyo] debug：session ID：m6q3j0o44v0aqarai1877igd9d
+[15-Jan-2021 01:03:06 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:03:06 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640186
+[15-Jan-2021 01:03:06 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[15-Jan-2021 01:03:08 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:03:08 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:03:08 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:03:08 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:03:08 Asia/Tokyo] debug：session ID：bn4despoe7r6bdsdie11o71elc
+[15-Jan-2021 01:03:08 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:03:08 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640188
+[15-Jan-2021 01:03:08 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:03:08 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:03:08 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:03:13 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:03:13 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:03:13 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:03:13 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:03:13 Asia/Tokyo] debug：session ID：2l61c9qm6pjffmc5s4196t4l0j
+[15-Jan-2021 01:03:13 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:03:13 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640193
+[15-Jan-2021 01:03:13 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindRecieve.php on line 14
+[15-Jan-2021 01:03:13 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:03:13 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:03:13 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:03:13 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:03:13 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:03:13 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:03:13 Asia/Tokyo] debug：session ID：0dki7et5ai6iu2k31ddslq562t
+[15-Jan-2021 01:03:13 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:03:13 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640193
+[15-Jan-2021 01:03:13 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:03:13 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:03:13 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:03:16 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:03:16 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:03:16 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:03:16 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:03:16 Asia/Tokyo] debug：session ID：5go0aa8m4c29cm8gs3m6p5mql1
+[15-Jan-2021 01:03:16 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:03:16 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640196
+[15-Jan-2021 01:03:16 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindRecieve.php on line 14
+[15-Jan-2021 01:03:16 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:03:16 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:03:17 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:03:17 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:03:17 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:03:17 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:03:17 Asia/Tokyo] debug：session ID：7je5vh0b51c8hg654v7bs224m4
+[15-Jan-2021 01:03:17 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:03:17 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640197
+[15-Jan-2021 01:03:17 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:03:17 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:03:17 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:03:55 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:03:55 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:03:55 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:03:55 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:03:55 Asia/Tokyo] debug：session ID：nthpedrdajuhs5ur71238kib9e
+[15-Jan-2021 01:03:55 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:03:55 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640235
+[15-Jan-2021 01:03:55 Asia/Tokyo] PHP Warning:  Undefined variable $dbFormData in /Applications/MAMP/htdocs/Github/portfolio/goodbook/goodbook_header.php on line 39
+[15-Jan-2021 01:03:55 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:03:55 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:03:55 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:03:55 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:03:55 Asia/Tokyo] debug：session ID：fac8mrb34lpbetqn5v12h92rpq
+[15-Jan-2021 01:03:55 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:03:55 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640235
+[15-Jan-2021 01:03:55 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:03:55 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:03:55 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:04:07 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:04:07 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:04:07 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:04:07 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:04:07 Asia/Tokyo] debug：session ID：etfajb0h0mmrgl32d2ijqt25li
+[15-Jan-2021 01:04:07 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:04:07 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640247
+[15-Jan-2021 01:04:07 Asia/Tokyo] PHP Warning:  Undefined variable $dbFormData in /Applications/MAMP/htdocs/Github/portfolio/goodbook/goodbook_header.php on line 39
+[15-Jan-2021 01:04:07 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:04:07 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:04:07 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:04:07 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:04:07 Asia/Tokyo] debug：session ID：on9o0eu89jcj9dsnoue3sabsh1
+[15-Jan-2021 01:04:07 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:04:07 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640247
+[15-Jan-2021 01:04:07 Asia/Tokyo] PHP Warning:  Undefined variable $dbFormData in /Applications/MAMP/htdocs/Github/portfolio/goodbook/goodbook_header.php on line 39
+[15-Jan-2021 01:05:10 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:05:10 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:05:10 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:05:10 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:05:10 Asia/Tokyo] debug：session ID：amo9t3ki3nebbasbq20i1sf7no
+[15-Jan-2021 01:05:10 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:05:10 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640310
+[15-Jan-2021 01:05:10 Asia/Tokyo] PHP Warning:  Undefined variable $dbFormData in /Applications/MAMP/htdocs/Github/portfolio/goodbook/goodbook_header.php on line 39
+[15-Jan-2021 01:05:10 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:05:10 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:05:10 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:05:10 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:05:10 Asia/Tokyo] debug：session ID：3gqtagc8c68bb946laib4h8snc
+[15-Jan-2021 01:05:10 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:05:10 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640310
+[15-Jan-2021 01:05:10 Asia/Tokyo] PHP Warning:  Undefined variable $dbFormData in /Applications/MAMP/htdocs/Github/portfolio/goodbook/goodbook_header.php on line 39
+[15-Jan-2021 01:05:46 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:05:46 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:05:46 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:05:46 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:05:46 Asia/Tokyo] debug：session ID：dt11rdvg8av52mm4964hsript4
+[15-Jan-2021 01:05:46 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:05:46 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640346
+[15-Jan-2021 01:05:46 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:05:46 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:05:46 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:05:46 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:05:46 Asia/Tokyo] debug：session ID：1svi5fl92tpr3ja07sosvncdrh
+[15-Jan-2021 01:05:46 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:05:46 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640346
+[15-Jan-2021 01:06:09 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:06:09 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:06:09 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:06:09 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:06:09 Asia/Tokyo] debug：session ID：tms7irgg4mnqm6hkvd6g1cg7sf
+[15-Jan-2021 01:06:09 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:06:09 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640369
+[15-Jan-2021 01:06:09 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:06:09 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:06:09 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:06:09 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:06:09 Asia/Tokyo] debug：session ID：bsldildo21mgejehma1ug3vegh
+[15-Jan-2021 01:06:09 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:06:09 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640369
+[15-Jan-2021 01:07:11 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:07:11 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:07:11 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:07:11 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:07:11 Asia/Tokyo] debug：session ID：s2bvs6fasff9n082dpgdl09unr
+[15-Jan-2021 01:07:11 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:07:11 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640431
+[15-Jan-2021 01:07:11 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:07:11 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:07:11 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:07:11 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:07:11 Asia/Tokyo] debug：session ID：f9co9ig053i8ksavtoed7p2km1
+[15-Jan-2021 01:07:11 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:07:11 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640431
+[15-Jan-2021 01:08:24 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:08:24 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:08:24 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:08:24 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:08:24 Asia/Tokyo] debug：session ID：0duno2sianjpvfe78l0sh8u2qm
+[15-Jan-2021 01:08:24 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:08:24 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640504
+[15-Jan-2021 01:08:25 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:08:25 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:08:25 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:08:25 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:08:25 Asia/Tokyo] debug：session ID：21lu3v9jedbs0g4ggf9qfstfoo
+[15-Jan-2021 01:08:25 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:08:25 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640505
+[15-Jan-2021 01:08:29 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:08:29 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:08:29 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:08:29 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:08:29 Asia/Tokyo] debug：session ID：1g3m5p1t3ieip4uis41vdvt5v8
+[15-Jan-2021 01:08:29 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:08:29 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640509
+[15-Jan-2021 01:08:34 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:08:34 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:08:34 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:08:34 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:08:34 Asia/Tokyo] debug：session ID：reton770agk6ej1n9ie7q4au63
+[15-Jan-2021 01:08:34 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:08:34 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640514
+[15-Jan-2021 01:08:34 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:08:34 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:08:34 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:08:34 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:08:34 Asia/Tokyo] debug：session ID：r3g0hm8q9cqsb18mdvvuhnh8hm
+[15-Jan-2021 01:08:34 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:08:34 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640514
+[15-Jan-2021 01:08:36 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:08:36 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:08:36 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:08:36 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:08:36 Asia/Tokyo] debug：session ID：sslaucu8vvpif83a5or18n4hrd
+[15-Jan-2021 01:08:36 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:08:36 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640516
+[15-Jan-2021 01:08:36 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:08:36 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:08:36 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:08:36 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:08:36 Asia/Tokyo] debug：session ID：jul9j9s35r45pk7ibtnsf3mis9
+[15-Jan-2021 01:08:36 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:08:36 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640516
+[15-Jan-2021 01:09:38 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:09:38 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:09:38 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:09:38 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:09:38 Asia/Tokyo] debug：session ID：t5c6pe9cc6kgq0snogubst46kf
+[15-Jan-2021 01:09:38 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:09:38 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640578
+[15-Jan-2021 01:09:41 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:09:41 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:09:41 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:09:41 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:09:41 Asia/Tokyo] debug：session ID：8bj1ktng3ddrs5107m3dsq50s4
+[15-Jan-2021 01:09:41 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:09:41 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640581
+[15-Jan-2021 01:09:41 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:09:41 Asia/Tokyo] debug：POST情報：Array
+(
+    [email] => 
+)
+
+[15-Jan-2021 01:09:42 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:09:42 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:09:42 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:09:42 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:09:42 Asia/Tokyo] debug：session ID：j6alusbqij6d2c89ek9ns2nuvn
+[15-Jan-2021 01:09:42 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:09:42 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640582
+[15-Jan-2021 01:09:42 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:09:42 Asia/Tokyo] debug：POST情報：Array
+(
+    [email] => 
+)
+
+[15-Jan-2021 01:09:44 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:09:44 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:09:44 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:09:44 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:09:44 Asia/Tokyo] debug：session ID：nrlagp59ff58m0kff9rk5ue54b
+[15-Jan-2021 01:09:44 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[15-Jan-2021 01:09:44 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640584
+[15-Jan-2021 01:09:44 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:09:44 Asia/Tokyo] debug：POST情報：Array
+(
+    [email] => ppp@ppp
+)
+
+[15-Jan-2021 01:09:44 Asia/Tokyo] debug：未入力チェックOK。
+[15-Jan-2021 01:09:44 Asia/Tokyo] debug：バリデーションOK。
+[15-Jan-2021 01:09:44 Asia/Tokyo] debug：クエリ成功。DB登録あり。
+[15-Jan-2021 01:09:44 Asia/Tokyo] debug：メールを送信しました。
+[15-Jan-2021 01:09:44 Asia/Tokyo] debug：セッション変数の中身：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => C8B6OmNP
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610642384
+)
+
+[15-Jan-2021 01:09:44 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:09:44 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:09:44 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:09:44 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:09:44 Asia/Tokyo] debug：session ID：4oaqk2k5r07nv0in354fb76ou8
+[15-Jan-2021 01:09:44 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => C8B6OmNP
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610642384
+)
+
+[15-Jan-2021 01:09:44 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640584
+[15-Jan-2021 01:09:45 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:09:45 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:09:45 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:09:45 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:09:45 Asia/Tokyo] debug：session ID：4g9ts6l62no68lldoha891i4dl
+[15-Jan-2021 01:09:45 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => C8B6OmNP
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610642384
+)
+
+[15-Jan-2021 01:09:45 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640585
+[15-Jan-2021 01:11:06 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:11:06 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:11:06 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:11:06 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:11:06 Asia/Tokyo] debug：session ID：3b7oadsk60vmic3db0sc0uu272
+[15-Jan-2021 01:11:06 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => C8B6OmNP
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610642384
+)
+
+[15-Jan-2021 01:11:06 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640666
+[15-Jan-2021 01:11:06 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:11:06 Asia/Tokyo] debug：POST情報：Array
+(
+    [email] => 
+)
+
+[15-Jan-2021 01:12:29 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:12:29 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:12:29 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:12:29 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:12:29 Asia/Tokyo] debug：session ID：efhr8jjvglt211nkt4s04vu9ng
+[15-Jan-2021 01:12:29 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => C8B6OmNP
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610642384
+)
+
+[15-Jan-2021 01:12:29 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640749
+[15-Jan-2021 01:12:29 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:12:29 Asia/Tokyo] debug：POST情報：Array
+(
+    [email] => 
+)
+
+[15-Jan-2021 01:12:33 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:12:33 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:12:33 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:12:33 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:12:33 Asia/Tokyo] debug：session ID：7e53cueb1he1b0dcpvc0vpr5tp
+[15-Jan-2021 01:12:33 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => C8B6OmNP
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610642384
+)
+
+[15-Jan-2021 01:12:33 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640753
+[15-Jan-2021 01:12:33 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:12:33 Asia/Tokyo] debug：POST情報：Array
+(
+    [email] => ppp@ppp
+)
+
+[15-Jan-2021 01:12:33 Asia/Tokyo] debug：未入力チェックOK。
+[15-Jan-2021 01:12:33 Asia/Tokyo] debug：バリデーションOK。
+[15-Jan-2021 01:12:33 Asia/Tokyo] debug：クエリ成功。DB登録あり。
+[15-Jan-2021 01:12:33 Asia/Tokyo] debug：メールを送信しました。
+[15-Jan-2021 01:12:33 Asia/Tokyo] debug：セッション変数の中身：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => 4vEJMvxp
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610642553
+)
+
+[15-Jan-2021 01:12:33 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:12:33 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:12:33 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:12:33 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:12:33 Asia/Tokyo] debug：session ID：8us4doemsgofsetcrt79usu8rg
+[15-Jan-2021 01:12:33 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => 4vEJMvxp
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610642553
+)
+
+[15-Jan-2021 01:12:33 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640753
+[15-Jan-2021 01:13:50 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:13:50 Asia/Tokyo] debug：「　cange password page　
+[15-Jan-2021 01:13:50 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:13:50 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:13:50 Asia/Tokyo] debug：session ID：gv8dgrs9v1tl4agjhctpgldn40
+[15-Jan-2021 01:13:50 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => 4vEJMvxp
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610642553
+)
+
+[15-Jan-2021 01:13:50 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640830
+[15-Jan-2021 01:13:50 Asia/Tokyo] debug：未ログインユーザーです。
+[15-Jan-2021 01:13:50 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passEdit.php on line 18
+[15-Jan-2021 01:13:50 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:13:50 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:13:50 Asia/Tokyo] debug：取得したユーザー情報：
+[15-Jan-2021 01:13:50 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:13:50 Asia/Tokyo] debug：「　login page　
+[15-Jan-2021 01:13:50 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:13:50 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:13:50 Asia/Tokyo] debug：session ID：77880i8m7r96bdsdusageflska
+[15-Jan-2021 01:13:50 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => 4vEJMvxp
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610642553
+)
+
+[15-Jan-2021 01:13:50 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640830
+[15-Jan-2021 01:13:50 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[15-Jan-2021 01:14:07 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:14:07 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:14:07 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:14:07 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:14:07 Asia/Tokyo] debug：session ID：obm5ebt8j3p38et64rn4t5bmie
+[15-Jan-2021 01:14:07 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => 4vEJMvxp
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610642553
+)
+
+[15-Jan-2021 01:14:07 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640847
+[15-Jan-2021 01:14:10 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:14:10 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:14:10 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:14:10 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:14:10 Asia/Tokyo] debug：session ID：qkm4k4e6ccotvub1e7lue518dt
+[15-Jan-2021 01:14:10 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => 4vEJMvxp
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610642553
+)
+
+[15-Jan-2021 01:14:10 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640850
+[15-Jan-2021 01:14:10 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:14:10 Asia/Tokyo] debug：POST情報：Array
+(
+    [email] => ppp@ppp
+)
+
+[15-Jan-2021 01:14:10 Asia/Tokyo] debug：未入力チェックOK。
+[15-Jan-2021 01:14:10 Asia/Tokyo] debug：バリデーションOK。
+[15-Jan-2021 01:14:10 Asia/Tokyo] debug：クエリ成功。DB登録あり。
+[15-Jan-2021 01:14:10 Asia/Tokyo] debug：メールを送信しました。
+[15-Jan-2021 01:14:10 Asia/Tokyo] debug：セッション変数の中身：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => H05J7PLU
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610642650
+)
+
+[15-Jan-2021 01:14:10 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:14:10 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:14:10 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:14:10 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:14:10 Asia/Tokyo] debug：session ID：a7tl1el9pk917fbt49v8nvksr9
+[15-Jan-2021 01:14:10 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => H05J7PLU
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610642650
+)
+
+[15-Jan-2021 01:14:10 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640850
+[15-Jan-2021 01:14:11 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:14:11 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:14:11 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:14:11 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:14:11 Asia/Tokyo] debug：session ID：3elskoud994k4erdofm2v3n2s8
+[15-Jan-2021 01:14:11 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => H05J7PLU
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610642650
+)
+
+[15-Jan-2021 01:14:11 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640851
+[15-Jan-2021 01:14:11 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:14:11 Asia/Tokyo] debug：POST情報：Array
+(
+    [token] => 
+)
+
+[15-Jan-2021 01:15:01 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:15:01 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:15:01 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:15:01 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:15:01 Asia/Tokyo] debug：session ID：k1t9a48blkg697u1mqcq3drnl5
+[15-Jan-2021 01:15:01 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => H05J7PLU
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610642650
+)
+
+[15-Jan-2021 01:15:01 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640901
+[15-Jan-2021 01:15:01 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:15:01 Asia/Tokyo] debug：POST情報：Array
+(
+    [token] => H05J7PLU
+)
+
+[15-Jan-2021 01:15:01 Asia/Tokyo] debug：未入力チェックOK。
+[15-Jan-2021 01:15:01 Asia/Tokyo] debug：バリデーションOK。
+[15-Jan-2021 01:15:01 Asia/Tokyo] debug：認証OK。
+[15-Jan-2021 01:15:01 Asia/Tokyo] エラー発生:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'password' in 'field list'
+[15-Jan-2021 01:16:15 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:16:15 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:16:15 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:16:15 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:16:15 Asia/Tokyo] debug：session ID：d9mkpan0r2geg43alsndoc5dkl
+[15-Jan-2021 01:16:15 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => H05J7PLU
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610642650
+)
+
+[15-Jan-2021 01:16:15 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640975
+[15-Jan-2021 01:16:15 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:16:15 Asia/Tokyo] debug：POST情報：Array
+(
+    [token] => H05J7PLU
+)
+
+[15-Jan-2021 01:16:15 Asia/Tokyo] debug：未入力チェックOK。
+[15-Jan-2021 01:16:15 Asia/Tokyo] debug：バリデーションOK。
+[15-Jan-2021 01:16:15 Asia/Tokyo] debug：認証OK。
+[15-Jan-2021 01:16:15 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:16:15 Asia/Tokyo] debug：メールを送信しました。
+[15-Jan-2021 01:16:15 Asia/Tokyo] debug：セッション変数の中身：Array
+(
+    [msg_success] => メールを送信しました
+)
+
+[15-Jan-2021 01:16:16 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:16:16 Asia/Tokyo] debug：「　login page　
+[15-Jan-2021 01:16:16 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:16:16 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:16:16 Asia/Tokyo] debug：session ID：nhch3n7rqnki72skmtd1rpteh2
+[15-Jan-2021 01:16:16 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+)
+
+[15-Jan-2021 01:16:16 Asia/Tokyo] debug：現在日時タイムスタンプ：1610640976
+[15-Jan-2021 01:16:16 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[15-Jan-2021 01:22:24 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:22:24 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:22:24 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:22:24 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:22:24 Asia/Tokyo] debug：session ID：ivv1bgej54t8ponmo3sl5kh273
+[15-Jan-2021 01:22:24 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+)
+
+[15-Jan-2021 01:22:24 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641344
+[15-Jan-2021 01:22:24 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:22:24 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:22:24 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:22:27 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:22:27 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:22:27 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:22:27 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:22:27 Asia/Tokyo] debug：session ID：2va0af1h53m5hledi55j5qmpjf
+[15-Jan-2021 01:22:27 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+)
+
+[15-Jan-2021 01:22:27 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641347
+[15-Jan-2021 01:22:27 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:22:27 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:22:27 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:22:27 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:22:27 Asia/Tokyo] debug：POST情報：Array
+(
+    [email] => ppp@ppp
+)
+
+[15-Jan-2021 01:22:27 Asia/Tokyo] debug：未入力チェックOK。
+[15-Jan-2021 01:22:27 Asia/Tokyo] debug：バリデーションOK。
+[15-Jan-2021 01:22:27 Asia/Tokyo] debug：クエリ成功。DB登録あり。
+[15-Jan-2021 01:22:27 Asia/Tokyo] debug：メールを送信しました。
+[15-Jan-2021 01:22:27 Asia/Tokyo] debug：セッション変数の中身：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => 42qiTmjz
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643147
+)
+
+[15-Jan-2021 01:22:27 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:22:27 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:22:27 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:22:27 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:22:27 Asia/Tokyo] debug：session ID：rb5pv872d838fc3a14ntvl8lcv
+[15-Jan-2021 01:22:27 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => 42qiTmjz
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643147
+)
+
+[15-Jan-2021 01:22:27 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641347
+[15-Jan-2021 01:22:27 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindRecieve.php on line 14
+[15-Jan-2021 01:22:27 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:22:27 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:22:44 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:22:44 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:22:44 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:22:44 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:22:44 Asia/Tokyo] debug：session ID：536cgf2k3cefsqccc9aoi03qeb
+[15-Jan-2021 01:22:44 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => 42qiTmjz
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643147
+)
+
+[15-Jan-2021 01:22:44 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641364
+[15-Jan-2021 01:22:44 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindRecieve.php on line 14
+[15-Jan-2021 01:22:44 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:22:44 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:22:49 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:22:49 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:22:49 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:22:49 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:22:49 Asia/Tokyo] debug：session ID：qpkvdfee84kclua13ub6ce8at1
+[15-Jan-2021 01:22:49 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => 42qiTmjz
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643147
+)
+
+[15-Jan-2021 01:22:49 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641369
+[15-Jan-2021 01:22:49 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:22:49 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:22:49 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:22:50 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:22:50 Asia/Tokyo] debug：「 my page　
+[15-Jan-2021 01:22:50 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:22:50 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:22:50 Asia/Tokyo] debug：session ID：qo4qbechg4q43pnhlna2qitnel
+[15-Jan-2021 01:22:50 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => 42qiTmjz
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643147
+)
+
+[15-Jan-2021 01:22:50 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641370
+[15-Jan-2021 01:22:50 Asia/Tokyo] debug：未ログインユーザーです。
+[15-Jan-2021 01:22:50 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 18
+[15-Jan-2021 01:22:50 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:22:50 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:22:50 Asia/Tokyo] debug：取得したユーザー情報：
+[15-Jan-2021 01:22:50 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[15-Jan-2021 01:22:50 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:22:50 Asia/Tokyo] debug：「　login page　
+[15-Jan-2021 01:22:50 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:22:50 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:22:50 Asia/Tokyo] debug：session ID：jfcmdpgkqfn9rtbgamk3h56lsp
+[15-Jan-2021 01:22:50 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+    [auth_key] => 42qiTmjz
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643147
+)
+
+[15-Jan-2021 01:22:50 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641370
+[15-Jan-2021 01:22:50 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[15-Jan-2021 01:22:52 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:22:52 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:22:52 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:22:52 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:22:52 Asia/Tokyo] debug：session ID：uh6m0do6huvpkfp4gea1i7ment
+[15-Jan-2021 01:22:52 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+    [auth_key] => 42qiTmjz
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643147
+)
+
+[15-Jan-2021 01:22:52 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641372
+[15-Jan-2021 01:22:52 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:22:52 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:22:52 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:22:55 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:22:55 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:22:55 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:22:55 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:22:55 Asia/Tokyo] debug：session ID：jg15kb070frt3ouulaplpt086c
+[15-Jan-2021 01:22:55 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+    [auth_key] => 42qiTmjz
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643147
+)
+
+[15-Jan-2021 01:22:55 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641375
+[15-Jan-2021 01:22:55 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:22:55 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:22:55 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:22:55 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:22:55 Asia/Tokyo] debug：POST情報：Array
+(
+    [email] => 
+)
+
+[15-Jan-2021 01:22:58 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:22:58 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:22:58 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:22:58 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:22:58 Asia/Tokyo] debug：session ID：fllvkbqm8n3f3rieav4so0fpvk
+[15-Jan-2021 01:22:58 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+    [auth_key] => 42qiTmjz
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643147
+)
+
+[15-Jan-2021 01:22:58 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641378
+[15-Jan-2021 01:22:58 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:22:58 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:22:58 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:22:58 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:22:58 Asia/Tokyo] debug：POST情報：Array
+(
+    [email] => ppp@ppp
+)
+
+[15-Jan-2021 01:22:58 Asia/Tokyo] debug：未入力チェックOK。
+[15-Jan-2021 01:22:58 Asia/Tokyo] debug：バリデーションOK。
+[15-Jan-2021 01:22:58 Asia/Tokyo] debug：クエリ成功。DB登録あり。
+[15-Jan-2021 01:22:58 Asia/Tokyo] debug：メールを送信しました。
+[15-Jan-2021 01:22:58 Asia/Tokyo] debug：セッション変数の中身：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => J7xVJZCt
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643178
+)
+
+[15-Jan-2021 01:22:58 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:22:58 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:22:58 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:22:58 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:22:58 Asia/Tokyo] debug：session ID：b9pubhfakvr23fcqgq6qd1i4s0
+[15-Jan-2021 01:22:58 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => J7xVJZCt
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643178
+)
+
+[15-Jan-2021 01:22:58 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641378
+[15-Jan-2021 01:22:58 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindRecieve.php on line 14
+[15-Jan-2021 01:22:58 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:22:58 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:24:50 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:24:50 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:24:50 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:24:50 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:24:50 Asia/Tokyo] debug：session ID：g0ed278m55ss8gintjtlido1or
+[15-Jan-2021 01:24:50 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => J7xVJZCt
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643178
+)
+
+[15-Jan-2021 01:24:50 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641490
+[15-Jan-2021 01:24:50 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:24:50 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:24:50 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:24:53 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:24:53 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:24:53 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:24:53 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:24:53 Asia/Tokyo] debug：session ID：qlv0ivkp412bkic6eo8v47omnq
+[15-Jan-2021 01:24:53 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => J7xVJZCt
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643178
+)
+
+[15-Jan-2021 01:24:53 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641493
+[15-Jan-2021 01:24:53 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:24:53 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:24:53 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:24:53 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:24:53 Asia/Tokyo] debug：POST情報：Array
+(
+    [email] => eee@eee
+)
+
+[15-Jan-2021 01:24:53 Asia/Tokyo] debug：未入力チェックOK。
+[15-Jan-2021 01:24:53 Asia/Tokyo] debug：バリデーションOK。
+[15-Jan-2021 01:24:53 Asia/Tokyo] debug：クエリに失敗したかDBに登録のないEmailが入力されました。
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：session ID：e95l11anssqvbvhh0vmg9qqi4n
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => J7xVJZCt
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643178
+)
+
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641495
+[15-Jan-2021 01:24:55 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：POST情報：Array
+(
+    [email] => eee@eee
+)
+
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：未入力チェックOK。
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：バリデーションOK。
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：クエリに失敗したかDBに登録のないEmailが入力されました。
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：session ID：4gnph21su791ipv8i3rlujmcln
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => J7xVJZCt
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643178
+)
+
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641495
+[15-Jan-2021 01:24:55 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：POST情報：Array
+(
+    [email] => eee@eee
+)
+
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：未入力チェックOK。
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：バリデーションOK。
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：クエリに失敗したかDBに登録のないEmailが入力されました。
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：session ID：k521hor3lep33h6jbp3uefr85n
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => J7xVJZCt
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643178
+)
+
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641495
+[15-Jan-2021 01:24:55 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：POST情報：Array
+(
+    [email] => eee@eee
+)
+
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：未入力チェックOK。
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：バリデーションOK。
+[15-Jan-2021 01:24:55 Asia/Tokyo] debug：クエリに失敗したかDBに登録のないEmailが入力されました。
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：session ID：7tkn2of39gk5folndi53vdtp9b
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => J7xVJZCt
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643178
+)
+
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641496
+[15-Jan-2021 01:24:56 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：POST情報：Array
+(
+    [email] => eee@eee
+)
+
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：未入力チェックOK。
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：バリデーションOK。
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：クエリに失敗したかDBに登録のないEmailが入力されました。
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：session ID：372l50o47b3h95h6fqb1ooanpn
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => J7xVJZCt
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643178
+)
+
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641496
+[15-Jan-2021 01:24:56 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：POST情報：Array
+(
+    [email] => eee@eee
+)
+
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：未入力チェックOK。
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：バリデーションOK。
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：クエリに失敗したかDBに登録のないEmailが入力されました。
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：session ID：29k2vuunqa6jt20d4kp3dkqti2
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => J7xVJZCt
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643178
+)
+
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641496
+[15-Jan-2021 01:24:56 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：POST情報：Array
+(
+    [email] => eee@eee
+)
+
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：未入力チェックOK。
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：バリデーションOK。
+[15-Jan-2021 01:24:56 Asia/Tokyo] debug：クエリに失敗したかDBに登録のないEmailが入力されました。
+[15-Jan-2021 01:25:01 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:25:01 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:25:01 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:25:01 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:25:01 Asia/Tokyo] debug：session ID：n411g92ctbg39gaq79a90taqnj
+[15-Jan-2021 01:25:01 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => J7xVJZCt
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643178
+)
+
+[15-Jan-2021 01:25:01 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641501
+[15-Jan-2021 01:25:01 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:25:01 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:25:01 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:25:01 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:25:01 Asia/Tokyo] debug：POST情報：Array
+(
+    [email] => ppp@ppp
+)
+
+[15-Jan-2021 01:25:01 Asia/Tokyo] debug：未入力チェックOK。
+[15-Jan-2021 01:25:01 Asia/Tokyo] debug：バリデーションOK。
+[15-Jan-2021 01:25:01 Asia/Tokyo] debug：クエリ成功。DB登録あり。
+[15-Jan-2021 01:25:01 Asia/Tokyo] debug：メールを送信しました。
+[15-Jan-2021 01:25:01 Asia/Tokyo] debug：セッション変数の中身：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => B3dOC4fR
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643301
+)
+
+[15-Jan-2021 01:25:01 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:25:01 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:25:01 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:25:01 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:25:01 Asia/Tokyo] debug：session ID：2ed4bqprjpj5qvevln1pjbl3c4
+[15-Jan-2021 01:25:01 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => B3dOC4fR
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643301
+)
+
+[15-Jan-2021 01:25:01 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641501
+[15-Jan-2021 01:25:01 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindRecieve.php on line 14
+[15-Jan-2021 01:25:01 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:25:01 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:27:00 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:27:00 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:27:00 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:27:00 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:27:00 Asia/Tokyo] debug：session ID：km779gm621p8jr2qkcsrkpasop
+[15-Jan-2021 01:27:00 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => B3dOC4fR
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643301
+)
+
+[15-Jan-2021 01:27:00 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641620
+[15-Jan-2021 01:27:00 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:27:00 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:27:00 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:27:04 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:27:04 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:27:04 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:27:04 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:27:04 Asia/Tokyo] debug：session ID：cgpke3unjc9r0ovb616hooeslg
+[15-Jan-2021 01:27:04 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => B3dOC4fR
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643301
+)
+
+[15-Jan-2021 01:27:04 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641624
+[15-Jan-2021 01:27:04 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:27:04 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:27:04 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:27:04 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:27:04 Asia/Tokyo] debug：POST情報：Array
+(
+    [email] => ppp@ppp
+)
+
+[15-Jan-2021 01:27:04 Asia/Tokyo] debug：未入力チェックOK。
+[15-Jan-2021 01:27:04 Asia/Tokyo] debug：バリデーションOK。
+[15-Jan-2021 01:27:04 Asia/Tokyo] debug：クエリ成功。DB登録あり。
+[15-Jan-2021 01:27:04 Asia/Tokyo] debug：メールを送信しました。
+[15-Jan-2021 01:27:04 Asia/Tokyo] debug：セッション変数の中身：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => E6LSLDa2
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643424
+)
+
+[15-Jan-2021 01:27:04 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:27:04 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:27:04 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:27:04 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:27:04 Asia/Tokyo] debug：session ID：e34ho6nt6da3i9upop04t71t6o
+[15-Jan-2021 01:27:04 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => E6LSLDa2
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643424
+)
+
+[15-Jan-2021 01:27:04 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641624
+[15-Jan-2021 01:27:04 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindRecieve.php on line 14
+[15-Jan-2021 01:27:04 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:27:04 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:28:43 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:28:43 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:28:43 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:28:43 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:28:43 Asia/Tokyo] debug：session ID：iddp9embvn685l72vbgmcaujr7
+[15-Jan-2021 01:28:43 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+    [auth_key] => E6LSLDa2
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643424
+)
+
+[15-Jan-2021 01:28:43 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641723
+[15-Jan-2021 01:28:43 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindRecieve.php on line 14
+[15-Jan-2021 01:28:43 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:28:43 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:29:04 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:29:04 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:29:04 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:29:04 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:29:04 Asia/Tokyo] debug：session ID：3948ul35nhquia6l7ulenj1ug6
+[15-Jan-2021 01:29:04 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+    [auth_key] => E6LSLDa2
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643424
+)
+
+[15-Jan-2021 01:29:04 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641744
+[15-Jan-2021 01:29:04 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:29:04 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:29:04 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:29:06 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:29:06 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:29:06 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:29:06 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:29:06 Asia/Tokyo] debug：session ID：tfmohadfd9c61vg4fqtfmdma1b
+[15-Jan-2021 01:29:06 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+    [auth_key] => E6LSLDa2
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643424
+)
+
+[15-Jan-2021 01:29:06 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641746
+[15-Jan-2021 01:29:06 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:29:06 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:29:06 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:29:06 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:29:06 Asia/Tokyo] debug：POST情報：Array
+(
+    [email] => ppp@ppp
+)
+
+[15-Jan-2021 01:29:06 Asia/Tokyo] debug：未入力チェックOK。
+[15-Jan-2021 01:29:06 Asia/Tokyo] debug：バリデーションOK。
+[15-Jan-2021 01:29:06 Asia/Tokyo] debug：クエリ成功。DB登録あり。
+[15-Jan-2021 01:29:06 Asia/Tokyo] debug：メールを送信しました。
+[15-Jan-2021 01:29:06 Asia/Tokyo] debug：セッション変数の中身：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => Xsleefz3
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643546
+)
+
+[15-Jan-2021 01:29:06 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:29:06 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:29:06 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:29:06 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:29:06 Asia/Tokyo] debug：session ID：0pk620vnvj6284uqm4vvjkf7t4
+[15-Jan-2021 01:29:06 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => Xsleefz3
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643546
+)
+
+[15-Jan-2021 01:29:06 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641746
+[15-Jan-2021 01:29:06 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindRecieve.php on line 14
+[15-Jan-2021 01:29:06 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:29:06 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:29:57 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:29:57 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:29:57 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:29:57 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:29:57 Asia/Tokyo] debug：session ID：12iftjvikgke8uji0a1he35r51
+[15-Jan-2021 01:29:57 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+    [auth_key] => Xsleefz3
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643546
+)
+
+[15-Jan-2021 01:29:57 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641797
+[15-Jan-2021 01:29:57 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindRecieve.php on line 14
+[15-Jan-2021 01:29:57 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:29:57 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:29:58 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:29:58 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:29:58 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:29:58 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:29:58 Asia/Tokyo] debug：session ID：s29bdle1dg2ac8hbv4ni0eeq9i
+[15-Jan-2021 01:29:58 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+    [auth_key] => Xsleefz3
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643546
+)
+
+[15-Jan-2021 01:29:58 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641798
+[15-Jan-2021 01:29:58 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:29:58 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:29:58 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:30:00 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:30:00 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:30:00 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:30:00 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:30:00 Asia/Tokyo] debug：session ID：o2u97psiegdpp3qem0fulmojdc
+[15-Jan-2021 01:30:00 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+    [auth_key] => Xsleefz3
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643546
+)
+
+[15-Jan-2021 01:30:00 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641800
+[15-Jan-2021 01:30:00 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:30:00 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:30:00 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:30:00 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:30:00 Asia/Tokyo] debug：POST情報：Array
+(
+    [email] => ppp@ppp
+)
+
+[15-Jan-2021 01:30:00 Asia/Tokyo] debug：未入力チェックOK。
+[15-Jan-2021 01:30:00 Asia/Tokyo] debug：バリデーションOK。
+[15-Jan-2021 01:30:00 Asia/Tokyo] debug：クエリ成功。DB登録あり。
+[15-Jan-2021 01:30:00 Asia/Tokyo] debug：メールを送信しました。
+[15-Jan-2021 01:30:00 Asia/Tokyo] debug：セッション変数の中身：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => ZxmaQI5h
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643600
+)
+
+[15-Jan-2021 01:30:00 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:30:00 Asia/Tokyo] debug：「　パスワード再発行認証キー入力ページ　
+[15-Jan-2021 01:30:00 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:30:00 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:30:00 Asia/Tokyo] debug：session ID：2c90pfmrulgn3o8c6vmg6qh64i
+[15-Jan-2021 01:30:00 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => メールを送信しました
+    [auth_key] => ZxmaQI5h
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643600
+)
+
+[15-Jan-2021 01:30:00 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641800
+[15-Jan-2021 01:30:00 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindRecieve.php on line 14
+[15-Jan-2021 01:30:00 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:30:00 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:30:16 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:30:16 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:30:16 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:30:16 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:30:16 Asia/Tokyo] debug：session ID：mopsbkprdhgiug0kirhgpnt6rg
+[15-Jan-2021 01:30:16 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+    [auth_key] => ZxmaQI5h
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643600
+)
+
+[15-Jan-2021 01:30:16 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641816
+[15-Jan-2021 01:30:16 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:30:16 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:30:16 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:30:24 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:30:24 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:30:24 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:30:24 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:30:24 Asia/Tokyo] debug：session ID：jspjlku9cujhkcslka1mvoj1ms
+[15-Jan-2021 01:30:24 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+    [auth_key] => ZxmaQI5h
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643600
+)
+
+[15-Jan-2021 01:30:24 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641824
+[15-Jan-2021 01:30:24 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:30:24 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:30:24 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:30:24 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:30:24 Asia/Tokyo] debug：POST情報：Array
+(
+    [email] => eee@eee
+)
+
+[15-Jan-2021 01:30:24 Asia/Tokyo] debug：未入力チェックOK。
+[15-Jan-2021 01:30:24 Asia/Tokyo] debug：バリデーションOK。
+[15-Jan-2021 01:30:24 Asia/Tokyo] debug：クエリに失敗したかDBに登録のないEmailが入力されました。
+[15-Jan-2021 01:31:34 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:31:34 Asia/Tokyo] debug：「　パスワード再発行メール送信ページ　
+[15-Jan-2021 01:31:34 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[15-Jan-2021 01:31:34 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[15-Jan-2021 01:31:34 Asia/Tokyo] debug：session ID：njtnqkpkuhk4ig0dbit3d6kn9r
+[15-Jan-2021 01:31:34 Asia/Tokyo] debug：session variable：Array
+(
+    [msg_success] => 
+    [auth_key] => ZxmaQI5h
+    [auth_email] => ppp@ppp
+    [auth_key_limit] => 1610643600
+)
+
+[15-Jan-2021 01:31:34 Asia/Tokyo] debug：現在日時タイムスタンプ：1610641894
+[15-Jan-2021 01:31:34 Asia/Tokyo] PHP Warning:  Undefined array key "user_id" in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passRemindSend.php on line 13
+[15-Jan-2021 01:31:34 Asia/Tokyo] debug：ユーザー情報を取得します。
+[15-Jan-2021 01:31:34 Asia/Tokyo] debug：クエリ成功。
+[15-Jan-2021 01:31:34 Asia/Tokyo] debug：POST送信があります。
+[15-Jan-2021 01:31:34 Asia/Tokyo] debug：POST情報：Array
+(
+    [email] => eee@eee
+)
+
+[15-Jan-2021 01:31:34 Asia/Tokyo] debug：未入力チェックOK。
+[15-Jan-2021 01:31:34 Asia/Tokyo] debug：バリデーションOK。
+[15-Jan-2021 01:31:34 Asia/Tokyo] debug：クエリに失敗したかDBに登録のないEmailが入力されました。
