@@ -40,6 +40,8 @@ if (!empty($_POST)) {
     validRequired($email, 'email');
 
     if (empty($err_msg)) {
+        debug('input check OK.');
+
         //DBの情報と入力情報が異なる場合にバリデーションを行う
         if ($dbFormData['username'] !== $username) {
             //名前の最大文字数チェック
@@ -124,7 +126,7 @@ require('goodbook_head.php');
                             <i class="fas fa-user-circle fa-2x"></i>
                         </div>
                         <div>
-                            <h1><?php userInfoDisplay($dbFormData, "username") ?></h1>
+                            <h1><?php userInfoIndicate($dbFormData, "username") ?></h1>
                         </div>
                     </div>
                 </div>
@@ -190,27 +192,27 @@ require('goodbook_head.php');
                                 <div class="mypage_border"></div>
                                 <div class="profile_list">
                                     <p>name</p>
-                                    <p><?php userInfoDisplay($dbFormData, "username"); ?></p>
+                                    <p><?php userInfoIndicate($dbFormData, "username"); ?></p>
                                 </div>
                                 <div class="profile_list">
                                     <p>tel</p>
-                                    <p><?php userInfoDisplay($dbFormData, "tel"); ?></p>
+                                    <p><?php userInfoIndicate($dbFormData, "tel"); ?></p>
                                 </div>
                                 <div class="profile_list">
                                     <p>zip code</p>
-                                    <p><?php userInfoDisplay($dbFormData, "zip"); ?></p>
+                                    <p><?php userInfoIndicate($dbFormData, "zip"); ?></p>
                                 </div>
                                 <div class="profile_list">
                                     <p>addr</p>
-                                    <p><?php userInfoDisplay($dbFormData, "addr"); ?></p>
+                                    <p><?php userInfoIndicate($dbFormData, "addr"); ?></p>
                                 </div>
                                 <div class="profile_list">
                                     <p>age</p>
-                                    <p><?php userInfoDisplay($dbFormData, "age"); ?></p>
+                                    <p><?php userInfoIndicate($dbFormData, "age"); ?></p>
                                 </div>
                                 <div class="profile_list" id="email">
                                     <p>email</p>
-                                    <p><?php userInfoDisplay($dbFormData, "email"); ?></p>
+                                    <p><?php userInfoIndicate($dbFormData, "email"); ?></p>
                                 </div>
                             </div>
                         </div>

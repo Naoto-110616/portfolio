@@ -183,6 +183,21 @@ function validNumber($str, $key)
         $err_msg[$key] = MSG11;
     }
 }
+//DBの情報と入力情報が異なる場合にバリデーションを行う
+function dbPassMatch($pass_old, $userData, $key1, $key2)
+{
+    //古いパスワードとDBパスワードを照合（DBに入っているデータと同じであれば、半角英数字チェックや最大文字チェックは行わなくても問題ない）
+    if (!password_verify($pass_old, $userData[$key1])) {
+        $err_msg[$key2] = MSG12;
+    }
+}
+function passNewOldMatch($pass_old, $pass_new, $key)
+{
+    //新しいパスワードと古いパスワードが同じかチェック
+    if ($pass_old === $pass_new) {
+        $err_msg[$key] = MSG13;
+    }
+}
 //パスワードチェック
 function validPass($str, $key)
 {
@@ -209,12 +224,12 @@ function getErrMsglabel($key)
     }
 }
 // userinfo表示
-function userInfoDisplay($dbFormData, $key)
+function userInfoIndicate($dbFormData, $key)
 {
-    if (empty($dbFormData[$key])) {
-        echo "Not entered";
-    } else {
+    if (!empty($dbFormData[$key])) {
         echo $dbFormData[$key];
+    } else {
+        echo "Not entered";
     };
 }
 //================================
@@ -281,6 +296,17 @@ function login($email, $pass, $dbh, $pass_save, $key1, $key2)
         $err_msg[$key1] = MSG07;
         $err_msg[$key2] = MSG07;
     }
+}
+
+// logout関数
+function logOut()
+{
+    debug('ログアウトします。');
+    // セッションを削除（ログアウトする）
+    session_destroy();
+    debug('ログインページへ遷移します。');
+    // ログインページへ
+    header("Location:login.php");
 }
 
 // user登録関数
@@ -375,9 +401,9 @@ function chengePass($dbh, $userData, $pass_new)
 
         //メールを送信
         $username = ($userData['username']) ? $userData['username'] : '名無し';
-        $from = 'info@webukatu.com';
+        $from = 'info@goodbook.com';
         $to = $userData['email'];
-        $subject = 'パスワード変更通知｜WEBUKATUMARKET';
+        $subject = 'パスワード変更通知｜goodbook';
         //EOTはEndOfFileの略。ABCでもなんでもいい。先頭の<<<の後の文字列と合わせること。最後のEOTの前後に空白など何も入れてはいけない。
         //EOT内の半角空白も全てそのまま半角空白として扱われるのでインデントはしないこと
         $comment = <<<EOT
@@ -385,9 +411,9 @@ function chengePass($dbh, $userData, $pass_new)
 パスワードが変更されました。
 
 ////////////////////////////////////////
-ウェブカツマーケットカスタマーセンター
-URL  http://webukatu.com/
-E-mail info@webukatu.com
+goodbookカスタマーセンター
+URL  http://goodbook.com/
+E-mail info@goodbook.com
 ////////////////////////////////////////
 EOT;
         sendMail($from, $to, $subject, $comment);

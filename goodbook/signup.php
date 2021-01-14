@@ -19,16 +19,14 @@ if (!empty($_POST)) {
     validRequired($pass_retype, "pass_retype");
 
     if (empty($err_msg)) {
+        debug('input check OK.');
+
         validEmail($email, "email");
         validMaxLen($email, "email");
         validEmailDup($email, "email");
 
-        validHalf($pass, "pass");
-        validMaxLen($pass, "pass");
-        validMinLen($pass, "pass");
-
-        validMaxLen($pass_retype, "pass_retype");
-        validMinLen($pass_retype, "pass_retype");
+        validPass($pass, "pass");
+        validPass($pass_retype, "pass_retype");
 
         if (empty($err_msg)) {
 

@@ -36,7 +36,7 @@
                             <i class="fas fa-user-circle fa-4x"></i>
                         </div>
                         <div class="myInfo">
-                            <p>My name</p>
+                            <p><?php userInfoIndicate($dbFormData, "username") ?></p>
                             <p>View my profile</p>
                         </div>
                     </a>

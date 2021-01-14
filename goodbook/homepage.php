@@ -9,6 +9,8 @@ debugLogStart();
 
 auth();
 
+// DBからユーザーデータを取得
+$dbFormData = getUser($_SESSION['user_id']);
 
 ?>
 

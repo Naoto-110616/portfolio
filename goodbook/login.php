@@ -19,12 +19,13 @@ if (!empty($_POST)) {
 
     validRequired($email, "email");
     validRequired($pass, "pass");
+
     if (empty($err_msg)) {
+        debug('input check OK.');
+
         validEmail($email, "email");
         validMaxLen($email, "email");
-        validHalf($pass, "pass");
-        validMaxLen($pass, "pass");
-        validMinLen($pass, "pass");
+        validPass($pass, "pass");
 
 
         if (empty($err_msg)) {
