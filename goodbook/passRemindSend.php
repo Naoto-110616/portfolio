@@ -7,7 +7,6 @@ debug('「　passRemindSendpage　');
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
 debugLogStart();
 
-auth();
 // DBからユーザーデータを取得
 $dbFormData = getUser($_SESSION['user_id']);
 
@@ -38,7 +37,7 @@ require("goodbook_head.php");
                 </div>
             </div>
             <div class="toMypage">
-                <a href="mypage.php">&lt; To mypage</a>
+                <a href="mypage.php">&lt; <?php notLoggedMsg("To mypage", "To login page"); ?></a>
             </div>
         </section>
     </div>

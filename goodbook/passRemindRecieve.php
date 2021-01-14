@@ -7,7 +7,6 @@ debug('「　passRemindSendpage　');
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
 debugLogStart();
 
-auth();
 // DBからユーザーデータを取得
 $dbFormData = getUser($_SESSION['user_id']);
 
@@ -38,7 +37,7 @@ require("goodbook_head.php");
                 </div>
             </div>
             <div class="toMypage">
-                <a href="passRemindSend.php">&lt; To Resend password reissue email</a>
+                <a href="passRemindSend.php">&lt; To Resend password reissue email </a>
             </div>
         </section>
     </div>

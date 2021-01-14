@@ -37,7 +37,7 @@
                         </div>
                         <div class="myInfo">
                             <p><?php userInfoIndicate($dbFormData, "username") ?></p>
-                            <p>View my profile</p>
+                            <p> <?php notLoggedMsg("View my profile", "Please login") ?></p>
                         </div>
                     </a>
                 </div>
@@ -85,7 +85,7 @@
                                 <i class="fas fa-door-open fa-2x"></i>
                             </div>
                             <div class="Menu_element_comment">
-                                <p>log out</p>
+                                <p><?php notLoggedMsg("logout", "login") ?></p>
                             </div>
                         </div>
                     </a>

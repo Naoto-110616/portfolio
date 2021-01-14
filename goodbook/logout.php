@@ -7,4 +7,4 @@ debug('「　logout page　');
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
 debugLogStart();
 
-logOut();
+logout();

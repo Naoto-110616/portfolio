@@ -223,15 +223,6 @@ function getErrMsglabel($key)
         return "err";
     }
 }
-// userinfo表示
-function userInfoIndicate($dbFormData, $key)
-{
-    if (!empty($dbFormData[$key])) {
-        echo $dbFormData[$key];
-    } else {
-        echo "Not entered";
-    };
-}
 //================================
 // data base
 //================================
@@ -299,7 +290,7 @@ function login($email, $pass, $dbh, $pass_save, $key1, $key2)
 }
 
 // logout関数
-function logOut()
+function logout()
 {
     debug('ログアウトします。');
     // セッションを削除（ログアウトする）
@@ -407,15 +398,15 @@ function chengePass($dbh, $userData, $pass_new)
         //EOTはEndOfFileの略。ABCでもなんでもいい。先頭の<<<の後の文字列と合わせること。最後のEOTの前後に空白など何も入れてはいけない。
         //EOT内の半角空白も全てそのまま半角空白として扱われるのでインデントはしないこと
         $comment = <<<EOT
-{$username}　さん
-パスワードが変更されました。
+        {$username}　さん
+        パスワードが変更されました。
 
-////////////////////////////////////////
-goodbookカスタマーセンター
-URL  http://goodbook.com/
-E-mail info@goodbook.com
-////////////////////////////////////////
-EOT;
+        ////////////////////////////////////////
+        goodbookカスタマーセンター
+        URL  http://goodbook.com
+        E-mail info@goodbook.com
+        ////////////////////////////////////////
+        EOT;
         sendMail($from, $to, $subject, $comment);
 
         header("Location:mypage.php"); //マイページへ
@@ -537,9 +528,31 @@ function sendMail($from, $to, $subject, $comment)
 }
 
 //================================
+// 画面表示表示
+//================================
+// loginしている場合とそうでない場合での表示を変える
+function notLoggedMsg($key1, $key2)
+{
+    // ログインしている場合
+    if (!empty($_SESSION['login_date'])) {
+        echo $key1;
+    } else {
+        echo $key2;
+    }
+}
+// userinfo表示
+function userInfoIndicate($dbFormData, $key)
+{
+    if (!empty($dbFormData[$key])) {
+        echo $dbFormData[$key];
+    } else {
+        echo "Not entered";
+    };
+}
+
+//================================
 // other
 //================================
-
 //sessionを１回だけ取得できる
 function getSessionFlash($key)
 {

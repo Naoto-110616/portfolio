@@ -7,9 +7,6 @@ debug('「　login page　');
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
 debugLogStart();
 
-auth();
-
-
 if (!empty($_POST)) {
     debug('POST送信があります。');
 
@@ -85,7 +82,7 @@ require("head.php");
                             </label>
                         </div>
                         <div class="forgotdiv">
-                            <a href="" class="forgot">Forgot Password?</a>
+                            <a href="passRemindSend.php" class="forgot">Forgot Password?</a>
                         </div>
                         <div class="boder1">
                             <p class="box"></p>
