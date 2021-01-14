@@ -34,22 +34,16 @@ if (!empty($_POST)) {
     validRequired($pass_new_re, 'pass_new_re');
 
     if (empty($err_msg)) {
-        debug('未入力チェックOK。');
+        debug('input check OK.');
 
         //古いパスワードのチェック
         validPass($pass_old, 'pass_old');
         //新しいパスワードのチェック
         validPass($pass_new, 'pass_new');
-
         //古いパスワードとDBパスワードを照合（DBに入っているデータと同じであれば、半角英数字チェックや最大文字チェックは行わなくても問題ない）
-        if (!password_verify($pass_old, $userData['pass'])) {
-            $err_msg['pass_old'] = MSG12;
-        }
-
+        dbPassMatch($pass_old, $userData, "pass", "pass_old");
         //新しいパスワードと古いパスワードが同じかチェック
-        if ($pass_old === $pass_new) {
-            $err_msg['pass_new'] = MSG13;
-        }
+        passNewOldMatch($pass_old, $pass_new, "pass_new");
         //パスワードとパスワード再入力が合っているかチェック（ログイン画面では最大、最小チェックもしていたがパスワードの方でチェックしているので実は必要ない）
         validMatch($pass_new, $pass_new_re, 'pass_new_re');
 
