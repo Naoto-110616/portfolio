@@ -19,7 +19,7 @@ if (!empty($_POST)) {
     validRequired($pass_retype, "pass_retype");
 
     if (empty($err_msg)) {
-        debug('input check OK.');
+        debug('未入力チェックOK。');
 
         validEmail($email, "email");
         validMaxLen($email, "email");
@@ -36,8 +36,7 @@ if (!empty($_POST)) {
                 debug('バリデーョンOKです。');
 
                 try {
-                    $dbh = dbConnect();
-                    signUp($email, $pass, $dbh, "email");
+                    signUp($email, $pass, "email");
                 } catch (Exception $e) {
                     error_log("error" . $e->getMessage());
                     $err_msg["mail"] = MSG09;

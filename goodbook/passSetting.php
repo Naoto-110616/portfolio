@@ -32,10 +32,10 @@ require("goodbook_head.php");
                     <div class="form-container">
                         <div class="passSetting">
                             <div class="passEdit">
-                                <a href="passRemindSend.php">Change Password</a>
+                                <a href="passEdit.php">Change Password</a>
                             </div>
                             <div class="passEdit">
-                                <a href="">Remind Password</a>
+                                <a href="passRemindSend.php">Remind Password</a>
                             </div>
                         </div>
                     </div>

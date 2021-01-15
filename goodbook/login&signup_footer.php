@@ -18,8 +18,8 @@
         </div>
         <div class="listdiv">
             <ul class="list">
-                <li class="interval"><a href="">Sign Up</a></li>
-                <li class="interval"><a href="">Log In</a></li>
+                <li class="interval"><a href="signup.php">Sign Up</a></li>
+                <li class="interval"><a href="login.php">Log In</a></li>
                 <li class="interval"><a href="">Messenger</a></li>
                 <li class="interval"><a href="">Facebook Lite</a></li>
                 <li class="interval"><a href="">Watch</a></li>

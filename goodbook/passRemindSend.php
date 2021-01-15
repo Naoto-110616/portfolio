@@ -4,11 +4,12 @@
 require('function.php');
 
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
-debug('「　パスワード再発行メール送信ページ　');
+debug('「　Password reissue email sending page　');
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
 debugLogStart();
 
 //ログイン認証はなし（ログインできない人が使う画面なので）
+
 // DBからユーザーデータを取得
 $dbFormData = getUser($_SESSION['user_id']);
 
@@ -39,12 +40,10 @@ if (!empty($_POST)) {
 
             //例外処理
             try {
-                // DBへ接続
-                $dbh = dbConnect();
-                passRemindSend($dbh, $email);
+                passRemindSend($email);
             } catch (Exception $e) {
                 error_log('エラー発生:' . $e->getMessage());
-                $err_msg['common'] = MSG09;
+                $err_msg['email'] = MSG09;
             }
         }
     }

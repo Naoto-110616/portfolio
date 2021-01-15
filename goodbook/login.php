@@ -7,6 +7,8 @@ debug('「　login page　');
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
 debugLogStart();
 
+auth();
+
 if (!empty($_POST)) {
     debug('POST送信があります。');
 
@@ -18,7 +20,7 @@ if (!empty($_POST)) {
     validRequired($pass, "pass");
 
     if (empty($err_msg)) {
-        debug('input check OK.');
+        debug('未入力チェックOK。');
 
         validEmail($email, "email");
         validMaxLen($email, "email");
@@ -29,8 +31,7 @@ if (!empty($_POST)) {
             debug('バリデーションOKです。');
 
             try {
-                $dbh = dbConnect();
-                login($email, $pass, $dbh, $pass_save, "email", "pass");
+                login($email, $pass, $pass_save, "email", "pass");
             } catch (Exception $e) {
                 error_log("error:" . $e->getMessage());
                 $err_msg["email"] = MSG09;

@@ -4,7 +4,7 @@
 require('function.php');
 
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
-debug('「　パスワード再発行認証キー入力ページ　');
+debug('「 Password reissue authentication key input page ');
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
 debugLogStart();
 
@@ -12,6 +12,7 @@ debugLogStart();
 
 // DBからユーザーデータを取得
 $dbFormData = getUser($_SESSION['user_id']);
+
 //SESSIONに認証キーがあるか確認、なければリダイレクト
 if (empty($_SESSION['auth_key'])) {
     header("Location:passRemindSend.php"); //認証キー送信ページへ
@@ -43,10 +44,10 @@ if (!empty($_POST)) {
             debug('バリデーションOK。');
 
             if ($auth_key !== $_SESSION['auth_key']) {
-                $err_msg['common'] = MSG15;
+                $err_msg['token'] = MSG15;
             }
             if (time() > $_SESSION['auth_key_limit']) {
-                $err_msg['common'] = MSG16;
+                $err_msg['token'] = MSG16;
             }
 
             if (empty($err_msg)) {
@@ -56,12 +57,10 @@ if (!empty($_POST)) {
 
                 //例外処理
                 try {
-                    // DBへ接続
-                    $dbh = dbConnect();
-                    passRemindRecieve($dbh, $pass);
+                    passRemindRecieve($pass);
                 } catch (Exception $e) {
                     error_log('エラー発生:' . $e->getMessage());
-                    $err_msg['common'] = MSG09;
+                    $err_msg['token'] = MSG09;
                 }
             }
         }
@@ -76,7 +75,7 @@ require("goodbook_head.php");
 
 <body>
     <?php require("goodbook_header.php"); ?>
-    <p id="js-show-msg" style="display:none; padding-top: 30px;" class="msg-slide">
+    <p id="js-show-msg" style="display:none; padding-top: 64px;" class="msg-slide">
         <?php echo getSessionFlash('msg_success'); ?>
     </p>
 

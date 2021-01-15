@@ -4,19 +4,17 @@
 //================================
 // log
 //================================
-
 // errorlevel
 error_reporting(E_ALL);
 //ログを取るか
 ini_set('log_errors', 'On');
 // logの出力ファイルを指定
 ini_set('error_log', 'php.log');
-
+ini_set("display_errors", "0");
 
 //================================
 // デバッグ
 //================================
-
 //デバッグフラグ
 $debug_flg = true;
 //デバッグログ関数
@@ -31,7 +29,6 @@ function debug($str)
 //================================
 // session準備・session有効期限を延ばす
 //================================
-
 //sessionfileの置き場を変更する（/var/tmp/以下に置くと30日は削除されない）
 session_save_path("/var/tmp/");
 //ガーベージコレクションが削除するセッションの有効期限を設定（30日以上経っているものに対してだけ１００分の１の確率で削除）
@@ -82,12 +79,12 @@ define('MSG10', 'Not in the form of phone num');
 define('MSG11', 'Not in the form of zip code');
 define('MSG12', 'The old password is wrong');
 define('MSG13', 'Same as the old password');
-define('MSG14', '文字で入力してください');
-define('MSG15', '正しくありません');
-define('MSG16', '有効期限が切れています');
+define('MSG14', 'Please enter in letters');
+define('MSG15', 'incorrect');
+define('MSG16', 'Expired');
 define('SUC01', 'Password changed');
 define('SUC02', 'Profile chenged');
-define('SUC03', 'メールを送信しました');
+define('SUC03', 'sent an e-mail');
 
 
 //================================
@@ -124,10 +121,12 @@ function validEmailDup($email, $key)
         $stmt = queryPost($dbh, $sql, $data);
         $restult = $stmt->fetch(PDO::FETCH_ASSOC);
         if (!empty(array_shift($restult))) {
+            global $err_msg;
             $err_msg[$key] = MSG08;
         }
     } catch (Exception $e) {
         error_log("error:" . $e->getMessage());
+        global $err_msg;
         $err_msg[$key] = MSG09;
     }
 }
@@ -200,6 +199,7 @@ function dbPassMatch($pass_old, $userData, $key1, $key2)
 {
     //古いパスワードとDBパスワードを照合（DBに入っているデータと同じであれば、半角英数字チェックや最大文字チェックは行わなくても問題ない）
     if (!password_verify($pass_old, $userData[$key1])) {
+        global $err_msg;
         $err_msg[$key2] = MSG12;
     }
 }
@@ -207,6 +207,7 @@ function passNewOldMatch($pass_old, $pass_new, $key)
 {
     //新しいパスワードと古いパスワードが同じかチェック
     if ($pass_old === $pass_new) {
+        global $err_msg;
         $err_msg[$key] = MSG13;
     }
 }
@@ -263,8 +264,9 @@ function queryPost($dbh, $sql, $data)
 }
 
 // login 関数
-function login($email, $pass, $dbh, $pass_save, $key1, $key2)
+function login($email, $pass, $pass_save, $key1, $key2)
 {
+    $dbh = dbConnect();
     $sql = "SELECT pass,id FROM users WHERE email = :email AND delete_flg = 0 ";
     $data = array(':email' => $email);
     $stmt = queryPost($dbh, $sql, $data);
@@ -292,7 +294,7 @@ function login($email, $pass, $dbh, $pass_save, $key1, $key2)
         $_SESSION['user_id'] = $result['id'];
         // 変数$_SESSIONの中身を表示
         debug('Contents of session variables：' . print_r($_SESSION, true));
-        debug('Move to Homepage');
+        debug('Move to homepage');
         header("Location:homepage.php");
     } else {
         global $err_msg;
@@ -313,8 +315,9 @@ function logout()
 }
 
 // user登録関数
-function signUp($email, $pass, $dbh, $key)
+function signUp($email, $pass, $key)
 {
+    $dbh = dbConnect();
     $sql = 'INSERT INTO users (email, pass, login_time) VALUES (:email, :pass, :login_time)';
     $data = array(
         ':email' => $email,
@@ -336,6 +339,7 @@ function signUp($email, $pass, $dbh, $key)
         header('Location:homepage.php');
     } else {
         error_log("The query failed");
+        global $err_msg;
         $err_msg[$key] = MSG09;
     }
 }
@@ -361,6 +365,7 @@ function withdraw($key)
         header("Location:login.php");
     } else {
         debug('クエリが失敗しました。');
+        global $err_msg;
         $err_msg[$key] = MSG09;
     }
 }
@@ -384,6 +389,7 @@ function editProfile($username, $tel, $zip, $addr, $age, $email, $dbFormData, $k
         header("Location:mypage.php");
     } else {
         debug('クエリに失敗しました。');
+        global $err_msg;
         $err_msg[$key] = MSG09;
     }
 }
@@ -392,11 +398,15 @@ function editProfile($username, $tel, $zip, $addr, $age, $email, $dbFormData, $k
 // password
 //================================
 // chenge pass 関数
-function chengePass($dbh, $userData, $pass_new)
+function chengePass($userData, $pass_new)
 {
+    $dbh = dbConnect();
     // SQL文作成
     $sql = 'UPDATE users SET pass = :pass WHERE id = :id';
-    $data = array(':id' => $_SESSION['user_id'], ':pass' => password_hash($pass_new, PASSWORD_DEFAULT));
+    $data = array(
+        ':id' => $_SESSION['user_id'],
+        ':pass' => password_hash($pass_new, PASSWORD_DEFAULT)
+    );
     // クエリ実行
     $stmt = queryPost($dbh, $sql, $data);
 
@@ -427,11 +437,13 @@ function chengePass($dbh, $userData, $pass_new)
         header("Location:mypage.php"); //マイページへ
     } else {
         debug('クエリに失敗しました。');
-        $err_msg['common'] = MSG07;
+        global $err_msg;
+        $err_msg['common'] = MSG09;
     }
 }
-function passRemindSend($dbh, $email)
+function passRemindSend($email)
 {
+    $dbh = dbConnect();
     // SQL文作成
     $sql = 'SELECT count(*) FROM users WHERE email = :email AND delete_flg = 0';
     $data = array(':email' => $email);
@@ -448,26 +460,26 @@ function passRemindSend($dbh, $email)
         $auth_key = makeRandKey(); //認証キー生成
 
         //メールを送信
-        $from = 'info@webukatu.com';
+        $from = 'info@goodbook.com';
         $to = $email;
-        $subject = '【パスワード再発行認証】｜WEBUKATUMARKET';
+        $subject = '【パスワード再発行認証】｜goodbook';
         //EOTはEndOfFileの略。ABCでもなんでもいい。先頭の<<<の後の文字列と合わせること。最後のEOTの前後に空白など何も入れてはいけない。
         //EOT内の半角空白も全てそのまま半角空白として扱われるのでインデントはしないこと
         $comment = <<<EOT
     本メールアドレス宛にパスワード再発行のご依頼がありました。
     下記のURLにて認証キーをご入力頂くとパスワードが再発行されます。
 
-    パスワード再発行認証キー入力ページ：http://localhost:8888/webservice_practice07/passRemindRecieve.php
+    パスワード再発行認証キー入力ページ：http://localhost/Github/portfolio/goodbook/passRemindRecieve.php
     認証キー：{$auth_key}
     ※認証キーの有効期限は30分となります
 
     認証キーを再発行されたい場合は下記ページより再度再発行をお願い致します。
-    http://localhost:8888/webservice_practice07/passRemindSend.php
+    http://localhost/Github/portfolio/goodbook/passRemindSend.php
 
     ////////////////////////////////////////
-    ウェブカツマーケットカスタマーセンター
-    URL  http://webukatu.com/
-    E-mail info@webukatu.com
+    goodbookカスタマーセンター
+    URL  http://goodbook.com/
+    E-mail info@goodbook.com
     ////////////////////////////////////////
     EOT;
         sendMail($from, $to, $subject, $comment);
@@ -482,15 +494,20 @@ function passRemindSend($dbh, $email)
 
     } else {
         debug('クエリに失敗したかDBに登録のないEmailが入力されました。');
-        $err_msg['common'] = MSG09;
+        global $err_msg;
+        $err_msg['email'] = MSG09;
     }
 }
 
-function passRemindRecieve($dbh, $pass)
+function passRemindRecieve($pass)
 {
+    $dbh = dbConnect();
     // SQL文作成
     $sql = 'UPDATE users SET pass = :pass WHERE email = :email AND delete_flg = 0';
-    $data = array(':email' => $_SESSION['auth_email'], ':pass' => password_hash($pass, PASSWORD_DEFAULT));
+    $data = array(
+        ':email' => $_SESSION['auth_email'],
+        ':pass' => password_hash($pass, PASSWORD_DEFAULT)
+    );
     // クエリ実行
     $stmt = queryPost($dbh, $sql, $data);
 
@@ -499,23 +516,23 @@ function passRemindRecieve($dbh, $pass)
         debug('クエリ成功。');
 
         //メールを送信
-        $from = 'info@webukatu.com';
+        $from = 'info@goodbook.com';
         $to = $_SESSION['auth_email'];
-        $subject = '【パスワード再発行完了】｜WEBUKATUMARKET';
+        $subject = '【パスワード再発行完了】｜goodbook';
         //EOTはEndOfFileの略。ABCでもなんでもいい。先頭の<<<の後の文字列と合わせること。最後のEOTの前後に空白など何も入れてはいけない。
         //EOT内の半角空白も全てそのまま半角空白として扱われるのでインデントはしないこと
         $comment = <<<EOT
     本メールアドレス宛にパスワードの再発行を致しました。
     下記のURLにて再発行パスワードをご入力頂き、ログインください。
 
-    ログインページ：http://localhost:8888/webservice_practice07/login.php
+    ログインページ：http://localhost/Github/portfolio/goodbook/login.php
     再発行パスワード：{$pass}
     ※ログイン後、パスワードのご変更をお願い致します
 
     ////////////////////////////////////////
-    ウェブカツマーケットカスタマーセンター
-    URL  http://webukatu.com/
-    E-mail info@webukatu.com
+    goodbookカスタマーセンター
+    URL  http://goodbook.com/
+    E-mail info@goodbook.com
     ////////////////////////////////////////
     EOT;
         sendMail($from, $to, $subject, $comment);
@@ -529,7 +546,8 @@ function passRemindRecieve($dbh, $pass)
 
     } else {
         debug('クエリに失敗しました。');
-        $err_msg['common'] = MSG09;
+        global $err_msg;
+        $err_msg['token'] = MSG09;
     }
 }
 
@@ -645,7 +663,7 @@ function sendMail($from, $to, $subject, $comment)
 }
 
 //================================
-// 画面表示表示
+// 画面表示
 //================================
 // loginしている場合とそうでない場合での表示を変える
 function notLoggedMsg($key1, $key2)
@@ -689,8 +707,6 @@ function makeRandKey($length = 8)
     }
     return $str;
 }
-
-
 function showVariable($var)
 {
     echo "<pre>";

@@ -34,7 +34,7 @@ if (!empty($_POST)) {
     validRequired($pass_new_re, 'pass_new_re');
 
     if (empty($err_msg)) {
-        debug('input check OK.');
+        debug('未入力チェックOK。');
 
         //古いパスワードのチェック
         validPass($pass_old, 'pass_old');
@@ -52,9 +52,7 @@ if (!empty($_POST)) {
 
             //例外処理
             try {
-                // DBへ接続
-                $dbh = dbConnect();
-                chengePass($dbh, $userData, $pass_new);
+                chengePass($userData, $pass_new);
             } catch (Exception $e) {
                 error_log('エラー発生:' . $e->getMessage());
                 $err_msg['common'] = MSG09;
