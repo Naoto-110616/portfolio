@@ -17,8 +17,6 @@ auth();
 // DBからユーザーデータを取得
 $userData = getUser($_SESSION['user_id']);
 debug('取得したユーザー情報：' . print_r($userData, true));
-
-//post送信されていた場合
 if (!empty($_POST)) {
     debug('POST送信があります。');
     debug('POST情報：' . print_r($_POST, true));
@@ -50,13 +48,7 @@ if (!empty($_POST)) {
         if (empty($err_msg)) {
             debug('バリデーションOK。');
 
-            //例外処理
-            try {
-                chengePass($userData, $pass_new);
-            } catch (Exception $e) {
-                error_log('エラー発生:' . $e->getMessage());
-                $err_msg['common'] = MSG09;
-            }
+            chengePass($userData, $pass_new);
         }
     }
 }
@@ -118,8 +110,9 @@ require("goodbook_head.php");
             </div>
         </section>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="js/homepage.js"></script>
+    <?php
+    require("jsSrc.php");
+    ?>
 </body>
 
 </html>

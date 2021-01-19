@@ -14,11 +14,14 @@ auth();
 //================================
 // 画面処理
 //================================
+
+//================================
+// edit profile
+//================================
 // DBからユーザーデータを取得
 $dbFormData = getUser($_SESSION['user_id']);
 
 debug('取得したユーザー情報：' . print_r($dbFormData, true));
-
 // post送信されていた場合
 if (!empty($_POST)) {
     debug('POST送信があります。');
@@ -79,17 +82,14 @@ if (!empty($_POST)) {
         if (empty($err_msg)) {
             debug('バリデーションOKです。');
 
-            //例外処理
-            try {
-                editProfile($username, $tel, $zip, $addr, $age, $email, $dbFormData, "common");
-            } catch (Exception $e) {
-                error_log('エラー発生:' . $e->getMessage());
-                $err_msg['common'] = MSG09;
-            }
+            // editprofile機能
+            editProfile($username, $tel, $zip, $addr, $age, $email, $dbFormData, "common");
         }
     }
 }
 debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
+
+
 ?>
 
 <?php
@@ -253,11 +253,11 @@ require('goodbook_head.php');
                 </div>
             </div>
         </article>
-        <article class="profile_edit_modalwindow">
-            <div class="profile_edit_screen_overall">
-                <div class="profile_edit_form_div">
-                    <div class="profile_edit_form">
-                        <div class="profile_edit_form_title">
+        <article class="modalwindow">
+            <div class="modalwindow_screen_overall">
+                <div class="modalwindow_form_div">
+                    <div class="modalwindow_form">
+                        <div class="modalwindow_form_title">
                             <div class="edit_title">
                                 <h1>edit profile</h1>
                             </div>
@@ -337,11 +337,9 @@ require('goodbook_head.php');
             </div>
         </article>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
-    <script src="js/swiper.js"></script>
-    <script src="js/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="js/homepage.js"></script>
+    <?php
+    require("jsSrc.php");
+    ?>
 </body>
 
 </html>

@@ -12,11 +12,11 @@ if (!empty($_POST)) {
 
     $email = $_POST['email'];
     $pass = $_POST['pass'];
-    $pass_retype = $_POST['pass_retype'];
+    $pass_re = $_POST['pass_re'];
 
     validRequired($email, "email");
     validRequired($pass, "pass");
-    validRequired($pass_retype, "pass_retype");
+    validRequired($pass_re, "pass_re");
 
     if (empty($err_msg)) {
         debug('未入力チェックOK。');
@@ -26,11 +26,11 @@ if (!empty($_POST)) {
         validEmailDup($email, "email");
 
         validPass($pass, "pass");
-        validPass($pass_retype, "pass_retype");
+        validPass($pass_re, "pass_re");
 
         if (empty($err_msg)) {
 
-            validMatch($pass, $pass_retype, "pass");
+            validMatch($pass, $pass_re, "pass");
 
             if (empty($err_msg)) {
                 debug('バリデーョンOKです。');
@@ -39,7 +39,7 @@ if (!empty($_POST)) {
                     signUp($email, $pass, "email");
                 } catch (Exception $e) {
                     error_log("error" . $e->getMessage());
-                    $err_msg["mail"] = MSG09;
+                    $err_msg[$key] = MSG09;
                 }
             } else {
                 debug('バリデーョンNGです。');
@@ -47,6 +47,8 @@ if (!empty($_POST)) {
         }
     }
 }
+
+
 debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
 ?>
 
@@ -64,7 +66,7 @@ require("head.php");
                     <form method="post">
                         <div class="emaildiv" action='login.php'>
                             <label for="email" class="<?php echo getErrMsglabel("email"); ?>">
-                                <input class="email" type="text" name="email" id="email" placeholder="Email" autofocus="1" value="<?php if (!empty($_POST['email'])) echo $_POST['email']; ?>">
+                                <input class="email" type="text" name="email" id="email" placeholder="Email" autofocus="1" value="<?php getFormData("email"); ?>">
                             </label>
                             <div class="help-block"></div>
                             <span class="err_msg"><?php echo getErrMsg("email"); ?>
@@ -72,18 +74,18 @@ require("head.php");
                         </div>
                         <div class="signupinput passworddiv">
                             <label for="password" class="<?php echo getErrMsglabel("pass"); ?>">
-                                <input class="password" type="password" name="pass" id="password" placeholder="Password" value="<?php if (!empty($_POST['pass'])) echo $_POST['pass']; ?>">
+                                <input class="password" type="password" name="pass" id="password" placeholder="Password" value="<?php getFormData("pass"); ?>">
                             </label>
                             <div class="help-block"></div>
                             <span class="err_msg"><?php echo getErrMsg("pass");  ?>
                             </span>
                         </div>
                         <div class="signupinput password_retypediv">
-                            <label for="password_retype" class="<?php echo getErrMsglabel("pass_retype"); ?>">
-                                <input class="password_retype" type="password" name="pass_retype" id="password_retype" placeholder="Password retype" value="<?php if (!empty($_POST['pass_retype'])) echo $_POST['pass_retype']; ?>">
+                            <label for="password_retype" class="<?php echo getErrMsglabel("pass_re"); ?>">
+                                <input class="password_retype" type="password" name="pass_re" id="password_retype" placeholder="Password retype" value="<?php getFormData("pass_re"); ?>">
                             </label>
                             <div class="help-block"></div>
-                            <span class="err_msg"><?php echo getErrMsg("pass_retype");  ?>
+                            <span class="err_msg"><?php echo getErrMsg("pass_re");  ?>
                             </span>
                         </div>
                         <div class="signupinput singupdiv">
@@ -103,9 +105,10 @@ require("head.php");
             </div>
         </div>
     </div>
-    <?php require("login&signup_footer.php") ?>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="js/main.js"></script>
+    <?php
+    require("login&signup_footer.php");
+    require("jsSrc.php");
+    ?>
 </body>
 
 </html>

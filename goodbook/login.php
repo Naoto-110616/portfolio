@@ -12,35 +12,40 @@ auth();
 if (!empty($_POST)) {
     debug('POST送信があります。');
 
+    //変数にユーザー情報を代入
     $email = $_POST['email'];
     $pass = $_POST['pass'];
-    $pass_save = (!empty($_POST['pass_save'])) ? true : false;
+    $pass_save = (!empty($_POST['pass_save'])) ? true : false; //ショートハンド（略記法）という書き方
 
-    validRequired($email, "email");
-    validRequired($pass, "pass");
+    //emailの形式チェック
+    validEmail($email, 'email');
+    //emailの最大文字数チェック
+    validMaxLen($email, 'email');
+
+    //パスワードの半角英数字チェック
+    validHalf($pass, 'pass');
+    //パスワードの最大文字数チェック
+    validMaxLen($pass, 'pass');
+    //パスワードの最小文字数チェック
+    validMinLen($pass, 'pass');
+
+    //未入力チェック
+    validRequired($email, 'email');
+    validRequired($pass, 'pass');
 
     if (empty($err_msg)) {
-        debug('未入力チェックOK。');
+        debug('バリデーションOKです。');
 
-        validEmail($email, "email");
-        validMaxLen($email, "email");
-        validPass($pass, "pass");
-
-
-        if (empty($err_msg)) {
-            debug('バリデーションOKです。');
-
-            try {
-                login($email, $pass, $pass_save, "email", "pass");
-            } catch (Exception $e) {
-                error_log("error:" . $e->getMessage());
-                $err_msg["email"] = MSG09;
-            }
-        } else {
-            debug('バリデーョンNGです。');
+        //例外処理
+        try {
+            login($email, $pass, $pass_save, "email", "pass");
+        } catch (Exception $e) {
+            error_log('エラー発生:' . $e->getMessage());
+            $err_msg['common'] = MSG07;
         }
     }
 }
+
 debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
 ?>
 
@@ -58,7 +63,7 @@ require("head.php");
                     <form method="post">
                         <div class="logininput emaildiv">
                             <label for="email" class="<?php echo getErrMsglabel("email"); ?>">
-                                <input class="email" type="text" name="email" id="email" placeholder="Email" autofocus="1" value="<?php if (!empty($_POST['email'])) echo $_POST['email']; ?>">
+                                <input class="email" type="text" name="email" id="email" placeholder="Email" autofocus="1" value="<?php getFormData("email"); ?>">
                             </label>
                             <div class="help-block"></div>
                             <span class="err_msg"><?php echo getErrMsg("email") ?>
@@ -66,7 +71,7 @@ require("head.php");
                         </div>
                         <div class="logininput passworddiv">
                             <label for="password" class="<?php echo getErrMsglabel("pass"); ?>">
-                                <input class="password" type="password" name="pass" id="password" placeholder="Password" value="<?php if (!empty($_POST['pass'])) echo $_POST['pass']; ?>">
+                                <input class="password" type="password" name="pass" id="password" placeholder="Password" value="<?php getFormData("pass"); ?>">
                             </label>
                             <div class="help-block"></div>
                             <span class="err_msg"><?php echo getErrMsg("pass"); ?>
@@ -99,9 +104,10 @@ require("head.php");
             </div>
         </div>
     </div>
-    <?php require("login&signup_footer.php") ?>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="js/main.js"></script>
+    <?php
+    require("login&signup_footer.php");
+    require("jsSrc.php");
+    ?>
 </body>
 
 </html>

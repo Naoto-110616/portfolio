@@ -17,10 +17,7 @@ $dbFormData = getUser($_SESSION['user_id']);
 if (empty($_SESSION['auth_key'])) {
     header("Location:passRemindSend.php"); //認証キー送信ページへ
 }
-//================================
 
-// 画面処理
-//================================
 //post送信されていた場合
 if (!empty($_POST)) {
     debug('POST送信があります。');
@@ -43,25 +40,15 @@ if (!empty($_POST)) {
         if (empty($err_msg)) {
             debug('バリデーションOK。');
 
-            if ($auth_key !== $_SESSION['auth_key']) {
-                $err_msg['token'] = MSG15;
-            }
-            if (time() > $_SESSION['auth_key_limit']) {
-                $err_msg['token'] = MSG16;
-            }
+            validAuthKeyMuth($auth_key);
+            validAuthKeyExpired();
 
             if (empty($err_msg)) {
                 debug('認証OK。');
 
                 $pass = makeRandKey(); //パスワード生成
 
-                //例外処理
-                try {
-                    passRemindRecieve($pass);
-                } catch (Exception $e) {
-                    error_log('エラー発生:' . $e->getMessage());
-                    $err_msg['token'] = MSG09;
-                }
+                passRemindRecieve($pass);
             }
         }
     }
@@ -105,8 +92,9 @@ require("goodbook_head.php");
             </div>
         </section>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="js/homepage.js"></script>
+    <?php
+    require("jsSrc.php");
+    ?>
 </body>
 
 </html>

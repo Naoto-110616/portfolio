@@ -16,17 +16,8 @@ auth();
 // DBからユーザーデータを取得
 $dbFormData = getUser($_SESSION['user_id']);
 
-// post送信されていた場合
-if (!empty($_POST)) {
-    debug('POST送信があります。');
-    //例外処理
-    try {
-        withdraw("err");
-    } catch (Exception $e) {
-        error_log('error:' . $e->getMessage());
-        $err_msg["err"] = MSG09;
-    }
-}
+withdraw("err");
+
 debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
 ?>
 
@@ -115,12 +106,13 @@ require("goodbook_head.php");
                 </div>
             </section>
             <?php
-            if (!empty($err_msg['err'])) echo $err_msg['err'];
+            getErrMsg("err");
             ?>
         </article>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="js/homepage.js"></script>
+    <?php
+    require("jsSrc.php");
+    ?>
 </body>
 
 </html>

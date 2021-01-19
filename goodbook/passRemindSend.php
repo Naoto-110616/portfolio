@@ -13,9 +13,6 @@ debugLogStart();
 // DBからユーザーデータを取得
 $dbFormData = getUser($_SESSION['user_id']);
 
-//================================
-// 画面処理
-//================================
 //post送信されていた場合
 if (!empty($_POST)) {
     debug('POST送信があります。');
@@ -38,13 +35,7 @@ if (!empty($_POST)) {
         if (empty($err_msg)) {
             debug('バリデーションOK。');
 
-            //例外処理
-            try {
-                passRemindSend($email);
-            } catch (Exception $e) {
-                error_log('エラー発生:' . $e->getMessage());
-                $err_msg['email'] = MSG09;
-            }
+            passRemindSend($email);
         }
     }
 }
@@ -83,8 +74,9 @@ require("goodbook_head.php");
             </div>
         </section>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="js/homepage.js"></script>
+    <?php
+    require("jsSrc.php");
+    ?>
 </body>
 
 </html>
