@@ -696,7 +696,40 @@ function auth()
         }
     }
 }
-function getProduct($u_id, $p_id)
+function createPost($edit_flg, $comment, $pic1, $p_id)
+{
+    //例外処理
+    try {
+        // DBへ接続
+        $dbh = dbConnect();
+        // SQL文作成
+        // 編集画面の場合はUPDATE文、新規登録画面の場合はINSERT文を生成
+        if ($edit_flg) {
+            debug('DB更新です。');
+            $sql = 'UPDATE post SET  comment = :comment, pic1 = :pic1 WHERE user_id = :u_id AND id = :p_id';
+            $data = array(':comment' => $comment, ':pic1' => $pic1, ':u_id' => $_SESSION['user_id'], ':p_id' => $p_id);
+        } else {
+            debug('DB新規登録です。');
+            $sql = 'INSERT INTO post (comment, pic1, user_id, create_date ) values (:comment,  :pic1, :u_id, :date)';
+            $data = array(':comment' => $comment, ':pic1' => $pic1, ":u_id" => $_SESSION['user_id'], ':date' => date('Y-m-d H:i:s'));
+        }
+        debug('SQL：' . $sql);
+        debug('流し込みデータ：' . print_r($data, true));
+        // クエリ実行
+        $stmt = queryPost($dbh, $sql, $data, "common");
+        // クエリ成功の場合
+        if ($stmt) {
+            $_SESSION['msg_success'] = SUC04;
+            debug('マイページへ遷移します。');
+            header("Location:homepage.php"); //マイページへ
+        }
+    } catch (Exception $e) {
+        error_log('エラー発生:' . $e->getMessage());
+        global $err_msg;
+        $err_msg['common'] = MSG09;
+    }
+}
+function getPost($u_id, $p_id)
 {
     debug('商品情報を取得します。');
     debug('ユーザーID：' . $u_id);
@@ -706,14 +739,65 @@ function getProduct($u_id, $p_id)
         // DBへ接続
         $dbh = dbConnect();
         // SQL文作成
-        $sql = 'SELECT * FROM product WHERE user_id = :u_id AND id = :p_id AND delete_flg = 0';
+        $sql = 'SELECT * FROM Post WHERE user_id = :u_id AND id = :p_id AND delete_flg = 0';
         $data = array(':u_id' => $u_id, ':p_id' => $p_id);
         // クエリ実行
-        $stmt = queryPost($dbh, $sql, $data, "product");
+        $stmt = queryPost($dbh, $sql, $data, "Post");
 
         if ($stmt) {
             // クエリ結果のデータを１レコード返却
             return $stmt->fetch(PDO::FETCH_ASSOC);
+        } else {
+            return false;
+        }
+    } catch (Exception $e) {
+        error_log('エラー発生:' . $e->getMessage());
+    }
+}
+function getPostList($currentMinNum = 1, $span = 20)
+{
+    debug('商品情報を取得します。');
+    //例外処理
+    try {
+        // DBへ接続
+        $dbh = dbConnect();
+        // 件数用のSQL文作成
+        $sql = 'SELECT id FROM post';
+        $data = array();
+        // クエリ実行
+        $stmt = queryPost($dbh, $sql, $data, "common");
+        $rst['total'] = $stmt->rowCount(); //総レコード数
+        $rst['total_page'] = ceil($rst['total'] / $span); //総ページ数
+        if (!$stmt) {
+            return false;
+        }
+
+        // ページング用のSQL文作成
+        $sql = 'SELECT * FROM Post';
+        //    if(!empty($category)) $sql .= ' WHERE category = '.$category;
+        //    if(!empty($sort)){
+        //      switch($sort){
+        //        case 1:
+        //          $sql .= ' ORDER BY price ASC';
+        //          break;
+        //        case 2:
+        //          $sql .= ' ORDER BY price DESC';
+        //          break;
+        //        case 3:
+        //          $sql .= ' ORDER BY create_date DESC';
+        //          break;
+        //      }
+        //    }
+        $sql .= ' LIMIT ' . $span . ' OFFSET ' . $currentMinNum;
+        $data = array();
+        debug('SQL：' . $sql);
+        // クエリ実行
+        $stmt = queryPost($dbh, $sql, $data, "common");
+
+        if ($stmt) {
+            // クエリ結果のデータを全レコードを格納
+            $rst['data'] = $stmt->fetchAll();
+            return $rst;
         } else {
             return false;
         }
@@ -791,6 +875,11 @@ function userInfoIndicate($dbFormData, $key)
 //================================
 // other
 //================================
+// サニタイズ
+function sanitize($str)
+{
+    return htmlspecialchars($str, ENT_QUOTES);
+}
 //sessionを１回だけ取得できる
 function getSessionFlash($key)
 {
@@ -867,5 +956,40 @@ function uploadImg($file, $key)
             global $err_msg;
             $err_msg[$key] = $e->getMessage();
         }
+    }
+}
+function uploadIcon($edit_flg, $profPic, $p_id)
+{
+    //例外処理
+    try {
+        // DBへ接続
+        $dbh = dbConnect();
+        // SQL文作成
+        // 編集画面の場合はUPDATE文、新規登録画面の場合はINSERT文を生成
+        if ($edit_flg) {
+            debug('DB更新です。');
+            $sql = 'UPDATE users SET profPic = :profPic WHERE id = :u_id AND id = :p_id';
+            $data = array(':profPic' => $profPic, ':u_id' => $_SESSION['id'], ':p_id' => $p_id);
+        } else {
+            debug('DB新規登録です。');
+            $sql = 'UPDATE users SET profPic = :profPic WHERE id = :u_id';
+            $data = array(':profPic' => $profPic, ':u_id' => $_SESSION['user_id']);
+            // $sql = 'INSERT INTO users (profPic, create_date ) VALUES (:profPic, :date)';
+            // $data = array(':profPic' => $profPic,, ':date' => date('Y-m-d H:i:s'));
+        }
+        debug('SQL：' . $sql);
+        debug('流し込みデータ：' . print_r($data, true));
+        // クエリ実行
+        $stmt = queryPost($dbh, $sql, $data, "common");
+        // クエリ成功の場合
+        if ($stmt) {
+            $_SESSION['msg_success'] = SUC04;
+            debug('マイページへ遷移します。');
+            header("Location:mypage.php"); //マイページへ
+        }
+    } catch (Exception $e) {
+        error_log('エラー発生:' . $e->getMessage());
+        global $err_msg;
+        $err_msg['common'] = MSG09;
     }
 }

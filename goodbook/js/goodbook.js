@@ -42,6 +42,12 @@ $(function () {
 	});
 });
 $(function () {
+	$(".myIcon_img_div").click(function () {
+		$(".modalwindow_screen_overall").toggle();
+		$("body").toggleClass("fixed");
+	});
+});
+$(function () {
 	$(".fa-times-circle").click(function () {
 		$(".modalwindow_screen_overall").toggle();
 		$("body").toggleClass("fixed");

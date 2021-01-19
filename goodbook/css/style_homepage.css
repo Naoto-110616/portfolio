@@ -228,6 +228,22 @@ a {
 .submenu {
 	display: none;
 }
+.myIcon_img_div {
+	display: inline-block;
+	position: relative;
+	top: -145px;
+	left: 168px;
+}
+.myIcon_img {
+	/* float: left; */
+	height: 160px;
+	width: 160px;
+	border-radius: 50%;
+}
+.usernamediv {
+	position: relative;
+	top: -170px;
+}
 .icon_img_div {
 	height: 50px;
 	width: 95%;
@@ -236,7 +252,6 @@ a {
 }
 .icon_img {
 	float: left;
-
 	height: 50px;
 	width: 50px;
 	border-radius: 75px;
@@ -754,7 +769,16 @@ input[type="submit"]:hover {
 	float: right;
 	margin: 10px 10px 10px 0px;
 }
-
+.trim-image-to-circle {
+	width: 165px; /* ※縦横を同値に */
+	height: 165px; /* ※縦横を同値に */
+	border-radius: 50%; /* 角丸半径を50%にする(=円形にする) */
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -145px;
+	margin: auto;
+}
 /* 「「「「「「「「「「「「「「「「「 */
 /* passEditPage */
 /* 「「「「「「「「「「「「「「「「「 */

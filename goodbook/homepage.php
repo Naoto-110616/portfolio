@@ -11,6 +11,7 @@ auth();
 
 // DBからユーザーデータを取得
 $dbFormData = getUser($_SESSION['user_id']);
+debug('取得したユーザー情報：' . print_r($dbFormData, true));
 
 //================================
 // 画面処理
@@ -21,7 +22,7 @@ $dbFormData = getUser($_SESSION['user_id']);
 // GETデータを格納
 $p_id = (!empty($_GET['p_id'])) ? $_GET['p_id'] : '';
 // DBから商品データを取得
-$dbFormData = (!empty($p_id)) ? getProduct($_SESSION['user_id'], $p_id) : '';
+$dbFormData = (!empty($p_id)) ? getPost($_SESSION['user_id'], $p_id) : '';
 // 新規登録画面か編集画面か判別用フラグ
 $edit_flg = (empty($dbFormData)) ? false : true;
 // DBからカテゴリデータを取得
@@ -34,8 +35,8 @@ debug('カテゴリデータ：' . print_r($dbCategoryData, true));
 //================================
 // GETパラメータはあるが、改ざんされている（URLをいじくった）場合、正しい商品データが取れないのでマイページへ遷移させる
 if (!empty($p_id) && empty($dbFormData)) {
-    debug('GETパラメータの商品IDが違います。マイページへ遷移します。');
-    header("Location:homepage.php"); //マイページへ
+    debug('GETパラメータの商品IDが違います。homepageへ遷移します。');
+    header("Location:homepage.php");
 }
 
 // POST送信時処理
@@ -46,91 +47,52 @@ if (!empty($_POST)) {
     debug('FILE情報：' . print_r($_FILES, true));
 
     //変数にユーザー情報を代入
-    // $name = $_POST['name'];
-    // $category = $_POST['category_id'];
-    // $price = (!empty($_POST['price'])) ? $_POST['price'] : 0; //０や空文字の場合は０を入れる。デフォルトのフォームには０が入っている。
     $comment = $_POST['comment'];
     //画像をアップロードし、パスを格納
     $pic1 = (!empty($_FILES['pic1'])) ? uploadImg($_FILES['pic1'], 'pic1') : '';
     // 画像をPOSTしてない（登録していない）が既にDBに登録されている場合、DBのパスを入れる（POSTには反映されないので）
     $pic1 = (empty($pic1) && !empty($dbFormData['pic1'])) ? $dbFormData['pic1'] : $pic1;
-    // $pic2 = (!empty($_FILES['pic2']['name'])) ? uploadImg($_FILES['pic2'], 'pic2') : '';
-    // $pic2 = (empty($pic2) && !empty($dbFormData['pic2'])) ? $dbFormData['pic2'] : $pic2;
-    // $pic3 = (!empty($_FILES['pic3']['name'])) ? uploadImg($_FILES['pic3'], 'pic3') : '';
-    // $pic3 = (empty($pic3) && !empty($dbFormData['pic3'])) ? $dbFormData['pic3'] : $pic3;
 
     validRequired($comment, 'comment');
     // 更新の場合はDBの情報と入力情報が異なる場合にバリデーションを行う
     if (empty($dbFormData)) {
-        //未入力チェック
-        // validRequired($name, 'name');
-        //最大文字数チェック
-        // validMaxLen($name, 'name');
-        //セレクトボックスチェック
-        // validSelect($post, 'post_id');
-        //最大文字数チェック
         validMaxLen($comment, 'comment', 255);
-        //未入力チェック
-        // validRequired($price, 'price');
-        //半角数字チェック
-        // validNumber($price, 'price');
     } else {
-        // if ($dbFormData['name'] !== $name) {
-        //     //未入力チェック
-        //     validRequired($name, 'name');
-        //     //最大文字数チェック
-        //     validMaxLen($name, 'name');
-        // }
-        // if ($dbFormData['post_id'] !== $post) {
-        //     //セレクトボックスチェック
-        //     validSelect($post, 'post_id');
-        // }
         if ($dbFormData['comment'] !== $comment) {
             //最大文字数チェック
             validMaxLen($comment, 'comment', 255);
         }
-        // if ($dbFormData['price'] != $price) { //前回まではキャストしていたが、ゆるい判定でもいい
-        //     //未入力チェック
-        //     validRequired($price, 'price');
-        //     //半角数字チェック
-        //     validNumber($price, 'price');
-        // }
     }
-
     if (empty($err_msg)) {
         debug('バリデーションOKです。');
-
-        //例外処理
-        try {
-            // DBへ接続
-            $dbh = dbConnect();
-            // SQL文作成
-            // 編集画面の場合はUPDATE文、新規登録画面の場合はINSERT文を生成
-            if ($edit_flg) {
-                debug('DB更新です。');
-                $sql = 'UPDATE post SET  comment = :comment, pic1 = :pic1 WHERE user_id = :u_id AND id = :p_id';
-                $data = array(':comment' => $comment, ':pic1' => $pic1, ':u_id' => $_SESSION['user_id'], ':p_id' => $p_id);
-            } else {
-                debug('DB新規登録です。');
-                $sql = 'insert into post (comment, pic1, user_id, create_date ) values (:comment,  :pic1, :u_id, :date)';
-                $data = array(':comment' => $comment, ':pic1' => $pic1, ":u_id" => $_SESSION['user_id'], ':date' => date('Y-m-d H:i:s'));
-            }
-            debug('SQL：' . $sql);
-            debug('流し込みデータ：' . print_r($data, true));
-            // クエリ実行
-            $stmt = queryPost($dbh, $sql, $data, "common");
-            // クエリ成功の場合
-            if ($stmt) {
-                $_SESSION['msg_success'] = SUC04;
-                debug('マイページへ遷移します。');
-                header("Location:homepage.php"); //マイページへ
-            }
-        } catch (Exception $e) {
-            error_log('エラー発生:' . $e->getMessage());
-            $err_msg['common'] = MSG09;
-        }
+        createPost($edit_flg, $comment, $pic1, $p_id);
     }
 }
+
+$dbFormData = getUser($_SESSION['user_id']);
+debug('取得したユーザー情報：' . print_r($dbFormData, true));
+
+// 画面表示用データ取得
+//================================
+// カレントページのGETパラメータを取得
+$currentPageNum = (!empty($_GET['p'])) ? $_GET['p'] : 1; //デフォルトは１ページめ
+// パラメータに不正な値が入っているかチェック
+if (!is_int((int)$currentPageNum)) {
+    error_log('エラー発生:指定ページに不正な値が入りました');
+    header("Location:homepage.php");
+}
+// 表示件数
+$listSpan = 20;
+// 現在の表示レコード先頭を算出
+$currentMinNum = (($currentPageNum - 1) * $listSpan); //1ページ目なら(1-1)*20 = 0 、 ２ページ目なら(2-1)*20 = 20
+// DBから商品データを取得
+$dbProductData = getPostList($currentMinNum);
+// DBからカテゴリデータを取得
+$dbCategoryData = getCategory();
+debug('現在のページ：' . $currentPageNum);
+// debug('フォーム用DBデータ：' . print_r($dbFormData, true));
+//debug('カテゴリデータ：'.print_r($dbCategoryData,true));
+
 debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
 ?>
 
@@ -299,6 +261,67 @@ require("goodbook_head.php");
                             </div>
                         </div>
                     </section>
+                    <?php
+                    foreach ($dbProductData['data'] as $key => $val) :
+                    ?>
+                        <section class="main_center_element main_center_element3">
+                            <div class="icon_img_div">
+                                <img class="icon_img" src="<?php echo sanitize($dbFormData['profPic']); ?>" alt=" utadahikaru_icon">
+                                <div class="user_name_div">
+                                    <p><?php echo userInfoIndicate($dbFormData, "username"); ?></p>
+                                    <p class="time_line"><?php echo mt_rand(1, 24); ?>hour ago</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="main_center_comment"><?php echo sanitize($val["comment"]); ?></p>
+                            </div>
+                            <div class="main_center_mv_div">
+                                <img class="main_center_img" src="<?php echo sanitize($val['pic1']); ?>" alt="">
+                            </div>
+                            <div class="main_center_icon_bottom_div">
+                                <div class="main_center_icon_bottom">
+                                    <div class="main_center_icon_button_div">
+                                        <img class="main_center_icon_button" src="img/homepage_img/download-2.svg" alt="good_button">
+                                    </div>
+                                    <div class="main_center_icon_button_div">
+                                        <img class="main_center_icon_button" src="img/homepage_img/download-1.svg" alt="love_button">
+                                    </div>
+                                    <div class="main_center_icon_button_div">
+                                        <img class="main_center_icon_button" src="img/homepage_img/download.svg" alt="face_button">
+                                    </div>
+                                    <div class="main_center_icon_button_div">
+                                        <p><?php echo mt_rand(0, 1000); ?></p>
+                                    </div>
+                                </div>
+                                <div class="main_center_comment_share_div">
+                                    <p>comment</p>
+                                </div>
+                                <div class="border"></div>
+                                <div class="main_center_element2_share2">
+                                    <div class="main_center_element2_icon_div">
+                                        <div class="main_center_icon main_live_video_icon">
+                                            <i class="far fa-thumbs-up fa-lg"></i>
+                                        </div>
+                                        <p class="icon_button good_subject">good</p>
+                                    </div>
+                                    <div class="main_center_element2_icon_div">
+                                        <div class="main_center_icon main_video_icon">
+                                            <i class="far fa-comment fa-lg"></i>
+                                        </div>
+                                        <p class="icon_button comment_subject">comment</p>
+                                    </div>
+                                    <div class="main_center_element2_icon_div">
+                                        <div class="main_center_icon main_activity_icon">
+                                            <i class="fas fa-reply fa-lg"></i>
+                                        </div>
+                                        <p class="icon_button share_subject">share</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    <?php
+                    endforeach;
+                    ?>
                     <section class="main_center_element main_center_element3">
                         <div class="icon_img_div">
                             <img class="icon_img" src="img/homepage_img/A1OgtUoT7SL._AC_SL1500_.jpg" alt="utadahikaru_icon">
@@ -326,7 +349,7 @@ require("goodbook_head.php");
                                     <img class="main_center_icon_button" src="img/homepage_img/download.svg" alt="face_button">
                                 </div>
                                 <div class="main_center_icon_button_div">
-                                    <p>143</p>
+                                    <p><?php echo mt_rand(0, 200); ?></p>
                                 </div>
                             </div>
                             <div class="main_center_comment_share_div">
@@ -383,7 +406,7 @@ require("goodbook_head.php");
                                     <img class="main_center_icon_button" src="img/homepage_img/download.svg" alt="face_button">
                                 </div>
                                 <div class="main_center_icon_button_div">
-                                    <p>123</p>
+                                    <p><?php echo mt_rand(0, 200); ?></p>
                                 </div>
                             </div>
                             <div class="main_center_comment_share_div">
@@ -438,7 +461,7 @@ require("goodbook_head.php");
                                     <img class="main_center_icon_button" src="img/homepage_img/download.svg" alt="face_button">
                                 </div>
                                 <div class="main_center_icon_button_div">
-                                    <p>13</p>
+                                    <p><?php echo mt_rand(0, 200); ?></p>
                                 </div>
                             </div>
                             <div class="main_center_comment_share_div">
@@ -496,7 +519,7 @@ require("goodbook_head.php");
                                     <img class="main_center_icon_button" src="img/homepage_img/download.svg" alt="face_button">
                                 </div>
                                 <div class="main_center_icon_button_div">
-                                    <p>123</p>
+                                    <p><?php echo mt_rand(0, 200); ?></p>
                                 </div>
                             </div>
                             <div class="main_center_comment_share_div">

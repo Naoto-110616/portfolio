@@ -20,8 +20,8 @@ auth();
 //================================
 // DBからユーザーデータを取得
 $dbFormData = getUser($_SESSION['user_id']);
-
 debug('取得したユーザー情報：' . print_r($dbFormData, true));
+
 // post送信されていた場合
 if (!empty($_POST)) {
     debug('POST送信があります。');
@@ -87,6 +87,82 @@ if (!empty($_POST)) {
         }
     }
 }
+
+$dbFormData = getUser($_SESSION['user_id']);
+debug('取得したユーザー情報：' . print_r($dbFormData, true));
+
+//================================
+// 画面処理
+//================================
+
+// 画面表示用データ取得
+//================================
+// GETデータを格納
+$p_id = (!empty($_GET['p_id'])) ? $_GET['p_id'] : '';
+// DBから商品データを取得
+$dbFormData = (!empty($p_id)) ? getPost($_SESSION['user_id'], $p_id) : '';
+// 新規登録画面か編集画面か判別用フラグ
+$edit_flg = (empty($dbFormData)) ? false : true;
+// DBからカテゴリデータを取得
+$dbCategoryData = getCategory();
+debug('商品ID：' . $p_id);
+debug('フォーム用DBデータ：' . print_r($dbFormData, true));
+debug('カテゴリデータ：' . print_r($dbCategoryData, true));
+
+// パラメータ改ざんチェック
+//================================
+// GETパラメータはあるが、改ざんされている（URLをいじくった）場合、正しい商品データが取れないのでマイページへ遷移させる
+if (!empty($p_id) && empty($dbFormData)) {
+    debug('GETパラメータの商品IDが違います。homepageへ遷移します。');
+    header("Location:mypage.php");
+}
+
+// POST送信時処理
+//================================
+if (!empty($_POST)) {
+    debug('POST送信があります。');
+    debug('POST情報：' . print_r($_POST, true));
+    debug('FILE情報：' . print_r($_FILES, true));
+
+    //画像をアップロードし、パスを格納
+    $profPic = (!empty($_FILES['profPic'])) ? uploadImg($_FILES['profPic'], 'profPic') : '';
+    // 画像をPOSTしてない（登録していない）が既にDBに登録されている場合、DBのパスを入れる（POSTには反映されないので）
+    $profPic = (empty($profPic) && !empty($dbFormData['profPic'])) ? $dbFormData['profPic'] : $profPic;
+
+    // 更新の場合はDBの情報と入力情報が異なる場合にバリデーションを行う
+    if (empty($dbFormData)) {
+        debug("test");
+        if (!empty($err_msg)) {
+            debug("test");
+            debug('バリデーションOKです。');
+            uploadIcon($edit_flg, $profPic, $p_id);
+        }
+    }
+}
+$dbFormData = getUser($_SESSION['user_id']);
+debug('取得したユーザー情報：' . print_r($dbFormData, true));
+
+// 画面表示用データ取得
+//================================
+// カレントページのGETパラメータを取得
+$currentPageNum = (!empty($_GET['p'])) ? $_GET['p'] : 1; //デフォルトは１ページめ
+// パラメータに不正な値が入っているかチェック
+if (!is_int((int)$currentPageNum)) {
+    error_log('エラー発生:指定ページに不正な値が入りました');
+    header("Location:mypage.php");
+}
+// 表示件数
+$listSpan = 20;
+// 現在の表示レコード先頭を算出
+$currentMinNum = (($currentPageNum - 1) * $listSpan); //1ページ目なら(1-1)*20 = 0 、 ２ページ目なら(2-1)*20 = 20
+// DBから商品データを取得
+$dbProductData = getPostList($currentMinNum);
+// DBからカテゴリデータを取得
+$dbCategoryData = getCategory();
+debug('現在のページ：' . $currentPageNum);
+// debug('フォーム用DBデータ：' . print_r($dbFormData, true));
+//debug('カテゴリデータ：'.print_r($dbCategoryData,true));
+
 debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
 
 
@@ -122,10 +198,10 @@ require('goodbook_head.php');
                 </div>
                 <div class="main_top_content main_top_content_user_name_div">
                     <div class="main_top_content main_top_content_user_name">
-                        <div>
-                            <i class="fas fa-user-circle fa-2x"></i>
+                        <div class="myIcon_img_div">
+                            <img class="myIcon_img" src="<?php echo sanitize($dbFormData['profPic']); ?>" alt="">
                         </div>
-                        <div>
+                        <div class="usernamediv">
                             <h1><?php userInfoIndicate($dbFormData, "username") ?></h1>
                         </div>
                     </div>
@@ -329,6 +405,45 @@ require('goodbook_head.php');
                                 </div>
                                 <label>
                                     <input type="submit" value="change">
+                                </label>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="modalwindow">
+            <div class="modalwindow_screen_overall">
+                <div class="modalwindow_form_div">
+                    <div class="modalwindow_form">
+                        <div class="modalwindow_form_title">
+                            <form action="" method="post" class="edit_profile_form" enctype="multipart/form-data">
+                                <div class="modalwindow_form_title">
+                                    <div class="edit_title">
+                                        <h1>edit Icon</h1>
+                                    </div>
+                                    <div class="x-circle">
+                                        <i class="far fa-times-circle fa-2x"></i>
+                                    </div>
+                                </div>
+                                <div class="mypage_border"></div>
+                                <div style="overflow: hidden;">
+                                    <div class="imgDrop-container">
+                                        <label class="area-drop <?php getErrMsglabel("profPic") ?>">
+                                            <input type="hidden" name="MAX_FILE_SIZE" value="3145728">
+                                            <input type="file" name="profPic" class="input-file" style="display:none;">
+                                            <img src="<?php echo getFormData('profPic'); ?>" alt="" class="prev-img" style="<?php if (empty(getFormData('profPic'))) echo 'display:none;' ?> margin:10px 0px 0px ">
+                                            <div class="imgUpIcon">
+                                                <i class="far fa-images fa-lg"></i>
+                                            </div>
+                                        </label>
+                                        <div class="area-msg">
+                                            <?php;getErrMsg("profPic");?>
+                                        </div>
+                                    </div>
+                                </div>
+                                <label>
+                                    <input type="submit" value="<?php echo (!$edit_flg) ? 'post' : 'edit'; ?>">
                                 </label>
                             </form>
                         </div>

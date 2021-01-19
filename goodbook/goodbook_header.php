@@ -36,8 +36,8 @@
                             <i class="fas fa-user-circle fa-4x"></i>
                         </div>
                         <div class="myInfo">
-                            <p><?php userInfoIndicate($dbFormData, "username") ?></p>
-                            <p> <?php notLoggedMsg("View my profile", "Please login") ?></p>
+                            <p><?php userInfoIndicate($dbFormData, "username"); ?></p>
+                            <p> <?php notLoggedMsg("View my profile", "Please login"); ?></p>
                         </div>
                     </a>
                 </div>
