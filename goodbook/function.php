@@ -729,10 +729,10 @@ function getCategory()
         // DBへ接続
         $dbh = dbConnect();
         // SQL文作成
-        $sql = 'SELECT * FROM category';
+        $sql = 'SELECT * FROM post';
         $data = array();
         // クエリ実行
-        $stmt = queryPost($dbh, $sql, $data, "category");
+        $stmt = queryPost($dbh, $sql, $data, "common");
 
         if ($stmt) {
             // クエリ結果の全データを返却

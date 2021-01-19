@@ -18275,3 +18275,3793 @@ Stack trace:
 [19-Jan-2021 15:20:51 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 641
 [19-Jan-2021 15:20:51 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 641
 [19-Jan-2021 15:20:51 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 641
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：session ID：998qgk8gu6ddqr0mbgokrbh5jp
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611037341
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => 
+    [auth_key] => 9guipx0d
+    [auth_email] => siodeitadaku@gmail.com
+    [auth_key_limit] => 1611038115
+)
+
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：現在日時タイムスタンプ：1611057596
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611040941
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：ログイン有効期限オーバーです。
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 20:59:56 Asia/Tokyo] エラー発生:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'goodbook.category' doesn't exist
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：カテゴリデータ：
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：POST送信があります。
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：POST情報：Array
+(
+    [comment] => utada hika
+    [MAX_FILE_SIZE] => 3145728
+    [pic1] => 誰にも言わない.png
+)
+
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：FILE情報：Array
+(
+)
+
+[19-Jan-2021 20:59:56 Asia/Tokyo] PHP Notice:  Undefined index: post_id in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 52
+[19-Jan-2021 20:59:56 Asia/Tokyo] PHP Notice:  Undefined index: post_id in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 85
+[19-Jan-2021 20:59:56 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 89
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：バリデーションOKです。
+[19-Jan-2021 20:59:56 Asia/Tokyo] PHP Notice:  Undefined variable: edit_flg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 110
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：DB新規登録です。
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：SQL：insert into post (comment, pic1, user_id, create_date ) values (:comment,  :pic1, :u_id, :date)
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：流し込みデータ：Array
+(
+    [:comment] => utada hika
+    [:pic1] => 
+    [:u_id] => 51
+    [:date] => 2021-01-19 20:59:56
+)
+
+[19-Jan-2021 20:59:56 Asia/Tokyo] エラー発生:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'create_date' in 'field list'
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 20:59:56 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 20:59:56 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 20:59:56 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：「　login page　
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：session ID：rndr2trqcvvn9hq3kurfg5lrfm
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：現在日時タイムスタンプ：1611057596
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：未ログインユーザーです。
+[19-Jan-2021 20:59:56 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：「　login page　
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：session ID：r70uuvtmcu6q0263bfha0ufs8r
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：現在日時タイムスタンプ：1611057601
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：未ログインユーザーです。
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：POST送信があります。
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：バリデーションOKです。
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：クエリ結果の中身：Array
+(
+    [pass] => $2y$10$Hv9X9pYNMUjcrT6FPpGPseeVSa6FM1wfjA8Cr0915KO/8nchPrU1q
+    [id] => 51
+)
+
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：パスワードがマッチしました。
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：ログイン保持にチェックはありません。
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：セッション変数の中身：Array
+(
+    [login_date] => 1611057601
+    [login_limit] => 3600
+    [user_id] => 51
+)
+
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：マイページへ遷移します。
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：session ID：ndavjaqego7q5ebk7qa8bsrqk4
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611057601
+    [login_limit] => 3600
+    [user_id] => 51
+)
+
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：現在日時タイムスタンプ：1611057601
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611061201
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:00:01 Asia/Tokyo] エラー発生:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'goodbook.category' doesn't exist
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：カテゴリデータ：
+[19-Jan-2021 21:00:01 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:00:01 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 652
+[19-Jan-2021 21:00:01 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 652
+[19-Jan-2021 21:00:01 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 652
+[19-Jan-2021 21:00:18 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:00:18 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:00:18 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:00:18 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:00:18 Asia/Tokyo] debug：session ID：fv1kko1cb8s05v0j650bnuopq4
+[19-Jan-2021 21:00:18 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611057601
+    [login_limit] => 3600
+    [user_id] => 51
+)
+
+[19-Jan-2021 21:00:18 Asia/Tokyo] debug：現在日時タイムスタンプ：1611057618
+[19-Jan-2021 21:00:18 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611061201
+[19-Jan-2021 21:00:18 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:00:18 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:00:18 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:00:18 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:00:18 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:00:18 Asia/Tokyo] エラー発生:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'goodbook.category' doesn't exist
+[19-Jan-2021 21:00:18 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:00:18 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:00:18 Asia/Tokyo] debug：カテゴリデータ：
+[19-Jan-2021 21:00:18 Asia/Tokyo] debug：POST送信があります。
+[19-Jan-2021 21:00:18 Asia/Tokyo] debug：POST情報：Array
+(
+    [comment] => utada hikaru
+    [MAX_FILE_SIZE] => 3145728
+    [pic1] => IMG_0003.jpg
+)
+
+[19-Jan-2021 21:00:18 Asia/Tokyo] debug：FILE情報：Array
+(
+)
+
+[19-Jan-2021 21:00:18 Asia/Tokyo] PHP Notice:  Undefined index: post_id in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 52
+[19-Jan-2021 21:00:18 Asia/Tokyo] PHP Notice:  Undefined index: post_id in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 85
+[19-Jan-2021 21:00:18 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 89
+[19-Jan-2021 21:00:18 Asia/Tokyo] debug：バリデーションOKです。
+[19-Jan-2021 21:00:18 Asia/Tokyo] PHP Notice:  Undefined variable: edit_flg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 110
+[19-Jan-2021 21:00:18 Asia/Tokyo] debug：DB新規登録です。
+[19-Jan-2021 21:00:18 Asia/Tokyo] debug：SQL：insert into post (comment, pic1, user_id, create_date ) values (:comment,  :pic1, :u_id, :date)
+[19-Jan-2021 21:00:18 Asia/Tokyo] debug：流し込みデータ：Array
+(
+    [:comment] => utada hikaru
+    [:pic1] => 
+    [:u_id] => 51
+    [:date] => 2021-01-19 21:00:18
+)
+
+[19-Jan-2021 21:00:18 Asia/Tokyo] エラー発生:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'create_date' in 'field list'
+[19-Jan-2021 21:00:18 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:00:18 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:00:18 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:00:18 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:01:05 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:01:05 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:01:05 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:01:05 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:01:05 Asia/Tokyo] debug：session ID：6jtpv1vc6mmd8lvl02ofv6opag
+[19-Jan-2021 21:01:05 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611057618
+    [login_limit] => 3600
+    [user_id] => 51
+)
+
+[19-Jan-2021 21:01:05 Asia/Tokyo] debug：現在日時タイムスタンプ：1611057665
+[19-Jan-2021 21:01:05 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611061218
+[19-Jan-2021 21:01:05 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:01:05 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:01:05 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:01:05 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:01:05 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:01:05 Asia/Tokyo] エラー発生:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'goodbook.category' doesn't exist
+[19-Jan-2021 21:01:05 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:01:05 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:01:05 Asia/Tokyo] debug：カテゴリデータ：
+[19-Jan-2021 21:01:05 Asia/Tokyo] debug：POST送信があります。
+[19-Jan-2021 21:01:05 Asia/Tokyo] debug：POST情報：Array
+(
+    [comment] => utada hikaru
+    [MAX_FILE_SIZE] => 3145728
+    [pic1] => IMG_0003.jpg
+)
+
+[19-Jan-2021 21:01:05 Asia/Tokyo] debug：FILE情報：Array
+(
+)
+
+[19-Jan-2021 21:01:05 Asia/Tokyo] PHP Notice:  Undefined index: post_id in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 52
+[19-Jan-2021 21:01:05 Asia/Tokyo] PHP Notice:  Undefined index: post_id in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 85
+[19-Jan-2021 21:01:05 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 89
+[19-Jan-2021 21:01:05 Asia/Tokyo] debug：バリデーションOKです。
+[19-Jan-2021 21:01:05 Asia/Tokyo] PHP Notice:  Undefined variable: edit_flg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 110
+[19-Jan-2021 21:01:05 Asia/Tokyo] debug：DB新規登録です。
+[19-Jan-2021 21:01:05 Asia/Tokyo] debug：SQL：insert into post (comment, pic1, user_id, create_date ) values (:comment,  :pic1, :u_id, :date)
+[19-Jan-2021 21:01:05 Asia/Tokyo] debug：流し込みデータ：Array
+(
+    [:comment] => utada hikaru
+    [:pic1] => 
+    [:u_id] => 51
+    [:date] => 2021-01-19 21:01:05
+)
+
+[19-Jan-2021 21:01:05 Asia/Tokyo] エラー発生:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'create_date' in 'field list'
+[19-Jan-2021 21:01:05 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:01:05 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:01:05 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:01:05 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:01:53 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:01:53 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:01:53 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:01:53 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:01:53 Asia/Tokyo] debug：session ID：jedgut9dmchk497h9187poshdh
+[19-Jan-2021 21:01:53 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611057665
+    [login_limit] => 3600
+    [user_id] => 51
+)
+
+[19-Jan-2021 21:01:53 Asia/Tokyo] debug：現在日時タイムスタンプ：1611057713
+[19-Jan-2021 21:01:53 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611061265
+[19-Jan-2021 21:01:53 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:01:53 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:01:53 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:01:53 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:01:53 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:01:53 Asia/Tokyo] エラー発生:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'goodbook.category' doesn't exist
+[19-Jan-2021 21:01:53 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:01:53 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:01:53 Asia/Tokyo] debug：カテゴリデータ：
+[19-Jan-2021 21:01:53 Asia/Tokyo] debug：POST送信があります。
+[19-Jan-2021 21:01:53 Asia/Tokyo] debug：POST情報：Array
+(
+    [comment] => utada hikaru
+    [MAX_FILE_SIZE] => 3145728
+    [pic1] => IMG_0003.jpg
+)
+
+[19-Jan-2021 21:01:53 Asia/Tokyo] debug：FILE情報：Array
+(
+)
+
+[19-Jan-2021 21:01:53 Asia/Tokyo] PHP Notice:  Undefined index: post_id in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 52
+[19-Jan-2021 21:01:53 Asia/Tokyo] PHP Notice:  Undefined index: post_id in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 85
+[19-Jan-2021 21:01:53 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 89
+[19-Jan-2021 21:01:53 Asia/Tokyo] debug：バリデーションOKです。
+[19-Jan-2021 21:01:53 Asia/Tokyo] PHP Notice:  Undefined variable: edit_flg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 110
+[19-Jan-2021 21:01:53 Asia/Tokyo] debug：DB新規登録です。
+[19-Jan-2021 21:01:53 Asia/Tokyo] debug：SQL：insert into post (comment, pic1, user_id, create_date ) values (:comment,  :pic1, :u_id, :date)
+[19-Jan-2021 21:01:53 Asia/Tokyo] debug：流し込みデータ：Array
+(
+    [:comment] => utada hikaru
+    [:pic1] => 
+    [:u_id] => 51
+    [:date] => 2021-01-19 21:01:53
+)
+
+[19-Jan-2021 21:01:53 Asia/Tokyo] エラー発生:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'create_date' in 'field list'
+[19-Jan-2021 21:01:53 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:01:53 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:01:53 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:01:53 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:02:00 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:02:00 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:02:00 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:02:00 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:02:00 Asia/Tokyo] debug：session ID：2a3nqbjcnj13k2lct9p55d6hi3
+[19-Jan-2021 21:02:00 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611057713
+    [login_limit] => 3600
+    [user_id] => 51
+)
+
+[19-Jan-2021 21:02:00 Asia/Tokyo] debug：現在日時タイムスタンプ：1611057720
+[19-Jan-2021 21:02:00 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611061313
+[19-Jan-2021 21:02:00 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:02:00 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:02:00 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:02:00 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:02:00 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:02:00 Asia/Tokyo] エラー発生:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'goodbook.category' doesn't exist
+[19-Jan-2021 21:02:00 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:02:00 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:02:00 Asia/Tokyo] debug：カテゴリデータ：
+[19-Jan-2021 21:02:00 Asia/Tokyo] debug：POST送信があります。
+[19-Jan-2021 21:02:00 Asia/Tokyo] debug：POST情報：Array
+(
+    [comment] => utada hikaru
+    [MAX_FILE_SIZE] => 3145728
+    [pic1] => 
+)
+
+[19-Jan-2021 21:02:00 Asia/Tokyo] debug：FILE情報：Array
+(
+)
+
+[19-Jan-2021 21:02:00 Asia/Tokyo] PHP Notice:  Undefined index: post_id in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 52
+[19-Jan-2021 21:02:00 Asia/Tokyo] PHP Notice:  Undefined index: post_id in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 85
+[19-Jan-2021 21:02:00 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 89
+[19-Jan-2021 21:02:00 Asia/Tokyo] debug：バリデーションOKです。
+[19-Jan-2021 21:02:00 Asia/Tokyo] PHP Notice:  Undefined variable: edit_flg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 110
+[19-Jan-2021 21:02:00 Asia/Tokyo] debug：DB新規登録です。
+[19-Jan-2021 21:02:00 Asia/Tokyo] debug：SQL：insert into post (comment, pic1, user_id, create_date ) values (:comment,  :pic1, :u_id, :date)
+[19-Jan-2021 21:02:00 Asia/Tokyo] debug：流し込みデータ：Array
+(
+    [:comment] => utada hikaru
+    [:pic1] => 
+    [:u_id] => 51
+    [:date] => 2021-01-19 21:02:00
+)
+
+[19-Jan-2021 21:02:00 Asia/Tokyo] エラー発生:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'create_date' in 'field list'
+[19-Jan-2021 21:02:00 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:02:00 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:02:00 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:02:00 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:04:12 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:04:12 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:04:12 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:04:12 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:04:12 Asia/Tokyo] debug：session ID：2jfpd32h6o1032vfqmdn7mhfrh
+[19-Jan-2021 21:04:12 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611057720
+    [login_limit] => 3600
+    [user_id] => 51
+)
+
+[19-Jan-2021 21:04:12 Asia/Tokyo] debug：現在日時タイムスタンプ：1611057852
+[19-Jan-2021 21:04:12 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611061320
+[19-Jan-2021 21:04:12 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:04:12 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:04:12 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:04:12 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:04:12 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:04:12 Asia/Tokyo] エラー発生:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'goodbook.category' doesn't exist
+[19-Jan-2021 21:04:12 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:04:12 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:04:12 Asia/Tokyo] debug：カテゴリデータ：
+[19-Jan-2021 21:04:12 Asia/Tokyo] debug：POST送信があります。
+[19-Jan-2021 21:04:12 Asia/Tokyo] debug：POST情報：Array
+(
+    [comment] => utada hikaru
+    [MAX_FILE_SIZE] => 3145728
+    [pic1] => IMG_0023.jpg
+)
+
+[19-Jan-2021 21:04:12 Asia/Tokyo] debug：FILE情報：Array
+(
+)
+
+[19-Jan-2021 21:04:12 Asia/Tokyo] PHP Notice:  Undefined index: post_id in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 52
+[19-Jan-2021 21:04:12 Asia/Tokyo] PHP Notice:  Undefined index: post_id in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 85
+[19-Jan-2021 21:04:12 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 89
+[19-Jan-2021 21:04:12 Asia/Tokyo] debug：バリデーションOKです。
+[19-Jan-2021 21:04:12 Asia/Tokyo] PHP Notice:  Undefined variable: edit_flg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 110
+[19-Jan-2021 21:04:12 Asia/Tokyo] debug：DB新規登録です。
+[19-Jan-2021 21:04:12 Asia/Tokyo] debug：SQL：insert into post (comment, pic1, user_id, create_date ) values (:comment,  :pic1, :u_id, :date)
+[19-Jan-2021 21:04:12 Asia/Tokyo] debug：流し込みデータ：Array
+(
+    [:comment] => utada hikaru
+    [:pic1] => 
+    [:u_id] => 51
+    [:date] => 2021-01-19 21:04:12
+)
+
+[19-Jan-2021 21:04:12 Asia/Tokyo] エラー発生:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'create_date' in 'field list'
+[19-Jan-2021 21:04:12 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:04:12 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:04:12 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:04:12 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:07:12 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:07:12 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:07:12 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:07:12 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:07:12 Asia/Tokyo] debug：session ID：777tgohu4ii4fsrbkqoh4esocc
+[19-Jan-2021 21:07:12 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611057852
+    [login_limit] => 3600
+    [user_id] => 51
+)
+
+[19-Jan-2021 21:07:12 Asia/Tokyo] debug：現在日時タイムスタンプ：1611058032
+[19-Jan-2021 21:07:12 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611061452
+[19-Jan-2021 21:07:12 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:07:12 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:07:12 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:07:12 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:07:12 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:07:12 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:07:12 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:07:12 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:07:12 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+)
+
+[19-Jan-2021 21:07:12 Asia/Tokyo] debug：POST送信があります。
+[19-Jan-2021 21:07:12 Asia/Tokyo] debug：POST情報：Array
+(
+    [comment] => utada hikaru
+    [MAX_FILE_SIZE] => 3145728
+    [pic1] => IMG_0003.jpg
+)
+
+[19-Jan-2021 21:07:12 Asia/Tokyo] debug：FILE情報：Array
+(
+)
+
+[19-Jan-2021 21:07:12 Asia/Tokyo] PHP Notice:  Undefined index: post_id in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 52
+[19-Jan-2021 21:07:12 Asia/Tokyo] PHP Notice:  Undefined index: post_id in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 85
+[19-Jan-2021 21:07:12 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 89
+[19-Jan-2021 21:07:12 Asia/Tokyo] debug：バリデーションOKです。
+[19-Jan-2021 21:07:12 Asia/Tokyo] PHP Notice:  Undefined variable: edit_flg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 110
+[19-Jan-2021 21:07:12 Asia/Tokyo] debug：DB新規登録です。
+[19-Jan-2021 21:07:12 Asia/Tokyo] debug：SQL：insert into post (comment, pic1, user_id, create_date ) values (:comment,  :pic1, :u_id, :date)
+[19-Jan-2021 21:07:12 Asia/Tokyo] debug：流し込みデータ：Array
+(
+    [:comment] => utada hikaru
+    [:pic1] => 
+    [:u_id] => 51
+    [:date] => 2021-01-19 21:07:12
+)
+
+[19-Jan-2021 21:07:12 Asia/Tokyo] エラー発生:SQLSTATE[42S22]: Column not found: 1054 Unknown column 'create_date' in 'field list'
+[19-Jan-2021 21:07:12 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:07:12 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:07:12 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:07:12 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：session ID：6ilp9mqchg2l2nveqd2485nguc
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611058032
+    [login_limit] => 3600
+    [user_id] => 51
+)
+
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：現在日時タイムスタンプ：1611058107
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611061632
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+)
+
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：POST送信があります。
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：POST情報：Array
+(
+    [comment] => utada hikaru
+    [MAX_FILE_SIZE] => 3145728
+    [pic1] => IMG_0023.jpg
+)
+
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：FILE情報：Array
+(
+)
+
+[19-Jan-2021 21:08:27 Asia/Tokyo] PHP Notice:  Undefined index: post_id in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 52
+[19-Jan-2021 21:08:27 Asia/Tokyo] PHP Notice:  Undefined index: post_id in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 85
+[19-Jan-2021 21:08:27 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 89
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：バリデーションOKです。
+[19-Jan-2021 21:08:27 Asia/Tokyo] PHP Notice:  Undefined variable: edit_flg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 110
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：DB新規登録です。
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：SQL：insert into post (comment, pic1, user_id, create_date ) values (:comment,  :pic1, :u_id, :date)
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：流し込みデータ：Array
+(
+    [:comment] => utada hikaru
+    [:pic1] => 
+    [:u_id] => 51
+    [:date] => 2021-01-19 21:08:27
+)
+
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：マイページへ遷移します。
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:08:27 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:08:27 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:08:27 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：session ID：626ntt1cens8ifirn82js04lg2
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611058107
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：現在日時タイムスタンプ：1611058107
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611061707
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:08:27
+            [update_date] => 2021-01-19 21:08:27
+        )
+
+)
+
+[19-Jan-2021 21:08:27 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:08:27 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 652
+[19-Jan-2021 21:08:27 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 652
+[19-Jan-2021 21:08:27 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 652
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：session ID：n3r1t8jkbecmt5c5q6jujpo492
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611058107
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：現在日時タイムスタンプ：1611058228
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611061707
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:08:27
+            [update_date] => 2021-01-19 21:08:27
+        )
+
+)
+
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：POST送信があります。
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：POST情報：Array
+(
+    [comment] => utada hikaru
+    [MAX_FILE_SIZE] => 3145728
+    [pic1] => nhk.jpg
+)
+
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：FILE情報：Array
+(
+)
+
+[19-Jan-2021 21:10:28 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 89
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：バリデーションOKです。
+[19-Jan-2021 21:10:28 Asia/Tokyo] PHP Notice:  Undefined variable: edit_flg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 110
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：DB新規登録です。
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：SQL：insert into post (comment, pic1, user_id, create_date ) values (:comment,  :pic1, :u_id, :date)
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：流し込みデータ：Array
+(
+    [:comment] => utada hikaru
+    [:pic1] => 
+    [:u_id] => 51
+    [:date] => 2021-01-19 21:10:28
+)
+
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：マイページへ遷移します。
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:10:28 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:10:28 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:10:28 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：session ID：eobv2sovhbvqs897oc1uu1clur
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611058228
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：現在日時タイムスタンプ：1611058228
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611061828
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:08:27
+            [update_date] => 2021-01-19 21:08:27
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:10:28
+            [update_date] => 2021-01-19 21:10:28
+        )
+
+)
+
+[19-Jan-2021 21:10:28 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:10:28 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 652
+[19-Jan-2021 21:10:28 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 652
+[19-Jan-2021 21:10:28 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 652
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：session ID：8cep66ajqtc35hie78fbi53ogm
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611058228
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：現在日時タイムスタンプ：1611058491
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611061828
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:08:27
+            [update_date] => 2021-01-19 21:08:27
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:10:28
+            [update_date] => 2021-01-19 21:10:28
+        )
+
+)
+
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：POST送信があります。
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：POST情報：Array
+(
+    [comment] => utada hikaru
+    [MAX_FILE_SIZE] => 3145728
+    [pic1] => 30代はほどほどに.jpeg
+)
+
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：FILE情報：Array
+(
+)
+
+[19-Jan-2021 21:14:51 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 89
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：バリデーションOKです。
+[19-Jan-2021 21:14:51 Asia/Tokyo] PHP Notice:  Undefined variable: edit_flg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 110
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：DB新規登録です。
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：SQL：insert into post (comment, pic1, user_id, create_date ) values (:comment,  :pic1, :u_id, :date)
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：流し込みデータ：Array
+(
+    [:comment] => utada hikaru
+    [:pic1] => 
+    [:u_id] => 51
+    [:date] => 2021-01-19 21:14:51
+)
+
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：マイページへ遷移します。
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:14:51 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:14:51 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:14:51 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：session ID：rt11g14m5kdetfjsb5j656t20m
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611058491
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：現在日時タイムスタンプ：1611058491
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611062091
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:08:27
+            [update_date] => 2021-01-19 21:08:27
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:10:28
+            [update_date] => 2021-01-19 21:10:28
+        )
+
+    [2] => Array
+        (
+            [id] => 3
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:14:51
+            [update_date] => 2021-01-19 21:14:51
+        )
+
+)
+
+[19-Jan-2021 21:14:51 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:14:51 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 652
+[19-Jan-2021 21:14:51 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 652
+[19-Jan-2021 21:14:51 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 652
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：session ID：i1v0qma74nq31ffpb1vk5i2n3t
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611058491
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：現在日時タイムスタンプ：1611058826
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611062091
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:08:27
+            [update_date] => 2021-01-19 21:08:27
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:10:28
+            [update_date] => 2021-01-19 21:10:28
+        )
+
+    [2] => Array
+        (
+            [id] => 3
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:14:51
+            [update_date] => 2021-01-19 21:14:51
+        )
+
+)
+
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：POST送信があります。
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：POST情報：Array
+(
+    [comment] => utada hikaru
+    [MAX_FILE_SIZE] => 3145728
+    [pic1] => 花束を君に２.jpg
+)
+
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：FILE情報：Array
+(
+)
+
+[19-Jan-2021 21:20:26 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 89
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：バリデーションOKです。
+[19-Jan-2021 21:20:26 Asia/Tokyo] PHP Notice:  Undefined variable: edit_flg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 110
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：DB新規登録です。
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：SQL：insert into post (comment, pic1, user_id, create_date ) values (:comment,  :pic1, :u_id, :date)
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：流し込みデータ：Array
+(
+    [:comment] => utada hikaru
+    [:pic1] => 
+    [:u_id] => 51
+    [:date] => 2021-01-19 21:20:26
+)
+
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：マイページへ遷移します。
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:20:26 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:20:26 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:20:26 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：session ID：6hge424fm4imle138hvbqfprdg
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611058826
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：現在日時タイムスタンプ：1611058826
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611062426
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:08:27
+            [update_date] => 2021-01-19 21:08:27
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:10:28
+            [update_date] => 2021-01-19 21:10:28
+        )
+
+    [2] => Array
+        (
+            [id] => 3
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:14:51
+            [update_date] => 2021-01-19 21:14:51
+        )
+
+    [3] => Array
+        (
+            [id] => 4
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:20:26
+            [update_date] => 2021-01-19 21:20:26
+        )
+
+)
+
+[19-Jan-2021 21:20:26 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:20:26 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 652
+[19-Jan-2021 21:20:26 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 652
+[19-Jan-2021 21:20:26 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 652
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：session ID：abitc8ab4t4m1c58876mdvg93l
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611058941
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => 
+)
+
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：現在日時タイムスタンプ：1611059426
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611062541
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：POST送信があります。
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：POST情報：Array
+(
+    [comment] => utada hikaru
+    [MAX_FILE_SIZE] => 3145728
+    [pic1] => 花束を君に２.jpg
+)
+
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：FILE情報：Array
+(
+)
+
+[19-Jan-2021 21:30:26 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 88
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：バリデーションOKです。
+[19-Jan-2021 21:30:26 Asia/Tokyo] PHP Notice:  Undefined variable: edit_flg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 109
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：DB新規登録です。
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：SQL：insert into post (comment, pic1, user_id, create_date ) values (:comment,  :pic1, :u_id, :date)
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：流し込みデータ：Array
+(
+    [:comment] => utada hikaru
+    [:pic1] => 
+    [:u_id] => 51
+    [:date] => 2021-01-19 21:30:26
+)
+
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：マイページへ遷移します。
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:30:26 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:30:26 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:30:26 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：session ID：5mpp7q61pdpu93ejq189cjlj5s
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611059426
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：現在日時タイムスタンプ：1611059426
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611063026
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:30:26 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:30:26 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 652
+[19-Jan-2021 21:30:26 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 652
+[19-Jan-2021 21:30:26 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 652
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：session ID：q3vejr3auvu9o6ifnh7f85nrlj
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611059426
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：現在日時タイムスタンプ：1611059607
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611063026
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:33:27 Asia/Tokyo] エラー発生:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'goodbook.category' doesn't exist
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：カテゴリデータ：
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：POST送信があります。
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：POST情報：Array
+(
+    [comment] => aaa
+    [MAX_FILE_SIZE] => 3145728
+    [pic1] => IMG_0022.jpg
+)
+
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：FILE情報：Array
+(
+)
+
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：バリデーションOKです。
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：DB新規登録です。
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：SQL：insert into post (comment, pic1, user_id, create_date ) values (:comment,  :pic1, :u_id, :date)
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：流し込みデータ：Array
+(
+    [:comment] => aaa
+    [:pic1] => 
+    [:u_id] => 51
+    [:date] => 2021-01-19 21:33:27
+)
+
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：マイページへ遷移します。
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：session ID：desrbjmrcqkomhafm681errlil
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611059607
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：現在日時タイムスタンプ：1611059607
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611063207
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:33:27 Asia/Tokyo] エラー発生:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'goodbook.category' doesn't exist
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：カテゴリデータ：
+[19-Jan-2021 21:33:27 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：session ID：un2eo4m6o67l5hmsmii2l0nscc
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611059607
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：現在日時タイムスタンプ：1611059698
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611063207
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:08:27
+            [update_date] => 2021-01-19 21:08:27
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:10:28
+            [update_date] => 2021-01-19 21:10:28
+        )
+
+    [2] => Array
+        (
+            [id] => 3
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:14:51
+            [update_date] => 2021-01-19 21:14:51
+        )
+
+    [3] => Array
+        (
+            [id] => 4
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:20:26
+            [update_date] => 2021-01-19 21:20:26
+        )
+
+    [4] => Array
+        (
+            [id] => 5
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:30:26
+            [update_date] => 2021-01-19 21:30:26
+        )
+
+    [5] => Array
+        (
+            [id] => 6
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:33:27
+            [update_date] => 2021-01-19 21:33:27
+        )
+
+)
+
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：POST送信があります。
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：POST情報：Array
+(
+    [comment] => aaa
+    [MAX_FILE_SIZE] => 3145728
+    [pic1] => IMG_0003.jpg
+)
+
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：FILE情報：Array
+(
+)
+
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：バリデーションOKです。
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：DB新規登録です。
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：SQL：insert into post (comment, pic1, user_id, create_date ) values (:comment,  :pic1, :u_id, :date)
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：流し込みデータ：Array
+(
+    [:comment] => aaa
+    [:pic1] => 
+    [:u_id] => 51
+    [:date] => 2021-01-19 21:34:58
+)
+
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：マイページへ遷移します。
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：session ID：4e47831oj2j9co672s5ip34vb1
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611059698
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：現在日時タイムスタンプ：1611059698
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611063298
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:08:27
+            [update_date] => 2021-01-19 21:08:27
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:10:28
+            [update_date] => 2021-01-19 21:10:28
+        )
+
+    [2] => Array
+        (
+            [id] => 3
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:14:51
+            [update_date] => 2021-01-19 21:14:51
+        )
+
+    [3] => Array
+        (
+            [id] => 4
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:20:26
+            [update_date] => 2021-01-19 21:20:26
+        )
+
+    [4] => Array
+        (
+            [id] => 5
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:30:26
+            [update_date] => 2021-01-19 21:30:26
+        )
+
+    [5] => Array
+        (
+            [id] => 6
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:33:27
+            [update_date] => 2021-01-19 21:33:27
+        )
+
+    [6] => Array
+        (
+            [id] => 7
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:34:58
+            [update_date] => 2021-01-19 21:34:58
+        )
+
+)
+
+[19-Jan-2021 21:34:58 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：session ID：nald9oh27ifavjgtqeo7qe2bko
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611059698
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：現在日時タイムスタンプ：1611059865
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611063298
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:08:27
+            [update_date] => 2021-01-19 21:08:27
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:10:28
+            [update_date] => 2021-01-19 21:10:28
+        )
+
+    [2] => Array
+        (
+            [id] => 3
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:14:51
+            [update_date] => 2021-01-19 21:14:51
+        )
+
+    [3] => Array
+        (
+            [id] => 4
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:20:26
+            [update_date] => 2021-01-19 21:20:26
+        )
+
+    [4] => Array
+        (
+            [id] => 5
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:30:26
+            [update_date] => 2021-01-19 21:30:26
+        )
+
+    [5] => Array
+        (
+            [id] => 6
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:33:27
+            [update_date] => 2021-01-19 21:33:27
+        )
+
+    [6] => Array
+        (
+            [id] => 7
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:34:58
+            [update_date] => 2021-01-19 21:34:58
+        )
+
+)
+
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：POST送信があります。
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：POST情報：Array
+(
+    [comment] => aaa
+    [MAX_FILE_SIZE] => 3145728
+    [pic1] => 花束を君に４.jpg
+)
+
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：FILE情報：Array
+(
+)
+
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：バリデーションOKです。
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：DB新規登録です。
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：SQL：insert into post (comment, pic1, user_id, create_date ) values (:comment,  :pic1, :u_id, :date)
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：流し込みデータ：Array
+(
+    [:comment] => aaa
+    [:pic1] => 
+    [:u_id] => 51
+    [:date] => 2021-01-19 21:37:45
+)
+
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：マイページへ遷移します。
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：session ID：fjvrlod2pbit1et8ojdp1ohie0
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611059865
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：現在日時タイムスタンプ：1611059865
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611063465
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:08:27
+            [update_date] => 2021-01-19 21:08:27
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:10:28
+            [update_date] => 2021-01-19 21:10:28
+        )
+
+    [2] => Array
+        (
+            [id] => 3
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:14:51
+            [update_date] => 2021-01-19 21:14:51
+        )
+
+    [3] => Array
+        (
+            [id] => 4
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:20:26
+            [update_date] => 2021-01-19 21:20:26
+        )
+
+    [4] => Array
+        (
+            [id] => 5
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:30:26
+            [update_date] => 2021-01-19 21:30:26
+        )
+
+    [5] => Array
+        (
+            [id] => 6
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:33:27
+            [update_date] => 2021-01-19 21:33:27
+        )
+
+    [6] => Array
+        (
+            [id] => 7
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:34:58
+            [update_date] => 2021-01-19 21:34:58
+        )
+
+    [7] => Array
+        (
+            [id] => 8
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:37:45
+            [update_date] => 2021-01-19 21:37:45
+        )
+
+)
+
+[19-Jan-2021 21:37:45 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:37:48 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:37:48 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:37:48 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:37:48 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:37:48 Asia/Tokyo] debug：session ID：phseoem2a89r3ao83j7et18fhk
+[19-Jan-2021 21:37:48 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611059865
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 21:37:48 Asia/Tokyo] debug：現在日時タイムスタンプ：1611059868
+[19-Jan-2021 21:37:48 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611063465
+[19-Jan-2021 21:37:48 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:37:48 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:37:48 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:37:48 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:37:48 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:37:48 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:37:48 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:37:48 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:37:48 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:08:27
+            [update_date] => 2021-01-19 21:08:27
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:10:28
+            [update_date] => 2021-01-19 21:10:28
+        )
+
+    [2] => Array
+        (
+            [id] => 3
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:14:51
+            [update_date] => 2021-01-19 21:14:51
+        )
+
+    [3] => Array
+        (
+            [id] => 4
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:20:26
+            [update_date] => 2021-01-19 21:20:26
+        )
+
+    [4] => Array
+        (
+            [id] => 5
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:30:26
+            [update_date] => 2021-01-19 21:30:26
+        )
+
+    [5] => Array
+        (
+            [id] => 6
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:33:27
+            [update_date] => 2021-01-19 21:33:27
+        )
+
+    [6] => Array
+        (
+            [id] => 7
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:34:58
+            [update_date] => 2021-01-19 21:34:58
+        )
+
+    [7] => Array
+        (
+            [id] => 8
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:37:45
+            [update_date] => 2021-01-19 21:37:45
+        )
+
+)
+
+[19-Jan-2021 21:37:48 Asia/Tokyo] debug：POST送信があります。
+[19-Jan-2021 21:37:48 Asia/Tokyo] debug：POST情報：Array
+(
+    [comment] => 
+    [MAX_FILE_SIZE] => 3145728
+    [pic1] => 
+)
+
+[19-Jan-2021 21:37:48 Asia/Tokyo] debug：FILE情報：Array
+(
+)
+
+[19-Jan-2021 21:37:48 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：session ID：i787ocufmap8cu29nfnvm3ctln
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611059868
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：現在日時タイムスタンプ：1611060567
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611063468
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 6
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:33:27
+            [update_date] => 2021-01-19 21:33:27
+        )
+
+    [1] => Array
+        (
+            [id] => 7
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:34:58
+            [update_date] => 2021-01-19 21:34:58
+        )
+
+    [2] => Array
+        (
+            [id] => 8
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:37:45
+            [update_date] => 2021-01-19 21:37:45
+        )
+
+)
+
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：POST送信があります。
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：POST情報：Array
+(
+    [comment] => utada hikaru
+    [MAX_FILE_SIZE] => 3145728
+    [pic1] => IMG_0003.jpg
+)
+
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：FILE情報：Array
+(
+)
+
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：バリデーションOKです。
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：DB新規登録です。
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：SQL：insert into post (comment, pic1, user_id, create_date ) values (:comment,  :pic1, :u_id, :date)
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：流し込みデータ：Array
+(
+    [:comment] => utada hikaru
+    [:pic1] => 
+    [:u_id] => 51
+    [:date] => 2021-01-19 21:49:27
+)
+
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：マイページへ遷移します。
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：session ID：bsshrnsit32dtvm0orkv7ikshd
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611060567
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：現在日時タイムスタンプ：1611060567
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611064167
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 6
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:33:27
+            [update_date] => 2021-01-19 21:33:27
+        )
+
+    [1] => Array
+        (
+            [id] => 7
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:34:58
+            [update_date] => 2021-01-19 21:34:58
+        )
+
+    [2] => Array
+        (
+            [id] => 8
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:37:45
+            [update_date] => 2021-01-19 21:37:45
+        )
+
+    [3] => Array
+        (
+            [id] => 9
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:49:27
+            [update_date] => 2021-01-19 21:49:27
+        )
+
+)
+
+[19-Jan-2021 21:49:27 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:49:58 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:49:58 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:49:58 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:49:58 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:49:58 Asia/Tokyo] debug：session ID：152ogsms3t16q7dd9h3qtemi80
+[19-Jan-2021 21:49:58 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611060567
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 21:49:58 Asia/Tokyo] debug：現在日時タイムスタンプ：1611060598
+[19-Jan-2021 21:49:58 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611064167
+[19-Jan-2021 21:49:58 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:49:58 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:49:58 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:49:58 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:49:58 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:49:58 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:49:58 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:49:58 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:49:58 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 6
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:33:27
+            [update_date] => 2021-01-19 21:33:27
+        )
+
+    [1] => Array
+        (
+            [id] => 7
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:34:58
+            [update_date] => 2021-01-19 21:34:58
+        )
+
+    [2] => Array
+        (
+            [id] => 8
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:37:45
+            [update_date] => 2021-01-19 21:37:45
+        )
+
+    [3] => Array
+        (
+            [id] => 9
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:49:27
+            [update_date] => 2021-01-19 21:49:27
+        )
+
+)
+
+[19-Jan-2021 21:49:58 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:50:02 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:50:02 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:50:02 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:50:02 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:50:02 Asia/Tokyo] debug：session ID：s54e7m5s0ho8t80m6kd2e6q5mh
+[19-Jan-2021 21:50:02 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611060598
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 21:50:02 Asia/Tokyo] debug：現在日時タイムスタンプ：1611060602
+[19-Jan-2021 21:50:02 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611064198
+[19-Jan-2021 21:50:02 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:50:02 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:50:02 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:50:02 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:50:02 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:50:02 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:50:02 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:50:02 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:50:02 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 6
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:33:27
+            [update_date] => 2021-01-19 21:33:27
+        )
+
+    [1] => Array
+        (
+            [id] => 7
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:34:58
+            [update_date] => 2021-01-19 21:34:58
+        )
+
+    [2] => Array
+        (
+            [id] => 8
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:37:45
+            [update_date] => 2021-01-19 21:37:45
+        )
+
+    [3] => Array
+        (
+            [id] => 9
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:49:27
+            [update_date] => 2021-01-19 21:49:27
+        )
+
+)
+
+[19-Jan-2021 21:50:02 Asia/Tokyo] debug：POST送信があります。
+[19-Jan-2021 21:50:02 Asia/Tokyo] debug：POST情報：Array
+(
+    [comment] => 
+    [MAX_FILE_SIZE] => 3145728
+    [pic1] => 
+)
+
+[19-Jan-2021 21:50:02 Asia/Tokyo] debug：FILE情報：Array
+(
+)
+
+[19-Jan-2021 21:50:02 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：session ID：o0i1sb6r9hlehvdsi7hv6go96f
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611060602
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：現在日時タイムスタンプ：1611060629
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611064202
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 6
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:33:27
+            [update_date] => 2021-01-19 21:33:27
+        )
+
+    [1] => Array
+        (
+            [id] => 7
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:34:58
+            [update_date] => 2021-01-19 21:34:58
+        )
+
+    [2] => Array
+        (
+            [id] => 8
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:37:45
+            [update_date] => 2021-01-19 21:37:45
+        )
+
+    [3] => Array
+        (
+            [id] => 9
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:49:27
+            [update_date] => 2021-01-19 21:49:27
+        )
+
+)
+
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：POST送信があります。
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：POST情報：Array
+(
+    [comment] => aaa
+    [MAX_FILE_SIZE] => 3145728
+    [pic1] => nhk.jpg
+)
+
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：FILE情報：Array
+(
+)
+
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：バリデーションOKです。
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：DB新規登録です。
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：SQL：insert into post (comment, pic1, user_id, create_date ) values (:comment,  :pic1, :u_id, :date)
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：流し込みデータ：Array
+(
+    [:comment] => aaa
+    [:pic1] => 
+    [:u_id] => 51
+    [:date] => 2021-01-19 21:50:29
+)
+
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：マイページへ遷移します。
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：session ID：63jknr8l9ghv9k90rmmll5dbaf
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611060629
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：現在日時タイムスタンプ：1611060629
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611064229
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 6
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:33:27
+            [update_date] => 2021-01-19 21:33:27
+        )
+
+    [1] => Array
+        (
+            [id] => 7
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:34:58
+            [update_date] => 2021-01-19 21:34:58
+        )
+
+    [2] => Array
+        (
+            [id] => 8
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:37:45
+            [update_date] => 2021-01-19 21:37:45
+        )
+
+    [3] => Array
+        (
+            [id] => 9
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:49:27
+            [update_date] => 2021-01-19 21:49:27
+        )
+
+    [4] => Array
+        (
+            [id] => 10
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:50:29
+            [update_date] => 2021-01-19 21:50:29
+        )
+
+)
+
+[19-Jan-2021 21:50:29 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：session ID：o3295lnb4dapdpih8eadr772gp
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611060629
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：現在日時タイムスタンプ：1611060674
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611064229
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 6
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:33:27
+            [update_date] => 2021-01-19 21:33:27
+        )
+
+    [1] => Array
+        (
+            [id] => 7
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:34:58
+            [update_date] => 2021-01-19 21:34:58
+        )
+
+    [2] => Array
+        (
+            [id] => 8
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:37:45
+            [update_date] => 2021-01-19 21:37:45
+        )
+
+    [3] => Array
+        (
+            [id] => 9
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:49:27
+            [update_date] => 2021-01-19 21:49:27
+        )
+
+    [4] => Array
+        (
+            [id] => 10
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:50:29
+            [update_date] => 2021-01-19 21:50:29
+        )
+
+)
+
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：POST送信があります。
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：POST情報：Array
+(
+    [comment] => fff
+    [MAX_FILE_SIZE] => 3145728
+    [pic1] => nhk3.jpg
+)
+
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：FILE情報：Array
+(
+)
+
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：バリデーションOKです。
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：DB新規登録です。
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：SQL：insert into post (comment, pic1, user_id, create_date ) values (:comment,  :pic1, :u_id, :date)
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：流し込みデータ：Array
+(
+    [:comment] => fff
+    [:pic1] => 
+    [:u_id] => 51
+    [:date] => 2021-01-19 21:51:14
+)
+
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：マイページへ遷移します。
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：session ID：o64m38hoos210aqogvc4kti908
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611060674
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：現在日時タイムスタンプ：1611060674
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611064274
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 6
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:33:27
+            [update_date] => 2021-01-19 21:33:27
+        )
+
+    [1] => Array
+        (
+            [id] => 7
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:34:58
+            [update_date] => 2021-01-19 21:34:58
+        )
+
+    [2] => Array
+        (
+            [id] => 8
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:37:45
+            [update_date] => 2021-01-19 21:37:45
+        )
+
+    [3] => Array
+        (
+            [id] => 9
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:49:27
+            [update_date] => 2021-01-19 21:49:27
+        )
+
+    [4] => Array
+        (
+            [id] => 10
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:50:29
+            [update_date] => 2021-01-19 21:50:29
+        )
+
+    [5] => Array
+        (
+            [id] => 11
+            [comment] => fff
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:51:14
+            [update_date] => 2021-01-19 21:51:14
+        )
+
+)
+
+[19-Jan-2021 21:51:14 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:54:05 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:54:05 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:54:05 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:54:05 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:54:05 Asia/Tokyo] debug：session ID：1ssmp9viciltp46joipq4dohgb
+[19-Jan-2021 21:54:05 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611060674
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 21:54:05 Asia/Tokyo] debug：現在日時タイムスタンプ：1611060845
+[19-Jan-2021 21:54:05 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611064274
+[19-Jan-2021 21:54:05 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:54:05 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:54:05 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:54:05 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:54:05 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:54:05 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:54:05 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:54:05 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:54:05 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 6
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:33:27
+            [update_date] => 2021-01-19 21:33:27
+        )
+
+    [1] => Array
+        (
+            [id] => 7
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:34:58
+            [update_date] => 2021-01-19 21:34:58
+        )
+
+    [2] => Array
+        (
+            [id] => 8
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:37:45
+            [update_date] => 2021-01-19 21:37:45
+        )
+
+    [3] => Array
+        (
+            [id] => 9
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:49:27
+            [update_date] => 2021-01-19 21:49:27
+        )
+
+    [4] => Array
+        (
+            [id] => 10
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:50:29
+            [update_date] => 2021-01-19 21:50:29
+        )
+
+    [5] => Array
+        (
+            [id] => 11
+            [comment] => fff
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:51:14
+            [update_date] => 2021-01-19 21:51:14
+        )
+
+)
+
+[19-Jan-2021 21:54:05 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：session ID：6fudq4jmiib94jkgvui5m34u0q
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611060845
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：現在日時タイムスタンプ：1611060866
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611064445
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 6
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:33:27
+            [update_date] => 2021-01-19 21:33:27
+        )
+
+    [1] => Array
+        (
+            [id] => 7
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:34:58
+            [update_date] => 2021-01-19 21:34:58
+        )
+
+    [2] => Array
+        (
+            [id] => 8
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:37:45
+            [update_date] => 2021-01-19 21:37:45
+        )
+
+    [3] => Array
+        (
+            [id] => 9
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:49:27
+            [update_date] => 2021-01-19 21:49:27
+        )
+
+    [4] => Array
+        (
+            [id] => 10
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:50:29
+            [update_date] => 2021-01-19 21:50:29
+        )
+
+    [5] => Array
+        (
+            [id] => 11
+            [comment] => fff
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:51:14
+            [update_date] => 2021-01-19 21:51:14
+        )
+
+)
+
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：POST送信があります。
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：POST情報：Array
+(
+    [comment] => sdlfkjals;kdf
+    [MAX_FILE_SIZE] => 3145728
+    [pic1] => nhk2.jpg
+)
+
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：FILE情報：Array
+(
+)
+
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：バリデーションOKです。
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：DB新規登録です。
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：SQL：insert into post (comment, pic1, user_id, create_date ) values (:comment,  :pic1, :u_id, :date)
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：流し込みデータ：Array
+(
+    [:comment] => sdlfkjals;kdf
+    [:pic1] => 
+    [:u_id] => 51
+    [:date] => 2021-01-19 21:54:26
+)
+
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：マイページへ遷移します。
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：session ID：61dqgdohe9dbe7pp5kjtefs3ot
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611060866
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：現在日時タイムスタンプ：1611060866
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611064466
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 6
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:33:27
+            [update_date] => 2021-01-19 21:33:27
+        )
+
+    [1] => Array
+        (
+            [id] => 7
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:34:58
+            [update_date] => 2021-01-19 21:34:58
+        )
+
+    [2] => Array
+        (
+            [id] => 8
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:37:45
+            [update_date] => 2021-01-19 21:37:45
+        )
+
+    [3] => Array
+        (
+            [id] => 9
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:49:27
+            [update_date] => 2021-01-19 21:49:27
+        )
+
+    [4] => Array
+        (
+            [id] => 10
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:50:29
+            [update_date] => 2021-01-19 21:50:29
+        )
+
+    [5] => Array
+        (
+            [id] => 11
+            [comment] => fff
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:51:14
+            [update_date] => 2021-01-19 21:51:14
+        )
+
+    [6] => Array
+        (
+            [id] => 12
+            [comment] => sdlfkjals;kdf
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:54:26
+            [update_date] => 2021-01-19 21:54:26
+        )
+
+)
+
+[19-Jan-2021 21:54:26 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：session ID：ebi3jqho39pb86ak5qmnc868p4
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611061073
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => 
+)
+
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：現在日時タイムスタンプ：1611061255
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611064673
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：POST送信があります。
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：POST情報：Array
+(
+    [comment] => kjlkj
+    [MAX_FILE_SIZE] => 3145728
+    [pic1] => nhk.jpg
+)
+
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：FILE情報：Array
+(
+)
+
+[19-Jan-2021 22:00:55 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 88
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：バリデーションOKです。
+[19-Jan-2021 22:00:55 Asia/Tokyo] PHP Notice:  Undefined variable: edit_flg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 109
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：DB新規登録です。
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：SQL：insert into post (comment, pic1, user_id, create_date ) values (:comment,  :pic1, :u_id, :date)
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：流し込みデータ：Array
+(
+    [:comment] => kjlkj
+    [:pic1] => 
+    [:u_id] => 51
+    [:date] => 2021-01-19 22:00:55
+)
+
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：マイページへ遷移します。
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 22:00:55 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 22:00:55 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 22:00:55 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 649
+[19-Jan-2021 22:00:55 Asia/Tokyo] PHP Notice:  Undefined variable: edit_flg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 615
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：session ID：2lr4k17ah3031ati3l8inpcgd2
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611061255
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：現在日時タイムスタンプ：1611061255
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611064855
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 22:00:55 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 22:00:55 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 652
+[19-Jan-2021 22:00:55 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 652
+[19-Jan-2021 22:00:55 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 652
+[19-Jan-2021 22:00:55 Asia/Tokyo] PHP Notice:  Undefined variable: edit_flg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 615
+[19-Jan-2021 22:02:08 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 22:02:08 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 22:02:08 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 22:02:08 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 22:02:08 Asia/Tokyo] debug：session ID：pv6lidr2vpp8sn6opto7nv4vbf
+[19-Jan-2021 22:02:08 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611061255
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 22:02:08 Asia/Tokyo] debug：現在日時タイムスタンプ：1611061328
+[19-Jan-2021 22:02:08 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611064855
+[19-Jan-2021 22:02:08 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 22:02:08 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 22:02:08 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 22:02:08 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 22:02:08 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 22:02:08 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 22:02:08 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 22:02:08 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 22:02:08 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 6
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:33:27
+            [update_date] => 2021-01-19 21:33:27
+        )
+
+    [1] => Array
+        (
+            [id] => 7
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:34:58
+            [update_date] => 2021-01-19 21:34:58
+        )
+
+    [2] => Array
+        (
+            [id] => 8
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:37:45
+            [update_date] => 2021-01-19 21:37:45
+        )
+
+    [3] => Array
+        (
+            [id] => 9
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:49:27
+            [update_date] => 2021-01-19 21:49:27
+        )
+
+    [4] => Array
+        (
+            [id] => 10
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:50:29
+            [update_date] => 2021-01-19 21:50:29
+        )
+
+    [5] => Array
+        (
+            [id] => 11
+            [comment] => fff
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:51:14
+            [update_date] => 2021-01-19 21:51:14
+        )
+
+    [6] => Array
+        (
+            [id] => 12
+            [comment] => sdlfkjals;kdf
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:54:26
+            [update_date] => 2021-01-19 21:54:26
+        )
+
+    [7] => Array
+        (
+            [id] => 13
+            [comment] => kjlkj
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 22:00:55
+            [update_date] => 2021-01-19 22:00:55
+        )
+
+)
+
+[19-Jan-2021 22:02:08 Asia/Tokyo] debug：POST送信があります。
+[19-Jan-2021 22:02:08 Asia/Tokyo] debug：POST情報：Array
+(
+    [comment] => falsdkfjals;kjfl;askjdfl;kasjdfl;kajs;lfkjaslksdjfl;skajdfkl;falsdkfjals;kjfl;askjdfl;kasjdfl;kajs;lfkjaslksdjfl;skajdfkl;falsdkfjals;kjfl;askjdfl;kasjdfl;kajs;lfkjaslksdjfl;skajdfkl;falsdkfjals;kjfl;askjdfl;kasjdfl;kajs;lfkjaslksdjfl;skajdfkl;falsdkfjals;kjfl;askjdfl;kasjdfl;kajs;lfkjaslksdjfl;skajdfkl;
+    [MAX_FILE_SIZE] => 3145728
+    [pic1] => 
+)
+
+[19-Jan-2021 22:02:08 Asia/Tokyo] debug：FILE情報：Array
+(
+)
+
+[19-Jan-2021 22:02:08 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：session ID：jv8m9tktkm1bgkvgme941a0kdi
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611061328
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：現在日時タイムスタンプ：1611061343
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611064928
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 6
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:33:27
+            [update_date] => 2021-01-19 21:33:27
+        )
+
+    [1] => Array
+        (
+            [id] => 7
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:34:58
+            [update_date] => 2021-01-19 21:34:58
+        )
+
+    [2] => Array
+        (
+            [id] => 8
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:37:45
+            [update_date] => 2021-01-19 21:37:45
+        )
+
+    [3] => Array
+        (
+            [id] => 9
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:49:27
+            [update_date] => 2021-01-19 21:49:27
+        )
+
+    [4] => Array
+        (
+            [id] => 10
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:50:29
+            [update_date] => 2021-01-19 21:50:29
+        )
+
+    [5] => Array
+        (
+            [id] => 11
+            [comment] => fff
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:51:14
+            [update_date] => 2021-01-19 21:51:14
+        )
+
+    [6] => Array
+        (
+            [id] => 12
+            [comment] => sdlfkjals;kdf
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:54:26
+            [update_date] => 2021-01-19 21:54:26
+        )
+
+    [7] => Array
+        (
+            [id] => 13
+            [comment] => kjlkj
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 22:00:55
+            [update_date] => 2021-01-19 22:00:55
+        )
+
+)
+
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：POST送信があります。
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：POST情報：Array
+(
+    [comment] => fasdfl;kajsdl;kfjal;ksdjf
+    [MAX_FILE_SIZE] => 3145728
+    [pic1] => ライブ７.jpg
+)
+
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：FILE情報：Array
+(
+)
+
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：バリデーションOKです。
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：DB新規登録です。
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：SQL：insert into post (comment, pic1, user_id, create_date ) values (:comment,  :pic1, :u_id, :date)
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：流し込みデータ：Array
+(
+    [:comment] => fasdfl;kajsdl;kfjal;ksdjf
+    [:pic1] => 
+    [:u_id] => 51
+    [:date] => 2021-01-19 22:02:23
+)
+
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：マイページへ遷移します。
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：session ID：mht67m5jfgen3alci4k1pvfq7p
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611061343
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：現在日時タイムスタンプ：1611061343
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611064943
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 6
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:33:27
+            [update_date] => 2021-01-19 21:33:27
+        )
+
+    [1] => Array
+        (
+            [id] => 7
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:34:58
+            [update_date] => 2021-01-19 21:34:58
+        )
+
+    [2] => Array
+        (
+            [id] => 8
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:37:45
+            [update_date] => 2021-01-19 21:37:45
+        )
+
+    [3] => Array
+        (
+            [id] => 9
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:49:27
+            [update_date] => 2021-01-19 21:49:27
+        )
+
+    [4] => Array
+        (
+            [id] => 10
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:50:29
+            [update_date] => 2021-01-19 21:50:29
+        )
+
+    [5] => Array
+        (
+            [id] => 11
+            [comment] => fff
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:51:14
+            [update_date] => 2021-01-19 21:51:14
+        )
+
+    [6] => Array
+        (
+            [id] => 12
+            [comment] => sdlfkjals;kdf
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:54:26
+            [update_date] => 2021-01-19 21:54:26
+        )
+
+    [7] => Array
+        (
+            [id] => 13
+            [comment] => kjlkj
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 22:00:55
+            [update_date] => 2021-01-19 22:00:55
+        )
+
+    [8] => Array
+        (
+            [id] => 14
+            [comment] => fasdfl;kajsdl;kfjal;ksdjf
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 22:02:23
+            [update_date] => 2021-01-19 22:02:23
+        )
+
+)
+
+[19-Jan-2021 22:02:23 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 22:06:46 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 22:06:46 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 22:06:46 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 22:06:46 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 22:06:46 Asia/Tokyo] debug：session ID：7q7oqj92pm67vhqd1a1ru7375h
+[19-Jan-2021 22:06:46 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611061343
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 22:06:46 Asia/Tokyo] debug：現在日時タイムスタンプ：1611061606
+[19-Jan-2021 22:06:46 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611064943
+[19-Jan-2021 22:06:46 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 22:06:46 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 22:06:46 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 22:06:46 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 22:06:46 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 22:06:46 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 22:06:46 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 22:06:46 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 22:06:46 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 6
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:33:27
+            [update_date] => 2021-01-19 21:33:27
+        )
+
+    [1] => Array
+        (
+            [id] => 7
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:34:58
+            [update_date] => 2021-01-19 21:34:58
+        )
+
+    [2] => Array
+        (
+            [id] => 8
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:37:45
+            [update_date] => 2021-01-19 21:37:45
+        )
+
+    [3] => Array
+        (
+            [id] => 9
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:49:27
+            [update_date] => 2021-01-19 21:49:27
+        )
+
+    [4] => Array
+        (
+            [id] => 10
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:50:29
+            [update_date] => 2021-01-19 21:50:29
+        )
+
+    [5] => Array
+        (
+            [id] => 11
+            [comment] => fff
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:51:14
+            [update_date] => 2021-01-19 21:51:14
+        )
+
+    [6] => Array
+        (
+            [id] => 12
+            [comment] => sdlfkjals;kdf
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:54:26
+            [update_date] => 2021-01-19 21:54:26
+        )
+
+    [7] => Array
+        (
+            [id] => 13
+            [comment] => kjlkj
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 22:00:55
+            [update_date] => 2021-01-19 22:00:55
+        )
+
+    [8] => Array
+        (
+            [id] => 14
+            [comment] => fasdfl;kajsdl;kfjal;ksdjf
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 22:02:23
+            [update_date] => 2021-01-19 22:02:23
+        )
+
+)
+
+[19-Jan-2021 22:06:46 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 22:06:57 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 22:06:57 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 22:06:57 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 22:06:57 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 22:06:57 Asia/Tokyo] debug：session ID：0mjfq7dt3sjvqd3h4moau8v3pf
+[19-Jan-2021 22:06:57 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611061606
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 22:06:57 Asia/Tokyo] debug：現在日時タイムスタンプ：1611061617
+[19-Jan-2021 22:06:57 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611065206
+[19-Jan-2021 22:06:57 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 22:06:57 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 22:06:57 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 22:06:57 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 22:06:57 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 22:06:57 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 22:06:57 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 22:06:57 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 22:06:57 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 6
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:33:27
+            [update_date] => 2021-01-19 21:33:27
+        )
+
+    [1] => Array
+        (
+            [id] => 7
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:34:58
+            [update_date] => 2021-01-19 21:34:58
+        )
+
+    [2] => Array
+        (
+            [id] => 8
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:37:45
+            [update_date] => 2021-01-19 21:37:45
+        )
+
+    [3] => Array
+        (
+            [id] => 9
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:49:27
+            [update_date] => 2021-01-19 21:49:27
+        )
+
+    [4] => Array
+        (
+            [id] => 10
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:50:29
+            [update_date] => 2021-01-19 21:50:29
+        )
+
+    [5] => Array
+        (
+            [id] => 11
+            [comment] => fff
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:51:14
+            [update_date] => 2021-01-19 21:51:14
+        )
+
+    [6] => Array
+        (
+            [id] => 12
+            [comment] => sdlfkjals;kdf
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:54:26
+            [update_date] => 2021-01-19 21:54:26
+        )
+
+    [7] => Array
+        (
+            [id] => 13
+            [comment] => kjlkj
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 22:00:55
+            [update_date] => 2021-01-19 22:00:55
+        )
+
+    [8] => Array
+        (
+            [id] => 14
+            [comment] => fasdfl;kajsdl;kfjal;ksdjf
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 22:02:23
+            [update_date] => 2021-01-19 22:02:23
+        )
+
+)
+
+[19-Jan-2021 22:06:57 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：session ID：om72igfs62go9cqjk8cu6l28od
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611061617
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：現在日時タイムスタンプ：1611061627
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611065217
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 6
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:33:27
+            [update_date] => 2021-01-19 21:33:27
+        )
+
+    [1] => Array
+        (
+            [id] => 7
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:34:58
+            [update_date] => 2021-01-19 21:34:58
+        )
+
+    [2] => Array
+        (
+            [id] => 8
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:37:45
+            [update_date] => 2021-01-19 21:37:45
+        )
+
+    [3] => Array
+        (
+            [id] => 9
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:49:27
+            [update_date] => 2021-01-19 21:49:27
+        )
+
+    [4] => Array
+        (
+            [id] => 10
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:50:29
+            [update_date] => 2021-01-19 21:50:29
+        )
+
+    [5] => Array
+        (
+            [id] => 11
+            [comment] => fff
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:51:14
+            [update_date] => 2021-01-19 21:51:14
+        )
+
+    [6] => Array
+        (
+            [id] => 12
+            [comment] => sdlfkjals;kdf
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:54:26
+            [update_date] => 2021-01-19 21:54:26
+        )
+
+    [7] => Array
+        (
+            [id] => 13
+            [comment] => kjlkj
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 22:00:55
+            [update_date] => 2021-01-19 22:00:55
+        )
+
+    [8] => Array
+        (
+            [id] => 14
+            [comment] => fasdfl;kajsdl;kfjal;ksdjf
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 22:02:23
+            [update_date] => 2021-01-19 22:02:23
+        )
+
+)
+
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：POST送信があります。
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：POST情報：Array
+(
+    [comment] => fasdflkjasl;kdfjasfsadfasdf
+    [MAX_FILE_SIZE] => 3145728
+)
+
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：FILE情報：Array
+(
+    [pic1] => Array
+        (
+            [name] => IMG_0003.jpg
+            [type] => image/jpeg
+            [tmp_name] => /Applications/MAMP/tmp/php/phpkExIz6
+            [error] => 0
+            [size] => 67960
+        )
+
+)
+
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：画像アップロード処理開始
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：FILE情報：Array
+(
+    [name] => IMG_0003.jpg
+    [type] => image/jpeg
+    [tmp_name] => /Applications/MAMP/tmp/php/phpkExIz6
+    [error] => 0
+    [size] => 67960
+)
+
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：ファイルは正常にアップロードされました
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：ファイルパス：uploads/7922725a89679a8edd8c7812a5ac88104667c603.jpeg
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：バリデーションOKです。
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：DB新規登録です。
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：SQL：insert into post (comment, pic1, user_id, create_date ) values (:comment,  :pic1, :u_id, :date)
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：流し込みデータ：Array
+(
+    [:comment] => fasdflkjasl;kdfjasfsadfasdf
+    [:pic1] => uploads/7922725a89679a8edd8c7812a5ac88104667c603.jpeg
+    [:u_id] => 51
+    [:date] => 2021-01-19 22:07:07
+)
+
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：マイページへ遷移します。
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：「　home page　
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：session ID：tie67eqec1p1eudp4ed57vkg9l
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611061627
+    [login_limit] => 3600
+    [user_id] => 51
+    [msg_success] => registered
+)
+
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：現在日時タイムスタンプ：1611061627
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611065227
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：ログイン済みユーザーです。
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：ログイン有効期限以内です。
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：ユーザー情報を取得します。
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：クエリ成功。
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：商品ID：
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：フォーム用DBデータ：
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：カテゴリデータ：Array
+(
+    [0] => Array
+        (
+            [id] => 6
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:33:27
+            [update_date] => 2021-01-19 21:33:27
+        )
+
+    [1] => Array
+        (
+            [id] => 7
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:34:58
+            [update_date] => 2021-01-19 21:34:58
+        )
+
+    [2] => Array
+        (
+            [id] => 8
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:37:45
+            [update_date] => 2021-01-19 21:37:45
+        )
+
+    [3] => Array
+        (
+            [id] => 9
+            [comment] => utada hikaru
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:49:27
+            [update_date] => 2021-01-19 21:49:27
+        )
+
+    [4] => Array
+        (
+            [id] => 10
+            [comment] => aaa
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:50:29
+            [update_date] => 2021-01-19 21:50:29
+        )
+
+    [5] => Array
+        (
+            [id] => 11
+            [comment] => fff
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:51:14
+            [update_date] => 2021-01-19 21:51:14
+        )
+
+    [6] => Array
+        (
+            [id] => 12
+            [comment] => sdlfkjals;kdf
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 21:54:26
+            [update_date] => 2021-01-19 21:54:26
+        )
+
+    [7] => Array
+        (
+            [id] => 13
+            [comment] => kjlkj
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 22:00:55
+            [update_date] => 2021-01-19 22:00:55
+        )
+
+    [8] => Array
+        (
+            [id] => 14
+            [comment] => fasdfl;kajsdl;kfjal;ksdjf
+            [pic1] => 
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 22:02:23
+            [update_date] => 2021-01-19 22:02:23
+        )
+
+    [9] => Array
+        (
+            [id] => 15
+            [comment] => fasdflkjasl;kdfjasfsadfasdf
+            [pic1] => uploads/7922725a89679a8edd8c7812a5ac88104667c603.jpeg
+            [user_id] => 51
+            [delete_flg] => 0
+            [create_date] => 2021-01-19 22:07:07
+            [update_date] => 2021-01-19 22:07:07
+        )
+
+)
+
+[19-Jan-2021 22:07:07 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

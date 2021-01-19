@@ -35,7 +35,7 @@ debug('カテゴリデータ：' . print_r($dbCategoryData, true));
 // GETパラメータはあるが、改ざんされている（URLをいじくった）場合、正しい商品データが取れないのでマイページへ遷移させる
 if (!empty($p_id) && empty($dbFormData)) {
     debug('GETパラメータの商品IDが違います。マイページへ遷移します。');
-    header("Location:mypage.php"); //マイページへ
+    header("Location:homepage.php"); //マイページへ
 }
 
 // POST送信時処理
@@ -46,54 +46,55 @@ if (!empty($_POST)) {
     debug('FILE情報：' . print_r($_FILES, true));
 
     //変数にユーザー情報を代入
-    $name = $_POST['name'];
-    $category = $_POST['category_id'];
-    $price = (!empty($_POST['price'])) ? $_POST['price'] : 0; //０や空文字の場合は０を入れる。デフォルトのフォームには０が入っている。
+    // $name = $_POST['name'];
+    // $category = $_POST['category_id'];
+    // $price = (!empty($_POST['price'])) ? $_POST['price'] : 0; //０や空文字の場合は０を入れる。デフォルトのフォームには０が入っている。
     $comment = $_POST['comment'];
     //画像をアップロードし、パスを格納
-    $pic1 = (!empty($_FILES['pic1']['name'])) ? uploadImg($_FILES['pic1'], 'pic1') : '';
+    $pic1 = (!empty($_FILES['pic1'])) ? uploadImg($_FILES['pic1'], 'pic1') : '';
     // 画像をPOSTしてない（登録していない）が既にDBに登録されている場合、DBのパスを入れる（POSTには反映されないので）
     $pic1 = (empty($pic1) && !empty($dbFormData['pic1'])) ? $dbFormData['pic1'] : $pic1;
-    $pic2 = (!empty($_FILES['pic2']['name'])) ? uploadImg($_FILES['pic2'], 'pic2') : '';
-    $pic2 = (empty($pic2) && !empty($dbFormData['pic2'])) ? $dbFormData['pic2'] : $pic2;
-    $pic3 = (!empty($_FILES['pic3']['name'])) ? uploadImg($_FILES['pic3'], 'pic3') : '';
-    $pic3 = (empty($pic3) && !empty($dbFormData['pic3'])) ? $dbFormData['pic3'] : $pic3;
+    // $pic2 = (!empty($_FILES['pic2']['name'])) ? uploadImg($_FILES['pic2'], 'pic2') : '';
+    // $pic2 = (empty($pic2) && !empty($dbFormData['pic2'])) ? $dbFormData['pic2'] : $pic2;
+    // $pic3 = (!empty($_FILES['pic3']['name'])) ? uploadImg($_FILES['pic3'], 'pic3') : '';
+    // $pic3 = (empty($pic3) && !empty($dbFormData['pic3'])) ? $dbFormData['pic3'] : $pic3;
 
+    validRequired($comment, 'comment');
     // 更新の場合はDBの情報と入力情報が異なる場合にバリデーションを行う
     if (empty($dbFormData)) {
         //未入力チェック
-        validRequired($name, 'name');
+        // validRequired($name, 'name');
         //最大文字数チェック
-        validMaxLen($name, 'name');
+        // validMaxLen($name, 'name');
         //セレクトボックスチェック
-        validSelect($category, 'category_id');
+        // validSelect($post, 'post_id');
         //最大文字数チェック
-        validMaxLen($comment, 'comment', 500);
+        validMaxLen($comment, 'comment', 255);
         //未入力チェック
-        validRequired($price, 'price');
+        // validRequired($price, 'price');
         //半角数字チェック
-        validNumber($price, 'price');
+        // validNumber($price, 'price');
     } else {
-        if ($dbFormData['name'] !== $name) {
-            //未入力チェック
-            validRequired($name, 'name');
-            //最大文字数チェック
-            validMaxLen($name, 'name');
-        }
-        if ($dbFormData['category_id'] !== $category) {
-            //セレクトボックスチェック
-            validSelect($category, 'category_id');
-        }
+        // if ($dbFormData['name'] !== $name) {
+        //     //未入力チェック
+        //     validRequired($name, 'name');
+        //     //最大文字数チェック
+        //     validMaxLen($name, 'name');
+        // }
+        // if ($dbFormData['post_id'] !== $post) {
+        //     //セレクトボックスチェック
+        //     validSelect($post, 'post_id');
+        // }
         if ($dbFormData['comment'] !== $comment) {
             //最大文字数チェック
-            validMaxLen($comment, 'comment', 500);
+            validMaxLen($comment, 'comment', 255);
         }
-        if ($dbFormData['price'] != $price) { //前回まではキャストしていたが、ゆるい判定でもいい
-            //未入力チェック
-            validRequired($price, 'price');
-            //半角数字チェック
-            validNumber($price, 'price');
-        }
+        // if ($dbFormData['price'] != $price) { //前回まではキャストしていたが、ゆるい判定でもいい
+        //     //未入力チェック
+        //     validRequired($price, 'price');
+        //     //半角数字チェック
+        //     validNumber($price, 'price');
+        // }
     }
 
     if (empty($err_msg)) {
@@ -107,33 +108,30 @@ if (!empty($_POST)) {
             // 編集画面の場合はUPDATE文、新規登録画面の場合はINSERT文を生成
             if ($edit_flg) {
                 debug('DB更新です。');
-                $sql = 'UPDATE product SET name = :name, category_id = :category, price = :price, comment = :comment, pic1 = :pic1, pic2 = :pic2, pic3 = :pic3 WHERE user_id = :u_id AND id = :p_id';
-                $data = array(':name' => $name, ':category' => $category, ':price' => $price, ':comment' => $comment, ':pic1' => $pic1, ':pic2' => $pic2, ':pic3' => $pic3, ':u_id' => $_SESSION['user_id'], ':p_id' => $p_id);
+                $sql = 'UPDATE post SET  comment = :comment, pic1 = :pic1 WHERE user_id = :u_id AND id = :p_id';
+                $data = array(':comment' => $comment, ':pic1' => $pic1, ':u_id' => $_SESSION['user_id'], ':p_id' => $p_id);
             } else {
                 debug('DB新規登録です。');
-                $sql = 'insert into product (name, category_id, price, comment, pic1, pic2, pic3, user_id, create_date ) values (:name, :category, :price, :comment,  :pic1, :pic2, :pic3, :u_id, :date)';
-                $data = array(':name' => $name, ':category' => $category, ':price' => $price, ':comment' => $comment, ':pic1' => $pic1, ':pic2' => $pic2, ':pic3' => $pic3, ':u_id' => $_SESSION['user_id'], ':date' => date('Y-m-d H:i:s'));
+                $sql = 'insert into post (comment, pic1, user_id, create_date ) values (:comment,  :pic1, :u_id, :date)';
+                $data = array(':comment' => $comment, ':pic1' => $pic1, ":u_id" => $_SESSION['user_id'], ':date' => date('Y-m-d H:i:s'));
             }
             debug('SQL：' . $sql);
             debug('流し込みデータ：' . print_r($data, true));
             // クエリ実行
             $stmt = queryPost($dbh, $sql, $data, "common");
-
             // クエリ成功の場合
             if ($stmt) {
                 $_SESSION['msg_success'] = SUC04;
                 debug('マイページへ遷移します。');
-                header("Location:mypage.php"); //マイページへ
+                header("Location:homepage.php"); //マイページへ
             }
         } catch (Exception $e) {
             error_log('エラー発生:' . $e->getMessage());
-            $err_msg['common'] = MSG07;
+            $err_msg['common'] = MSG09;
         }
     }
 }
 debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
-?>
-
 ?>
 
 <?php
@@ -575,49 +573,47 @@ require("goodbook_head.php");
             <div class="modalwindow_form_div">
                 <div class="modalwindow_form">
                     <div class="inside">
-                        <div class="modalwindow_form_title">
-                            <div class="edit_title">
-                                <h1>create a post</h1>
-                            </div>
-                            <div class="x-circle">
-                                <i class="far fa-times-circle fa-2x"></i>
-                            </div>
-                        </div>
-                        <div class="mypage_border"></div>
-                        <div class="edit_profile_form_div">
-                            <form action="" method="post" class="edit_profile_form">
-                        </div>
-                        <label class="<?php echo getErrMsglabel("comment"); ?>">
-                            <!-- comment -->
-                            <textarea class="posttextarea" name="comment" id="js-count" cols="30" rows="4" placeholder="comment"><?php echo getFormData('comment'); ?></textarea>
-                        </label>
-                        <p class="counter-text"><span id="js-count-view">0</span>/255文字</p>
-                        <div class="area-msg">
-                            <?php
-                            echo getErrMsg("comment");
-                            ?>
-                        </div>
-                        <div style="overflow: hidden;">
-                            <div class="imgDrop-container">
-                                <!-- 画像1 -->
-                                <label class="area-drop <?php if (!empty($err_msg['pic1'])) echo 'err'; ?>">
-                                    <input type="hidden" name="MAX_FILE_SIZE" value="3145728">
-                                    <input type="file" name="pic1" class="input-file" style="display:none;">
-                                    <img src="<?php echo getFormData('pic1'); ?>" alt="" class="prev-img" style="<?php if (empty(getFormData('pic1'))) echo 'display:none;' ?> margin:10px 0px 0px ">
-                                    <div class="imgUpIcon">
-                                        <i class="far fa-images fa-lg"></i>
-                                    </div>
-                                </label>
-                                <div class="area-msg">
-                                    <?php
-                                    if (!empty($err_msg['pic1'])) echo $err_msg['pic1'];
-                                    ?>
+                        <form action="" method="post" class="edit_profile_form" enctype="multipart/form-data">
+                            <div class="modalwindow_form_title">
+                                <div class="edit_title">
+                                    <h1>create a post</h1>
+                                </div>
+                                <div class="x-circle">
+                                    <i class="far fa-times-circle fa-2x"></i>
                                 </div>
                             </div>
-                        </div>
-                        <label>
-                            <input type="submit" value="post">
-                        </label>
+                            <div class="mypage_border"></div>
+                            <div class="edit_profile_form_div">
+                            </div>
+                            <label class="<?php echo getErrMsglabel("comment"); ?>">
+                                <textarea class="posttextarea" name="comment" id="js-count" cols="30" rows="4" placeholder="comment"><?php echo getFormData('comment'); ?></textarea>
+                            </label>
+                            <p class="counter-text"><span id="js-count-view">0</span>/255文字</p>
+                            <div class="area-msg">
+                                <?php
+                                echo getErrMsg("comment");
+                                ?>
+                            </div>
+                            <div style="overflow: hidden;">
+                                <div class="imgDrop-container">
+                                    <label class="area-drop <?php getErrMsglabel("pic1") ?>">
+                                        <input type="hidden" name="MAX_FILE_SIZE" value="3145728">
+                                        <input type="file" name="pic1" class="input-file" style="display:none;">
+                                        <img src="<?php echo getFormData('pic1'); ?>" alt="" class="prev-img" style="<?php if (empty(getFormData('pic1'))) echo 'display:none;' ?> margin:10px 0px 0px ">
+                                        <div class="imgUpIcon">
+                                            <i class="far fa-images fa-lg"></i>
+                                        </div>
+                                    </label>
+                                    <div class="area-msg">
+                                        <?php;
+                                    getErrMsg("pic1");
+                                    ?>
+                                    </div>
+                                </div>
+                            </div>
+                            <label>
+                                <input type="submit" value="<?php echo (!$edit_flg) ? 'post' : 'edit'; ?>">
+                            </label>
                         </form>
                     </div>
                 </div>
