@@ -628,6 +628,8 @@ main lower part
 	margin-bottom: 10px;
 }
 .modalwindow_screen_overall,
+.modalwindow_screen_overall_1,
+.modalwindow_screen_overall_2,
 .profile_screen_overall {
 	position: absolute;
 	display: none;
@@ -679,7 +681,7 @@ body.fixed {
 	height: 100%;
 	left: 0;
 }
-.edit_profile_form_div {
+.edit_form_div {
 	max-width: 500px;
 	margin: 0 auto;
 	margin-top: 25px;
@@ -921,7 +923,7 @@ header i:hover,
 .area-msg {
 	color: #ff4d4b;
 }
-.edit_profile_form .area-msg {
+.edit_form .area-msg {
 	margin-bottom: 15px;
 }
 label.err input {

@@ -17,25 +17,15 @@ debug('取得したユーザー情報：' . print_r($dbFormData, true));
 // 画面処理
 //================================
 
-// 画面表示用データ取得
-//================================
-// GETデータを格納
-$p_id = (!empty($_GET['p_id'])) ? $_GET['p_id'] : '';
-// DBから商品データを取得
-$dbFormData = (!empty($p_id)) ? getPost($_SESSION['user_id'], $p_id) : '';
-// 新規登録画面か編集画面か判別用フラグ
-$edit_flg = (empty($dbFormData)) ? false : true;
-// DBからカテゴリデータを取得
-$dbCategoryData = getCategory();
-debug('商品ID：' . $p_id);
-debug('フォーム用DBデータ：' . print_r($dbFormData, true));
-debug('カテゴリデータ：' . print_r($dbCategoryData, true));
+// // 画面表示用データ取得
+// //================================
+dataAcquisitionDisplay();
 
 // パラメータ改ざんチェック
 //================================
 // GETパラメータはあるが、改ざんされている（URLをいじくった）場合、正しい商品データが取れないのでマイページへ遷移させる
 if (!empty($p_id) && empty($dbFormData)) {
-    debug('GETパラメータの商品IDが違います。homepageへ遷移します。');
+    debug('GETパラメータのpostIDが違います。homepageへ遷移します。');
     header("Location:homepage.php");
 }
 
@@ -69,8 +59,6 @@ if (!empty($_POST)) {
     }
 }
 
-$dbFormData = getUser($_SESSION['user_id']);
-debug('取得したユーザー情報：' . print_r($dbFormData, true));
 
 // 画面表示用データ取得
 //================================
@@ -85,14 +73,12 @@ if (!is_int((int)$currentPageNum)) {
 $listSpan = 20;
 // 現在の表示レコード先頭を算出
 $currentMinNum = (($currentPageNum - 1) * $listSpan); //1ページ目なら(1-1)*20 = 0 、 ２ページ目なら(2-1)*20 = 20
-// DBから商品データを取得
-$dbProductData = getPostList($currentMinNum);
-// DBからカテゴリデータを取得
-$dbCategoryData = getCategory();
+// DBからpostデータを取得
+$dbPostData = getPostList($currentMinNum);
 debug('現在のページ：' . $currentPageNum);
-// debug('フォーム用DBデータ：' . print_r($dbFormData, true));
-//debug('カテゴリデータ：'.print_r($dbCategoryData,true));
 
+$dbFormData = getUser($_SESSION['user_id']);
+debug('取得したユーザー情報：' . print_r($dbFormData, true));
 debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
 ?>
 
@@ -103,6 +89,11 @@ require("goodbook_head.php");
 
 <body>
     <?php require("goodbook_header.php") ?>
+    <p id="js-show-msg" style="display:none;" class="msg-slide">
+        <?php
+        echo getSessionFlash('msg_success');
+        ?>
+    </p>
     <article class="main">
         <div class="main_div">
             <nav>
@@ -215,6 +206,7 @@ require("goodbook_head.php");
                                     </ul>
                                 </li>
                             </ul>
+                        </ul>
                     </div>
                 </section>
             </nav>
@@ -262,11 +254,13 @@ require("goodbook_head.php");
                         </div>
                     </section>
                     <?php
-                    foreach ($dbProductData['data'] as $key => $val) :
+                    foreach ($dbPostData['data'] as $key => $val) :
                     ?>
                         <section class="main_center_element main_center_element3">
                             <div class="icon_img_div">
-                                <img class="icon_img" src="<?php echo sanitize($dbFormData['profPic']); ?>" alt=" utadahikaru_icon">
+                                <a href="mypage.php">
+                                    <img class="icon_img" src="<?php echo sanitize($dbFormData['profPic']); ?>" alt=" utadahikaru_icon">
+                                </a>
                                 <div class="user_name_div">
                                     <p><?php echo userInfoIndicate($dbFormData, "username"); ?></p>
                                     <p class="time_line"><?php echo mt_rand(1, 24); ?>hour ago</p>
@@ -596,7 +590,7 @@ require("goodbook_head.php");
             <div class="modalwindow_form_div">
                 <div class="modalwindow_form">
                     <div class="inside">
-                        <form action="" method="post" class="edit_profile_form" enctype="multipart/form-data">
+                        <form action="" method="post" class="edit_form" enctype="multipart/form-data">
                             <div class="modalwindow_form_title">
                                 <div class="edit_title">
                                     <h1>create a post</h1>
@@ -606,7 +600,7 @@ require("goodbook_head.php");
                                 </div>
                             </div>
                             <div class="mypage_border"></div>
-                            <div class="edit_profile_form_div">
+                            <div class="edit_form_div">
                             </div>
                             <label class="<?php echo getErrMsglabel("comment"); ?>">
                                 <textarea class="posttextarea" name="comment" id="js-count" cols="30" rows="4" placeholder="comment"><?php echo getFormData('comment'); ?></textarea>

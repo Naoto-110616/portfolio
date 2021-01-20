@@ -731,18 +731,18 @@ function createPost($edit_flg, $comment, $pic1, $p_id)
 }
 function getPost($u_id, $p_id)
 {
-    debug('商品情報を取得します。');
+    debug('post情報を取得します。');
     debug('ユーザーID：' . $u_id);
-    debug('商品ID：' . $p_id);
+    debug('postID：' . $p_id);
     //例外処理
     try {
         // DBへ接続
         $dbh = dbConnect();
         // SQL文作成
-        $sql = 'SELECT * FROM Post WHERE user_id = :u_id AND id = :p_id AND delete_flg = 0';
+        $sql = 'SELECT * FROM post WHERE user_id = :u_id AND id = :p_id AND delete_flg = 0';
         $data = array(':u_id' => $u_id, ':p_id' => $p_id);
         // クエリ実行
-        $stmt = queryPost($dbh, $sql, $data, "Post");
+        $stmt = queryPost($dbh, $sql, $data, "common");
 
         if ($stmt) {
             // クエリ結果のデータを１レコード返却
@@ -773,7 +773,7 @@ function getPostList($currentMinNum = 1, $span = 20)
         }
 
         // ページング用のSQL文作成
-        $sql = 'SELECT * FROM Post';
+        $sql = 'SELECT * FROM post';
         //    if(!empty($category)) $sql .= ' WHERE category = '.$category;
         //    if(!empty($sort)){
         //      switch($sort){
@@ -992,4 +992,20 @@ function uploadIcon($edit_flg, $profPic, $p_id)
         global $err_msg;
         $err_msg['common'] = MSG09;
     }
+}
+function dataAcquisitionDisplay()
+{
+    global $p_id;
+    global $dbFormData;
+    global $edit_flg;
+    // 画面表示用データ取得
+    //================================
+    // GETデータを格納
+    $p_id = (!empty($_GET['p_id'])) ? $_GET['p_id'] : '';
+    // DBからpostデータを取得
+    $dbFormData = (!empty($p_id)) ? getPost($_SESSION['user_id'], $p_id) : '';
+    // 新規登録画面か編集画面か判別用フラグ
+    $edit_flg = (empty($dbFormData)) ? false : true;
+    debug('postID：' . $p_id);
+    debug('フォーム用DBデータ：' . print_r($dbFormData, true));
 }

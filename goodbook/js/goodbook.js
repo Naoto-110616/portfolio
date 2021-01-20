@@ -31,7 +31,13 @@ $(function () {
 // profile editモーダルウィンドウの表示，非表示ボタン
 $(function () {
 	$(".edit").click(function () {
-		$(".modalwindow_screen_overall").toggle();
+		$(".modalwindow_screen_overall_1").toggle();
+		$("body").toggleClass("fixed");
+	});
+});
+$(function () {
+	$(".myIcon_img_div").click(function () {
+		$(".modalwindow_screen_overall_2").toggle();
 		$("body").toggleClass("fixed");
 	});
 });
@@ -42,14 +48,10 @@ $(function () {
 	});
 });
 $(function () {
-	$(".myIcon_img_div").click(function () {
-		$(".modalwindow_screen_overall").toggle();
-		$("body").toggleClass("fixed");
-	});
-});
-$(function () {
 	$(".fa-times-circle").click(function () {
 		$(".modalwindow_screen_overall").toggle();
+		$(".modalwindow_screen_overall_1").toggle();
+		// $(".modalwindow_screen_overall_2").toggle();
 		$("body").toggleClass("fixed");
 	});
 });

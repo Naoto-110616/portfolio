@@ -44,7 +44,6 @@ if (!empty($_POST)) {
 
     if (empty($err_msg)) {
         debug('input check OK.');
-
         //DBの情報と入力情報が異なる場合にバリデーションを行う
         if ($dbFormData['username'] !== $username) {
             //名前の最大文字数チェック
@@ -78,10 +77,8 @@ if (!empty($_POST)) {
             //emailの形式チェック
             validEmail($email, 'email');
         }
-
         if (empty($err_msg)) {
             debug('バリデーションOKです。');
-
             // editprofile機能
             editProfile($username, $tel, $zip, $addr, $age, $email, $dbFormData, "common");
         }
@@ -90,30 +87,18 @@ if (!empty($_POST)) {
 
 $dbFormData = getUser($_SESSION['user_id']);
 debug('取得したユーザー情報：' . print_r($dbFormData, true));
-
 //================================
 // 画面処理
 //================================
-
 // 画面表示用データ取得
 //================================
-// GETデータを格納
-$p_id = (!empty($_GET['p_id'])) ? $_GET['p_id'] : '';
-// DBから商品データを取得
-$dbFormData = (!empty($p_id)) ? getPost($_SESSION['user_id'], $p_id) : '';
-// 新規登録画面か編集画面か判別用フラグ
-$edit_flg = (empty($dbFormData)) ? false : true;
-// DBからカテゴリデータを取得
-$dbCategoryData = getCategory();
-debug('商品ID：' . $p_id);
-debug('フォーム用DBデータ：' . print_r($dbFormData, true));
-debug('カテゴリデータ：' . print_r($dbCategoryData, true));
+dataAcquisitionDisplay();
 
 // パラメータ改ざんチェック
 //================================
 // GETパラメータはあるが、改ざんされている（URLをいじくった）場合、正しい商品データが取れないのでマイページへ遷移させる
 if (!empty($p_id) && empty($dbFormData)) {
-    debug('GETパラメータの商品IDが違います。homepageへ遷移します。');
+    debug('GETパラメータのpostIDが違います。homepageへ遷移します。');
     header("Location:mypage.php");
 }
 
@@ -140,28 +125,6 @@ if (!empty($_POST)) {
     }
 }
 $dbFormData = getUser($_SESSION['user_id']);
-debug('取得したユーザー情報：' . print_r($dbFormData, true));
-
-// 画面表示用データ取得
-//================================
-// カレントページのGETパラメータを取得
-$currentPageNum = (!empty($_GET['p'])) ? $_GET['p'] : 1; //デフォルトは１ページめ
-// パラメータに不正な値が入っているかチェック
-if (!is_int((int)$currentPageNum)) {
-    error_log('エラー発生:指定ページに不正な値が入りました');
-    header("Location:mypage.php");
-}
-// 表示件数
-$listSpan = 20;
-// 現在の表示レコード先頭を算出
-$currentMinNum = (($currentPageNum - 1) * $listSpan); //1ページ目なら(1-1)*20 = 0 、 ２ページ目なら(2-1)*20 = 20
-// DBから商品データを取得
-$dbProductData = getPostList($currentMinNum);
-// DBからカテゴリデータを取得
-$dbCategoryData = getCategory();
-debug('現在のページ：' . $currentPageNum);
-// debug('フォーム用DBデータ：' . print_r($dbFormData, true));
-//debug('カテゴリデータ：'.print_r($dbCategoryData,true));
 
 debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
 
@@ -330,7 +293,7 @@ require('goodbook_head.php');
             </div>
         </article>
         <article class="modalwindow">
-            <div class="modalwindow_screen_overall">
+            <div class="modalwindow_screen_overall_1">
                 <div class="modalwindow_form_div">
                     <div class="modalwindow_form">
                         <div class="modalwindow_form_title">
@@ -342,8 +305,8 @@ require('goodbook_head.php');
                             </div>
                         </div>
                         <div class="mypage_border"></div>
-                        <div class="edit_profile_form_div">
-                            <form action="" method="post" class="edit_profile_form">
+                        <div class="edit_form_div">
+                            <form action="" method="post" class="edit_form">
                                 <div class="area-msg">
                                     <?php
                                     echo getErrMsg("common");
@@ -413,11 +376,11 @@ require('goodbook_head.php');
             </div>
         </article>
         <article class="modalwindow">
-            <div class="modalwindow_screen_overall">
+            <div class="modalwindow_screen_overall_2">
                 <div class="modalwindow_form_div">
                     <div class="modalwindow_form">
                         <div class="modalwindow_form_title">
-                            <form action="" method="post" class="edit_profile_form" enctype="multipart/form-data">
+                            <form action="" method="post" class="edit_form" enctype="multipart/form-data">
                                 <div class="modalwindow_form_title">
                                     <div class="edit_title">
                                         <h1>edit Icon</h1>
