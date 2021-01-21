@@ -11,34 +11,10 @@ debugLogStart();
 //ログイン認証はなし（ログインできない人が使う画面なので）
 
 // DBからユーザーデータを取得
-$dbFormData = getUser($_SESSION['user_id']);
+$dbFormData = getUser(isset($_SESSION['user_id']));
+// send pass remind mail function
+passRemindSend(isset($email));
 
-//post送信されていた場合
-if (!empty($_POST)) {
-    debug('POST送信があります。');
-    debug('POST情報：' . print_r($_POST, true));
-
-    //変数にPOST情報代入
-    $email = $_POST['email'];
-
-    //未入力チェック
-    validRequired($email, 'email');
-
-    if (empty($err_msg)) {
-        debug('未入力チェックOK。');
-
-        //emailの形式チェック
-        validEmail($email, 'email');
-        //emailの最大文字数チェック
-        validMaxLen($email, 'email');
-
-        if (empty($err_msg)) {
-            debug('バリデーションOK。');
-
-            passRemindSend($email);
-        }
-    }
-}
 ?>
 
 <?php

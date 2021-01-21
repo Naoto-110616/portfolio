@@ -11,48 +11,15 @@ debugLogStart();
 //ログイン認証はなし（ログインできない人が使う画面なので）
 
 // DBからユーザーデータを取得
-$dbFormData = getUser($_SESSION['user_id']);
+$dbFormData = getUser(isset($_SESSION['user_id']));
 
 //SESSIONに認証キーがあるか確認、なければリダイレクト
 if (empty($_SESSION['auth_key'])) {
     header("Location:passRemindSend.php"); //認証キー送信ページへ
 }
 
-//post送信されていた場合
-if (!empty($_POST)) {
-    debug('POST送信があります。');
-    debug('POST情報：' . print_r($_POST, true));
+passRemindRecieve(isset($pass));
 
-    //変数に認証キーを代入
-    $auth_key = $_POST['token'];
-
-    //未入力チェック
-    validRequired($auth_key, 'token');
-
-    if (empty($err_msg)) {
-        debug('未入力チェックOK。');
-
-        //固定長チェック
-        validLength($auth_key, 'token');
-        //半角チェック
-        validHalf($auth_key, 'token');
-
-        if (empty($err_msg)) {
-            debug('バリデーションOK。');
-
-            validAuthKeyMuth($auth_key);
-            validAuthKeyExpired();
-
-            if (empty($err_msg)) {
-                debug('認証OK。');
-
-                $pass = makeRandKey(); //パスワード生成
-
-                passRemindRecieve($pass);
-            }
-        }
-    }
-}
 ?>
 
 <?php
