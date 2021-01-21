@@ -55,7 +55,7 @@ if (!empty($_POST)) {
     }
     if (empty($err_msg)) {
         debug('バリデーションOKです。');
-        createPost($edit_flg, $comment, $pic1, $p_id);
+        createPost(isset($edit_flg), isset($comment), isset($pic1), isset($p_id));
     }
 }
 
