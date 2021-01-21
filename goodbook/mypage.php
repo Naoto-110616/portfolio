@@ -18,72 +18,7 @@ auth();
 //================================
 // edit profile
 //================================
-// DBからユーザーデータを取得
-$dbFormData = getUser($_SESSION['user_id']);
-debug('取得したユーザー情報：' . print_r($dbFormData, true));
-
-// post送信されていた場合
-if (!empty($_POST)) {
-    debug('POST送信があります。');
-    debug('POST情報：' . print_r($_POST, true));
-
-    //変数にユーザー情報を代入
-    $username = $_POST['username'];
-    $tel = $_POST['tel'];
-    $zip = (!empty($_POST['zip'])) ? $_POST['zip'] : 0; //後続のバリデーションにひっかかるため、空で送信されてきたら0を入れる
-    $addr = $_POST['addr'];
-    $age = $_POST['age'];
-    $email = $_POST['email'];
-
-    validRequired($username, "username");
-    validRequired($tel, "tel");
-    validRequired($zip, "zip");
-    validRequired($addr, "addr");
-    validRequired($age, "age");
-    validRequired($email, 'email');
-
-    if (empty($err_msg)) {
-        debug('input check OK.');
-        //DBの情報と入力情報が異なる場合にバリデーションを行う
-        if ($dbFormData['username'] !== $username) {
-            //名前の最大文字数チェック
-            validMaxLen($username, 'username');
-        }
-        if ($dbFormData['tel'] !== $tel) {
-            //TEL形式チェック
-            validTel($tel, 'tel');
-        }
-        if ($dbFormData['addr'] !== $addr) {
-            //住所の最大文字数チェック
-            validMaxLen($addr, 'addr');
-        }
-        if ((int)$dbFormData['zip'] !== $zip) { //DBデータをint型にキャスト（型変換）して比較
-            //郵便番号形式チェック
-            validZip($zip, 'zip');
-        }
-        if ($dbFormData['age'] !== $age) {
-            //年齢の最大文字数チェック
-            validMaxLen($age, 'age');
-            //年齢の半角数字チェック
-            validNumber($age, 'age');
-        }
-        if ($dbFormData['email'] !== $email) {
-            //emailの最大文字数チェック
-            validMaxLen($email, 'email');
-            if (empty($err_msg['email'])) {
-                //emailの重複チェック
-                validEmailDup($email, "email");
-            }
-            //emailの形式チェック
-            validEmail($email, 'email');
-        }
-        if (empty($err_msg)) {
-            debug('バリデーションOKです。');
-            // editprofile機能
-            editProfile($username, $tel, $zip, $addr, $age, $email, $dbFormData, "common");
-        }
-    }
-}
+editprofile("common");
 
 $dbFormData = getUser($_SESSION['user_id']);
 debug('取得したユーザー情報：' . print_r($dbFormData, true));
@@ -104,9 +39,7 @@ if (!empty($p_id) && empty($dbFormData)) {
 
 // POST送信時処理
 //================================
-if (!empty($_POST)) {
-    debug('POST送信があります。');
-    debug('POST情報：' . print_r($_POST, true));
+if (!empty($_FILES)) {
     debug('FILE情報：' . print_r($_FILES, true));
 
     //画像をアップロードし、パスを格納
@@ -116,9 +49,7 @@ if (!empty($_POST)) {
 
     // 更新の場合はDBの情報と入力情報が異なる場合にバリデーションを行う
     if (empty($dbFormData)) {
-        debug("test");
         if (!empty($err_msg)) {
-            debug("test");
             debug('バリデーションOKです。');
             uploadIcon($edit_flg, $profPic, $p_id);
         }
@@ -150,7 +81,7 @@ require('goodbook_head.php');
             <div class="main_top_content_overall">
                 <div class="main_top_content">
                     <div class="main_top_content main_top_cover_photo_div">
-                        <div class="main_top_cover_photo">
+                        <div class="main_top_cover_photo" style="background-image: url(<?php echo sanitize($dbFormData["profPic"]); ?>);">
                             <div class="cover_photo_change_button">
                                 <label for="">
                                     <input type="button" name="cover_photo_change" value="change cover photo">
