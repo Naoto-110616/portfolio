@@ -15,43 +15,8 @@ auth();
 // 画面処理
 //================================
 // DBからユーザーデータを取得
-$userData = getUser($_SESSION['user_id']);
-debug('取得したユーザー情報：' . print_r($userData, true));
-if (!empty($_POST)) {
-    debug('POST送信があります。');
-    debug('POST情報：' . print_r($_POST, true));
-
-    //変数にユーザー情報を代入
-    $pass_old = $_POST['pass_old'];
-    $pass_new = $_POST['pass_new'];
-    $pass_new_re = $_POST['pass_new_re'];
-
-    //未入力チェック
-    validRequired($pass_old, 'pass_old');
-    validRequired($pass_new, 'pass_new');
-    validRequired($pass_new_re, 'pass_new_re');
-
-    if (empty($err_msg)) {
-        debug('未入力チェックOK。');
-
-        //古いパスワードのチェック
-        validPass($pass_old, 'pass_old');
-        //新しいパスワードのチェック
-        validPass($pass_new, 'pass_new');
-        //古いパスワードとDBパスワードを照合（DBに入っているデータと同じであれば、半角英数字チェックや最大文字チェックは行わなくても問題ない）
-        dbPassMatch($pass_old, $userData, "pass", "pass_old");
-        //新しいパスワードと古いパスワードが同じかチェック
-        passNewOldMatch($pass_old, $pass_new, "pass_new");
-        //パスワードとパスワード再入力が合っているかチェック（ログイン画面では最大、最小チェックもしていたがパスワードの方でチェックしているので実は必要ない）
-        validMatch($pass_new, $pass_new_re, 'pass_new_re');
-
-        if (empty($err_msg)) {
-            debug('バリデーションOK。');
-
-            chengePass($userData, $pass_new);
-        }
-    }
-}
+// chenge pass function
+chengePass(isset($userData), isset($pass_new));
 ?>
 <?php
 $siteTitle = "password edit";
