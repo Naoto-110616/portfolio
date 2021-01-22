@@ -42,6 +42,12 @@ $(function () {
 	});
 });
 $(function () {
+	$(".coverPhotoChange").click(function () {
+		$(".modalwindow_screen_overall_3").toggle();
+		$("body").toggleClass("fixed");
+	});
+});
+$(function () {
 	$(".main_center_element2_share1").click(function () {
 		$(".modalwindow_screen_overall").toggle();
 		$("body").toggleClass("fixed");
@@ -52,6 +58,7 @@ $(function () {
 		$(".modalwindow_screen_overall").toggle();
 		$(".modalwindow_screen_overall_1").toggle();
 		// $(".modalwindow_screen_overall_2").toggle();
+		$(".modalwindow_screen_overall_3").toggle();
 		$("body").toggleClass("fixed");
 	});
 });

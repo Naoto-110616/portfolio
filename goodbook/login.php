@@ -9,7 +9,9 @@ debugLogStart();
 
 auth();
 
-login(isset($email), isset($pass), isset($pass_save), "email");
+// login(isset($email), isset($pass), isset($pass_save), "email");
+login($email, $pass, $pass_save, "email");
+
 
 debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
 ?>

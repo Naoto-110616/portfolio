@@ -13,22 +13,31 @@ auth();
 $dbFormData = getUser($_SESSION['user_id']);
 debug('取得したユーザー情報：' . print_r($dbFormData, true));
 
+// 画面表示用データ取得
 //================================
-// 画面処理
-//================================
-
-// // 画面表示用データ取得
-// //================================
-dataAcquisitionDisplay();
+// GETデータを格納
+$p_id = (!empty($_GET['p_id'])) ? $_GET['p_id'] : '';
+// DBから商品データを取得
+$dbFormData = (!empty($p_id)) ? getPost($_SESSION['user_id'], $p_id) : '';
+// 新規登録画面か編集画面か判別用フラグ
+$edit_flg = (empty($dbFormData)) ? false : true;
+// DBからpostDataを取得
+$dbCategoryData = getCategory();
+debug('postID：' . $p_id);
+debug('フォーム用DBデータ：' . print_r($dbFormData, true));
+debug('post data：' . print_r($dbCategoryData, true));
 
 // パラメータ改ざんチェック
 //================================
 // GETパラメータはあるが、改ざんされている（URLをいじくった）場合、正しい商品データが取れないのでマイページへ遷移させる
 if (!empty($p_id) && empty($dbFormData)) {
-    debug('GETパラメータのpostIDが違います。homepageへ遷移します。');
-    header("Location:homepage.php");
+    debug('GETパラメータのpostIDが違います。マイページへ遷移します。');
+    header("Location:mypage.php"); //マイページへ
 }
 
+//================================
+// 画面処理
+//================================
 // POST送信時処理
 //================================
 if (!empty($_POST)) {
@@ -55,7 +64,7 @@ if (!empty($_POST)) {
     }
     if (empty($err_msg)) {
         debug('バリデーションOKです。');
-        createPost(isset($edit_flg), isset($comment), isset($pic1), isset($p_id));
+        createPost($edit_flg, $comment, $pic1, $p_id);
     }
 }
 
@@ -70,7 +79,7 @@ if (!is_int((int)$currentPageNum)) {
     header("Location:homepage.php");
 }
 // 表示件数
-$listSpan = 20;
+// $listSpan = 20;
 // 現在の表示レコード先頭を算出
 $currentMinNum = (($currentPageNum - 1) * $listSpan); //1ページ目なら(1-1)*20 = 0 、 ２ページ目なら(2-1)*20 = 20
 // DBからpostデータを取得
@@ -259,7 +268,7 @@ require("goodbook_head.php");
                         <section class="main_center_element main_center_element3">
                             <div class="icon_img_div">
                                 <a href="mypage.php">
-                                    <img class="icon_img" src="<?php echo sanitize($dbFormData['profPic']); ?>" alt=" utadahikaru_icon">
+                                    <img class="icon_img" src="<?php echo ($dbFormData["profPic"]) ? sanitize($dbFormData["profPic"]) : "img/mypage/default.png" ?>" alt="">
                                 </a>
                                 <div class="user_name_div">
                                     <p><?php echo userInfoIndicate($dbFormData, "username"); ?></p>

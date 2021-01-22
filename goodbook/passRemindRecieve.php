@@ -11,7 +11,8 @@ debugLogStart();
 //ログイン認証はなし（ログインできない人が使う画面なので）
 
 // DBからユーザーデータを取得
-$dbFormData = getUser(isset($_SESSION['user_id']));
+// $dbFormData = getUser(isset($_SESSION['user_id']));
+$dbFormData = getUser($_SESSION['user_id']);
 
 //SESSIONに認証キーがあるか確認、なければリダイレクト
 if (empty($_SESSION['auth_key'])) {

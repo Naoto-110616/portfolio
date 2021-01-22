@@ -7,7 +7,9 @@ debug("「 signup page");
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
 debugLogStart();
 
-signUp(isset($email), isset($pass), isset($pass_re), "email");
+// signUp(isset($email), isset($pass), isset($pass_re), "email");
+signUp($email, $pass, $pass_re, "email");
+
 
 debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
 ?>
