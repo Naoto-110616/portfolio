@@ -49,16 +49,32 @@ $(function () {
 });
 $(function () {
 	$(".main_center_element2_share1").click(function () {
-		$(".modalwindow_screen_overall").toggle();
+		$(".modalwindow_screen_overall_4").toggle();
+		$("body").toggleClass("fixed");
+	});
+});
+// Xボタン
+$(function () {
+	$(".x-circle1").click(function () {
+		$(".modalwindow_screen_overall_1").toggle();
 		$("body").toggleClass("fixed");
 	});
 });
 $(function () {
-	$(".fa-times-circle").click(function () {
-		$(".modalwindow_screen_overall").toggle();
-		$(".modalwindow_screen_overall_1").toggle();
-		// $(".modalwindow_screen_overall_2").toggle();
+	$(".x-circle2").click(function () {
+		$(".modalwindow_screen_overall_2").toggle();
+		$("body").toggleClass("fixed");
+	});
+});
+$(function () {
+	$(".x-circle3").click(function () {
 		$(".modalwindow_screen_overall_3").toggle();
+		$("body").toggleClass("fixed");
+	});
+});
+$(function () {
+	$(".x-circle4").click(function () {
+		$(".modalwindow_screen_overall_4").toggle();
 		$("body").toggleClass("fixed");
 	});
 });
