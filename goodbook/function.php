@@ -578,7 +578,6 @@ function editprofile($key)
             }
             if (empty($err_msg)) {
                 debug('バリデーションOKです。');
-                // editprofile機能
                 //例外処理
                 try {
                     // DBへ接続

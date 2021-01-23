@@ -595,7 +595,7 @@ require("goodbook_head.php");
         </div>
     </article>
     <article class="modalwindow">
-        <div class="modalwindow_screen_overall">
+        <div class="modalwindow_screen_overall_4">
             <div class="modalwindow_form_div">
                 <div class="modalwindow_form">
                     <div class="inside">
@@ -604,7 +604,7 @@ require("goodbook_head.php");
                                 <div class="edit_title">
                                     <h1>create a post</h1>
                                 </div>
-                                <div class="x-circle">
+                                <div class="x-circle4">
                                     <i class="far fa-times-circle fa-2x"></i>
                                 </div>
                             </div>

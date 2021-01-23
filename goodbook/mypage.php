@@ -47,7 +47,7 @@ if ($_POST["uploadBackgroundImg"]) {
         $backgroundimg = (empty($backgroundimg) && !empty($dbFormData['backgroundimg'])) ? $dbFormData['backgroundimg'] : $backgroundimg;
     }
 }
-if (empty($err_msg)) {
+if ($_POST["uploadIconImg"] || $_POST["uploadBackgroundImg"]) {
     debug('バリデーションOKです。');
     saveImgToDb($profpic, $backgroundimg);
 }
@@ -227,80 +227,82 @@ require('goodbook_head.php');
             <div class="modalwindow_screen_overall_1">
                 <div class="modalwindow_form_div">
                     <div class="modalwindow_form">
-                        <div class="modalwindow_form_title">
-                            <div class="edit_title">
-                                <h1>edit profile</h1>
+                        <div class="inside">
+                            <div class="modalwindow_form_title">
+                                <div class="edit_title">
+                                    <h1>edit profile</h1>
+                                </div>
+                                <div class="x-circle1">
+                                    <i class="far fa-times-circle fa-2x"></i>
+                                </div>
                             </div>
-                            <div class="x-circle">
-                                <i class="far fa-times-circle fa-2x"></i>
+                            <div class="mypage_border"></div>
+                            <div class="edit_form_div">
+                                <form action="" method="post" class="edit_form">
+                                    <div class="area-msg">
+                                        <?php
+                                        echo getErrMsg("common");
+                                        ?>
+                                    </div>
+                                    <label class="<?php echo getErrMsglabel("username"); ?>">
+                                        name
+                                        <input name="username" type="text" value="<?php echo getFormData("username"); ?>">
+                                    </label>
+                                    <div class="area-msg">
+                                        <?php
+                                        echo getErrMsg("username");
+                                        ?>
+                                    </div>
+                                    <label class="<?php echo getErrMsglabel("tel"); ?>">
+                                        tel<span> Please enter without hyphens</span>
+                                        <input name="tel" type="text" value="<?php echo getFormData("tel"); ?>">
+                                    </label>
+                                    <div class="area-msg">
+                                        <?php
+                                        echo getErrMsg("tel");
+                                        ?>
+                                    </div>
+                                    <label class="<?php echo getErrMsglabel("zip"); ?>">
+                                        zip code<span> Please enter without hyphens</span>
+                                        <input name="zip" type="text" value="<?php echo getFormData("zip"); ?>">
+                                    </label>
+                                    <div class="area-msg">
+                                        <?php
+                                        echo getErrMsg("zip");
+                                        ?>
+                                    </div>
+                                    <label class="<?php echo getErrMsglabel("addr"); ?>">
+                                        address
+                                        <input name="addr" type="text" value="<?php echo getFormData("addr"); ?>">
+                                    </label>
+                                    <div class="area-msg">
+                                        <?php
+                                        echo getErrMsg("addr");
+                                        ?>
+                                    </div>
+                                    <label class="<?php echo getErrMsglabel("age"); ?>">
+                                        age
+                                        <input name="age" type="number" value="<?php echo getFormData("age"); ?>">
+                                    </label>
+                                    <div class="area-msg">
+                                        <?php
+                                        echo getErrMsg("age");
+                                        ?>
+                                    </div>
+                                    <label class="<?php echo getErrMsglabel("email"); ?>">
+                                        Email
+                                        <input name="email" type="text" value="<?php echo getFormData("email"); ?>">
+                                    </label>
+                                    <div class="area-msg">
+                                        <?php
+                                        echo getErrMsg("email");
+                                        ?>
+                                    </div>
+                                    <label>
+                                        <input type="submit" value="change" name="profileChenge">
+                                    </label>
+                                </form>
                             </div>
-                        </div>
-                        <div class="mypage_border"></div>
-                        <div class="edit_form_div">
-                            <form action="" method="post" class="edit_form">
-                                <div class="area-msg">
-                                    <?php
-                                    echo getErrMsg("common");
-                                    ?>
-                                </div>
-                                <label class="<?php echo getErrMsglabel("username"); ?>">
-                                    name
-                                    <input name="username" type="text" value="<?php echo getFormData("username"); ?>">
-                                </label>
-                                <div class="area-msg">
-                                    <?php
-                                    echo getErrMsg("username");
-                                    ?>
-                                </div>
-                                <label class="<?php echo getErrMsglabel("tel"); ?>">
-                                    tel<span> Please enter without hyphens</span>
-                                    <input name="tel" type="text" value="<?php echo getFormData("tel"); ?>">
-                                </label>
-                                <div class="area-msg">
-                                    <?php
-                                    echo getErrMsg("tel");
-                                    ?>
-                                </div>
-                                <label class="<?php echo getErrMsglabel("zip"); ?>">
-                                    zip code<span> Please enter without hyphens</span>
-                                    <input name="zip" type="text" value="<?php echo getFormData("zip"); ?>">
-                                </label>
-                                <div class="area-msg">
-                                    <?php
-                                    echo getErrMsg("zip");
-                                    ?>
-                                </div>
-                                <label class="<?php echo getErrMsglabel("addr"); ?>">
-                                    address
-                                    <input name="addr" type="text" value="<?php echo getFormData("addr"); ?>">
-                                </label>
-                                <div class="area-msg">
-                                    <?php
-                                    echo getErrMsg("addr");
-                                    ?>
-                                </div>
-                                <label class="<?php echo getErrMsglabel("age"); ?>">
-                                    age
-                                    <input name="age" type="number" value="<?php echo getFormData("age"); ?>">
-                                </label>
-                                <div class="area-msg">
-                                    <?php
-                                    echo getErrMsg("age");
-                                    ?>
-                                </div>
-                                <label class="<?php echo getErrMsglabel("email"); ?>">
-                                    Email
-                                    <input name="email" type="text" value="<?php echo getFormData("email"); ?>">
-                                </label>
-                                <div class="area-msg">
-                                    <?php
-                                    echo getErrMsg("email");
-                                    ?>
-                                </div>
-                                <label>
-                                    <input type="submit" value="change" name="profileChenge">
-                                </label>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -310,36 +312,38 @@ require('goodbook_head.php');
             <div class="modalwindow_screen_overall_2">
                 <div class="modalwindow_form_div">
                     <div class="modalwindow_form">
-                        <div class="modalwindow_form_title">
-                            <form action="" method="post" class="edit_form" enctype="multipart/form-data">
-                                <div class="modalwindow_form_title">
-                                    <div class="edit_title">
-                                        <h1>edit Icon</h1>
-                                    </div>
-                                    <div class="x-circle">
-                                        <i class="far fa-times-circle fa-2x"></i>
-                                    </div>
-                                </div>
-                                <div class="mypage_border"></div>
-                                <div style="overflow: hidden;">
-                                    <div class="imgDrop-container">
-                                        <label class="area-drop <?php getErrMsglabel("profpic") ?>">
-                                            <input type="hidden" name="MAX_FILE_SIZE" value="3145728">
-                                            <input type="file" name="profpic" class="input-file" style="display:none;">
-                                            <img src="<?php echo getFormData('profpic'); ?>" alt="" class="prev-img" style="<?php if (empty(getFormData('profpic'))) echo 'display:none;' ?> margin:10px 0px 0px ">
-                                            <div class="imgUpIcon">
-                                                <i class="far fa-images fa-lg"></i>
-                                            </div>
-                                        </label>
-                                        <div class="area-msg">
-                                            <?php;getErrMsg("profpic");?>
+                        <div class="inside">
+                            <div class="modalwindow_form_title">
+                                <form action="" method="post" class="edit_form" enctype="multipart/form-data">
+                                    <div class="modalwindow_form_title">
+                                        <div class="edit_title">
+                                            <h1>edit Icon</h1>
+                                        </div>
+                                        <div class="x-circle2">
+                                            <i class="far fa-times-circle fa-2x"></i>
                                         </div>
                                     </div>
-                                </div>
-                                <label>
-                                    <input type="submit" value="<?php echo (!$edit_flg) ? 'post' : 'edit'; ?>" name="uploadIconImg">
-                                </label>
-                            </form>
+                                    <div class="mypage_border"></div>
+                                    <div style="overflow: hidden;">
+                                        <div class="imgDrop-container">
+                                            <label class="area-drop <?php getErrMsglabel("profpic") ?>">
+                                                <input type="hidden" name="MAX_FILE_SIZE" value="3145728">
+                                                <input type="file" name="profpic" class="input-file" style="display:none;">
+                                                <img src="<?php echo getFormData('profpic'); ?>" alt="" class="prev-img" style="<?php if (empty(getFormData('profpic'))) echo 'display:none;' ?> margin:10px 0px 0px ">
+                                                <div class="imgUpIcon">
+                                                    <i class="far fa-images fa-lg"></i>
+                                                </div>
+                                            </label>
+                                            <div class="area-msg">
+                                                <?php;getErrMsg("profpic");?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <label>
+                                        <input type="submit" value="<?php echo (!$edit_flg) ? 'post' : 'edit'; ?>" name="uploadIconImg">
+                                    </label>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -350,42 +354,43 @@ require('goodbook_head.php');
         <div class="modalwindow_screen_overall_3">
             <div class="modalwindow_form_div">
                 <div class="modalwindow_form">
-                    <div class="modalwindow_form_title">
-                        <form action="" method="post" class="edit_form" enctype="multipart/form-data">
-                            <div class="modalwindow_form_title">
-                                <div class="edit_title">
-                                    <h1>edit background img</h1>
-                                </div>
-                                <div class="x-circle">
-                                    <i class="far fa-times-circle fa-2x"></i>
-                                </div>
-                            </div>
-                            <div class="mypage_border"></div>
-                            <div style="overflow: hidden;">
-                                <div class="imgDrop-container">
-                                    <label class="area-drop <?php getErrMsglabel("backgroundimg") ?>">
-                                        <input type="hidden" name="MAX_FILE_SIZE" value="3145728">
-                                        <input type="file" name="backgroundimg" class="input-file" style="display:none;">
-                                        <img src="<?php echo getFormData('backgroundimg'); ?>" alt="" class="prev-img" style="<?php if (empty(getFormData('backgroundimg'))) echo 'display:none;' ?> margin:10px 0px 0px ">
-                                        <div class="imgUpIcon">
-                                            <i class="far fa-images fa-lg"></i>
-                                        </div>
-                                    </label>
-                                    <div class="area-msg">
-                                        <?php;getErrMsg("backgroundimg");?>
+                    <div class="inside">
+                        <div class="modalwindow_form_title">
+                            <form action="" method="post" class="edit_form" enctype="multipart/form-data">
+                                <div class="modalwindow_form_title">
+                                    <div class="edit_title">
+                                        <h1>edit background img</h1>
+                                    </div>
+                                    <div class="x-circle3">
+                                        <i class="far fa-times-circle fa-2x"></i>
                                     </div>
                                 </div>
-                            </div>
-                            <label>
-                                <input type="submit" value="<?php echo (!$edit_flg) ? 'post' : 'edit'; ?>" name="uploadBackgroundImg">
-                            </label>
-                        </form>
+                                <div class="mypage_border"></div>
+                                <div style="overflow: hidden;">
+                                    <div class="imgDrop-container">
+                                        <label class="area-drop <?php getErrMsglabel("backgroundimg") ?>">
+                                            <input type="hidden" name="MAX_FILE_SIZE" value="3145728">
+                                            <input type="file" name="backgroundimg" class="input-file" style="display:none;">
+                                            <img src="<?php echo getFormData('backgroundimg'); ?>" alt="" class="prev-img" style="<?php if (empty(getFormData('backgroundimg'))) echo 'display:none;' ?> margin:10px 0px 0px ">
+                                            <div class="imgUpIcon">
+                                                <i class="far fa-images fa-lg"></i>
+                                            </div>
+                                        </label>
+                                        <div class="area-msg">
+                                            <?php;getErrMsg("backgroundimg");?>
+                                        </div>
+                                    </div>
+                                </div>
+                                <label>
+                                    <input type="submit" value="<?php echo (!$edit_flg) ? 'post' : 'edit'; ?>" name="uploadBackgroundImg">
+                                </label>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </article>
-    </div>
     <?php
     require("jsSrc.php");
     ?>
