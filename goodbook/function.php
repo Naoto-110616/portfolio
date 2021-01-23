@@ -98,7 +98,7 @@ $err_msg = array();
 // validation 未入力check
 function validRequired($str, $key)
 {
-    if (empty($str)) {
+    if ($str === "") {
         global $err_msg;
         $err_msg[$key] = MSG01;
     }
@@ -264,7 +264,6 @@ function getErrMsglabel($key)
 //================================
 // data base
 //================================
-
 // db接続関数
 function dbConnect()
 {
@@ -298,7 +297,9 @@ function queryPost($dbh, $sql, $data, $key)
 // login 関数
 function login($email, $pass, $pass_save, $key)
 {
-
+    debug("===========================");
+    debug("start login function");
+    debug("===========================");
     global $err_msg;
 
     if (!empty($_POST)) {
@@ -376,6 +377,9 @@ function login($email, $pass, $pass_save, $key)
             }
         }
     }
+    debug("===========================");
+    debug("end login function");
+    debug("===========================");
 }
 // logout関数
 function logout()
@@ -391,6 +395,9 @@ function logout()
 // user登録関数
 function signUp($email, $pass, $pass_re, $key)
 {
+    debug("===========================");
+    debug("start signup function");
+    debug("===========================");
     global $err_msg;
 
     if (!empty($_POST)) {
@@ -422,11 +429,12 @@ function signUp($email, $pass, $pass_re, $key)
                     debug('バリデーョンOKです。');
                     try {
                         $dbh = dbConnect();
-                        $sql = 'INSERT INTO users (email, pass, login_time) VALUES (:email, :pass, :login_time)';
+                        $sql = 'INSERT INTO users (email,pass,login_time,create_date) VALUES(:email,:pass,:login_time,:create_date)';
                         $data = array(
                             ':email' => $email,
                             ':pass' => password_hash($pass, PASSWORD_DEFAULT),
                             'login_time' => date('Y-m-d H:i:s'),
+                            ':create_date' => date('Y-m-d H:i:s')
                         );
                         $stmt = queryPost($dbh, $sql, $data, "email");
                         // singup後すぐにhomepageへ遷移する処理
@@ -449,11 +457,17 @@ function signUp($email, $pass, $pass_re, $key)
             }
         }
     }
+    debug("===========================");
+    debug("end signup function");
+    debug("===========================");
 }
 
 // withdraw関数
 function withdraw($key)
 {
+    debug("===========================");
+    debug("start withdraw function");
+    debug("===========================");
     // post送信されていた場合
     if (!empty($_POST)) {
         debug('POST送信があります。');
@@ -481,6 +495,9 @@ function withdraw($key)
             $err_msg[$key] = MSG09;
         }
     }
+    debug("===========================");
+    debug("end withdraw function");
+    debug("===========================");
 }
 
 //================================
@@ -489,6 +506,10 @@ function withdraw($key)
 // profile 編集機能
 function editprofile($key)
 {
+    debug("===========================");
+    debug("start edit profile function");
+    debug("===========================");
+
     global $dbFormData;
     global $username;
     global $tel;
@@ -498,11 +519,10 @@ function editprofile($key)
     global $email;
     global $err_msg;
 
-    $dbFormData = getUser($_SESSION['user_id']);
-    debug('取得したユーザー情報：' . print_r($dbFormData, true));
-
     // post送信されていた場合
     if (!empty($_POST)) {
+        $dbFormData = getUser($_SESSION['user_id']);
+        debug('取得したユーザー情報：' . print_r($dbFormData, true));
         debug('POST送信があります。');
         debug('POST情報：' . print_r($_POST, true));
 
@@ -583,6 +603,9 @@ function editprofile($key)
             }
         }
     }
+    debug("===========================");
+    debug("end edit profile function");
+    debug("===========================");
 }
 //================================
 // password
@@ -590,6 +613,9 @@ function editprofile($key)
 // chenge pass 関数
 function chengePass($userData, $pass_new)
 {
+    debug("===========================");
+    debug("start checngePass function");
+    debug("===========================");
     global $userData;
     global $pass_old;
     global $pass_new;
@@ -674,10 +700,15 @@ function chengePass($userData, $pass_new)
             }
         }
     }
+    debug("===========================");
+    debug("end chengePass function");
+    debug("===========================");
 }
-// chengePass($userData, $pass_new);
 function passRemindSend($email)
 {
+    debug("===========================");
+    debug("start passremind function");
+    debug("===========================");
     global $err_msg;
     global $email;
 
@@ -765,9 +796,15 @@ function passRemindSend($email)
             }
         }
     }
+    debug("===========================");
+    debug("end signup function");
+    debug("===========================");
 }
 function passRemindRecieve($pass)
 {
+    debug("===========================");
+    debug("start pass remind recieve function");
+    debug("===========================");
     global $err_msg;
     global $pass;
     global $auth_key;
@@ -853,11 +890,17 @@ function passRemindRecieve($pass)
             }
         }
     }
+    debug("===========================");
+    debug("end pass remind recieve function");
+    debug("===========================");
 }
 
 // user情報を取得
 function getUser($u_id)
 {
+    debug("===========================");
+    debug("start getuser function");
+    debug("===========================");
     debug('ユーザー情報を取得します。');
     //例外処理
     try {
@@ -869,6 +912,9 @@ function getUser($u_id)
         // クエリ実行
         $stmt = queryPost($dbh, $sql, $data, "common");
         if ($stmt) {
+            debug("===========================");
+            debug("success getuser function");
+            debug("===========================");
             return $stmt->fetch(PDO::FETCH_ASSOC);
         } else {
             return false;
@@ -912,6 +958,9 @@ function getFormData($str)
 //================================
 function auth()
 {
+    debug("===========================");
+    debug("start auth function");
+    debug("===========================");
     // ログインしている場合
     if (!empty($_SESSION['login_date'])) {
         debug('ログイン済みユーザーです。');
@@ -943,9 +992,15 @@ function auth()
             header("Location:login.php"); //ログインページへ
         }
     }
+    debug("===========================");
+    debug("end auth function");
+    debug("===========================");
 }
 function createPost($edit_flg, $comment, $pic1, $p_id)
 {
+    debug("===========================");
+    debug("start create post function");
+    debug("===========================");
     //例外処理
     try {
         // DBへ接続
@@ -976,9 +1031,16 @@ function createPost($edit_flg, $comment, $pic1, $p_id)
         global $err_msg;
         $err_msg['common'] = MSG09;
     }
+    debug("===========================");
+    debug("end create post function");
+    debug("===========================");
 }
 function getPost($u_id, $p_id)
 {
+    debug("===========================");
+    debug("start get post function");
+    debug("===========================");
+
     debug('post情報を取得します。');
     debug('ユーザーID：' . $u_id);
     debug('postID：' . $p_id);
@@ -1001,9 +1063,15 @@ function getPost($u_id, $p_id)
     } catch (Exception $e) {
         error_log('エラー発生:' . $e->getMessage());
     }
+    debug("===========================");
+    debug("end get post function");
+    debug("===========================");
 }
 function getPostList($currentMinNum = 1, $span = 20)
 {
+    debug("===========================");
+    debug("start get post list function");
+    debug("===========================");
     debug('商品情報を取得します。');
     //例外処理
     try {
@@ -1052,6 +1120,9 @@ function getPostList($currentMinNum = 1, $span = 20)
     } catch (Exception $e) {
         error_log('エラー発生:' . $e->getMessage());
     }
+    debug("===========================");
+    debug("end get post list function");
+    debug("===========================");
 }
 function getCategory()
 {
@@ -1081,6 +1152,9 @@ function getCategory()
 //================================
 function sendMail($from, $to, $subject, $comment)
 {
+    debug("===========================");
+    debug("start send mail function");
+    debug("===========================");
     if (!empty($to) && !empty($subject) && !empty($comment)) {
         //文字化けしないように設定（お決まりパターン）
         mb_language("Japanese"); //現在使っている言語を設定する
@@ -1095,6 +1169,9 @@ function sendMail($from, $to, $subject, $comment)
             debug('【エラー発生】メールの送信に失敗しました。');
         }
     }
+    debug("===========================");
+    debug("end send mail function");
+    debug("===========================");
 }
 
 //================================
@@ -1147,16 +1224,12 @@ function makeRandKey($length = 8)
     }
     return $str;
 }
-function showVariable($var)
-{
-    echo "<pre>";
-    echo var_dump($var);
-    echo "<pre>";
-}
 // 画像処理
 function uploadImg($file, $key)
 {
-    debug('画像アップロード処理開始');
+    debug("===========================");
+    debug("start upload img function");
+    debug("===========================");
     debug('FILE情報：' . print_r($file, true));
 
     if (isset($file['error']) && is_int($file['error'])) {
@@ -1205,44 +1278,18 @@ function uploadImg($file, $key)
             $err_msg[$key] = $e->getMessage();
         }
     }
-}
-function uploadIcon($edit_flg, $profPic, $p_id)
-{
-    //例外処理
-    try {
-        // DBへ接続
-        $dbh = dbConnect();
-        // SQL文作成
-        // 編集画面の場合はUPDATE文、新規登録画面の場合はINSERT文を生成
-        if ($edit_flg) {
-            debug('DB更新です。');
-            $sql = 'UPDATE users SET profPic = :profPic WHERE id = :u_id AND id = :p_id';
-            $data = array(':profPic' => $profPic, ':u_id' => $_SESSION['id'], ':p_id' => $p_id);
-        } else {
-            debug('DB新規登録です。');
-            $sql = 'UPDATE users SET profPic = :profPic WHERE id = :u_id';
-            $data = array(':profPic' => $profPic, ':u_id' => $_SESSION['user_id']);
-            // $sql = 'INSERT INTO users (profPic, create_date ) VALUES (:profPic, :date)';
-            // $data = array(':profPic' => $profPic,, ':date' => date('Y-m-d H:i:s'));
-        }
-        debug('SQL：' . $sql);
-        debug('流し込みデータ：' . print_r($data, true));
-        // クエリ実行
-        $stmt = queryPost($dbh, $sql, $data, "common");
-        // クエリ成功の場合
-        if ($stmt) {
-            $_SESSION['msg_success'] = SUC04;
-            debug('マイページへ遷移します。');
-            header("Location:mypage.php"); //マイページへ
-        }
-    } catch (Exception $e) {
-        error_log('エラー発生:' . $e->getMessage());
-        global $err_msg;
-        $err_msg['common'] = MSG09;
-    }
+    debug("===========================");
+    debug("end upload img function");
+    debug("===========================");
 }
 function dataAcquisitionDisplay()
 {
+    debug("===========================");
+    debug("start data acpuisition display  function");
+    debug("===========================");
+
+    $dbFormData = getUser($_SESSION['user_id']);
+
     global $p_id;
     global $dbFormData;
     global $edit_flg;
@@ -1255,5 +1302,85 @@ function dataAcquisitionDisplay()
     // 新規登録画面か編集画面か判別用フラグ
     $edit_flg = (empty($dbFormData)) ? false : true;
     debug('postID：' . $p_id);
-    debug('フォーム用DBデータ：' . print_r($dbFormData, true));
+
+    debug("===========================");
+    debug("end data acpuisition display  function");
+    debug("===========================");
+}
+//================================
+// img
+//================================
+function saveImgToDb($profpic, $backgroundimg)
+{
+    debug("===========================");
+    debug("start save img to db function");
+    debug("===========================");
+    //例外処理
+    try {
+        // DBへ接続
+        $dbh = dbConnect();
+        debug('save img to db');
+        if ($_POST["uploadBackgroundImg"]) {
+            $sql = 'UPDATE users SET backgroundimg = :backgroundimg WHERE id = :u_id';
+            $data = array(':backgroundimg' => $backgroundimg, ':u_id' => $_SESSION['user_id']);
+        } elseif ($_POST["uploadIconImg"]) {
+            $sql = 'UPDATE users SET profpic = :profpic WHERE id = :u_id';
+            $data = array(':profpic' => $profpic, ':u_id' => $_SESSION['user_id']);
+        }
+        debug('SQL：' . $sql);
+        debug('流し込みデータ：' . print_r($data, true));
+        // クエリ実行
+        $stmt = queryPost($dbh, $sql, $data, "common");
+        // クエリ成功の場合
+        if ($stmt) {
+            $_SESSION['msg_success'] = SUC04;
+            debug('マイページへ遷移します。');
+            header("Location:mypage.php");
+        }
+    } catch (Exception $e) {
+        error_log('エラー発生:' . $e->getMessage());
+        global $err_msg;
+        $err_msg['common'] = MSG09;
+    }
+    debug("===========================");
+    debug("end save img to db function");
+    debug("===========================");
+}
+function getImg($u_id)
+{
+    debug("===========================");
+    debug("start get img function");
+    debug("===========================");
+
+    debug('Img情報を取得します。');
+    debug('ユーザーID：' . $u_id);
+    //例外処理
+    try {
+        // DBへ接続
+        $dbh = dbConnect();
+        // SQL文作成
+        $sql = 'SELECT profpic, backgroundimg FROM users WHERE id = :u_id AND delete_flg = 0';
+        $data = array(':u_id' => $u_id);
+        // クエリ実行
+        $stmt = queryPost($dbh, $sql, $data, "common");
+
+        if ($stmt) {
+            // クエリ結果のデータを１レコード返却
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        } else {
+            return false;
+        }
+    } catch (Exception $e) {
+        error_log('エラー発生:' . $e->getMessage());
+    }
+    debug("===========================");
+    debug("success get img function");
+    debug("===========================");
+}
+
+function showVariable($var)
+{
+    echo "<pre>";
+    echo var_dump($var);
+    echo "<pre>";
 }

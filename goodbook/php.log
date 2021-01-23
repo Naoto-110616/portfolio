@@ -1,1017 +1,550 @@
-[21-Jan-2021 16:23:28 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:23:28 Asia/Tokyo] debug：「　login page　
-[21-Jan-2021 16:23:28 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:23:28 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
-[21-Jan-2021 16:23:28 Asia/Tokyo] debug：session ID：m91s12ohq90kveeb5eo6bi3351
-[21-Jan-2021 16:23:28 Asia/Tokyo] debug：session variable：Array
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：「 my page　
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：session ID：as34d5e843f8frr728firddhkg
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：session variable：Array
 (
+    [login_date] => 1611381532
+    [login_limit] => 2592000
+    [user_id] => 91
     [msg_success] => 
 )
 
-[21-Jan-2021 16:23:28 Asia/Tokyo] debug：現在日時タイムスタンプ：1611213808
-[21-Jan-2021 16:23:28 Asia/Tokyo] debug：未ログインユーザーです。
-[21-Jan-2021 16:23:28 Asia/Tokyo] debug：POST送信があります。
-[21-Jan-2021 16:23:28 Asia/Tokyo] debug：バリデーションOKです。
-[21-Jan-2021 16:23:28 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:23:28 Asia/Tokyo] debug：クエリ結果の中身：Array
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：現在日時タイムスタンプ：1611381546
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1613973532
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：start auth function
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：ログイン済みユーザーです。
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：ログイン有効期限以内です。
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：end auth function
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] PHP Notice:  Undefined index: profileChenge in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 18
+[23-Jan-2021 14:59:06 Asia/Tokyo] PHP Notice:  Undefined variable: u_id in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 28
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：start get img function
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：Img情報を取得します。
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：ユーザーID：
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：クエリ成功。
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：uploadIconImgが押されました
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：FILE情報：Array
 (
-    [pass] => $2y$10$PSYqCYuBg/X3Kj.0CIUQge7u8w8esOzON957xG86RyjrQoPoYGSpi
-    [id] => 90
+    [profpic] => Array
+        (
+            [name] => nhk2.jpg
+            [type] => image/jpeg
+            [tmp_name] => /Applications/MAMP/tmp/php/phpWH0Yt0
+            [error] => 0
+            [size] => 355315
+        )
+
 )
 
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：パスワードがマッチしました。
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：ログイン保持にチェックはありません。
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：セッション変数の中身：Array
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：start upload img function
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：FILE情報：Array
 (
+    [name] => nhk2.jpg
+    [type] => image/jpeg
+    [tmp_name] => /Applications/MAMP/tmp/php/phpWH0Yt0
+    [error] => 0
+    [size] => 355315
+)
+
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：ファイルは正常にアップロードされました
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：ファイルパス：uploads/5997d2c0c301d087561cee1e0b0df08775857bdd.jpeg
+[23-Jan-2021 14:59:06 Asia/Tokyo] PHP Notice:  Undefined index: uploadBackgroundImg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 40
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：バリデーションOKです。
+[23-Jan-2021 14:59:06 Asia/Tokyo] PHP Notice:  Undefined variable: backgroundimg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 52
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：start save img to db function
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：save img to db
+[23-Jan-2021 14:59:06 Asia/Tokyo] PHP Notice:  Undefined index: uploadBackgroundImg in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 1323
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：SQL：UPDATE users SET profpic = :profpic WHERE id = :u_id
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：流し込みデータ：Array
+(
+    [:profpic] => uploads/5997d2c0c301d087561cee1e0b0df08775857bdd.jpeg
+    [:u_id] => 91
+)
+
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：クエリ成功。
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：マイページへ遷移します。
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：end save img to db function
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：start getuser function
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：ユーザー情報を取得します。
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：クエリ成功。
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：success getuser function
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 91
+    [username] => okawa
+    [age] => 21
+    [tel] => 0900000000
+    [zip] => 1234567
+    [addr] => 1234556
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$i4XOEMLpgPa6cASsKikC6.0aqS/bSt8foW3dN5eyURRTVvsC8pw3S
+    [profpic] => uploads/5997d2c0c301d087561cee1e0b0df08775857bdd.jpeg
+    [backgroundimg] => uploads/3434b05e6caed2409a2db81a6d081b9d8a6401ea.jpeg
+    [login_time] => 2021-01-21 18:24:07
+    [delete_flg] => 0
+    [create_date] => 2021-01-21 18:24:07
+    [update_date] => 2021-01-21 18:24:07
+)
+
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[23-Jan-2021 14:59:06 Asia/Tokyo] PHP Notice:  Undefined variable: edit_flg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 340
+[23-Jan-2021 14:59:06 Asia/Tokyo] PHP Notice:  Undefined variable: edit_flg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 380
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：「 my page　
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：session ID：o44spb908ef782rrno8n5lcclh
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611381546
+    [login_limit] => 2592000
+    [user_id] => 91
     [msg_success] => 
-    [login_date] => 1611213809
-    [login_limit] => 3600
-    [user_id] => 90
 )
 
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：homepageへ遷移します。
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：「　home page　
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：session ID：j7i9g8da2f54k42fujo1udbl53
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：session variable：Array
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：現在日時タイムスタンプ：1611381546
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1613973546
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：start auth function
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：ログイン済みユーザーです。
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：ログイン有効期限以内です。
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：end auth function
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] PHP Notice:  Undefined index: profileChenge in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 18
+[23-Jan-2021 14:59:06 Asia/Tokyo] PHP Notice:  Undefined variable: u_id in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 28
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：start get img function
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：Img情報を取得します。
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：ユーザーID：
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：クエリ成功。
+[23-Jan-2021 14:59:06 Asia/Tokyo] PHP Notice:  Undefined index: uploadIconImg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 30
+[23-Jan-2021 14:59:06 Asia/Tokyo] PHP Notice:  Undefined index: uploadBackgroundImg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 40
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：バリデーションOKです。
+[23-Jan-2021 14:59:06 Asia/Tokyo] PHP Notice:  Undefined variable: profpic in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 52
+[23-Jan-2021 14:59:06 Asia/Tokyo] PHP Notice:  Undefined variable: backgroundimg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 52
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：start save img to db function
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：save img to db
+[23-Jan-2021 14:59:06 Asia/Tokyo] PHP Notice:  Undefined index: uploadBackgroundImg in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 1323
+[23-Jan-2021 14:59:06 Asia/Tokyo] PHP Notice:  Undefined index: uploadIconImg in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 1326
+[23-Jan-2021 14:59:06 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 1330
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：SQL：
+[23-Jan-2021 14:59:06 Asia/Tokyo] PHP Notice:  Undefined variable: data in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 1331
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：流し込みデータ：
+[23-Jan-2021 14:59:06 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 1333
+[23-Jan-2021 14:59:06 Asia/Tokyo] PHP Notice:  Undefined variable: data in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 1333
+[23-Jan-2021 14:59:06 Asia/Tokyo] エラー発生:SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：end save img to db function
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：start getuser function
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：ユーザー情報を取得します。
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：クエリ成功。
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：success getuser function
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：取得したユーザー情報：Array
 (
+    [id] => 91
+    [username] => okawa
+    [age] => 21
+    [tel] => 0900000000
+    [zip] => 1234567
+    [addr] => 1234556
+    [email] => siodeitadaku@gmail.com
+    [pass] => $2y$10$i4XOEMLpgPa6cASsKikC6.0aqS/bSt8foW3dN5eyURRTVvsC8pw3S
+    [profpic] => uploads/5997d2c0c301d087561cee1e0b0df08775857bdd.jpeg
+    [backgroundimg] => uploads/3434b05e6caed2409a2db81a6d081b9d8a6401ea.jpeg
+    [login_time] => 2021-01-21 18:24:07
+    [delete_flg] => 0
+    [create_date] => 2021-01-21 18:24:07
+    [update_date] => 2021-01-21 18:24:07
+)
+
+[23-Jan-2021 14:59:06 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[23-Jan-2021 14:59:06 Asia/Tokyo] PHP Notice:  Undefined variable: edit_flg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 340
+[23-Jan-2021 14:59:06 Asia/Tokyo] PHP Notice:  Undefined variable: edit_flg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 380
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：「　home page　
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：session ID：q4lc0ni2qf2j7go6im12nn3ls4
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1611381546
+    [login_limit] => 2592000
+    [user_id] => 91
     [msg_success] => 
-    [login_date] => 1611213809
-    [login_limit] => 3600
-    [user_id] => 90
 )
 
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：現在日時タイムスタンプ：1611213809
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611217409
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：ログイン済みユーザーです。
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：ログイン有効期限以内です。
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：取得したユーザー情報：Array
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：現在日時タイムスタンプ：1611381575
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1613973546
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：start auth function
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：ログイン済みユーザーです。
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：ログイン有効期限以内です。
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：end auth function
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：start getuser function
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：ユーザー情報を取得します。
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：クエリ成功。
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：success getuser function
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：取得したユーザー情報：Array
 (
-    [id] => 90
+    [id] => 91
     [username] => okawa
-    [age] => 32
-    [tel] => 09022223333
-    [zip] => 3454445
-    [addr] => 33333
+    [age] => 21
+    [tel] => 0900000000
+    [zip] => 1234567
+    [addr] => 1234556
     [email] => siodeitadaku@gmail.com
-    [pass] => $2y$10$PSYqCYuBg/X3Kj.0CIUQge7u8w8esOzON957xG86RyjrQoPoYGSpi
-    [profPic] => uploads/2c46a45dfc976a12572576636aa02356a589ec0e.jpeg
-    [login_time] => 2021-01-21 16:09:15
+    [pass] => $2y$10$i4XOEMLpgPa6cASsKikC6.0aqS/bSt8foW3dN5eyURRTVvsC8pw3S
+    [profpic] => uploads/5997d2c0c301d087561cee1e0b0df08775857bdd.jpeg
+    [backgroundimg] => uploads/3434b05e6caed2409a2db81a6d081b9d8a6401ea.jpeg
+    [login_time] => 2021-01-21 18:24:07
     [delete_flg] => 0
-    [create_date] => 
-    [update_date] => 2021-01-21 16:09:15
+    [create_date] => 2021-01-21 18:24:07
+    [update_date] => 2021-01-21 18:24:07
 )
 
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：postID：
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：フォーム用DBデータ：
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：商品情報を取得します。
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：SQL：SELECT * FROM post LIMIT 20 OFFSET 0
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：現在のページ：1
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：取得したユーザー情報：Array
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：クエリ成功。
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：postID：
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：フォーム用DBデータ：
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：post data：Array
 (
-    [id] => 90
+    [0] => Array
+        (
+            [id] => 70
+            [comment] => kkk
+            [pic1] => uploads/b3c3f1a24af9f4acf04cee68d87d468a7f075091.jpeg
+            [user_id] => 90
+            [delete_flg] => 0
+            [create_date] => 2021-01-21 18:20:50
+            [update_date] => 2021-01-21 18:20:50
+        )
+
+    [1] => Array
+        (
+            [id] => 71
+            [comment] => lkfjl;askdfj
+            [pic1] => uploads/bcbe1af090d9a7e86cafd95d7cf1b8c0fbfd873a.jpeg
+            [user_id] => 91
+            [delete_flg] => 0
+            [create_date] => 2021-01-22 21:23:42
+            [update_date] => 2021-01-22 21:23:42
+        )
+
+    [2] => Array
+        (
+            [id] => 72
+            [comment] => lkfajsd;
+            [pic1] => uploads/a327e34a53630bb37aaa68443dc3bd12277aeb33.jpeg
+            [user_id] => 91
+            [delete_flg] => 0
+            [create_date] => 2021-01-22 21:41:12
+            [update_date] => 2021-01-22 21:41:12
+        )
+
+    [3] => Array
+        (
+            [id] => 73
+            [comment] => jhyjhjk
+            [pic1] => uploads/244dbed7a627d8a7e3658c64ac8d201e78cd371c.jpeg
+            [user_id] => 91
+            [delete_flg] => 0
+            [create_date] => 2021-01-23 11:24:11
+            [update_date] => 2021-01-23 11:24:11
+        )
+
+)
+
+[23-Jan-2021 14:59:35 Asia/Tokyo] PHP Notice:  Undefined variable: listSpan in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 84
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：start get post list function
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：商品情報を取得します。
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：クエリ成功。
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：SQL：SELECT * FROM post LIMIT 20 OFFSET 0
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：クエリ成功。
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：現在のページ：1
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：start getuser function
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：ユーザー情報を取得します。
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：クエリ成功。
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：success getuser function
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 91
     [username] => okawa
-    [age] => 32
-    [tel] => 09022223333
-    [zip] => 3454445
-    [addr] => 33333
+    [age] => 21
+    [tel] => 0900000000
+    [zip] => 1234567
+    [addr] => 1234556
     [email] => siodeitadaku@gmail.com
-    [pass] => $2y$10$PSYqCYuBg/X3Kj.0CIUQge7u8w8esOzON957xG86RyjrQoPoYGSpi
-    [profPic] => uploads/2c46a45dfc976a12572576636aa02356a589ec0e.jpeg
-    [login_time] => 2021-01-21 16:09:15
+    [pass] => $2y$10$i4XOEMLpgPa6cASsKikC6.0aqS/bSt8foW3dN5eyURRTVvsC8pw3S
+    [profpic] => uploads/5997d2c0c301d087561cee1e0b0df08775857bdd.jpeg
+    [backgroundimg] => uploads/3434b05e6caed2409a2db81a6d081b9d8a6401ea.jpeg
+    [login_time] => 2021-01-21 18:24:07
     [delete_flg] => 0
-    [create_date] => 
-    [update_date] => 2021-01-21 16:09:15
+    [create_date] => 2021-01-21 18:24:07
+    [update_date] => 2021-01-21 18:24:07
 )
 
-[21-Jan-2021 16:23:29 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-[21-Jan-2021 16:23:29 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 859
-[21-Jan-2021 16:23:29 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 859
-[21-Jan-2021 16:23:29 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 859
-[21-Jan-2021 16:23:30 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:23:30 Asia/Tokyo] debug：「 my page　
-[21-Jan-2021 16:23:30 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:23:30 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
-[21-Jan-2021 16:23:30 Asia/Tokyo] debug：session ID：4i0qcjv1ngil2h6616vi0p47q7
-[21-Jan-2021 16:23:30 Asia/Tokyo] debug：session variable：Array
+[23-Jan-2021 14:59:35 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[23-Jan-2021 14:59:35 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 946
+[23-Jan-2021 14:59:35 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 946
+[23-Jan-2021 14:59:35 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 946
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：「 my page　
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：session ID：df3k1njpen68fk8me8fman019f
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：session variable：Array
 (
+    [login_date] => 1611381575
+    [login_limit] => 2592000
+    [user_id] => 91
     [msg_success] => 
-    [login_date] => 1611213809
-    [login_limit] => 3600
-    [user_id] => 90
 )
 
-[21-Jan-2021 16:23:30 Asia/Tokyo] debug：現在日時タイムスタンプ：1611213810
-[21-Jan-2021 16:23:30 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611217409
-[21-Jan-2021 16:23:30 Asia/Tokyo] debug：ログイン済みユーザーです。
-[21-Jan-2021 16:23:30 Asia/Tokyo] debug：ログイン有効期限以内です。
-[21-Jan-2021 16:23:30 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:23:30 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:23:30 Asia/Tokyo] debug：取得したユーザー情報：Array
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：現在日時タイムスタンプ：1611381581
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1613973575
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：start auth function
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：ログイン済みユーザーです。
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：ログイン有効期限以内です。
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：end auth function
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:41 Asia/Tokyo] PHP Notice:  Undefined index: profileChenge in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 18
+[23-Jan-2021 14:59:41 Asia/Tokyo] PHP Notice:  Undefined variable: u_id in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 28
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：start get img function
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：Img情報を取得します。
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：ユーザーID：
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：クエリ成功。
+[23-Jan-2021 14:59:41 Asia/Tokyo] PHP Notice:  Undefined index: uploadIconImg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 30
+[23-Jan-2021 14:59:41 Asia/Tokyo] PHP Notice:  Undefined index: uploadBackgroundImg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 40
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：バリデーションOKです。
+[23-Jan-2021 14:59:41 Asia/Tokyo] PHP Notice:  Undefined variable: profpic in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 52
+[23-Jan-2021 14:59:41 Asia/Tokyo] PHP Notice:  Undefined variable: backgroundimg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 52
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：start save img to db function
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：save img to db
+[23-Jan-2021 14:59:41 Asia/Tokyo] PHP Notice:  Undefined index: uploadBackgroundImg in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 1323
+[23-Jan-2021 14:59:41 Asia/Tokyo] PHP Notice:  Undefined index: uploadIconImg in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 1326
+[23-Jan-2021 14:59:41 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 1330
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：SQL：
+[23-Jan-2021 14:59:41 Asia/Tokyo] PHP Notice:  Undefined variable: data in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 1331
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：流し込みデータ：
+[23-Jan-2021 14:59:41 Asia/Tokyo] PHP Notice:  Undefined variable: sql in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 1333
+[23-Jan-2021 14:59:41 Asia/Tokyo] PHP Notice:  Undefined variable: data in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 1333
+[23-Jan-2021 14:59:41 Asia/Tokyo] エラー発生:SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：end save img to db function
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：start getuser function
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：ユーザー情報を取得します。
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：クエリ成功。
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：success getuser function
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：===========================
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：取得したユーザー情報：Array
 (
-    [id] => 90
+    [id] => 91
     [username] => okawa
-    [age] => 32
-    [tel] => 09022223333
-    [zip] => 3454445
-    [addr] => 33333
+    [age] => 21
+    [tel] => 0900000000
+    [zip] => 1234567
+    [addr] => 1234556
     [email] => siodeitadaku@gmail.com
-    [pass] => $2y$10$PSYqCYuBg/X3Kj.0CIUQge7u8w8esOzON957xG86RyjrQoPoYGSpi
-    [profPic] => uploads/2c46a45dfc976a12572576636aa02356a589ec0e.jpeg
-    [login_time] => 2021-01-21 16:09:15
+    [pass] => $2y$10$i4XOEMLpgPa6cASsKikC6.0aqS/bSt8foW3dN5eyURRTVvsC8pw3S
+    [profpic] => uploads/5997d2c0c301d087561cee1e0b0df08775857bdd.jpeg
+    [backgroundimg] => uploads/3434b05e6caed2409a2db81a6d081b9d8a6401ea.jpeg
+    [login_time] => 2021-01-21 18:24:07
     [delete_flg] => 0
-    [create_date] => 
-    [update_date] => 2021-01-21 16:09:15
+    [create_date] => 2021-01-21 18:24:07
+    [update_date] => 2021-01-21 18:24:07
 )
 
-[21-Jan-2021 16:23:30 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:23:30 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:23:30 Asia/Tokyo] debug：取得したユーザー情報：Array
+[23-Jan-2021 14:59:41 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[23-Jan-2021 14:59:41 Asia/Tokyo] PHP Notice:  Undefined variable: edit_flg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 340
+[23-Jan-2021 14:59:41 Asia/Tokyo] PHP Notice:  Undefined variable: edit_flg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/mypage.php on line 380
+[23-Jan-2021 15:49:01 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[23-Jan-2021 15:49:01 Asia/Tokyo] debug：「　home page　
+[23-Jan-2021 15:49:01 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[23-Jan-2021 15:49:01 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[23-Jan-2021 15:49:01 Asia/Tokyo] debug：session ID：kqomei98qdt2eoete6rcu7go5g
+[23-Jan-2021 15:49:01 Asia/Tokyo] debug：session variable：Array
 (
-    [id] => 90
-    [username] => okawa
-    [age] => 32
-    [tel] => 09022223333
-    [zip] => 3454445
-    [addr] => 33333
-    [email] => siodeitadaku@gmail.com
-    [pass] => $2y$10$PSYqCYuBg/X3Kj.0CIUQge7u8w8esOzON957xG86RyjrQoPoYGSpi
-    [profPic] => uploads/2c46a45dfc976a12572576636aa02356a589ec0e.jpeg
-    [login_time] => 2021-01-21 16:09:15
-    [delete_flg] => 0
-    [create_date] => 
-    [update_date] => 2021-01-21 16:09:15
-)
-
-[21-Jan-2021 16:23:30 Asia/Tokyo] debug：postID：
-[21-Jan-2021 16:23:30 Asia/Tokyo] debug：フォーム用DBデータ：
-[21-Jan-2021 16:23:30 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:23:30 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:23:30 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-[21-Jan-2021 16:23:32 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:23:32 Asia/Tokyo] debug：「　passSettingpage　
-[21-Jan-2021 16:23:32 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:23:32 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
-[21-Jan-2021 16:23:32 Asia/Tokyo] debug：session ID：fe2qmrmtorvjk86p1do5o1c3rj
-[21-Jan-2021 16:23:32 Asia/Tokyo] debug：session variable：Array
-(
+    [login_date] => 1611381581
+    [login_limit] => 2592000
+    [user_id] => 91
     [msg_success] => 
-    [login_date] => 1611213810
-    [login_limit] => 3600
-    [user_id] => 90
 )
 
-[21-Jan-2021 16:23:32 Asia/Tokyo] debug：現在日時タイムスタンプ：1611213812
-[21-Jan-2021 16:23:32 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611217410
-[21-Jan-2021 16:23:32 Asia/Tokyo] debug：ログイン済みユーザーです。
-[21-Jan-2021 16:23:32 Asia/Tokyo] debug：ログイン有効期限以内です。
-[21-Jan-2021 16:23:32 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:23:32 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:23:32 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-[21-Jan-2021 16:23:35 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:23:35 Asia/Tokyo] debug：「　cange password page　
-[21-Jan-2021 16:23:35 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:23:35 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
-[21-Jan-2021 16:23:35 Asia/Tokyo] debug：session ID：a2eievc97d8btm882ipgdf0519
-[21-Jan-2021 16:23:35 Asia/Tokyo] debug：session variable：Array
+[23-Jan-2021 15:49:01 Asia/Tokyo] debug：現在日時タイムスタンプ：1611384541
+[23-Jan-2021 15:49:01 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1613973581
+[23-Jan-2021 15:49:01 Asia/Tokyo] debug：===========================
+[23-Jan-2021 15:49:01 Asia/Tokyo] debug：start auth function
+[23-Jan-2021 15:49:01 Asia/Tokyo] debug：===========================
+[23-Jan-2021 15:49:01 Asia/Tokyo] debug：ログイン済みユーザーです。
+[23-Jan-2021 15:49:01 Asia/Tokyo] debug：ログイン有効期限以内です。
+[23-Jan-2021 15:49:01 Asia/Tokyo] debug：===========================
+[23-Jan-2021 15:49:01 Asia/Tokyo] debug：end auth function
+[23-Jan-2021 15:49:01 Asia/Tokyo] debug：===========================
+[23-Jan-2021 15:49:01 Asia/Tokyo] debug：===========================
+[23-Jan-2021 15:49:01 Asia/Tokyo] debug：start getuser function
+[23-Jan-2021 15:49:01 Asia/Tokyo] debug：===========================
+[23-Jan-2021 15:49:01 Asia/Tokyo] debug：ユーザー情報を取得します。
+[23-Jan-2021 15:49:02 Asia/Tokyo] debug：クエリ成功。
+[23-Jan-2021 15:49:02 Asia/Tokyo] debug：===========================
+[23-Jan-2021 15:49:02 Asia/Tokyo] debug：success getuser function
+[23-Jan-2021 15:49:02 Asia/Tokyo] debug：===========================
+[23-Jan-2021 15:49:02 Asia/Tokyo] debug：取得したユーザー情報：Array
 (
-    [msg_success] => 
-    [login_date] => 1611213812
-    [login_limit] => 3600
-    [user_id] => 90
-)
-
-[21-Jan-2021 16:23:35 Asia/Tokyo] debug：現在日時タイムスタンプ：1611213815
-[21-Jan-2021 16:23:35 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611217412
-[21-Jan-2021 16:23:35 Asia/Tokyo] debug：ログイン済みユーザーです。
-[21-Jan-2021 16:23:35 Asia/Tokyo] debug：ログイン有効期限以内です。
-[21-Jan-2021 16:23:35 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:23:35 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:23:35 Asia/Tokyo] debug：取得したユーザー情報：Array
-(
-    [id] => 90
+    [id] => 91
     [username] => okawa
-    [age] => 32
-    [tel] => 09022223333
-    [zip] => 3454445
-    [addr] => 33333
+    [age] => 21
+    [tel] => 0900000000
+    [zip] => 1234567
+    [addr] => 1234556
     [email] => siodeitadaku@gmail.com
-    [pass] => $2y$10$PSYqCYuBg/X3Kj.0CIUQge7u8w8esOzON957xG86RyjrQoPoYGSpi
-    [profPic] => uploads/2c46a45dfc976a12572576636aa02356a589ec0e.jpeg
-    [login_time] => 2021-01-21 16:09:15
+    [pass] => $2y$10$i4XOEMLpgPa6cASsKikC6.0aqS/bSt8foW3dN5eyURRTVvsC8pw3S
+    [profpic] => uploads/5997d2c0c301d087561cee1e0b0df08775857bdd.jpeg
+    [backgroundimg] => uploads/3434b05e6caed2409a2db81a6d081b9d8a6401ea.jpeg
+    [login_time] => 2021-01-21 18:24:07
     [delete_flg] => 0
-    [create_date] => 
-    [update_date] => 2021-01-21 16:09:15
+    [create_date] => 2021-01-21 18:24:07
+    [update_date] => 2021-01-21 18:24:07
 )
 
-[21-Jan-2021 16:23:35 Asia/Tokyo] PHP Notice:  Undefined variable: dbFormData in /Applications/MAMP/htdocs/Github/portfolio/goodbook/goodbook_header.php on line 39
-[21-Jan-2021 16:23:42 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:23:42 Asia/Tokyo] debug：「　cange password page　
-[21-Jan-2021 16:23:42 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:23:42 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
-[21-Jan-2021 16:23:42 Asia/Tokyo] debug：session ID：n0hp3f0abpgvfvq60ne5jmkinj
-[21-Jan-2021 16:23:42 Asia/Tokyo] debug：session variable：Array
+[23-Jan-2021 15:49:02 Asia/Tokyo] debug：カテゴリー情報を取得します。
+[23-Jan-2021 15:49:02 Asia/Tokyo] debug：クエリ成功。
+[23-Jan-2021 15:49:02 Asia/Tokyo] debug：postID：
+[23-Jan-2021 15:49:02 Asia/Tokyo] debug：フォーム用DBデータ：
+[23-Jan-2021 15:49:02 Asia/Tokyo] debug：post data：Array
 (
-    [msg_success] => 
-    [login_date] => 1611213815
-    [login_limit] => 3600
-    [user_id] => 90
+    [0] => Array
+        (
+            [id] => 70
+            [comment] => kkk
+            [pic1] => uploads/b3c3f1a24af9f4acf04cee68d87d468a7f075091.jpeg
+            [user_id] => 90
+            [delete_flg] => 0
+            [create_date] => 2021-01-21 18:20:50
+            [update_date] => 2021-01-21 18:20:50
+        )
+
+    [1] => Array
+        (
+            [id] => 71
+            [comment] => lkfjl;askdfj
+            [pic1] => uploads/bcbe1af090d9a7e86cafd95d7cf1b8c0fbfd873a.jpeg
+            [user_id] => 91
+            [delete_flg] => 0
+            [create_date] => 2021-01-22 21:23:42
+            [update_date] => 2021-01-22 21:23:42
+        )
+
+    [2] => Array
+        (
+            [id] => 72
+            [comment] => lkfajsd;
+            [pic1] => uploads/a327e34a53630bb37aaa68443dc3bd12277aeb33.jpeg
+            [user_id] => 91
+            [delete_flg] => 0
+            [create_date] => 2021-01-22 21:41:12
+            [update_date] => 2021-01-22 21:41:12
+        )
+
+    [3] => Array
+        (
+            [id] => 73
+            [comment] => jhyjhjk
+            [pic1] => uploads/244dbed7a627d8a7e3658c64ac8d201e78cd371c.jpeg
+            [user_id] => 91
+            [delete_flg] => 0
+            [create_date] => 2021-01-23 11:24:11
+            [update_date] => 2021-01-23 11:24:11
+        )
+
 )
 
-[21-Jan-2021 16:23:42 Asia/Tokyo] debug：現在日時タイムスタンプ：1611213822
-[21-Jan-2021 16:23:42 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611217415
-[21-Jan-2021 16:23:42 Asia/Tokyo] debug：ログイン済みユーザーです。
-[21-Jan-2021 16:23:42 Asia/Tokyo] debug：ログイン有効期限以内です。
-[21-Jan-2021 16:23:42 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:23:42 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:23:42 Asia/Tokyo] debug：取得したユーザー情報：Array
+[23-Jan-2021 15:49:02 Asia/Tokyo] PHP Notice:  Undefined variable: listSpan in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 84
+[23-Jan-2021 15:49:02 Asia/Tokyo] debug：===========================
+[23-Jan-2021 15:49:02 Asia/Tokyo] debug：start get post list function
+[23-Jan-2021 15:49:02 Asia/Tokyo] debug：===========================
+[23-Jan-2021 15:49:02 Asia/Tokyo] debug：商品情報を取得します。
+[23-Jan-2021 15:49:02 Asia/Tokyo] debug：クエリ成功。
+[23-Jan-2021 15:49:02 Asia/Tokyo] debug：SQL：SELECT * FROM post LIMIT 20 OFFSET 0
+[23-Jan-2021 15:49:02 Asia/Tokyo] debug：クエリ成功。
+[23-Jan-2021 15:49:02 Asia/Tokyo] debug：現在のページ：1
+[23-Jan-2021 15:49:02 Asia/Tokyo] debug：===========================
+[23-Jan-2021 15:49:02 Asia/Tokyo] debug：start getuser function
+[23-Jan-2021 15:49:02 Asia/Tokyo] debug：===========================
+[23-Jan-2021 15:49:02 Asia/Tokyo] debug：ユーザー情報を取得します。
+[23-Jan-2021 15:49:02 Asia/Tokyo] debug：クエリ成功。
+[23-Jan-2021 15:49:02 Asia/Tokyo] debug：===========================
+[23-Jan-2021 15:49:02 Asia/Tokyo] debug：success getuser function
+[23-Jan-2021 15:49:02 Asia/Tokyo] debug：===========================
+[23-Jan-2021 15:49:02 Asia/Tokyo] debug：取得したユーザー情報：Array
 (
-    [id] => 90
+    [id] => 91
     [username] => okawa
-    [age] => 32
-    [tel] => 09022223333
-    [zip] => 3454445
-    [addr] => 33333
+    [age] => 21
+    [tel] => 0900000000
+    [zip] => 1234567
+    [addr] => 1234556
     [email] => siodeitadaku@gmail.com
-    [pass] => $2y$10$PSYqCYuBg/X3Kj.0CIUQge7u8w8esOzON957xG86RyjrQoPoYGSpi
-    [profPic] => uploads/2c46a45dfc976a12572576636aa02356a589ec0e.jpeg
-    [login_time] => 2021-01-21 16:09:15
+    [pass] => $2y$10$i4XOEMLpgPa6cASsKikC6.0aqS/bSt8foW3dN5eyURRTVvsC8pw3S
+    [profpic] => uploads/5997d2c0c301d087561cee1e0b0df08775857bdd.jpeg
+    [backgroundimg] => uploads/3434b05e6caed2409a2db81a6d081b9d8a6401ea.jpeg
+    [login_time] => 2021-01-21 18:24:07
     [delete_flg] => 0
-    [create_date] => 
-    [update_date] => 2021-01-21 16:09:15
+    [create_date] => 2021-01-21 18:24:07
+    [update_date] => 2021-01-21 18:24:07
 )
 
-[21-Jan-2021 16:23:42 Asia/Tokyo] debug：POST送信があります。
-[21-Jan-2021 16:23:42 Asia/Tokyo] debug：POST情報：Array
-(
-    [pass_old] => aaaaaa
-    [pass_new] => 111111
-    [pass_new_re] => 111111
-)
-
-[21-Jan-2021 16:23:42 Asia/Tokyo] debug：未入力チェックOK。
-[21-Jan-2021 16:23:42 Asia/Tokyo] debug：バリデーションOK。
-[21-Jan-2021 16:23:43 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:23:43 Asia/Tokyo] debug：メールを送信しました。
-[21-Jan-2021 16:23:43 Asia/Tokyo] PHP Notice:  Undefined variable: dbFormData in /Applications/MAMP/htdocs/Github/portfolio/goodbook/goodbook_header.php on line 39
-[21-Jan-2021 16:23:43 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:23:43 Asia/Tokyo] debug：「 my page　
-[21-Jan-2021 16:23:43 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:23:43 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
-[21-Jan-2021 16:23:43 Asia/Tokyo] debug：session ID：2fe3ecm8np754peq64hmversn0
-[21-Jan-2021 16:23:43 Asia/Tokyo] debug：session variable：Array
-(
-    [msg_success] => Password changed
-    [login_date] => 1611213822
-    [login_limit] => 3600
-    [user_id] => 90
-)
-
-[21-Jan-2021 16:23:43 Asia/Tokyo] debug：現在日時タイムスタンプ：1611213823
-[21-Jan-2021 16:23:43 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611217422
-[21-Jan-2021 16:23:43 Asia/Tokyo] debug：ログイン済みユーザーです。
-[21-Jan-2021 16:23:43 Asia/Tokyo] debug：ログイン有効期限以内です。
-[21-Jan-2021 16:23:43 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:23:43 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:23:43 Asia/Tokyo] debug：取得したユーザー情報：Array
-(
-    [id] => 90
-    [username] => okawa
-    [age] => 32
-    [tel] => 09022223333
-    [zip] => 3454445
-    [addr] => 33333
-    [email] => siodeitadaku@gmail.com
-    [pass] => $2y$10$HFVWvCctW/mj9zWKl18iE.0wks9eY7YvgE0wrD1wbWoXzA6ZIjkMO
-    [profPic] => uploads/2c46a45dfc976a12572576636aa02356a589ec0e.jpeg
-    [login_time] => 2021-01-21 16:09:15
-    [delete_flg] => 0
-    [create_date] => 
-    [update_date] => 2021-01-21 16:09:15
-)
-
-[21-Jan-2021 16:23:43 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:23:43 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:23:43 Asia/Tokyo] debug：取得したユーザー情報：Array
-(
-    [id] => 90
-    [username] => okawa
-    [age] => 32
-    [tel] => 09022223333
-    [zip] => 3454445
-    [addr] => 33333
-    [email] => siodeitadaku@gmail.com
-    [pass] => $2y$10$HFVWvCctW/mj9zWKl18iE.0wks9eY7YvgE0wrD1wbWoXzA6ZIjkMO
-    [profPic] => uploads/2c46a45dfc976a12572576636aa02356a589ec0e.jpeg
-    [login_time] => 2021-01-21 16:09:15
-    [delete_flg] => 0
-    [create_date] => 
-    [update_date] => 2021-01-21 16:09:15
-)
-
-[21-Jan-2021 16:23:43 Asia/Tokyo] debug：postID：
-[21-Jan-2021 16:23:43 Asia/Tokyo] debug：フォーム用DBデータ：
-[21-Jan-2021 16:23:43 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:23:43 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:23:43 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-[21-Jan-2021 16:23:59 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:23:59 Asia/Tokyo] debug：「　passSettingpage　
-[21-Jan-2021 16:23:59 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:23:59 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
-[21-Jan-2021 16:23:59 Asia/Tokyo] debug：session ID：ccc69b2lliumi8nbn4cull2e2r
-[21-Jan-2021 16:23:59 Asia/Tokyo] debug：session variable：Array
-(
-    [msg_success] => 
-    [login_date] => 1611213823
-    [login_limit] => 3600
-    [user_id] => 90
-)
-
-[21-Jan-2021 16:23:59 Asia/Tokyo] debug：現在日時タイムスタンプ：1611213839
-[21-Jan-2021 16:23:59 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611217423
-[21-Jan-2021 16:23:59 Asia/Tokyo] debug：ログイン済みユーザーです。
-[21-Jan-2021 16:23:59 Asia/Tokyo] debug：ログイン有効期限以内です。
-[21-Jan-2021 16:23:59 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:23:59 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:23:59 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-[21-Jan-2021 16:24:00 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:24:00 Asia/Tokyo] debug：「　cange password page　
-[21-Jan-2021 16:24:00 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:24:00 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
-[21-Jan-2021 16:24:00 Asia/Tokyo] debug：session ID：2be0u4rubft3d9a1hgih3cqugd
-[21-Jan-2021 16:24:00 Asia/Tokyo] debug：session variable：Array
-(
-    [msg_success] => 
-    [login_date] => 1611213839
-    [login_limit] => 3600
-    [user_id] => 90
-)
-
-[21-Jan-2021 16:24:00 Asia/Tokyo] debug：現在日時タイムスタンプ：1611213840
-[21-Jan-2021 16:24:00 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611217439
-[21-Jan-2021 16:24:00 Asia/Tokyo] debug：ログイン済みユーザーです。
-[21-Jan-2021 16:24:00 Asia/Tokyo] debug：ログイン有効期限以内です。
-[21-Jan-2021 16:24:00 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:24:00 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:24:00 Asia/Tokyo] debug：取得したユーザー情報：Array
-(
-    [id] => 90
-    [username] => okawa
-    [age] => 32
-    [tel] => 09022223333
-    [zip] => 3454445
-    [addr] => 33333
-    [email] => siodeitadaku@gmail.com
-    [pass] => $2y$10$HFVWvCctW/mj9zWKl18iE.0wks9eY7YvgE0wrD1wbWoXzA6ZIjkMO
-    [profPic] => uploads/2c46a45dfc976a12572576636aa02356a589ec0e.jpeg
-    [login_time] => 2021-01-21 16:09:15
-    [delete_flg] => 0
-    [create_date] => 
-    [update_date] => 2021-01-21 16:09:15
-)
-
-[21-Jan-2021 16:24:00 Asia/Tokyo] PHP Notice:  Undefined variable: dbFormData in /Applications/MAMP/htdocs/Github/portfolio/goodbook/goodbook_header.php on line 39
-[21-Jan-2021 16:24:06 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:24:06 Asia/Tokyo] debug：「　cange password page　
-[21-Jan-2021 16:24:06 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:24:06 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
-[21-Jan-2021 16:24:06 Asia/Tokyo] debug：session ID：nr7mtmr7aoj7ursp7lbbqeo841
-[21-Jan-2021 16:24:06 Asia/Tokyo] debug：session variable：Array
-(
-    [msg_success] => 
-    [login_date] => 1611213840
-    [login_limit] => 3600
-    [user_id] => 90
-)
-
-[21-Jan-2021 16:24:06 Asia/Tokyo] debug：現在日時タイムスタンプ：1611213846
-[21-Jan-2021 16:24:06 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611217440
-[21-Jan-2021 16:24:06 Asia/Tokyo] debug：ログイン済みユーザーです。
-[21-Jan-2021 16:24:06 Asia/Tokyo] debug：ログイン有効期限以内です。
-[21-Jan-2021 16:24:06 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:24:06 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:24:06 Asia/Tokyo] debug：取得したユーザー情報：Array
-(
-    [id] => 90
-    [username] => okawa
-    [age] => 32
-    [tel] => 09022223333
-    [zip] => 3454445
-    [addr] => 33333
-    [email] => siodeitadaku@gmail.com
-    [pass] => $2y$10$HFVWvCctW/mj9zWKl18iE.0wks9eY7YvgE0wrD1wbWoXzA6ZIjkMO
-    [profPic] => uploads/2c46a45dfc976a12572576636aa02356a589ec0e.jpeg
-    [login_time] => 2021-01-21 16:09:15
-    [delete_flg] => 0
-    [create_date] => 
-    [update_date] => 2021-01-21 16:09:15
-)
-
-[21-Jan-2021 16:24:06 Asia/Tokyo] debug：POST送信があります。
-[21-Jan-2021 16:24:06 Asia/Tokyo] debug：POST情報：Array
-(
-    [pass_old] => 111111
-    [pass_new] => aaaaaa
-    [pass_new_re] => aaaaaa
-)
-
-[21-Jan-2021 16:24:06 Asia/Tokyo] debug：未入力チェックOK。
-[21-Jan-2021 16:24:07 Asia/Tokyo] debug：バリデーションOK。
-[21-Jan-2021 16:24:07 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:24:07 Asia/Tokyo] debug：メールを送信しました。
-[21-Jan-2021 16:24:07 Asia/Tokyo] PHP Notice:  Undefined variable: dbFormData in /Applications/MAMP/htdocs/Github/portfolio/goodbook/goodbook_header.php on line 39
-[21-Jan-2021 16:24:07 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:24:07 Asia/Tokyo] debug：「 my page　
-[21-Jan-2021 16:24:07 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:24:07 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
-[21-Jan-2021 16:24:07 Asia/Tokyo] debug：session ID：3e2d8090rpkj13r5jqe0fu36s5
-[21-Jan-2021 16:24:07 Asia/Tokyo] debug：session variable：Array
-(
-    [msg_success] => Password changed
-    [login_date] => 1611213846
-    [login_limit] => 3600
-    [user_id] => 90
-)
-
-[21-Jan-2021 16:24:07 Asia/Tokyo] debug：現在日時タイムスタンプ：1611213847
-[21-Jan-2021 16:24:07 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611217446
-[21-Jan-2021 16:24:07 Asia/Tokyo] debug：ログイン済みユーザーです。
-[21-Jan-2021 16:24:07 Asia/Tokyo] debug：ログイン有効期限以内です。
-[21-Jan-2021 16:24:07 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:24:07 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:24:07 Asia/Tokyo] debug：取得したユーザー情報：Array
-(
-    [id] => 90
-    [username] => okawa
-    [age] => 32
-    [tel] => 09022223333
-    [zip] => 3454445
-    [addr] => 33333
-    [email] => siodeitadaku@gmail.com
-    [pass] => $2y$10$lD5z2EipYGo8LpPb5uUe1OSpt.xLm71HDT/XuEIztsR3MEq3cBzcW
-    [profPic] => uploads/2c46a45dfc976a12572576636aa02356a589ec0e.jpeg
-    [login_time] => 2021-01-21 16:09:15
-    [delete_flg] => 0
-    [create_date] => 
-    [update_date] => 2021-01-21 16:09:15
-)
-
-[21-Jan-2021 16:24:07 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:24:07 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:24:07 Asia/Tokyo] debug：取得したユーザー情報：Array
-(
-    [id] => 90
-    [username] => okawa
-    [age] => 32
-    [tel] => 09022223333
-    [zip] => 3454445
-    [addr] => 33333
-    [email] => siodeitadaku@gmail.com
-    [pass] => $2y$10$lD5z2EipYGo8LpPb5uUe1OSpt.xLm71HDT/XuEIztsR3MEq3cBzcW
-    [profPic] => uploads/2c46a45dfc976a12572576636aa02356a589ec0e.jpeg
-    [login_time] => 2021-01-21 16:09:15
-    [delete_flg] => 0
-    [create_date] => 
-    [update_date] => 2021-01-21 16:09:15
-)
-
-[21-Jan-2021 16:24:07 Asia/Tokyo] debug：postID：
-[21-Jan-2021 16:24:07 Asia/Tokyo] debug：フォーム用DBデータ：
-[21-Jan-2021 16:24:07 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:24:07 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:24:07 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-[21-Jan-2021 16:25:56 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:25:56 Asia/Tokyo] debug：「　passSettingpage　
-[21-Jan-2021 16:25:56 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:25:56 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
-[21-Jan-2021 16:25:56 Asia/Tokyo] debug：session ID：9a6fofs4usgdgurbskhm5j5n09
-[21-Jan-2021 16:25:56 Asia/Tokyo] debug：session variable：Array
-(
-    [msg_success] => 
-    [login_date] => 1611213847
-    [login_limit] => 3600
-    [user_id] => 90
-)
-
-[21-Jan-2021 16:25:56 Asia/Tokyo] debug：現在日時タイムスタンプ：1611213956
-[21-Jan-2021 16:25:56 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611217447
-[21-Jan-2021 16:25:56 Asia/Tokyo] debug：ログイン済みユーザーです。
-[21-Jan-2021 16:25:56 Asia/Tokyo] debug：ログイン有効期限以内です。
-[21-Jan-2021 16:25:56 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:25:56 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:25:56 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-[21-Jan-2021 16:25:57 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:25:57 Asia/Tokyo] debug：「　cange password page　
-[21-Jan-2021 16:25:57 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:25:57 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
-[21-Jan-2021 16:25:57 Asia/Tokyo] debug：session ID：57khpl87ehvc9afjvnrvqtjj5n
-[21-Jan-2021 16:25:57 Asia/Tokyo] debug：session variable：Array
-(
-    [msg_success] => 
-    [login_date] => 1611213956
-    [login_limit] => 3600
-    [user_id] => 90
-)
-
-[21-Jan-2021 16:25:57 Asia/Tokyo] debug：現在日時タイムスタンプ：1611213957
-[21-Jan-2021 16:25:57 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611217556
-[21-Jan-2021 16:25:57 Asia/Tokyo] debug：ログイン済みユーザーです。
-[21-Jan-2021 16:25:57 Asia/Tokyo] debug：ログイン有効期限以内です。
-[21-Jan-2021 16:25:57 Asia/Tokyo] PHP Notice:  Undefined variable: userData in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passEdit.php on line 55
-[21-Jan-2021 16:25:57 Asia/Tokyo] PHP Notice:  Undefined variable: pass_new in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passEdit.php on line 55
-[21-Jan-2021 16:25:57 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:25:57 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:25:57 Asia/Tokyo] debug：取得したユーザー情報：Array
-(
-    [id] => 90
-    [username] => okawa
-    [age] => 32
-    [tel] => 09022223333
-    [zip] => 3454445
-    [addr] => 33333
-    [email] => siodeitadaku@gmail.com
-    [pass] => $2y$10$lD5z2EipYGo8LpPb5uUe1OSpt.xLm71HDT/XuEIztsR3MEq3cBzcW
-    [profPic] => uploads/2c46a45dfc976a12572576636aa02356a589ec0e.jpeg
-    [login_time] => 2021-01-21 16:09:15
-    [delete_flg] => 0
-    [create_date] => 
-    [update_date] => 2021-01-21 16:09:15
-)
-
-[21-Jan-2021 16:25:57 Asia/Tokyo] PHP Notice:  Undefined variable: dbFormData in /Applications/MAMP/htdocs/Github/portfolio/goodbook/goodbook_header.php on line 39
-[21-Jan-2021 16:26:02 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:26:02 Asia/Tokyo] debug：「　cange password page　
-[21-Jan-2021 16:26:02 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:26:02 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
-[21-Jan-2021 16:26:02 Asia/Tokyo] debug：session ID：6nbprages3ddi2p4va6pfh0f0t
-[21-Jan-2021 16:26:02 Asia/Tokyo] debug：session variable：Array
-(
-    [msg_success] => 
-    [login_date] => 1611213957
-    [login_limit] => 3600
-    [user_id] => 90
-)
-
-[21-Jan-2021 16:26:02 Asia/Tokyo] debug：現在日時タイムスタンプ：1611213962
-[21-Jan-2021 16:26:02 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611217557
-[21-Jan-2021 16:26:02 Asia/Tokyo] debug：ログイン済みユーザーです。
-[21-Jan-2021 16:26:02 Asia/Tokyo] debug：ログイン有効期限以内です。
-[21-Jan-2021 16:26:02 Asia/Tokyo] PHP Notice:  Undefined variable: userData in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passEdit.php on line 55
-[21-Jan-2021 16:26:02 Asia/Tokyo] PHP Notice:  Undefined variable: pass_new in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passEdit.php on line 55
-[21-Jan-2021 16:26:02 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:26:02 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:26:02 Asia/Tokyo] debug：取得したユーザー情報：Array
-(
-    [id] => 90
-    [username] => okawa
-    [age] => 32
-    [tel] => 09022223333
-    [zip] => 3454445
-    [addr] => 33333
-    [email] => siodeitadaku@gmail.com
-    [pass] => $2y$10$lD5z2EipYGo8LpPb5uUe1OSpt.xLm71HDT/XuEIztsR3MEq3cBzcW
-    [profPic] => uploads/2c46a45dfc976a12572576636aa02356a589ec0e.jpeg
-    [login_time] => 2021-01-21 16:09:15
-    [delete_flg] => 0
-    [create_date] => 
-    [update_date] => 2021-01-21 16:09:15
-)
-
-[21-Jan-2021 16:26:02 Asia/Tokyo] debug：POST送信があります。
-[21-Jan-2021 16:26:02 Asia/Tokyo] debug：POST情報：Array
-(
-    [pass_old] => aaaaaa
-    [pass_new] => 111111
-    [pass_new_re] => 111111
-)
-
-[21-Jan-2021 16:26:02 Asia/Tokyo] debug：未入力チェックOK。
-[21-Jan-2021 16:26:02 Asia/Tokyo] debug：バリデーションOK。
-[21-Jan-2021 16:26:03 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:26:03 Asia/Tokyo] debug：メールを送信しました。
-[21-Jan-2021 16:26:03 Asia/Tokyo] PHP Notice:  Undefined variable: dbFormData in /Applications/MAMP/htdocs/Github/portfolio/goodbook/goodbook_header.php on line 39
-[21-Jan-2021 16:26:03 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:26:03 Asia/Tokyo] debug：「 my page　
-[21-Jan-2021 16:26:03 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:26:03 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
-[21-Jan-2021 16:26:03 Asia/Tokyo] debug：session ID：pla9rf8uso1usbbd8478p2k821
-[21-Jan-2021 16:26:03 Asia/Tokyo] debug：session variable：Array
-(
-    [msg_success] => Password changed
-    [login_date] => 1611213962
-    [login_limit] => 3600
-    [user_id] => 90
-)
-
-[21-Jan-2021 16:26:03 Asia/Tokyo] debug：現在日時タイムスタンプ：1611213963
-[21-Jan-2021 16:26:03 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611217562
-[21-Jan-2021 16:26:03 Asia/Tokyo] debug：ログイン済みユーザーです。
-[21-Jan-2021 16:26:03 Asia/Tokyo] debug：ログイン有効期限以内です。
-[21-Jan-2021 16:26:03 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:26:03 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:26:03 Asia/Tokyo] debug：取得したユーザー情報：Array
-(
-    [id] => 90
-    [username] => okawa
-    [age] => 32
-    [tel] => 09022223333
-    [zip] => 3454445
-    [addr] => 33333
-    [email] => siodeitadaku@gmail.com
-    [pass] => $2y$10$gCLOWSfdWT/WlSesSTKrdOEYzTpcCamIPiCnKDwo5MiP1EOb9NKXG
-    [profPic] => uploads/2c46a45dfc976a12572576636aa02356a589ec0e.jpeg
-    [login_time] => 2021-01-21 16:09:15
-    [delete_flg] => 0
-    [create_date] => 
-    [update_date] => 2021-01-21 16:09:15
-)
-
-[21-Jan-2021 16:26:03 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:26:03 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:26:03 Asia/Tokyo] debug：取得したユーザー情報：Array
-(
-    [id] => 90
-    [username] => okawa
-    [age] => 32
-    [tel] => 09022223333
-    [zip] => 3454445
-    [addr] => 33333
-    [email] => siodeitadaku@gmail.com
-    [pass] => $2y$10$gCLOWSfdWT/WlSesSTKrdOEYzTpcCamIPiCnKDwo5MiP1EOb9NKXG
-    [profPic] => uploads/2c46a45dfc976a12572576636aa02356a589ec0e.jpeg
-    [login_time] => 2021-01-21 16:09:15
-    [delete_flg] => 0
-    [create_date] => 
-    [update_date] => 2021-01-21 16:09:15
-)
-
-[21-Jan-2021 16:26:03 Asia/Tokyo] debug：postID：
-[21-Jan-2021 16:26:03 Asia/Tokyo] debug：フォーム用DBデータ：
-[21-Jan-2021 16:26:03 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:26:03 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:26:03 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-[21-Jan-2021 16:26:04 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:26:04 Asia/Tokyo] debug：「　passSettingpage　
-[21-Jan-2021 16:26:04 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:26:04 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
-[21-Jan-2021 16:26:04 Asia/Tokyo] debug：session ID：h351ds8kqul6962tklklkrac1u
-[21-Jan-2021 16:26:04 Asia/Tokyo] debug：session variable：Array
-(
-    [msg_success] => 
-    [login_date] => 1611213963
-    [login_limit] => 3600
-    [user_id] => 90
-)
-
-[21-Jan-2021 16:26:04 Asia/Tokyo] debug：現在日時タイムスタンプ：1611213964
-[21-Jan-2021 16:26:04 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611217563
-[21-Jan-2021 16:26:04 Asia/Tokyo] debug：ログイン済みユーザーです。
-[21-Jan-2021 16:26:04 Asia/Tokyo] debug：ログイン有効期限以内です。
-[21-Jan-2021 16:26:04 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:26:04 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:26:04 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-[21-Jan-2021 16:26:05 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:26:05 Asia/Tokyo] debug：「　cange password page　
-[21-Jan-2021 16:26:05 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:26:05 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
-[21-Jan-2021 16:26:05 Asia/Tokyo] debug：session ID：i520vtfkqslrjqfjmvch4lkbur
-[21-Jan-2021 16:26:05 Asia/Tokyo] debug：session variable：Array
-(
-    [msg_success] => 
-    [login_date] => 1611213964
-    [login_limit] => 3600
-    [user_id] => 90
-)
-
-[21-Jan-2021 16:26:05 Asia/Tokyo] debug：現在日時タイムスタンプ：1611213965
-[21-Jan-2021 16:26:05 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611217564
-[21-Jan-2021 16:26:05 Asia/Tokyo] debug：ログイン済みユーザーです。
-[21-Jan-2021 16:26:05 Asia/Tokyo] debug：ログイン有効期限以内です。
-[21-Jan-2021 16:26:05 Asia/Tokyo] PHP Notice:  Undefined variable: userData in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passEdit.php on line 55
-[21-Jan-2021 16:26:05 Asia/Tokyo] PHP Notice:  Undefined variable: pass_new in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passEdit.php on line 55
-[21-Jan-2021 16:26:05 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:26:05 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:26:05 Asia/Tokyo] debug：取得したユーザー情報：Array
-(
-    [id] => 90
-    [username] => okawa
-    [age] => 32
-    [tel] => 09022223333
-    [zip] => 3454445
-    [addr] => 33333
-    [email] => siodeitadaku@gmail.com
-    [pass] => $2y$10$gCLOWSfdWT/WlSesSTKrdOEYzTpcCamIPiCnKDwo5MiP1EOb9NKXG
-    [profPic] => uploads/2c46a45dfc976a12572576636aa02356a589ec0e.jpeg
-    [login_time] => 2021-01-21 16:09:15
-    [delete_flg] => 0
-    [create_date] => 
-    [update_date] => 2021-01-21 16:09:15
-)
-
-[21-Jan-2021 16:26:05 Asia/Tokyo] PHP Notice:  Undefined variable: dbFormData in /Applications/MAMP/htdocs/Github/portfolio/goodbook/goodbook_header.php on line 39
-[21-Jan-2021 16:26:06 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:26:06 Asia/Tokyo] debug：「　cange password page　
-[21-Jan-2021 16:26:06 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:26:06 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
-[21-Jan-2021 16:26:06 Asia/Tokyo] debug：session ID：latqk1ekvljblil5oaja4nvasb
-[21-Jan-2021 16:26:06 Asia/Tokyo] debug：session variable：Array
-(
-    [msg_success] => 
-    [login_date] => 1611213965
-    [login_limit] => 3600
-    [user_id] => 90
-)
-
-[21-Jan-2021 16:26:06 Asia/Tokyo] debug：現在日時タイムスタンプ：1611213966
-[21-Jan-2021 16:26:06 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611217565
-[21-Jan-2021 16:26:06 Asia/Tokyo] debug：ログイン済みユーザーです。
-[21-Jan-2021 16:26:06 Asia/Tokyo] debug：ログイン有効期限以内です。
-[21-Jan-2021 16:26:06 Asia/Tokyo] PHP Notice:  Undefined variable: userData in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passEdit.php on line 55
-[21-Jan-2021 16:26:06 Asia/Tokyo] PHP Notice:  Undefined variable: pass_new in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/passEdit.php on line 55
-[21-Jan-2021 16:26:06 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:26:06 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:26:06 Asia/Tokyo] debug：取得したユーザー情報：Array
-(
-    [id] => 90
-    [username] => okawa
-    [age] => 32
-    [tel] => 09022223333
-    [zip] => 3454445
-    [addr] => 33333
-    [email] => siodeitadaku@gmail.com
-    [pass] => $2y$10$gCLOWSfdWT/WlSesSTKrdOEYzTpcCamIPiCnKDwo5MiP1EOb9NKXG
-    [profPic] => uploads/2c46a45dfc976a12572576636aa02356a589ec0e.jpeg
-    [login_time] => 2021-01-21 16:09:15
-    [delete_flg] => 0
-    [create_date] => 
-    [update_date] => 2021-01-21 16:09:15
-)
-
-[21-Jan-2021 16:26:06 Asia/Tokyo] debug：POST送信があります。
-[21-Jan-2021 16:26:07 Asia/Tokyo] debug：POST情報：Array
-(
-    [pass_old] => 
-    [pass_new] => 
-    [pass_new_re] => 
-)
-
-[21-Jan-2021 16:26:07 Asia/Tokyo] PHP Notice:  Undefined variable: dbFormData in /Applications/MAMP/htdocs/Github/portfolio/goodbook/goodbook_header.php on line 39
-[21-Jan-2021 16:28:59 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:28:59 Asia/Tokyo] debug：「　cange password page　
-[21-Jan-2021 16:28:59 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:28:59 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
-[21-Jan-2021 16:28:59 Asia/Tokyo] debug：session ID：66ucnmbpdcri4r0rio0jg7lmkh
-[21-Jan-2021 16:28:59 Asia/Tokyo] debug：session variable：Array
-(
-    [msg_success] => 
-    [login_date] => 1611213966
-    [login_limit] => 3600
-    [user_id] => 90
-)
-
-[21-Jan-2021 16:28:59 Asia/Tokyo] debug：現在日時タイムスタンプ：1611214139
-[21-Jan-2021 16:28:59 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611217566
-[21-Jan-2021 16:28:59 Asia/Tokyo] debug：ログイン済みユーザーです。
-[21-Jan-2021 16:28:59 Asia/Tokyo] debug：ログイン有効期限以内です。
-[21-Jan-2021 16:28:59 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:28:59 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:28:59 Asia/Tokyo] debug：取得したユーザー情報：Array
-(
-    [id] => 90
-    [username] => okawa
-    [age] => 32
-    [tel] => 09022223333
-    [zip] => 3454445
-    [addr] => 33333
-    [email] => siodeitadaku@gmail.com
-    [pass] => $2y$10$gCLOWSfdWT/WlSesSTKrdOEYzTpcCamIPiCnKDwo5MiP1EOb9NKXG
-    [profPic] => uploads/2c46a45dfc976a12572576636aa02356a589ec0e.jpeg
-    [login_time] => 2021-01-21 16:09:15
-    [delete_flg] => 0
-    [create_date] => 
-    [update_date] => 2021-01-21 16:09:15
-)
-
-[21-Jan-2021 16:28:59 Asia/Tokyo] debug：POST送信があります。
-[21-Jan-2021 16:28:59 Asia/Tokyo] debug：POST情報：Array
-(
-    [pass_old] => 
-    [pass_new] => 
-    [pass_new_re] => 
-)
-
-[21-Jan-2021 16:28:59 Asia/Tokyo] PHP Notice:  Undefined variable: dbFormData in /Applications/MAMP/htdocs/Github/portfolio/goodbook/goodbook_header.php on line 39
-[21-Jan-2021 16:29:20 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:29:20 Asia/Tokyo] debug：「 my page　
-[21-Jan-2021 16:29:20 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:29:20 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
-[21-Jan-2021 16:29:20 Asia/Tokyo] debug：session ID：m8tacbbhhmrhedkvv9mlvccko9
-[21-Jan-2021 16:29:20 Asia/Tokyo] debug：session variable：Array
-(
-    [msg_success] => 
-    [login_date] => 1611214139
-    [login_limit] => 3600
-    [user_id] => 90
-)
-
-[21-Jan-2021 16:29:20 Asia/Tokyo] debug：現在日時タイムスタンプ：1611214160
-[21-Jan-2021 16:29:20 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611217739
-[21-Jan-2021 16:29:20 Asia/Tokyo] debug：ログイン済みユーザーです。
-[21-Jan-2021 16:29:20 Asia/Tokyo] debug：ログイン有効期限以内です。
-[21-Jan-2021 16:29:20 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:29:20 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:29:20 Asia/Tokyo] debug：取得したユーザー情報：Array
-(
-    [id] => 90
-    [username] => okawa
-    [age] => 32
-    [tel] => 09022223333
-    [zip] => 3454445
-    [addr] => 33333
-    [email] => siodeitadaku@gmail.com
-    [pass] => $2y$10$gCLOWSfdWT/WlSesSTKrdOEYzTpcCamIPiCnKDwo5MiP1EOb9NKXG
-    [profPic] => uploads/2c46a45dfc976a12572576636aa02356a589ec0e.jpeg
-    [login_time] => 2021-01-21 16:09:15
-    [delete_flg] => 0
-    [create_date] => 
-    [update_date] => 2021-01-21 16:09:15
-)
-
-[21-Jan-2021 16:29:20 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:29:20 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:29:20 Asia/Tokyo] debug：取得したユーザー情報：Array
-(
-    [id] => 90
-    [username] => okawa
-    [age] => 32
-    [tel] => 09022223333
-    [zip] => 3454445
-    [addr] => 33333
-    [email] => siodeitadaku@gmail.com
-    [pass] => $2y$10$gCLOWSfdWT/WlSesSTKrdOEYzTpcCamIPiCnKDwo5MiP1EOb9NKXG
-    [profPic] => uploads/2c46a45dfc976a12572576636aa02356a589ec0e.jpeg
-    [login_time] => 2021-01-21 16:09:15
-    [delete_flg] => 0
-    [create_date] => 
-    [update_date] => 2021-01-21 16:09:15
-)
-
-[21-Jan-2021 16:29:20 Asia/Tokyo] debug：postID：
-[21-Jan-2021 16:29:20 Asia/Tokyo] debug：フォーム用DBデータ：
-[21-Jan-2021 16:29:20 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:29:20 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:29:20 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-[21-Jan-2021 16:29:29 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:29:29 Asia/Tokyo] debug：「 my page　
-[21-Jan-2021 16:29:29 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:29:29 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
-[21-Jan-2021 16:29:29 Asia/Tokyo] debug：session ID：mvk8f6hn9s0ed6bg0o0g0buajl
-[21-Jan-2021 16:29:29 Asia/Tokyo] debug：session variable：Array
-(
-    [msg_success] => 
-    [login_date] => 1611214160
-    [login_limit] => 3600
-    [user_id] => 90
-)
-
-[21-Jan-2021 16:29:29 Asia/Tokyo] debug：現在日時タイムスタンプ：1611214169
-[21-Jan-2021 16:29:29 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611217760
-[21-Jan-2021 16:29:29 Asia/Tokyo] debug：ログイン済みユーザーです。
-[21-Jan-2021 16:29:29 Asia/Tokyo] debug：ログイン有効期限以内です。
-[21-Jan-2021 16:29:29 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:29:29 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:29:29 Asia/Tokyo] debug：取得したユーザー情報：Array
-(
-    [id] => 90
-    [username] => okawa
-    [age] => 32
-    [tel] => 09022223333
-    [zip] => 3454445
-    [addr] => 33333
-    [email] => siodeitadaku@gmail.com
-    [pass] => $2y$10$gCLOWSfdWT/WlSesSTKrdOEYzTpcCamIPiCnKDwo5MiP1EOb9NKXG
-    [profPic] => uploads/2c46a45dfc976a12572576636aa02356a589ec0e.jpeg
-    [login_time] => 2021-01-21 16:09:15
-    [delete_flg] => 0
-    [create_date] => 
-    [update_date] => 2021-01-21 16:09:15
-)
-
-[21-Jan-2021 16:29:29 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:29:29 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:29:29 Asia/Tokyo] debug：取得したユーザー情報：Array
-(
-    [id] => 90
-    [username] => okawa
-    [age] => 32
-    [tel] => 09022223333
-    [zip] => 3454445
-    [addr] => 33333
-    [email] => siodeitadaku@gmail.com
-    [pass] => $2y$10$gCLOWSfdWT/WlSesSTKrdOEYzTpcCamIPiCnKDwo5MiP1EOb9NKXG
-    [profPic] => uploads/2c46a45dfc976a12572576636aa02356a589ec0e.jpeg
-    [login_time] => 2021-01-21 16:09:15
-    [delete_flg] => 0
-    [create_date] => 
-    [update_date] => 2021-01-21 16:09:15
-)
-
-[21-Jan-2021 16:29:29 Asia/Tokyo] debug：postID：
-[21-Jan-2021 16:29:29 Asia/Tokyo] debug：フォーム用DBデータ：
-[21-Jan-2021 16:29:29 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:29:29 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:29:29 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：「　login page　
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：session ID：sdlr3khsmc23j1ukb1e1srt0bv
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：session variable：Array
-(
-    [msg_success] => 
-    [login_date] => 1611214169
-    [login_limit] => 3600
-    [user_id] => 90
-)
-
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：現在日時タイムスタンプ：1611214176
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611217769
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：ログイン済みユーザーです。
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：ログイン有効期限以内です。
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：Move to Homepage
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：「　home page　
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：session ID：2mrmskgp3g4p1sopm66dm9badl
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：session variable：Array
-(
-    [msg_success] => 
-    [login_date] => 1611214176
-    [login_limit] => 3600
-    [user_id] => 90
-)
-
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：現在日時タイムスタンプ：1611214176
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1611217776
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：ログイン済みユーザーです。
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：ログイン有効期限以内です。
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：取得したユーザー情報：Array
-(
-    [id] => 90
-    [username] => okawa
-    [age] => 32
-    [tel] => 09022223333
-    [zip] => 3454445
-    [addr] => 33333
-    [email] => siodeitadaku@gmail.com
-    [pass] => $2y$10$gCLOWSfdWT/WlSesSTKrdOEYzTpcCamIPiCnKDwo5MiP1EOb9NKXG
-    [profPic] => uploads/2c46a45dfc976a12572576636aa02356a589ec0e.jpeg
-    [login_time] => 2021-01-21 16:09:15
-    [delete_flg] => 0
-    [create_date] => 
-    [update_date] => 2021-01-21 16:09:15
-)
-
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：postID：
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：フォーム用DBデータ：
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：商品情報を取得します。
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：SQL：SELECT * FROM post LIMIT 20 OFFSET 0
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：現在のページ：1
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：ユーザー情報を取得します。
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：クエリ成功。
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：取得したユーザー情報：Array
-(
-    [id] => 90
-    [username] => okawa
-    [age] => 32
-    [tel] => 09022223333
-    [zip] => 3454445
-    [addr] => 33333
-    [email] => siodeitadaku@gmail.com
-    [pass] => $2y$10$gCLOWSfdWT/WlSesSTKrdOEYzTpcCamIPiCnKDwo5MiP1EOb9NKXG
-    [profPic] => uploads/2c46a45dfc976a12572576636aa02356a589ec0e.jpeg
-    [login_time] => 2021-01-21 16:09:15
-    [delete_flg] => 0
-    [create_date] => 
-    [update_date] => 2021-01-21 16:09:15
-)
-
-[21-Jan-2021 16:29:36 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-[21-Jan-2021 16:29:36 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 900
-[21-Jan-2021 16:29:36 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 900
-[21-Jan-2021 16:29:36 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 900
+[23-Jan-2021 15:49:02 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[23-Jan-2021 15:49:02 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 946
+[23-Jan-2021 15:49:02 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 946
+[23-Jan-2021 15:49:02 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 946

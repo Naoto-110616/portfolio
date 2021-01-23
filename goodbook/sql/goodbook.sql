@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 19, 2021 at 10:15 PM
+-- Generation Time: Jan 23, 2021 at 03:49 PM
 -- Server version: 5.7.32
 -- PHP Version: 7.4.12
 
@@ -37,16 +37,10 @@ CREATE TABLE `post` (
 --
 
 INSERT INTO `post` (`id`, `comment`, `pic1`, `user_id`, `delete_flg`, `create_date`, `update_date`) VALUES
-(6, 'aaa', '', 51, 0, '2021-01-19 21:33:27', '2021-01-19 12:33:27'),
-(7, 'aaa', '', 51, 0, '2021-01-19 21:34:58', '2021-01-19 12:34:58'),
-(8, 'aaa', '', 51, 0, '2021-01-19 21:37:45', '2021-01-19 12:37:45'),
-(9, 'utada hikaru', '', 51, 0, '2021-01-19 21:49:27', '2021-01-19 12:49:27'),
-(10, 'aaa', '', 51, 0, '2021-01-19 21:50:29', '2021-01-19 12:50:29'),
-(11, 'fff', '', 51, 0, '2021-01-19 21:51:14', '2021-01-19 12:51:14'),
-(12, 'sdlfkjals;kdf', '', 51, 0, '2021-01-19 21:54:26', '2021-01-19 12:54:26'),
-(13, 'kjlkj', '', 51, 0, '2021-01-19 22:00:55', '2021-01-19 13:00:55'),
-(14, 'fasdfl;kajsdl;kfjal;ksdjf', '', 51, 0, '2021-01-19 22:02:23', '2021-01-19 13:02:23'),
-(15, 'fasdflkjasl;kdfjasfsadfasdf', 'uploads/7922725a89679a8edd8c7812a5ac88104667c603.jpeg', 51, 0, '2021-01-19 22:07:07', '2021-01-19 13:07:07');
+(70, 'kkk', 'uploads/b3c3f1a24af9f4acf04cee68d87d468a7f075091.jpeg', 90, 0, '2021-01-21 18:20:50', '2021-01-21 09:20:50'),
+(71, 'lkfjl;askdfj', 'uploads/bcbe1af090d9a7e86cafd95d7cf1b8c0fbfd873a.jpeg', 91, 0, '2021-01-22 21:23:42', '2021-01-22 12:23:42'),
+(72, 'lkfajsd;', 'uploads/a327e34a53630bb37aaa68443dc3bd12277aeb33.jpeg', 91, 0, '2021-01-22 21:41:12', '2021-01-22 12:41:12'),
+(73, 'jhyjhjk', 'uploads/244dbed7a627d8a7e3658c64ac8d201e78cd371c.jpeg', 91, 0, '2021-01-23 11:24:11', '2021-01-23 02:24:11');
 
 -- --------------------------------------------------------
 
@@ -63,20 +57,24 @@ CREATE TABLE `users` (
   `addr` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `pass` varchar(255) DEFAULT NULL,
-  `login_time` datetime NOT NULL,
+  `profpic` varchar(255) DEFAULT NULL,
+  `backgroundimg` varchar(255) DEFAULT NULL,
+  `login_time` datetime DEFAULT NULL,
   `delete_flg` tinyint(1) NOT NULL DEFAULT '0',
-  `update_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `profPic` varchar(255) DEFAULT NULL
+  `create_date` datetime DEFAULT NULL,
+  `update_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `age`, `tel`, `zip`, `addr`, `email`, `pass`, `login_time`, `delete_flg`, `update_date`, `profPic`) VALUES
-(51, 'okawa', 21, '09050193951', '5470011', '長吉出戸8-10-1-701', 'siodeitadaku@gmail.com', '$2y$10$Hv9X9pYNMUjcrT6FPpGPseeVSa6FM1wfjA8Cr0915KO/8nchPrU1q', '2020-12-27 23:02:57', 0, '2020-12-29 14:50:34', ''),
-(55, 'aa', 21, '09010101010', '1001100', 'aaaa', 'aaa@aaa', '$2y$10$JqEnKTEVRIRvpdsaFa5iu.fAlOs2HC3fjfC8/GHaCZI1V79YMjjum', '2021-01-18 20:38:55', 1, '2021-01-18 11:38:55', ''),
-(56, 'eee', 21, '09000000000', '1920192', '109', 'eee@eee', '$2y$10$dSJ9btRWWt3kO49XNPQy5ug2nljyNKNhk.2UMoi/MRfZ6kq7u8CFO', '2021-01-18 13:16:47', 0, '2021-01-18 13:16:47', NULL);
+INSERT INTO `users` (`id`, `username`, `age`, `tel`, `zip`, `addr`, `email`, `pass`, `profpic`, `backgroundimg`, `login_time`, `delete_flg`, `create_date`, `update_date`) VALUES
+(56, 'eee', 21, '09000000000', '1920192', '109', 'eee@eee', '$2y$10$dSJ9btRWWt3kO49XNPQy5ug2nljyNKNhk.2UMoi/MRfZ6kq7u8CFO', NULL, NULL, '2021-01-18 13:16:47', 0, NULL, '2021-01-18 13:16:47'),
+(89, NULL, NULL, NULL, NULL, NULL, 'www@www', '$2y$10$ogrVH5pSyaCKHbMKhcTQiu0Ku6gmSKPC0qYW6n.FJDTb0ztmYtWC2', NULL, NULL, '2021-01-21 16:06:22', 0, NULL, '2021-01-21 07:06:22'),
+(90, 'okawa', 32, '09022223333', '3454445', '33333', 'siodeitadaku@gmail.com', '$2y$10$gCLOWSfdWT/WlSesSTKrdOEYzTpcCamIPiCnKDwo5MiP1EOb9NKXG', 'uploads/dde53637a7b584bf6b7a21f53d163f5fbf5c43fc.jpeg', NULL, '2021-01-21 16:09:15', 1, NULL, '2021-01-21 07:09:15'),
+(91, 'okawa', 21, '0900000000', '1234567', '1234556', 'siodeitadaku@gmail.com', '$2y$10$i4XOEMLpgPa6cASsKikC6.0aqS/bSt8foW3dN5eyURRTVvsC8pw3S', 'uploads/5997d2c0c301d087561cee1e0b0df08775857bdd.jpeg', 'uploads/3434b05e6caed2409a2db81a6d081b9d8a6401ea.jpeg', '2021-01-21 18:24:07', 0, '2021-01-21 18:24:07', '2021-01-21 09:24:07'),
+(92, NULL, NULL, NULL, NULL, NULL, 'ppp@ppp', '$2y$10$l0FrqqLwA0TJgR/3CLGjNuj0t4S37TtbEFrVTI9OlFb84z0a1bdsS', NULL, NULL, '2021-01-22 17:39:51', 0, '2021-01-22 17:39:51', '2021-01-22 08:39:51');
 
 --
 -- Indexes for dumped tables
@@ -102,10 +100,10 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;

@@ -268,7 +268,7 @@ require("goodbook_head.php");
                         <section class="main_center_element main_center_element3">
                             <div class="icon_img_div">
                                 <a href="mypage.php">
-                                    <img class="icon_img" src="<?php echo ($dbFormData["profPic"]) ? sanitize($dbFormData["profPic"]) : "img/mypage/default.png" ?>" alt="">
+                                    <img class="icon_img" src="<?php echo ($dbFormData["profpic"]) ? sanitize($dbFormData["profpic"]) : "img/mypage/default.png" ?>" alt="">
                                 </a>
                                 <div class="user_name_div">
                                     <p><?php echo userInfoIndicate($dbFormData, "username"); ?></p>

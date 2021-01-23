@@ -10,52 +10,52 @@ debugLogStart();
 
 //ログイン認証
 auth();
-
 //================================
-// 画面処理
-//================================
-
+// POST送信時処理
 //================================
 // edit profile
 //================================
-editprofile("common");
-
-$dbFormData = getUser($_SESSION['user_id']);
-debug('取得したユーザー情報：' . print_r($dbFormData, true));
+if ($_POST["profileChenge"]) {
+    editprofile("common");
+}
 //================================
 // 画面処理
 //================================
 // 画面表示用データ取得
 //================================
-dataAcquisitionDisplay();
 
-// パラメータ改ざんチェック
-//================================
-// GETパラメータはあるが、改ざんされている（URLをいじくった）場合、正しい商品データが取れないのでマイページへ遷移させる
-if (!empty($p_id) && empty($dbFormData)) {
-    debug('GETパラメータのpostIDが違います。homepageへ遷移します。');
-    header("Location:mypage.php");
-}
+// img data 取得
+$dbFormData = getImg($u_id);
 
-// POST送信時処理
-//================================
-if (!empty($_FILES)) {
-    debug('FILE情報：' . print_r($_FILES, true));
-
-    //画像をアップロードし、パスを格納
-    $profPic = (!empty($_FILES['profPic'])) ? uploadImg($_FILES['profPic'], 'profPic') : '';
-    // 画像をPOSTしてない（登録していない）が既にDBに登録されている場合、DBのパスを入れる（POSTには反映されないので）
-    $profPic = (empty($profPic) && !empty($dbFormData['profPic'])) ? $dbFormData['profPic'] : $profPic;
-
-    // 更新の場合はDBの情報と入力情報が異なる場合にバリデーションを行う
-    if (empty($dbFormData)) {
-        if (!empty($err_msg)) {
-            debug('バリデーションOKです。');
-            uploadIcon($edit_flg, $profPic, $p_id);
-        }
+if ($_POST["uploadIconImg"]) {
+    debug("uploadIconImgが押されました");
+    if (!empty($_POST)) {
+        debug('FILE情報：' . print_r($_FILES, true));
+        //画像をアップロードし、パスを格納
+        $profpic = (!empty($_FILES['profpic'])) ? uploadImg($_FILES['profpic'], 'profpic') : '';
+        // 画像をPOSTしてない（登録していない）が既にDBに登録されている場合、DBのパスを入れる（POSTには反映されないので）
+        $profpic = (empty($profpic) && !empty($dbFormData['profpic'])) ? $dbFormData['profpic'] : $profpic;
     }
 }
+if ($_POST["uploadBackgroundImg"]) {
+    debug("uploadBackgroundImgが押されました");
+    if (!empty($_POST)) {
+        debug('FILE情報：' . print_r($_FILES, true));
+        //画像をアップロードし、パスを格納
+        $backgroundimg = (!empty($_FILES['backgroundimg'])) ? uploadImg($_FILES['backgroundimg'], 'backgroundimg') : '';
+        // 画像をPOSTしてない（登録していない）が既にDBに登録されている場合、DBのパスを入れる（POSTには反映されないので）
+        $backgroundimg = (empty($backgroundimg) && !empty($dbFormData['backgroundimg'])) ? $dbFormData['backgroundimg'] : $backgroundimg;
+    }
+}
+if (empty($err_msg)) {
+    debug('バリデーションOKです。');
+    saveImgToDb($profpic, $backgroundimg);
+}
+
+
 $dbFormData = getUser($_SESSION['user_id']);
+debug('取得したユーザー情報：' . print_r($dbFormData, true));
+
 
 debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
 
@@ -81,10 +81,10 @@ require('goodbook_head.php');
             <div class="main_top_content_overall">
                 <div class="main_top_content">
                     <div class="main_top_content main_top_cover_photo_div">
-                        <div class="main_top_cover_photo" style="background-image: url(<?php echo sanitize($dbFormData["profPic"]); ?>);">
+                        <div class="main_top_cover_photo" style="background-image: url(<?php echo sanitize($dbFormData["backgroundimg"]); ?>);">
                             <div class="cover_photo_change_button">
                                 <label for="">
-                                    <input type="button" name="cover_photo_change" value="change cover photo">
+                                    <input type="button" name="cover_photo_change" value="change cover photo" class="coverPhotoChange">
                                 </label>
                             </div>
                         </div>
@@ -93,7 +93,7 @@ require('goodbook_head.php');
                 <div class="main_top_content main_top_content_user_name_div">
                     <div class="main_top_content main_top_content_user_name">
                         <div class="myIcon_img_div">
-                            <img class="myIcon_img" src="<?php echo sanitize($dbFormData['profPic']); ?>" alt="">
+                            <img class="myIcon_img" src="<?php echo ($dbFormData["profpic"]) ? sanitize($dbFormData["profpic"]) : "img/mypage/default.png" ?>" alt="">
                         </div>
                         <div class="usernamediv">
                             <h1><?php userInfoIndicate($dbFormData, "username") ?></h1>
@@ -298,7 +298,7 @@ require('goodbook_head.php');
                                     ?>
                                 </div>
                                 <label>
-                                    <input type="submit" value="change">
+                                    <input type="submit" value="change" name="profileChenge">
                                 </label>
                             </form>
                         </div>
@@ -323,21 +323,21 @@ require('goodbook_head.php');
                                 <div class="mypage_border"></div>
                                 <div style="overflow: hidden;">
                                     <div class="imgDrop-container">
-                                        <label class="area-drop <?php getErrMsglabel("profPic") ?>">
+                                        <label class="area-drop <?php getErrMsglabel("profpic") ?>">
                                             <input type="hidden" name="MAX_FILE_SIZE" value="3145728">
-                                            <input type="file" name="profPic" class="input-file" style="display:none;">
-                                            <img src="<?php echo getFormData('profPic'); ?>" alt="" class="prev-img" style="<?php if (empty(getFormData('profPic'))) echo 'display:none;' ?> margin:10px 0px 0px ">
+                                            <input type="file" name="profpic" class="input-file" style="display:none;">
+                                            <img src="<?php echo getFormData('profpic'); ?>" alt="" class="prev-img" style="<?php if (empty(getFormData('profpic'))) echo 'display:none;' ?> margin:10px 0px 0px ">
                                             <div class="imgUpIcon">
                                                 <i class="far fa-images fa-lg"></i>
                                             </div>
                                         </label>
                                         <div class="area-msg">
-                                            <?php;getErrMsg("profPic");?>
+                                            <?php;getErrMsg("profpic");?>
                                         </div>
                                     </div>
                                 </div>
                                 <label>
-                                    <input type="submit" value="<?php echo (!$edit_flg) ? 'post' : 'edit'; ?>">
+                                    <input type="submit" value="<?php echo (!$edit_flg) ? 'post' : 'edit'; ?>" name="uploadIconImg">
                                 </label>
                             </form>
                         </div>
@@ -345,6 +345,46 @@ require('goodbook_head.php');
                 </div>
             </div>
         </article>
+    </div>
+    <article class="modalwindow">
+        <div class="modalwindow_screen_overall_3">
+            <div class="modalwindow_form_div">
+                <div class="modalwindow_form">
+                    <div class="modalwindow_form_title">
+                        <form action="" method="post" class="edit_form" enctype="multipart/form-data">
+                            <div class="modalwindow_form_title">
+                                <div class="edit_title">
+                                    <h1>edit background img</h1>
+                                </div>
+                                <div class="x-circle">
+                                    <i class="far fa-times-circle fa-2x"></i>
+                                </div>
+                            </div>
+                            <div class="mypage_border"></div>
+                            <div style="overflow: hidden;">
+                                <div class="imgDrop-container">
+                                    <label class="area-drop <?php getErrMsglabel("backgroundimg") ?>">
+                                        <input type="hidden" name="MAX_FILE_SIZE" value="3145728">
+                                        <input type="file" name="backgroundimg" class="input-file" style="display:none;">
+                                        <img src="<?php echo getFormData('backgroundimg'); ?>" alt="" class="prev-img" style="<?php if (empty(getFormData('backgroundimg'))) echo 'display:none;' ?> margin:10px 0px 0px ">
+                                        <div class="imgUpIcon">
+                                            <i class="far fa-images fa-lg"></i>
+                                        </div>
+                                    </label>
+                                    <div class="area-msg">
+                                        <?php;getErrMsg("backgroundimg");?>
+                                    </div>
+                                </div>
+                            </div>
+                            <label>
+                                <input type="submit" value="<?php echo (!$edit_flg) ? 'post' : 'edit'; ?>" name="uploadBackgroundImg">
+                            </label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
     </div>
     <?php
     require("jsSrc.php");
