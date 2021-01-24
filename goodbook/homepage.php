@@ -40,31 +40,34 @@ if (!empty($p_id) && empty($dbFormData)) {
 //================================
 // POST送信時処理
 //================================
-if (!empty($_POST)) {
-    debug('POST送信があります。');
-    debug('POST情報：' . print_r($_POST, true));
-    debug('FILE情報：' . print_r($_FILES, true));
+if ($_POST["postButton"]) {
+    debug("postButtonが押されました");
+    if (!empty($_POST)) {
+        debug('POST送信があります。');
+        debug('POST情報：' . print_r($_POST, true));
+        debug('FILE情報：' . print_r($_FILES, true));
 
-    //変数にユーザー情報を代入
-    $comment = $_POST['comment'];
-    //画像をアップロードし、パスを格納
-    $pic1 = (!empty($_FILES['pic1'])) ? uploadImg($_FILES['pic1'], 'pic1') : '';
-    // 画像をPOSTしてない（登録していない）が既にDBに登録されている場合、DBのパスを入れる（POSTには反映されないので）
-    $pic1 = (empty($pic1) && !empty($dbFormData['pic1'])) ? $dbFormData['pic1'] : $pic1;
+        //変数にユーザー情報を代入
+        $comment = $_POST['comment'];
+        //画像をアップロードし、パスを格納
+        $pic1 = (!empty($_FILES['pic1'])) ? uploadImg($_FILES['pic1'], 'pic1') : '';
+        // 画像をPOSTしてない（登録していない）が既にDBに登録されている場合、DBのパスを入れる（POSTには反映されないので）
+        $pic1 = (empty($pic1) && !empty($dbFormData['pic1'])) ? $dbFormData['pic1'] : $pic1;
 
-    validRequired($comment, 'comment');
-    // 更新の場合はDBの情報と入力情報が異なる場合にバリデーションを行う
-    if (empty($dbFormData)) {
-        validMaxLen($comment, 'comment', 255);
-    } else {
-        if ($dbFormData['comment'] !== $comment) {
-            //最大文字数チェック
+        validRequired($comment, 'comment');
+        // 更新の場合はDBの情報と入力情報が異なる場合にバリデーションを行う
+        if (empty($dbFormData)) {
             validMaxLen($comment, 'comment', 255);
+        } else {
+            if ($dbFormData['comment'] !== $comment) {
+                //最大文字数チェック
+                validMaxLen($comment, 'comment', 255);
+            }
         }
-    }
-    if (empty($err_msg)) {
-        debug('バリデーションOKです。');
-        createPost($edit_flg, $comment, $pic1, $p_id);
+        if (empty($err_msg)) {
+            debug('バリデーションOKです。');
+            createPost($edit_flg, $comment, $pic1, $p_id);
+        }
     }
 }
 
@@ -79,7 +82,7 @@ if (!is_int((int)$currentPageNum)) {
     header("Location:homepage.php");
 }
 // 表示件数
-// $listSpan = 20;
+$listSpan = 20;
 // 現在の表示レコード先頭を算出
 $currentMinNum = (($currentPageNum - 1) * $listSpan); //1ページ目なら(1-1)*20 = 0 、 ２ページ目なら(2-1)*20 = 20
 // DBからpostデータを取得
@@ -638,7 +641,7 @@ require("goodbook_head.php");
                                 </div>
                             </div>
                             <label>
-                                <input type="submit" value="<?php echo (!$edit_flg) ? 'post' : 'edit'; ?>">
+                                <input type="submit" value="<?php echo (!$edit_flg) ? 'post' : 'edit'; ?>" name="postButton">
                             </label>
                         </form>
                     </div>

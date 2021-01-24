@@ -18,14 +18,13 @@ auth();
 if ($_POST["profileChenge"]) {
     editprofile("common");
 }
+
 //================================
 // 画面処理
 //================================
 // 画面表示用データ取得
 //================================
 
-// img data 取得
-$dbFormData = getImg($u_id);
 
 if ($_POST["uploadIconImg"]) {
     debug("uploadIconImgが押されました");
@@ -53,6 +52,8 @@ if ($_POST["uploadIconImg"] || $_POST["uploadBackgroundImg"]) {
 }
 
 
+// img data 取得
+$dbFormData = getImg($u_id);
 $dbFormData = getUser($_SESSION['user_id']);
 debug('取得したユーザー情報：' . print_r($dbFormData, true));
 
