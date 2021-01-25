@@ -13,19 +13,19 @@ auth();
 $dbFormData = getUser($_SESSION['user_id']);
 debug('取得したユーザー情報：' . print_r($dbFormData, true));
 
-// 画面表示用データ取得
-//================================
-// GETデータを格納
-$p_id = (!empty($_GET['p_id'])) ? $_GET['p_id'] : '';
-// DBから商品データを取得
-$dbFormData = (!empty($p_id)) ? getPost($_SESSION['user_id'], $p_id) : '';
-// 新規登録画面か編集画面か判別用フラグ
-$edit_flg = (empty($dbFormData)) ? false : true;
-// DBからpostDataを取得
-$dbCategoryData = getCategory();
-debug('postID：' . $p_id);
-debug('フォーム用DBデータ：' . print_r($dbFormData, true));
-debug('post data：' . print_r($dbCategoryData, true));
+// // 画面表示用データ取得
+// //================================
+// // GETデータを格納
+// $p_id = (!empty($_GET['p_id'])) ? $_GET['p_id'] : '';
+// // DBから商品データを取得
+// $dbFormData = (!empty($p_id)) ? getPost($_SESSION['user_id'], $p_id) : '';
+// // 新規登録画面か編集画面か判別用フラグ
+// $edit_flg = (empty($dbFormData)) ? false : true;
+// // DBからpostDataを取得
+// $dbCategoryData = getCategory();
+// debug('postID：' . $p_id);
+// debug('フォーム用DBデータ：' . print_r($dbFormData, true));
+// debug('post data：' . print_r($dbCategoryData, true));
 
 // パラメータ改ざんチェック
 //================================

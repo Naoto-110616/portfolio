@@ -17,7 +17,9 @@
         </a>
         <div class="header_center_icon"><i class="fas fa-user-friends fa-2x"></i></div>
         <div class="header_center_icon"><i class="fas fa-tv fa-2x"></i></div>
-        <div class="header_center_icon"><i class="fas fa-users fa-2x"></i></div>
+        <a class="to_ListOfFriends" href="ListOfFriends.php">
+            <div class="header_center_icon"><i class="fas fa-users fa-2x"></i></div>
+        </a>
         <div class="header_center_icon"><i class="fas fa-dice-d6 fa-2x"></i></div>
     </div>
     <div class="head_right">
@@ -32,10 +34,14 @@
             <div class="accountMenu">
                 <div class="myprofile">
                     <a class="account_menu_a to_mypage" href="mypage.php">
-                        <div class="myicon">
-                            <i class="fas fa-user-circle fa-4x"></i>
-                        </div>
-                        <div class="myInfo">
+                        <?php if (!empty($dbFormData["profile"])) { ?>
+                            <div class="myicon">
+                                <i class="fas fa-user-circle fa-4x"></i>
+                            </div>
+                        <?php } else { ?>
+                            <img class="icon_img" src="<?php echo sanitize($dbFormData["profpic"]) ?>" style="margin-top: 6px; margin-left: 8px;">
+                        <?php } ?>
+                        <div class=" myInfo">
                             <p><?php userInfoIndicate($dbFormData, "username"); ?></p>
                             <p> <?php notLoggedMsg("View my profile", "Please login"); ?></p>
                         </div>
