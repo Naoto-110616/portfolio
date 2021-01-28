@@ -19,13 +19,12 @@ if ($_POST["profileChenge"]) {
     editprofile("common");
 }
 
+
 //================================
 // 画面処理
 //================================
 // 画面表示用データ取得
 //================================
-
-
 if ($_POST["uploadIconImg"]) {
     debug("uploadIconImgが押されました");
     if (!empty($_POST)) {
@@ -51,10 +50,13 @@ if ($_POST["uploadIconImg"] || $_POST["uploadBackgroundImg"]) {
     saveImgToDb($profpic, $backgroundimg);
 }
 
-
+// Area data 取得
+$dbAreaData = getArea();
+$dbUserArea = getUserArea($_SESSION["area_id"]);
 // img data 取得
 $dbFormData = getImg($u_id);
 $dbFormData = getUser($_SESSION['user_id']);
+
 debug('取得したユーザー情報：' . print_r($dbFormData, true));
 
 
@@ -94,10 +96,16 @@ require('goodbook_head.php');
                 <div class="main_top_content main_top_content_user_name_div">
                     <div class="main_top_content main_top_content_user_name">
                         <div class="myIcon_img_div">
-                            <img class="myIcon_img" src="<?php echo ($dbFormData["profpic"]) ? sanitize($dbFormData["profpic"]) : "img/mypage/default.png" ?>" alt="">
+                            <?php if (empty($dbFormData["profpic"])) { ?>
+                                <div class="myIcon_img">
+                                    <i class="fas fa-user-circle fa-4x"></i>
+                                </div>
+                            <?php } else { ?>
+                                <img class="myIcon_img" src="<?php echo sanitize($dbFormData["profpic"]) ?>" style="margin-top: 6px; margin-left: 8px;">
+                            <?php } ?>
                         </div>
                         <div class="usernamediv">
-                            <h1><?php userInfoIndicate($dbFormData, "username") ?></h1>
+                            <h1><?php userInfoIndicate($dbFormData, "username"); ?></h1>
                         </div>
                     </div>
                 </div>
@@ -162,28 +170,32 @@ require('goodbook_head.php');
                                 </div>
                                 <div class="mypage_border"></div>
                                 <div class="profile_list">
-                                    <p>name</p>
+                                    <p class="status">name</p>
                                     <p><?php userInfoIndicate($dbFormData, "username"); ?></p>
                                 </div>
                                 <div class="profile_list">
-                                    <p>tel</p>
+                                    <p class="status">tel</p>
                                     <p><?php userInfoIndicate($dbFormData, "tel"); ?></p>
                                 </div>
                                 <div class="profile_list">
-                                    <p>zip code</p>
+                                    <p class="status">zip code</p>
                                     <p><?php userInfoIndicate($dbFormData, "zip"); ?></p>
                                 </div>
                                 <div class="profile_list">
-                                    <p>addr</p>
+                                    <p class="status">addr</p>
                                     <p><?php userInfoIndicate($dbFormData, "addr"); ?></p>
                                 </div>
                                 <div class="profile_list">
-                                    <p>age</p>
+                                    <p class="status">age</p>
                                     <p><?php userInfoIndicate($dbFormData, "age"); ?></p>
                                 </div>
-                                <div class="profile_list" id="email">
-                                    <p>email</p>
+                                <div class="profile_list">
+                                    <p class="status">email</p>
                                     <p><?php userInfoIndicate($dbFormData, "email"); ?></p>
+                                </div>
+                                <div class="profile_list">
+                                    <p class="status">area</p>
+                                    <p><?php echo $dbUserArea["name"]; ?></p>
                                 </div>
                             </div>
                         </div>
@@ -297,6 +309,27 @@ require('goodbook_head.php');
                                     <div class="area-msg">
                                         <?php
                                         echo getErrMsg("email");
+                                        ?>
+                                    </div>
+                                    <label class="<?php if (!empty($err_msg['area_id'])) echo 'err'; ?>">
+                                        Area<span class="label-require"></span>
+                                        <select name="area_id" id="" class="areaBox">
+                                            <option value="0" <?php if (getFormData('area_id') == 0) echo 'selected'; ?>>Please select</option>
+                                            <?php foreach ($dbAreaData as $key => $val) { ?>
+                                                <option value="<?php echo $val['id'] ?>" <?php if (getFormData('area_id') == $val['id']) echo 'selected'; ?>>
+                                                    <?php echo $val['name']; ?>
+                                                </option>
+                                            <?php } ?>
+                                        </select>
+                                    </label>
+                                    <div class="area-msg">
+                                        <?php
+                                        if (!empty($err_msg['area_id'])) echo $err_msg['area_id'];
+                                        ?>
+                                    </div>
+                                    <div class="area-msg">
+                                        <?php
+                                        echo getErrMsg("Area");
                                         ?>
                                     </div>
                                     <label>

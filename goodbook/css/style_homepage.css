@@ -481,7 +481,6 @@ a {
 	position: absolute;
 	left: 0;
 	right: 0;
-	top: -130px;
 	bottom: 0px;
 	margin: auto;
 }
@@ -556,6 +555,7 @@ main lower part
 }
 .myprofile_inside {
 	padding: 0 20px;
+	padding-bottom: 10px;
 }
 .myprofile_title {
 	display: inline-block;
@@ -566,15 +566,13 @@ main lower part
 }
 .profile_list {
 	display: flex;
+	margin-top: 10px;
 }
 .profile_list p:first-child {
 	margin-right: 15px;
 }
-.profile_list {
-	margin-top: 10px;
-}
-#email {
-	padding-bottom: 10px;
+.status {
+	width: 70px;
 }
 .share_post {
 	width: 525px;
@@ -720,6 +718,16 @@ input[type="submit"] {
 }
 input[type="submit"]:hover {
 	background-color: #565656;
+}
+.areaBox {
+	width: 100%;
+	padding: 10px;
+	background: #4c4c4c;
+	color: #dddddd;
+	border-radius: 10px;
+	border: none;
+	outline: none;
+	font-size: 17px;
 }
 .posttextarea {
 	width: 100%;

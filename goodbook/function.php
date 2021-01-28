@@ -517,6 +517,7 @@ function editprofile($key)
     global $addr;
     global $age;
     global $email;
+    global $area;
     global $err_msg;
 
     // post送信されていた場合
@@ -533,6 +534,7 @@ function editprofile($key)
         $addr = $_POST['addr'];
         $age = $_POST['age'];
         $email = $_POST['email'];
+        $area = $_POST["area_id"];
 
         validRequired($username, "username");
         validRequired($tel, "tel");
@@ -540,6 +542,7 @@ function editprofile($key)
         validRequired($addr, "addr");
         validRequired($age, "age");
         validRequired($email, 'email');
+        validRequired($area, 'area');
 
         if (empty($err_msg)) {
             debug('input check OK.');
@@ -576,6 +579,9 @@ function editprofile($key)
                 //emailの形式チェック
                 validEmail($email, 'email');
             }
+            if ($dbFormData["area_id"] !== $area) {
+                validSelect($area, 'area_id');
+            }
             if (empty($err_msg)) {
                 debug('バリデーションOKです。');
                 //例外処理
@@ -583,8 +589,8 @@ function editprofile($key)
                     // DBへ接続
                     $dbh = dbConnect();
                     // SQL文作成
-                    $sql = 'UPDATE users  SET username = :u_name, tel = :tel, zip = :zip, addr = :addr, age = :age, email = :email WHERE id = :u_id';
-                    $data = array(':u_name' => $username, ':tel' => $tel, ':zip' => $zip, ':addr' => $addr, ':age' => $age, ':email' => $email, ':u_id' => $dbFormData['id']);
+                    $sql = 'UPDATE users  SET username = :u_name, tel = :tel, zip = :zip, addr = :addr, age = :age, email = :email, area_id = :area WHERE id = :u_id';
+                    $data = array(':u_name' => $username, ':tel' => $tel, ':zip' => $zip, ':addr' => $addr, ':age' => $age, ':email' => $email, ":area" => $area, ':u_id' => $dbFormData['id']);
                     // クエリ実行
                     $stmt = queryPost($dbh, $sql, $data, "common");
 
@@ -878,6 +884,9 @@ function passRemindRecieve($pass)
                             $_SESSION['msg_success'] = SUC03;
                             debug('セッション変数の中身：' . print_r($_SESSION, true));
 
+                            debug("===========================");
+                            debug("end pass remind recieve function");
+                            debug("===========================");
                             header("Location:login.php"); //ログインページへ
                         }
                         // passRemindRecieve($pass);
@@ -889,9 +898,6 @@ function passRemindRecieve($pass)
             }
         }
     }
-    debug("===========================");
-    debug("end pass remind recieve function");
-    debug("===========================");
 }
 
 // user情報を取得
@@ -1123,15 +1129,15 @@ function getPostList($currentMinNum = 1, $span = 20)
     debug("end get post list function");
     debug("===========================");
 }
-function getCategory()
+function getArea()
 {
-    debug('カテゴリー情報を取得します。');
+    debug('area情報を取得します。');
     //例外処理
     try {
         // DBへ接続
         $dbh = dbConnect();
         // SQL文作成
-        $sql = 'SELECT * FROM post';
+        $sql = 'SELECT * FROM area';
         $data = array();
         // クエリ実行
         $stmt = queryPost($dbh, $sql, $data, "common");
@@ -1144,6 +1150,32 @@ function getCategory()
         }
     } catch (Exception $e) {
         error_log('エラー発生:' . $e->getMessage());
+    }
+}
+function getUserArea($area_id)
+{
+    debug("===========================");
+    debug("start getUserArea function");
+    debug("===========================");
+
+    $dbFormData = getUser($_SESSION['user_id']);
+    $_SESSION["area_id"] = $dbFormData["area_id"];
+
+    try {
+        $dbh = dbConnect();
+        $sql = "SELECT name FROM area WHERE id = :area_id";
+        $data = array(":area_id" => $area_id);
+        $stmt = queryPost($dbh, $sql, $data, "common");
+        if ($stmt) {
+            debug("===========================");
+            debug("succes getUserArea function");
+            debug("===========================");
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        } else {
+            return false;
+        }
+    } catch (Exception $e) {
+        error_log("error:" . $e->getMessage());
     }
 }
 //================================

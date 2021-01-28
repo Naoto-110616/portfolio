@@ -271,7 +271,13 @@ require("goodbook_head.php");
                         <section class="main_center_element main_center_element3">
                             <div class="icon_img_div">
                                 <a href="mypage.php">
-                                    <img class="icon_img" src="<?php echo ($dbFormData["profpic"]) ? sanitize($dbFormData["profpic"]) : "img/mypage/default.png" ?>" alt="">
+                                    <?php if (empty($dbFormData["profpic"])) { ?>
+                                        <div class="icon_img">
+                                            <i class="fas fa-user-circle fa-3x"></i>
+                                        </div>
+                                    <?php } else { ?>
+                                        <img class="icon_img" src="<?php echo sanitize($dbFormData["profpic"]) ?>">
+                                    <?php } ?>
                                 </a>
                                 <div class="user_name_div">
                                     <p><?php echo userInfoIndicate($dbFormData, "username"); ?></p>
