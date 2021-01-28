@@ -1077,13 +1077,70 @@ function getPostList($currentMinNum = 1, $span = 20)
     debug("===========================");
     debug("start get post list function");
     debug("===========================");
-    debug('商品情報を取得します。');
+    debug('post情報を取得します。');
     //例外処理
     try {
         // DBへ接続
         $dbh = dbConnect();
         // 件数用のSQL文作成
         $sql = 'SELECT id FROM post';
+        $data = array();
+        // クエリ実行
+        $stmt = queryPost($dbh, $sql, $data, "common");
+        $rst['total'] = $stmt->rowCount(); //総レコード数
+        $rst['total_page'] = ceil($rst['total'] / $span); //総ページ数
+        if (!$stmt) {
+            return false;
+        }
+
+        // ページング用のSQL文作成
+        $sql = 'SELECT * FROM post';
+        //    if(!empty($category)) $sql .= ' WHERE category = '.$category;
+        //    if(!empty($sort)){
+        //      switch($sort){
+        //        case 1:
+        //          $sql .= ' ORDER BY price ASC';
+        //          break;
+        //        case 2:
+        //          $sql .= ' ORDER BY price DESC';
+        //          break;
+        //        case 3:
+        //          $sql .= ' ORDER BY create_date DESC';
+        //          break;
+        //      }
+        //    }
+        $sql .= ' LIMIT ' . $span . ' OFFSET ' . $currentMinNum;
+        $data = array();
+        debug('SQL：' . $sql);
+        // クエリ実行
+        $stmt = queryPost($dbh, $sql, $data, "common");
+
+        if ($stmt) {
+            // クエリ結果のデータを全レコードを格納
+            $rst['data'] = $stmt->fetchAll();
+            return $rst;
+        } else {
+            return false;
+        }
+    } catch (Exception $e) {
+        error_log('エラー発生:' . $e->getMessage());
+    }
+    debug("===========================");
+    debug("end get post list function");
+    debug("===========================");
+}
+function getUserList($currentMinNum = 1, $span = 20)
+{
+    debug("===========================");
+    debug("start get post list function");
+    debug("===========================");
+    debug('post情報を取得します。');
+    //例外処理
+    try {
+        // DBへ接続
+        $dbh = dbConnect();
+        // 件数用のSQL文作成
+        $sql = 'SELECT id FROM user';
         $data = array();
         // クエリ実行
         $stmt = queryPost($dbh, $sql, $data, "common");
