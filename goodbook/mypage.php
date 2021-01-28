@@ -426,7 +426,7 @@ require('goodbook_head.php');
         </div>
     </article>
     <?php
-    require("jsSrc.php");
+    require("jssrc.php");
     ?>
 </body>
 

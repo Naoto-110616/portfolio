@@ -46,8 +46,7 @@ require("goodbook_head.php");
             </div>
         </section>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="js/homepage.js"></script>
+    <?php require("jssrc.php"); ?>
 </body>
 
 </html>

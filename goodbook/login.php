@@ -73,7 +73,7 @@ require("head.php");
     </div>
     <?php
     require("login&signup_footer.php");
-    require("jsSrc.php");
+    require("jssrc.php");
     ?>
 </body>
 

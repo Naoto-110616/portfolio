@@ -77,7 +77,7 @@ require("goodbook_head.php");
         </section>
     </div>
     <?php
-    require("jsSrc.php");
+    require("jssrc.php");
     ?>
 </body>
 
