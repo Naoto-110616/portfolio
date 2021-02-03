@@ -949,7 +949,6 @@ section h1.title {
 .panel-list > .panel {
 	float: left;
 	box-sizing: border-box;
-	margin-bottom: 15px;
 	padding-right: 15px;
 	min-height: 185px;
 	width: 25%;
@@ -964,7 +963,7 @@ a.panel:hover {
 
 .panel-list > .panel img {
 	width: 100%;
-	max-height: 129px;
+	max-height: 115px;
 }
 
 .panel-list > .panel .panel-title {

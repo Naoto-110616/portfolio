@@ -17,7 +17,7 @@
         </a>
         <div class="header_center_icon"><i class="fas fa-user-friends fa-2x"></i></div>
         <div class="header_center_icon"><i class="fas fa-tv fa-2x"></i></div>
-        <a class="to_ListOfFriends" href="ListOfFriends.php">
+        <a class="to_friendslist" href="friendslist.php">
             <div class="header_center_icon"><i class="fas fa-users fa-2x"></i></div>
         </a>
         <div class="header_center_icon"><i class="fas fa-dice-d6 fa-2x"></i></div>
@@ -26,7 +26,6 @@
         <div class="header_right_icon"><a class="account_menu_a to_mypage" href="mypage.php">
                 <?php if (empty($dbFormData["profpic"])) { ?>
                     <div class="myicon">
-                        <!-- <i class="fas fa-user-circle fa-4x"></i> -->
                         <i class="fas fa-user-circle fa-2x"></i>
                     </div>
                 <?php } else { ?>

@@ -1132,15 +1132,15 @@ function getPostList($currentMinNum = 1, $span = 20)
 function getUserList($currentMinNum = 1, $span = 20)
 {
     debug("===========================");
-    debug("start get post list function");
+    debug("start getuserlist function");
     debug("===========================");
-    debug('post情報を取得します。');
+    debug('user情報を取得します。');
     //例外処理
     try {
         // DBへ接続
         $dbh = dbConnect();
         // 件数用のSQL文作成
-        $sql = 'SELECT id FROM user';
+        $sql = 'SELECT id FROM users';
         $data = array();
         // クエリ実行
         $stmt = queryPost($dbh, $sql, $data, "common");
@@ -1151,7 +1151,8 @@ function getUserList($currentMinNum = 1, $span = 20)
         }
 
         // ページング用のSQL文作成
-        $sql = 'SELECT * FROM post';
+        // $sql = 'SELECT * FROM users';
+        $sql = 'SELECT * FROM users JOIN area ON users.area_id = area.id WHERE 1=1';
         //    if(!empty($category)) $sql .= ' WHERE category = '.$category;
         //    if(!empty($sort)){
         //      switch($sort){
@@ -1183,7 +1184,7 @@ function getUserList($currentMinNum = 1, $span = 20)
         error_log('エラー発生:' . $e->getMessage());
     }
     debug("===========================");
-    debug("end get post list function");
+    debug("end getuserlist function");
     debug("===========================");
 }
 function getArea()
