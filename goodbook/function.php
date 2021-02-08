@@ -1040,39 +1040,39 @@ function createPost($edit_flg, $comment, $pic1, $p_id)
     debug("end create post function");
     debug("===========================");
 }
-function getPost($u_id, $p_id)
-{
-    debug("===========================");
-    debug("start get post function");
-    debug("===========================");
+// function getPost($u_id, $p_id)
+// {
+//     debug("===========================");
+//     debug("start get post function");
+//     debug("===========================");
 
-    debug('post情報を取得します。');
-    debug('ユーザーID：' . $u_id);
-    debug('postID：' . $p_id);
-    //例外処理
-    try {
-        // DBへ接続
-        $dbh = dbConnect();
-        // SQL文作成
-        $sql = 'SELECT * FROM post WHERE user_id = :u_id AND id = :p_id AND delete_flg = 0';
-        $data = array(':u_id' => $u_id, ':p_id' => $p_id);
-        // クエリ実行
-        $stmt = queryPost($dbh, $sql, $data, "common");
+//     debug('post情報を取得します。');
+//     debug('ユーザーID：' . $u_id);
+//     debug('postID：' . $p_id);
+//     //例外処理
+//     try {
+//         // DBへ接続
+//         $dbh = dbConnect();
+//         // SQL文作成
+//         $sql = 'SELECT * FROM post WHERE user_id = :u_id AND id = :p_id AND delete_flg = 0';
+//         $data = array(':u_id' => $u_id, ':p_id' => $p_id);
+//         // クエリ実行
+//         $stmt = queryPost($dbh, $sql, $data, "common");
 
-        if ($stmt) {
-            // クエリ結果のデータを１レコード返却
-            return $stmt->fetch(PDO::FETCH_ASSOC);
-        } else {
-            return false;
-        }
-    } catch (Exception $e) {
-        error_log('エラー発生:' . $e->getMessage());
-    }
-    debug("===========================");
-    debug("end get post function");
-    debug("===========================");
-}
-function getPostList($currentMinNum = 1, $span = 20)
+//         if ($stmt) {
+//             // クエリ結果のデータを１レコード返却
+//             return $stmt->fetch(PDO::FETCH_ASSOC);
+//         } else {
+//             return false;
+//         }
+//     } catch (Exception $e) {
+//         error_log('エラー発生:' . $e->getMessage());
+//     }
+//     debug("===========================");
+//     debug("end get post function");
+//     debug("===========================");
+// }
+function getPostList()
 {
     debug("===========================");
     debug("start get post list function");
@@ -1082,35 +1082,8 @@ function getPostList($currentMinNum = 1, $span = 20)
     try {
         // DBへ接続
         $dbh = dbConnect();
-        // 件数用のSQL文作成
-        $sql = 'SELECT id FROM post';
-        $data = array();
-        // クエリ実行
-        $stmt = queryPost($dbh, $sql, $data, "common");
-        $rst['total'] = $stmt->rowCount(); //総レコード数
-        $rst['total_page'] = ceil($rst['total'] / $span); //総ページ数
-        if (!$stmt) {
-            return false;
-        }
-
-        // ページング用のSQL文作成
-        $sql = 'SELECT * FROM post';
-        //    if(!empty($category)) $sql .= ' WHERE category = '.$category;
-        //    if(!empty($sort)){
-        //      switch($sort){
-        //        case 1:
-        //          $sql .= ' ORDER BY price ASC';
-        //          break;
-        //        case 2:
-        //          $sql .= ' ORDER BY price DESC';
-        //          break;
-        //        case 3:
-        //          $sql .= ' ORDER BY create_date DESC';
-        //          break;
-        //      }
-        //    }
-        $sql .= ' LIMIT ' . $span . ' OFFSET ' . $currentMinNum;
-        $data = array();
+        $sql = 'SELECT comment,pic1 FROM post JOIN users ON post.user_id = users.id WHERE 1=1 AND user_id = :u_id';
+        $data = array(":u_id" => $_SESSION["user_id"]);
         debug('SQL：' . $sql);
         // クエリ実行
         $stmt = queryPost($dbh, $sql, $data, "common");
@@ -1131,6 +1104,7 @@ function getPostList($currentMinNum = 1, $span = 20)
 }
 function getUserList($currentMinNum = 1, $span = 20)
 {
+
     debug("===========================");
     debug("start getuserlist function");
     debug("===========================");
@@ -1371,31 +1345,31 @@ function uploadImg($file, $key)
     debug("end upload img function");
     debug("===========================");
 }
-function dataAcquisitionDisplay()
-{
-    debug("===========================");
-    debug("start data acpuisition display  function");
-    debug("===========================");
+// function dataAcquisitionDisplay()
+// {
+//     debug("===========================");
+//     debug("start data acpuisition display  function");
+//     debug("===========================");
 
-    $dbFormData = getUser($_SESSION['user_id']);
+//     $dbFormData = getUser($_SESSION['user_id']);
 
-    global $p_id;
-    global $dbFormData;
-    global $edit_flg;
-    // 画面表示用データ取得
-    //================================
-    // GETデータを格納
-    $p_id = (!empty($_GET['p_id'])) ? $_GET['p_id'] : '';
-    // DBからpostデータを取得
-    $dbFormData = (!empty($p_id)) ? getPost($_SESSION['user_id'], $p_id) : '';
-    // 新規登録画面か編集画面か判別用フラグ
-    $edit_flg = (empty($dbFormData)) ? false : true;
-    debug('postID：' . $p_id);
+//     global $p_id;
+//     global $dbFormData;
+//     global $edit_flg;
+//     // 画面表示用データ取得
+//     //================================
+//     // GETデータを格納
+//     $p_id = (!empty($_GET['p_id'])) ? $_GET['p_id'] : '';
+//     // DBからpostデータを取得
+//     $dbFormData = (!empty($p_id)) ? getPost($_SESSION['user_id'], $p_id) : '';
+//     // 新規登録画面か編集画面か判別用フラグ
+//     $edit_flg = (empty($dbFormData)) ? false : true;
+//     debug('postID：' . $p_id);
 
-    debug("===========================");
-    debug("end data acpuisition display  function");
-    debug("===========================");
-}
+//     debug("===========================");
+//     debug("end data acpuisition display  function");
+//     debug("===========================");
+// }
 //================================
 // img
 //================================
@@ -1433,37 +1407,6 @@ function saveImgToDb($profpic, $backgroundimg)
     }
     debug("===========================");
     debug("end save img to db function");
-    debug("===========================");
-}
-function getImg($u_id)
-{
-    debug("===========================");
-    debug("start get img function");
-    debug("===========================");
-
-    debug('Img情報を取得します。');
-    debug('ユーザーID：' . $u_id);
-    //例外処理
-    try {
-        // DBへ接続
-        $dbh = dbConnect();
-        // SQL文作成
-        $sql = 'SELECT profpic, backgroundimg FROM users WHERE id = :u_id AND delete_flg = 0';
-        $data = array(':u_id' => $u_id);
-        // クエリ実行
-        $stmt = queryPost($dbh, $sql, $data, "common");
-
-        if ($stmt) {
-            // クエリ結果のデータを１レコード返却
-            return $stmt->fetch(PDO::FETCH_ASSOC);
-        } else {
-            return false;
-        }
-    } catch (Exception $e) {
-        error_log('エラー発生:' . $e->getMessage());
-    }
-    debug("===========================");
-    debug("success get img function");
     debug("===========================");
 }
 
