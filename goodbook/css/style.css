@@ -9,9 +9,9 @@ body {
     height: 536px;
 }
 .center {
-    width: 980px;
+    max-width: 940px;
     margin: 0 auto;
-    padding: 20px 0px;
+    padding: 20px 20px;
 }
 .massage {
     text-align: left;

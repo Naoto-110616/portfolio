@@ -35,6 +35,7 @@ if ($_POST["uploadIconImg"]) {
         $profpic = (empty($profpic) && !empty($dbFormData['profpic'])) ? $dbFormData['profpic'] : $profpic;
     }
 }
+
 if ($_POST["uploadBackgroundImg"]) {
     debug("uploadBackgroundImgが押されました");
     if (!empty($_POST)) {
@@ -45,16 +46,18 @@ if ($_POST["uploadBackgroundImg"]) {
         $backgroundimg = (empty($backgroundimg) && !empty($dbFormData['backgroundimg'])) ? $dbFormData['backgroundimg'] : $backgroundimg;
     }
 }
+
 if ($_POST["uploadIconImg"] || $_POST["uploadBackgroundImg"]) {
     debug('バリデーションOKです。');
     saveImgToDb($profpic, $backgroundimg);
 }
 
 // Area data 取得
+// select box用の変数
 $dbAreaData = getArea();
+// userのareaを取得
 $dbUserArea = getUserArea($_SESSION["area_id"]);
-// img data 取得
-$dbFormData = getImg($u_id);
+
 $dbFormData = getUser($_SESSION['user_id']);
 
 debug('取得したユーザー情報：' . print_r($dbFormData, true));

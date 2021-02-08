@@ -13,20 +13,6 @@ auth();
 $dbFormData = getUser($_SESSION['user_id']);
 debug('取得したユーザー情報：' . print_r($dbFormData, true));
 
-// // 画面表示用データ取得
-// //================================
-// // GETデータを格納
-// $p_id = (!empty($_GET['p_id'])) ? $_GET['p_id'] : '';
-// // DBから商品データを取得
-// $dbFormData = (!empty($p_id)) ? getPost($_SESSION['user_id'], $p_id) : '';
-// // 新規登録画面か編集画面か判別用フラグ
-// $edit_flg = (empty($dbFormData)) ? false : true;
-// // DBからpostDataを取得
-// $dbCategoryData = getCategory();
-// debug('postID：' . $p_id);
-// debug('フォーム用DBデータ：' . print_r($dbFormData, true));
-// debug('post data：' . print_r($dbCategoryData, true));
-
 // パラメータ改ざんチェック
 //================================
 // GETパラメータはあるが、改ざんされている（URLをいじくった）場合、正しい商品データが取れないのでマイページへ遷移させる
@@ -74,20 +60,9 @@ if ($_POST["postButton"]) {
 
 // 画面表示用データ取得
 //================================
-// カレントページのGETパラメータを取得
-$currentPageNum = (!empty($_GET['p'])) ? $_GET['p'] : 1; //デフォルトは１ページめ
-// パラメータに不正な値が入っているかチェック
-if (!is_int((int)$currentPageNum)) {
-    error_log('エラー発生:指定ページに不正な値が入りました');
-    header("Location:homepage.php");
-}
-// 表示件数
-$listSpan = 20;
-// 現在の表示レコード先頭を算出
-$currentMinNum = (($currentPageNum - 1) * $listSpan); //1ページ目なら(1-1)*20 = 0 、 ２ページ目なら(2-1)*20 = 20
 // DBからpostデータを取得
-$dbPostData = getPostList($currentMinNum);
-debug('現在のページ：' . $currentPageNum);
+$dbPostData = getPostList($u_id);
+// $dbPostData = getPostList();
 
 $dbFormData = getUser($_SESSION['user_id']);
 debug('取得したユーザー情報：' . print_r($dbFormData, true));
@@ -266,6 +241,7 @@ require("goodbook_head.php");
                         </div>
                     </section>
                     <?php
+                    krsort($dbPostData["data"]);
                     foreach ($dbPostData['data'] as $key => $val) :
                     ?>
                         <section class="main_center_element main_center_element3">

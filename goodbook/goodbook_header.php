@@ -12,14 +12,14 @@
         </div>
     </div>
     <div class="head_center">
-        <a class="to_homepage" href="homepage.php">
-            <div class="header_center_icon"><i class="fas fa-home fa-2x"></i></div>
-        </a>
+        <div class="header_center_icon">
+            <a class="to_homepage" href="homepage.php"><i class="fas fa-home fa-2x"></i></a>
+        </div>
         <div class="header_center_icon"><i class="fas fa-user-friends fa-2x"></i></div>
         <div class="header_center_icon"><i class="fas fa-tv fa-2x"></i></div>
-        <a class="to_friendslist" href="friendslist.php">
-            <div class="header_center_icon"><i class="fas fa-users fa-2x"></i></div>
-        </a>
+        <div class="header_center_icon">
+            <a class="to_friendslist" href="friendslist.php"><i class="fas fa-users fa-2x"></i></a>
+        </div>
         <div class="header_center_icon"><i class="fas fa-dice-d6 fa-2x"></i></div>
     </div>
     <div class="head_right">
