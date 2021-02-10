@@ -265,6 +265,7 @@ a {
 }
 .main_center_comment {
 	margin: 10px;
+	word-break: break-all;
 }
 .main_center_mv {
 	width: 100%;
@@ -833,7 +834,7 @@ input[type="submit"] {
 	padding: 5px;
 }
 .toMypage {
-	margin: 70px 0 0 370px;
+	margin: 50px 0 0 15%;
 }
 .padding-top {
 	padding-top: 125px;
