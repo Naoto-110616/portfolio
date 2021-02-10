@@ -9,18 +9,6 @@ debugLogStart();
 
 auth();
 
-// DBからユーザーデータを取得
-$dbFormData = getUser($_SESSION['user_id']);
-debug('取得したユーザー情報：' . print_r($dbFormData, true));
-
-// パラメータ改ざんチェック
-//================================
-// GETパラメータはあるが、改ざんされている（URLをいじくった）場合、正しい商品データが取れないのでマイページへ遷移させる
-if (!empty($p_id) && empty($dbFormData)) {
-    debug('GETパラメータのpostIDが違います。マイページへ遷移します。');
-    header("Location:mypage.php"); //マイページへ
-}
-
 //================================
 // 画面処理
 //================================
@@ -37,8 +25,6 @@ if ($_POST["postButton"]) {
         $comment = $_POST['comment'];
         //画像をアップロードし、パスを格納
         $pic1 = (!empty($_FILES['pic1'])) ? uploadImg($_FILES['pic1'], 'pic1') : '';
-        // 画像をPOSTしてない（登録していない）が既にDBに登録されている場合、DBのパスを入れる（POSTには反映されないので）
-        $pic1 = (empty($pic1) && !empty($dbFormData['pic1'])) ? $dbFormData['pic1'] : $pic1;
 
         validRequired($comment, 'comment');
         // 更新の場合はDBの情報と入力情報が異なる場合にバリデーションを行う
@@ -57,13 +43,10 @@ if ($_POST["postButton"]) {
     }
 }
 
-
 // 画面表示用データ取得
 //================================
 // DBからpostデータを取得
 $dbPostData = getPostList($u_id);
-// $dbPostData = getPostList();
-
 $dbFormData = getUser($_SESSION['user_id']);
 debug('取得したユーザー情報：' . print_r($dbFormData, true));
 debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
@@ -282,7 +265,7 @@ require("goodbook_head.php");
                                     </div>
                                 </div>
                                 <div class="main_center_comment_share_div">
-                                    <p>comment</p>
+                                    <p>shere <?php echo mt_rand(0, 100); ?></p>
                                 </div>
                                 <div class="border"></div>
                                 <div class="main_center_element2_share2">
@@ -341,7 +324,7 @@ require("goodbook_head.php");
                                 </div>
                             </div>
                             <div class="main_center_comment_share_div">
-                                <p>comment</p>
+                                <p>shere <?php echo mt_rand(0, 100); ?></p>
                             </div>
                             <div class="border"></div>
                             <div class="main_center_element2_share2">
@@ -398,7 +381,7 @@ require("goodbook_head.php");
                                 </div>
                             </div>
                             <div class="main_center_comment_share_div">
-                                <p>comment</p>
+                                <p>shere <?php echo mt_rand(0, 100); ?></p>
                             </div>
                             <div class="border"></div>
                             <div class="main_center_element2_share2">
@@ -453,7 +436,7 @@ require("goodbook_head.php");
                                 </div>
                             </div>
                             <div class="main_center_comment_share_div">
-                                <p>comment</p>
+                                <p>shere <?php echo mt_rand(0, 100); ?></p>
                             </div>
                             <div class="border"></div>
                             <div class="main_center_element2_share2">
@@ -511,7 +494,7 @@ require("goodbook_head.php");
                                 </div>
                             </div>
                             <div class="main_center_comment_share_div">
-                                <p>comment</p>
+                                <p>shere <?php echo mt_rand(0, 100); ?></p>
                             </div>
                             <div class="border"></div>
                             <div class="main_center_element2_share2">
