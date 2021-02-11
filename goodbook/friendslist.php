@@ -13,18 +13,18 @@ auth();
 // DBからユーザーデータを取得
 $dbFormData = getUser($_SESSION['user_id']);
 debug('取得したユーザー情報：' . print_r($dbFormData, true));
+
 //================================
 // 画面処理
 //================================
-
 // 画面表示用データ取得
 //================================
 // カレントページのGETパラメータを取得
-$currentPageNum = (!empty($_GET['p'])) ? $_GET['p'] : 1; //デフォルトは１ページめ
+$currentPageNum = (!empty($_GET['p'])) ? $_GET['p'] : 1; //デフォルトは１ページ目
 // パラメータに不正な値が入っているかチェック
 if (!is_int((int)$currentPageNum)) {
     error_log('エラー発生:指定ページに不正な値が入りました');
-    header("Location:index.php"); //トップページへ
+    header("Location:friendslist.php"); //トップページへ
 }
 // 表示件数
 $listSpan = 20;
@@ -32,10 +32,9 @@ $listSpan = 20;
 $currentMinNum = (($currentPageNum - 1) * $listSpan); //1ページ目なら(1-1)*20 = 0 、 ２ページ目なら(2-1)*20 = 20
 // DBからusersデータを取得
 $dbUserData = getUserList($currentMinNum);
+$dbAreaData = getArea();
 debug('現在のページ：' . $currentPageNum);
 debug('フォーム用DBデータ：' . print_r($dbFormData, true));
-debug('カテゴリデータ：' . print_r($dbCategoryData, true));
-
 debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
 ?>
 
@@ -54,13 +53,13 @@ require("goodbook_head.php");
     </p>
     <article class="main">
         <div class="listOfFriendsInside">
-            <section class="orverall" style="min-height:87vh; background-color:#191919;">
+            <section class="orverall">
                 <div id="sidebar">
                     <form action="">
                         <h1 class="title">Area</h1>
                         <div class="selectbox">
                             <span class="icn_select"></span>
-                            <select name="category">
+                            <select name="areaCategory">
                                 <option value="0">Please select</option>
                                 <?php foreach ($dbAreaData as $key => $val) { ?>
                                     <option value="<?php echo $val['id'] ?>">
@@ -69,15 +68,9 @@ require("goodbook_head.php");
                                 <?php } ?>
                             </select>
                         </div>
-                        <h1 class="title">Display order</h1>
-                        <div class="selectbox">
-                            <span class="icn_select"></span>
-                            <select name="sort">
-                                <option value="1">金額が安い順</option>
-                                <option value="2">金額が高い順</option>
-                            </select>
+                        <div class="sort">
+                            <input type="submit" value="serch">
                         </div>
-                        <input type="submit" value="serch" style="border-radius: 5px;">
                     </form>
                 </div>
                 <!-- Main -->
@@ -92,7 +85,7 @@ require("goodbook_head.php");
                     </div>
                     <div class="panel-list">
                         <?php foreach ($dbUserData['data'] as $key => $val) : ?>
-                            <a href="productDetail.php" p_id="<?php echo $val['id']; ?>" class="panel">
+                            <a href="userDetail.php" area_id="<?php echo $val['id']; ?>" class="panel">
                                 <div class="panel-head">
                                     <img src="<?php echo sanitize($val['profpic']); ?>" alt="<?php echo sanitize($val['username']); ?>">
                                 </div>

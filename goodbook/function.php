@@ -1082,7 +1082,7 @@ function getPostList()
     try {
         // DBへ接続
         $dbh = dbConnect();
-        $sql = 'SELECT comment,pic1 FROM post JOIN users ON post.user_id = users.id WHERE 1=1 AND user_id = :u_id';
+        $sql = 'SELECT comment,pic1 FROM post JOIN users ON post.user_id = users.id WHERE 1=1 AND user_id = :u_id AND users.delete_flg = 0';
         $data = array(":u_id" => $_SESSION["user_id"]);
         debug('SQL：' . $sql);
         // クエリ実行
@@ -1114,7 +1114,7 @@ function getUserList($currentMinNum = 1, $span = 20)
         // DBへ接続
         $dbh = dbConnect();
         // 件数用のSQL文作成
-        $sql = 'SELECT id FROM users';
+        $sql = 'SELECT id FROM users WHERE delete_flg = 0';
         $data = array();
         // クエリ実行
         $stmt = queryPost($dbh, $sql, $data, "common");
@@ -1125,8 +1125,7 @@ function getUserList($currentMinNum = 1, $span = 20)
         }
 
         // ページング用のSQL文作成
-        // $sql = 'SELECT * FROM users';
-        $sql = 'SELECT * FROM users JOIN area ON users.area_id = area.id WHERE 1=1';
+        $sql = 'SELECT * FROM users JOIN area ON users.area_id = area.id WHERE 1=1 AND users.delete_flg = 0';
         //    if(!empty($category)) $sql .= ' WHERE category = '.$category;
         //    if(!empty($sort)){
         //      switch($sort){
