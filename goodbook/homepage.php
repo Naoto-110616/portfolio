@@ -46,7 +46,7 @@ if ($_POST["postButton"]) {
 // 画面表示用データ取得
 //================================
 // DBからpostデータを取得
-$dbPostData = getPostList($u_id);
+$dbPostData = getPost();
 $dbFormData = getUser($_SESSION['user_id']);
 debug('取得したユーザー情報：' . print_r($dbFormData, true));
 debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
@@ -230,16 +230,16 @@ require("goodbook_head.php");
                         <section class="main_center_element main_center_element3">
                             <div class="icon_img_div">
                                 <a href="mypage.php">
-                                    <?php if (empty($dbFormData["profpic"])) { ?>
+                                    <?php if (empty($val["profpic"])) { ?>
                                         <div class="icon_img">
                                             <i class="fas fa-user-circle fa-3x"></i>
                                         </div>
                                     <?php } else { ?>
-                                        <img class="icon_img" src="<?php echo sanitize($dbFormData["profpic"]) ?>">
+                                        <img class="icon_img" src="<?php echo sanitize($val["profpic"]) ?>">
                                     <?php } ?>
                                 </a>
                                 <div class="user_name_div">
-                                    <p><?php echo userInfoIndicate($dbFormData, "username"); ?></p>
+                                    <p><?php echo sanitize($val["username"]); ?></p>
                                     <p class="time_line"><?php echo mt_rand(1, 24); ?>hour ago</p>
                                 </div>
                             </div>
