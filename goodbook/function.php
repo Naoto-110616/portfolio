@@ -1072,7 +1072,7 @@ function createPost($edit_flg, $comment, $pic1, $p_id)
 //     debug("end get post function");
 //     debug("===========================");
 // }
-function getPostList()
+function getMyPostList()
 {
     debug("===========================");
     debug("start get post list function");
@@ -1083,6 +1083,36 @@ function getPostList()
         // DBへ接続
         $dbh = dbConnect();
         $sql = 'SELECT comment,pic1 FROM post JOIN users ON post.user_id = users.id WHERE 1=1 AND user_id = :u_id AND users.delete_flg = 0';
+        $data = array(":u_id" => $_SESSION["user_id"]);
+        debug('SQL：' . $sql);
+        // クエリ実行
+        $stmt = queryPost($dbh, $sql, $data, "common");
+
+        if ($stmt) {
+            // クエリ結果のデータを全レコードを格納
+            $rst['data'] = $stmt->fetchAll();
+            return $rst;
+        } else {
+            return false;
+        }
+    } catch (Exception $e) {
+        error_log('エラー発生:' . $e->getMessage());
+    }
+    debug("===========================");
+    debug("end get post list function");
+    debug("===========================");
+}
+function getPost()
+{
+    debug("===========================");
+    debug("start get post list function");
+    debug("===========================");
+    debug('post情報を取得します。');
+    //例外処理
+    try {
+        // DBへ接続
+        $dbh = dbConnect();
+        $sql = 'SELECT username,profpic,comment,pic1 FROM post JOIN users ON post.user_id = users.id WHERE 1=1 AND post.delete_flg = 0';
         $data = array(":u_id" => $_SESSION["user_id"]);
         debug('SQL：' . $sql);
         // クエリ実行
