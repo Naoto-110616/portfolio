@@ -248,6 +248,7 @@ a {
 	width: 95%;
 	margin: auto;
 	padding: 10px;
+	display: flex;
 }
 .icon_img {
 	float: left;
@@ -256,8 +257,7 @@ a {
 	border-radius: 75px;
 }
 .user_name_div {
-	width: 200px;
-	margin-left: 55px;
+	margin-left: 10px;
 }
 .time_line {
 	margin-top: 10px;
@@ -520,6 +520,11 @@ a {
 .info_list {
 	padding: 10px;
 }
+.icon_img_div > .info_list {
+	height: 15px;
+	margin-left: auto;
+	border-radius: 75px;
+}
 .edit {
 	display: flex;
 	padding: 10px;
@@ -550,6 +555,7 @@ main lower part
 }
 .my_profile {
 	width: 375px;
+	height: 240px;
 	border-radius: 10px;
 	background-color: #333333;
 	margin-right: 10px;
@@ -576,13 +582,11 @@ main lower part
 	width: 70px;
 }
 .share_post {
-	width: 525px;
-	height: 85px;
 	background-color: #333333;
 	border-radius: 10px;
 }
 .share_post_inside {
-	padding: 0 20px;
+	padding: 2px 20px;
 }
 .share_post_content {
 	display: flex;
@@ -602,6 +606,15 @@ main lower part
 }
 .share_list i {
 	margin-right: 4px;
+}
+.myPost {
+	width: 60%;
+}
+.myPost > .main_center_element3 {
+	background-color: #303030;
+	margin-top: 10px;
+	border-radius: 10px;
+	margin-bottom: 30px;
 }
 .swiper-wrapper .panel {
 	background-color: #e9e9e9;
