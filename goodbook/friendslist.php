@@ -59,7 +59,7 @@ require("goodbook_head.php");
                         <h1 class="title">Area</h1>
                         <div class="selectbox">
                             <span class="icn_select"></span>
-                            <select name="areaCategory">
+                            <select name="area_id">
                                 <option value="0">Please select</option>
                                 <?php foreach ($dbAreaData as $key => $val) { ?>
                                     <option value="<?php echo $val['id'] ?>">
@@ -96,48 +96,8 @@ require("goodbook_head.php");
                             </a>
                         <?php endforeach; ?>
                     </div>
-                    <div class="pagination">
-                        <ul class="pagination-list">
-                            <?php
-                            $pageColNum = 5;
-                            $totalPageNum = $dbUserData['total_page'];
-                            // 現在のページが、総ページ数と同じ　かつ　総ページ数が表示項目数以上なら、左にリンク４個出す
-                            if ($currentPageNum == $totalPageNum && $totalPageNum >= $pageColNum) {
-                                $minPageNum = $currentPageNum - 4;
-                                $maxPageNum = $currentPageNum;
-                                // 現在のページが、総ページ数の１ページ前なら、左にリンク３個、右に１個出す
-                            } elseif ($currentPageNum == ($totalPageNum - 1) && $totalPageNum >= $pageColNum) {
-                                $minPageNum = $currentPageNum - 3;
-                                $maxPageNum = $currentPageNum + 1;
-                                // 現ページが2の場合は左にリンク１個、右にリンク３個だす。
-                            } elseif ($currentPageNum == 2 && $totalPageNum >= $pageColNum) {
-                                $minPageNum = $currentPageNum - 1;
-                                $maxPageNum = $currentPageNum + 3;
-                                // 現ページが1の場合は左に何も出さない。右に５個出す。
-                            } elseif ($currentPageNum == 1 && $totalPageNum >= $pageColNum) {
-                                $minPageNum = $currentPageNum;
-                                $maxPageNum = 5;
-                                // 総ページ数が表示項目数より少ない場合は、総ページ数をループのMax、ループのMinを１に設定
-                            } elseif ($totalPageNum < $pageColNum) {
-                                $minPageNum = 1;
-                                $maxPageNum = $totalPageNum;
-                                // それ以外は左に２個出す。
-                            } else {
-                                $minPageNum = $currentPageNum - 2;
-                                $maxPageNum = $currentPageNum + 2;
-                            }
-                            ?>
-                            <?php if ($currentPageNum != 1) : ?>
-                                <li class="list-item"><a href="?p=1">&lt;</a></li>
-                            <?php endif; ?>
-                            <?php for ($i = $minPageNum; $i <= $maxPageNum; $i++) : ?>
-                                <li class="list-item <?php if ($currentPageNum == $i) echo 'active'; ?>"><a href="?p=<?php echo $i; ?>"><?php echo $i; ?></a></li>
-                            <?php endfor; ?>
-                            <?php if ($currentPageNum != $maxPageNum) : ?>
-                                <li class="list-item"><a href="?p=<?php echo $maxPageNum; ?>">&gt;</a></li>
-                            <?php endif; ?>
-                        </ul>
-                    </div>
+
+                    <?php pagination($currentPageNum, $dbUserData['total_page']); ?>
 
                 </section>
             </section>

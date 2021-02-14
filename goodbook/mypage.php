@@ -10,6 +10,9 @@ debugLogStart();
 
 //ログイン認証
 auth();
+
+$p_id = (!empty($_GET['p_id'])) ? $_GET['p_id'] : '';
+
 //================================
 // POST送信時処理
 //================================
@@ -18,12 +21,10 @@ auth();
 if ($_POST["profileChenge"]) {
     editprofile("common");
 }
-
-
 //================================
 // 画面処理
 //================================
-// 画面表示用データ取得
+// upload img
 //================================
 if ($_POST["uploadIconImg"]) {
     debug("uploadIconImgが押されました");
@@ -35,7 +36,6 @@ if ($_POST["uploadIconImg"]) {
         $profpic = (empty($profpic) && !empty($dbFormData['profpic'])) ? $dbFormData['profpic'] : $profpic;
     }
 }
-
 if ($_POST["uploadBackgroundImg"]) {
     debug("uploadBackgroundImgが押されました");
     if (!empty($_POST)) {
@@ -257,7 +257,7 @@ require('goodbook_head.php');
                                                 <p class="time_line"><?php echo mt_rand(1, 24); ?>hour ago</p>
                                             </div>
                                         </div>
-                                        <div class="info_list"><i class="fas fa-ellipsis-h"></i></div>
+                                        <div class="info_list ellipsis"><i class="fas fa-ellipsis-h"></i></div>
                                     </div>
                                     <div>
                                         <p class="main_center_comment"><?php echo sanitize($val["comment"]); ?></p>
@@ -495,6 +495,34 @@ require('goodbook_head.php');
                                 </div>
                                 <label>
                                     <input type="submit" value="<?php echo (!$edit_flg) ? 'post' : 'edit'; ?>" name="uploadBackgroundImg">
+                                </label>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article class="modalwindow">
+        <div class="modalwindow_screen_overall_5">
+            <div class="modalwindow_form_div">
+                <div class="modalwindow_form">
+                    <div class="inside">
+                        <div class="modalwindow_form_title">
+                            <form action="" method="post" class="edit_form" enctype="multipart/form-data">
+                                <div class="modalwindow_form_title">
+                                    <div class="edit_title">
+                                        <h1>edit post</h1>
+                                    </div>
+                                    <div class="x-circle5">
+                                        <i class="far fa-times-circle fa-2x"></i>
+                                    </div>
+                                </div>
+                                <div class="mypage_border"></div>
+                                <div style="overflow: hidden;">
+                                </div>
+                                <label>
+                                    <input type="submit" value="<?php echo "edit"; ?>" name="delete_post">
                                 </label>
                             </form>
                         </div>
