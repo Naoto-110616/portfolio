@@ -53,6 +53,12 @@ $(function () {
 		$("body").toggleClass("fixed");
 	});
 });
+$(function () {
+	$(".ellipsis").click(function () {
+		$(".modalwindow_screen_overall_5").toggle();
+		$("body").toggleClass("fixed");
+	});
+});
 // Xボタン
 $(function () {
 	$(".x-circle1").click(function () {
@@ -75,6 +81,12 @@ $(function () {
 $(function () {
 	$(".x-circle4").click(function () {
 		$(".modalwindow_screen_overall_4").toggle();
+		$("body").toggleClass("fixed");
+	});
+});
+$(function () {
+	$(".x-circle5").click(function () {
+		$(".modalwindow_screen_overall_5").toggle();
 		$("body").toggleClass("fixed");
 	});
 });
