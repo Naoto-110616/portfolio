@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" style="background:#191919;">
 
 <head>
     <meta charset="UTF-8">

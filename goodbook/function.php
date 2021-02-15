@@ -1072,7 +1072,37 @@ function createPost($edit_flg, $comment, $pic1, $p_id)
 //     debug("end get post function");
 //     debug("===========================");
 // }
-function getMyPostList()
+// function getMyPostList()
+// {
+//     debug("===========================");
+//     debug("start get post list function");
+//     debug("===========================");
+//     debug('post情報を取得します。');
+//     //例外処理
+//     try {
+//         // DBへ接続
+//         $dbh = dbConnect();
+//         $sql = 'SELECT p.id,p.comment,p.pic1 FROM post AS p JOIN users AS u ON p.user_id = u.id WHERE 1=1 AND u.id = :u_id AND p.delete_flg = 0';
+//         $data = array(":u_id" => $u_id);
+//         debug('SQL：' . $sql);
+//         // クエリ実行
+//         $stmt = queryPost($dbh, $sql, $data, "common");
+
+//         if ($stmt) {
+//             // クエリ結果のデータを全レコードを格納
+//             $rst['data'] = $stmt->fetchAll();
+//             return $rst;
+//         } else {
+//             return false;
+//         }
+//     } catch (Exception $e) {
+//         error_log('エラー発生:' . $e->getMessage());
+//     }
+//     debug("===========================");
+//     debug("end get post list function");
+//     debug("===========================");
+// }
+function getMyPostList($u_id)
 {
     debug("===========================");
     debug("start get post list function");
@@ -1082,8 +1112,8 @@ function getMyPostList()
     try {
         // DBへ接続
         $dbh = dbConnect();
-        $sql = 'SELECT p.id,p.comment,p.pic1 FROM post AS p JOIN users AS u ON p.user_id = u.id WHERE 1=1 AND user_id = :u_id AND p.delete_flg = 0';
-        $data = array(":u_id" => $_SESSION["user_id"]);
+        $sql = 'SELECT p.id,p.comment,p.pic1 FROM post AS p JOIN users AS u ON p.user_id = u.id WHERE 1=1 AND u.id = :u_id AND p.delete_flg = 0';
+        $data = array(":u_id" => $u_id);
         debug('SQL：' . $sql);
         // クエリ実行
         $stmt = queryPost($dbh, $sql, $data, "common");
@@ -1113,7 +1143,7 @@ function getPost()
         // DBへ接続
         $dbh = dbConnect();
         $sql = 'SELECT username,profpic,comment,pic1 FROM post JOIN users ON post.user_id = users.id WHERE 1=1 AND post.delete_flg = 0';
-        $data = array(":u_id" => $_SESSION["user_id"]);
+        $data = array();
         debug('SQL：' . $sql);
         // クエリ実行
         $stmt = queryPost($dbh, $sql, $data, "common");
@@ -1155,7 +1185,8 @@ function getUserList($currentMinNum = 1, $span = 20)
         }
 
         // ページング用のSQL文作成
-        $sql = 'SELECT * FROM users JOIN area ON users.area_id = area.id WHERE 1=1 AND users.delete_flg = 0';
+        $sql = 'SELECT u.id, u.profpic, u.username, a.name FROM users AS u JOIN area AS a ON u.area_id = a.id WHERE u.delete_flg = 0';
+        // $sql = 'SELECT u.id, u.profpic, u.username, a.name FROM users AS u JOIN area AS a ON u.area_id = a.id JOIN post AS p ON u.id = p.user_id WHERE u.delete_flg = 0';
         //    if(!empty($category)) $sql .= ' WHERE category = '.$category;
         //    if(!empty($sort)){
         //      switch($sort){
@@ -1189,6 +1220,42 @@ function getUserList($currentMinNum = 1, $span = 20)
     debug("===========================");
     debug("end getuserlist function");
     debug("===========================");
+}
+function getUserOne($u_id)
+{
+    debug('user情報を取得します。');
+    debug('userID：' . $u_id);
+    //例外処理
+    try {
+        // DBへ接続
+        $dbh = dbConnect();
+        // SQL文作成
+        $sql = 'SELECT u.id, u.username, u.age, u.tel, u.zip, u.addr, u.email, u.profpic, u.backgroundimg, a.name, p.comment, p.pic1
+        FROM
+        users AS u
+        JOIN
+        area AS a
+        ON u.area_id = a.id
+        LEFT JOIN
+        post AS p
+        ON u.id = p.user_id
+        WHERE 1=1
+        AND u.id = :u_id
+        AND u.delete_flg = 0';
+
+        $data = array(':u_id' => $u_id);
+        // クエリ実行
+        $stmt = queryPost($dbh, $sql, $data, "common");
+
+        if ($stmt) {
+            // クエリ結果のデータを１レコード返却
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        } else {
+            return false;
+        }
+    } catch (Exception $e) {
+        error_log('エラー発生:' . $e->getMessage());
+    }
 }
 function getArea()
 {
