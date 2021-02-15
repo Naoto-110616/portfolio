@@ -57,6 +57,7 @@ require("goodbook_head.php");
                 <div id="sidebar">
                     <form action="">
                         <h1 class="title">Area</h1>
+                        <!-- <h1 class="title"><?php showVariable($dbUserData['data']); ?></h1> -->
                         <div class="selectbox">
                             <span class="icn_select"></span>
                             <select name="area_id">
@@ -85,7 +86,7 @@ require("goodbook_head.php");
                     </div>
                     <div class="panel-list">
                         <?php foreach ($dbUserData['data'] as $key => $val) : ?>
-                            <a href="userDetail.php" area_id="<?php echo $val['id']; ?>" class="panel">
+                            <a href="userDetail.php?u_id=<?php echo $val['id'] . '&p=' . $currentPageNum; ?>" class="panel">
                                 <div class="panel-head">
                                     <img src="<?php echo sanitize($val['profpic']); ?>" alt="<?php echo sanitize($val['username']); ?>">
                                 </div>
@@ -96,9 +97,7 @@ require("goodbook_head.php");
                             </a>
                         <?php endforeach; ?>
                     </div>
-
                     <?php pagination($currentPageNum, $dbUserData['total_page']); ?>
-
                 </section>
             </section>
         </div>
