@@ -57,7 +57,7 @@ if ($_POST["uploadIconImg"] || $_POST["uploadBackgroundImg"]) {
 $dbAreaData = getArea();
 // userのareaを取得
 $dbUserArea = getUserArea($_SESSION["area_id"]);
-$dbPostData = getMyPostList();
+$dbPostData = getMyPostList($_SESSION["user_id"]);
 $dbFormData = getUser($_SESSION['user_id']);
 
 debug('取得したユーザー情報：' . print_r($dbFormData, true));
