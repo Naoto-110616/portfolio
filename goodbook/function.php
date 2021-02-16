@@ -1142,7 +1142,11 @@ function getPost()
     try {
         // DBへ接続
         $dbh = dbConnect();
-        $sql = 'SELECT username,profpic,comment,pic1 FROM post JOIN users ON post.user_id = users.id WHERE 1=1 AND post.delete_flg = 0';
+        $sql = 'SELECT u.username, u.profpic, p.comment, p.pic1
+        FROM post AS p
+        JOIN users AS u
+        ON p.user_id = u.id
+        WHERE 1=1 AND p.delete_flg = 0 AND u.delete_flg = 0';
         $data = array();
         debug('SQL：' . $sql);
         // クエリ実行
@@ -1185,7 +1189,11 @@ function getUserList($currentMinNum = 1, $span = 20)
         }
 
         // ページング用のSQL文作成
-        $sql = 'SELECT u.id, u.profpic, u.username, a.name FROM users AS u JOIN area AS a ON u.area_id = a.id WHERE u.delete_flg = 0';
+        $sql = 'SELECT u.id, u.profpic, u.username, a.name
+        FROM users AS u
+        JOIN area AS a
+        ON u.area_id = a.id
+        WHERE u.delete_flg = 0';
         // $sql = 'SELECT u.id, u.profpic, u.username, a.name FROM users AS u JOIN area AS a ON u.area_id = a.id JOIN post AS p ON u.id = p.user_id WHERE u.delete_flg = 0';
         //    if(!empty($category)) $sql .= ' WHERE category = '.$category;
         //    if(!empty($sort)){
@@ -1231,18 +1239,12 @@ function getUserOne($u_id)
         $dbh = dbConnect();
         // SQL文作成
         $sql = 'SELECT u.id, u.username, u.age, u.tel, u.zip, u.addr, u.email, u.profpic, u.backgroundimg, a.name, p.comment, p.pic1
-        FROM
-        users AS u
-        JOIN
-        area AS a
+        FROM users AS u
+        JOIN area AS a
         ON u.area_id = a.id
-        LEFT JOIN
-        post AS p
+        LEFT JOIN post AS p
         ON u.id = p.user_id
-        WHERE 1=1
-        AND u.id = :u_id
-        AND u.delete_flg = 0';
-
+        WHERE 1=1 AND u.id = :u_id AND u.delete_flg = 0';
         $data = array(':u_id' => $u_id);
         // クエリ実行
         $stmt = queryPost($dbh, $sql, $data, "common");

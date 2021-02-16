@@ -537,6 +537,9 @@ a {
 	background-color: #565656;
 	border-radius: 10px;
 }
+.edit > .fa-comment-dots {
+	padding-right: 3px;
+}
 
 /* 「「「「「「「「「「「
 main lower part

@@ -47,6 +47,7 @@ if ($_POST["postButton"]) {
 //================================
 // DBからpostデータを取得
 $dbPostData = getPost();
+$viewData = getUserOne($u_id);
 $dbFormData = getUser($_SESSION['user_id']);
 debug('取得したユーザー情報：' . print_r($dbFormData, true));
 debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
@@ -229,7 +230,8 @@ require("goodbook_head.php");
                     ?>
                         <section class="main_center_element main_center_element3">
                             <div class="icon_img_div">
-                                <a href="mypage.php">
+                                <!-- <a href="userDetail.php"> -->
+                                <a href="userDetail.php?u_id=<?php echo $val['id'] ?>" class="panel">
                                     <?php if (empty($val["profpic"])) { ?>
                                         <div class="icon_img">
                                             <i class="fas fa-user-circle fa-3x"></i>
