@@ -28,7 +28,7 @@ $dbFormData = getUser($_SESSION['user_id']);
 // パラメータに不正な値が入っているかチェック
 if (empty($viewData)) {
     error_log('エラー発生:指定ページに不正な値が入りました');
-    header("Location:index.php"); //トップページへ
+    header("Location:homepage.php"); //トップページへ
 }
 
 // // post送信されていた場合
@@ -83,9 +83,6 @@ require('goodbook_head.php');
                     <div class="main_top_content main_top_cover_photo_div">
                         <div class="main_top_cover_photo" style="background-image: url(<?php echo sanitize($viewData["backgroundimg"]); ?>);">
                             <div class="cover_photo_change_button">
-                                <label for="">
-                                    <input type="button" name="cover_photo_change" value="change cover photo" class="coverPhotoChange">
-                                </label>
                             </div>
                         </div>
                     </div>
@@ -114,13 +111,14 @@ require('goodbook_head.php');
                             <div class="info_list"><span>data</span></div>
                             <div class="info_list"><span>friends</span></div>
                             <div class="info_list"><span>photos</span></div>
-                            <div class="info_list"><a href="passSetting.php"><span>password</span></a></div>
                         </nav>
                         <div class="main_top_content main_top_content_user_info_list2">
-                            <div class="edit">
-                                <i class="fas fa-pen"></i>
-                                <span>editprofile</span>
-                            </div>
+                            <a href="msg.php">
+                                <div class="edit">
+                                    <i class="far fa-comment-dots"></i>
+                                    <span>message</span>
+                                </div>
+                            </a>
                             <div class="info_list"><i class="fas fa-eye"></i></div>
                             <div class="info_list"><i class="fas fa-search"></i></div>
                             <div class="info_list"><i class="fas fa-ellipsis-h"></i></div>
