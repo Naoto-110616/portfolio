@@ -512,11 +512,13 @@ a {
 .main_top_content_user_info_list1 {
 	position: static;
 	display: flex;
+	align-items: center;
 	padding: 10px 10px 10px 0px;
 }
 .main_top_content_user_info_list2 {
 	position: absolute;
 	display: flex;
+	align-items: center;
 	top: 12px;
 	left: 670px;
 }
@@ -530,15 +532,13 @@ a {
 }
 .edit {
 	display: flex;
-	padding: 10px;
+	padding: 7px;
+	align-items: center;
 }
 .info_list:hover,
 .edit:hover {
 	background-color: #565656;
 	border-radius: 10px;
-}
-.edit > .fa-comment-dots {
-	padding-right: 3px;
 }
 
 /* 「「「「「「「「「「「
@@ -1147,4 +1147,276 @@ label.err input {
 	text-align: center;
 	font-size: 19px;
 	line-height: 40px;
+}
+
+.msg-info {
+	background: #f6f5f4;
+	padding: 15px;
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+
+.msg-info .avatar {
+	width: 80px;
+	height: 80px;
+	border-radius: 40px;
+}
+
+.msg-info .avatar-img {
+	text-align: center;
+	width: 100px;
+	float: left;
+}
+
+.msg-info .avatar-info {
+	float: left;
+	padding-left: 15px;
+	width: 500px;
+}
+
+.msg-info .product-info {
+	float: left;
+	padding-left: 15px;
+	width: 315px;
+}
+
+.msg-info .product-info .left,
+.msg-info .product-info .right {
+	float: left;
+}
+
+.msg-info .product-info .right {
+	padding-left: 15px;
+}
+
+.msg-info .product-info .price {
+	display: inline-block;
+}
+
+.area-bord {
+	height: 500px;
+	overflow-y: scroll;
+	background: #f6f5f4;
+	padding: 15px;
+}
+
+.area-bord .msg-cnt {
+	width: 80%;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+
+.area-bord .msg-cnt .avatar {
+	width: 5%;
+	overflow: hidden;
+	float: left;
+}
+
+.area-bord .msg-cnt .avatar img {
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	float: left;
+}
+
+.area-bord .msg-cnt .msg-inrTxt {
+	width: 85%;
+	float: left;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 0 0 0 25px;
+	position: relative;
+}
+
+.area-bord .msg-cnt.msg-left .msg-inrTxt {
+	background: #f6e2df;
+}
+
+.area-bord .msg-cnt.msg-left .msg-inrTxt > .triangle {
+	position: absolute;
+	left: -20px;
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-right: 15px solid #f6e2df;
+	border-left: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+}
+
+.area-bord .msg-cnt.msg-right {
+	float: right;
+}
+
+.area-bord .msg-cnt.msg-right .msg-inrTxt {
+	background: #d2eaf0;
+	margin: 0 25px 0 0;
+}
+
+.area-bord .msg-cnt.msg-right .msg-inrTxt > .triangle {
+	position: absolute;
+	right: -20px;
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-left: 15px solid #d2eaf0;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+}
+
+.area-bord .msg-cnt.msg-right .msg-inrTxt {
+	float: right;
+}
+
+.area-bord .msg-cnt.msg-right .avatar {
+	float: right;
+}
+/* msg.php */
+.site-width {
+	width: 980px;
+	overflow: hidden;
+	margin: 60px auto;
+}
+.msg-info {
+	background: #191919;
+	padding: 15px;
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+
+.msg-info .avatar {
+	width: 80px;
+	height: 80px;
+	border-radius: 40px;
+}
+
+.msg-info .avatar-img {
+	text-align: center;
+	width: 100px;
+	float: left;
+}
+
+.msg-info .avatar-info {
+	float: left;
+	padding-left: 15px;
+	width: 500px;
+}
+
+.msg-info .product-info {
+	float: left;
+	padding-left: 15px;
+	width: 315px;
+}
+
+.msg-info .product-info .left,
+.msg-info .product-info .right {
+	float: left;
+}
+
+.msg-info .product-info .right {
+	padding-left: 15px;
+}
+
+.msg-info .product-info .price {
+	display: inline-block;
+}
+
+.area-bord {
+	height: 500px;
+	overflow-y: scroll;
+	background: #333333;
+	padding: 15px;
+}
+
+.area-send-msg {
+	background: #333333;
+	padding: 15px;
+	overflow: hidden;
+}
+
+.area-send-msg textarea {
+	width: 100%;
+	background: #191919;
+	height: 100px;
+	resize: none;
+	border: none;
+	outline: none;
+	font-size: 16px;
+	color: #dddddd;
+}
+
+.area-send-msg .btn-send {
+	width: 150px;
+	float: right;
+	margin-top: 0;
+}
+
+.area-bord .msg-cnt {
+	width: 80%;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+
+.area-bord .msg-cnt .avatar {
+	width: 5%;
+	overflow: hidden;
+	float: left;
+}
+
+.area-bord .msg-cnt .avatar img {
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	float: left;
+}
+
+.area-bord .msg-cnt .msg-inrTxt {
+	width: 85%;
+	float: left;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 0 0 0 25px;
+	position: relative;
+}
+
+.area-bord .msg-cnt.msg-left .msg-inrTxt {
+	background: #191919;
+}
+
+.area-bord .msg-cnt.msg-left .msg-inrTxt > .triangle {
+	position: absolute;
+	left: -20px;
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-right: 15px solid #191919;
+	border-left: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+}
+
+.area-bord .msg-cnt.msg-right {
+	float: right;
+}
+
+.area-bord .msg-cnt.msg-right .msg-inrTxt {
+	background: #191919;
+	margin: 0 25px 0 0;
+}
+
+.area-bord .msg-cnt.msg-right .msg-inrTxt > .triangle {
+	position: absolute;
+	right: -20px;
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-left: 15px solid #191919;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+}
+
+.area-bord .msg-cnt.msg-right .msg-inrTxt {
+	float: right;
+}
+
+.area-bord .msg-cnt.msg-right .avatar {
+	float: right;
 }

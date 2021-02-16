@@ -1238,12 +1238,10 @@ function getUserOne($u_id)
         // DBへ接続
         $dbh = dbConnect();
         // SQL文作成
-        $sql = 'SELECT u.id, u.username, u.age, u.tel, u.zip, u.addr, u.email, u.profpic, u.backgroundimg, a.name, p.comment, p.pic1
+        $sql = 'SELECT u.id, u.username, u.age, u.tel, u.zip, u.addr, u.email, u.profpic, u.backgroundimg, a.name
         FROM users AS u
         JOIN area AS a
         ON u.area_id = a.id
-        LEFT JOIN post AS p
-        ON u.id = p.user_id
         WHERE 1=1 AND u.id = :u_id AND u.delete_flg = 0';
         $data = array(':u_id' => $u_id);
         // クエリ実行
@@ -1552,6 +1550,32 @@ function pagination($currentPageNum, $totalPageNum, $link = '', $pageColNum = 5)
     }
     echo '</ul>';
     echo '</div>';
+}
+function createMsgRoom($viewData)
+{
+    debug('POST送信があります。');
+
+    //ログイン認証
+    auth();
+    //例外処理
+    try {
+        // DBへ接続
+        $dbh = dbConnect();
+        // SQL文作成
+        $sql = 'INSERT INTO bord (send_user, receive_user, create_date) VALUES (:s_uid, :r_uid, :date)';
+        $data = array(':s_uid' => $_SESSION['user_id'], ':r_uid' => $viewData['id'], ':date' => date('Y-m-d H:i:s'));
+        // クエリ実行
+        $stmt = queryPost($dbh, $sql, $data, "common");
+
+        // クエリ成功の場合
+        if ($stmt) {
+            debug('msg pageへ遷移します。');
+            header("Location:msg.php?u_id=" . $viewData["id"] . "&m_id=" . $dbh->lastInsertID()); //連絡掲示板へ
+        }
+    } catch (Exception $e) {
+        error_log('エラー発生:' . $e->getMessage());
+        $err_msg['common'] = MSG07;
+    }
 }
 function showVariable($var)
 {
