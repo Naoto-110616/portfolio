@@ -16,12 +16,11 @@ auth();
 //================================
 // 画面処理
 //================================
-
 // 画面表示用データ取得
 //================================
 // userIDのGETパラメータを取得
 $u_id = (!empty($_GET['u_id'])) ? $_GET['u_id'] : '';
-// DBから商品データを取得
+// DBからuserデータを取得
 $viewData = getUserOne($u_id);
 $dbPostData = getMyPostList($u_id);
 $dbFormData = getUser($_SESSION['user_id']);
@@ -32,32 +31,10 @@ if (empty($viewData)) {
 }
 
 // // post送信されていた場合
-// if (empty($_POST['submit'])) {
-//     debug('POST送信があります。');
+if (!empty($_POST['submit'])) {
+    createMsgRoom($viewData);
+}
 
-//     //ログイン認証
-//     require('auth.php');
-
-//     //例外処理
-//     try {
-//         // DBへ接続
-//         $dbh = dbConnect();
-//         // SQL文作成
-//         $sql = 'INSERT INTO bord (sale_user,buy_user,product_id, create_date) VALUES (:s_uid, :b_uid, :p_id, :date)';
-//         $data = array(':s_uid' => $viewData['user_id'], ':b_uid' => $_SESSION['user_id'], ':p_id' => $p_id, ':date' => date('Y-m-d H:i:s'));
-//         // クエリ実行
-//         $stmt = queryPost($dbh, $sql, $data, "common");
-
-//         // クエリ成功の場合
-//         if ($stmt) {
-//             debug('連絡掲示板へ遷移します。');
-//             header("Location:msg.php?m_id=" . $dbh->lastInsertID()); //連絡掲示板へ
-//         }
-//     } catch (Exception $e) {
-//         error_log('エラー発生:' . $e->getMessage());
-//         $err_msg['common'] = MSG07;
-//     }
-// }
 debug('取得したユーザー情報：' . print_r($viewData, true));
 debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
 
@@ -113,12 +90,12 @@ require('goodbook_head.php');
                             <div class="info_list"><span>photos</span></div>
                         </nav>
                         <div class="main_top_content main_top_content_user_info_list2">
-                            <a href="msg.php">
+                            <form action="" method="post">
                                 <div class="edit">
-                                    <i class="far fa-comment-dots"></i>
-                                    <span>message</span>
+                                    <i class="far fa-comment-dots fa-lg"></i>
+                                    <input type="submit" value="message" name="submit" class="" style="background:none; border:none; outline:none; font-size:16px">
                                 </div>
-                            </a>
+                            </form>
                             <div class="info_list"><i class="fas fa-eye"></i></div>
                             <div class="info_list"><i class="fas fa-search"></i></div>
                             <div class="info_list"><i class="fas fa-ellipsis-h"></i></div>
