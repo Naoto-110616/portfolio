@@ -11,9 +11,6 @@ auth();
 $u_id = (!empty($_GET['u_id'])) ? $_GET['u_id'] : '';
 $viewData = getUserOne($u_id);
 $dbFormData = getUser($_SESSION['user_id']);
-
-debug('取得したユーザー情報：' . print_r($viewData, true));
-
 ?>
 
 <?php
@@ -111,14 +108,6 @@ require('goodbook_head.php');
         </section>
 
         <script src="js/vendor/jquery-2.2.2.min.js"></script>
-
-        <script>
-            $(function() {
-                $('#js-scroll-bottom').animate({
-                    scrollTop: $('#js-scroll-bottom')[0].scrollHeight
-                }, 'fast');
-            });
-        </script>
 
         <?php
         require("jssrc.php");
