@@ -912,7 +912,12 @@ function getUser($u_id)
         // DBへ接続
         $dbh = dbConnect();
         // SQL文作成
-        $sql = 'SELECT * FROM users  WHERE id = :u_id AND delete_flg = 0';
+        $sql = 'SELECT u.id,u.username, u.tel, u.zip, u.addr, u.age, u.email, u.profpic, u.backgroundimg, u.area_id, a.name
+        FROM users AS u
+        LEFT JOIN area AS a
+        ON u.area_id = a.id
+        WHERE u.id = :u_id
+        AND u.delete_flg = 0';
         $data = array(':u_id' => $u_id);
         // クエリ実行
         $stmt = queryPost($dbh, $sql, $data, "common");
@@ -1040,68 +1045,6 @@ function createPost($edit_flg, $comment, $pic1, $p_id)
     debug("end create post function");
     debug("===========================");
 }
-// function getPost($u_id, $p_id)
-// {
-//     debug("===========================");
-//     debug("start get post function");
-//     debug("===========================");
-
-//     debug('post情報を取得します。');
-//     debug('ユーザーID：' . $u_id);
-//     debug('postID：' . $p_id);
-//     //例外処理
-//     try {
-//         // DBへ接続
-//         $dbh = dbConnect();
-//         // SQL文作成
-//         $sql = 'SELECT * FROM post WHERE user_id = :u_id AND id = :p_id AND delete_flg = 0';
-//         $data = array(':u_id' => $u_id, ':p_id' => $p_id);
-//         // クエリ実行
-//         $stmt = queryPost($dbh, $sql, $data, "common");
-
-//         if ($stmt) {
-//             // クエリ結果のデータを１レコード返却
-//             return $stmt->fetch(PDO::FETCH_ASSOC);
-//         } else {
-//             return false;
-//         }
-//     } catch (Exception $e) {
-//         error_log('エラー発生:' . $e->getMessage());
-//     }
-//     debug("===========================");
-//     debug("end get post function");
-//     debug("===========================");
-// }
-// function getMyPostList()
-// {
-//     debug("===========================");
-//     debug("start get post list function");
-//     debug("===========================");
-//     debug('post情報を取得します。');
-//     //例外処理
-//     try {
-//         // DBへ接続
-//         $dbh = dbConnect();
-//         $sql = 'SELECT p.id,p.comment,p.pic1 FROM post AS p JOIN users AS u ON p.user_id = u.id WHERE 1=1 AND u.id = :u_id AND p.delete_flg = 0';
-//         $data = array(":u_id" => $u_id);
-//         debug('SQL：' . $sql);
-//         // クエリ実行
-//         $stmt = queryPost($dbh, $sql, $data, "common");
-
-//         if ($stmt) {
-//             // クエリ結果のデータを全レコードを格納
-//             $rst['data'] = $stmt->fetchAll();
-//             return $rst;
-//         } else {
-//             return false;
-//         }
-//     } catch (Exception $e) {
-//         error_log('エラー発生:' . $e->getMessage());
-//     }
-//     debug("===========================");
-//     debug("end get post list function");
-//     debug("===========================");
-// }
 function getMyPostList($u_id)
 {
     debug("===========================");
@@ -1112,7 +1055,11 @@ function getMyPostList($u_id)
     try {
         // DBへ接続
         $dbh = dbConnect();
-        $sql = 'SELECT p.id,p.comment,p.pic1 FROM post AS p JOIN users AS u ON p.user_id = u.id WHERE 1=1 AND u.id = :u_id AND p.delete_flg = 0';
+        $sql = 'SELECT p.id,p.comment,p.pic1
+        FROM post AS p
+        JOIN users AS u
+        ON p.user_id = u.id
+        WHERE 1=1 AND u.id = :u_id AND p.delete_flg = 0';
         $data = array(":u_id" => $u_id);
         debug('SQL：' . $sql);
         // クエリ実行
@@ -1441,31 +1388,7 @@ function uploadImg($file, $key)
     debug("end upload img function");
     debug("===========================");
 }
-// function dataAcquisitionDisplay()
-// {
-//     debug("===========================");
-//     debug("start data acpuisition display  function");
-//     debug("===========================");
 
-//     $dbFormData = getUser($_SESSION['user_id']);
-
-//     global $p_id;
-//     global $dbFormData;
-//     global $edit_flg;
-//     // 画面表示用データ取得
-//     //================================
-//     // GETデータを格納
-//     $p_id = (!empty($_GET['p_id'])) ? $_GET['p_id'] : '';
-//     // DBからpostデータを取得
-//     $dbFormData = (!empty($p_id)) ? getPost($_SESSION['user_id'], $p_id) : '';
-//     // 新規登録画面か編集画面か判別用フラグ
-//     $edit_flg = (empty($dbFormData)) ? false : true;
-//     debug('postID：' . $p_id);
-
-//     debug("===========================");
-//     debug("end data acpuisition display  function");
-//     debug("===========================");
-// }
 //================================
 // img
 //================================
