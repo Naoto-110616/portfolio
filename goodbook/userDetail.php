@@ -43,8 +43,6 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 $siteTitle = 'user detail';
 require('goodbook_head.php');
 ?>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
-
 
 <body>
     <?php require("goodbook_header.php") ?>
