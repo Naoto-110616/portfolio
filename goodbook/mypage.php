@@ -56,7 +56,6 @@ if ($_POST["uploadIconImg"] || $_POST["uploadBackgroundImg"]) {
 // select box用の変数
 $dbAreaData = getArea();
 // userのareaを取得
-$dbUserArea = getUserArea($_SESSION["area_id"]);
 $dbPostData = getMyPostList($_SESSION["user_id"]);
 $dbFormData = getUser($_SESSION['user_id']);
 
@@ -198,7 +197,7 @@ require('goodbook_head.php');
                                 </div>
                                 <div class="profile_list">
                                     <p class="status">area</p>
-                                    <p><?php echo $dbUserArea["name"]; ?></p>
+                                    <p><?php userInfoIndicate($dbFormData, "name"); ?></p>
                                 </div>
                             </div>
                         </div>
