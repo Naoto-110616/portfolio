@@ -189,3 +189,9 @@ $(function () {
 		fileReader.readAsDataURL(file);
 	});
 });
+$(function () {
+	$("#js-scroll-bottom").animate(
+		{ scrollTop: $("#js-scroll-bottom")[0].scrollHeight },
+		"fast"
+	);
+});
