@@ -22,6 +22,8 @@ debug('取得したユーザー情報：' . print_r($dbFormData, true));
 // カレントページのGETパラメータを取得
 $currentPageNum = (!empty($_GET['p'])) ? $_GET['p'] : 1; //デフォルトは１ページ目
 // パラメータに不正な値が入っているかチェック
+$area = (!empty($_GET['a_id'])) ? $_GET['a_id'] : '';
+
 if (!is_int((int)$currentPageNum)) {
     error_log('エラー発生:指定ページに不正な値が入りました');
     header("Location:friendslist.php"); //トップページへ
@@ -31,7 +33,7 @@ $listSpan = 20;
 // 現在の表示レコード先頭を算出
 $currentMinNum = (($currentPageNum - 1) * $listSpan); //1ページ目なら(1-1)*20 = 0 、 ２ページ目なら(2-1)*20 = 20
 // DBからusersデータを取得
-$dbUserData = getUserList($currentMinNum);
+$dbUserData = getUserList($currentMinNum, $area);
 $dbAreaData = getArea();
 debug('現在のページ：' . $currentPageNum);
 debug('フォーム用DBデータ：' . print_r($dbFormData, true));
@@ -57,14 +59,13 @@ require("goodbook_head.php");
                 <div id="sidebar">
                     <form action="">
                         <h1 class="title">Area</h1>
-                        <!-- <h1 class="title"><?php showVariable($dbUserData['data']); ?></h1> -->
                         <div class="selectbox">
                             <span class="icn_select"></span>
-                            <select name="area_id">
-                                <option value="0">Please select</option>
+                            <select name="a_id">
+                                <option value="0" <?php if (getFormData("a_id", true) == 0) echo "selected"; ?>>Please select</option>
                                 <?php foreach ($dbAreaData as $key => $val) { ?>
-                                    <option value="<?php echo $val['id'] ?>">
-                                        <?php echo $val['name']; ?>
+                                    <option value="<?php echo $val['a_id'] ?>" <?php if (getFormData("a_id", true) == $val["a_id"]) echo "selected"; ?>>
+                                        <?php echo $val['area']; ?>
                                     </option>
                                 <?php } ?>
                             </select>
@@ -86,13 +87,13 @@ require("goodbook_head.php");
                     </div>
                     <div class="panel-list">
                         <?php foreach ($dbUserData['data'] as $key => $val) : ?>
-                            <a href="userDetail.php?u_id=<?php echo $val['id'] . '&p=' . $currentPageNum; ?>" class="panel">
+                            <a href="userDetail.php<?php echo (!empty(appendGetParam())) ? appendGetParam() . '&u_id=' . $val['id'] : '?u_id=' . $val['id']; ?>" class="panel">
                                 <div class="panel-head">
-                                    <img src="<?php echo sanitize($val['profpic']); ?>" alt="<?php echo sanitize($val['username']); ?>">
+                                    <img src="<?php echo showImg($val['profpic']); ?>" alt="<?php echo sanitize($val['username']); ?>">
                                 </div>
                                 <div class="panel-body">
                                     <p class="panel-title"><span class="username"><?php echo sanitize($val['username']); ?></span></p>
-                                    <p class="panel-title"><span class="areaname"><?php echo sanitize($val['name']); ?></span></p>
+                                    <p class="panel-title"><span class="areaname"><?php echo sanitize($val['area']); ?></span></p>
                                 </div>
                             </a>
                         <?php endforeach; ?>

@@ -912,7 +912,7 @@ function getUser($u_id)
         // DBへ接続
         $dbh = dbConnect();
         // SQL文作成
-        $sql = 'SELECT u.id,u.username, u.tel, u.zip, u.addr, u.age, u.email, u.profpic, u.backgroundimg, u.area_id, a.name
+        $sql = 'SELECT u.id,u.username, u.tel, u.zip, u.addr, u.age, u.email, u.profpic, u.backgroundimg, u.area_id, a.name AS area
         FROM users AS u
         LEFT JOIN area AS a
         ON u.area_id = a.id
@@ -1113,7 +1113,7 @@ function getPost()
     debug("end get post list function");
     debug("===========================");
 }
-function getUserList($currentMinNum = 1, $span = 20)
+function getUserList($currentMinNum = 1, $area, $span = 20)
 {
 
     debug("===========================");
@@ -1125,7 +1125,8 @@ function getUserList($currentMinNum = 1, $span = 20)
         // DBへ接続
         $dbh = dbConnect();
         // 件数用のSQL文作成
-        $sql = 'SELECT id FROM users WHERE delete_flg = 0';
+        $sql = 'SELECT id FROM users ';
+        if (!empty($area)) $sql .= ' WHERE area_id = ' . $area;
         $data = array();
         // クエリ実行
         $stmt = queryPost($dbh, $sql, $data, "common");
@@ -1136,26 +1137,11 @@ function getUserList($currentMinNum = 1, $span = 20)
         }
 
         // ページング用のSQL文作成
-        $sql = 'SELECT u.id, u.profpic, u.username, a.name
+        $sql = 'SELECT u.id, u.profpic, u.username, u.area_id, a.id AS a_id, a.name  AS area
         FROM users AS u
         JOIN area AS a
-        ON u.area_id = a.id
-        WHERE u.delete_flg = 0';
-        // $sql = 'SELECT u.id, u.profpic, u.username, a.name FROM users AS u JOIN area AS a ON u.area_id = a.id JOIN post AS p ON u.id = p.user_id WHERE u.delete_flg = 0';
-        //    if(!empty($category)) $sql .= ' WHERE category = '.$category;
-        //    if(!empty($sort)){
-        //      switch($sort){
-        //        case 1:
-        //          $sql .= ' ORDER BY price ASC';
-        //          break;
-        //        case 2:
-        //          $sql .= ' ORDER BY price DESC';
-        //          break;
-        //        case 3:
-        //          $sql .= ' ORDER BY create_date DESC';
-        //          break;
-        //      }
-        //    }
+        ON u.area_id = a.id';
+        if (!empty($area)) $sql .= ' WHERE area_id = ' . $area;
         $sql .= ' LIMIT ' . $span . ' OFFSET ' . $currentMinNum;
         $data = array();
         debug('SQL：' . $sql);
@@ -1176,6 +1162,45 @@ function getUserList($currentMinNum = 1, $span = 20)
     debug("end getuserlist function");
     debug("===========================");
 }
+function getProductList($currentMinNum = 1, $category, $span = 20)
+{
+    debug('商品情報を取得します。');
+    //例外処理
+    try {
+        // DBへ接続
+        $dbh = dbConnect();
+        // 件数用のSQL文作成
+        $sql = 'SELECT id FROM product';
+        if (!empty($category)) $sql .= ' WHERE category_id = ' . $category;
+        $data = array();
+        // クエリ実行
+        $stmt = queryPost($dbh, $sql, $data, "common");
+        $rst['total'] = $stmt->rowCount(); //総レコード数
+        $rst['total_page'] = ceil($rst['total'] / $span); //総ページ数
+        if (!$stmt) {
+            return false;
+        }
+
+        // ページング用のSQL文作成
+        $sql = 'SELECT * FROM product';
+        if (!empty($category)) $sql .= ' WHERE category_id = ' . $category;
+        $sql .= ' LIMIT ' . $span . ' OFFSET ' . $currentMinNum;
+        $data = array();
+        debug('SQL：' . $sql);
+        // クエリ実行
+        $stmt = queryPost($dbh, $sql, $data, "common");
+
+        if ($stmt) {
+            // クエリ結果のデータを全レコードを格納
+            $rst['data'] = $stmt->fetchAll();
+            return $rst;
+        } else {
+            return false;
+        }
+    } catch (Exception $e) {
+        error_log('エラー発生:' . $e->getMessage());
+    }
+}
 function getUserOne($u_id)
 {
     debug('user情報を取得します。');
@@ -1185,7 +1210,7 @@ function getUserOne($u_id)
         // DBへ接続
         $dbh = dbConnect();
         // SQL文作成
-        $sql = 'SELECT u.id, u.username, u.age, u.tel, u.zip, u.addr, u.email, u.profpic, u.backgroundimg, a.name
+        $sql = 'SELECT u.id, u.username, u.age, u.tel, u.zip, u.addr, u.email, u.profpic, u.backgroundimg, a.name AS area
         FROM users AS u
         JOIN area AS a
         ON u.area_id = a.id
@@ -1212,7 +1237,7 @@ function getArea()
         // DBへ接続
         $dbh = dbConnect();
         // SQL文作成
-        $sql = 'SELECT * FROM area';
+        $sql = 'SELECT id AS a_id, name AS area FROM area';
         $data = array();
         // クエリ実行
         $stmt = queryPost($dbh, $sql, $data, "common");
@@ -1431,19 +1456,19 @@ function saveImgToDb($profpic, $backgroundimg)
 function pagination($currentPageNum, $totalPageNum, $link = '', $pageColNum = 5)
 {
     // 現在のページが、総ページ数と同じ　かつ　総ページ数が表示項目数以上なら、左にリンク４個出す
-    if ($currentPageNum == $totalPageNum && $totalPageNum >= $pageColNum) {
+    if ($currentPageNum == $totalPageNum && $totalPageNum > $pageColNum) {
         $minPageNum = $currentPageNum - 4;
         $maxPageNum = $currentPageNum;
         // 現在のページが、総ページ数の１ページ前なら、左にリンク３個、右に１個出す
-    } elseif ($currentPageNum == ($totalPageNum - 1) && $totalPageNum >= $pageColNum) {
+    } elseif ($currentPageNum == ($totalPageNum - 1) && $totalPageNum > $pageColNum) {
         $minPageNum = $currentPageNum - 3;
         $maxPageNum = $currentPageNum + 1;
         // 現ページが2の場合は左にリンク１個、右にリンク３個だす。
-    } elseif ($currentPageNum == 2 && $totalPageNum >= $pageColNum) {
+    } elseif ($currentPageNum == 2 && $totalPageNum > $pageColNum) {
         $minPageNum = $currentPageNum - 1;
         $maxPageNum = $currentPageNum + 3;
         // 現ページが1の場合は左に何も出さない。右に５個出す。
-    } elseif ($currentPageNum == 1 && $totalPageNum >= $pageColNum) {
+    } elseif ($currentPageNum == 1 && $totalPageNum > $pageColNum) {
         $minPageNum = $currentPageNum;
         $maxPageNum = 5;
         // 総ページ数が表示項目数より少ない場合は、総ページ数をループのMax、ループのMinを１に設定
@@ -1468,7 +1493,7 @@ function pagination($currentPageNum, $totalPageNum, $link = '', $pageColNum = 5)
         }
         echo '"><a href="?p=' . $i . $link . '">' . $i . '</a></li>';
     }
-    if ($currentPageNum != $maxPageNum) {
+    if ($currentPageNum != $maxPageNum && $maxPageNum > 1) {
         echo '<li class="list-item"><a href="?p=' . $maxPageNum . $link . '">&gt;</a></li>';
     }
     echo '</ul>';
@@ -1500,6 +1525,30 @@ function createMsgRoom($viewData)
         $err_msg['common'] = MSG07;
     }
 }
+function showImg($path)
+{
+    if (empty($path)) {
+        return 'img/sample-img.png';
+    } else {
+        return $path;
+    }
+}
+//GETパラメータ付与
+// $del_key : 付与から取り除きたいGETパラメータのキー
+function appendGetParam($arr_del_key = array())
+{
+    if (!empty($_GET)) {
+        $str = '?';
+        foreach ($_GET as $key => $val) {
+            if (!in_array($key, $arr_del_key, true)) { //取り除きたいパラメータじゃない場合にurlにくっつけるパラメータを生成
+                $str .= $key . '=' . $val . '&';
+            }
+        }
+        $str = mb_substr($str, 0, -1, "UTF-8");
+        return $str;
+    }
+}
+
 function showVariable($var)
 {
     echo "<pre>";
