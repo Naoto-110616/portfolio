@@ -138,7 +138,7 @@ require('goodbook_head.php');
                                 </div>
                                 <div class="profile_list">
                                     <p class="status">area</p>
-                                    <p><?php echo $viewData["name"]; ?></p>
+                                    <p><?php echo $viewData["area"]; ?></p>
                                 </div>
                             </div>
                         </div>

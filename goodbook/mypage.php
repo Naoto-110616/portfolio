@@ -197,7 +197,7 @@ require('goodbook_head.php');
                                 </div>
                                 <div class="profile_list">
                                     <p class="status">area</p>
-                                    <p><?php userInfoIndicate($dbFormData, "name"); ?></p>
+                                    <p><?php userInfoIndicate($dbFormData, "area"); ?></p>
                                 </div>
                             </div>
                         </div>
@@ -394,7 +394,7 @@ require('goodbook_head.php');
                                             <option value="0" <?php if (getFormData('area_id') == 0) echo 'selected'; ?>>Please select</option>
                                             <?php foreach ($dbAreaData as $key => $val) { ?>
                                                 <option value="<?php echo $val['id'] ?>" <?php if (getFormData('area_id') == $val['id']) echo 'selected'; ?>>
-                                                    <?php echo $val['name']; ?>
+                                                    <?php echo $val['area']; ?>
                                                 </option>
                                             <?php } ?>
                                         </select>
