@@ -1126,7 +1126,13 @@ function getUserList($currentMinNum = 1, $area, $span = 20)
         $dbh = dbConnect();
         // 件数用のSQL文作成
         $sql = 'SELECT id FROM users ';
-        if (!empty($area)) $sql .= ' WHERE area_id = ' . $area;
+        $DELETE_FLG_ON = 0;
+        if (!empty($area)) {
+            $sql .= ' WHERE area_id = ' . $area . " AND delete_flg = " . $DELETE_FLG_ON;
+        } else {
+            $sql .= " WHERE delete_flg = " . $DELETE_FLG_ON;
+        }
+        debug("sql中身" . print_r($sql, true));
         $data = array();
         // クエリ実行
         $stmt = queryPost($dbh, $sql, $data, "common");
@@ -1141,7 +1147,13 @@ function getUserList($currentMinNum = 1, $area, $span = 20)
         FROM users AS u
         JOIN area AS a
         ON u.area_id = a.id';
-        if (!empty($area)) $sql .= ' WHERE area_id = ' . $area;
+        if (!empty($area)) {
+            $sql .= ' WHERE area_id = ' . $area . " AND u.delete_flg = " . $DELETE_FLG_ON;
+        } else {
+            $sql .= " WHERE u.delete_flg = " . $DELETE_FLG_ON;
+        }
+        debug("sql中身" . print_r($sql, true));
+        // if (!empty($area)) $sql .= ' WHERE area_id = ' . $area . " AND delete_flg= " . 0;
         $sql .= ' LIMIT ' . $span . ' OFFSET ' . $currentMinNum;
         $data = array();
         debug('SQL：' . $sql);

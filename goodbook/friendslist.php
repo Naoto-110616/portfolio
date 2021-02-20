@@ -21,9 +21,10 @@ debug('取得したユーザー情報：' . print_r($dbFormData, true));
 //================================
 // カレントページのGETパラメータを取得
 $currentPageNum = (!empty($_GET['p'])) ? $_GET['p'] : 1; //デフォルトは１ページ目
-// パラメータに不正な値が入っているかチェック
+// area
 $area = (!empty($_GET['a_id'])) ? $_GET['a_id'] : '';
 
+// パラメータに不正な値が入っているかチェック
 if (!is_int((int)$currentPageNum)) {
     error_log('エラー発生:指定ページに不正な値が入りました');
     header("Location:friendslist.php"); //トップページへ
