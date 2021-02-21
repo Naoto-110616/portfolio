@@ -230,7 +230,6 @@ require("goodbook_head.php");
                     ?>
                         <section class="main_center_element main_center_element3">
                             <div class="icon_img_div">
-                                <!-- <a href="userDetail.php"> -->
                                 <a href="userDetail.php?u_id=<?php echo $val['id'] ?>" class="panel">
                                     <?php if (empty($val["profpic"])) { ?>
                                         <div class="icon_img">
