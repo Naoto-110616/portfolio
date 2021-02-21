@@ -1,0 +1,23 @@
+<?php
+define('MSG01', 'Input Required');
+define('MSG02', 'Not in the form of email');
+define('MSG03', 'password (retype) does not match');
+define('MSG04', 'Half-width alphanumeric characters only');
+define('MSG05', 'Please enter at least 6 characters');
+define('MSG06', 'Please enter within 255 characters');
+define('MSG07', 'mail or password does not match');
+define('MSG08', 'This email is already registered');
+define('MSG09', 'An error has occurred, Please try again after a while');
+define('MSG10', 'Not in the form of phone num');
+define('MSG11', 'Not in the form of zip code');
+define('MSG12', 'The old password is wrong');
+define('MSG13', 'Same as the old password');
+define('MSG14', 'Please enter in letters');
+define('MSG15', 'incorrect');
+define('MSG16', 'Expired');
+define('MSG17', 'Only half-width numbers can be used');
+define('SUC01', 'Password changed');
+define('SUC02', 'Profile chenged');
+define('SUC03', 'sent an e-mail');
+define('SUC04', 'registered');
+define('DELETE_FLG_ON', 0);
