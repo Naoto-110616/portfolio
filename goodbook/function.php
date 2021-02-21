@@ -1,5 +1,9 @@
 <?php
 
+//================================
+//定数
+//================================
+require("constant.php");
 
 //================================
 // log
@@ -60,33 +64,6 @@ function debugLogStart()
     }
 }
 
-
-//================================
-//定数
-//================================
-
-// errormessageを定数に設定
-define('MSG01', 'Input Required');
-define('MSG02', 'Not in the form of email');
-define('MSG03', 'password (retype) does not match');
-define('MSG04', 'Half-width alphanumeric characters only');
-define('MSG05', 'Please enter at least 6 characters');
-define('MSG06', 'Please enter within 255 characters');
-define('MSG07', 'mail or password does not match');
-define('MSG08', 'This email is already registered');
-define('MSG09', 'An error has occurred, Please try again after a while');
-define('MSG10', 'Not in the form of phone num');
-define('MSG11', 'Not in the form of zip code');
-define('MSG12', 'The old password is wrong');
-define('MSG13', 'Same as the old password');
-define('MSG14', 'Please enter in letters');
-define('MSG15', 'incorrect');
-define('MSG16', 'Expired');
-define('MSG17', 'Only half-width numbers can be used');
-define('SUC01', 'Password changed');
-define('SUC02', 'Profile chenged');
-define('SUC03', 'sent an e-mail');
-define('SUC04', 'registered');
 
 //================================
 // validation 関数
@@ -1089,7 +1066,7 @@ function getPost()
     try {
         // DBへ接続
         $dbh = dbConnect();
-        $sql = 'SELECT u.username, u.profpic, p.comment, p.pic1
+        $sql = 'SELECT u.id,u.username, u.profpic, p.comment, p.pic1
         FROM post AS p
         JOIN users AS u
         ON p.user_id = u.id
@@ -1125,13 +1102,8 @@ function getUserList($currentMinNum = 1, $area, $span = 20)
         // DBへ接続
         $dbh = dbConnect();
         // 件数用のSQL文作成
-        $sql = 'SELECT id FROM users ';
-        $DELETE_FLG_ON = 0;
-        if (!empty($area)) {
-            $sql .= ' WHERE area_id = ' . $area . " AND delete_flg = " . $DELETE_FLG_ON;
-        } else {
-            $sql .= " WHERE delete_flg = " . $DELETE_FLG_ON;
-        }
+        $sql = 'SELECT id FROM users WHERE delete_flg=' . DELETE_FLG_ON;
+        if (!empty($area)) $sql .= ' AND area_id = ' . $area;
         debug("sql中身" . print_r($sql, true));
         $data = array();
         // クエリ実行
@@ -1146,14 +1118,10 @@ function getUserList($currentMinNum = 1, $area, $span = 20)
         $sql = 'SELECT u.id, u.profpic, u.username, u.area_id, a.id AS a_id, a.name  AS area
         FROM users AS u
         JOIN area AS a
-        ON u.area_id = a.id';
-        if (!empty($area)) {
-            $sql .= ' WHERE area_id = ' . $area . " AND u.delete_flg = " . $DELETE_FLG_ON;
-        } else {
-            $sql .= " WHERE u.delete_flg = " . $DELETE_FLG_ON;
-        }
+        ON u.area_id = a.id
+        WHERE u.delete_flg=' . DELETE_FLG_ON;
+        if (!empty($area)) $sql .= ' AND area_id = ' . $area;
         debug("sql中身" . print_r($sql, true));
-        // if (!empty($area)) $sql .= ' WHERE area_id = ' . $area . " AND delete_flg= " . 0;
         $sql .= ' LIMIT ' . $span . ' OFFSET ' . $currentMinNum;
         $data = array();
         debug('SQL：' . $sql);
@@ -1560,7 +1528,6 @@ function appendGetParam($arr_del_key = array())
         return $str;
     }
 }
-
 function showVariable($var)
 {
     echo "<pre>";
