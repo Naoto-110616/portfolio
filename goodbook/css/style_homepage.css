@@ -646,7 +646,6 @@ main lower part
 .modalwindow_screen_overall_2,
 .modalwindow_screen_overall_3,
 .modalwindow_screen_overall_4,
-.modalwindow_screen_overall_5,
 .profile_screen_overall {
 	position: absolute;
 	display: none;
@@ -687,8 +686,7 @@ main lower part
 .x-circle1,
 .x-circle2,
 .x-circle3,
-.x-circle4,
-.x-circle5 {
+.x-circle4 {
 	width: 32px;
 	height: 32px;
 	position: absolute;
