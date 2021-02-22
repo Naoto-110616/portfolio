@@ -52,11 +52,12 @@ if ($_POST["uploadIconImg"] || $_POST["uploadBackgroundImg"]) {
     saveImgToDb($profpic, $backgroundimg);
 }
 
-// Area data 取得
 // select box用の変数
+// Area data 取得
 $dbAreaData = getArea();
-// userのareaを取得
+// user post data 取得
 $dbPostData = getMyPostList($_SESSION["user_id"]);
+// user data 取得
 $dbFormData = getUser($_SESSION['user_id']);
 
 debug('取得したユーザー情報：' . print_r($dbFormData, true));
@@ -116,7 +117,9 @@ require('goodbook_head.php');
                     <div class="main_top_content main_top_content_user_info_inside">
                         <nav class="main_top_content main_top_content_user_info_list1">
                             <div class="info_list"><span>post</span></div>
-                            <div class="info_list"><span>data</span></div>
+                            <a href="msgRoomList.php">
+                                <div class="info_list"><span>msg</span></div>
+                            </a>
                             <div class="info_list"><span>friends</span></div>
                             <div class="info_list"><span>photos</span></div>
                             <div class="info_list"><a href="passSetting.php"><span>password</span></a></div>
@@ -396,84 +399,66 @@ require('goodbook_head.php');
                             <div class="edit_form_div">
                                 <form action="" method="post" class="edit_form">
                                     <div class="area-msg">
-                                        <?php
-                                        echo getErrMsg("common");
-                                        ?>
+                                        <?php echo getErrMsg("common"); ?>
                                     </div>
                                     <label class="<?php echo getErrMsglabel("username"); ?>">
                                         name
                                         <input name="username" type="text" value="<?php echo getFormData("username"); ?>">
                                     </label>
                                     <div class="area-msg">
-                                        <?php
-                                        echo getErrMsg("username");
-                                        ?>
+                                        <?php echo getErrMsg("username"); ?>
                                     </div>
                                     <label class="<?php echo getErrMsglabel("tel"); ?>">
                                         tel<span> Please enter without hyphens</span>
                                         <input name="tel" type="text" value="<?php echo getFormData("tel"); ?>">
                                     </label>
                                     <div class="area-msg">
-                                        <?php
-                                        echo getErrMsg("tel");
-                                        ?>
+                                        <?php echo getErrMsg("tel"); ?>
                                     </div>
                                     <label class="<?php echo getErrMsglabel("zip"); ?>">
                                         zip code<span> Please enter without hyphens</span>
                                         <input name="zip" type="text" value="<?php echo getFormData("zip"); ?>">
                                     </label>
                                     <div class="area-msg">
-                                        <?php
-                                        echo getErrMsg("zip");
-                                        ?>
+                                        <?php echo getErrMsg("zip"); ?>
                                     </div>
                                     <label class="<?php echo getErrMsglabel("addr"); ?>">
                                         address
                                         <input name="addr" type="text" value="<?php echo getFormData("addr"); ?>">
                                     </label>
                                     <div class="area-msg">
-                                        <?php
-                                        echo getErrMsg("addr");
-                                        ?>
+                                        <?php echo getErrMsg("addr"); ?>
                                     </div>
                                     <label class="<?php echo getErrMsglabel("age"); ?>">
                                         age
                                         <input name="age" type="number" value="<?php echo getFormData("age"); ?>">
                                     </label>
                                     <div class="area-msg">
-                                        <?php
-                                        echo getErrMsg("age");
-                                        ?>
+                                        <?php echo getErrMsg("age"); ?>
                                     </div>
                                     <label class="<?php echo getErrMsglabel("email"); ?>">
                                         Email
                                         <input name="email" type="text" value="<?php echo getFormData("email"); ?>">
                                     </label>
                                     <div class="area-msg">
-                                        <?php
-                                        echo getErrMsg("email");
-                                        ?>
+                                        <?php echo getErrMsg("email"); ?>
                                     </div>
                                     <label class="<?php if (!empty($err_msg['area_id'])) echo 'err'; ?>">
                                         Area<span class="label-require"></span>
                                         <select name="area_id" id="" class="areaBox">
                                             <option value="0" <?php if (getFormData('area_id') == 0) echo 'selected'; ?>>Please select</option>
                                             <?php foreach ($dbAreaData as $key => $val) { ?>
-                                                <option value="<?php echo $val['id'] ?>" <?php if (getFormData('area_id') == $val['id']) echo 'selected'; ?>>
-                                                    <?php echo $val['area']; ?>
+                                                <option value="<?php echo $val['a_id'] ?>" <?php if (getFormData('area_id') == $val['a_id']) echo 'selected'; ?>>
+                                                    <?php echo $val["area"]; ?>
                                                 </option>
                                             <?php } ?>
                                         </select>
                                     </label>
                                     <div class="area-msg">
-                                        <?php
-                                        if (!empty($err_msg['area_id'])) echo $err_msg['area_id'];
-                                        ?>
+                                        <?php if (!empty($err_msg['area_id'])) echo $err_msg['area_id']; ?>
                                     </div>
                                     <div class="area-msg">
-                                        <?php
-                                        echo getErrMsg("Area");
-                                        ?>
+                                        <?php echo getErrMsg("Area"); ?>
                                     </div>
                                     <label>
                                         <input type="submit" value="change" name="profileChenge">
@@ -568,9 +553,7 @@ require('goodbook_head.php');
             </div>
         </div>
     </article>
-    <?php
-    require("jssrc.php");
-    ?>
+    <?php require("jssrc.php"); ?>
 </body>
 
 </html>
