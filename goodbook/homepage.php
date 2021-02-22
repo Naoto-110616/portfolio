@@ -189,7 +189,7 @@ require("goodbook_head.php");
                             <span class="main_center_icon"><i class="fas fa-plus-circle fa-2x"></i></span>
                         </div>
                         <div class="main_center_comment1">
-                            <p class="comment_make_stories1">Create post</p>
+                            <p class="comment_make_stories1">Create stories</p>
                             <p>Share photos, videos and messages</p>
                         </div>
                     </section>
@@ -291,9 +291,7 @@ require("goodbook_head.php");
                                 </div>
                             </div>
                         </section>
-                    <?php
-                    endforeach;
-                    ?>
+                    <?php endforeach; ?>
                     <section class="main_center_element main_center_element3">
                         <div class="icon_img_div">
                             <img class="icon_img" src="img/homepage_img/A1OgtUoT7SL._AC_SL1500_.jpg" alt="utadahikaru_icon">
