@@ -5,7 +5,7 @@
 require('function.php');
 
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
-debug('「 show user page　');
+debug('「 user detail page　');
 debug('「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「');
 debugLogStart();
 
@@ -29,7 +29,6 @@ if (empty($viewData)) {
     error_log('エラー発生:指定ページに不正な値が入りました');
     header("Location:homepage.php"); //トップページへ
 }
-
 // // post送信されていた場合
 if (!empty($_POST['submit'])) {
     createMsgRoom($viewData);
