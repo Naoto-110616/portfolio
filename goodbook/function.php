@@ -1232,32 +1232,6 @@ function getArea()
         error_log('エラー発生:' . $e->getMessage());
     }
 }
-function getUserArea($area_id)
-{
-    debug("===========================");
-    debug("start getUserArea function");
-    debug("===========================");
-
-    $dbFormData = getUser($_SESSION['user_id']);
-    $_SESSION["area_id"] = $dbFormData["area_id"];
-
-    try {
-        $dbh = dbConnect();
-        $sql = "SELECT name FROM area WHERE id = :area_id";
-        $data = array(":area_id" => $area_id);
-        $stmt = queryPost($dbh, $sql, $data, "common");
-        if ($stmt) {
-            debug("===========================");
-            debug("succes getUserArea function");
-            debug("===========================");
-            return $stmt->fetch(PDO::FETCH_ASSOC);
-        } else {
-            return false;
-        }
-    } catch (Exception $e) {
-        error_log("error:" . $e->getMessage());
-    }
-}
 //================================
 // メール送信
 //================================
@@ -1505,6 +1479,36 @@ function createMsgRoom($viewData)
         $err_msg['common'] = MSG07;
     }
 }
+function getMsgsAndBord($id)
+{
+    debug('msg情報を取得します。');
+    debug('掲示板ID：' . $id);
+    //例外処理
+    try {
+        // DBへ接続
+        $dbh = dbConnect();
+        // SQL文作成
+        $sql = 'SELECT m.id AS m_id, bord_id, send_date, to_user, from_user, send_user, receive_user, msg, b.create_date
+        FROM message AS m
+        RIGHT JOIN bord AS b
+        ON b.id = m.bord_id
+        WHERE b.id = :id ORDER BY send_date ASC
+        -- WHERE b.id = :id AND m.delete_flg = 0 ORDER BY send_date ASC';
+        debug($sql);
+        $data = array(':id' => $id);
+        // クエリ実行
+        $stmt = queryPost($dbh, $sql, $data, "common");
+
+        if ($stmt) {
+            // クエリ結果の全データを返却
+            return $stmt->fetchAll();
+        } else {
+            return false;
+        }
+    } catch (Exception $e) {
+        error_log('エラー発生:' . $e->getMessage());
+    }
+}
 function showImg($path)
 {
     if (empty($path)) {
@@ -1527,6 +1531,11 @@ function appendGetParam($arr_del_key = array())
         $str = mb_substr($str, 0, -1, "UTF-8");
         return $str;
     }
+}
+function getMsgRoomInfo()
+{
+    $dbh = dbConnect();
+    $sql = "SELECT ";
 }
 function showVariable($var)
 {
