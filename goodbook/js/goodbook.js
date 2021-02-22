@@ -178,6 +178,7 @@ $(function () {
 	});
 });
 $(function () {
+	//scrollHeightは要素のスクロールビューの高さを取得するもの
 	$("#js-scroll-bottom").animate(
 		{ scrollTop: $("#js-scroll-bottom")[0].scrollHeight },
 		"fast"
