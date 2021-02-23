@@ -1453,10 +1453,88 @@ function pagination($currentPageNum, $totalPageNum, $link = '', $pageColNum = 5)
     echo '</ul>';
     echo '</div>';
 }
+function validMsg($m_id)
+{
+    // DBから掲示板とメッセージデータを取得
+    $viewData = getMsgsAndBord($m_id);
+    debug('取得したDBデータ：' . print_r($viewData, true));
+    // パラメータに不正な値が入っているかチェック
+    if (empty($viewData)) {
+        error_log('エラー発生:指定ページに不正な値が入りました');
+        header("Location:mypage.php"); //マイページへ
+    }
+    // viewDataから相手のユーザーIDを取り出す
+    $dealUserIds[] = $viewData[0]['send_user'];
+    $dealUserIds[] = $viewData[0]['receive_user'];
+    if (($key = array_search($_SESSION['user_id'], $dealUserIds)) !== false) {
+        unset($dealUserIds[$key]);
+    }
+    $partnerUserId = array_shift($dealUserIds);
+    debug('取得した相手のユーザーID：' . $partnerUserId);
+    // DBから取引相手のユーザー情報を取得
+    if (isset($partnerUserId)) {
+        $partnerUserInfo = getUser($partnerUserId);
+    }
+    // 相手のユーザー情報が取れたかチェック
+    if (empty($partnerUserInfo)) {
+        error_log('エラー発生:相手のユーザー情報が取得できませんでした');
+        header("Location:mypage.php"); //マイページへ
+    }
+    // DBから自分のユーザー情報を取得
+    $myUserInfo = getUser($_SESSION['user_id']);
+    debug('取得したユーザデータ：' . print_r($partnerUserInfo, true));
+    // 自分のユーザー情報が取れたかチェック
+    if (empty($myUserInfo)) {
+        error_log('エラー発生:自分のユーザー情報が取得できませんでした');
+        header("Location:mypage.php"); //マイページへ
+    }
+}
+function createMsg($m_id, $partnerUserId)
+{
+    // post送信されていた場合
+    if (!empty($_POST)) {
+        debug('POST送信があります。');
+
+        //ログイン認証
+        auth();
+
+        //バリデーションチェック
+        $msg = (isset($_POST['msg'])) ? $_POST['msg'] : '';
+        //最大文字数チェック
+        validMaxLen($msg, 'msg', 255);
+        //未入力チェック
+        validRequired($msg, 'msg');
+
+        if (empty($err_msg)) {
+            debug('バリデーションOKです。');
+
+            //例外処理
+            try {
+                // DBへ接続
+                $dbh = dbConnect();
+                // SQL文作成
+                $sql = 'INSERT INTO message (bord_id, send_date, to_user, from_user, msg, create_date) VALUES (:b_id, :send_date, :to_user, :from_user, :msg, :date)';
+                $data = array(':b_id' => $m_id, ':send_date' => date('Y-m-d H:i:s'), ':to_user' => $partnerUserId, ':from_user' => $_SESSION['user_id'], ':msg' => $msg, ':date' => date('Y-m-d H:i:s'));
+                // クエリ実行
+                $stmt = queryPost($dbh, $sql, $data, "common");
+
+                // クエリ成功の場合
+                if ($stmt) {
+                    $_POST = array(); //postをクリア
+                    debug('連絡掲示板へ遷移します。');
+                    header("Location: " . $_SERVER['PHP_SELF'] . '?m_id=' . $m_id); //自分自身に遷移する
+                }
+            } catch (Exception $e) {
+                error_log('エラー発生:' . $e->getMessage());
+                $err_msg['common'] = MSG07;
+            }
+        }
+    }
+}
+
 function createMsgRoom($viewData)
 {
     debug('POST送信があります。');
-
     //ログイン認証
     auth();
     //例外処理
@@ -1472,11 +1550,11 @@ function createMsgRoom($viewData)
         // クエリ成功の場合
         if ($stmt) {
             debug('msg pageへ遷移します。');
-            header("Location:msg.php?u_id=" . $viewData["id"] . "&m_id=" . $dbh->lastInsertID()); //連絡掲示板へ
+            header("Location:msg.php?m_id=" . $dbh->lastInsertID()); //連絡掲示板へ
         }
     } catch (Exception $e) {
         error_log('エラー発生:' . $e->getMessage());
-        $err_msg['common'] = MSG07;
+        $err_msg['common'] = MSG09;
     }
 }
 function getMsgsAndBord($id)
@@ -1485,6 +1563,17 @@ function getMsgsAndBord($id)
     debug('掲示板ID：' . $id);
     //例外処理
     try {
+        $dbh = dbConnect();
+        // SQL文作成
+        $sql = 'SELECT * from bord where id = :id';
+        $data = array(':id' => $id);
+        // クエリ実行
+        $stmt = queryPost($dbh, $sql, $data, "common");
+        $rst = $stmt->fetch(PDO::FETCH_ASSOC);
+        debug('掲示板テーブルから取得したdbデータ:' . print_r($rst, true));
+        $delete_flg = $rst['delete_flg'];
+        debug('掲示板テーブルのdelete_flg:' . print_r($delete_flg, true));
+
         // DBへ接続
         $dbh = dbConnect();
         // SQL文作成
@@ -1492,13 +1581,12 @@ function getMsgsAndBord($id)
         FROM message AS m
         RIGHT JOIN bord AS b
         ON b.id = m.bord_id
-        WHERE b.id = :id ORDER BY send_date ASC
-        -- WHERE b.id = :id AND m.delete_flg = 0 ORDER BY send_date ASC';
+        WHERE 1=1 AND b.id = :id ORDER BY send_date ASC
+        -- WHERE 1=1 AND b.id = :id ORDER BY send_date ASC AND m.delete_flg=0';
         debug($sql);
         $data = array(':id' => $id);
         // クエリ実行
         $stmt = queryPost($dbh, $sql, $data, "common");
-
         if ($stmt) {
             // クエリ結果の全データを返却
             return $stmt->fetchAll();
