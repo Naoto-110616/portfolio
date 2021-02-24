@@ -10,9 +10,13 @@ debugLogStart();
 //ログイン認証
 auth();
 
-// user data 取得
-$dbFormData = getUser($_SESSION['user_id']);
+$partnerUserId = '';
+$partnerUserInfo = '';
+$myUserInfo = '';
 
+// user data 取得
+$dbFormData = getUser($_SESSION["user_id"]);
+$viewData = getMsgRoomInfo($dbFormData["id"]);
 ?>
 
 <?php
@@ -33,11 +37,11 @@ require('goodbook_head.php');
                             <h1>msg room</h1>
                         </div>
                         <?php foreach ($viewData["data"] as $key => $val) : ?>
-                            <a href="msg.php?u_id=<?php echo $val["id"] ?>&m_id=<?php $val["m_id"] ?>">
+                            <a href="msg.php?m_id=<?php echo $val["b_id"] ?>">
                                 <div class="msgRoom">
-                                    <img src="<?php echo $val["profpic"]; ?>" alt="">
-                                    <div>
-                                        <p><?php echo $val["name"]; ?></p>
+                                    <div class="msgShelf">
+                                        <img src="<?php echo $val["profpic"]; ?>" alt="<?php echo $val["username"] ?>">
+                                        <p><?php echo $val["username"]; ?></p>
                                     </div>
                                 </div>
                             </a>

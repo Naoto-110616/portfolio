@@ -1296,3 +1296,24 @@ label.err input {
 .area-bord .msg-cnt.msg-right .avatar {
 	float: right;
 }
+/* ===================== */
+/*   msg room page  */
+/* ===================== */
+.msgRoom {
+	padding: 15px;
+}
+.msgRoom > .msgShelf {
+	display: flex;
+	margin-top: 20px;
+	padding: 10px;
+}
+.msgShelf > img {
+	width: 5%;
+	border-radius: 70px;
+}
+.msgShelf > p {
+	margin-left: 10px;
+}
+.msgShelf:hover {
+	background-color: #565656;
+}

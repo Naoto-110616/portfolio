@@ -1352,12 +1352,10 @@ function uploadImg($file, $key)
             }
             // 保存したファイルパスのパーミッション（権限）を変更する
             chmod($path, 0644);
-
             debug('ファイルは正常にアップロードされました');
             debug('ファイルパス：' . $path);
             return $path;
         } catch (RuntimeException $e) {
-
             debug($e->getMessage());
             global $err_msg;
             $err_msg[$key] = $e->getMessage();
@@ -1620,10 +1618,26 @@ function appendGetParam($arr_del_key = array())
         return $str;
     }
 }
-function getMsgRoomInfo()
+function getMsgRoomInfo($id)
 {
-    $dbh = dbConnect();
-    $sql = "SELECT ";
+    try {
+        $dbh = dbConnect();
+        $sql = "SELECT b.id AS b_id ,b.send_user,b.receive_user,u.username,u.profpic
+        FROM bord AS b
+        INNER JOIN users AS u
+        ON b.receive_user = u.id
+        WHERE 1=1 AND send_user= :id AND b.delete_flg = " . DELETE_FLG_ON . " AND u.delete_flg = " . DELETE_FLG_ON;
+        $data = array(":id" => $id);
+        $stmt = queryPost($dbh, $sql, $data, "common");
+        if ($stmt) {
+            $rst['data'] = $stmt->fetchAll();
+            return $rst;
+        } else {
+            return false;
+        }
+    } catch (Exception $e) {
+        error_log('エラー発生:' . $e->getMessage());
+    }
 }
 function showVariable($var)
 {
