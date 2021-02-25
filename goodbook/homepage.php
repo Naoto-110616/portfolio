@@ -189,16 +189,22 @@ require("goodbook_head.php");
                             <span class="main_center_icon"><i class="fas fa-plus-circle fa-2x"></i></span>
                         </div>
                         <div class="main_center_comment1">
-                            <p class="comment_make_stories1">Create stories</p>
+                            <p class="comment_make_stories1">Create a story</p>
                             <p>Share photos, videos and messages</p>
                         </div>
                     </section>
                     <section class="main_center_element main_center_element2">
                         <div class="main_center_element2_share1">
                             <div class="main_icon2">
-                                <span class="main_center_icon"><i class="fas fa-user-circle fa-2x"></i></span>
+                                <?php if (empty($dbFormData["profpic"])) { ?>
+                                    <i class="fas fa-user-circle fa-3x"></i>
+                                <?php } else { ?>
+                                    <span class="main_center_icon">
+                                        <img class="icon_img" src="<?php echo sanitize($dbFormData["profpic"]) ?>">
+                                    </span>
+                                <?php } ?>
                                 <div class="main_center_comment2">
-                                    <h3 class="comment_make_stories">Let's share your feelings</h3>
+                                    <h3>What's on your mind, <?php echo $dbFormData["username"]; ?></h3>
                                 </div>
                             </div>
                         </div>
@@ -270,7 +276,7 @@ require("goodbook_head.php");
                                 </div>
                                 <div class="border"></div>
                                 <div class="main_center_element2_share2">
-                                    <div class="main_center_element2_icon_div">
+                                    <div class="main_center_element2_icon_div good">
                                         <div class="main_center_icon main_live_video_icon">
                                             <i class="far fa-thumbs-up fa-lg"></i>
                                         </div>
@@ -282,7 +288,7 @@ require("goodbook_head.php");
                                         </div>
                                         <p class="icon_button comment_subject">comment</p>
                                     </div>
-                                    <div class="main_center_element2_icon_div">
+                                    <div class="main_center_element2_icon_div share">
                                         <div class="main_center_icon main_activity_icon">
                                             <i class="fas fa-reply fa-lg"></i>
                                         </div>

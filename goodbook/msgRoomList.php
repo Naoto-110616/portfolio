@@ -65,7 +65,7 @@ require('goodbook_head.php');
                             ?>
                             <div class="msgRoom">
                                 <div class="createMsg">
-                                    <a href="friendslist.php">
+                                    <a href="friends.php">
                                         <p>msg roomはありません、誰かにmsgを送りましょう。</p>
                                     </a>
                                 </div>

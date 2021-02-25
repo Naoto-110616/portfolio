@@ -104,7 +104,7 @@ require('goodbook_head.php');
                                     <i class="fas fa-user-circle fa-4x"></i>
                                 </div>
                             <?php } else { ?>
-                                <img class="myIcon_img" src="<?php echo sanitize($dbFormData["profpic"]) ?>" style="margin-top: 6px; margin-left: 8px;">
+                                <img class="myIcon_img" src="<?php echo sanitize($dbFormData["profpic"]) ?>">
                             <?php } ?>
                         </div>
                         <div class="usernamediv">
@@ -116,18 +116,18 @@ require('goodbook_head.php');
                 <div class="main_top_content main_top_content_user_info">
                     <div class="main_top_content main_top_content_user_info_inside">
                         <nav class="main_top_content main_top_content_user_info_list1">
-                            <div class="info_list"><span>post</span></div>
+                            <div class="info_list"><span>Posts</span></div>
                             <a href="msgRoomList.php">
-                                <div class="info_list"><span>msg</span></div>
+                                <div class="info_list"><span>Msg</span></div>
                             </a>
-                            <div class="info_list"><span>friends</span></div>
-                            <div class="info_list"><span>photos</span></div>
-                            <div class="info_list"><a href="passSetting.php"><span>password</span></a></div>
+                            <div class="info_list"><span>Friends</span></div>
+                            <div class="info_list"><span>Photos</span></div>
+                            <div class="info_list"><a href="passSetting.php"><span>Password</span></a></div>
                         </nav>
                         <div class="main_top_content main_top_content_user_info_list2">
                             <div class="edit">
                                 <i class="fas fa-pen"></i>
-                                <span>editprofile</span>
+                                <span>Editprofile</span>
                             </div>
                             <div class="info_list"><i class="fas fa-eye"></i></div>
                             <div class="info_list"><i class="fas fa-search"></i></div>
@@ -175,31 +175,31 @@ require('goodbook_head.php');
                                 </div>
                                 <div class="mypage_border"></div>
                                 <div class="profile_list">
-                                    <p class="status">name</p>
+                                    <p class="status">Name</p>
                                     <p><?php userInfoIndicate($dbFormData, "username"); ?></p>
                                 </div>
                                 <div class="profile_list">
-                                    <p class="status">tel</p>
+                                    <p class="status">Tel</p>
                                     <p><?php userInfoIndicate($dbFormData, "tel"); ?></p>
                                 </div>
                                 <div class="profile_list">
-                                    <p class="status">zip code</p>
+                                    <p class="status">Zip code</p>
                                     <p><?php userInfoIndicate($dbFormData, "zip"); ?></p>
                                 </div>
                                 <div class="profile_list">
-                                    <p class="status">addr</p>
+                                    <p class="status">Addr</p>
                                     <p><?php userInfoIndicate($dbFormData, "addr"); ?></p>
                                 </div>
                                 <div class="profile_list">
-                                    <p class="status">age</p>
+                                    <p class="status">Age</p>
                                     <p><?php userInfoIndicate($dbFormData, "age"); ?></p>
                                 </div>
                                 <div class="profile_list">
-                                    <p class="status">email</p>
+                                    <p class="status">Email</p>
                                     <p><?php userInfoIndicate($dbFormData, "email"); ?></p>
                                 </div>
                                 <div class="profile_list">
-                                    <p class="status">area</p>
+                                    <p class="status">Area</p>
                                     <p><?php userInfoIndicate($dbFormData, "area"); ?></p>
                                 </div>
                             </div>

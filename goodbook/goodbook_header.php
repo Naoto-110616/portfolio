@@ -18,7 +18,7 @@
         <div class="header_center_icon"><i class="fas fa-user-friends fa-2x"></i></div>
         <div class="header_center_icon"><i class="fas fa-tv fa-2x"></i></div>
         <div class="header_center_icon">
-            <a class="to_friendslist" href="friendslist.php"><i class="fas fa-users fa-2x"></i></a>
+            <a class="to_friends" href="friends.php"><i class="fas fa-users fa-2x"></i></a>
         </div>
         <div class="header_center_icon"><i class="fas fa-dice-d6 fa-2x"></i></div>
     </div>
