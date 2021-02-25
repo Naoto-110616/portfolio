@@ -983,6 +983,29 @@ function auth()
     debug("end auth function");
     debug("===========================");
 }
+function isLogin()
+{
+    // ログインしている場合
+    if (!empty($_SESSION['login_date'])) {
+        debug('ログイン済みユーザーです。');
+
+        // 現在日時が最終ログイン日時＋有効期限を超えていた場合
+        if (($_SESSION['login_date'] + $_SESSION['login_limit']) < time()) {
+            debug('ログイン有効期限オーバーです。');
+
+            // セッションを削除（ログアウトする）
+            session_destroy();
+            return false;
+        } else {
+            debug('ログイン有効期限以内です。');
+            return true;
+        }
+    } else {
+        debug('未ログインユーザーです。');
+        return false;
+    }
+}
+
 function createPost($edit_flg, $comment, $pic1, $p_id)
 {
     debug("===========================");
@@ -1309,6 +1332,35 @@ function makeRandKey($length = 8)
     }
     return $str;
 }
+function isLike($u_id, $f_id)
+{
+    debug('友達か確認します。');
+    debug('ユーザーID：' . $u_id);
+    debug('friendID：' . $f_id);
+    //例外処理
+    try {
+        // DBへ接続
+        $dbh = dbConnect();
+        // SQL文作成
+        $sql = 'SELECT * FROM friends WHERE friend_id = :f_id AND user_id = :u_id';
+        $data = array(':u_id' => $u_id, ':f_id' => $f_id);
+        // クエリ実行
+        $stmt = queryPost($dbh, $sql, $data, "common");
+
+        if ($stmt->rowCount()) {
+            debug('友達です');
+            return true;
+        } else {
+            debug('友達ではありません');
+            return false;
+        }
+    } catch (Exception $e) {
+        error_log('エラー発生:' . $e->getMessage());
+    }
+}
+//================================
+// img
+//================================
 // 画像処理
 function uploadImg($file, $key)
 {
@@ -1365,10 +1417,6 @@ function uploadImg($file, $key)
     debug("end upload img function");
     debug("===========================");
 }
-
-//================================
-// img
-//================================
 function saveImgToDb($profpic, $backgroundimg)
 {
     debug("===========================");
@@ -1451,42 +1499,42 @@ function pagination($currentPageNum, $totalPageNum, $link = '', $pageColNum = 5)
     echo '</ul>';
     echo '</div>';
 }
-function validMsg($m_id)
-{
-    // DBから掲示板とメッセージデータを取得
-    $viewData = getMsgsAndBord($m_id);
-    debug('取得したDBデータ：' . print_r($viewData, true));
-    // パラメータに不正な値が入っているかチェック
-    if (empty($viewData)) {
-        error_log('エラー発生:指定ページに不正な値が入りました');
-        header("Location:mypage.php"); //マイページへ
-    }
-    // viewDataから相手のユーザーIDを取り出す
-    $dealUserIds[] = $viewData[0]['send_user'];
-    $dealUserIds[] = $viewData[0]['receive_user'];
-    if (($key = array_search($_SESSION['user_id'], $dealUserIds)) !== false) {
-        unset($dealUserIds[$key]);
-    }
-    $partnerUserId = array_shift($dealUserIds);
-    debug('取得した相手のユーザーID：' . $partnerUserId);
-    // DBから取引相手のユーザー情報を取得
-    if (isset($partnerUserId)) {
-        $partnerUserInfo = getUser($partnerUserId);
-    }
-    // 相手のユーザー情報が取れたかチェック
-    if (empty($partnerUserInfo)) {
-        error_log('エラー発生:相手のユーザー情報が取得できませんでした');
-        header("Location:mypage.php"); //マイページへ
-    }
-    // DBから自分のユーザー情報を取得
-    $myUserInfo = getUser($_SESSION['user_id']);
-    debug('取得したユーザデータ：' . print_r($partnerUserInfo, true));
-    // 自分のユーザー情報が取れたかチェック
-    if (empty($myUserInfo)) {
-        error_log('エラー発生:自分のユーザー情報が取得できませんでした');
-        header("Location:mypage.php"); //マイページへ
-    }
-}
+// function validMsg($m_id)
+// {
+//     // DBから掲示板とメッセージデータを取得
+//     $viewData = getMsgsAndBord($m_id);
+//     debug('取得したDBデータ：' . print_r($viewData, true));
+//     // パラメータに不正な値が入っているかチェック
+//     if (empty($viewData)) {
+//         error_log('エラー発生:指定ページに不正な値が入りました');
+//         header("Location:mypage.php"); //マイページへ
+//     }
+//     // viewDataから相手のユーザーIDを取り出す
+//     $dealUserIds[] = $viewData[0]['send_user'];
+//     $dealUserIds[] = $viewData[0]['receive_user'];
+//     if (($key = array_search($_SESSION['user_id'], $dealUserIds)) !== false) {
+//         unset($dealUserIds[$key]);
+//     }
+//     $partnerUserId = array_shift($dealUserIds);
+//     debug('取得した相手のユーザーID：' . $partnerUserId);
+//     // DBから取引相手のユーザー情報を取得
+//     if (isset($partnerUserId)) {
+//         $partnerUserInfo = getUser($partnerUserId);
+//     }
+//     // 相手のユーザー情報が取れたかチェック
+//     if (empty($partnerUserInfo)) {
+//         error_log('エラー発生:相手のユーザー情報が取得できませんでした');
+//         header("Location:mypage.php"); //マイページへ
+//     }
+//     // DBから自分のユーザー情報を取得
+//     $myUserInfo = getUser($_SESSION['user_id']);
+//     debug('取得したユーザデータ：' . print_r($partnerUserInfo, true));
+//     // 自分のユーザー情報が取れたかチェック
+//     if (empty($myUserInfo)) {
+//         error_log('エラー発生:自分のユーザー情報が取得できませんでした');
+//         header("Location:mypage.php"); //マイページへ
+//     }
+// }
 function createMsg($m_id, $partnerUserId)
 {
     // post送信されていた場合

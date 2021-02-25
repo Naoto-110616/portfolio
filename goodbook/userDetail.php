@@ -69,7 +69,7 @@ require('goodbook_head.php');
                                     <i class="fas fa-user-circle fa-4x"></i>
                                 </div>
                             <?php } else { ?>
-                                <img class="myIcon_img" src="<?php echo sanitize($viewData["profpic"]) ?>" style="margin-top: 6px; margin-left: 8px;">
+                                <img class="myIcon_img" src="<?php echo sanitize($viewData["profpic"]) ?>">
                             <?php } ?>
                         </div>
                         <div class="usernamediv">
@@ -81,15 +81,18 @@ require('goodbook_head.php');
                 <div class="main_top_content main_top_content_user_info">
                     <div class="main_top_content main_top_content_user_info_inside">
                         <nav class="main_top_content main_top_content_user_info_list1">
-                            <div class="info_list"><span>post</span></div>
-                            <div class="info_list"><span>data</span></div>
-                            <div class="info_list"><span>friends</span></div>
-                            <div class="info_list"><span>photos</span></div>
+                            <div class="info_list"><span>Posts</span></div>
+                            <div class="info_list"><span>Data</span></div>
+                            <div class="info_list"><span>Friends</span></div>
+                            <div class="info_list"><span>Photos</span></div>
                         </nav>
                         <div class="main_top_content main_top_content_user_info_list2">
+                            <i class="fa fa-heart icn-like js-click-like fa-lg <?php if (isLike($_SESSION['user_id'], $viewData['id'])) echo 'active'; ?>" aria-hidden="true" data-friendid="<?php echo sanitize($viewData['id']); ?>">
+                            </i>
+                            <p class="friendMsg">Add Friends</p>
                             <form action="" method="post">
-                                <div class="edit">
-                                    <i class="far fa-comment-dots fa-lg"></i>
+                                <div class="message">
+                                    <i class="far fa-comment-dots fa-lg js-click-create-msg-room"></i>
                                     <input type="submit" value="message" name="submit" class="" style="background:none; border:none; outline:none; font-size:16px">
                                 </div>
                             </form>
@@ -108,7 +111,7 @@ require('goodbook_head.php');
                         <div class="my_profile">
                             <div class="myprofile_inside">
                                 <div class="myprofile_title">
-                                    <h2>myprofile</h2>
+                                    <h2>User Profile</h2>
                                 </div>
                                 <div class="mypage_border"></div>
                                 <div class="profile_list">
@@ -137,7 +140,7 @@ require('goodbook_head.php');
                                 </div>
                                 <div class="profile_list">
                                     <p class="status">area</p>
-                                    <p><?php echo $viewData["area"]; ?></p>
+                                    <p><?php userInfoIndicate($viewData, "area"); ?></p>
                                 </div>
                             </div>
                         </div>
@@ -145,32 +148,8 @@ require('goodbook_head.php');
                             <div class="share_post">
                                 <div class="share_post_inside">
                                     <div class="share_post_content">
-                                        <div class="share_icon_div">
-                                            <i class="fas fa-user-circle fa-2x"></i>
-                                        </div>
                                         <div class="share_feelings">
-                                            <h3 class="">Let's share your feeling</h3>
-                                        </div>
-                                    </div>
-                                    <div class="mypage_border"></div>
-                                    <div class="share_list">
-                                        <div class="share_list">
-                                            <div class="">
-                                                <i class="fas fa-video fa-lg"></i>
-                                            </div>
-                                            <p class="">LiveVideo</p>
-                                        </div>
-                                        <div class="share_list">
-                                            <div class="">
-                                                <i class="far fa-images fa-lg"></i>
-                                            </div>
-                                            <p class="">Picture&Video</p>
-                                        </div>
-                                        <div class="share_list">
-                                            <div class="">
-                                                <i class="far fa-smile-wink fa-lg"></i>
-                                            </div>
-                                            <p class="">Activity</p>
+                                            <h3 class="">Posts</h3>
                                         </div>
                                     </div>
                                 </div>
