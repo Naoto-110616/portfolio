@@ -16,7 +16,8 @@ $myUserInfo = '';
 
 // user data 取得
 $dbFormData = getUser($_SESSION["user_id"]);
-$viewData = getMsgRoomInfo($dbFormData["id"]);
+$receiveMsgRoom = getReceiveMsgRoomInfo($dbFormData["id"]);
+$sendMsgRoom = getSendMsgRoomInfo($dbFormData["id"]);
 ?>
 
 <?php
@@ -36,16 +37,40 @@ require('goodbook_head.php');
                         <div>
                             <h1>msg room</h1>
                         </div>
-                        <?php foreach ($viewData["data"] as $key => $val) : ?>
-                            <a href="msg.php?m_id=<?php echo $val["b_id"] ?>">
-                                <div class="msgRoom">
-                                    <div class="msgShelf">
-                                        <img src="<?php echo $val["profpic"]; ?>" alt="<?php echo $val["username"] ?>">
-                                        <p><?php echo $val["username"]; ?></p>
+                        <?php if (!empty($receiveMsgRoom["data"])) { ?>
+                            <?php foreach ($receiveMsgRoom["data"] as $key => $val) : ?>
+                                <a href="msg.php?m_id=<?php echo $val["b_id"] ?>">
+                                    <div class="msgRoom">
+                                        <div class="msgShelf">
+                                            <img src="<?php echo $val["profpic"]; ?>" alt="<?php echo $val["username"] ?>">
+                                            <p><?php echo $val["username"]; ?></p>
+                                        </div>
                                     </div>
+                                </a>
+                            <?php
+                            endforeach;
+                        } elseif (!empty($sendMsgRoom["data"])) {
+                            foreach ($sendMsgRoom["data"] as $key => $val) : ?>
+                                <a href="msg.php?m_id=<?php echo $val["b_id"] ?>">
+                                    <div class="msgRoom">
+                                        <div class="msgShelf">
+                                            <img src="<?php echo $val["profpic"]; ?>" alt="<?php echo $val["username"] ?>">
+                                            <p><?php echo $val["username"]; ?></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            <?php
+                            endforeach;
+                        } else {
+                            ?>
+                            <div class="msgRoom">
+                                <div class="createMsg">
+                                    <a href="friendslist.php">
+                                        <p>msg roomはありません、誰かにmsgを送りましょう。</p>
+                                    </a>
                                 </div>
-                            </a>
-                        <?php endforeach; ?>
+                            </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>

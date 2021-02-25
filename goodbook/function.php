@@ -1537,6 +1537,20 @@ function createMsgRoom($viewData)
     auth();
     //例外処理
     try {
+        // msgroom 一つのみの作成
+        // $dbh = dbConnect();
+        // $sql = "SELECT send_user,receive_user FROM bord WHERE 1=1";
+        // $data = array();
+        // $stmt = queryPost($dbh, $sql, $data, "common");
+        // $rst = $stmt->fetchAll();
+        // $send_user = (array_column($rst, "send_user"));
+        // $result = (array_search($_SESSION["user_id"], $send_user));
+        // $receive_user = (array_column($rst, "receive_user"));
+        // $result2 = (array_search($viewData["id"], $receive_user));
+        // debug("l;kasjfl;ksajdflkjsadlf;");
+        // debug(print_r($result, true));
+        // debug(print_r($result2, true));
+        // if (!($result) && !($result2)) {
         // DBへ接続
         $dbh = dbConnect();
         // SQL文作成
@@ -1550,6 +1564,10 @@ function createMsgRoom($viewData)
             debug('msg pageへ遷移します。');
             header("Location:msg.php?m_id=" . $dbh->lastInsertID()); //連絡掲示板へ
         }
+        // } else {
+        //     debug("already created room");
+        //     header("Location:homepage.php");
+        // }
     } catch (Exception $e) {
         error_log('エラー発生:' . $e->getMessage());
         $err_msg['common'] = MSG09;
@@ -1563,7 +1581,7 @@ function getMsgsAndBord($id)
     try {
         $dbh = dbConnect();
         // SQL文作成
-        $sql = 'SELECT * from bord where id = :id';
+        $sql = 'SELECT * FROM bord WHERE id = :id';
         $data = array(':id' => $id);
         // クエリ実行
         $stmt = queryPost($dbh, $sql, $data, "common");
@@ -1618,7 +1636,7 @@ function appendGetParam($arr_del_key = array())
         return $str;
     }
 }
-function getMsgRoomInfo($id)
+function getReceiveMsgRoomInfo($id)
 {
     try {
         $dbh = dbConnect();
@@ -1626,7 +1644,28 @@ function getMsgRoomInfo($id)
         FROM bord AS b
         INNER JOIN users AS u
         ON b.receive_user = u.id
-        WHERE 1=1 AND send_user= :id AND b.delete_flg = " . DELETE_FLG_ON . " AND u.delete_flg = " . DELETE_FLG_ON;
+        WHERE 1=1 AND b.send_user= :id AND b.delete_flg = " . DELETE_FLG_ON . " AND u.delete_flg = " . DELETE_FLG_ON;
+        $data = array(":id" => $id);
+        $stmt = queryPost($dbh, $sql, $data, "common");
+        if ($stmt) {
+            $rst['data'] = $stmt->fetchAll();
+            return $rst;
+        } else {
+            return false;
+        }
+    } catch (Exception $e) {
+        error_log('エラー発生:' . $e->getMessage());
+    }
+}
+function getSendMsgRoomInfo($id)
+{
+    try {
+        $dbh = dbConnect();
+        $sql = "SELECT b.id AS b_id ,b.send_user,b.receive_user,u.username,u.profpic
+        FROM bord AS b
+        INNER JOIN users AS u
+        ON b.send_user = u.id
+        WHERE 1=1 AND b.receive_user= :id AND b.delete_flg = " . DELETE_FLG_ON . " AND u.delete_flg = " . DELETE_FLG_ON;
         $data = array(":id" => $id);
         $stmt = queryPost($dbh, $sql, $data, "common");
         if ($stmt) {
