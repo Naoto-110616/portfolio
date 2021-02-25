@@ -85,6 +85,21 @@ $(function () {
 		$(this).toggleClass("Retentioncolor_blue");
 	});
 });
+// 要改善　ボタン切り分け
+// // good button
+// $(function () {
+// 	$(".good").click(function () {
+// 		$(".good_subject").toggleClass("Retentioncolor_blue");
+// 		$(".fa-thumbs-up").toggleClass("Retentioncolor_blue");
+// 	});
+// });
+// // share button
+// $(function () {
+// 	$(".share").click(function () {
+// 		$(".share_subject").toggleClass("Retentioncolor_blue");
+// 		$(".fa-reply").toggleClass("Retentioncolor_blue");
+// 	});
+// });
 
 // ダークモード切り替え
 $(function () {
@@ -147,36 +162,36 @@ $(function () {
 	});
 });
 
-$(function () {
-	// 画像ライブプレビュー
-	var $dropArea = $(".area-drop");
-	var $fileInput = $(".input-file");
-	$dropArea.on("dragover", function (e) {
-		e.stopPropagation();
-		e.preventDefault();
-		$(this).css("border", "3px #ccc dashed");
-	});
-	$dropArea.on("dragleave", function (e) {
-		e.stopPropagation();
-		e.preventDefault();
-		$(this).css("border", "none");
-	});
-	$fileInput.on("change", function (e) {
-		$dropArea.css("border", "none");
-		var file = this.files[0], // 2. files配列にファイルが入っています
-			$img = $(this).siblings(".prev-img"), // 3. jQueryのsiblingsメソッドで兄弟のimgを取得
-			fileReader = new FileReader(); // 4. ファイルを読み込むFileReaderオブジェクト
+// $(function () {
+// 	// 画像ライブプレビュー
+// 	var $dropArea = $(".area-drop");
+// 	var $fileInput = $(".input-file");
+// 	$dropArea.on("dragover", function (e) {
+// 		e.stopPropagation();
+// 		e.preventDefault();
+// 		$(this).css("border", "3px #ccc dashed");
+// 	});
+// 	$dropArea.on("dragleave", function (e) {
+// 		e.stopPropagation();
+// 		e.preventDefault();
+// 		$(this).css("border", "none");
+// 	});
+// 	$fileInput.on("change", function (e) {
+// 		$dropArea.css("border", "none");
+// 		var file = this.files[0], // 2. files配列にファイルが入っています
+// 			$img = $(this).siblings(".prev-img"), // 3. jQueryのsiblingsメソッドで兄弟のimgを取得
+// 			fileReader = new FileReader(); // 4. ファイルを読み込むFileReaderオブジェクト
 
-		// 5. 読み込みが完了した際のイベントハンドラ。imgのsrcにデータをセット
-		fileReader.onload = function (event) {
-			// 読み込んだデータをimgに設定
-			$img.attr("src", event.target.result).show();
-		};
+// 		// 5. 読み込みが完了した際のイベントハンドラ。imgのsrcにデータをセット
+// 		fileReader.onload = function (event) {
+// 			// 読み込んだデータをimgに設定
+// 			$img.attr("src", event.target.result).show();
+// 		};
 
-		// 6. 画像読み込み
-		fileReader.readAsDataURL(file);
-	});
-});
+// 		// 6. 画像読み込み
+// 		fileReader.readAsDataURL(file);
+// 	});
+// });
 $(function () {
 	//scrollHeightは要素のスクロールビューの高さを取得するもの
 	$("#js-scroll-bottom").animate(
@@ -184,3 +199,28 @@ $(function () {
 		"fast"
 	);
 });
+// friend 登録機能
+var $like, $FriendId;
+$like = $(".js-click-like") || null; //nullというのはnull値という値で、「変数の中身は空ですよ」と明示するためにつかう値
+$FriendId = $like.data("friendid") || null;
+// 数値の0はfalseと判定されてしまう。friend_idが0の場合もありえるので、0もtrueとする場合にはundefinedとnullを判定する
+if ($FriendId !== undefined && $FriendId !== null) {
+	$like.on("click", function () {
+		var $this = $(this);
+		$.ajax({
+			type: "POST",
+			url: "ajaxFriends.php",
+			data: {
+				friendId: $FriendId,
+			},
+		})
+			.done(function (data) {
+				console.log("Ajax Success");
+				// クラス属性をtoggleでつけ外しする
+				$this.toggleClass("active");
+			})
+			.fail(function (msg) {
+				console.log("Ajax Error");
+			});
+	});
+}
