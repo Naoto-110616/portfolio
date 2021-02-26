@@ -1587,18 +1587,20 @@ function createMsgRoom($viewData)
     try {
         // msgroom 一つのみの作成
         // $dbh = dbConnect();
-        // $sql = "SELECT send_user,receive_user FROM bord WHERE 1=1";
-        // $data = array();
+        // $sql = "SELECT send_user,receive_user FROM bord WHERE 1=1 AND send_user=:u_id";
+        // $data = array(":u_id" => $_SESSION["user_id"]);
         // $stmt = queryPost($dbh, $sql, $data, "common");
         // $rst = $stmt->fetchAll();
         // $send_user = (array_column($rst, "send_user"));
+        // debug(print_r($send_user, true));
         // $result = (array_search($_SESSION["user_id"], $send_user));
-        // $receive_user = (array_column($rst, "receive_user"));
-        // $result2 = (array_search($viewData["id"], $receive_user));
-        // debug("l;kasjfl;ksajdflkjsadlf;");
         // debug(print_r($result, true));
+        // $receive_user = (array_column($rst, "receive_user"));
+        // debug(print_r($receive_user, true));
+        // $result2 = (array_search($viewData["id"], $receive_user));
         // debug(print_r($result2, true));
-        // if (!($result) && !($result2)) {
+        // $resultCount = $stmt->rowCount();
+        // if (isset($result) && isset($result2)) {
         // DBへ接続
         $dbh = dbConnect();
         // SQL文作成
@@ -1714,6 +1716,27 @@ function getSendMsgRoomInfo($id)
         INNER JOIN users AS u
         ON b.send_user = u.id
         WHERE 1=1 AND b.receive_user= :id AND b.delete_flg = " . DELETE_FLG_ON . " AND u.delete_flg = " . DELETE_FLG_ON;
+        $data = array(":id" => $id);
+        $stmt = queryPost($dbh, $sql, $data, "common");
+        if ($stmt) {
+            $rst['data'] = $stmt->fetchAll();
+            return $rst;
+        } else {
+            return false;
+        }
+    } catch (Exception $e) {
+        error_log('エラー発生:' . $e->getMessage());
+    }
+}
+function getfriendsList($id)
+{
+    try {
+        $dbh = dbConnect();
+        $sql = "SELECT friend_id AS f_id ,u.username,u.profpic
+        FROM friends AS f
+        INNER JOIN users AS u
+        ON f.friend_id = u.id
+        WHERE 1=1 AND f.user_id= :id AND f.delete_flg = " . DELETE_FLG_ON . " AND u.delete_flg = " . DELETE_FLG_ON;
         $data = array(":id" => $id);
         $stmt = queryPost($dbh, $sql, $data, "common");
         if ($stmt) {

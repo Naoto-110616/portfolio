@@ -15,7 +15,9 @@
         <div class="header_center_icon">
             <a class="to_homepage" href="homepage.php"><i class="fas fa-home fa-2x"></i></a>
         </div>
-        <div class="header_center_icon"><i class="fas fa-user-friends fa-2x"></i></div>
+        <div class="header_center_icon">
+            <a href="friendsList.php"><i class=" fas fa-user-friends fa-2x"></i></a>
+        </div>
         <div class="header_center_icon"><i class="fas fa-tv fa-2x"></i></div>
         <div class="header_center_icon">
             <a class="to_friends" href="friends.php"><i class="fas fa-users fa-2x"></i></a>
