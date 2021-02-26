@@ -43,7 +43,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
 <?php
-$siteTitle = "list of friends";
+$siteTitle = "friends";
 require("goodbook_head.php");
 ?>
 

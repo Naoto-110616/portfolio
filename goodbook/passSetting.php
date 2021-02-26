@@ -19,7 +19,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ?>
 
 <?php
-$siteTitle = "password Setting";
+$siteTitle = "password setting";
 require("goodbook_head.php");
 ?>
 

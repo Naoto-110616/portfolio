@@ -15,7 +15,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ?>
 
 <?php
-$siteTitle = "Sign up";
+$siteTitle = "sign up";
 require("head.php");
 ?>
 

@@ -10,10 +10,6 @@ debugLogStart();
 //ログイン認証
 auth();
 
-$partnerUserId = '';
-$partnerUserInfo = '';
-$myUserInfo = '';
-
 // user data 取得
 $dbFormData = getUser($_SESSION["user_id"]);
 $receiveMsgRoom = getReceiveMsgRoomInfo($dbFormData["id"]);
@@ -21,11 +17,9 @@ $sendMsgRoom = getSendMsgRoomInfo($dbFormData["id"]);
 ?>
 
 <?php
-$siteTitle = 'mypage';
+$siteTitle = 'msg room';
 require('goodbook_head.php');
 ?>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
-
 
 <body>
     <?php require("goodbook_header.php") ?>

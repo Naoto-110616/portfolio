@@ -120,7 +120,9 @@ require('goodbook_head.php');
                             <a href="msgRoomList.php">
                                 <div class="info_list"><span>Msg</span></div>
                             </a>
-                            <div class="info_list"><span>Friends</span></div>
+                            <a href="friendsList.php">
+                                <div class="info_list"><span>Friends</span></div>
+                            </a>
                             <div class="info_list"><span>Photos</span></div>
                             <div class="info_list"><a href="passSetting.php"><span>Password</span></a></div>
                         </nav>
