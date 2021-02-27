@@ -29,8 +29,8 @@ if (empty($viewData)) {
     error_log('エラー発生:指定ページに不正な値が入りました');
     header("Location:homepage.php"); //トップページへ
 }
-// // post送信されていた場合
-if (!empty($_POST['submit'])) {
+// post送信されていた場合
+if (!empty($_POST['createMsgRoom'])) {
     createMsgRoom($viewData);
 }
 
@@ -83,17 +83,17 @@ require('goodbook_head.php');
                         <nav class="main_top_content main_top_content_user_info_list1">
                             <div class="info_list"><span>Posts</span></div>
                             <div class="info_list"><span>Data</span></div>
-                            <div class="info_list"><span>Friends</span></div>
+                            <a href="friendsList.php<?php echo "?u_id=" . $viewData["id"] ?>">
+                                <div class="info_list"><span>Friends</span></div>
+                            </a>
                             <div class="info_list"><span>Photos</span></div>
                         </nav>
-                        <div class="main_top_content main_top_content_user_info_list2">
-                            <i class="fa fa-heart icn-like js-click-like fa-lg <?php if (isLike($_SESSION['user_id'], $viewData['id'])) echo 'active'; ?>" aria-hidden="true" data-friendid="<?php echo sanitize($viewData['id']); ?>">
-                            </i>
-                            <p class="friendMsg">Add Friends</p>
+                        <div class="main_top_content main_top_content_user_detail_info_list2">
+                            <span class="friendMsg js-click-like <?php if (isLike($_SESSION['user_id'], $viewData['id'])) echo 'active'; ?>" aria-hidden="true" data-friendid="<?php echo sanitize($viewData['id']); ?>">Follow</span>
                             <form action="" method="post">
                                 <div class="message">
                                     <i class="far fa-comment-dots fa-lg js-click-create-msg-room"></i>
-                                    <input type="submit" value="message" name="submit" class="" style="background:none; border:none; outline:none; font-size:16px">
+                                    <input type="submit" value="message" name="createMsgRoom" class="" style="background:none; border:none; outline:none; font-size:16px">
                                 </div>
                             </form>
                             <div class="info_list"><i class="fas fa-eye"></i></div>
