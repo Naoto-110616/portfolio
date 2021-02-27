@@ -534,7 +534,14 @@ a {
 	display: flex;
 	align-items: center;
 	top: 12px;
-	left: 670px;
+	left: 180%;
+}
+.main_top_content_user_detail_info_list2 {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	top: 12px;
+	left: 220%;
 }
 .info_list {
 	padding: 10px;
@@ -556,13 +563,23 @@ a {
 	background-color: #565656;
 	border-radius: 10px;
 }
-.icn-like {
+.friendMsg {
 	float: right;
-	color: #ddd;
+	padding: 5px;
+	color: #565656;
+	background: #dddddd;
+	border-radius: 20px;
+	margin-right: 5px;
 }
-.icn-like.active {
+.friendMsg:hover {
+	background: #2d88ff;
+}
+.friendMsg.active {
 	float: right;
-	color: #fe8a8b;
+	padding: 5px;
+	color: #dddddd;
+	background: #2d88ff;
+	border-radius: 20px;
 }
 /* 「「「「「「「「「「「
 main lower part
@@ -1086,7 +1103,7 @@ a.panel:hover {
 .comment_make_stories,
 select,
 .message:hover,
-.icn-like,
+.friendMsg,
 input[type="submit"] {
 	cursor: pointer;
 }
