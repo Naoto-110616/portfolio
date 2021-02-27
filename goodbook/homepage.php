@@ -196,13 +196,15 @@ require("goodbook_head.php");
                     <section class="main_center_element main_center_element2">
                         <div class="main_center_element2_share1">
                             <div class="main_icon2">
-                                <?php if (empty($dbFormData["profpic"])) { ?>
-                                    <i class="fas fa-user-circle fa-3x"></i>
-                                <?php } else { ?>
-                                    <span class="main_center_icon">
-                                        <img class="icon_img" src="<?php echo sanitize($dbFormData["profpic"]) ?>">
-                                    </span>
-                                <?php } ?>
+                                <a href="mypage.php">
+                                    <?php if (empty($dbFormData["profpic"])) { ?>
+                                        <i class="fas fa-user-circle fa-3x"></i>
+                                    <?php } else { ?>
+                                        <span class="main_center_icon">
+                                            <img class="icon_img" src="<?php echo sanitize($dbFormData["profpic"]) ?>">
+                                        </span>
+                                    <?php } ?>
+                                </a>
                                 <div class="main_center_comment2">
                                     <h3>What's on your mind, <?php echo $dbFormData["username"]; ?></h3>
                                 </div>
@@ -236,19 +238,23 @@ require("goodbook_head.php");
                     ?>
                         <section class="main_center_element main_center_element3">
                             <div class="icon_img_div">
-                                <a href="userDetail.php?u_id=<?php echo $val['id'] ?>" class="panel">
-                                    <?php if (empty($val["profpic"])) { ?>
-                                        <div class="icon_img">
-                                            <i class="fas fa-user-circle fa-3x"></i>
-                                        </div>
+                                <?php if (($val["id"]) == ($_SESSION["user_id"])) { ?>
+                                    <a href="mypage.php" class="panel">
                                     <?php } else { ?>
-                                        <img class="icon_img" src="<?php echo sanitize($val["profpic"]) ?>">
-                                    <?php } ?>
-                                </a>
-                                <div class="user_name_div">
-                                    <p><?php echo sanitize($val["username"]); ?></p>
-                                    <p class="time_line"><?php echo mt_rand(1, 24); ?>hour ago</p>
-                                </div>
+                                        <a href="userDetail.php?u_id=<?php echo $val['id'] ?>" class="panel">
+                                        <?php } ?>
+                                        <?php if (empty($val["profpic"])) { ?>
+                                            <div class="icon_img">
+                                                <i class="fas fa-user-circle fa-3x"></i>
+                                            </div>
+                                        <?php } else { ?>
+                                            <img class="icon_img" src="<?php echo sanitize($val["profpic"]) ?>">
+                                        <?php } ?>
+                                        </a>
+                                        <div class="user_name_div">
+                                            <p><?php echo sanitize($val["username"]); ?></p>
+                                            <p class="time_line"><?php echo mt_rand(1, 24); ?>hour ago</p>
+                                        </div>
                             </div>
                             <div>
                                 <p class="main_center_comment"><?php echo sanitize($val["comment"]); ?></p>
