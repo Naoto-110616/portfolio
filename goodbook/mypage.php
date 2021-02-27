@@ -18,7 +18,7 @@ $p_id = (!empty($_GET['p_id'])) ? $_GET['p_id'] : '';
 //================================
 // edit profile
 //================================
-if ($_POST["profileChenge"]) {
+if (!empty($_POST["profileChenge"])) {
     editprofile("common");
 }
 //================================
@@ -26,7 +26,7 @@ if ($_POST["profileChenge"]) {
 //================================
 // upload img
 //================================
-if ($_POST["uploadIconImg"]) {
+if (!empty($_POST["uploadIconImg"])) {
     debug("uploadIconImgが押されました");
     if (!empty($_POST)) {
         debug('FILE情報：' . print_r($_FILES, true));
@@ -36,7 +36,7 @@ if ($_POST["uploadIconImg"]) {
         $profpic = (empty($profpic) && !empty($dbFormData['profpic'])) ? $dbFormData['profpic'] : $profpic;
     }
 }
-if ($_POST["uploadBackgroundImg"]) {
+if (!empty($_POST["uploadBackgroundImg"])) {
     debug("uploadBackgroundImgが押されました");
     if (!empty($_POST)) {
         debug('FILE情報：' . print_r($_FILES, true));
@@ -47,7 +47,7 @@ if ($_POST["uploadBackgroundImg"]) {
     }
 }
 
-if ($_POST["uploadIconImg"] || $_POST["uploadBackgroundImg"]) {
+if (!empty($_POST["uploadIconImg"] || $_POST["uploadBackgroundImg"])) {
     debug('バリデーションOKです。');
     saveImgToDb($profpic, $backgroundimg);
 }
@@ -120,7 +120,7 @@ require('goodbook_head.php');
                             <a href="msgRoomList.php">
                                 <div class="info_list"><span>Msg</span></div>
                             </a>
-                            <a href="friendsList.php">
+                            <a href="friendsList.php<?php echo "?u_id=" . $_SESSION["user_id"] ?>">
                                 <div class="info_list"><span>Friends</span></div>
                             </a>
                             <div class="info_list"><span>Photos</span></div>
@@ -214,7 +214,7 @@ require('goodbook_head.php');
                                             <i class="fas fa-user-circle fa-2x"></i>
                                         </div>
                                         <div class="share_feelings">
-                                            <h3 class="">Let's share your feeling</h3>
+                                            <h3 class="">What's on your mind,<?php echo $dbFormData["username"] ?></h3>
                                         </div>
                                     </div>
                                     <div class="mypage_border"></div>
