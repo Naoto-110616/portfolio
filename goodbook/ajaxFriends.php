@@ -16,13 +16,12 @@ debug(print_r($_POST, true));
 if (isset($_POST['friendId']) && isset($_SESSION['user_id']) && isLogin()) {
   debug('POST送信があります。');
   $f_id = $_POST['friendId'];
-  debug('partnerID：' . $f_id);
+  debug('friendID：' . $f_id);
   //例外処理
   try {
     // DBへ接続
     $dbh = dbConnect();
     // レコードがあるか検索
-    // likeという単語はLIKE検索とうSQLの命令文で使われているため、そのままでは使えないため、｀（バッククウォート）で囲む
     $sql = 'SELECT * FROM friends WHERE friend_id = :f_id AND user_id = :u_id';
     $data = array(':u_id' => $_SESSION['user_id'], ':f_id' => $f_id);
     // クエリ実行
