@@ -1091,9 +1091,9 @@ function getPost()
         $dbh = dbConnect();
         $sql = 'SELECT u.id,u.username, u.profpic, p.comment, p.pic1
         FROM post AS p
-        JOIN users AS u
+        INNER JOIN users AS u
         ON p.user_id = u.id
-        WHERE 1=1 AND p.delete_flg = 0 AND u.delete_flg = 0';
+        WHERE 1=1 AND p.delete_flg = 0 AND u.delete_flg =' . DELETE_FLG_ON;
         $data = array();
         debug('SQL：' . $sql);
         // クエリ実行
@@ -1125,10 +1125,10 @@ function getUserList($currentMinNum = 1, $area, $span = 20)
         // DBへ接続
         $dbh = dbConnect();
         // 件数用のSQL文作成
-        $sql = 'SELECT id FROM users WHERE delete_flg=' . DELETE_FLG_ON;
+        $sql = 'SELECT id FROM users WHERE 1=1 AND id NOT IN (:id) AND delete_flg=' . DELETE_FLG_ON;
         if (!empty($area)) $sql .= ' AND area_id = ' . $area;
         debug("sql中身" . print_r($sql, true));
-        $data = array();
+        $data = array(":id" => $_SESSION["user_id"]);
         // クエリ実行
         $stmt = queryPost($dbh, $sql, $data, "common");
         $rst['total'] = $stmt->rowCount(); //総レコード数
@@ -1142,11 +1142,11 @@ function getUserList($currentMinNum = 1, $area, $span = 20)
         FROM users AS u
         JOIN area AS a
         ON u.area_id = a.id
-        WHERE u.delete_flg=' . DELETE_FLG_ON;
+        WHERE 1=1 AND u.id NOT IN (:id) AND u.delete_flg=' . DELETE_FLG_ON;
         if (!empty($area)) $sql .= ' AND area_id = ' . $area;
         debug("sql中身" . print_r($sql, true));
         $sql .= ' LIMIT ' . $span . ' OFFSET ' . $currentMinNum;
-        $data = array();
+        $data = array(":id" => $_SESSION["user_id"]);
         debug('SQL：' . $sql);
         // クエリ実行
         $stmt = queryPost($dbh, $sql, $data, "common");
@@ -1585,39 +1585,46 @@ function createMsgRoom($viewData)
     auth();
     //例外処理
     try {
-        // msgroom 一つのみの作成
-        // $dbh = dbConnect();
-        // $sql = "SELECT send_user,receive_user FROM bord WHERE 1=1 AND send_user=:u_id";
-        // $data = array(":u_id" => $_SESSION["user_id"]);
-        // $stmt = queryPost($dbh, $sql, $data, "common");
-        // $rst = $stmt->fetchAll();
-        // $send_user = (array_column($rst, "send_user"));
-        // debug(print_r($send_user, true));
-        // $result = (array_search($_SESSION["user_id"], $send_user));
-        // debug(print_r($result, true));
-        // $receive_user = (array_column($rst, "receive_user"));
-        // debug(print_r($receive_user, true));
-        // $result2 = (array_search($viewData["id"], $receive_user));
-        // debug(print_r($result2, true));
-        // $resultCount = $stmt->rowCount();
-        // if (isset($result) && isset($result2)) {
-        // DBへ接続
         $dbh = dbConnect();
-        // SQL文作成
-        $sql = 'INSERT INTO bord (send_user, receive_user, create_date) VALUES (:s_uid, :r_uid, :date)';
-        $data = array(':s_uid' => $_SESSION['user_id'], ':r_uid' => $viewData['id'], ':date' => date('Y-m-d H:i:s'));
+        // レコードがあるか検索
+        $sql = 'SELECT * FROM bord WHERE send_user = :s_id AND receive_user = :r_uid';
+        $data = array(':s_id' => $_SESSION['user_id'], ':r_uid' => $viewData["id"]);
         // クエリ実行
         $stmt = queryPost($dbh, $sql, $data, "common");
+        $resultCount = $stmt->rowCount();
+        debug($resultCount);
+        if (empty($resultCount)) {
+            unset($resultCount);
+            $dbh = dbConnect();
+            // レコードがあるか検索
+            $sql = 'SELECT * FROM bord WHERE send_user = :s_id AND receive_user = :r_uid';
+            $data = array(':s_id' => $viewData['id'], ':r_uid' => $_SESSION['user_id']);
+            // クエリ実行
+            $stmt = queryPost($dbh, $sql, $data, "common");
+            $resultCount = $stmt->rowCount();
+            debug($resultCount);
+            if (empty($resultCount)) {
+                // DBへ接続
+                $dbh = dbConnect();
+                // SQL文作成
+                $sql = 'INSERT INTO bord (send_user, receive_user, create_date) VALUES (:s_uid, :r_uid, :date)';
+                $data = array(':s_uid' => $_SESSION['user_id'], ':r_uid' => $viewData['id'], ':date' => date('Y-m-d H:i:s'));
+                // クエリ実行
+                $stmt = queryPost($dbh, $sql, $data, "common");
 
-        // クエリ成功の場合
-        if ($stmt) {
-            debug('msg pageへ遷移します。');
-            header("Location:msg.php?m_id=" . $dbh->lastInsertID()); //連絡掲示板へ
+                // クエリ成功の場合
+                if ($stmt) {
+                    debug('msg pageへ遷移します。');
+                    header("Location:msg.php?m_id=" . $dbh->lastInsertID()); //連絡掲示板へ
+                }
+            } else {
+                debug("already created room");
+                header("Location:msgRoomList.php");
+            }
+        } else {
+            debug("already created room");
+            header("Location:msgRoomList.php");
         }
-        // } else {
-        //     debug("already created room");
-        //     header("Location:homepage.php");
-        // }
     } catch (Exception $e) {
         error_log('エラー発生:' . $e->getMessage());
         $err_msg['common'] = MSG09;
