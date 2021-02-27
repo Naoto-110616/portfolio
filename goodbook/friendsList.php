@@ -11,8 +11,10 @@ debugLogStart();
 auth();
 
 // user data 取得
+$u_id = (!empty($_GET['u_id'])) ? $_GET['u_id'] : '';
+$friendsList = getfriendsList($u_id);
+// myinfo取得
 $dbFormData = getUser($_SESSION["user_id"]);
-$friendsList = getfriendsList($dbFormData["id"]);
 ?>
 
 <?php
@@ -30,28 +32,38 @@ require('goodbook_head.php');
                         <div>
                             <h1>friends List</h1>
                         </div>
-                        <?php if (!empty($friendsList["data"])) { ?>
-                            <?php foreach ($friendsList["data"] as $key => $val) : ?>
-                                <a href="userDetail.php?u_id=<?php echo $val["f_id"] ?>">
+                        <?php if (!empty($friendsList["data"])) {
+                            foreach ($friendsList["data"] as $key => $val) :
+                                if ($val["f_id"] == $_SESSION["user_id"]) { ?>
+                                    <a href="mypage.php">
+                                    <?php } else { ?>
+                                        <a href="userDetail.php?u_id=<?php echo $val["f_id"] ?>">
+                                        <?php } ?>
+                                        <div class="msgRoom">
+                                            <div class="msgShelf">
+                                                <img src="<?php echo $val["profpic"]; ?>" alt="<?php echo $val["username"] ?>">
+                                                <p><?php echo $val["username"]; ?></p>
+                                            </div>
+                                        </div>
+                                        </a>
+                                    <?php endforeach;
+                            } elseif ($_SESSION["user_id"] == $u_id) { ?>
                                     <div class="msgRoom">
-                                        <div class="msgShelf">
-                                            <img src="<?php echo $val["profpic"]; ?>" alt="<?php echo $val["username"] ?>">
-                                            <p><?php echo $val["username"]; ?></p>
+                                        <div class="createMsg">
+                                            <a href="friends.php">
+                                                <p>友達がいません、誰かをフォローしましょう。</p>
+                                            </a>
                                         </div>
                                     </div>
-                                </a>
-                            <?php
-                            endforeach;
-                        } else {
-                            ?>
-                            <div class="msgRoom">
-                                <div class="createMsg">
-                                    <a href="friends.php">
-                                        <p>友達がいません、誰かにfriend requestを送りましょう。</p>
-                                    </a>
-                                </div>
-                            </div>
-                        <?php } ?>
+                                <?php } else { ?>
+                                    <div class="msgRoom">
+                                        <div class="createMsg">
+                                            <a href="userDetail.php<?php echo "?u_id=" . $u_id; ?>">
+                                                <p>このユーザーは誰もフォローしていません。</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                <?php } ?>
                     </div>
                 </div>
             </div>
