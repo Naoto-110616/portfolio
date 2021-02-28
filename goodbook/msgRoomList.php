@@ -14,6 +14,9 @@ auth();
 $dbFormData = getUser($_SESSION["user_id"]);
 $receiveMsgRoom = getReceiveMsgRoomInfo($dbFormData["id"]);
 $sendMsgRoom = getSendMsgRoomInfo($dbFormData["id"]);
+
+debug("receiveMsgRoom" . print_r($receiveMsgRoom, true));
+debug("sendmsg" . print_r($sendMsgRoom, true));
 ?>
 
 <?php
@@ -31,31 +34,49 @@ require('goodbook_head.php');
                         <div>
                             <h1>msg room</h1>
                         </div>
-                        <?php if (!empty($receiveMsgRoom["data"])) { ?>
-                            <?php foreach ($receiveMsgRoom["data"] as $key => $val) : ?>
+                        <?php if (!empty($receiveMsgRoom)) {
+                            foreach ($receiveMsgRoom as $key => $val) :
+                                $msg = end($val['msg']); ?>
                                 <a href="msg.php?m_id=<?php echo $val["b_id"] ?>">
                                     <div class="msgRoom">
                                         <div class="msgShelf">
                                             <img src="<?php echo $val["profpic"]; ?>" alt="<?php echo $val["username"] ?>">
-                                            <p><?php echo $val["username"]; ?></p>
+                                            <div class="latestMessage">
+                                                <p><?php echo $val["username"]; ?></p>
+                                                <?php if (!empty($msg["msg"])) { ?>
+                                                    <p><?php echo mb_substr(sanitize($msg['msg']), 0, 40); ?>...</p>
+                                                <?php } else { ?>
+                                                    <p>No message yet</p>
+                                                <?php } ?>
+                                            </div>
                                         </div>
                                     </div>
                                 </a>
                             <?php
                             endforeach;
-                        } elseif (!empty($sendMsgRoom["data"])) {
-                            foreach ($sendMsgRoom["data"] as $key => $val) : ?>
+                        }
+                        if (!empty($sendMsgRoom)) {
+                            foreach ($sendMsgRoom as $key => $val) :
+                                $msg = end($val['msg']); ?>
                                 <a href="msg.php?m_id=<?php echo $val["b_id"] ?>">
                                     <div class="msgRoom">
                                         <div class="msgShelf">
                                             <img src="<?php echo $val["profpic"]; ?>" alt="<?php echo $val["username"] ?>">
-                                            <p><?php echo $val["username"]; ?></p>
+                                            <div class="latestMessage">
+                                                <p><?php echo $val["username"]; ?></p>
+                                                <?php if (!empty($msg["msg"])) { ?>
+                                                    <p><?php echo mb_substr(sanitize($msg['msg']), 0, 40); ?>...</p>
+                                                <?php } else { ?>
+                                                    <p>No message yet</p>
+                                                <?php } ?>
+                                            </div>
                                         </div>
                                     </div>
                                 </a>
                             <?php
                             endforeach;
-                        } else {
+                        }
+                        if (empty($receiveMsgRoom) && empty($sendMsgRoom)) {
                             ?>
                             <div class="msgRoom">
                                 <div class="createMsg">
@@ -64,7 +85,8 @@ require('goodbook_head.php');
                                     </a>
                                 </div>
                             </div>
-                        <?php } ?>
+                        <?php }
+                        ?>
                     </div>
                 </div>
             </div>

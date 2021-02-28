@@ -893,8 +893,7 @@ function getUser($u_id)
         FROM users AS u
         LEFT JOIN area AS a
         ON u.area_id = a.id
-        WHERE u.id = :u_id
-        AND u.delete_flg = 0';
+        WHERE u.id = :u_id AND u.delete_flg = 0';
         $data = array(':u_id' => $u_id);
         // クエリ実行
         $stmt = queryPost($dbh, $sql, $data, "common");
@@ -1093,7 +1092,7 @@ function getPost()
         FROM post AS p
         INNER JOIN users AS u
         ON p.user_id = u.id
-        WHERE 1=1 AND p.delete_flg = 0 AND u.delete_flg =' . DELETE_FLG_ON;
+        WHERE 1=1 AND p.delete_flg = ' . DELETE_FLG_ON . ' AND u.delete_flg =' . DELETE_FLG_ON;
         $data = array();
         debug('SQL：' . $sql);
         // クエリ実行
@@ -1217,7 +1216,7 @@ function getUserOne($u_id)
         FROM users AS u
         JOIN area AS a
         ON u.area_id = a.id
-        WHERE 1=1 AND u.id = :u_id AND u.delete_flg = 0';
+        WHERE 1=1 AND u.id = :u_id AND u.delete_flg = ' . DELETE_FLG_ON;
         $data = array(':u_id' => $u_id);
         // クエリ実行
         $stmt = queryPost($dbh, $sql, $data, "common");
@@ -1499,42 +1498,6 @@ function pagination($currentPageNum, $totalPageNum, $link = '', $pageColNum = 5)
     echo '</ul>';
     echo '</div>';
 }
-// function validMsg($m_id)
-// {
-//     // DBから掲示板とメッセージデータを取得
-//     $viewData = getMsgsAndBord($m_id);
-//     debug('取得したDBデータ：' . print_r($viewData, true));
-//     // パラメータに不正な値が入っているかチェック
-//     if (empty($viewData)) {
-//         error_log('エラー発生:指定ページに不正な値が入りました');
-//         header("Location:mypage.php"); //マイページへ
-//     }
-//     // viewDataから相手のユーザーIDを取り出す
-//     $dealUserIds[] = $viewData[0]['send_user'];
-//     $dealUserIds[] = $viewData[0]['receive_user'];
-//     if (($key = array_search($_SESSION['user_id'], $dealUserIds)) !== false) {
-//         unset($dealUserIds[$key]);
-//     }
-//     $partnerUserId = array_shift($dealUserIds);
-//     debug('取得した相手のユーザーID：' . $partnerUserId);
-//     // DBから取引相手のユーザー情報を取得
-//     if (isset($partnerUserId)) {
-//         $partnerUserInfo = getUser($partnerUserId);
-//     }
-//     // 相手のユーザー情報が取れたかチェック
-//     if (empty($partnerUserInfo)) {
-//         error_log('エラー発生:相手のユーザー情報が取得できませんでした');
-//         header("Location:mypage.php"); //マイページへ
-//     }
-//     // DBから自分のユーザー情報を取得
-//     $myUserInfo = getUser($_SESSION['user_id']);
-//     debug('取得したユーザデータ：' . print_r($partnerUserInfo, true));
-//     // 自分のユーザー情報が取れたかチェック
-//     if (empty($myUserInfo)) {
-//         error_log('エラー発生:自分のユーザー情報が取得できませんでした');
-//         header("Location:mypage.php"); //マイページへ
-//     }
-// }
 function createMsg($m_id, $partnerUserId)
 {
     // post送信されていた場合
@@ -1559,7 +1522,8 @@ function createMsg($m_id, $partnerUserId)
                 // DBへ接続
                 $dbh = dbConnect();
                 // SQL文作成
-                $sql = 'INSERT INTO message (bord_id, send_date, to_user, from_user, msg, create_date) VALUES (:b_id, :send_date, :to_user, :from_user, :msg, :date)';
+                $sql = 'INSERT INTO message (bord_id, send_date, to_user, from_user, msg, create_date)
+                                    VALUES (:b_id, :send_date, :to_user, :from_user, :msg, :date)';
                 $data = array(':b_id' => $m_id, ':send_date' => date('Y-m-d H:i:s'), ':to_user' => $partnerUserId, ':from_user' => $_SESSION['user_id'], ':msg' => $msg, ':date' => date('Y-m-d H:i:s'));
                 // クエリ実行
                 $stmt = queryPost($dbh, $sql, $data, "common");
@@ -1637,34 +1601,48 @@ function getMsgsAndBord($id)
     //例外処理
     try {
         $dbh = dbConnect();
-        // SQL文作成
-        $sql = 'SELECT * FROM bord WHERE id = :id';
+        $sql = 'SELECT * from message where bord_id = :id';
         $data = array(':id' => $id);
         // クエリ実行
         $stmt = queryPost($dbh, $sql, $data, "common");
         $rst = $stmt->fetch(PDO::FETCH_ASSOC);
-        debug('掲示板テーブルから取得したdbデータ:' . print_r($rst, true));
-        $delete_flg = $rst['delete_flg'];
-        debug('掲示板テーブルのdelete_flg:' . print_r($delete_flg, true));
 
-        // DBへ接続
-        $dbh = dbConnect();
-        // SQL文作成
-        $sql = 'SELECT m.id AS m_id, bord_id, send_date, to_user, from_user, send_user, receive_user, msg, b.create_date
-        FROM message AS m
-        RIGHT JOIN bord AS b
-        ON b.id = m.bord_id
-        WHERE 1=1 AND b.id = :id ORDER BY send_date ASC
-        -- WHERE 1=1 AND b.id = :id ORDER BY send_date ASC AND m.delete_flg=0';
-        debug($sql);
-        $data = array(':id' => $id);
-        // クエリ実行
-        $stmt = queryPost($dbh, $sql, $data, "common");
-        if ($stmt) {
-            // クエリ結果の全データを返却
-            return $stmt->fetchAll();
+        if ($rst["delete_flg"] === 0) {
+            // DBへ接続
+            $dbh = dbConnect();
+            // SQL文作成
+            $sql = 'SELECT m.id AS m_id, bord_id, send_date, to_user, from_user, send_user, receive_user, msg, b.create_date
+            FROM message AS m
+            RIGHT JOIN bord AS b
+            ON b.id = m.bord_id
+            WHERE 1=1 AND b.id = :id AND m.delete_flg =' . DELETE_FLG_ON;
+            $data = array(':id' => $id);
+            // クエリ実行
+            $stmt = queryPost($dbh, $sql, $data, "common");
+            if ($stmt) {
+                // クエリ結果の全データを返却
+                return $stmt->fetchAll();
+            } else {
+                return false;
+            }
         } else {
-            return false;
+            // DBへ接続
+            $dbh = dbConnect();
+            // SQL文作成
+            $sql = 'SELECT m.id AS m_id, bord_id, send_date, to_user, from_user, send_user, receive_user, msg, b.create_date
+            FROM message AS m
+            RIGHT JOIN bord AS b
+            ON b.id = m.bord_id
+            WHERE 1=1 AND b.id = :id ORDER BY send_date ASC';
+            $data = array(':id' => $id);
+            // クエリ実行
+            $stmt = queryPost($dbh, $sql, $data, "common");
+            if ($stmt) {
+                // クエリ結果の全データを返却
+                return $stmt->fetchAll();
+            } else {
+                return false;
+            }
         }
     } catch (Exception $e) {
         error_log('エラー発生:' . $e->getMessage());
@@ -1704,11 +1682,23 @@ function getReceiveMsgRoomInfo($id)
         WHERE 1=1 AND b.send_user= :id AND b.delete_flg = " . DELETE_FLG_ON . " AND u.delete_flg = " . DELETE_FLG_ON;
         $data = array(":id" => $id);
         $stmt = queryPost($dbh, $sql, $data, "common");
-        if ($stmt) {
-            $rst['data'] = $stmt->fetchAll();
-            return $rst;
-        } else {
-            return false;
+        $rst = $stmt->fetchAll();
+        if (!empty($rst)) {
+            foreach ($rst as $key => $val) {
+                // SQL文作成
+                $sql = 'SELECT *
+                FROM message
+                WHERE 1=1 AND bord_id = :id ORDER BY send_date ASC';
+                $data = array(':id' => $val['b_id']);
+                // クエリ実行
+                $stmt = queryPost($dbh, $sql, $data, "common");
+                $rst[$key]['msg'] = $stmt->fetchAll();
+            }
+            if ($stmt) {
+                return $rst;
+            } else {
+                return false;
+            }
         }
     } catch (Exception $e) {
         error_log('エラー発生:' . $e->getMessage());
@@ -1722,14 +1712,27 @@ function getSendMsgRoomInfo($id)
         FROM bord AS b
         INNER JOIN users AS u
         ON b.send_user = u.id
-        WHERE 1=1 AND b.receive_user= :id AND b.delete_flg = " . DELETE_FLG_ON . " AND u.delete_flg = " . DELETE_FLG_ON;
+        WHERE 1=1 AND b.receive_user = :id AND b.delete_flg = " . DELETE_FLG_ON . " AND u.delete_flg = " . DELETE_FLG_ON;
         $data = array(":id" => $id);
         $stmt = queryPost($dbh, $sql, $data, "common");
-        if ($stmt) {
-            $rst['data'] = $stmt->fetchAll();
-            return $rst;
-        } else {
-            return false;
+        $rst = $stmt->fetchAll();
+        if (!empty($rst)) {
+            foreach ($rst as $key => $val) {
+                // SQL文作成
+                $sql = 'SELECT *
+                FROM message
+                WHERE 1=1 AND bord_id = :id ORDER BY send_date ASC';
+                $data = array(':id' => $val['b_id']);
+                // クエリ実行
+                $stmt = queryPost($dbh, $sql, $data, "common");
+                $rst[$key]['msg'] = $stmt->fetchAll();
+                debug(print_r($rst, true));
+                if ($stmt) {
+                    return $rst;
+                } else {
+                    return false;
+                }
+            }
         }
     } catch (Exception $e) {
         error_log('エラー発生:' . $e->getMessage());

@@ -1200,57 +1200,50 @@ label.err input {
 	overflow: hidden;
 	margin-bottom: 15px;
 }
-
 .msg-info .avatar {
 	width: 80px;
 	height: 80px;
 	border-radius: 40px;
 }
-
 .msg-info .avatar-img {
 	text-align: center;
 	width: 100px;
 	float: left;
 }
-
 .msg-info .avatar-info {
 	float: left;
 	padding-left: 15px;
 	width: 500px;
 }
-
 .msg-info .product-info {
 	float: left;
 	padding-left: 15px;
 	width: 315px;
 }
-
 .msg-info .product-info .left,
 .msg-info .product-info .right {
 	float: left;
 }
-
 .msg-info .product-info .right {
 	padding-left: 15px;
 }
-
 .msg-info .product-info .price {
 	display: inline-block;
 }
-
+.latestMessage {
+	margin-left: 10px;
+}
 .area-bord {
 	height: 500px;
 	overflow-y: scroll;
 	background: #333333;
 	padding: 15px;
 }
-
 .area-send-msg {
 	background: #333333;
 	padding: 15px;
 	overflow: hidden;
 }
-
 .area-send-msg textarea {
 	width: 100%;
 	background: #191919;
@@ -1261,32 +1254,27 @@ label.err input {
 	font-size: 16px;
 	color: #dddddd;
 }
-
 .area-send-msg .btn-send {
 	width: 150px;
 	float: right;
 	margin-top: 0;
 }
-
 .area-bord .msg-cnt {
 	width: 80%;
 	overflow: hidden;
 	margin-bottom: 30px;
 }
-
 .area-bord .msg-cnt .avatar {
 	width: 6%;
 	overflow: hidden;
 	float: left;
 }
-
 .area-bord .msg-cnt .avatar img {
 	width: 35px;
 	height: 35px;
 	border-radius: 20px;
 	float: left;
 }
-
 .area-bord .msg-cnt .msg-inrTxt {
 	width: 85%;
 	float: left;
@@ -1295,11 +1283,9 @@ label.err input {
 	margin: 0 0 0 25px;
 	position: relative;
 }
-
 .area-bord .msg-cnt.msg-left .msg-inrTxt {
 	background: #191919;
 }
-
 .area-bord .msg-cnt.msg-left .msg-inrTxt > .triangle {
 	position: absolute;
 	left: -20px;
@@ -1310,16 +1296,13 @@ label.err input {
 	border-left: 10px solid transparent;
 	border-bottom: 10px solid transparent;
 }
-
 .area-bord .msg-cnt.msg-right {
 	float: right;
 }
-
 .area-bord .msg-cnt.msg-right .msg-inrTxt {
 	background: #191919;
 	margin: 0 25px 0 0;
 }
-
 .area-bord .msg-cnt.msg-right .msg-inrTxt > .triangle {
 	position: absolute;
 	right: -20px;
@@ -1330,7 +1313,6 @@ label.err input {
 	border-right: 10px solid transparent;
 	border-bottom: 10px solid transparent;
 }
-
 .area-bord .msg-cnt.msg-right .msg-inrTxt {
 	float: right;
 }
@@ -1348,6 +1330,8 @@ label.err input {
 	display: flex;
 	margin-top: 20px;
 	padding: 10px;
+	background: #444444;
+	min-height: 42px;
 }
 .msgShelf > img {
 	width: 5%;
