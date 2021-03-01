@@ -1,3 +1,4 @@
+<?php $title ?>
 <header class="header">
     <div class="head_left">
         <nav>
@@ -13,16 +14,16 @@
     </div>
     <div class="head_center">
         <div class="header_center_icon">
-            <a class="to_homepage" href="homepage.php"><i class="fas fa-home fa-2x"></i></a>
+            <a class="to_homepage" href="homepage.php"><i class="fas fa-home fa-2x <?php buttonColor($siteTitle, "homepage"); ?>"></i></a>
         </div>
         <div class="header_center_icon">
             <a href="friendsList.php<?php echo "?u_id=" . $_SESSION["user_id"] ?>">
-                <i class=" fas fa-user-friends fa-2x"></i>
+                <i class=" fas fa-user-friends fa-2x <?php buttonColor($siteTitle, "frineds list"); ?>"></i>
             </a>
         </div>
         <div class="header_center_icon"><i class="fas fa-tv fa-2x"></i></div>
         <div class="header_center_icon">
-            <a class="to_friends" href="friends.php"><i class="fas fa-users fa-2x"></i></a>
+            <a class="to_friends" href="friends.php"><i class="fas fa-users fa-2x <?php buttonColor($siteTitle, "friends") ?>"></i></a>
         </div>
         <div class="header_center_icon"><i class="fas fa-dice-d6 fa-2x"></i></div>
     </div>
@@ -56,6 +57,7 @@
                         <div class=" myInfo">
                             <p><?php userInfoIndicate($dbFormData, "username"); ?></p>
                             <p> <?php notLoggedMsg("View my profile", "Please login"); ?></p>
+                            <p><?php echo print_r($title, true); ?></p>
                         </div>
                     </a>
                 </div>

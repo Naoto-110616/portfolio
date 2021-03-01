@@ -1759,6 +1759,12 @@ function getfriendsList($id)
         error_log('エラー発生:' . $e->getMessage());
     }
 }
+function buttonColor($siteTitle, $key)
+{
+    if ($siteTitle == $key) {
+        echo "Retentioncolor_blue";
+    }
+}
 function showVariable($var)
 {
     echo "<pre>";

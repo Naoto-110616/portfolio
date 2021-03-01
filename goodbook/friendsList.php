@@ -18,7 +18,7 @@ $dbFormData = getUser($_SESSION["user_id"]);
 ?>
 
 <?php
-$siteTitle = 'Frineds List';
+$siteTitle = 'frineds list';
 require('goodbook_head.php');
 ?>
 
