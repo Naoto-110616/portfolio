@@ -134,6 +134,11 @@ require('goodbook_head.php');
                 </form>
             </div>
         </section>
+        <div style="margin: 10px 0px;">
+            <a href="msgRoomList.php">
+                <p>to msg room list page</p>
+            </a>
+        </div>
 
     </div>
 
