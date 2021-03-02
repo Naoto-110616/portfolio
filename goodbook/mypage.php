@@ -116,7 +116,9 @@ require('goodbook_head.php');
                 <div class="main_top_content main_top_content_user_info">
                     <div class="main_top_content main_top_content_user_info_inside">
                         <nav class="main_top_content main_top_content_user_info_list1">
-                            <div class="info_list"><span>Posts</span></div>
+                            <a href="postList.php">
+                                <div class="info_list"><span>Posts</span></div>
+                            </a>
                             <a href="msgRoomList.php">
                                 <div class="info_list"><span>Msg</span></div>
                             </a>
