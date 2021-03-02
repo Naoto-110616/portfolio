@@ -38,7 +38,9 @@
                 <?php } ?>
             </a></div>
         <div class="header_right_icon"><i class="fas fa-plus-circle fa-2x"></i></div>
-        <div class="header_right_icon"><i class="far fa-comment-dots fa-2x"></i></i></div>
+        <div class="header_right_icon">
+            <a href="msgRoomList.php"><i class="far fa-comment-dots fa-2x <?php buttonColor($siteTitle, "msg room") ?>"></i></a>
+        </div>
         <div class="header_right_icon"><i class="fas fa-bell fa-2x"></i></div>
         <div class="header_right_icon">
             <div class="accountMenu_button">
