@@ -136,7 +136,7 @@ require('goodbook_head.php');
         </section>
         <div style="margin: 10px 0px;">
             <a href="msgRoomList.php">
-                <p>to msg room list page</p>
+                <p>&lt; to msg room list page</p>
             </a>
         </div>
 
