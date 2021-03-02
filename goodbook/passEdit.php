@@ -16,7 +16,6 @@ auth();
 //================================
 // DBからユーザーデータを取得
 // chenge pass function
-// chengePass(isset($userData), isset($pass_new));
 chengePass($userData, $pass_new);
 ?>
 <?php
