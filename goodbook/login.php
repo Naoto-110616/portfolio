@@ -30,7 +30,7 @@ require("head.php");
                     <form method="post">
                         <div class="logininput emaildiv">
                             <label for="email" class="<?php echo getErrMsglabel("email"); ?>">
-                                <input class="email" type="text" name="email" id="email" placeholder="Email" autofocus="1" value="<?php echo getFormData("email"); ?>">
+                                <input class="email js-form-validate-login" type="text" name="email" id="email" placeholder="Email" autofocus="1" value="<?php echo getFormData("email"); ?>">
                             </label>
                             <div class="help-block"></div>
                             <span class="err_msg"><?php echo getErrMsg("email") ?>
@@ -38,7 +38,7 @@ require("head.php");
                         </div>
                         <div class="logininput passworddiv">
                             <label for="password" class="<?php echo getErrMsglabel("pass"); ?>">
-                                <input class="password" type="password" name="pass" id="password" placeholder="Password" value="<?php echo getFormData("pass"); ?>">
+                                <input class="password js-form-validate-login" type="password" name="pass" id="password" placeholder="Password" value="<?php echo getFormData("pass"); ?>">
                             </label>
                             <div class="help-block"></div>
                             <span class="err_msg"><?php echo getErrMsg("pass"); ?>
@@ -51,7 +51,7 @@ require("head.php");
                         </div>
                         <div class="logininput logindiv">
                             <label for="login">
-                                <input class="login " type="submit" value="Login" name='login' id="login">
+                                <input class="login js-disabled-submit" type="submit" value="Login" name='login' id="login" disabled="disabled">
                             </label>
                         </div>
                         <div class="forgotdiv">
@@ -72,8 +72,8 @@ require("head.php");
         </div>
     </div>
     <?php
-    require("login&signup_footer.php");
     require("jssrc.php");
+    require("login&signup_footer.php");
     ?>
 </body>
 

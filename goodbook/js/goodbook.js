@@ -192,13 +192,13 @@ $(function () {
 		fileReader.readAsDataURL(file);
 	});
 });
-$(function () {
-	//scrollHeightは要素のスクロールビューの高さを取得するもの
-	$("#js-scroll-bottom").animate(
-		{ scrollTop: $("#js-scroll-bottom")[0].scrollHeight },
-		"fast"
-	);
-});
+// $(function () {
+// 	//scrollHeightは要素のスクロールビューの高さを取得するもの
+// 	$("#js-scroll-bottom").animate(
+// 		{ scrollTop: $("#js-scroll-bottom")[0].scrollHeight },
+// 		"fast"
+// 	);
+// });
 
 // friend 登録機能
 var $like, $FriendId;
@@ -225,26 +225,27 @@ if ($FriendId !== undefined && $FriendId !== null) {
 			});
 	});
 }
-// // create msg room
-// var $message, $FriendId;
-// $message = $(".js-click-create-msg-room") || null; //nullというのはnull値という値で、「変数の中身は空ですよ」と明示するためにつかう値
-// $FriendId = $message.data("friendid") || null;
-// // 数値の0はfalseと判定されてしまう。friend_idが0の場合もありえるので、0もtrueとする場合にはundefinedとnullを判定する
-// if ($FriendId !== undefined && $FriendId !== null) {
-// 	$message.on("click", function () {
-// 		var $this = $(this);
-// 		$.ajax({
-// 			type: "POST",
-// 			url: "userDetail.php",
-// 			data: {
-// 				friendId: $FriendId,
-// 			},
-// 		})
-// 			.done(function (data) {
-// 				console.log("Ajax Success");
-// 			})
-// 			.fail(function (msg) {
-// 				console.log("Ajax Error");
-// 			});
-// 	});
-// }
+
+$(function () {
+	$(".js-form-validate-login").on("keyup", function () {
+		if ($(".email").val() && $(".password").val()) {
+			$(".js-disabled-submit").prop("disabled", false);
+		} else {
+			$(".js-disabled-submit").prop("disabled", true);
+		}
+	});
+});
+
+$(function () {
+	$(".js-form-validate-signup").on("keyup", function () {
+		if (
+			$(".email").val() &&
+			$(".password").val() &&
+			$(".password_retype").val()
+		) {
+			$(".js-disabled-submit").prop("disabled", false);
+		} else {
+			$(".js-disabled-submit").prop("disabled", true);
+		}
+	});
+});

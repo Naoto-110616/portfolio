@@ -253,3 +253,8 @@ input[type="password"]:focus {
 .err_msg{
     color:#ff4d4b;
 }
+.login:disabled,
+.singup:disabled{
+    cursor: not-allowed;
+    background-color: #8d8d8d;
+}

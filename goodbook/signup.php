@@ -28,7 +28,7 @@ require("head.php");
                     <form method="post">
                         <div class="emaildiv" action='login.php'>
                             <label for="email" class="<?php echo getErrMsglabel("email"); ?>">
-                                <input class="email" type="text" name="email" id="email" placeholder="Email" autofocus="1" value="<?php echo getFormData("email"); ?>">
+                                <input class="email js-form-validate-signup" type="text" name="email" id="email" placeholder="Email" autofocus="1" value="<?php echo getFormData("email"); ?>">
                             </label>
                             <div class="help-block"></div>
                             <span class="err_msg"><?php echo getErrMsg("email"); ?>
@@ -36,7 +36,7 @@ require("head.php");
                         </div>
                         <div class="signupinput passworddiv">
                             <label for="password" class="<?php echo getErrMsglabel("pass"); ?>">
-                                <input class="password" type="password" name="pass" id="password" placeholder="Password" value="<?php echo getFormData("pass"); ?>">
+                                <input class="password js-form-validate-signup" type="password" name="pass" id="password" placeholder="Password" value="<?php echo getFormData("pass"); ?>">
                             </label>
                             <div class="help-block"></div>
                             <span class="err_msg"><?php echo getErrMsg("pass");  ?>
@@ -44,14 +44,14 @@ require("head.php");
                         </div>
                         <div class="signupinput password_retypediv">
                             <label for="password_retype" class="<?php echo getErrMsglabel("pass_re"); ?>">
-                                <input class="password_retype" type="password" name="pass_re" id="password_retype" placeholder="Password retype" value="<?php echo getFormData("pass_re"); ?>">
+                                <input class="password_retype js-form-validate-signup" type="password" name="pass_re" id="password_retype" placeholder="Password retype" value="<?php echo getFormData("pass_re"); ?>">
                             </label>
                             <div class="help-block"></div>
                             <span class="err_msg"><?php echo getErrMsg("pass_re");  ?>
                             </span>
                         </div>
                         <div class="signupinput singupdiv">
-                            <input class="singup" value="Sing Up" name="singup" type="submit">
+                            <input class="singup js-disabled-submit" value="Sing Up" name="singup" type="submit" disabled="disabled">
                         </div>
                         <div class="boder1">
                             <p class="box"></p>
