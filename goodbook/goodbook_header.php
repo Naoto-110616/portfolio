@@ -1,4 +1,3 @@
-<?php $title ?>
 <header class="header">
     <div class="head_left">
         <nav>
@@ -13,18 +12,22 @@
         </div>
     </div>
     <div class="head_center">
-        <div class="header_center_icon">
-            <a class="to_homepage" href="homepage.php"><i class="fas fa-home fa-2x <?php buttonColor($siteTitle, "homepage"); ?>"></i></a>
-        </div>
-        <div class="header_center_icon">
-            <a href="friendsList.php<?php echo "?u_id=" . $_SESSION["user_id"] ?>">
+        <a class="to_homepage chenge_color" href="homepage.php">
+            <div class="header_center_icon">
+                <i class="fas fa-home fa-2x <?php buttonColor($siteTitle, "homepage"); ?>"></i>
+            </div>
+        </a>
+        <a class="to_friendsList chenge_color" href="friendsList.php<?php echo "?u_id=" . $_SESSION["user_id"] ?>">
+            <div class="header_center_icon">
                 <i class=" fas fa-user-friends fa-2x <?php buttonColor($siteTitle, "frineds list"); ?>"></i>
-            </a>
-        </div>
+            </div>
+        </a>
         <div class="header_center_icon"><i class="fas fa-tv fa-2x"></i></div>
-        <div class="header_center_icon">
-            <a class="to_friends" href="friends.php"><i class="fas fa-users fa-2x <?php buttonColor($siteTitle, "friends") ?>"></i></a>
-        </div>
+        <a class="to_friends chenge_color" href="friends.php">
+            <div class="header_center_icon">
+                <i class="fas fa-users fa-2x <?php buttonColor($siteTitle, "friends") ?>"></i>
+            </div>
+        </a>
         <div class="header_center_icon"><i class="fas fa-dice-d6 fa-2x"></i></div>
     </div>
     <div class="head_right">
@@ -116,3 +119,8 @@
         </div>
     </div>
 </header>
+<p id="js-show-msg" style="display:none;" class="msg-slide">
+    <?php
+    echo getSessionFlash('msg_success');
+    ?>
+</p>
