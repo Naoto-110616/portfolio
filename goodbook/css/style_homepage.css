@@ -52,13 +52,27 @@ a {
 .to_homepage {
 	color: #dddddd;
 }
+.header_center_icon:hover,
+.chenge_color:hover {
+	background-color: #565656;
+	color: #2d88f2;
+}
+.chenge_color,
 .header_center_icon {
-	margin: 0px 5%;
+	display: inline;
+	padding: 16px 4%;
+	border-radius: 3px;
 }
 .header_center_icon,
 .header_right_icon {
-	display: inline;
 	font-size: 14px;
+}
+.headerIconSubject {
+	padding: 6px;
+	background: #dddddd;
+	color: #191919;
+	border-radius: 5px;
+	float: left;
 }
 .head_right {
 	width: 33%;
@@ -81,7 +95,7 @@ a {
 }
 .myprofile {
 	display: flex;
-	margin-bottom: 13px;
+	margin-bottom: 5px;
 }
 .myicon {
 	margin-left: 10px;
@@ -1108,7 +1122,6 @@ select,
 input[type="submit"] {
 	cursor: pointer;
 }
-header i:hover,
 .main_left_icon:hover,
 .myprofile:hover,
 .feedback:hover,
