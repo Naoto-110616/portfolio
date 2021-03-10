@@ -49,11 +49,6 @@ require("goodbook_head.php");
 
 <body>
     <?php require("goodbook_header.php") ?>
-    <p id="js-show-msg" style="display:none;" class="msg-slide">
-        <?php
-        echo getSessionFlash('msg_success');
-        ?>
-    </p>
     <article class="main">
         <div class="listOfFriendsInside">
             <section class="orverall">

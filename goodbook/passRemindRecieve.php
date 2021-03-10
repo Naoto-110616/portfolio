@@ -30,9 +30,6 @@ require("goodbook_head.php");
 
 <body>
     <?php require("goodbook_header.php"); ?>
-    <p id="js-show-msg" style="display:none; padding-top: 64px;" class="msg-slide">
-        <?php echo getSessionFlash('msg_success'); ?>
-    </p>
 
     <div class="overall">
         <section class="passRemind_main">
