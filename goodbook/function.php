@@ -1088,7 +1088,7 @@ function getPost()
     try {
         // DBへ接続
         $dbh = dbConnect();
-        $sql = 'SELECT u.id,u.username, u.profpic, p.comment, p.pic1
+        $sql = 'SELECT u.id,u.username, u.profpic, p.comment, p.pic1, p.create_date
         FROM post AS p
         INNER JOIN users AS u
         ON p.user_id = u.id
