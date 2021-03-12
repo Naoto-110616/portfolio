@@ -1005,11 +1005,8 @@ function isLogin()
     }
 }
 
-function createPost($edit_flg, $comment, $pic1, $p_id)
+function createOrEditPost($edit_flg, $comment, $pic1, $p_id)
 {
-    debug("===========================");
-    debug("start create post function");
-    debug("===========================");
     //例外処理
     try {
         // DBへ接続
@@ -1040,45 +1037,41 @@ function createPost($edit_flg, $comment, $pic1, $p_id)
         global $err_msg;
         $err_msg['common'] = MSG09;
     }
-    debug("===========================");
-    debug("end create post function");
-    debug("===========================");
 }
-function getMyPostList($u_id)
-{
-    debug("===========================");
-    debug("start get post list function");
-    debug("===========================");
-    debug('post情報を取得します。');
-    //例外処理
-    try {
-        // DBへ接続
-        $dbh = dbConnect();
-        $sql = 'SELECT u.id,u.username, u.profpic, p.id AS p_id, p.comment, p.pic1, p.create_date
-        FROM post AS p
-        JOIN users AS u
-        ON p.user_id = u.id
-        WHERE 1=1 AND u.id = :u_id AND p.delete_flg = 0';
-        $data = array(":u_id" => $u_id);
-        debug('SQL：' . $sql);
-        // クエリ実行
-        $stmt = queryPost($dbh, $sql, $data, "common");
+// function getMyPostList($u_id)
+// {
+//     debug("===========================");
+//     debug("start get post list function");
+//     debug("===========================");
+//     debug('post情報を取得します。');
+//     //例外処理
+//     try {
+//         // DBへ接続
+//         $dbh = dbConnect();
+//         $sql = 'SELECT u.id,u.username, u.profpic, p.id AS p_id, p.comment, p.pic1, p.create_date
+//         FROM post AS p
+//         JOIN users AS u
+//         ON p.user_id = u.id
+//         WHERE 1=1 AND u.id = :u_id AND p.delete_flg =' . DELETE_FLG_ON . ' AND u.delete_flg =' . DELETE_FLG_ON;
+//         $data = array(":u_id" => $u_id);
+//         // クエリ実行
+//         $stmt = queryPost($dbh, $sql, $data, "common");
 
-        if ($stmt) {
-            // クエリ結果のデータを全レコードを格納
-            $rst['data'] = $stmt->fetchAll();
-            return $rst;
-        } else {
-            return false;
-        }
-    } catch (Exception $e) {
-        error_log('エラー発生:' . $e->getMessage());
-    }
-    debug("===========================");
-    debug("end get post list function");
-    debug("===========================");
-}
-function getPost()
+//         if ($stmt) {
+//             // クエリ結果のデータを全レコードを格納
+//             $rst['data'] = $stmt->fetchAll();
+//             return $rst;
+//         } else {
+//             return false;
+//         }
+//     } catch (Exception $e) {
+//         error_log('エラー発生:' . $e->getMessage());
+//     }
+//     debug("===========================");
+//     debug("end get post list function");
+//     debug("===========================");
+// }
+function getPost($u_id)
 {
     debug("===========================");
     debug("start get post list function");
@@ -1088,12 +1081,17 @@ function getPost()
     try {
         // DBへ接続
         $dbh = dbConnect();
-        $sql = 'SELECT u.id,u.username, u.profpic, p.comment, p.pic1, p.create_date
+        $sql = 'SELECT u.id, u.username, u.profpic, p.id AS p_id, p.comment, p.pic1, p.create_date
         FROM post AS p
         INNER JOIN users AS u
-        ON p.user_id = u.id
-        WHERE 1=1 AND p.delete_flg = ' . DELETE_FLG_ON . ' AND u.delete_flg =' . DELETE_FLG_ON;
-        $data = array();
+        ON p.user_id = u.id';
+        if ($u_id) {
+            $sql .= ' WHERE 1=1 AND u.id = :u_id AND p.delete_flg =' . DELETE_FLG_ON . ' AND u.delete_flg =' . DELETE_FLG_ON;
+            $data = array(":u_id" => $u_id);
+        } else {
+            $sql .= ' WHERE 1=1 AND p.delete_flg = ' . DELETE_FLG_ON . ' AND u.delete_flg =' . DELETE_FLG_ON;
+            $data = array();
+        }
         debug('SQL：' . $sql);
         // クエリ実行
         $stmt = queryPost($dbh, $sql, $data, "common");
@@ -1775,6 +1773,26 @@ function getfriendsList($id)
         }
     } catch (Exception $e) {
         error_log('エラー発生:' . $e->getMessage());
+    }
+}
+function createTime($createTime)
+{
+    $timestamp = strtotime($createTime);
+    $Time = (time() - $timestamp);
+    if ($Time <= 60) {
+        $seconds = $Time;
+        echo $seconds . "seconds";
+    } elseif ($Time >= 60 && $Time <= (60 * 60)) {
+        $minutes = $Time / 60;
+        echo floor($minutes) . "min";
+    } elseif ($Time >= (60 * 60) && $Time <= (60 * 60 * 24)) {
+        $hour = $Time / (60 * 60);
+        echo floor($hour) . "h";
+    } elseif ($Time >= (60 * 60 * 24) && $Time <= (60 * 60 * 24 * 31)) {
+        $day = $Time / (60 * 60 * 24);
+        echo floor($day) . "day";
+    } else {
+        echo (date("Y-m-d", $timestamp));
     }
 }
 function buttonColor($siteTitle, $key)

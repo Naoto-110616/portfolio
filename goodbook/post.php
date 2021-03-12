@@ -20,7 +20,8 @@ foreach ($dbPostData['data'] as $key => $val) :
                     </a>
                     <div class="user_name_div">
                         <p><?php echo sanitize($val["username"]); ?></p>
-                        <p class="time_line"><?php echo sanitize($val["create_date"]); ?></p>
+                        <p class="time_line"><?php $timestamp = strtotime($val["create_date"]); ?></p>
+                        <p class="time_line"><?php echo createTime($val["create_date"]) ?></p>
                     </div>
                     <?php if ($val["id"] === $_SESSION["user_id"]) { ?>
                         <div class="info_list ellipsis"><i class="fas fa-ellipsis-h"></i>
