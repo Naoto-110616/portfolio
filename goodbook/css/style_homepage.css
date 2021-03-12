@@ -562,6 +562,7 @@ a {
 }
 .icon_img_div > .info_list {
 	height: 15px;
+	width: 15px;
 	margin-left: auto;
 	border-radius: 75px;
 }
@@ -676,6 +677,7 @@ main lower part
 	margin-top: 10px;
 	border-radius: 10px;
 	margin-bottom: 30px;
+	width: 100%;
 }
 .swiper-wrapper .panel {
 	background-color: #e9e9e9;
@@ -1361,4 +1363,35 @@ label.err input {
 .msgRoom > .createMsg {
 	text-align: center;
 	margin-top: 100px;
+}
+/* ~~~~~~~~~~~~~~~ */
+/* postmenu */
+/* ~~~~~~~~~~~~~~~ */
+ul.menu li.subMenu {
+	position: relative;
+	margin: 0 0 0 1px;
+	padding: 5px;
+	width: 110px;
+	background-color: #555555;
+	display: block;
+}
+ul.sub {
+	display: none;
+	position: absolute;
+	margin-left: -6px;
+	padding: 0;
+}
+ul.sub li.subMenu a {
+	padding: 5px 10px;
+	margin-left: -5px;
+	margin-right: -5px;
+	margin-bottom: -5px;
+	display: block;
+}
+ul.sub li.subMenu a:hover {
+	background: #2d88ff;
+	text-decoration: none;
+}
+.display_none {
+	display: none;
 }
