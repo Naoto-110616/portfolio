@@ -38,7 +38,7 @@ if ($_POST["postButton"]) {
         }
         if (empty($err_msg)) {
             debug('バリデーションOKです。');
-            createPost($edit_flg, $comment, $pic1, $p_id);
+            createOrEditPost($edit_flg, $comment, $pic1, $p_id);
         }
     }
 }
@@ -46,8 +46,7 @@ if ($_POST["postButton"]) {
 // 画面表示用データ取得
 //================================
 // DBからpostデータを取得
-$dbPostData = getPost();
-$viewData = getUserOne($u_id);
+$dbPostData = getPost($u_id);
 $dbFormData = getUser($_SESSION['user_id']);
 debug('取得したユーザー情報：' . print_r($dbFormData, true));
 debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
@@ -66,18 +65,27 @@ require("goodbook_head.php");
                 <section id="main_left_wrapper">
                     <div id="contents">
                         <ul>
-                            <li class="main_left_icon">
-                                <div><i class="left_icon fas fa-user-circle fa-2x"></i></div>
-                                <div class="icon_name_div"><span class="icon_name">name</span></div>
-                            </li>
+                            <a href="mypage.php">
+                                <li class="main_left_icon">
+                                    <?php if (empty($dbFormData["profpic"])) { ?>
+                                        <div><i class="left_icon fas fa-user-circle fa-2x"></i></div>
+                                        <div class="icon_name_div"><span class="icon_name">name</span></div>
+                                    <?php } else { ?>
+                                        <img class="icon_img" src="<?php echo sanitize($dbFormData["profpic"]) ?>">
+                                        <div class="icon_name_div"><span class="icon_name"><?php echo sanitize($dbFormData["username"]); ?></span></div>
+                                    <?php } ?>
+                                </li>
+                            </a>
                             <li class="main_left_icon">
                                 <div><i class="left_icon fas fa-heartbeat fa-2x"></i></div>
                                 <div class="icon_name_div"><span class="icon_name">covid19 Information Center</span></div>
                             </li>
-                            <li class="main_left_icon">
-                                <div><i class="left_icon far fa-user fa-2x"></i></div>
-                                <div class="icon_name_div"><span class="icon_name">Find a friend</span></div>
-                            </li>
+                            <a href="friends.php">
+                                <li class="main_left_icon">
+                                    <div><i class="left_icon far fa-user fa-2x"></i></div>
+                                    <div class="icon_name_div"><span class="icon_name">Find a friend</span></div>
+                                </li>
+                            </a>
                             <li class="main_left_icon">
                                 <div><i class="left_icon fas fa-users fa-2x"></i></div>
                                 <div class="icon_name_div"><span class="icon_name">group</span></div>
@@ -117,10 +125,12 @@ require("goodbook_head.php");
                                             <div><i class="left_icon fas fa-wallet fa-2x"></i></div>
                                             <div class="icon_name_div"><span class="icon_name">pay</span></div>
                                         </li>
-                                        <li class="main_left_icon submenu__item">
-                                            <div><i class="left_icon fas fa-comment-dots fa-2x"></i></div>
-                                            <div class="icon_name_div"><span class="icon_name">massenger</span></div>
-                                        </li>
+                                        <a href="msgRoomList.php">
+                                            <li class="main_left_icon submenu__item">
+                                                <div><i class="left_icon fas fa-comment-dots fa-2x"></i></div>
+                                                <div class="icon_name_div"><span class="icon_name">massenger</span></div>
+                                            </li>
+                                        </a>
                                         <li class="main_left_icon submenu__item">
                                             <div><i class="left_icon far fa-comment-dots fa-2x"></i></div>
                                             <div class="icon_name_div"><span class="icon_name">massenger kids</span></div>
@@ -153,10 +163,12 @@ require("goodbook_head.php");
                                             <div><i class="left_icon fas fa-ticket-alt fa-2x"></i></div>
                                             <div class="icon_name_div"><span class="icon_name">curpon</span></div>
                                         </li>
-                                        <li class="main_left_icon submenu__item">
-                                            <div><i class="left_icon fas fa-users fa-2x"></i></div>
-                                            <div class="icon_name_div"><span class="icon_name">List of friends</span></div>
-                                        </li>
+                                        <a href="friendsList.php<?php echo "?u_id=" . $_SESSION["user_id"] ?>">
+                                            <li class="main_left_icon submenu__item">
+                                                <div><i class="fas fa-user-friends fa-2x"></i></div>
+                                                <div class="icon_name_div"><span class="icon_name">List of friends</span></div>
+                                            </li>
+                                        </a>
                                         <li class="main_left_icon submenu__item">
                                             <div><i class="left_icon fas fa-cloud-sun fa-2x"></i></div>
                                             <div class="icon_name_div"><span class="icon_name">wether</span></div>
