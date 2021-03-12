@@ -1054,7 +1054,7 @@ function getMyPostList($u_id)
     try {
         // DBへ接続
         $dbh = dbConnect();
-        $sql = 'SELECT p.id,p.comment,p.pic1
+        $sql = 'SELECT u.id,u.username, u.profpic, p.id AS p_id, p.comment, p.pic1, p.create_date
         FROM post AS p
         JOIN users AS u
         ON p.user_id = u.id
@@ -1111,6 +1111,24 @@ function getPost()
     debug("===========================");
     debug("end get post list function");
     debug("===========================");
+}
+function deletePost($p_id)
+{
+    if ($p_id) {
+        try {
+            $dbh = dbConnect();
+            $sql = 'UPDATE post SET delete_flg = 1 WHERE id = :p_id';
+            $data = array(":p_id" => $p_id);
+            $stmt = queryPost($dbh, $sql, $data, "common");
+            if ($stmt) {
+                //セッション削除
+                debug('mypageへ遷移します。');
+                header("Location:mypage.php");
+            }
+        } catch (Exception $e) {
+            error_log('error:' . $e->getMessage());
+        }
+    }
 }
 function getUserList($currentMinNum = 1, $area, $span = 20)
 {
