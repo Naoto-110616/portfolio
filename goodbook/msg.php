@@ -99,7 +99,7 @@ require('goodbook_head.php');
                                     <span class="triangle"></span>
                                     <?php echo sanitize($val['msg']); ?>
                                 </p>
-                                <div style="font-size:.5em;"><?php echo sanitize($val['send_date']); ?></div>
+                                <div style="font-size:.5em;"><?php echo createTime($val['send_date']); ?></div>
                             </div>
                         <?php
                         } else {
@@ -112,7 +112,7 @@ require('goodbook_head.php');
                                     <span class="triangle"></span>
                                     <?php echo sanitize($val['msg']); ?>
                                 </p>
-                                <div style="font-size:.5em;text-align:right;"><?php echo sanitize($val['send_date']); ?></div>
+                                <div style="font-size:.5em;text-align:right;"><?php echo createTime($val['send_date']); ?></div>
                             </div>
                     <?php
                         }
