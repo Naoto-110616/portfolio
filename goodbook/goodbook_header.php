@@ -25,7 +25,7 @@
         <div class="header_center_icon"><i class="fas fa-tv fa-2x"></i></div>
         <a class="to_friends chenge_color" href="friends.php">
             <div class="header_center_icon">
-                <i class="fas fa-users fa-2x <?php buttonColor($siteTitle, "friends") ?>"></i>
+                <i class="left_icon far fa-user fa-2x <?php buttonColor($siteTitle, "friends") ?>"></i>
             </div>
         </a>
         <div class="header_center_icon"><i class="fas fa-dice-d6 fa-2x"></i></div>
