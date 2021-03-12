@@ -56,7 +56,7 @@ if (!empty($_POST["uploadIconImg"] || $_POST["uploadBackgroundImg"])) {
 // Area data 取得
 $dbAreaData = getArea();
 // user post data 取得
-$dbPostData = getMyPostList($_SESSION["user_id"]);
+$dbPostData = getPost($_SESSION["user_id"]);
 // user data 取得
 $dbFormData = getUser($_SESSION['user_id']);
 
@@ -363,7 +363,7 @@ require('goodbook_head.php');
                                         </div>
                                     </div>
                                     <label>
-                                        <input type="submit" value="<?php echo (!$edit_flg) ? 'post' : 'edit'; ?>" name="uploadIconImg">
+                                        <input type="submit" name="uploadIconImg">
                                     </label>
                                 </form>
                             </div>
@@ -382,7 +382,7 @@ require('goodbook_head.php');
                             <form action="" method="post" class="edit_form" enctype="multipart/form-data">
                                 <div class="modalwindow_form_title">
                                     <div class="edit_title">
-                                        <h1>edit background img</h1>
+                                        <h1>change cover photo</h1>
                                     </div>
                                     <div class="x-circle3">
                                         <i class="far fa-times-circle fa-2x"></i>
@@ -405,7 +405,7 @@ require('goodbook_head.php');
                                     </div>
                                 </div>
                                 <label>
-                                    <input type="submit" value="<?php echo (!$edit_flg) ? 'post' : 'edit'; ?>" name="uploadBackgroundImg">
+                                    <input type="submit" name="uploadBackgroundImg">
                                 </label>
                             </form>
                         </div>
