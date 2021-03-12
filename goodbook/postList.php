@@ -12,7 +12,7 @@ auth();
 
 // user data 取得
 $dbFormData = getUser($_SESSION["user_id"]);
-$dbPostData = getMyPostList($_SESSION["user_id"]);
+$dbPostData = getPost($_SESSION["user_id"]);
 debug(print_r($dbPostData, true));
 ?>
 
