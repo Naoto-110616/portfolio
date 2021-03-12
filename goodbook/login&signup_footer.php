@@ -34,7 +34,7 @@
                 <li class="interval"><a href="">Groups</a></li>
                 <li class="interval"><a href="">Oculus</a></li>
                 <li class="interval"><a href="">Portal</a></li>
-                <li class="interval"><a href="">Instagram</a></li>
+                <li class="interval"><a href="https://www.instagram.com/">Instagram</a></li>
                 <li class="interval"><a href="">Local</a></li>
                 <li class="interval"><a href="">Fundraisers</a></li>
                 <li class="interval"><a href="">Services</a></li>
