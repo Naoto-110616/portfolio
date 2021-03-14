@@ -59,6 +59,8 @@ $dbAreaData = getArea();
 $dbPostData = getPost($_SESSION["user_id"]);
 // user data 取得
 $dbFormData = getUser($_SESSION['user_id']);
+// friends info
+$dbUserData = getUserData($_SESSION["user_id"]);
 
 debug('取得したユーザー情報：' . print_r($dbFormData, true));
 
@@ -85,7 +87,7 @@ require('goodbook_head.php');
                         <div class="main_top_cover_photo" style="background-image: url(<?php echo sanitize($dbFormData["backgroundimg"]); ?>);">
                             <div class="cover_photo_change_button">
                                 <label for="">
-                                    <input type="button" name="cover_photo_change" value="change cover photo" class="coverPhotoChange">
+                                    <input type="button" name="cover_photo_change" value="Change Cover Photo" class="coverPhotoChange">
                                 </label>
                             </div>
                         </div>
@@ -126,7 +128,7 @@ require('goodbook_head.php');
                         <div class="main_top_content main_top_content_user_info_list2">
                             <div class="edit">
                                 <i class="fas fa-pen"></i>
-                                <span>Editprofile</span>
+                                <p>EditProfile</p>
                             </div>
                             <div class="info_list"><i class="fas fa-eye"></i></div>
                             <div class="info_list"><i class="fas fa-search"></i></div>
@@ -139,33 +141,18 @@ require('goodbook_head.php');
         <article>
             <div class="main_lower_part">
                 <div class="main_lower_inside">
-                    <section class="themes">
-                        <!-- スライダー全体を括るメインコンテナ -->
-                        <div class="swiper-container">
-                            <!-- 全スライドをまとめるラッパー -->
-                            <div class="swiper-wrapper">
-                                <!-- 各スライド -->
-                                <div class="swiper-slide panel"></div>
-                                <div class="swiper-slide panel"></div>
-                                <div class="swiper-slide panel"></div>
-                                <div class="swiper-slide panel"></div>
-                                <div class="swiper-slide panel"></div>
-                                <div class="swiper-slide panel"></div>
-                                <div class="swiper-slide panel"></div>
-                                <div class="swiper-slide panel"></div>
-                                <div class="swiper-slide panel"></div>
-                                <div class="swiper-slide panel"></div>
-                                <div class="swiper-slide panel"></div>
-                                <div class="swiper-slide panel"></div>
-                                <div class="swiper-slide panel"></div>
-                                <div class="swiper-slide panel"></div>
-                                <div class="swiper-slide panel"></div>
-                                <div class="swiper-slide panel"></div>
-                                <div class="swiper-slide panel"></div>
-                                <div class="swiper-slide panel"></div>
-                            </div>
-                        </div>
-                    </section>
+                    friends List
+                    <div class="slider">
+                        <i class="fas fa-chevron-left slider__nav slider__prev js-slider-prev" aria-hidden="true"></i>
+                        <i class="fas fa-chevron-right slider__nav slider__next js-slider-next" aria-hidden="true"></i>
+                        <ul class="slider__container">
+                            <?php foreach ($dbUserData['data'] as $key => $val) : ?>
+                                <a href="userDetail.php<?php echo "?u_id=" . $val["id"] ?>">
+                                    <li class="slider__item slider__item"><img src="<?php echo showImg($val["profpic"]) ?>" alt=""></li>
+                                </a>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
                     <div class="content_flex">
                         <div class="my_profile">
                             <div class="myprofile_inside">
@@ -250,7 +237,7 @@ require('goodbook_head.php');
                         <div class="inside">
                             <div class="modalwindow_form_title">
                                 <div class="edit_title">
-                                    <h1>edit profile</h1>
+                                    <h1>Edit Profile</h1>
                                 </div>
                                 <div class="x-circle1">
                                     <i class="far fa-times-circle fa-2x"></i>
@@ -340,7 +327,7 @@ require('goodbook_head.php');
                                 <form action="" method="post" class="edit_form" enctype="multipart/form-data">
                                     <div class="modalwindow_form_title">
                                         <div class="edit_title">
-                                            <h1>edit Icon</h1>
+                                            <h1>Edit Icon</h1>
                                         </div>
                                         <div class="x-circle2">
                                             <i class="far fa-times-circle fa-2x"></i>
@@ -363,7 +350,7 @@ require('goodbook_head.php');
                                         </div>
                                     </div>
                                     <label>
-                                        <input type="submit" name="uploadIconImg">
+                                        <input type="submit" name="uploadIconImg" value="upload">
                                     </label>
                                 </form>
                             </div>
@@ -382,7 +369,7 @@ require('goodbook_head.php');
                             <form action="" method="post" class="edit_form" enctype="multipart/form-data">
                                 <div class="modalwindow_form_title">
                                     <div class="edit_title">
-                                        <h1>change cover photo</h1>
+                                        <h1>Change Cover Photo</h1>
                                     </div>
                                     <div class="x-circle3">
                                         <i class="far fa-times-circle fa-2x"></i>
@@ -405,7 +392,7 @@ require('goodbook_head.php');
                                     </div>
                                 </div>
                                 <label>
-                                    <input type="submit" name="uploadBackgroundImg">
+                                    <input type="submit" name="uploadBackgroundImg" value="upload">
                                 </label>
                             </form>
                         </div>

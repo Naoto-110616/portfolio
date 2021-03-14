@@ -1,4 +1,6 @@
+// =========================
 // main_left_menuの表示，非表示
+// =========================
 $(function () {
 	$(".js-menu__item__link_open").each(function () {
 		$(this).on("click", function () {
@@ -27,8 +29,9 @@ $(function () {
 		$(".accountMenu").toggle();
 	});
 });
-
-// profile editモーダルウィンドウの表示，非表示ボタン
+// ===========================================
+// モーダルウィンドウの表示，非表示ボタン
+// ===========================================
 $(function () {
 	$(".edit").click(function () {
 		$(".modalwindow_screen_overall_1").toggle();
@@ -78,13 +81,13 @@ $(function () {
 		$("body").toggleClass("fixed");
 	});
 });
-
 //ボタンの色保持
 $(function () {
 	$(".accountMenu_button").click(function () {
 		$(this).toggleClass("Retentioncolor_blue");
 	});
 });
+
 // 要改善　ボタン切り分け
 // // good button
 // $(function () {
@@ -200,7 +203,9 @@ $(function () {
 // 	);
 // });
 
+// ~~~~~~~~~~~~~~
 // friend 登録機能
+// ~~~~~~~~~~~~~~
 var $like, $FriendId;
 $like = $(".js-click-like") || null; //nullというのはnull値という値で、「変数の中身は空ですよ」と明示するためにつかう値
 $FriendId = $like.data("friendid") || null;
@@ -226,6 +231,9 @@ if ($FriendId !== undefined && $FriendId !== null) {
 	});
 }
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// formが全て入力されるまでinputを無効化
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 $(function () {
 	$(".js-form-validate-login").on("keyup", function () {
 		if ($(".email").val() && $(".password").val()) {
@@ -235,7 +243,6 @@ $(function () {
 		}
 	});
 });
-
 $(function () {
 	$(".js-form-validate-signup").on("keyup", function () {
 		if (
@@ -249,6 +256,7 @@ $(function () {
 		}
 	});
 });
+
 /* ~~~~~~~~~~~~~~ */
 /* dropdownmenu */
 /* ~~~~~~~~~~~~~~ */
@@ -262,3 +270,79 @@ $(function () {
 		}
 	);
 });
+
+/* ~~~~~~~~~~~~~~ */
+/* slider */
+/* ~~~~~~~~~~~~~~ */
+// var currentItemNum = 1;
+// var $slideContainer = $(".slider__container");
+// var slideItemNum = $(".slider__item").length;
+// var slideItemWidth = $(".slider__item").innerWidth();
+// var slideContainerWidth = slideItemWidth * slideItemNum;
+// var DURATION = 500;
+
+// $slideContainer.attr("style", "width:" + slideContainerWidth + "px");
+
+// $(".js-slider-next").on("click", function () {
+// 	if (currentItemNum < slideItemNum) {
+// 		$slideContainer.animate({ left: "-=" + slideItemWidth + "px" }, DURATION);
+// 		currentItemNum++;
+// 	}
+// });
+// $(".js-slider-prev").on("click", function () {
+// 	if (currentItemNum > 1) {
+// 		$slideContainer.animate({ left: "+=" + slideItemWidth + "px" }, DURATION);
+// 		currentItemNum--;
+// 	}
+// });
+
+var slider = (function () {
+	var currentItemNum = 1; //デフォルトの位置設定
+	var $slideContainer = $(".slider__container"); //格納しているタグを指定
+	var slideItemNum = $(".slider__item").length; //アイテムの数を数えて変数へ代入
+	var slideItemWidth = $(".slider__item").innerWidth(); //アイテムのwidthを変数へ代入
+	var slideContainerWidth = slideItemWidth * slideItemNum; //アイテムの合計のwidthを変数へ代入
+	var DURATION = 500; //アニメーションの時間を代入
+
+	return {
+		slidePrev: function () {
+			//現在のアイテム番号が1より小さい場合はこの処理をしない
+			if (currentItemNum > 1) {
+				//アイテムを動かす
+				$slideContainer.animate(
+					//左へ一つのアイテムのwidth分動かす
+					{ left: "+=" + slideItemWidth + "px" },
+					//時間指定
+					DURATION
+				);
+				// 現在のアイテム番号から1マイナスする
+				currentItemNum--;
+			}
+		},
+		slideNext: function () {
+			//現在のアイテム番号が合計のアイテム番号より小さい場合はこの処理をしない
+			if (currentItemNum < slideItemNum) {
+				//アイテムを動かす
+				$slideContainer.animate(
+					//右へ一つのアイテムのwidth分動かす
+					{ left: "-=" + slideItemWidth + "px" },
+					//時間指定
+					DURATION
+				);
+				// 現在のアイテム番号から1プラスする
+				currentItemNum++;
+			}
+		},
+		init: function () {
+			$slideContainer.attr("style", "width:" + slideContainerWidth + "px");
+			var that = this;
+			$(".js-slider-next").click(function () {
+				that.slideNext();
+			});
+			$(".js-slider-prev").click(function () {
+				that.slidePrev();
+			});
+		},
+	};
+})();
+slider.init();

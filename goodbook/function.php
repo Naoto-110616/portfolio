@@ -1807,3 +1807,22 @@ function showVariable($var)
     echo var_dump($var);
     echo "<pre>";
 }
+function getUserData($u_id)
+{
+    try {
+        $dbh = dbConnect();
+        $sql = "SELECT id,username,profpic,backgroundimg
+        FROM users
+        WHERE 1=1 AND id NOT IN (:id) AND delete_flg=" . DELETE_FLG_ON;
+        $data = array(":id" => $u_id);
+        $stmt = queryPost($dbh, $sql, $data, "common");
+        if ($stmt) {
+            $rst['data'] = $stmt->fetchAll();
+            return $rst;
+        } else {
+            return false;
+        }
+    } catch (Exception $e) {
+        error_log('エラー発生:' . $e->getMessage());
+    }
+}
