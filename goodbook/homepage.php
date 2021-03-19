@@ -112,10 +112,10 @@ require("goodbook_head.php");
                             </li>
                             <ul class="menu">
                                 <li class="menu_item">
-                                    <a class="main_left_icon menu__item__link js-menu__item__link_open" href="">
+                                    <div class="main_left_icon menu__item__link js-menu__item__link_open">
                                         <div><i class="fas fa-arrow-circle-down fa-2x"></i></div>
                                         <div class="icon_name_div"><span class="icon_name">more</span></div>
-                                    </a>
+                                    </div>
                                     <ul class="submenu">
                                         <li class="main_left_icon submenu__item">
                                             <div><i class="left_icon fas fa-briefcase fa-2x"></i></div>
