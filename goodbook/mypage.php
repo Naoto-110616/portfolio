@@ -103,6 +103,9 @@ require('goodbook_head.php');
                             <?php } else { ?>
                                 <img class="myIcon_img" src="<?php echo sanitize($dbFormData["profpic"]) ?>">
                             <?php } ?>
+                            <div class="thumbnailCover thumbnailCover--sample1">
+                                <p>Edit</p>
+                            </div>
                         </div>
                         <div class="usernamediv">
                             <h1><?php userInfoIndicate($dbFormData, "username"); ?></h1>
@@ -138,7 +141,7 @@ require('goodbook_head.php');
                 </div>
             </div>
         </article>
-        <article>
+        <article class="mypage_beneath">
             <div class="main_lower_part">
                 <div class="main_lower_inside">
                     friends List
@@ -250,49 +253,49 @@ require('goodbook_head.php');
                                         <?php echo getErrMsg("common"); ?>
                                     </div>
                                     <label class="<?php echo getErrMsglabel("username"); ?>">
-                                        name
+                                        <span class="editProfileElement">name</span>
                                         <input name="username" type="text" value="<?php echo getFormData("username"); ?>">
                                     </label>
                                     <div class="area-msg">
                                         <?php echo getErrMsg("username"); ?>
                                     </div>
                                     <label class="<?php echo getErrMsglabel("tel"); ?>">
-                                        tel<span> Please enter without hyphens</span>
+                                        <span class="editProfileElement">tel<span> Please enter without hyphens</span></span>
                                         <input name="tel" type="text" value="<?php echo getFormData("tel"); ?>">
                                     </label>
                                     <div class="area-msg">
                                         <?php echo getErrMsg("tel"); ?>
                                     </div>
                                     <label class="<?php echo getErrMsglabel("zip"); ?>">
-                                        zip code<span> Please enter without hyphens</span>
+                                        <span class="editProfileElement">zip code<span> Please enter without hyphens</span></span>
                                         <input name="zip" type="text" value="<?php echo getFormData("zip"); ?>">
                                     </label>
                                     <div class="area-msg">
                                         <?php echo getErrMsg("zip"); ?>
                                     </div>
                                     <label class="<?php echo getErrMsglabel("addr"); ?>">
-                                        address
+                                        <span class="editProfileElement">address</span>
                                         <input name="addr" type="text" value="<?php echo getFormData("addr"); ?>">
                                     </label>
                                     <div class="area-msg">
                                         <?php echo getErrMsg("addr"); ?>
                                     </div>
                                     <label class="<?php echo getErrMsglabel("age"); ?>">
-                                        age
+                                        <span class="editProfileElement">age</span>
                                         <input name="age" type="number" value="<?php echo getFormData("age"); ?>">
                                     </label>
                                     <div class="area-msg">
                                         <?php echo getErrMsg("age"); ?>
                                     </div>
                                     <label class="<?php echo getErrMsglabel("email"); ?>">
-                                        Email
+                                        <span class="editProfileElement">Email</span>
                                         <input name="email" type="text" value="<?php echo getFormData("email"); ?>">
                                     </label>
                                     <div class="area-msg">
                                         <?php echo getErrMsg("email"); ?>
                                     </div>
                                     <label class="<?php if (!empty($err_msg['area_id'])) echo 'err'; ?>">
-                                        Area<span class="label-require"></span>
+                                        <span class="editProfileElement">Area<span class="label-require"></span></span>
                                         <select name="area_id" id="" class="areaBox">
                                             <option value="0" <?php if (getFormData('area_id') == 0) echo 'selected'; ?>>Please select</option>
                                             <?php foreach ($dbAreaData as $key => $val) { ?>
