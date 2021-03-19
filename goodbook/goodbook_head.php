@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja" style="background:#191919;">
+<html lang="ja" class="html_backgroundColor">
 
 <head>
     <meta charset="UTF-8">
