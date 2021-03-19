@@ -27,8 +27,8 @@ foreach ($dbPostData['data'] as $key => $val) :
                         <div class="info_list ellipsis"><i class="fas fa-ellipsis-h"></i>
                             <ul class="menu">
                                 <ul class="sub">
-                                    <li class="subMenu"><a href="#">edit post</a></li>
-                                    <li class="subMenu"><a href="deletePost.php<?php echo "?p_id=" . ($val["p_id"]) ?>">delete post</a></li>
+                                    <li class="subMenu"><a href="#" class="submenuName">edit post</a></li>
+                                    <li class="subMenu"><a href="deletePost.php<?php echo "?p_id=" . ($val["p_id"]) ?>" class="submenuName">delete post</a></li>
                                 </ul>
                             </ul>
                         </div>
