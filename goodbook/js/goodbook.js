@@ -9,10 +9,8 @@ $(function () {
 			$("i", this).toggleClass("fas fa-arrow-circle-up fa-2x");
 			$(this).toggleClass("Retentioncolor_blue");
 			if ($("span", this).text() === "close") {
-				// $(this).toggleClass("darkColor2");
 				$("span", this).text("more");
 			} else {
-				// $(this).removeClass("darkColor2");
 				$("span", this).text("close");
 			}
 			return false;
@@ -25,7 +23,7 @@ $(function () {
 // ====================
 // accountMenuの表示，非表示ボタン
 $(function () {
-	$(".accountMenu_button").click(function () {
+	$(".accountMenu_button").on("click", function () {
 		$(".accountMenu").toggle();
 	});
 });
@@ -33,57 +31,57 @@ $(function () {
 // モーダルウィンドウの表示，非表示ボタン
 // ===========================================
 $(function () {
-	$(".edit").click(function () {
+	$(".edit").on("click", function () {
 		$(".modalwindow_screen_overall_1").toggle();
 		$("body").toggleClass("fixed");
 	});
 });
 $(function () {
-	$(".myIcon_img_div").click(function () {
+	$(".myIcon_img_div").on("click", function () {
 		$(".modalwindow_screen_overall_2").toggle();
 		$("body").toggleClass("fixed");
 	});
 });
 $(function () {
-	$(".coverPhotoChange").click(function () {
+	$(".coverPhotoChange").on("click", function () {
 		$(".modalwindow_screen_overall_3").toggle();
 		$("body").toggleClass("fixed");
 	});
 });
 $(function () {
-	$(".main_center_comment2").click(function () {
+	$(".main_center_comment2").on("click", function () {
 		$(".modalwindow_screen_overall_4").toggle();
 		$("body").toggleClass("fixed");
 	});
 });
 // Xボタン
 $(function () {
-	$(".x-circle1").click(function () {
+	$(".x-circle1").on("click", function () {
 		$(".modalwindow_screen_overall_1").toggle();
 		$("body").toggleClass("fixed");
 	});
 });
 $(function () {
-	$(".x-circle2").click(function () {
+	$(".x-circle2").on("click", function () {
 		$(".modalwindow_screen_overall_2").toggle();
 		$("body").toggleClass("fixed");
 	});
 });
 $(function () {
-	$(".x-circle3").click(function () {
+	$(".x-circle3").on("click", function () {
 		$(".modalwindow_screen_overall_3").toggle();
 		$("body").toggleClass("fixed");
 	});
 });
 $(function () {
-	$(".x-circle4").click(function () {
+	$(".x-circle4").on("click", function () {
 		$(".modalwindow_screen_overall_4").toggle();
 		$("body").toggleClass("fixed");
 	});
 });
 //ボタンの色保持
 $(function () {
-	$(".accountMenu_button").click(function () {
+	$(".accountMenu_button").on("click", function () {
 		$(this).toggleClass("Retentioncolor_blue");
 	});
 });
@@ -91,14 +89,14 @@ $(function () {
 // 要改善　ボタン切り分け
 // // good button
 // $(function () {
-// 	$(".good").click(function () {
+// 	$(".good").on("click",function () {
 // 		$(".good_subject").toggleClass("Retentioncolor_blue");
 // 		$(".fa-thumbs-up").toggleClass("Retentioncolor_blue");
 // 	});
 // });
 // // share button
 // $(function () {
-// 	$(".share").click(function () {
+// 	$(".share").on("click",function () {
 // 		$(".share_subject").toggleClass("Retentioncolor_blue");
 // 		$(".fa-reply").toggleClass("Retentioncolor_blue");
 // 	});
@@ -133,6 +131,17 @@ $(function () {
 		$(".withdraw_main").toggleClass("lightBackColor1");
 		$(".withdraw_page_width").toggleClass("lightBackColor2 darkColor2 shadow");
 		$(".withdraw_window input").toggleClass("shadow");
+		$(".main_center_comment2").toggleClass("lightColor2");
+		$(".submenuName").toggleClass("lightColor2");
+		$(".main_top_content_overall").toggleClass("lightBackColor2");
+		$(".my_profile").toggleClass("lightBackColor2 shadow");
+		$(".share_post").toggleClass("lightBackColor2 shadow");
+		$(".modalwindow_form").toggleClass("lightBackColor2 shadow");
+		$(".mypage_beneath").toggleClass("lightBackColor1");
+		$(".editProfileElement").toggleClass("darkColor2");
+		$(".imgUpIcon").toggleClass("darkColor2");
+		$(".posttextarea").toggleClass("lightBackColor2 darkColor2");
+		$(".html_backgroundColor").toggleClass("lightBackColor1");
 	});
 });
 
