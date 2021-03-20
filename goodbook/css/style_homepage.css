@@ -172,7 +172,6 @@ a {
 }
 .main_center_element2_share2 {
 	padding-bottom: 15px;
-	overflow: hidden;
 	justify-content: center;
 	display: flex;
 }
@@ -238,6 +237,7 @@ a {
 .icon_button {
 	margin-left: 5px;
 	float: left;
+	font-size: 16px;
 }
 .main_live_video_icon,
 .main_video_icon,
@@ -1467,4 +1467,27 @@ ul.sub li.subMenu a:hover {
 	font-size: 2em;
 	position: relative;
 	top: 43%;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* post good button animation */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.good_color {
+	color: #2d88f2;
+}
+.is-active {
+	animation: favPushAnimation 0.5s ease-out;
+}
+@keyframes favPushAnimation {
+	0% {
+		transform: scale(2) rotate(-14deg);
+	}
+	100% {
+		transform: scale(1) rotate(0);
+	}
+}
+.share_color {
+	color: orange;
+}
+.comment_color {
+	color: rgb(30, 218, 102);
 }
