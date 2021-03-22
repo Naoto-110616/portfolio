@@ -1,4 +1,72 @@
 // =========================
+// jquery 読み込み
+// =========================
+var $ = require("jQuery");
+
+// =========================
+// login&signup form action
+// =========================
+$(function () {
+	const MSG_EMAIL_TYPE = "Not in the form of email";
+	const MSG_PHONE_TYPE = "Not in the form of a phone number";
+	const MSG_EMPTY = "Input Required";
+	const MSG_PASSWORD_MIN = "Please enter at least 6 characters";
+	const MSG_COLLATION = "pass and repass are different";
+
+	$(".email").keyup(function () {
+		var form_g = $(this).closest(".emaildiv");
+
+		if ($(this).val().length === 0) {
+			form_g.removeClass("has-success").addClass("has-error");
+			form_g.find(".help-block").text(MSG_EMPTY);
+		} else if (
+			$(this).val().length > 50 ||
+			!$(this)
+				.val()
+				.match(
+					/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/
+				)
+		) {
+			form_g.removeClass("has-success").addClass("has-error");
+			form_g.find(".help-block").text(MSG_EMAIL_TYPE);
+		} else {
+			form_g.removeClass("has-error").addClass("has-success");
+			form_g.find(".help-block").text("");
+		}
+	});
+
+	$(".password").keyup(function () {
+		var form_g = $(this).closest(".passworddiv");
+
+		if ($(this).val().length === 0) {
+			form_g.removeClass("has-success").addClass("has-error");
+			form_g.find(".help-block").text(MSG_EMPTY);
+		} else if ($(this).val().length < 6) {
+			form_g.removeClass("has-success").addClass("has-error");
+			form_g.find(".help-block").text(MSG_PASSWORD_MIN);
+		} else {
+			form_g.removeClass("has-error").addClass("has-success");
+			form_g.find(".help-block").text("");
+		}
+	});
+
+	$(".password_retype").keyup(function () {
+		var form_g = $(this).closest(".password_retypediv");
+
+		if ($(this).val().length === 0) {
+			form_g.removeClass("has-success").addClass("has-error");
+			form_g.find(".help-block").text(MSG_EMPTY);
+		} else if ($(this).val().length < 6) {
+			form_g.removeClass("has-success").addClass("has-error");
+			form_g.find(".help-block").text(MSG_PASSWORD_MIN);
+		} else {
+			form_g.removeClass("has-error").addClass("has-success");
+			form_g.find(".help-block").text("");
+		}
+	});
+});
+
+// =========================
 // main_left_menuの表示，非表示
 // =========================
 $(function () {
@@ -85,22 +153,6 @@ $(function () {
 		$(this).toggleClass("Retentioncolor_blue");
 	});
 });
-
-// 要改善　ボタン切り分け
-// // good button
-// $(function () {
-// 	$(".good").on("click",function () {
-// 		$(".good_subject").toggleClass("Retentioncolor_blue");
-// 		$(".fa-thumbs-up").toggleClass("Retentioncolor_blue");
-// 	});
-// });
-// // share button
-// $(function () {
-// 	$(".share").on("click",function () {
-// 		$(".share_subject").toggleClass("Retentioncolor_blue");
-// 		$(".fa-reply").toggleClass("Retentioncolor_blue");
-// 	});
-// });
 
 // ダークモード切り替え
 $(function () {
@@ -204,13 +256,6 @@ $(function () {
 		fileReader.readAsDataURL(file);
 	});
 });
-// $(function () {
-// 	//scrollHeightは要素のスクロールビューの高さを取得するもの
-// 	$("#js-scroll-bottom").animate(
-// 		{ scrollTop: $("#js-scroll-bottom")[0].scrollHeight },
-// 		"fast"
-// 	);
-// });
 
 // ~~~~~~~~~~~~~~
 // friend 登録機能
@@ -279,31 +324,6 @@ $(function () {
 		}
 	);
 });
-
-/* ~~~~~~~~~~~~~~ */
-/* slider */
-/* ~~~~~~~~~~~~~~ */
-// var currentItemNum = 1;
-// var $slideContainer = $(".slider__container");
-// var slideItemNum = $(".slider__item").length;
-// var slideItemWidth = $(".slider__item").innerWidth();
-// var slideContainerWidth = slideItemWidth * slideItemNum;
-// var DURATION = 500;
-
-// $slideContainer.attr("style", "width:" + slideContainerWidth + "px");
-
-// $(".js-slider-next").on("click", function () {
-// 	if (currentItemNum < slideItemNum) {
-// 		$slideContainer.animate({ left: "-=" + slideItemWidth + "px" }, DURATION);
-// 		currentItemNum++;
-// 	}
-// });
-// $(".js-slider-prev").on("click", function () {
-// 	if (currentItemNum > 1) {
-// 		$slideContainer.animate({ left: "+=" + slideItemWidth + "px" }, DURATION);
-// 		currentItemNum--;
-// 	}
-// });
 
 var slider = (function () {
 	var currentItemNum = 1; //デフォルトの位置設定
