@@ -16,19 +16,17 @@
 	},
 	"homepage": "https://github.com/Naoto-110616/portfolio#readme",
 	"dependencies": {
-		"browserify": "^17.0.0",
 		"jquery": "^3.6.0",
 		"package.json": "^2.0.1"
 	},
 	"devDependencies": {
-		"autoprefixer": "^10.2.5",
-		"cssnano": "^4.1.10",
+		"browserify": "^17.0.0",
 		"gulp": "^4.0.2",
-		"node-sass": "^5.0.0",
-		"nodemon": "^2.0.7",
-		"npm-run-all": "^4.1.5",
-		"postcss-cli": "^8.3.1",
-		"watch": "^1.0.2"
+		"gulp-changed": "^4.0.2",
+		"gulp-imagemin": "^7.1.0",
+		"gulp-minify-css": "^1.2.4",
+		"gulp-sass": "^4.1.0",
+		"nodemon": "^2.0.7"
 	},
 	"description": ""
 }
