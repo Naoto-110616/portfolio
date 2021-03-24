@@ -6,6 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>goodbook - <?php echo $siteTitle; ?></title>
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="dist/css/reset.css">
     <link rel="stylesheet" href="dist/css/style.css">
 </head>
