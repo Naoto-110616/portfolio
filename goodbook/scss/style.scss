@@ -5,6 +5,8 @@ $goodbook_color:#2d88ff;
 $font-color_default: #dddddd;
 $font-color_sub1: #494949;
 $background-color_default: #191919;
+$background-color_hover: rgba(198, 198, 198, 0.25);
+$background-color_transparency_color:rgba(0, 0, 0, 0.5);
 
 $site-width: 980px;
 
@@ -46,11 +48,9 @@ body {
 	.chenge_color,
 	&_center_icon {
 		display: inline;
-		padding: $space_l 4%;
 		border-radius: $border-radius_s;
 	}
-	&_center_icon,
-	&_right_icon {
+	&_center_icon{
 		font-size: $font-size_m;
 	}
 	&IconSubject {
@@ -61,7 +61,8 @@ body {
 		float: left;
 	}
 	&_right_icon {
-		margin: $space_l;
+		font-size: $font-size_m;
+		padding: 0 $space_l;
 	}
 }
 a {
@@ -69,12 +70,9 @@ a {
 }
 .icon {
 	width: 70px;
-	&_div {
-		margin: auto;
-	}
 }
-.serch {
-	width: 240px;
+.goodbook_search {
+	width: 100%;
 	height: $space_3l;
 	border-radius: $border-radius_l;
 	border: none;
@@ -83,7 +81,7 @@ a {
 	color: $font-color_default;
 	background-color: #494949;
 	&_div {
-		margin: auto;
+		padding: 8px 0;
 	}
 	&::placeholder {
 		color: $font-color_default;
@@ -97,25 +95,27 @@ a {
 	padding: $space_l 4%;
 	border-radius: $border-radius_s;
 	&:hover {
-		background-color: rgba(198, 198, 198, 0.25);
+		background-color: $background-color_hover;
 		color: $goodbook_color;
 	}
 }
 .head{
 &_left {
+	width: 20%;
 	display: flex;
 }
 &_center {
-		width: 100%;
+		width: 60%;
 		height: 60px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 }
 &_right {
-		width: 33%;
+		width: 20%;
 		display: flex;
-		justify-content: center;
+		align-items: center;
+
 }
 }
 .accountMenu {
@@ -178,7 +178,11 @@ a {
 	&_left_icon {
 		display: flex;
 		color: $font-color_default;
-		margin: $space_xl;
+		padding: 10px;
+		&:hover{
+		background: $background-color_hover;
+		cursor: pointer;
+		}
 	}
 	&_center {
 		padding-top: $space_xl;
@@ -621,7 +625,7 @@ a {
 .info_list:hover,
 .edit:hover,
 .message:hover {
-	background-color: rgba(198, 198, 198, 0.25);
+	background-color: $background-color_hover;
 	border-radius: $border-radius_m;
 }
 .friendMsg {
@@ -738,7 +742,7 @@ main lower part
 	width: 100%;
 	height: 100%;
 	overflow-y: scroll;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: $background-color_transparency_color;
 }
 .modalwindow{
 	&_screen_overall,
@@ -754,7 +758,7 @@ main lower part
 		width: 100%;
 		height: 100%;
 		overflow-y: scroll;
-		background-color: rgba(0, 0, 0, 0.5);
+		background-color: $background-color_transparency_color;
 	}
 	&_form_div {
 		position: absolute;
@@ -1143,7 +1147,6 @@ a.panel:hover {
 /* 「「「「「「「「「「「「「「「「「 */
 /* hover */
 /* 「「「「「「「「「「「「「「「「「 */
-.icon_name,
 .left_icon,
 .header_center_icon,
 .header_right_icon,
@@ -1523,7 +1526,7 @@ ul.sub {
 		top: 45%;
 	}
 	&Cover--sample1 {
-		background: rgba(0, 0, 0, 0.6);
+		background: $background-color_transparency_color;
 	}
 	&Cover--sample1 .fas {
 		color: #fff;
