@@ -4,6 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>goodbook - <?php echo $siteTitle; ?></title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="dist/css/reset.css">
+    <link rel="stylesheet" href="dist/css/login&signup_style.css">
 </head>
