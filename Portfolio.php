@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Portfolio</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="portfolio_style.css">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
               <tr>
                 <th>案件</th>
                 <th>期間</th>
-                <th>言語</th>
+                <th>ツール</th>
                 <th>担当フェーズ</th>
               </tr>
             </thead>
@@ -40,18 +40,22 @@
                 <td>
                   <a href="goodbook/login.php">goodbook</a>
                 </td>
-                <td>2ヶ月</td>
+                <td>6ヶ月</td>
                 <td>
                   <div>HTML/CSS</div>
                   <div>javascript</div>
                   <div>jQuaery</div>
                   <div>PHP</div>
+                  <div>node.js</div>
+                  <div>scss</div>
+                  <div>gulp</div>
+                  <div>npm</div>
                 </td>
                 <td>模写</td>
               </tr>
               <tr>
                 <td>自習</td>
-                <td>5ヶ月</td>
+                <td>6ヶ月</td>
                 <td>
                   <div>HTML/CSS</div>
                   <div>PHP</div>
@@ -66,7 +70,7 @@
           </table>
         </section>
       </article>
-      <h2>Wolks</h2>
+      <h2>Works</h2>
       <section class="item">
         <a href="skillsheet/skillsheet.php">
           <h3>skillsheet</h3>
@@ -97,8 +101,12 @@
         <ul>
           <li>HTML</li>
           <li>CSS</li>
+          <li>javascript</li>
           <li>jQuery</li>
           <li>PHP</li>
+          <li>node.js</li>
+          <li>npm</li>
+          <li>gulp</li>
         </ul>
         <h3>Github Repo</h3>
         <div class="github_urldiv">
