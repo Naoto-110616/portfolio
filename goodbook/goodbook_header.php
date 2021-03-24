@@ -1,15 +1,13 @@
 <header class="header">
     <div class="head_left">
-        <nav>
             <div class="icon_div">
                 <a href="login.php"><img class="icon" src="img/Facebook-Logo1.png" alt="goodbook_icon"></a>
             </div>
-        </nav>
-        <div class="serch_div">
-            <label class="serch">
-                <input type="serch" class="serch" placeholder=" goodbook search">
-            </label>
-        </div>
+            <div class="goodbook_search_div">
+                <label class="goodbook_search">
+                    <input type="goodbook_search" class="goodbook_search" placeholder=" goodbook search">
+                </label>
+            </div>
     </div>
     <div class="head_center">
 
@@ -43,7 +41,7 @@
                         <i class="fas fa-user-circle fa-2x"></i>
                     </div>
                 <?php } else { ?>
-                    <img class="icon_img" src="<?php echo sanitize($dbFormData["profpic"]) ?>" style="width: 30px; height: 30px;">
+                    <img class="icon_img" src="<?php echo sanitize($dbFormData["profpic"]) ?>">
                 <?php } ?>
             </a></div>
         <div class="header_right_icon"><i class="fas fa-plus-circle fa-2x"></i></div>
