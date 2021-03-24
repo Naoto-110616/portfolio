@@ -26,7 +26,7 @@ gulp.task("default", gulp.task("minify-css"));
 
 // sassをコンパイル
 gulp.task("sass", function () {
-	return gulp.src("../scss/style.scss").pipe(sass()).pipe(gulp.dest("../dist/css/"));
+	return gulp.src("../scss/*.scss").pipe(sass()).pipe(gulp.dest("../dist/css/"));
 });
 
 // 画像圧縮
@@ -56,6 +56,9 @@ gulp.task("imagemin", function () {
 // watch()を使う
 // 第一引数は監視したいディレクトリ配下
 // 第二引数に変更があった場合に実行するタスクを配列形式で指定
-gulp.task("watch", function () {
+gulp.task("watch_imagemin", function () {
 	return gulp.watch(paths.srcDir + "/**/*", gulp.task("imagemin"));
+});
+gulp.task("watch_scss_compile", function () {
+	return gulp.watch("../scss/*.scss", gulp.task("sass"));
 });
