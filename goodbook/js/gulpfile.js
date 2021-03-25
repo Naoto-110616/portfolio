@@ -33,7 +33,7 @@ gulp.task("sass", function () {
 // 圧縮前と圧縮後のlディレクトリを定義
 var paths = {
 	srcDir: "src",
-	dstDir: "dist",
+	dstDir: "uploads",
 };
 // jpg,png,gif画像の圧縮タスク
 gulp.task("imagemin", function () {

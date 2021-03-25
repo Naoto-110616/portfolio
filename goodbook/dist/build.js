@@ -384,19 +384,19 @@ $(".good").on("click", function () {
 	var $this = $(this);
 	$this.toggleClass("good_color");
 	$(this).children("div").toggleClass("good_color");
-	$(this).children("div").toggleClass("is-active");
+	$(this).children("i").toggleClass("is-active");
 });
 $(".comment").on("click", function () {
 	var $this = $(this);
 	$this.toggleClass("comment_color");
 	$(this).children("div").toggleClass("comment_color");
-	$(this).children("div").toggleClass("is-active");
+	$(this).children("i").toggleClass("is-active");
 });
 $(".share").on("click", function () {
 	var $this = $(this);
 	$this.toggleClass("share_color");
 	$(this).children("div").toggleClass("share_color");
-	$(this).children("div").toggleClass("is-active");
+	$(this).children("i").toggleClass("is-active");
 });
 
 },{"jQuery":2}],2:[function(require,module,exports){
