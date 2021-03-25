@@ -34,6 +34,26 @@ a {
 
 .icon {
   width: 70px; }
+  .icon_img {
+    height: 50px;
+    width: 50px;
+    border-radius: 75px;
+    object-fit: cover;
+    margin-right: 5px; }
+    .icon_img_div {
+      height: 50px;
+      width: 95%;
+      margin: auto;
+      padding: 10px;
+      display: flex;
+      margin-right: 5px; }
+      .icon_img_div > .info_list {
+        height: 15px;
+        width: 15px;
+        margin-left: auto;
+        border-radius: 75px; }
+  .icon_name_div {
+    margin: 5px 10px; }
 
 .goodbook_search {
   width: 100%;
@@ -131,7 +151,8 @@ a {
   .main_left_icon {
     display: flex;
     color: #dddddd;
-    padding: 10px; }
+    padding: 10px;
+    border-radius: 5px; }
     .main_left_icon:hover {
       background: rgba(198, 198, 198, 0.25);
       cursor: pointer; }
@@ -139,88 +160,96 @@ a {
     padding-top: 20px;
     margin: 0 20%;
     flex-grow: 1; }
-  .main_center_element {
-    background-color: #303030;
-    width: 70%;
-    margin: 0 auto;
-    border-radius: 10px;
-    margin-bottom: 30px; }
-  .main_center_element2 > .border {
-    border-bottom: 2px solid #565656;
-    width: 95%;
-    margin: auto; }
-  .main_center_element1 {
-    overflow: hidden; }
-  .main_center_element2_share1 {
-    width: 95%; }
-  .main_center_element2_share2 {
-    padding-bottom: 15px;
-    justify-content: center;
-    display: flex; }
+    .main_center_element {
+      background-color: #303030;
+      width: 70%;
+      margin: 0 auto;
+      border-radius: 10px;
+      margin-bottom: 30px; }
+    .main_center_element2 > .border {
+      border-bottom: 2px solid #565656;
+      width: 95%;
+      margin: auto; }
+    .main_center_element1 {
+      overflow: hidden; }
+    .main_center_element2_share1 {
+      width: 95%; }
+    .main_center_element2_share2 {
+      justify-content: center;
+      display: flex;
+      margin: 2px 15px;
+      overflow: hidden; }
+    .main_center_icon {
+      color: #c1c1c1;
+      float: left; }
+    .main_center_comment1 {
+      margin-top: 11px; }
+    .main_center_comment2 {
+      padding: 7px 0px;
+      margin-left: 10px; }
+    .main_center_comment2 > h3 {
+      background-color: #565656;
+      border-radius: 20px;
+      padding: 10px; }
+    .main_center_comment2 > h3:hover {
+      background: #2d88ff;
+      cursor: pointer; }
+    .main_center_comment3 {
+      padding: 13px; }
+    .main_center_icon_bottom_div > .border {
+      padding-top: 30px;
+      border-bottom: 2px solid #565656;
+      width: 95%;
+      margin: auto; }
+    .main_center_element2_icon_div {
+      display: flex;
+      padding: 10px 0%;
+      border-radius: 5px;
+      width: 33.3%;
+      justify-content: center; }
+      .main_center_element2_icon_div:hover {
+        background: rgba(198, 198, 198, 0.25); }
+    .main_center_comment {
+      margin: 10px;
+      word-break: break-all; }
+    .main_center_mv {
+      width: 100%;
+      height: 400px; }
+    .main_center_img {
+      width: 100%; }
+    .main_center_icon_bottom {
+      float: left; }
+      .main_center_icon_bottom_div {
+        margin: 12px 15px;
+        overflow: hidden; }
+    .main_center_comment_share_div {
+      float: right; }
+    .main_center_element_pdiv {
+      text-align: center;
+      margin: 10px 0; }
+    .main_center_icon_button_div {
+      float: left;
+      width: 20px; }
   .main_icon {
     float: left; }
   .main_icon, .main_icon2 {
     display: flex;
     margin-left: 15px;
     padding: 11px 15px; }
-  .main_center_icon {
-    color: #c1c1c1;
-    float: left; }
-  .main_center_comment1 {
-    margin-top: 11px; }
-  .main_center_comment2 {
-    padding: 7px 0px;
-    margin-left: 10px; }
-  .main_center_comment2 > h3 {
-    background-color: #565656;
-    border-radius: 20px;
-    padding: 10px; }
-  .main_center_comment2 > h3:hover {
-    background: #2d88ff;
-    cursor: pointer; }
-  .main_center_comment3 {
-    padding: 13px; }
-  .main_center_icon_bottom_div > .border {
-    padding-top: 30px;
-    border-bottom: 2px solid #565656;
-    width: 95%;
-    margin: auto; }
-  .main_center_element2_icon_div {
-    float: left;
-    margin: 0px 3%; }
-  .main_center_comment {
-    margin: 10px;
-    word-break: break-all; }
-  .main_center_mv {
-    width: 100%;
-    height: 400px; }
-  .main_center_img {
-    width: 100%; }
-  .main_center_icon_bottom_div {
-    margin: 12px 15px;
-    overflow: hidden; }
-  .main_center_icon_bottom {
-    float: left; }
-  .main_center_icon_button_div {
-    float: left;
-    width: 20px; }
-  .main_center_comment_share_div {
-    float: right; }
-  .main_center_element_pdiv {
-    text-align: center;
-    margin: 10px 0; }
   .main_right {
     position: fixed;
     width: 100%;
     left: 80%; }
+  .main_live_video_icon, .main_video_icon, .main_activity_icon {
+    margin-top: 10px; }
+
+.btn_action {
+  margin-right: 5px; }
 
 #main_left_wrapper {
   height: 94%;
   position: fixed;
   overflow-y: scroll; }
-
-.icon_name_div {
-  margin: 5px 10px; }
 
 .comment_make_stories1,
 .comment_make_stories2 {
@@ -238,17 +267,6 @@ a {
   margin: auto;
   margin-top: 2px;
   margin-bottom: 2px; }
-
-.icon_button {
-  margin-left: 5px;
-  float: left;
-  font-size: 16px; }
-
-.main_live_video_icon,
-.main_video_icon,
-.main_activity_icon,
-.icon_button {
-  margin-top: 10px; }
 
 .menu__item {
   display: block; }
@@ -275,19 +293,6 @@ a {
 .usernamediv {
   position: relative;
   top: -170px; }
-
-.icon_img {
-  float: left;
-  height: 50px;
-  width: 50px;
-  border-radius: 75px;
-  object-fit: cover; }
-  .icon_img_div {
-    height: 50px;
-    width: 95%;
-    margin: auto;
-    padding: 10px;
-    display: flex; }
 
 .user_name_div {
   margin-left: 10px; }
@@ -378,10 +383,6 @@ a {
 .subject {
   font-weight: bolder;
   font-size: 16px;
-  line-height: normal; }
-
-.comment {
-  font-size: 14px;
   line-height: normal; }
 
 .withdraw_icon,
@@ -522,12 +523,6 @@ a {
 .info_list {
   padding: 10px; }
 
-.icon_img_div > .info_list {
-  height: 15px;
-  width: 15px;
-  margin-left: auto;
-  border-radius: 75px; }
-
 .edit,
 .message {
   display: flex;
@@ -602,28 +597,31 @@ main lower part
 .share_post {
   background-color: #303030;
   border-radius: 10px; }
-
-.share_post_inside {
-  padding: 2px 20px; }
-
-.share_post_content {
-  display: flex;
-  margin: 5px 0; }
+  .share_post_inside {
+    padding: 2px 20px; }
+  .share_post_content {
+    margin: 5px 0; }
 
 .share_icon_div {
-  margin-right: 5px; }
+  display: flex;
+  align-items: center; }
 
 .share_feelings {
   margin: 10px 0; }
 
 .share_list {
   display: flex;
-  margin: auto;
-  margin-top: 5px;
-  margin-bottom: 5px; }
-
-.share_list i {
-  margin-right: 4px; }
+  padding: 10px;
+  width: 33.3%;
+  border-radius: 5px;
+  justify-content: center; }
+  .share_list_wrapper {
+    display: flex; }
+  .share_list i {
+    margin-right: 4px; }
+  .share_list:hover {
+    background: rgba(198, 198, 198, 0.25);
+    cursor: pointer; }
 
 .myPost {
   width: 60%;
@@ -1118,7 +1116,8 @@ label.err input {
   .msg-info .avatar {
     width: 80px;
     height: 80px;
-    border-radius: 40px; }
+    border-radius: 40px;
+    object-fit: cover; }
     .msg-info .avatar-img {
       text-align: center;
       width: 100px;
@@ -1154,12 +1153,14 @@ label.err input {
   .area-bord .msg-cnt .avatar {
     width: 6%;
     overflow: hidden;
-    float: left; }
+    float: left;
+    object-fit: cover; }
   .area-bord .msg-cnt .avatar img {
     width: 35px;
     height: 35px;
     border-radius: 20px;
-    float: left; }
+    float: left;
+    object-fit: cover; }
   .area-bord .msg-cnt .msg-inrTxt {
     width: 85%;
     float: left;

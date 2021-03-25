@@ -1,12 +1,12 @@
 // ==============================
 // 変数
 // ==============================
-$goodbook_color:#2d88ff;
+$goodbook_color: #2d88ff;
 $font-color_default: #dddddd;
 $font-color_sub1: #494949;
 $background-color_default: #191919;
 $background-color_hover: rgba(198, 198, 198, 0.25);
-$background-color_transparency_color:rgba(0, 0, 0, 0.5);
+$background-color_transparency_color: rgba(0, 0, 0, 0.5);
 
 $site-width: 980px;
 
@@ -29,7 +29,6 @@ $border-radius_s: 3px;
 $border-radius_m: 10px;
 $border-radius_l: 50px;
 
-
 .html_backgroundColor {
 	background: $background-color_default;
 }
@@ -50,7 +49,7 @@ body {
 		display: inline;
 		border-radius: $border-radius_s;
 	}
-	&_center_icon{
+	&_center_icon {
 		font-size: $font-size_m;
 	}
 	&IconSubject {
@@ -70,6 +69,30 @@ a {
 }
 .icon {
 	width: 70px;
+	&_img {
+		height: 50px;
+		width: 50px;
+		border-radius: 75px;
+		object-fit: cover;
+		margin-right: 5px;
+		&_div {
+			height: 50px;
+			width: 95%;
+			margin: auto;
+			padding: $space_m;
+			display: flex;
+			margin-right: 5px;
+			& > .info_list {
+				height: $space_l;
+				width: $space_l;
+				margin-left: auto;
+				border-radius: 75px;
+			}
+		}
+	}
+	&_name_div {
+		margin: $space_s $space_m;
+	}
 }
 .goodbook_search {
 	width: 100%;
@@ -90,7 +113,7 @@ a {
 .to_homepage {
 	color: $font-color_default;
 }
-.chenge_color{
+.chenge_color {
 	display: inline;
 	padding: $space_l 4%;
 	border-radius: $border-radius_s;
@@ -99,24 +122,23 @@ a {
 		color: $goodbook_color;
 	}
 }
-.head{
-&_left {
-	width: 20%;
-	display: flex;
-}
-&_center {
+.head {
+	&_left {
+		width: 20%;
+		display: flex;
+	}
+	&_center {
 		width: 60%;
 		height: 60px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-}
-&_right {
+	}
+	&_right {
 		width: 20%;
 		display: flex;
 		align-items: center;
-
-}
+	}
 }
 .accountMenu {
 	position: absolute;
@@ -149,7 +171,7 @@ a {
 	&_comment {
 		margin: $space_l;
 	}
-	&Icon{
+	&Icon {
 		margin-top: $space_l;
 	}
 }
@@ -179,38 +201,108 @@ a {
 		display: flex;
 		color: $font-color_default;
 		padding: 10px;
-		&:hover{
-		background: $background-color_hover;
-		cursor: pointer;
+		border-radius: 5px;
+		&:hover {
+			background: $background-color_hover;
+			cursor: pointer;
 		}
 	}
 	&_center {
 		padding-top: $space_xl;
 		margin: 0 20%;
 		flex-grow: 1;
-	}
-	&_center_element {
-		background-color: #303030;
-		width: 70%;
-		margin: 0 auto;
-		border-radius: $border-radius_m;
-		margin-bottom: 30px;
-	}
-	&_center_element2 > .border {
-		border-bottom: 2px solid #565656;
-		width: 95%;
-		margin: auto;
-	}
-	&_center_element1 {
-		overflow: hidden;
-	}
-	&_center_element2_share1 {
-		width: 95%;
-	}
-	&_center_element2_share2 {
-		padding-bottom: $space_l;
-		justify-content: center;
-		display: flex;
+		&_element {
+			background-color: #303030;
+			width: 70%;
+			margin: 0 auto;
+			border-radius: $border-radius_m;
+			margin-bottom: 30px;
+		}
+		&_element2 > .border {
+			border-bottom: 2px solid #565656;
+			width: 95%;
+			margin: auto;
+		}
+		&_element1 {
+			overflow: hidden;
+		}
+		&_element2_share1 {
+			width: 95%;
+		}
+		&_element2_share2 {
+			justify-content: center;
+			display: flex;
+			margin: 2px 15px;
+			overflow: hidden;
+		}
+		&_icon {
+			color: #c1c1c1;
+			float: left;
+		}
+		&_comment1 {
+			margin-top: 11px;
+		}
+		&_comment2 {
+			padding: 7px 0px;
+			margin-left: $space_m;
+		}
+		&_comment2 > h3 {
+			background-color: #565656;
+			border-radius: 20px;
+			padding: $space_m;
+		}
+		&_comment2 > h3:hover {
+			background: $goodbook_color;
+			cursor: pointer;
+		}
+		&_comment3 {
+			padding: 13px;
+		}
+		&_icon_bottom_div > .border {
+			padding-top: 30px;
+			border-bottom: 2px solid #565656;
+			width: 95%;
+			margin: auto;
+		}
+		&_element2_icon_div {
+			display: flex;
+			padding: 10px 0%;
+			border-radius: 5px;
+			width: 33.3%;
+			justify-content: center;
+			&:hover {
+				background: $background-color_hover;
+			}
+		}
+		&_comment {
+			margin: $space_m;
+			word-break: break-all;
+		}
+		&_mv {
+			width: 100%;
+			height: 400px;
+		}
+		&_img {
+			width: 100%;
+		}
+		&_icon_bottom {
+			float: left;
+			&_div {
+				margin: 12px $space_l;
+				overflow: hidden;
+			}
+		}
+		&_comment_share_div {
+			float: right;
+		}
+		&_element_pdiv {
+			text-align: center;
+			margin: $space_m 0;
+		}
+		&_icon_button_div {
+			float: left;
+			width: $space_xl;
+		}
 	}
 	&_icon {
 		float: left;
@@ -221,81 +313,24 @@ a {
 		margin-left: $space_l;
 		padding: 11px $space_l;
 	}
-	&_center_icon {
-		color: #c1c1c1;
-		float: left;
-	}
-	&_center_comment1 {
-		margin-top: 11px;
-	}
-	&_center_comment2 {
-		padding: 7px 0px;
-		margin-left: $space_m;
-	}
-	&_center_comment2 > h3 {
-		background-color: #565656;
-		border-radius: 20px;
-		padding: $space_m;
-	}
-	&_center_comment2 > h3:hover {
-		background: $goodbook_color;
-		cursor: pointer;
-	}
-	&_center_comment3 {
-		padding: 13px;
-	}
-	&_center_icon_bottom_div > .border {
-		padding-top: 30px;
-		border-bottom: 2px solid #565656;
-		width: 95%;
-		margin: auto;
-	}
-	&_center_element2_icon_div {
-		float: left;
-		margin: 0px 3%;
-	}
-	&_center_comment {
-		margin: $space_m;
-		word-break: break-all;
-	}
-	&_center_mv {
-		width: 100%;
-		height: 400px;
-	}
-	&_center_img {
-		width: 100%;
-	}
-	&_center_icon_bottom_div {
-		margin: 12px $space_l;
-		overflow: hidden;
-	}
-	&_center_icon_bottom {
-		float: left;
-	}
-	&_center_icon_button_div {
-		float: left;
-		width: $space_xl;
-	}
-	&_center_comment_share_div {
-		float: right;
-	}
-	&_center_element_pdiv {
-		text-align: center;
-		margin: $space_m 0;
-	}
 	&_right {
 		position: fixed;
 		width: 100%;
 		left: 80%;
 	}
+	&_live_video_icon,
+	&_video_icon,
+	&_activity_icon {
+		margin-top: $space_m;
+	}
+}
+.btn_action {
+	margin-right: 5px;
 }
 #main_left_wrapper {
 	height: 94%;
 	position: fixed;
 	overflow-y: scroll;
-}
-.icon_name_div {
-	margin: $space_s $space_m;
 }
 .comment_make_stories1,
 .comment_make_stories2 {
@@ -313,17 +348,6 @@ a {
 	margin: auto;
 	margin-top: 2px;
 	margin-bottom: 2px;
-}
-.icon_button {
-	margin-left: $space_s;
-	float: left;
-	font-size: $font-size_default;
-}
-.main_live_video_icon,
-.main_video_icon,
-.main_activity_icon,
-.icon_button {
-	margin-top: $space_m;
 }
 .menu__item {
 	display: block;
@@ -353,20 +377,6 @@ a {
 .usernamediv {
 	position: relative;
 	top: -170px;
-}
-.icon_img {
-	float: left;
-	height: 50px;
-	width: 50px;
-	border-radius: 75px;
-	object-fit: cover;
-	&_div {
-		height: 50px;
-		width: 95%;
-		margin: auto;
-		padding: $space_m;
-		display: flex;
-	}
 }
 .user_name_div {
 	margin-left: $space_m;
@@ -461,10 +471,6 @@ a {
 	font-size: $font-size_default;
 	line-height: normal;
 }
-.comment {
-	font-size: $font-size_m;
-	line-height: normal;
-}
 .withdraw_icon,
 .content_comment {
 	display: table-cell;
@@ -507,88 +513,88 @@ a {
 /* 「「「「「「「「「「「「「「「「「 */
 /* mypage */
 /* 「「「「「「「「「「「「「「「「「 */
-.mypage{
-&_main {
-	margin-top: 60px;
+.mypage {
+	&_main {
+		margin-top: 60px;
+	}
+	&_border {
+		max-width: 900px;
+		border-bottom: 2px solid #565656;
+		margin: 0 auto;
+	}
 }
-&_border {
-	max-width: 900px;
-	border-bottom: 2px solid #565656;
-	margin: 0 auto;
-}
-}
-.main_top_{
-&content_overall {
+.main_top_ {
+	&content_overall {
 		background-color: #333333;
-}
-&cover_photo_div {
-	max-width: 940px;
-	height: 350px;
-	background-color: #191919;
-	margin: 0 auto;
-	border-radius: 0 0 $border-radius_m $border-radius_m;
-}
-&cover_photo {
-	width: 100%;
-	height: 100%;
-	position: relative;
-	background-size: cover;
-	border-radius: 0 0 $border-radius_m $border-radius_m;
-}
-&content_user_name_div {
-	width: 100%;
-	height: 100px;
-	position: relative;
-}
-&content_user_name {
-	margin: 0 auto;
-	max-width: 500px;
-}
-&content_user_name i {
-	width: 141px;
-	font-size: 145px;
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0px;
-	margin: auto;
-}
-&content_user_name h1 {
-	font-size: 50px;
-	text-align: center;
-	padding-top: $space_xl;
-}
-&content_user_info {
-	max-width: 900px;
-	height: 60px;
-	margin: 0 auto;
-	display: flex;
-}
-&content_user_info_inside {
-	position: relative;
-	display: flex;
-	height: 60px;
-}
-&content_user_info_list1 {
-	position: static;
-	display: flex;
-	align-items: center;
-	padding: $space_m $space_m $space_m 0px;
-}
-&content_user_info_list2 {
-	position: absolute;
-	display: flex;
-	align-items: center;
-	top: 12px;
-	left: 180%;
-}
-&content_user_detail_info_list2 {
-	position: absolute;
-	display: flex;
-	align-items: center;
-	top: 12px;
-	left: 220%;
-}
+	}
+	&cover_photo_div {
+		max-width: 940px;
+		height: 350px;
+		background-color: #191919;
+		margin: 0 auto;
+		border-radius: 0 0 $border-radius_m $border-radius_m;
+	}
+	&cover_photo {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		background-size: cover;
+		border-radius: 0 0 $border-radius_m $border-radius_m;
+	}
+	&content_user_name_div {
+		width: 100%;
+		height: 100px;
+		position: relative;
+	}
+	&content_user_name {
+		margin: 0 auto;
+		max-width: 500px;
+	}
+	&content_user_name i {
+		width: 141px;
+		font-size: 145px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0px;
+		margin: auto;
+	}
+	&content_user_name h1 {
+		font-size: 50px;
+		text-align: center;
+		padding-top: $space_xl;
+	}
+	&content_user_info {
+		max-width: 900px;
+		height: 60px;
+		margin: 0 auto;
+		display: flex;
+	}
+	&content_user_info_inside {
+		position: relative;
+		display: flex;
+		height: 60px;
+	}
+	&content_user_info_list1 {
+		position: static;
+		display: flex;
+		align-items: center;
+		padding: $space_m $space_m $space_m 0px;
+	}
+	&content_user_info_list2 {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		top: 12px;
+		left: 180%;
+	}
+	&content_user_detail_info_list2 {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		top: 12px;
+		left: 220%;
+	}
 }
 .cover_photo_change_button {
 	position: absolute;
@@ -609,12 +615,6 @@ a {
 }
 .info_list {
 	padding: $space_m;
-}
-.icon_img_div > .info_list {
-	height: $space_l;
-	width: $space_l;
-	margin-left: auto;
-	border-radius: 75px;
 }
 .edit,
 .message {
@@ -652,18 +652,18 @@ main lower part
 .content_flex {
 	display: flex;
 }
-.main_lower{
-&_part {
-	max-width: 950px;
-	margin: 0 auto;
-}
-&_inside {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	padding: $space_m $space_xl;
-	box-sizing: border-box;
-}
+.main_lower {
+	&_part {
+		max-width: 950px;
+		margin: 0 auto;
+	}
+	&_inside {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		padding: $space_m $space_xl;
+		box-sizing: border-box;
+	}
 }
 .my_profile {
 	width: 375px;
@@ -672,18 +672,18 @@ main lower part
 	background-color: #303030;
 	margin-right: $space_m;
 }
-.myprofile{
-&_inside {
-	padding: 0 20px;
-	padding-bottom: 10px;
-	& h2 {
-		font-size: 22px;
+.myprofile {
+	&_inside {
+		padding: 0 20px;
+		padding-bottom: 10px;
+		& h2 {
+			font-size: 22px;
+		}
 	}
-}
-&_title {
-	display: inline-block;
-	margin: 10px 0;
-}
+	&_title {
+		display: inline-block;
+		margin: 10px 0;
+	}
 }
 .profile_list {
 	display: flex;
@@ -695,32 +695,41 @@ main lower part
 .status {
 	width: 70px;
 }
-.share{
+.share {
 	&_post {
 		background-color: #303030;
 		border-radius: $border-radius_m;
-	}
-	&_post_inside {
-		padding: 2px $space_xl;
-	}
-	&_post_content {
-		display: flex;
-		margin: $space_s 0;
+		&_inside {
+			padding: 2px $space_xl;
+		}
+		&_content {
+			// display: flex;
+			margin: $space_s 0;
+		}
 	}
 	&_icon_div {
-		margin-right: $space_s;
+		display: flex;
+		align-items: center;
 	}
 	&_feelings {
 		margin: $space_m 0;
 	}
 	&_list {
 		display: flex;
-		margin: auto;
-		margin-top: $space_s;
-		margin-bottom: $space_s;
-	}
-	&_list i {
-		margin-right: 4px;
+		padding: 10px;
+		width: 33.3%;
+		border-radius: 5px;
+		justify-content: center;
+		&_wrapper {
+			display: flex;
+		}
+		& i {
+			margin-right: 4px;
+		}
+		&:hover {
+			background: $background-color_hover;
+			cursor: pointer;
+		}
 	}
 }
 .myPost {
@@ -744,7 +753,7 @@ main lower part
 	overflow-y: scroll;
 	background-color: $background-color_transparency_color;
 }
-.modalwindow{
+.modalwindow {
 	&_screen_overall,
 	&_screen_overall_1,
 	&_screen_overall_2,
@@ -805,7 +814,7 @@ main lower part
 		border-radius: $border-radius_m;
 	}
 }
-.edit{
+.edit {
 	&_title {
 		padding-top: $space_m;
 		font-size: $font-size_xl;
@@ -907,7 +916,7 @@ input[type="submit"] {
 /* 「「「「「「「「「「「「「「「「「 */
 /* passEditPage */
 /* 「「「「「「「「「「「「「「「「「 */
-.pass{
+.pass {
 	&Setting {
 		display: flex;
 		padding: $space_m;
@@ -940,7 +949,7 @@ input[type="submit"] {
 .inside {
 	padding: $space_m;
 }
-.editPass{
+.editPass {
 	&form {
 		display: block;
 		box-sizing: border-box;
@@ -1052,7 +1061,7 @@ section h1.title {
 	text-align: center;
 	font-family: "Montserrat", sans-serif;
 }
-.search{
+.search {
 	&-title {
 		overflow: hidden;
 		padding: $space_s $space_m;
@@ -1262,6 +1271,7 @@ label.err input {
 		width: 80px;
 		height: 80px;
 		border-radius: 40px;
+		object-fit: cover;
 		&-img {
 			text-align: center;
 			width: 100px;
@@ -1292,7 +1302,7 @@ label.err input {
 .latestMessage {
 	margin-left: $space_m;
 }
-.area{
+.area {
 	&-bord {
 		height: 500px;
 		overflow-y: scroll;
@@ -1307,12 +1317,14 @@ label.err input {
 			width: 6%;
 			overflow: hidden;
 			float: left;
+			object-fit: cover;
 		}
 		& .msg-cnt .avatar img {
 			width: 35px;
 			height: 35px;
 			border-radius: 20px;
 			float: left;
+			object-fit: cover;
 		}
 		& .msg-cnt .msg-inrTxt {
 			width: 85%;
@@ -1399,7 +1411,7 @@ label.err input {
 		margin-top: 100px;
 	}
 }
-.msgShelf{
+.msgShelf {
 	& > img {
 		width: 5%;
 		border-radius: 70px;
@@ -1490,7 +1502,7 @@ ul.sub {
 /* ~~~~~~~~~~~~~~~~~ */
 /* profpic animation */
 /* ~~~~~~~~~~~~~~~~~ */
-.thumbnail{
+.thumbnail {
 	& img {
 		width: 100%;
 		/* デフォルトでは、画像下に余白ができるため、下記のようにするかblock要素にする */
