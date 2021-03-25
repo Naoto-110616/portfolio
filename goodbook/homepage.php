@@ -220,22 +220,16 @@ require("goodbook_head.php");
                         <div class="border"></div>
                         <div class="main_center_element2_share2">
                             <div class="main_center_element2_icon_div">
-                                <div class="main_center_icon main_live_video_icon">
-                                    <i class="fas fa-video fa-lg"></i>
-                                </div>
-                                <p class="icon_button live_video_subject">LiveVideo</p>
+                                    <i class="fas fa-video fa-lg btn_action"></i>
+                                    <p class="icon_button live_video_subject">LiveVideo</p>
                             </div>
                             <div class="main_center_element2_icon_div">
-                                <div class="main_center_icon main_video_icon">
-                                    <i class="far fa-images fa-lg"></i>
-                                </div>
-                                <p class="icon_button video_subject">Picture&Video</p>
+                                    <i class="far fa-images fa-lg btn_action"></i>
+                                    <p class="icon_button video_subject">Picture&Video</p>
                             </div>
                             <div class="main_center_element2_icon_div">
-                                <div class="main_center_icon main_activity_icon">
-                                    <i class="far fa-smile-wink fa-lg"></i>
-                                </div>
-                                <p class="icon_button activity_subject">Activity</p>
+                                    <i class="far fa-smile-wink fa-lg btn_action"></i>
+                                    <p class="icon_button activity_subject">Activity</p>
                             </div>
                         </div>
                         <?php require("post.php"); ?>

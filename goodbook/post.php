@@ -61,22 +61,16 @@ foreach ($dbPostData['data'] as $key => $val) :
             <div class="border"></div>
             <div class="main_center_element2_share2">
                 <div class="main_center_element2_icon_div good js-click-animation">
-                    <div class="main_center_icon main_live_video_icon">
-                        <i class="far fa-thumbs-up fa-lg btn"></i>
-                    </div>
-                    <p class="icon_button good_subject">good</p>
+                        <i class="far fa-thumbs-up fa-lg btn_action"></i>
+                        <p class="icon_button good_subject">good</p>
                 </div>
                 <div class="main_center_element2_icon_div comment js-click-animation">
-                    <div class="main_center_icon main_video_icon">
-                        <i class="far fa-comment fa-lg"></i>
-                    </div>
-                    <p class="icon_button comment_subject">comment</p>
+                        <i class="far fa-comment fa-lg btn_action"></i>
+                        <p class="icon_button comment_subject">comment</p>
                 </div>
                 <div class="main_center_element2_icon_div share js-click-animation">
-                    <div class="main_center_icon main_activity_icon">
-                        <i class="fas fa-reply fa-lg"></i>
-                    </div>
-                    <p class="icon_button share_subject">share</p>
+                        <i class="fas fa-reply fa-lg btn_action"></i>
+                        <p class="icon_button share_subject">share</p>
                 </div>
             </div>
         </div>

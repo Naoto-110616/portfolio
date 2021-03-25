@@ -125,7 +125,7 @@ require('goodbook_head.php');
             <div class="area-send-msg">
                 <form action="" method="post">
                     <textarea name="msg" cols="30" rows="3"></textarea>
-                    <input type="submit" value="送信" class="btn btn-send">
+                    <input type="submit" value="send" class="btn-send">
                 </form>
             </div>
         </section>

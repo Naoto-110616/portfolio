@@ -198,14 +198,18 @@ require('goodbook_head.php');
                                 <div class="share_post_inside">
                                     <div class="share_post_content">
                                         <div class="share_icon_div">
-                                            <i class="fas fa-user-circle fa-2x"></i>
-                                        </div>
-                                        <div class="share_feelings">
+                                            <?php if (empty($dbFormData["profpic"])) { ?>
+                                                <div class="myIcon_img">
+                                                    <i class="fas fa-user-circle fa-4x"></i>
+                                                </div>
+                                            <?php } else { ?>
+                                                <img class="icon_img" src="<?php echo sanitize($dbFormData["profpic"]) ?>">
+                                            <?php } ?>
                                             <h3 class="">What's on your mind,<?php echo $dbFormData["username"] ?></h3>
                                         </div>
                                     </div>
                                     <div class="mypage_border"></div>
-                                    <div class="share_list">
+                                    <div class="share_list_wrapper">
                                         <div class="share_list">
                                             <div class="">
                                                 <i class="fas fa-video fa-lg"></i>
