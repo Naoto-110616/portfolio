@@ -220,16 +220,16 @@ require("goodbook_head.php");
                         <div class="border"></div>
                         <div class="main_center_element2_share2">
                             <div class="main_center_element2_icon_div">
-                                    <i class="fas fa-video fa-lg btn_action"></i>
-                                    <p class="icon_button live_video_subject">LiveVideo</p>
+                                <i class="fas fa-video fa-lg btn_action"></i>
+                                <p class="icon_button live_video_subject">LiveVideo</p>
                             </div>
                             <div class="main_center_element2_icon_div">
-                                    <i class="far fa-images fa-lg btn_action"></i>
-                                    <p class="icon_button video_subject">Picture&Video</p>
+                                <i class="far fa-images fa-lg btn_action"></i>
+                                <p class="icon_button video_subject">Picture&Video</p>
                             </div>
                             <div class="main_center_element2_icon_div">
-                                    <i class="far fa-smile-wink fa-lg btn_action"></i>
-                                    <p class="icon_button activity_subject">Activity</p>
+                                <i class="far fa-smile-wink fa-lg btn_action"></i>
+                                <p class="icon_button activity_subject">Activity</p>
                             </div>
                         </div>
                         <?php require("post.php"); ?>
@@ -286,13 +286,13 @@ require("goodbook_head.php");
                             <label class="<?php echo getErrMsglabel("comment"); ?>">
                                 <textarea class="posttextarea" name="comment" id="js-count" cols="30" rows="4" placeholder="comment"><?php echo getFormData('comment'); ?></textarea>
                             </label>
-                            <p class="counter-text"><span id="js-count-view">0</span>/255文字</p>
+                            <p class="counter-text"><span id="js-count-view">0</span>/255</p>
                             <div class="area-msg">
                                 <?php
                                 echo getErrMsg("comment");
                                 ?>
                             </div>
-                            <div style="overflow: hidden;">
+                            <div>
                                 <div class="imgDrop-container">
                                     <label class="area-drop <?php getErrMsglabel("pic1") ?>">
                                         <input type="hidden" name="MAX_FILE_SIZE" value="3145728">
@@ -310,7 +310,7 @@ require("goodbook_head.php");
                                 </div>
                             </div>
                             <label>
-                                <input type="submit" value="<?php echo (!$edit_flg) ? 'post' : 'edit'; ?>" name="postButton">
+                                <input class="modalwindow_submit" type="submit" value="<?php echo (!$edit_flg) ? 'post' : 'edit'; ?>" name="postButton">
                             </label>
                         </form>
                     </div>
