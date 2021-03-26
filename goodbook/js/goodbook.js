@@ -87,6 +87,25 @@ $(function () {
 });
 
 // ====================
+// Account page
+// ====================
+// Bio input form 表示、非表示
+$(function () {
+	$(".bioUser").on("click", function () {
+		$(".bioUser").toggleClass("display_none");
+		$(".bioUser_textarea").toggleClass("display_none");
+		$(".myBio").toggleClass("display_none");
+	});
+});
+$(function () {
+	$(".bio_cancel").on("click", function () {
+		$(".bioUser").toggleClass("display_none");
+		$(".bioUser_textarea").toggleClass("display_none");
+		$(".myBio").toggleClass("display_none");
+	});
+});
+
+// ====================
 // accountMenu
 // ====================
 // accountMenuの表示，非表示ボタン

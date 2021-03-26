@@ -7,6 +7,7 @@ $font-color_sub1: #494949;
 $background-color_default: #191919;
 $background-color_hover: rgba(198, 198, 198, 0.25);
 $background-color_transparency_color: rgba(0, 0, 0, 0.5);
+$background-color_submit: #494949;
 
 $site-width: 980px;
 
@@ -44,7 +45,6 @@ body {
 	width: 100%;
 	background-color: #333333;
 	border-bottom: solid 1px #4c4c4c;
-	.chenge_color,
 	&_center_icon {
 		display: inline;
 		border-radius: $border-radius_s;
@@ -120,6 +120,7 @@ a {
 	&:hover {
 		background-color: $background-color_hover;
 		color: $goodbook_color;
+		transition: 0.2s;
 	}
 }
 .head {
@@ -202,6 +203,7 @@ a {
 		color: $font-color_default;
 		padding: 10px;
 		border-radius: 5px;
+		transition: 0.2s;
 		&:hover {
 			background: $background-color_hover;
 			cursor: pointer;
@@ -254,6 +256,7 @@ a {
 		&_comment2 > h3:hover {
 			background: $goodbook_color;
 			cursor: pointer;
+			transition: 0.2s;
 		}
 		&_comment3 {
 			padding: 13px;
@@ -272,6 +275,7 @@ a {
 			justify-content: center;
 			&:hover {
 				background: $background-color_hover;
+				transition: 0.2s;
 			}
 		}
 		&_comment {
@@ -370,78 +374,161 @@ a {
 	&_div {
 		display: inline-block;
 		position: relative;
-		top: -145px;
-		left: 168px;
+		top: 210px;
+		left: 390px;
 	}
 }
-.usernamediv {
-	position: relative;
-	top: -170px;
+.bio {
+	&info {
+		text-align: center;
+	}
+	&User {
+		color: $goodbook_color;
+		font-size: 15px;
+		margin: 0px 0px 5px 0px;
+		display: inline-block;
+		cursor: pointer;
+		&:hover {
+			text-decoration: underline;
+		}
+		&_textarea {
+			margin: 0 auto;
+			width: 300px;
+			padding: 0px 0px 5px 0px;
+		}
+		&_submit_btn {
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+	&_btn {
+		border: none;
+		background-color: $background-color_submit;
+		color: $font-color_default;
+		padding: $space_m;
+		border-radius: $border-radius_s;
+		outline: none;
+		margin-right: 5px;
+		&:hover {
+			background: $background-color_hover;
+		}
+	}
 }
-.user_name_div {
-	margin-left: $space_m;
+.textarea_bio {
+	border: none;
+	width: 186px;
+	height: 53px;
+	border-radius: 5px;
+	color: $font-color_default;
+	background: $font-color_sub1;
+	text-decoration: none;
+	outline: none;
+	text-align: center;
+	margin: 0px;
+	resize: none;
 }
 .time_line {
 	margin-top: $space_m;
 	font-size: $font-size_s;
 }
-.ad_div {
-	width: 100%;
-}
-.ad_title {
-	margin-top: $space_l;
-	margin-bottom: $space_m;
-}
-.ad_subject {
-	float: left;
-	margin: $space_m 0;
-}
-.ad_img_div {
-	float: left;
-}
-.ad_img {
-	width: 9%;
-	border-radius: 15px;
-	float: left;
-}
-.ad_subtitle {
-	width: 100%;
+.ad {
+	&_div {
+		width: 100%;
+	}
+	&_title {
+		margin-top: $space_l;
+		margin-bottom: $space_m;
+	}
+	&_subject {
+		float: left;
+		margin: $space_m 0;
+	}
+	&_subtitle {
+		width: 100%;
+	}
+	&_img {
+		width: 9%;
+		border-radius: 15px;
+		float: left;
+		&_div {
+			float: left;
+		}
+	}
 }
 
 /* 「「「「「「「「「「「「「「「「「 */
 /* withdrawpage */
 /* 「「「「「「「「「「「「「「「「「 */
-
-.withdraw_main {
-	background-color: #191919;
-	height: 100vh;
+.withdraw {
+	&_main {
+		background-color: #191919;
+		height: 100vh;
+	}
+	&_page {
+		&_padding {
+			padding-top: 95px;
+		}
+		&_width {
+			width: 550px;
+			background-color: #000000;
+			margin-left: auto;
+			margin-right: auto;
+			border-radius: 4px;
+		}
+		&_inside_padding {
+			padding-top: $space_s;
+			padding-bottom: $space_s;
+			border: solid 1px #4c4c4c;
+			border-radius: 4px;
+		}
+	}
+	&_window {
+		&_title {
+			margin-top: 12px;
+			margin-left: 16px;
+			margin-right: 16px;
+			& h2 {
+				margin-bottom: $space_m;
+			}
+		}
+		& input {
+			padding: 4px 4px;
+			background-color: #4c4c4c;
+			color: $font-color_default;
+			border: none;
+			outline: none;
+			border-radius: 2px;
+		}
+		& input:hover {
+			background-color: #333333;
+		}
+	}
+	&_border {
+		border-bottom: 2px solid #565656;
+	}
+	&_content {
+		padding-top: $space_xl;
+	}
+	&_comment {
+		font-size: $font-size_m;
+		margin-bottom: $space_m;
+		line-height: normal;
+	}
+	&_icon {
+		padding-right: 12px;
+		display: table-cell;
+		font-size: $font-size_xl;
+		vertical-align: top;
+		padding-top: 4px;
+	}
+	.withdraw_beneath {
+		display: flex;
+		float: right;
+		margin: $space_m 0;
+	}
 }
-.withdraw_page_padding {
-	padding-top: 95px;
-}
-.withdraw_page_width {
-	width: 550px;
-	background-color: #000000;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 4px;
-}
-.withdraw_page_inside_padding {
-	padding-top: $space_s;
-	padding-bottom: $space_s;
-	border: solid 1px #4c4c4c;
-	border-radius: 4px;
-}
-.withdraw_window_title {
-	margin-top: 12px;
-	margin-left: 16px;
-	margin-right: 16px;
-}
-.withdraw_window_title h2 {
-	margin-bottom: $space_m;
-}
-.withdraw_border {
-	border-bottom: 2px solid #565656;
+#withdraw_icon {
+	width: 30px;
 }
 .padding_inside {
 	padding-left: 16px;
@@ -449,36 +536,16 @@ a {
 	padding-top: 16px;
 	margin-bottom: 14px;
 }
-.withdraw_content {
-	padding-top: $space_xl;
-}
-.withdraw_comment {
-	font-size: $font-size_m;
-	margin-bottom: $space_m;
-	line-height: normal;
-}
-.withdraw_icon {
-	padding-right: 12px;
-}
-#withdraw_icon {
-	width: 30px;
-}
 .content_comment {
+	display: table-cell;
+	font-size: $font-size_xl;
+	vertical-align: top;
 	width: 277px;
 }
 .subject {
 	font-weight: bolder;
 	font-size: $font-size_default;
 	line-height: normal;
-}
-.withdraw_icon,
-.content_comment {
-	display: table-cell;
-	font-size: $font-size_xl;
-	vertical-align: top;
-}
-.withdraw_icon {
-	padding-top: 4px;
 }
 .account_cancellation_button,
 .download_information_button {
@@ -493,26 +560,13 @@ a {
 .withdraw_button {
 	margin-right: $space_l;
 }
-.withdraw_beneath {
-	display: flex;
-	float: right;
-	margin: $space_m 0;
-}
-.withdraw_window input {
-	padding: 4px 4px;
-	background-color: #4c4c4c;
-	color: $font-color_default;
-	border: none;
-	outline: none;
-	border-radius: 2px;
-}
-.withdraw_window input:hover {
-	background-color: #333333;
-}
 
 /* 「「「「「「「「「「「「「「「「「 */
 /* mypage */
 /* 「「「「「「「「「「「「「「「「「 */
+.display_none {
+	display: none;
+}
 .mypage {
 	&_main {
 		margin-top: 60px;
@@ -523,77 +577,75 @@ a {
 		margin: 0 auto;
 	}
 }
-.main_top_ {
-	&content_overall {
+.main_top {
+	&_content_overall {
 		background-color: #333333;
 	}
-	&cover_photo_div {
-		max-width: 940px;
-		height: 350px;
-		background-color: #191919;
-		margin: 0 auto;
-		border-radius: 0 0 $border-radius_m $border-radius_m;
-	}
-	&cover_photo {
+	&_cover_photo {
 		width: 100%;
 		height: 100%;
 		position: relative;
 		background-size: cover;
 		border-radius: 0 0 $border-radius_m $border-radius_m;
+		&_div {
+			max-width: 940px;
+			height: 350px;
+			background-color: #191919;
+			margin: 0 auto;
+			border-radius: 0 0 $border-radius_m $border-radius_m;
+		}
 	}
-	&content_user_name_div {
-		width: 100%;
-		height: 100px;
-		position: relative;
-	}
-	&content_user_name {
-		margin: 0 auto;
-		max-width: 500px;
-	}
-	&content_user_name i {
-		width: 141px;
-		font-size: 145px;
-		position: absolute;
-		left: 0;
-		right: 0;
-		bottom: 0px;
-		margin: auto;
-	}
-	&content_user_name h1 {
-		font-size: 50px;
-		text-align: center;
-		padding-top: $space_xl;
-	}
-	&content_user_info {
-		max-width: 900px;
-		height: 60px;
-		margin: 0 auto;
-		display: flex;
-	}
-	&content_user_info_inside {
-		position: relative;
-		display: flex;
-		height: 60px;
-	}
-	&content_user_info_list1 {
-		position: static;
-		display: flex;
-		align-items: center;
-		padding: $space_m $space_m $space_m 0px;
-	}
-	&content_user_info_list2 {
-		position: absolute;
-		display: flex;
-		align-items: center;
-		top: 12px;
-		left: 180%;
-	}
-	&content_user_detail_info_list2 {
-		position: absolute;
-		display: flex;
-		align-items: center;
-		top: 12px;
-		left: 220%;
+	&_content_user {
+		&_name {
+			margin: 0 auto;
+			max-width: 500px;
+			text-align: center;
+			& i {
+				width: 141px;
+				font-size: 145px;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0px;
+				margin: auto;
+			}
+			& h1 {
+				font-size: 50px;
+				text-align: center;
+				padding: 15px 0px 5px 0px;
+			}
+		}
+		&_info {
+			max-width: 900px;
+			height: 60px;
+			margin: 0 auto;
+			display: flex;
+			&_inside {
+				position: relative;
+				display: flex;
+				height: 60px;
+			}
+			&_list1 {
+				position: static;
+				display: flex;
+				align-items: center;
+				padding: $space_m $space_m $space_m 0px;
+			}
+			&_list2 {
+				position: absolute;
+				display: flex;
+				align-items: center;
+				top: 12px;
+				left: 180%;
+			}
+		}
+		&_detail_info_list2 {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			top: 12px;
+			left: 220%;
+		}
 	}
 }
 .cover_photo_change_button {
@@ -610,6 +662,7 @@ a {
 		&:hover {
 			background-color: #4c4c4c;
 			cursor: pointer;
+			transition: 0.2s;
 		}
 	}
 }
@@ -627,6 +680,7 @@ a {
 .message:hover {
 	background-color: $background-color_hover;
 	border-radius: $border-radius_m;
+	transition: 0.2s;
 }
 .friendMsg {
 	float: right;
@@ -637,6 +691,7 @@ a {
 	margin-right: $space_s;
 	&:hover {
 		background: $goodbook_color;
+		transition: 0.2s;
 	}
 	&.active {
 		float: right;
@@ -729,6 +784,7 @@ main lower part
 		&:hover {
 			background: $background-color_hover;
 			cursor: pointer;
+			transition: 0.2s;
 		}
 	}
 }
@@ -769,48 +825,51 @@ main lower part
 		overflow-y: scroll;
 		background-color: $background-color_transparency_color;
 	}
-	&_form_div {
-		position: absolute;
-		width: 650px;
-		bottom: 0;
-		right: 0;
-		left: 0;
-		top: 70px;
-		margin: 0 auto;
-		z-index: 11;
-	}
 	&_form {
 		width: 85%;
 		background-color: #303030;
 		overflow-y: scroll;
 		border-radius: $border-radius_m;
 		margin: 0 auto;
+		&_div {
+			position: absolute;
+			width: 650px;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			top: 70px;
+			margin: 0 auto;
+			z-index: 11;
+		}
+		&_title {
+			height: 50px;
+			position: relative;
+		}
+		& #text {
+			margin-bottom: 2px;
+		}
 	}
-	&_form_title {
-		height: 50px;
-		position: relative;
-	}
-	&_form input {
+	&_submit {
 		width: 100%;
-		padding: $space_m;
-		margin-bottom: $space_l;
+		margin-bottom: 5px;
+		padding: 10px;
+		border: none;
+		text-align: center;
+		font-size: $font-size_l;
+		border-radius: $border-radius_s;
+		background: $background-color_submit;
+		color: $font-color_default;
 	}
-	&_form label,
-	&_form input,
-	&_form input:focus {
+	&_myprof {
 		font-size: $font-size_default;
 		display: block;
 		outline: none;
 		border: none;
 		box-sizing: border-box;
 		color: $font-color_default;
-	}
-	&_form #text {
-		margin-bottom: 2px;
-	}
-	&_form input,
-	&_form input:focus {
-		background-color: #4c4c4c;
+		width: 100%;
+		padding: $space_m;
+		background-color: $font-color_sub1;
 		border-radius: $border-radius_m;
 	}
 }
@@ -823,7 +882,6 @@ main lower part
 	&_form_div {
 		max-width: 500px;
 		margin: 0 auto;
-		margin-top: 25px;
 	}
 }
 .x-circle1,
@@ -842,14 +900,6 @@ body.fixed {
 	width: 100%;
 	height: 100%;
 	left: 0;
-}
-input[type="number"] {
-	width: 100px;
-}
-input[type="submit"] {
-	width: 130px;
-	text-align: center;
-	float: right;
 }
 [name="uploadIconImg"]:hover,
 [name="uploadBackgroundImg"]:hover,
@@ -878,18 +928,11 @@ input[type="submit"] {
 		outline: none;
 	}
 }
-.counter-text {
-	text-align: right;
-}
 .form .btn {
 	float: right;
 }
 .form .btn-container {
 	overflow: hidden;
-}
-.area-drop {
-	display: inline-block;
-	// float: right;
 }
 .input-file {
 	display: none;
@@ -933,17 +976,19 @@ input[type="submit"] {
 			margin-bottom: $space_m;
 		}
 	}
-	&Remind_main {
-		color: $font-color_default;
-		background-color: #191919;
-		height: 100vh;
-	}
-	&Remind_window {
-		overflow: hidden;
-		width: 550px;
-		margin: auto;
-		background-color: #404040;
-		border-radius: 5px;
+	&Remind {
+		&_main {
+			color: $font-color_default;
+			background-color: #191919;
+			height: 100vh;
+		}
+		&_window {
+			overflow: hidden;
+			width: 550px;
+			margin: auto;
+			background-color: #404040;
+			border-radius: 5px;
+		}
 	}
 }
 .inside {
@@ -968,6 +1013,16 @@ input[type="submit"] {
 		outline: none;
 		border-radius: 2px;
 		padding: $space_s;
+	}
+}
+.btn {
+	color: $font-color_default;
+	background-color: $background-color_submit;
+	border: none;
+	outline: none;
+	&:hover {
+		transition: 0.2s;
+		background: $background-color_hover;
 	}
 }
 .toMypage {
@@ -1014,6 +1069,7 @@ input[type="submit"] {
 		background-color: #404040;
 		color: $font-color_default;
 		border-radius: 5px;
+		outline: none;
 	}
 	& .icn_select:after {
 		position: absolute;
@@ -1027,22 +1083,15 @@ input[type="submit"] {
 	}
 	.page-logined & {
 		margin: 0 0 0 $space_xl;
+		& > a {
+			display: block;
+			margin-bottom: $space_l;
+		}
 	}
-	.page-logined & > a {
-		display: block;
-		margin-bottom: $space_l;
-	}
-}
-input[type="submit"] {
-	width: 100%;
-	border: none;
-	background: #4c4c4c;
-	color: $font-color_default;
 }
 .title {
 	margin: $space_s 0;
 }
-
 #main {
 	min-height: 600px;
 	.page-1colum & {
@@ -1171,7 +1220,8 @@ a.panel:hover {
 select,
 .message:hover,
 .friendMsg,
-input[type="submit"] {
+.bio_btn,
+input {
 	cursor: pointer;
 }
 .main_left_icon:hover,
@@ -1451,9 +1501,6 @@ ul.sub {
 		background: $goodbook_color;
 		text-decoration: none;
 	}
-}
-.display_none {
-	display: none;
 }
 /* ~~~~~~~~~~~~~~~ */
 /* slider */
