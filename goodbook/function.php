@@ -130,7 +130,7 @@ function validMinLen($str, $key, $min = 6)
         $err_msg[$key] = MSG05;
     }
 }
-// validation password最大文字数check
+// validation 最大文字数check
 function validMaxLen($str, $key, $max = 255)
 {
     if (mb_strlen($str) > $max) {
@@ -583,9 +583,41 @@ function editprofile($key)
             }
         }
     }
-    debug("===========================");
-    debug("end edit profile function");
-    debug("===========================");
+}
+function editMyBio()
+{
+    if (!empty($_POST)) {
+        debug("POST送信があります");
+        $myBio = $_POST["myBio"];
+        validRequired($myBio, 'myBio');
+        if (empty($err_msg)) {
+            debug("未入力チェックOK");
+            validMaxLen($myBio, "myBio");
+            if (empty($err_msg)) {
+                debug("バリデーションOK");
+                $myBio = str_replace("\r\n", '', $myBio);
+                try {
+                    $dbh = dbConnect();
+                    // SQL文作成
+                    $sql = 'UPDATE users SET myBio = :myBio WHERE id = :id';
+                    $data = array(
+                        ':id' => $_SESSION['user_id'],
+                        ':myBio' => $myBio
+                    );
+                    // クエリ実行
+                    $stmt = queryPost($dbh, $sql, $data, "common");
+                    if ($stmt) {
+                        return $stmt->fetch(PDO::FETCH_ASSOC);
+                    } else {
+                        return false;
+                    }
+                } catch (Exception $e) {
+                    error_log('エラー発生:' . $e->getMessage());
+                    $err_msg['common'] = MSG09;
+                }
+            }
+        }
+    }
 }
 //================================
 // password
@@ -593,9 +625,6 @@ function editprofile($key)
 // chenge pass 関数
 function chengePass($userData, $pass_new)
 {
-    debug("===========================");
-    debug("start checngePass function");
-    debug("===========================");
     global $userData;
     global $pass_old;
     global $pass_new;
@@ -633,7 +662,7 @@ function chengePass($userData, $pass_new)
             validMatch($pass_new, $pass_new_re, 'pass_new_re');
 
             if (empty($err_msg)) {
-                debug('バリデーションOK。');
+                debug('バリデーションOK');
 
                 //例外処理
                 try {
@@ -887,7 +916,7 @@ function getUser($u_id)
         // DBへ接続
         $dbh = dbConnect();
         // SQL文作成
-        $sql = 'SELECT u.id,u.username, u.tel, u.zip, u.addr, u.age, u.email, u.profpic, u.backgroundimg, u.area_id, a.name AS area
+        $sql = 'SELECT u.id,u.username, u.tel, u.zip, u.addr, u.age, u.email, u.profpic, u.backgroundimg, u.area_id, u.myBio, a.name AS area
         FROM users AS u
         LEFT JOIN area AS a
         ON u.area_id = a.id
@@ -896,9 +925,6 @@ function getUser($u_id)
         // クエリ実行
         $stmt = queryPost($dbh, $sql, $data, "common");
         if ($stmt) {
-            debug("===========================");
-            debug("success getuser function");
-            debug("===========================");
             return $stmt->fetch(PDO::FETCH_ASSOC);
         } else {
             return false;
@@ -1226,7 +1252,7 @@ function getUserOne($u_id)
         // DBへ接続
         $dbh = dbConnect();
         // SQL文作成
-        $sql = 'SELECT u.id, u.username, u.age, u.tel, u.zip, u.addr, u.email, u.profpic, u.backgroundimg, a.name AS area
+        $sql = 'SELECT u.id, u.username, u.age, u.tel, u.zip, u.addr, u.email, u.profpic, u.backgroundimg, u.myBio, a.name AS area
         FROM users AS u
         JOIN area AS a
         ON u.area_id = a.id
