@@ -53,23 +53,24 @@ require('goodbook_head.php');
                         <div class="main_top_cover_photo" style="background-image: url(<?php echo sanitize($viewData["backgroundimg"]); ?>);">
                             <div class="cover_photo_change_button">
                             </div>
+                            <div class="myIcon_img_div">
+                                <?php if (empty($viewData["profpic"])) { ?>
+                                    <div class="myIcon_img">
+                                        <i class="fas fa-user-circle fa-4x"></i>
+                                    </div>
+                                <?php } else { ?>
+                                    <img class="myIcon_img" src="<?php echo sanitize($viewData["profpic"]) ?>">
+                                <?php } ?>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="main_top_content main_top_content_user_name_div">
                     <div class="main_top_content main_top_content_user_name">
-                        <div class="myIcon_img_div">
-                            <?php if (empty($viewData["profpic"])) { ?>
-                                <div class="myIcon_img">
-                                    <i class="fas fa-user-circle fa-4x"></i>
-                                </div>
-                            <?php } else { ?>
-                                <img class="myIcon_img" src="<?php echo sanitize($viewData["profpic"]) ?>">
-                            <?php } ?>
-                        </div>
                         <div class="usernamediv">
                             <h1><?php userInfoIndicate($viewData, "username"); ?></h1>
                         </div>
+                        <div class="myBio"><?php echo $viewData["myBio"]; ?></div>
                     </div>
                 </div>
                 <div class="mypage_border"></div>
@@ -90,7 +91,7 @@ require('goodbook_head.php');
                             <form action="" method="post">
                                 <div class="message">
                                     <i class="far fa-comment-dots fa-lg js-click-create-msg-room"></i>
-                                    <input type="submit" value="message" name="createMsgRoom" class="" style="background:none; border:none; outline:none; font-size:16px">
+                                    <input type="submit" value="message" name="createMsgRoom" class="" style="background:none; border:none; outline:none; font-size:16px; color:#dddddd;">
                                 </div>
                             </form>
                             <div class="info_list"><i class="fas fa-eye"></i></div>
