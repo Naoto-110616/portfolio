@@ -67,7 +67,7 @@ require("goodbook_head.php");
                             </select>
                         </div>
                         <div class="sort">
-                            <input type="submit" value="serch">
+                            <input class="btn" type="submit" value="serch">
                         </div>
                     </form>
                 </div>
