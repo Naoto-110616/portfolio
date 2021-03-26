@@ -43,6 +43,7 @@
                 <td>6ヶ月</td>
                 <td>
                   <div>HTML/CSS</div>
+                  <div>SCSS</div>
                   <div>javascript</div>
                   <div>jQuaery</div>
                   <div>PHP</div>
@@ -101,6 +102,7 @@
         <ul>
           <li>HTML</li>
           <li>CSS</li>
+          <li>SCSS</li>
           <li>javascript</li>
           <li>jQuery</li>
           <li>PHP</li>
