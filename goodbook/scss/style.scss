@@ -378,14 +378,17 @@ a {
 		left: 390px;
 	}
 }
+.myBio {
+	margin-bottom: $space_s;
+}
 .bio {
 	&info {
 		text-align: center;
 	}
 	&User {
 		color: $goodbook_color;
-		font-size: 15px;
-		margin: 0px 0px 5px 0px;
+		font-size: $space_l;
+		margin: 0px 0px $space_s 0px;
 		display: inline-block;
 		cursor: pointer;
 		&:hover {
@@ -415,17 +418,14 @@ a {
 	}
 }
 .textarea_bio {
-	border: none;
-	width: 186px;
-	height: 53px;
 	border-radius: 5px;
 	color: $font-color_default;
 	background: $font-color_sub1;
+	text-align: center;
 	text-decoration: none;
 	outline: none;
-	text-align: center;
-	margin: 0px;
 	resize: none;
+	border: none;
 }
 .time_line {
 	margin-top: $space_m;
@@ -521,7 +521,7 @@ a {
 		vertical-align: top;
 		padding-top: 4px;
 	}
-	.withdraw_beneath {
+	&_beneath {
 		display: flex;
 		float: right;
 		margin: $space_m 0;
@@ -635,7 +635,7 @@ a {
 				position: absolute;
 				display: flex;
 				align-items: center;
-				top: 12px;
+				top: $space_m;
 				left: 180%;
 			}
 		}
@@ -643,7 +643,7 @@ a {
 			position: absolute;
 			display: flex;
 			align-items: center;
-			top: 12px;
+			top: $space_m;
 			left: 220%;
 		}
 	}
@@ -672,7 +672,7 @@ a {
 .edit,
 .message {
 	display: flex;
-	padding: 7px;
+	padding: $space_s;
 	align-items: center;
 }
 .info_list:hover,
@@ -730,14 +730,14 @@ main lower part
 .myprofile {
 	&_inside {
 		padding: 0 20px;
-		padding-bottom: 10px;
+		padding-bottom: $space_m;
 		& h2 {
 			font-size: 22px;
 		}
 	}
 	&_title {
 		display: inline-block;
-		margin: 10px 0;
+		margin: $space_m 0;
 	}
 }
 .profile_list {
@@ -771,7 +771,7 @@ main lower part
 	}
 	&_list {
 		display: flex;
-		padding: 10px;
+		padding: $space_m;
 		width: 33.3%;
 		border-radius: 5px;
 		justify-content: center;
@@ -794,7 +794,7 @@ main lower part
 	& > .main_center_element3 {
 		margin-top: $space_m;
 		border-radius: $border-radius_m;
-		margin-bottom: 30px;
+		margin-bottom: $space_3l;
 		width: 100%;
 	}
 }
