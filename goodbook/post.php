@@ -60,17 +60,17 @@ foreach ($dbPostData['data'] as $key => $val) :
             </div>
             <div class="border"></div>
             <div class="main_center_element2_share2">
-                <div class="main_center_element2_icon_div good js-click-animation">
-                        <i class="far fa-thumbs-up fa-lg btn_action"></i>
-                        <p class="icon_button good_subject">good</p>
+                <div class="main_center_element2_icon_div good js-click-good <?php if (isGood($_SESSION["user_id"], $val["p_id"])) echo "good_color"; ?>" aria-hidden="true" data-postid="<?php echo sanitize($val["p_id"]) ?>">
+                    <i class=" far fa-thumbs-up fa-lg btn_action"></i>
+                    <p class=" icon_button good_subject">good</p>
                 </div>
                 <div class="main_center_element2_icon_div comment js-click-animation">
-                        <i class="far fa-comment fa-lg btn_action"></i>
-                        <p class="icon_button comment_subject">comment</p>
+                    <i class="far fa-comment fa-lg btn_action"></i>
+                    <p class="icon_button comment_subject">comment</p>
                 </div>
                 <div class="main_center_element2_icon_div share js-click-animation">
-                        <i class="fas fa-reply fa-lg btn_action"></i>
-                        <p class="icon_button share_subject">share</p>
+                    <i class="fas fa-reply fa-lg btn_action"></i>
+                    <p class="icon_button share_subject">share</p>
                 </div>
             </div>
         </div>
