@@ -294,6 +294,9 @@ a {
     top: 210px;
     left: 390px; }
 
+.myBio {
+  margin-bottom: 5px; }
+
 .bioinfo {
   text-align: center; }
 
@@ -325,17 +328,14 @@ a {
     background: rgba(198, 198, 198, 0.25); }
 
 .textarea_bio {
-  border: none;
-  width: 186px;
-  height: 53px;
   border-radius: 5px;
   color: #dddddd;
   background: #494949;
+  text-align: center;
   text-decoration: none;
   outline: none;
-  text-align: center;
-  margin: 0px;
-  resize: none; }
+  resize: none;
+  border: none; }
 
 .time_line {
   margin-top: 10px;
@@ -421,7 +421,7 @@ a {
   vertical-align: top;
   padding-top: 4px; }
 
-.withdraw .withdraw_beneath {
+.withdraw_beneath {
   display: flex;
   float: right;
   margin: 10px 0; }
@@ -524,14 +524,14 @@ a {
     position: absolute;
     display: flex;
     align-items: center;
-    top: 12px;
+    top: 10px;
     left: 180%; }
 
 .main_top_content_user_detail_info_list2 {
   position: absolute;
   display: flex;
   align-items: center;
-  top: 12px;
+  top: 10px;
   left: 220%; }
 
 .cover_photo_change_button {
@@ -556,7 +556,7 @@ a {
 .edit,
 .message {
   display: flex;
-  padding: 7px;
+  padding: 5px;
   align-items: center; }
 
 .info_list:hover,
@@ -662,7 +662,7 @@ main lower part
   .myPost > .main_center_element3 {
     margin-top: 10px;
     border-radius: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     width: 100%; }
 
 .profile_screen_overall {
