@@ -1397,6 +1397,31 @@ function isLike($u_id, $f_id)
         error_log('エラー発生:' . $e->getMessage());
     }
 }
+function isGood($u_id, $p_id)
+{
+    debug('ユーザーID：' . $u_id);
+    debug('postID：' . $p_id);
+    //例外処理
+    try {
+        // DBへ接続
+        $dbh = dbConnect();
+        // SQL文作成
+        $sql = 'SELECT * FROM goodbutton WHERE post_id = :p_id AND user_id = :u_id';
+        $data = array(':u_id' => $u_id, ':p_id' => $p_id);
+        // クエリ実行
+        $stmt = queryPost($dbh, $sql, $data, "common");
+
+        if ($stmt->rowCount()) {
+            debug("good済み");
+            return true;
+        } else {
+            debug('good未入力');
+            return false;
+        }
+    } catch (Exception $e) {
+        error_log('エラー発生:' . $e->getMessage());
+    }
+}
 //================================
 // img
 //================================
