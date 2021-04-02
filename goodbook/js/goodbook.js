@@ -281,6 +281,7 @@ $(function () {
 // ~~~~~~~~~~~~~~
 var $like, $FriendId;
 $like = $(".js-click-like") || null; //nullというのはnull値という値で、「変数の中身は空ですよ」と明示するためにつかう値
+console.log($like.data("friendid"));
 $FriendId = $like.data("friendid") || null;
 // 数値の0はfalseと判定されてしまう。friend_idが0の場合もありえるので、0もtrueとする場合にはundefinedとnullを判定する
 if ($FriendId !== undefined && $FriendId !== null) {
@@ -303,6 +304,48 @@ if ($FriendId !== undefined && $FriendId !== null) {
 			});
 	});
 }
+
+// ~~~~~~~~~~~~~~
+// good 登録機能
+// ~~~~~~~~~~~~~~
+var $goodList;
+$goodList = $(".js-click-good") || null; //nullというのはnull値という値で、「変数の中身は空ですよ」と明示するためにつかう値
+console.log($goodList);
+
+const goodList = document.querySelectorAll(".js-click-good");
+console.log(goodList, "get good list?");
+
+goodList.forEach((good) => {
+	console.log(good);
+	const postId = good.getAttribute("data-postid");
+	const thisGood = good.getAttribute("fa-thumbs-up");
+	good.addEventListener("click", () => {
+		if (postId !== undefined && postId !== null) {
+			console.log(postId);
+			// var $this = $(this);
+			$.ajax({
+				type: "POST",
+				url: "ajaxGoodButton.php",
+				data: {
+					postId: postId,
+				},
+			})
+				.done(function (data) {
+					console.log("Ajax Success");
+					// クラス属性をtoggleでつけ外しする
+					// $(".good").on("click", function () {
+					// var $this = $(this);
+					// $(".good_subject").toggleClass("good_color");
+					// $(".fa-thumbs-up").toggleClass("good_color");
+					// $(".fa-thumbs-up").toggleClass("is-active");
+					// });
+				})
+				.fail(function (msg) {
+					console.log("Ajax Error");
+				});
+		}
+	});
+});
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // formが全て入力されるまでinputを無効化
@@ -402,8 +445,15 @@ $(".good").on("click", function () {
 	var $this = $(this);
 	$this.toggleClass("good_color");
 	$(this).children("div").toggleClass("good_color");
-	$(this).children("i").toggleClass("is-active");
+	// $(this).children("i").toggleClass("is-active");
 });
+$(".color_remove").on("click", function () {
+	var $this = $(this);
+	$this.toggleClass("good_color");
+	$(this).children("div").toggleClass("good_color");
+	// $(this).children("i").toggleClass("is-active");
+});
+
 $(".comment").on("click", function () {
 	var $this = $(this);
 	$this.toggleClass("comment_color");
