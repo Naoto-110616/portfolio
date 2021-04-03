@@ -63538,3 +63538,253 @@
 [03-Apr-2021 19:29:08 Asia/Tokyo] debug：end login function
 [03-Apr-2021 19:29:08 Asia/Tokyo] debug：===========================
 [03-Apr-2021 19:29:08 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[03-Apr-2021 23:05:25 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[03-Apr-2021 23:05:25 Asia/Tokyo] debug：「　login page　
+[03-Apr-2021 23:05:25 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[03-Apr-2021 23:05:25 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[03-Apr-2021 23:05:25 Asia/Tokyo] debug：session ID：d6ugrut0u1vl8p1010lo6bk0te
+[03-Apr-2021 23:05:25 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[03-Apr-2021 23:05:25 Asia/Tokyo] debug：現在日時タイムスタンプ：1617458725
+[03-Apr-2021 23:05:25 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:05:25 Asia/Tokyo] debug：start auth function
+[03-Apr-2021 23:05:25 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:05:25 Asia/Tokyo] debug：未ログインユーザーです。
+[03-Apr-2021 23:05:25 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:05:25 Asia/Tokyo] debug：end auth function
+[03-Apr-2021 23:05:25 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:05:25 Asia/Tokyo] PHP Notice:  Undefined variable: email in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 13
+[03-Apr-2021 23:05:25 Asia/Tokyo] PHP Notice:  Undefined variable: pass in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 13
+[03-Apr-2021 23:05:25 Asia/Tokyo] PHP Notice:  Undefined variable: pass_save in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 13
+[03-Apr-2021 23:05:25 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:05:25 Asia/Tokyo] debug：start login function
+[03-Apr-2021 23:05:25 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:05:25 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:05:25 Asia/Tokyo] debug：end login function
+[03-Apr-2021 23:05:25 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:05:25 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[03-Apr-2021 23:05:46 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[03-Apr-2021 23:05:46 Asia/Tokyo] debug：「　login page　
+[03-Apr-2021 23:05:46 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[03-Apr-2021 23:05:46 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[03-Apr-2021 23:05:46 Asia/Tokyo] debug：session ID：v39hu9d6ulf3n4okpen1rakpuc
+[03-Apr-2021 23:05:46 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[03-Apr-2021 23:05:46 Asia/Tokyo] debug：現在日時タイムスタンプ：1617458746
+[03-Apr-2021 23:05:46 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:05:46 Asia/Tokyo] debug：start auth function
+[03-Apr-2021 23:05:46 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:05:46 Asia/Tokyo] debug：未ログインユーザーです。
+[03-Apr-2021 23:05:46 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:05:46 Asia/Tokyo] debug：end auth function
+[03-Apr-2021 23:05:46 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:05:46 Asia/Tokyo] PHP Notice:  Undefined variable: email in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 13
+[03-Apr-2021 23:05:46 Asia/Tokyo] PHP Notice:  Undefined variable: pass in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 13
+[03-Apr-2021 23:05:46 Asia/Tokyo] PHP Notice:  Undefined variable: pass_save in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 13
+[03-Apr-2021 23:05:46 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:05:46 Asia/Tokyo] debug：start login function
+[03-Apr-2021 23:05:46 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:05:46 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:05:46 Asia/Tokyo] debug：end login function
+[03-Apr-2021 23:05:46 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:05:46 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[03-Apr-2021 23:05:52 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[03-Apr-2021 23:05:52 Asia/Tokyo] debug：「　login page　
+[03-Apr-2021 23:05:52 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[03-Apr-2021 23:05:52 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[03-Apr-2021 23:05:52 Asia/Tokyo] debug：session ID：kgqidjf7muebrvoblhjmp0eohh
+[03-Apr-2021 23:05:52 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[03-Apr-2021 23:05:52 Asia/Tokyo] debug：現在日時タイムスタンプ：1617458752
+[03-Apr-2021 23:05:52 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:05:52 Asia/Tokyo] debug：start auth function
+[03-Apr-2021 23:05:52 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:05:52 Asia/Tokyo] debug：未ログインユーザーです。
+[03-Apr-2021 23:05:52 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:05:52 Asia/Tokyo] debug：end auth function
+[03-Apr-2021 23:05:52 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:05:52 Asia/Tokyo] PHP Notice:  Undefined variable: email in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 13
+[03-Apr-2021 23:05:52 Asia/Tokyo] PHP Notice:  Undefined variable: pass in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 13
+[03-Apr-2021 23:05:52 Asia/Tokyo] PHP Notice:  Undefined variable: pass_save in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 13
+[03-Apr-2021 23:05:52 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:05:52 Asia/Tokyo] debug：start login function
+[03-Apr-2021 23:05:52 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:05:52 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:05:52 Asia/Tokyo] debug：end login function
+[03-Apr-2021 23:05:52 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:05:52 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：「　login page　
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：session ID：r33pjo79gu1g9pkrmprn0oj4ds
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：session variable：Array
+(
+)
+
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：現在日時タイムスタンプ：1617458766
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：start auth function
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：未ログインユーザーです。
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：end auth function
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:06:06 Asia/Tokyo] PHP Notice:  Undefined variable: email in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 13
+[03-Apr-2021 23:06:06 Asia/Tokyo] PHP Notice:  Undefined variable: pass in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 13
+[03-Apr-2021 23:06:06 Asia/Tokyo] PHP Notice:  Undefined variable: pass_save in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/login.php on line 13
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：start login function
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：POST送信があります。
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：バリデーションOKです。
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：クエリ成功。
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：クエリ結果の中身：Array
+(
+    [pass] => $2y$10$i4XOEMLpgPa6cASsKikC6.0aqS/bSt8foW3dN5eyURRTVvsC8pw3S
+    [id] => 91
+)
+
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：パスワードがマッチしました。
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：ログイン保持にチェックがあります。
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：セッション変数の中身：Array
+(
+    [login_date] => 1617458766
+    [login_limit] => 2592000
+    [user_id] => 91
+)
+
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：homepageへ遷移します。
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：end login function
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：「　home page　
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：session ID：c8bo0usq1pu75p5akmnobm6t4g
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1617458766
+    [login_limit] => 2592000
+    [user_id] => 91
+)
+
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：現在日時タイムスタンプ：1617458766
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1620050766
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：start auth function
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：ログイン済みユーザーです。
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：ログイン有効期限以内です。
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：end auth function
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:06:06 Asia/Tokyo] PHP Notice:  Undefined index: postButton in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 17
+[03-Apr-2021 23:06:06 Asia/Tokyo] PHP Notice:  Undefined variable: u_id in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 49
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：start get post list function
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：post情報を取得します。
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：SQL：SELECT u.id, u.username, u.profpic, p.id AS p_id, p.comment, p.pic1, p.create_date
+        FROM post AS p
+        INNER JOIN users AS u
+        ON p.user_id = u.id WHERE 1=1 AND p.delete_flg = 0 AND u.delete_flg =0
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：クエリ成功。
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：start getuser function
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：===========================
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：ユーザー情報を取得します。
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：クエリ成功。
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：取得したユーザー情報：Array
+(
+    [id] => 91
+    [username] => okawa
+    [tel] => 09000000000
+    [zip] => 5470011
+    [addr] => 長吉出戸8-10-1-701
+    [age] => 21
+    [email] => siodeitadaku@gmail.com
+    [profpic] => uploads/f0c1253bb862eae72e9406650eaa41501541d201.jpeg
+    [backgroundimg] => uploads/7476263270dca40a8393d251148c33a063068daf.jpeg
+    [area_id] => 7
+    [myBio] => Hello World.
+    [area] => Asia
+)
+
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[03-Apr-2021 23:06:06 Asia/Tokyo] PHP Notice:  Undefined variable: title in /Applications/MAMP/htdocs/Github/portfolio/goodbook/goodbook_header.php on line 69
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：ユーザーID：91
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：postID：124
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：クエリ成功。
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：good未入力
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：ユーザーID：91
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：postID：123
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：クエリ成功。
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：good未入力
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：ユーザーID：91
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：postID：122
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：クエリ成功。
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：good未入力
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：ユーザーID：91
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：postID：118
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：クエリ成功。
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：good未入力
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：ユーザーID：91
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：postID：115
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：クエリ成功。
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：good未入力
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：ユーザーID：91
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：postID：109
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：クエリ成功。
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：good未入力
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：ユーザーID：91
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：postID：108
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：クエリ成功。
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：good未入力
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：ユーザーID：91
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：postID：107
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：クエリ成功。
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：good未入力
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：ユーザーID：91
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：postID：106
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：クエリ成功。
+[03-Apr-2021 23:06:06 Asia/Tokyo] debug：good未入力
+[03-Apr-2021 23:06:06 Asia/Tokyo] PHP Notice:  Undefined index: comment in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 956
+[03-Apr-2021 23:06:06 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 956
+[03-Apr-2021 23:06:06 Asia/Tokyo] PHP Notice:  Undefined index: pic1 in /Applications/MAMP/htdocs/Github/portfolio/goodbook/function.php on line 956
+[03-Apr-2021 23:06:06 Asia/Tokyo] PHP Notice:  Undefined variable: edit_flg in /Applications/MAMP/htdocs/GitHub/portfolio/goodbook/homepage.php on line 313
+[03-Apr-2021 23:06:13 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[03-Apr-2021 23:06:13 Asia/Tokyo] debug：「　Ajax　
+[03-Apr-2021 23:06:13 Asia/Tokyo] debug：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[03-Apr-2021 23:06:13 Asia/Tokyo] debug：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始
+[03-Apr-2021 23:06:13 Asia/Tokyo] debug：session ID：hfvvc0h4ef6fn8tnkmo19inpme
+[03-Apr-2021 23:06:13 Asia/Tokyo] debug：session variable：Array
+(
+    [login_date] => 1617458766
+    [login_limit] => 2592000
+    [user_id] => 91
+)
+
+[03-Apr-2021 23:06:13 Asia/Tokyo] debug：現在日時タイムスタンプ：1617458773
+[03-Apr-2021 23:06:13 Asia/Tokyo] debug：ログイン期限日時タイムスタンプ：1620050766
+[03-Apr-2021 23:06:13 Asia/Tokyo] debug：Array
+(
+    [postId] => 124
+)
+
+[03-Apr-2021 23:06:13 Asia/Tokyo] debug：ログイン済みユーザーです。
+[03-Apr-2021 23:06:13 Asia/Tokyo] debug：ログイン有効期限以内です。
+[03-Apr-2021 23:06:13 Asia/Tokyo] debug：POST送信があります。
+[03-Apr-2021 23:06:13 Asia/Tokyo] debug：postID：124
+[03-Apr-2021 23:06:13 Asia/Tokyo] debug：クエリ成功。
+[03-Apr-2021 23:06:13 Asia/Tokyo] debug：0
+[03-Apr-2021 23:06:13 Asia/Tokyo] debug：クエリ成功。
+[03-Apr-2021 23:06:13 Asia/Tokyo] debug：Ajax処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
