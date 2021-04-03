@@ -126,7 +126,7 @@ require('goodbook_head.php');
                                 </div>
                             <?php } else { ?>
                                 <div class="myBio"><?php echo $dbFormData["myBio"]; ?></div>
-                                <div class="bioUser">Edit</div>
+                                <div class="bioUser">Bio Edit</div>
                                 <div class="bioUser_textarea display_none">
                                     <form action="" method="post">
                                         <textarea class="textarea_bio" name="myBio" id="js-count" cols="30" rows="3"><?php echo $dbFormData["myBio"] ?></textarea>
