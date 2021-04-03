@@ -68,9 +68,23 @@ table th {
 	padding: 10px;
 	margin-bottom: 30px;
 }
-.item img {
+.good {
 	width: 250px;
+	transition: 0.3s;
 }
+.item .good:hover {
+	animation: favPushAnimation 0.7s ease;
+	overflow: hidden;
+}
+@keyframes favPushAnimation {
+	0% {
+		transform: translateY(-30px) rotate(-50deg);
+	}
+	100% {
+		transform: translateY(0) rotate(0);
+	}
+}
+
 .item h3 {
 	padding-top: 12px;
 	padding-left: 9px;

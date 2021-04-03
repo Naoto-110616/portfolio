@@ -96,14 +96,14 @@
         </ul>
         <h3>Github Repo</h3>
         <div class="github_urldiv">
-          <a href="https://github.com/Naoto-110616/portfolio">https://github.com/Naoto-110616/portfolio</a>
+          <a href="https://github.com/Naoto-110616/portfolio">https://github.com/Naoto-110616/portfolio/tree/master/Oasobi</a>
         </div>
       </section>
       <section class="item">
         <div class="icon">
           <a href="goodbook/login.php">
             <h3>goodbook</h3>
-            <img src="goodbook/img/Facebook-Logo1.png" alt="goodbook_icon" />
+            <img src="goodbook/img/Facebook-Logo1.png" alt="goodbook_icon" class="good" />
           </a>
         </div>
         <p>
