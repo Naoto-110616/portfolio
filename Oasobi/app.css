@@ -10,6 +10,10 @@ body {
 	box-sizing: border-box;
 	margin: 100px auto;
 }
+a {
+	color: #dddddd;
+	text-decoration: none;
+}
 section {
 	margin-bottom: 30px;
 	margin-right: 30px;
@@ -86,25 +90,61 @@ section {
 }
 .picasso:hover {
 	transform: rotate(1800deg);
-	content: url("img/picasso.jpg");
+	content: url("./oasobi2/img/picasso.jpg");
 }
 .dali:hover {
 	transform: rotate(1800deg);
-	content: url("img/img17.png");
+	content: url("./oasobi2/img/img17.png");
 }
 .gogh:hover {
 	transform: rotate(1800deg);
-	content: url("img/11779543176244f4cdc3e257e07483ea.jpg");
+	content: url("./oasobi2/img/11779543176244f4cdc3e257e07483ea.jpg");
 }
 .munch:hover {
 	transform: rotate(1800deg);
-	content: url("img/Portrait-of-Edvard-Munch-1863-1944-c.-1889.-National-Library-of-Norway\ \(1\).jpg");
+	content: url("./oasobi2/img/Portrait-of-Edvard-Munch-1863-1944-c.-1889.-National-Library-of-Norway\ \(1\).jpg");
 }
 .davinci:hover {
 	transform: rotate(1800deg);
-	content: url("img/davinci-edited-1-1573367640.jpg");
+	content: url("./oasobi2/img/davinci-edited-1-1573367640.jpg");
 }
 .cecily:hover {
 	transform: rotate(1800deg);
-	content: url("img/9_Cecily_Brown_medium.webp");
+	content: url("./oasobi2/img/9_Cecily_Brown_medium.webp");
+}
+.whenYoung {
+	width: 330px;
+	height: 400px;
+	box-sizing: border-box;
+	box-shadow: 17px 17px 20px #b8b8b8;
+	transition: all 0.5s;
+	object-fit: cover;
+}
+.whenOld:hover {
+	transition: all 0.5s;
+	object-fit: cover;
+}
+.Einstein:hover {
+	transform: rotate(1800deg);
+	content: url("./oasobi1/img/unnamed.jpg");
+}
+.Lincoln:hover {
+	transform: rotate(1800deg);
+	content: url("./oasobi1/img/Abraham_Lincoln_November_1863.jpg");
+}
+.Hawking:hover {
+	transform: rotate(1800deg);
+	content: url("./oasobi1/img/225px-Stephen_Hawking.StarChild.jpg");
+}
+.Neumann:hover {
+	transform: rotate(1800deg);
+	content: url("./oasobi1/img/JohnvonNeumann-LosAlamos.gif");
+}
+.Jobs:hover {
+	transform: rotate(1800deg);
+	content: url("./oasobi1/img/sjobsapple.jpg");
+}
+.Lennon:hover {
+	transform: rotate(1800deg);
+	content: url("./oasobi1/img/mw-860.jpeg");
 }
