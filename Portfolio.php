@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-  <meta charset="UTF-8">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="portfolio_style.css">
-</head>
+<?php require("home_head.php"); ?>
 
 <body>
   <header>
@@ -33,6 +26,7 @@
                 <td>8時間</td>
                 <td>
                   <div>HTML/CSS</div>
+                  <div>PHP</div>
                 </td>
                 <td>模写</td>
               </tr>
@@ -88,6 +82,23 @@
           </a>
         </div>
       </section>
+      </section>
+      <section class="item">
+        <div class="icon">
+          <a href="Oasobi/Oasobi_homepage.php">
+            <h3>Oasobi</h3>
+            <img src="Oasobi/oasobi1/img/22177000005.jpg" alt="" class="oasobi_top_img" />
+          </a>
+        </div>
+        <h3>Skills</h3>
+        <ul>
+          <li>CSS(transform)</li>
+        </ul>
+        <h3>Github Repo</h3>
+        <div class="github_urldiv">
+          <a href="https://github.com/Naoto-110616/portfolio">https://github.com/Naoto-110616/portfolio</a>
+        </div>
+      </section>
       <section class="item">
         <div class="icon">
           <a href="goodbook/login.php">
@@ -114,7 +125,6 @@
         <div class="github_urldiv">
           <a href="https://github.com/Naoto-110616/portfolio">https://github.com/Naoto-110616/portfolio</a>
         </div>
-      </section>
     </div>
   </main>
   <?php

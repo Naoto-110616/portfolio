@@ -1,15 +1,45 @@
+<?php
+$pseudonym = "おおかわなおと";
+$name = "大川尚斗";
+$addr = "千葉県松戸市根本238-1";
+$nearStation = "松戸駅";
+$sex = "男";
+$programmingLanguage = array("HTML", "CSS", "JavaScript", "jQuery", "PHP", "MySQL", "WordPress", "Node.js", "SCSS", "gulp", "npm");
+// 生年月日からタイムスタンプを取得
+$birthday = ("1999-6-16");
+$birthdayTimeStamp = strtotime($birthday);
+$birth_year = (int)date("Y", $birthdayTimeStamp);
+$birth_month = (int)date("m", $birthdayTimeStamp);
+$birth_day = (int)date("d", $birthdayTimeStamp);
+// 現在の年月日を取得
+$now_year = (int)date("Y");
+$now_month = (int)date("m");
+$now_day = (int)date("d");
+// 年齢を計算
+$age = $now_year - $birth_year;
+// 「月」「日」で年齢を調整
+if ($birth_month === $now_month) {
+    if ($now_day < $birth_day) {
+        $age--;
+    }
+} elseif ($now_month < $birth_month) {
+    $age--;
+}
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
     <meta charset="UTF-8">
-    <title>Skillsheet</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <title>SkillSheet</title>
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../portfolio_style.css">
 </head>
 
 <body>
     <header>
-        <h1><a href="skillsheet.php">skillsheet</a></h1>
+        <h1><a href="skillsheet.php">SkillSheet</a></h1>
     </header>
     <main>
         <div class="content-wrapper">
@@ -19,28 +49,27 @@
                         <tbody>
                             <tr>
                                 <td class="color">ふりがな</td>
-                                <td>おおかわなおと</td>
+                                <td><?php echo $pseudonym; ?></td>
                                 <td class="color">生年月日</td>
-                                <td>1999年6月</td>
+                                <td><?php echo $birthday; ?></td>
                                 <td class="color">年齢</td>
-                                <td>21歳</td>
+                                <td><?php echo $age ?></td>
                             </tr>
                             <tr>
                                 <td class="color">氏名</td>
-                                <td>大川尚斗</td>
+                                <td><?php echo $name; ?></td>
                                 <td class="color">経験年数</td>
-                                <td>5ヶ月</td>
+                                <td>6ヶ月</td>
                                 <td class="color">最寄駅</td>
                                 <td>
-                                    <div class="lang">地下鉄谷町線</div>
-                                    <div class="lang">長原駅</div>
+                                    <div class="lang"><?php echo $nearStation; ?></div>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="color">現住所</td>
-                                <td>大阪市平野区長吉出戸</td>
+                                <td><?php echo $addr; ?></td>
                                 <td class="color">性別</td>
-                                <td>男</td>
+                                <td><?php echo $sex; ?></td>
                                 <td class="color">職種</td>
                                 <td>ITエンジニア</td>
                             </tr>
@@ -110,7 +139,7 @@
                                 </td>
                                 <td>3カ月</td>
                                 <td class="sentence">【オンライン学習ツールにて言語の勉強】<br>
-                                    同居していた実兄がjavaエンジニアとして4年の経験者ですので、分からない事は聞きながら、<br>
+                                    友人がjavaエンジニアとして4年の経験者ですので、分からない事は聞きながら、<br>
                                     自宅でプログラム言語について習得しております。<br>
 
                                     【学習内容】<br>
@@ -160,18 +189,22 @@
                                     【学習内容】<br>
                                     ゼロワンという会社のオンライン教材「ウェブカツ」<br>
                                     udemyの動画教材<br>
-                                    HTML、CSS、PHP、javascript、jQuery、MySQLの練習</td>
+                                    <?php
+                                    $count = count($programmingLanguage);
+                                    for ($i = 0; $i < $count; ++$i) {
+                                        echo $programmingLanguage[$i];
+                                    }
+                                    ?>の練習<br></td>
                                 <td>
                                     <div>Mac</div>
-                                    <div>Mojave</div>
                                 </td>
                                 <td>
-                                    <div>HTML</div>
-                                    <div>CSS</div>
-                                    <div>PHP</div>
-                                    <div>javascript</div>
-                                    <div>jQuery</div>
-                                    <div>MySQL</div>
+                                    <?php
+                                    $count = count($programmingLanguage);
+                                    for ($i = 0; $i < $count; ++$i) {
+                                        echo "<div>" . $programmingLanguage[$i] . '</div>';
+                                    }
+                                    ?>
                                 </td>
                                 <td>-</td>
                             </tr>
@@ -179,14 +212,14 @@
                                 <td class="sentence" colspan="7">【人物面】<br>
                                     ・とても真面目で、仕事に対して非常に根気強く向き合う人間です。真冬に朝まで街頭アンケートもしておりました。<br>
                                     　取材やアンケート、許可取得でも様々な方との折衝業務もこなしてきましたのでコミュニケーション能力もとても高く、<br>
-                                    21歳とは思えないほど社会人としてのマナーや話し方がしっかり備わっております。<br>
+                                    <?php echo $age; ?>歳とは思えないほど社会人としてのマナーや話し方がしっかり備わっております。<br>
 
                                     ・またかなり勤勉で、毎日ひたすら分からないことを調べたり聞いたりと、コツコツ努力することもできております。<br>
-                                    ・実兄がエンジニアということもあり、基礎からしっかりと教えてもらえる環境もあり、しっかり活用しながらIT言語を習得していっております。<br>
 
                                     【将来のエンジニア像】<br>
-                                    　家族の環境的にjavaやSQLから勉強しておりますが、しっかりとITパスポートも勉強しており、将来は開発にこだわることなく<br>
-                                    　様々な業界に関わることができるエンジニアになりたいと考えております。</td>
+                                    　環境的にjavaやSQLから勉強しておりますが、しっかりとITパスポートも勉強しており、将来は開発にこだわることなく<br>
+                                    　様々な業界に関わることができるエンジニアになりたいと考えております。
+                                </td>
                             </tr>
                         </tbody>
                     </table>
