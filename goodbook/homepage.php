@@ -49,6 +49,8 @@ if ($_POST["postButton"]) {
 $dbPostData = getPost($u_id);
 $dbFormData = getUser($_SESSION['user_id']);
 debug('取得したユーザー情報：' . print_r($dbFormData, true));
+debug('取得したユーザー情報：' . print_r($dbPostData, true));
+
 debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
 ?>
 

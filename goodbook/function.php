@@ -1397,6 +1397,24 @@ function isLike($u_id, $f_id)
         error_log('エラー発生:' . $e->getMessage());
     }
 }
+function countGood($p_id)
+{
+    try {
+        $dbh = dbConnect();
+        $sql = "SELECT count(*) as count FROM goodbutton WHERE post_id=:p_id AND delete_flg = 0";
+        $data = array("p_id" => $p_id);
+        $stmt = queryPost($dbh, $sql, $data, "common");
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        if ($stmt) {
+            debug("success");
+            return $result["count"];
+        } else {
+            debug("error");
+        }
+    } catch (Exception $e) {
+        error_log("error:" . $e->getMessage);
+    }
+}
 function isGood($u_id, $p_id)
 {
     debug('ユーザーID：' . $u_id);

@@ -20,7 +20,6 @@ foreach ($dbPostData['data'] as $key => $val) :
                     </a>
                     <div class="user_name_div">
                         <p><?php echo sanitize($val["username"]); ?></p>
-                        <p class="time_line"><?php $timestamp = strtotime($val["create_date"]); ?></p>
                         <p class="time_line"><?php echo createTime($val["create_date"]) ?></p>
                     </div>
                     <?php if ($val["id"] === $_SESSION["user_id"]) { ?>
@@ -52,7 +51,7 @@ foreach ($dbPostData['data'] as $key => $val) :
                     <img class="main_center_icon_button" src="img/homepage_img/download.svg" alt="face_button">
                 </div>
                 <div class="main_center_icon_button_div">
-                    <p><?php echo mt_rand(0, 1000); ?></p>
+                    <p><?php echo countGood($val["p_id"]); ?></p>
                 </div>
             </div>
             <div class="main_center_comment_share_div">
