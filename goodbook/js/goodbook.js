@@ -458,11 +458,11 @@ $(".comment").on("click", function () {
 	var $this = $(this);
 	$this.toggleClass("comment_color");
 	$(this).children("div").toggleClass("comment_color");
-	$(this).children("i").toggleClass("is-active");
+	// $(this).children("i").toggleClass("is-active");
 });
 $(".share").on("click", function () {
 	var $this = $(this);
 	$this.toggleClass("share_color");
 	$(this).children("div").toggleClass("share_color");
-	$(this).children("i").toggleClass("is-active");
+	// $(this).children("i").toggleClass("is-active");
 });
