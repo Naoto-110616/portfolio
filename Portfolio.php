@@ -28,7 +28,16 @@
                   <div>HTML/CSS</div>
                   <div>PHP</div>
                 </td>
-                <td>模写</td>
+                <td>自習</td>
+              </tr>
+              <td>
+                <a href="Oasobi/Oasobi_homepage.php">Oasobi</a>
+              </td>
+              <td>3時間</td>
+              <td>
+                <div>HTML/CSS</div>
+              </td>
+              <td>自習</td>
               </tr>
               <tr>
                 <td>
