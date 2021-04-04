@@ -64,7 +64,7 @@ require("goodbook_head.php");
     <article class="main">
         <div class="main_div">
             <nav>
-                <section id="main_left_wrapper">
+                <section class="js-toggle-sp-menu-target" id="main_left_wrapper">
                     <div id="contents">
                         <ul>
                             <a href="mypage.php">

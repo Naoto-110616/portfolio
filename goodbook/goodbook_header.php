@@ -1,35 +1,41 @@
 <header class="header">
     <div class="head_left">
-            <div class="icon_div">
-                <a href="login.php"><img class="icon" src="img/Facebook-Logo1.png" alt="goodbook_icon"></a>
-            </div>
-            <div class="goodbook_search_div">
-                <label class="goodbook_search">
-                    <input type="goodbook_search" class="goodbook_search" placeholder=" goodbook search">
-                </label>
-            </div>
+        <div class="icon_div">
+            <a href="login.php"><img class="icon" src="img/Facebook-Logo1.png" alt="goodbook_icon"></a>
+        </div>
+        <div class="goodbook_search_div">
+            <label class="goodbook_search">
+                <input type="goodbook_search" class="goodbook_search" placeholder=" goodbook search">
+            </label>
+        </div>
     </div>
     <div class="head_center">
 
-        <a class="to_homepage chenge_color" href="homepage.php">
-            <div class="header_center_icon">
+        <a class="header_center_icon to_homepage chenge_color" href="homepage.php">
+            <div>
                 <i class="fas fa-home fa-2x <?php buttonColor($siteTitle, "homepage"); ?>"></i>
             </div>
         </a>
 
-        <a class="to_friendsList chenge_color" href="friendsList.php<?php echo "?u_id=" . $_SESSION["user_id"] ?>">
-            <div class="header_center_icon">
+        <a class="header_center_icon to_friendsList chenge_color" href="friendsList.php<?php echo "?u_id=" . $_SESSION["user_id"] ?>">
+            <div>
                 <i class=" fas fa-user-friends fa-2x <?php buttonColor($siteTitle, "frineds list"); ?>"></i>
             </div>
         </a>
 
         <div class="header_center_icon chenge_color"><i class="fas fa-tv fa-2x"></i></div>
 
-        <a class="to_friends chenge_color" href="friends.php">
-            <div class="header_center_icon ">
+        <a class="header_center_icon to_friends chenge_color" href="friends.php">
+            <div>
                 <i class="left_icon far fa-user fa-2x <?php buttonColor($siteTitle, "friends") ?>"></i>
             </div>
         </a>
+
+        <div class="header_center_icon menu-trigger js-toggle-sp-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
         <div class="header_center_icon chenge_color"><i class="fas fa-dice-d6 fa-2x"></i></div>
 

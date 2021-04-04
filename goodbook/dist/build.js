@@ -115,6 +115,13 @@ $(function () {
 		$(".accountMenu").toggle();
 	});
 });
+
+$(".js-toggle-sp-menu").on("click", function () {
+	$(this).toggleClass("active");
+	$(".js-toggle-sp-menu-target").toggleClass("active");
+	$("body").toggleClass("fixed");
+});
+
 // ===========================================
 // モーダルウィンドウの表示，非表示ボタン
 // ===========================================
