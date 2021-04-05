@@ -37,7 +37,7 @@ body {
 
 .menu-trigger {
   display: none;
-  transition: all 0.4s;
+  transition: all 0.25s;
   box-sizing: border-box;
   position: relative;
   width: 40px;
@@ -48,7 +48,7 @@ body {
       display: inline-block; } }
   .menu-trigger span {
     display: inline-block;
-    transition: all 0.4s;
+    transition: all 0.25s;
     box-sizing: border-box;
     position: absolute;
     left: 0;
@@ -122,7 +122,7 @@ a {
   .chenge_color:hover {
     background-color: rgba(198, 198, 198, 0.25);
     color: #2d88ff;
-    transition: 0.2s; }
+    transition: 0.25s; }
 
 .head_left {
   display: flex;
@@ -202,7 +202,7 @@ a {
     color: #dddddd;
     padding: 10px;
     border-radius: 5px;
-    transition: 0.2s; }
+    transition: 0.25s; }
     .main_left_icon:hover {
       background: rgba(198, 198, 198, 0.25);
       cursor: pointer; }
@@ -250,7 +250,7 @@ a {
     .main_center_comment2 > h3:hover {
       background: #2d88ff;
       cursor: pointer;
-      transition: 0.2s; }
+      transition: 0.25s; }
     .main_center_comment3 {
       padding: 13px; }
     .main_center_icon_bottom_div > .border {
@@ -266,7 +266,7 @@ a {
       justify-content: center; }
       .main_center_element2_icon_div:hover {
         background: rgba(198, 198, 198, 0.25);
-        transition: 0.2s; }
+        transition: 0.25s; }
     .main_center_comment {
       margin: 10px;
       word-break: break-all; }
@@ -321,11 +321,11 @@ a {
     width: 100%;
     height: 100vh;
     padding-top: 60px;
-    transition: 0.5s; }
+    transition: 0.25s; }
     #main_left_wrapper.active {
-      transition: 0.5s;
+      transition: 0.25s;
       transform: translateX(-100%);
-      z-index: 2; } }
+      z-index: 4; } }
 
 .comment_make_stories1,
 .comment_make_stories2 {
@@ -352,19 +352,24 @@ a {
     display: flex;
     text-decoration: none; }
 
-.submenu {
-  display: none; }
-
 .myIcon_img {
-  height: 160px;
   width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover; }
+  @media screen and (max-width: 414px) {
+    .myIcon_img {
+      width: 140px;
+      height: 140px; } }
   .myIcon_img_div {
     display: inline-block;
     position: relative;
-    top: 210px;
-    left: 390px; }
+    top: 60%;
+    left: 42%; }
+    @media screen and (max-width: 414px) {
+      .myIcon_img_div {
+        top: 66%;
+        left: 35%; } }
 
 .myBio {
   margin-bottom: 5px; }
@@ -578,11 +583,17 @@ a {
     justify-content: space-between; }
   .main_top_content_user_info_list1 {
     display: flex; }
+    @media screen and (max-width: 414px) {
+      .main_top_content_user_info_list1 {
+        display: none; } }
   .main_top_content_user_info_list2 {
-    display: flex; }
+    display: flex;
+    align-items: center; }
+    @media screen and (max-width: 414px) {
+      .main_top_content_user_info_list2 {
+        margin-left: auto; } }
 
 .main_top_content_user_detail_info_list2 {
-  position: absolute;
   display: flex;
   align-items: center;
   top: 10px;
@@ -590,8 +601,8 @@ a {
 
 .cover_photo_change_button {
   position: absolute;
-  top: 300px;
-  left: 770px; }
+  top: 85%;
+  right: 2%; }
   .cover_photo_change_button input {
     padding: 10px;
     background-color: #303030;
@@ -599,10 +610,13 @@ a {
     outline: none;
     border: none;
     border-radius: 2px; }
+    @media screen and (max-width: 414px) {
+      .cover_photo_change_button input {
+        font-size: 10px; } }
     .cover_photo_change_button input:hover {
       background-color: #4c4c4c;
       cursor: pointer;
-      transition: 0.2s; }
+      transition: 0.25s; }
 
 .info_list {
   padding: 10px; }
@@ -618,7 +632,7 @@ a {
 .message:hover {
   background-color: rgba(198, 198, 198, 0.25);
   border-radius: 10px;
-  transition: 0.2s; }
+  transition: 0.25s; }
 
 .friendMsg {
   float: right;
@@ -629,7 +643,7 @@ a {
   margin-right: 5px; }
   .friendMsg:hover {
     background: #2d88ff;
-    transition: 0.2s; }
+    transition: 0.25s; }
   .friendMsg.active {
     float: right;
     padding: 5px;
@@ -642,6 +656,10 @@ main lower part
 「「「「「「「「「「「　*/
 .content_flex {
   display: flex; }
+  @media screen and (max-width: 414px) {
+    .content_flex {
+      display: inline-block;
+      width: 100%; } }
 
 .main_lower_part {
   max-width: 950px;
@@ -653,13 +671,19 @@ main lower part
   height: 100%;
   padding: 10px 20px;
   box-sizing: border-box; }
+  @media screen and (max-width: 414px) {
+    .main_lower_inside {
+      padding: 0; } }
 
 .my_profile {
-  width: 375px;
   height: 240px;
   border-radius: 10px;
   background-color: #303030;
   margin-right: 10px; }
+  @media screen and (max-width: 414px) {
+    .my_profile {
+      margin: 0 0 10px 0;
+      height: none; } }
 
 .myprofile_inside {
   padding: 0 20px;
@@ -708,7 +732,7 @@ main lower part
   .share_list:hover {
     background: rgba(198, 198, 198, 0.25);
     cursor: pointer;
-    transition: 0.2s; }
+    transition: 0.25s; }
 
 .myPost {
   margin: 0 auto; }
@@ -791,21 +815,26 @@ main lower part
   padding-top: 10px;
   font-size: 24px;
   text-align: center; }
+  @media screen and (max-width: 414px) {
+    .edit_title {
+      font-size: 18px; } }
 
 .edit_form_div {
   max-width: 500px;
   margin: 0 auto; }
 
-.x-circle1,
-.x-circle2,
-.x-circle3,
-.x-circle4 {
+.x-circle1, .x-circle2, .x-circle3, .x-circle4 {
   width: 32px;
   height: 32px;
   position: absolute;
   bottom: 0;
   right: 15px;
   top: 9px; }
+  @media screen and (max-width: 414px) {
+    .x-circle1, .x-circle2, .x-circle3, .x-circle4 {
+      top: 0;
+      right: 0;
+      font-size: 12px; } }
 
 body.fixed {
   position: fixed;
@@ -928,7 +957,7 @@ body.fixed {
   border: none;
   outline: none; }
   .btn:hover {
-    transition: 0.2s;
+    transition: 0.25s;
     background: rgba(198, 198, 198, 0.25); }
 
 .toMypage {
@@ -1333,7 +1362,7 @@ ul.menu li.subMenu {
   display: block; }
   @media screen and (max-width: 414px) {
     ul.menu li.subMenu {
-      right: 80px; } }
+      right: 95px; } }
 
 ul.sub {
   display: none;
@@ -1348,6 +1377,20 @@ ul.sub {
     background: #2d88ff;
     text-decoration: none; }
 
+.button_more {
+  display: none; }
+  @media screen and (max-width: 414px) {
+    .button_more {
+      display: inline-block;
+      align-items: center;
+      padding: 10px;
+      border-radius: 10px;
+      transition: 0.25s;
+      position: absolute;
+      z-index: 3; }
+      .button_more:hover {
+        background-color: #494949; } }
+
 /* ~~~~~~~~~~~~~~~ */
 /* slider */
 /* ~~~~~~~~~~~~~~~ */
@@ -1357,6 +1400,9 @@ ul.sub {
   overflow: hidden;
   margin: 0 auto;
   margin-bottom: 10px; }
+  @media screen and (max-width: 414px) {
+    .slider {
+      width: 100%; } }
   .slider__container {
     padding: 0;
     overflow: hidden;

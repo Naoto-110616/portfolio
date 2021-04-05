@@ -394,6 +394,16 @@ $(function () {
 		}
 	);
 });
+$(function () {
+	$(".button_more").hover(
+		function () {
+			$("ul.sub:not(:animated)", this).slideDown();
+		},
+		function () {
+			$("ul.sub", this).slideUp();
+		}
+	);
+});
 
 var slider = (function () {
 	var currentItemNum = 1; //デフォルトの位置設定

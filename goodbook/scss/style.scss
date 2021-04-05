@@ -30,6 +30,8 @@ $border-radius_s: 3px;
 $border-radius_m: 10px;
 $border-radius_l: 50px;
 
+$transition_time: 0.25s;
+
 $breakpoints: (
 	"sm": "screen and (max-width: 414px);",
 	"md": "screen and (max-width: 768px);",
@@ -91,7 +93,7 @@ body {
 	@include mq() {
 		display: inline-block;
 	}
-	transition: all 0.4s;
+	transition: all $transition_time;
 	box-sizing: border-box;
 	position: relative;
 	width: 40px;
@@ -99,7 +101,7 @@ body {
 	z-index: 3;
 	span {
 		display: inline-block;
-		transition: all 0.4s;
+		transition: all $transition_time;
 		box-sizing: border-box;
 		position: absolute;
 		left: 0;
@@ -188,15 +190,13 @@ a {
 	&:hover {
 		background-color: $background-color_hover;
 		color: $goodbook_color;
-		transition: 0.2s;
+		transition: $transition_time;
 	}
 }
 .head {
 	&_left {
 		display: flex;
 		width: 20%;
-		@include mq() {
-		}
 	}
 	&_center {
 		display: flex;
@@ -211,8 +211,6 @@ a {
 		display: flex;
 		align-items: center;
 		width: 20%;
-		@include mq() {
-		}
 	}
 }
 .accountMenu {
@@ -280,7 +278,7 @@ a {
 		color: $font-color_default;
 		padding: 10px;
 		border-radius: 5px;
-		transition: 0.2s;
+		transition: $transition_time;
 		&:hover {
 			background: $background-color_hover;
 			cursor: pointer;
@@ -339,7 +337,7 @@ a {
 		&_comment2 > h3:hover {
 			background: $goodbook_color;
 			cursor: pointer;
-			transition: 0.2s;
+			transition: $transition_time;
 		}
 		&_comment3 {
 			padding: 13px;
@@ -358,7 +356,7 @@ a {
 			justify-content: center;
 			&:hover {
 				background: $background-color_hover;
-				transition: 0.2s;
+				transition: $transition_time;
 			}
 		}
 		&_comment {
@@ -426,18 +424,17 @@ a {
 	// TODO:リファクタ必要（PCで修正が入る際も考えてincludeはクラスの中に書く）
 	#main_left_wrapper {
 		display: inline-block;
-		// position: absolute;
 		top: 0;
 		background: rgba(0, 0, 0, 1);
 		right: -100%;
 		width: 100%;
 		height: 100vh;
 		padding-top: 60px;
-		transition: 0.5s;
+		transition: $transition_time;
 		&.active {
-			transition: 0.5s;
+			transition: $transition_time;
 			transform: translateX(-100%);
-			z-index: 2;
+			z-index: 4;
 		}
 	}
 }
@@ -468,19 +465,24 @@ a {
 		text-decoration: none;
 	}
 }
-.submenu {
-	display: none;
-}
 .myIcon_img {
-	height: 160px;
 	width: 160px;
+	height: 160px;
 	border-radius: 50%;
 	object-fit: cover;
+	@include mq() {
+		width: 140px;
+		height: 140px;
+	}
 	&_div {
 		display: inline-block;
 		position: relative;
-		top: 210px;
-		left: 390px;
+		top: 60%;
+		left: 42%;
+		@include mq() {
+			top: 66%;
+			left: 35%;
+		}
 	}
 }
 .myBio {
@@ -720,13 +722,19 @@ a {
 			}
 			&_list1 {
 				display: flex;
+				@include mq() {
+					display: none;
+				}
 			}
 			&_list2 {
 				display: flex;
+				align-items: center;
+				@include mq() {
+					margin-left: auto;
+				}
 			}
 		}
 		&_detail_info_list2 {
-			position: absolute;
 			display: flex;
 			align-items: center;
 			top: $space_m;
@@ -736,8 +744,8 @@ a {
 }
 .cover_photo_change_button {
 	position: absolute;
-	top: 300px;
-	left: 770px;
+	top: 85%;
+	right: 2%;
 	& input {
 		padding: $space_m;
 		background-color: #303030;
@@ -745,10 +753,13 @@ a {
 		outline: none;
 		border: none;
 		border-radius: 2px;
+		@include mq() {
+			font-size: 10px;
+		}
 		&:hover {
 			background-color: #4c4c4c;
 			cursor: pointer;
-			transition: 0.2s;
+			transition: $transition_time;
 		}
 	}
 }
@@ -766,7 +777,7 @@ a {
 .message:hover {
 	background-color: $background-color_hover;
 	border-radius: $border-radius_m;
-	transition: 0.2s;
+	transition: $transition_time;
 }
 .friendMsg {
 	float: right;
@@ -777,7 +788,7 @@ a {
 	margin-right: $space_s;
 	&:hover {
 		background: $goodbook_color;
-		transition: 0.2s;
+		transition: $transition_time;
 	}
 	&.active {
 		float: right;
@@ -792,6 +803,10 @@ main lower part
 「「「「「「「「「「「　*/
 .content_flex {
 	display: flex;
+	@include mq() {
+		display: inline-block;
+		width: 100%;
+	}
 }
 .main_lower {
 	&_part {
@@ -804,14 +819,20 @@ main lower part
 		height: 100%;
 		padding: $space_m $space_xl;
 		box-sizing: border-box;
+		@include mq() {
+			padding: 0;
+		}
 	}
 }
 .my_profile {
-	width: 375px;
 	height: 240px;
 	border-radius: $border-radius_m;
 	background-color: #303030;
 	margin-right: $space_m;
+	@include mq() {
+		margin: 0 0 10px 0;
+		height: none;
+	}
 }
 .myprofile {
 	&_inside {
@@ -870,7 +891,7 @@ main lower part
 		&:hover {
 			background: $background-color_hover;
 			cursor: pointer;
-			transition: 0.2s;
+			transition: $transition_time;
 		}
 	}
 }
@@ -966,22 +987,32 @@ main lower part
 		padding-top: $space_m;
 		font-size: $font-size_xl;
 		text-align: center;
+		@include mq() {
+			font-size: $font-size_l;
+		}
 	}
 	&_form_div {
 		max-width: 500px;
 		margin: 0 auto;
 	}
 }
-.x-circle1,
-.x-circle2,
-.x-circle3,
-.x-circle4 {
-	width: 32px;
-	height: 32px;
-	position: absolute;
-	bottom: 0;
-	right: $space_l;
-	top: 9px;
+.x-circle {
+	&1,
+	&2,
+	&3,
+	&4 {
+		width: 32px;
+		height: 32px;
+		position: absolute;
+		bottom: 0;
+		right: $space_l;
+		top: 9px;
+		@include mq() {
+			top: 0;
+			right: 0;
+			font-size: $font-size_s;
+		}
+	}
 }
 body.fixed {
 	position: fixed;
@@ -1109,7 +1140,7 @@ body.fixed {
 	border: none;
 	outline: none;
 	&:hover {
-		transition: 0.2s;
+		transition: $transition_time;
 		background: $background-color_hover;
 	}
 }
@@ -1572,7 +1603,7 @@ ul.menu li.subMenu {
 	background-color: #555555;
 	display: block;
 	@include mq() {
-		right: 80px;
+		right: 95px;
 	}
 }
 ul.sub {
@@ -1590,6 +1621,21 @@ ul.sub {
 		text-decoration: none;
 	}
 }
+.button_more {
+	display: none;
+	@include mq() {
+		display: inline-block;
+		align-items: center;
+		padding: $space_m;
+		border-radius: $border-radius_m;
+		transition: $transition_time;
+		position: absolute;
+		z-index: 3;
+		&:hover {
+			background-color: $background-color_submit;
+		}
+	}
+}
 /* ~~~~~~~~~~~~~~~ */
 /* slider */
 /* ~~~~~~~~~~~~~~~ */
@@ -1599,6 +1645,9 @@ ul.sub {
 	overflow: hidden;
 	margin: 0 auto;
 	margin-bottom: $space_m;
+	@include mq() {
+		width: 100%;
+	}
 	&__container {
 		padding: 0;
 		overflow: hidden;
@@ -1642,11 +1691,11 @@ ul.sub {
 		width: 100%;
 		/* デフォルトでは、画像下に余白ができるため、下記のようにするかblock要素にする */
 		vertical-align: bottom;
-		transition: all 0.25s;
+		transition: all $transition_time;
 	}
 	&:hover {
 		cursor: pointer;
-		transition: all 0.25s;
+		transition: all $transition_time;
 	}
 	&Cover {
 		opacity: 0;
@@ -1656,13 +1705,13 @@ ul.sub {
 		bottom: 0;
 		left: 0;
 		right: 0;
-		transition: all 0.25s;
+		transition: all $transition_time;
 		transform: scale(1.2);
 		border-radius: 50%;
 	}
 	&Cover:hover {
 		opacity: 1;
-		transition: all 0.25s;
+		transition: all $transition_time;
 		transform: scale(1);
 		border-radius: 50%;
 		cursor: pointer;

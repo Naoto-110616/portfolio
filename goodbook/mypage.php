@@ -156,6 +156,34 @@ require('goodbook_head.php');
                             <div class="info_list"><span>Photos</span></div>
                             <div class="info_list"><a href="passSetting.php"><span>Password</span></a></div>
                         </nav>
+                        <div class="button_more">more
+                            <i class="fas fa-caret-down"></i>
+                            <ul class="menu">
+                                <ul class="sub">
+                                    <li class="submenu">
+                                        <a href="postList.php">
+                                            <div class="info_list"><span>Posts</span></div>
+                                        </a>
+                                    </li>
+                                    <li class="submenu">
+                                        <a href="msgRoomList.php">
+                                            <div class="info_list"><span>Msg</span></div>
+                                        </a>
+                                    </li>
+                                    <li class="submenu">
+                                        <a href="friendsList.php<?php echo "?u_id=" . $_SESSION["user_id"] ?>">
+                                            <div class="info_list"><span>Friends</span></div>
+                                        </a>
+                                    </li>
+                                    <li class="submenu">
+                                        <div class="info_list"><span>Photos</span></div>
+                                    </li>
+                                    <li class="submenu">
+                                        <div class="info_list"><a href="passSetting.php"><span>Password</span></a></div>
+                                    </li>
+                                </ul>
+                            </ul>
+                        </div>
                         <div class="main_top_content main_top_content_user_info_list2">
                             <div class="edit">
                                 <i class="fas fa-pen"></i>

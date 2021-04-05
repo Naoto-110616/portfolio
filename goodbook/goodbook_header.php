@@ -134,3 +134,4 @@
     echo getSessionFlash('msg_success');
     ?>
 </p>
+<?php require("hamburger_menu.php"); ?>
