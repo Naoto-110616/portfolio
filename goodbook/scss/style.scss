@@ -438,6 +438,12 @@ a {
 		}
 	}
 }
+.hamberger_menu {
+	display: none;
+	@include mq() {
+		display: inline-block;
+	}
+}
 .comment_make_stories1,
 .comment_make_stories2 {
 	font-weight: bold;
@@ -1481,64 +1487,61 @@ label.err input {
 			width: 80%;
 			overflow: hidden;
 			margin-bottom: 30px;
-		}
-		& .msg-cnt .avatar {
-			width: 6%;
-			overflow: hidden;
-			float: left;
-			object-fit: cover;
-		}
-		& .msg-cnt .avatar img {
-			width: 35px;
-			height: 35px;
-			border-radius: 20px;
-			float: left;
-			object-fit: cover;
-		}
-		& .msg-cnt .msg-inrTxt {
-			width: 85%;
-			float: left;
-			border-radius: 5px;
-			padding: $space_m;
-			margin: 0 0 0 25px;
-			position: relative;
-		}
-		& .msg-cnt.msg-left .msg-inrTxt {
-			background: #191919;
-		}
-		& .msg-cnt.msg-left .msg-inrTxt > .triangle {
-			position: absolute;
-			left: -$space_xl;
-			width: 0;
-			height: 0;
-			border-top: $border-radius_m solid transparent;
-			border-right: 15px solid #191919;
-			border-left: $border-radius_m solid transparent;
-			border-bottom: $border-radius_m solid transparent;
-		}
-		& .msg-cnt.msg-right {
-			float: right;
-		}
-		& .msg-cnt.msg-right .msg-inrTxt {
-			background: #191919;
-			margin: 0 25px 0 0;
-		}
-		& .msg-cnt.msg-right .msg-inrTxt > .triangle {
-			position: absolute;
-			right: -$space_xl;
-			width: 0;
-			height: 0;
-			border-top: $border-radius_m solid transparent;
-			border-left: 15px solid #191919;
-			border-right: $border-radius_m solid transparent;
-			border-bottom: $border-radius_m solid transparent;
-		}
-		& .msg-cnt.msg-right .msg-inrTxt {
-			float: right;
-		}
-
-		& .msg-cnt.msg-right .avatar {
-			float: right;
+			& .avatar {
+				width: 6%;
+				overflow: hidden;
+				float: left;
+				object-fit: cover;
+			}
+			& .avatar img {
+				width: 35px;
+				height: 35px;
+				border-radius: 20px;
+				float: left;
+				object-fit: cover;
+			}
+			& .msg-inrTxt {
+				width: 85%;
+				float: left;
+				border-radius: 5px;
+				padding: $space_m;
+				margin: 0 0 0 25px;
+				position: relative;
+			}
+			& .msg-left .msg-inrTxt {
+				background: #191919;
+				& > .triangle {
+					position: absolute;
+					left: -$space_xl;
+					width: 0;
+					height: 0;
+					border-top: $border-radius_m solid transparent;
+					border-right: 15px solid #191919;
+					border-left: $border-radius_m solid transparent;
+					border-bottom: $border-radius_m solid transparent;
+				}
+			}
+			& .msg-right {
+				float: right;
+				& .msg-inrTxt {
+					background: #191919;
+					margin: 0 25px 0 0;
+					float: right;
+					& > .triangle {
+						position: absolute;
+						right: -$space_xl;
+						width: 0;
+						height: 0;
+						border-top: $border-radius_m solid transparent;
+						border-left: 15px solid #191919;
+						border-right: $border-radius_m solid transparent;
+						border-bottom: $border-radius_m solid transparent;
+					}
+				}
+				& .avatar {
+					float: right;
+				}
+			}
 		}
 	}
 	&-send-msg {
@@ -1565,8 +1568,25 @@ label.err input {
 /* ===================== */
 /*   msg room page  */
 /* ===================== */
+.main_msgRoomList {
+	padding: 2% 17%;
+	@include mq() {
+		padding: 0;
+	}
+	&_wrapper {
+		width: 900px;
+		margin: 0 auto;
+		font-size: 17px;
+		@include mq() {
+			width: 100%;
+		}
+	}
+}
 .msgRoom {
 	padding: $space_l;
+	@include mq() {
+		padding: 0;
+	}
 	& > .msgShelf {
 		display: flex;
 		margin-top: $space_xl;
@@ -1585,6 +1605,9 @@ label.err input {
 		width: 5%;
 		border-radius: 70px;
 		object-fit: cover;
+		@include mq() {
+			width: 12%;
+		}
 	}
 	& > p {
 		margin-left: $space_m;

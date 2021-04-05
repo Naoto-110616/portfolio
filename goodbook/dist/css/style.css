@@ -327,6 +327,12 @@ a {
       transform: translateX(-100%);
       z-index: 4; } }
 
+.hamberger_menu {
+  display: none; }
+  @media screen and (max-width: 414px) {
+    .hamberger_menu {
+      display: inline-block; } }
+
 .comment_make_stories1,
 .comment_make_stories2 {
   font-weight: bold;
@@ -1258,53 +1264,52 @@ label.err input {
     width: 80%;
     overflow: hidden;
     margin-bottom: 30px; }
-  .area-bord .msg-cnt .avatar {
-    width: 6%;
-    overflow: hidden;
-    float: left;
-    object-fit: cover; }
-  .area-bord .msg-cnt .avatar img {
-    width: 35px;
-    height: 35px;
-    border-radius: 20px;
-    float: left;
-    object-fit: cover; }
-  .area-bord .msg-cnt .msg-inrTxt {
-    width: 85%;
-    float: left;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 0 0 0 25px;
-    position: relative; }
-  .area-bord .msg-cnt.msg-left .msg-inrTxt {
-    background: #191919; }
-  .area-bord .msg-cnt.msg-left .msg-inrTxt > .triangle {
-    position: absolute;
-    left: -20px;
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-right: 15px solid #191919;
-    border-left: 10px solid transparent;
-    border-bottom: 10px solid transparent; }
-  .area-bord .msg-cnt.msg-right {
-    float: right; }
-  .area-bord .msg-cnt.msg-right .msg-inrTxt {
-    background: #191919;
-    margin: 0 25px 0 0; }
-  .area-bord .msg-cnt.msg-right .msg-inrTxt > .triangle {
-    position: absolute;
-    right: -20px;
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-left: 15px solid #191919;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid transparent; }
-  .area-bord .msg-cnt.msg-right .msg-inrTxt {
-    float: right; }
-  .area-bord .msg-cnt.msg-right .avatar {
-    float: right; }
+    .area-bord .msg-cnt .avatar {
+      width: 6%;
+      overflow: hidden;
+      float: left;
+      object-fit: cover; }
+    .area-bord .msg-cnt .avatar img {
+      width: 35px;
+      height: 35px;
+      border-radius: 20px;
+      float: left;
+      object-fit: cover; }
+    .area-bord .msg-cnt .msg-inrTxt {
+      width: 85%;
+      float: left;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 0 0 0 25px;
+      position: relative; }
+    .area-bord .msg-cnt .msg-left .msg-inrTxt {
+      background: #191919; }
+      .area-bord .msg-cnt .msg-left .msg-inrTxt > .triangle {
+        position: absolute;
+        left: -20px;
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-right: 15px solid #191919;
+        border-left: 10px solid transparent;
+        border-bottom: 10px solid transparent; }
+    .area-bord .msg-cnt .msg-right {
+      float: right; }
+      .area-bord .msg-cnt .msg-right .msg-inrTxt {
+        background: #191919;
+        margin: 0 25px 0 0;
+        float: right; }
+        .area-bord .msg-cnt .msg-right .msg-inrTxt > .triangle {
+          position: absolute;
+          right: -20px;
+          width: 0;
+          height: 0;
+          border-top: 10px solid transparent;
+          border-left: 15px solid #191919;
+          border-right: 10px solid transparent;
+          border-bottom: 10px solid transparent; }
+      .area-bord .msg-cnt .msg-right .avatar {
+        float: right; }
 
 .area-send-msg {
   background: #333333;
@@ -1327,8 +1332,24 @@ label.err input {
 /* ===================== */
 /*   msg room page  */
 /* ===================== */
+.main_msgRoomList {
+  padding: 2% 17%; }
+  @media screen and (max-width: 414px) {
+    .main_msgRoomList {
+      padding: 0; } }
+  .main_msgRoomList_wrapper {
+    width: 900px;
+    margin: 0 auto;
+    font-size: 17px; }
+    @media screen and (max-width: 414px) {
+      .main_msgRoomList_wrapper {
+        width: 100%; } }
+
 .msgRoom {
   padding: 15px; }
+  @media screen and (max-width: 414px) {
+    .msgRoom {
+      padding: 0; } }
   .msgRoom > .msgShelf {
     display: flex;
     margin-top: 20px;
@@ -1344,6 +1365,9 @@ label.err input {
   width: 5%;
   border-radius: 70px;
   object-fit: cover; }
+  @media screen and (max-width: 414px) {
+    .msgShelf > img {
+      width: 12%; } }
 
 .msgShelf > p {
   margin-left: 10px; }

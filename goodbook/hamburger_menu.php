@@ -1,5 +1,5 @@
 <nav>
-    <section class="js-toggle-sp-menu-target" id="main_left_wrapper">
+    <section class="js-toggle-sp-menu-target hamberger_menu" id="main_left_wrapper">
         <div id="contents">
             <ul>
                 <a href="mypage.php">
