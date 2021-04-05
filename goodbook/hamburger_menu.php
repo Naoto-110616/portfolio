@@ -47,81 +47,70 @@
                     <div><i class="left_icon fab fa-font-awesome-flag fa-2x"></i></div>
                     <div class="icon_name_div"><span class="icon_name">page</span></div>
                 </li>
-                <ul class="menu">
-                    <li class="menu_item">
-                        <div class="main_left_icon menu__item__link js-menu__item__link_open">
-                            <div><i class="fas fa-arrow-circle-down fa-2x"></i></div>
-                            <div class="icon_name_div"><span class="icon_name">more</span></div>
-                        </div>
-                        <ul class="submenu">
-                            <li class="main_left_icon submenu__item">
-                                <div><i class="left_icon fas fa-briefcase fa-2x"></i></div>
-                                <div class="icon_name_div"><span class="icon_name">job offer</span></div>
-                            </li>
-                            <li class="main_left_icon submenu__item">
-                                <div><i class="left_icon fas fa-wallet fa-2x"></i></div>
-                                <div class="icon_name_div"><span class="icon_name">pay</span></div>
-                            </li>
-                            <a href="msgRoomList.php">
-                                <li class="main_left_icon submenu__item">
-                                    <div><i class="left_icon fas fa-comment-dots fa-2x"></i></div>
-                                    <div class="icon_name_div"><span class="icon_name">massenger</span></div>
-                                </li>
-                            </a>
-                            <li class="main_left_icon submenu__item">
-                                <div><i class="left_icon far fa-comment-dots fa-2x"></i></div>
-                                <div class="icon_name_div"><span class="icon_name">massenger kids</span></div>
-                            </li>
-                            <li class="main_left_icon submenu__item">
-                                <div><i class="left_icon fas fa-cube fa-2x"></i></div>
-                                <div class="icon_name_div"><span class="icon_name">Oculus</span></div>
-                            </li>
-                            <li class="main_left_icon submenu__item">
-                                <div><i class="left_icon far fa-star fa-2x"></i></div>
-                                <div class="icon_name_div"><span class="icon_name">favorite</span></div>
-                            </li>
-                            <li class="main_left_icon submenu__item">
-                                <div><i class="left_icon fas fa-gamepad fa-2x"></i></div>
-                                <div class="icon_name_div"><span class="icon_name">game</span></div>
-                            </li>
-                            <li class="main_left_icon submenu__item">
-                                <div><i class="left_icon fas fa-bullhorn fa-2x"></i></div>
-                                <div class="icon_name_div"><span class="icon_name">advertising center</span></div>
-                            </li>
-                            <li class="main_left_icon submenu__item">
-                                <div><i class="left_icon fas fa-signal fa-2x"></i></div>
-                                <div class="icon_name_div"><span class="icon_name">advertising manage</span></div>
-                            </li>
-                            <li class="main_left_icon submenu__item">
-                                <div><i class="left_icon fas fa-ad fa-2x"></i></div>
-                                <div class="icon_name_div"><span class="icon_name">advertising activity</span></div>
-                            </li>
-                            <li class="main_left_icon submenu__item">
-                                <div><i class="left_icon fas fa-ticket-alt fa-2x"></i></div>
-                                <div class="icon_name_div"><span class="icon_name">curpon</span></div>
-                            </li>
-                            <a href="friendsList.php<?php echo "?u_id=" . $_SESSION["user_id"] ?>">
-                                <li class="main_left_icon submenu__item">
-                                    <div><i class="fas fa-user-friends fa-2x"></i></div>
-                                    <div class="icon_name_div"><span class="icon_name">List of friends</span></div>
-                                </li>
-                            </a>
-                            <li class="main_left_icon submenu__item">
-                                <div><i class="left_icon fas fa-cloud-sun fa-2x"></i></div>
-                                <div class="icon_name_div"><span class="icon_name">wether</span></div>
-                            </li>
-                            <li class="main_left_icon submenu__item">
-                                <div><i class="left_icon fab fa-gratipay fa-2x"></i></div>
-                                <div class="icon_name_div"><span class="icon_name">donation campaign</span></div>
-                            </li>
-                            <li class="main_left_icon submenu__item">
-                                <div><i class="left_icon fas fa-solar-panel fa-2x"></i></div>
-                                <div class="icon_name_div"><span class="icon_name">Configuration</span></div>
-                            </li>
-                        </ul>
+                <li class="main_left_icon submenu__item">
+                    <div><i class="left_icon fas fa-briefcase fa-2x"></i></div>
+                    <div class="icon_name_div"><span class="icon_name">job offer</span></div>
+                </li>
+                <li class="main_left_icon submenu__item">
+                    <div><i class="left_icon fas fa-wallet fa-2x"></i></div>
+                    <div class="icon_name_div"><span class="icon_name">pay</span></div>
+                </li>
+                <a href="msgRoomList.php">
+                    <li class="main_left_icon submenu__item">
+                        <div><i class="left_icon fas fa-comment-dots fa-2x"></i></div>
+                        <div class="icon_name_div"><span class="icon_name">massenger</span></div>
                     </li>
-                </ul>
-            </ul>
+                </a>
+                <li class="main_left_icon submenu__item">
+                    <div><i class="left_icon far fa-comment-dots fa-2x"></i></div>
+                    <div class="icon_name_div"><span class="icon_name">massenger kids</span></div>
+                </li>
+                <li class="main_left_icon submenu__item">
+                    <div><i class="left_icon fas fa-cube fa-2x"></i></div>
+                    <div class="icon_name_div"><span class="icon_name">Oculus</span></div>
+                </li>
+                <li class="main_left_icon submenu__item">
+                    <div><i class="left_icon far fa-star fa-2x"></i></div>
+                    <div class="icon_name_div"><span class="icon_name">favorite</span></div>
+                </li>
+                <li class="main_left_icon submenu__item">
+                    <div><i class="left_icon fas fa-gamepad fa-2x"></i></div>
+                    <div class="icon_name_div"><span class="icon_name">game</span></div>
+                </li>
+                <li class="main_left_icon submenu__item">
+                    <div><i class="left_icon fas fa-bullhorn fa-2x"></i></div>
+                    <div class="icon_name_div"><span class="icon_name">advertising center</span></div>
+                </li>
+                <li class="main_left_icon submenu__item">
+                    <div><i class="left_icon fas fa-signal fa-2x"></i></div>
+                    <div class="icon_name_div"><span class="icon_name">advertising manage</span></div>
+                </li>
+                <li class="main_left_icon submenu__item">
+                    <div><i class="left_icon fas fa-ad fa-2x"></i></div>
+                    <div class="icon_name_div"><span class="icon_name">advertising activity</span></div>
+                </li>
+                <li class="main_left_icon submenu__item">
+                    <div><i class="left_icon fas fa-ticket-alt fa-2x"></i></div>
+                    <div class="icon_name_div"><span class="icon_name">curpon</span></div>
+                </li>
+                <a href="friendsList.php<?php echo "?u_id=" . $_SESSION["user_id"] ?>">
+                    <li class="main_left_icon submenu__item">
+                        <div><i class="fas fa-user-friends fa-2x"></i></div>
+                        <div class="icon_name_div"><span class="icon_name">List of friends</span></div>
+                    </li>
+                </a>
+                <li class="main_left_icon submenu__item">
+                    <div><i class="left_icon fas fa-cloud-sun fa-2x"></i></div>
+                    <div class="icon_name_div"><span class="icon_name">wether</span></div>
+                </li>
+                <li class="main_left_icon submenu__item">
+                    <div><i class="left_icon fab fa-gratipay fa-2x"></i></div>
+                    <div class="icon_name_div"><span class="icon_name">donation campaign</span></div>
+                </li>
+                <li class="main_left_icon submenu__item">
+                    <div><i class="left_icon fas fa-solar-panel fa-2x"></i></div>
+                    <div class="icon_name_div"><span class="icon_name">Configuration</span></div>
+                </li>
         </div>
     </section>
 </nav>
