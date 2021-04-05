@@ -264,6 +264,9 @@ a {
       border-radius: 5px;
       width: 33.3%;
       justify-content: center; }
+      @media screen and (max-width: 414px) {
+        .main_center_element2_icon_div {
+          font-size: 13px; } }
       .main_center_element2_icon_div:hover {
         background: rgba(198, 198, 198, 0.25);
         transition: 0.25s; }
@@ -294,6 +297,9 @@ a {
     display: flex;
     margin-left: 15px;
     padding: 11px 15px; }
+    @media screen and (max-width: 414px) {
+      .main_icon, .main_icon2 {
+        margin: 0; } }
   .main_right {
     position: fixed;
     width: 100%;
@@ -311,21 +317,24 @@ a {
   height: 94%;
   position: fixed;
   overflow-y: scroll; }
-
-@media screen and (max-width: 414px) {
-  #main_left_wrapper {
-    display: inline-block;
-    top: 0;
-    background: black;
-    right: -100%;
-    width: 100%;
-    height: 100vh;
-    padding-top: 60px;
-    transition: 0.25s; }
-    #main_left_wrapper.active {
+  @media screen and (max-width: 414px) {
+    #main_left_wrapper {
+      display: inline-block;
+      top: 0;
+      background: black;
+      right: -100%;
+      width: 100%;
+      height: 100vh;
+      padding-top: 60px;
       transition: 0.25s;
-      transform: translateX(-100%);
-      z-index: 4; } }
+      height: 92%; }
+      #main_left_wrapper.active {
+        transition: 0.25s;
+        transform: translateX(-100%);
+        z-index: 4; } }
+
+.left_submenu {
+  display: none; }
 
 .hamberger_menu {
   display: none; }
@@ -639,6 +648,22 @@ a {
   background-color: rgba(198, 198, 198, 0.25);
   border-radius: 10px;
   transition: 0.25s; }
+
+/* 「「「「「「「「「「「
+friends list page
+「「「「「「「「「「「　*/
+.main_friendlist {
+  padding: 2% 17%; }
+  @media screen and (max-width: 414px) {
+    .main_friendlist {
+      padding: 0; } }
+  .main_friendlist_wrapper {
+    width: 900px;
+    margin: 0 auto;
+    font-size: 17px; }
+    @media screen and (max-width: 414px) {
+      .main_friendlist_wrapper {
+        width: 100%; } }
 
 .friendMsg {
   float: right;
@@ -974,6 +999,9 @@ body.fixed {
 
 .listOfFriendsInside {
   padding: 2% 17% 2% 17%; }
+  @media screen and (max-width: 414px) {
+    .listOfFriendsInside {
+      padding: 2% 5% 0% 5%; } }
   .listOfFriendsInside > .orverall {
     min-height: 90vh;
     background-color: #191919; }
@@ -992,6 +1020,13 @@ body.fixed {
   min-height: 600px;
   width: 200px;
   background: #303030; }
+  @media screen and (max-width: 414px) {
+    #sidebar {
+      float: none;
+      box-sizing: none;
+      margin: 0;
+      min-height: 0;
+      width: 100%; } }
   #sidebar .title {
     text-align: left;
     font-size: 14px; }
@@ -1044,6 +1079,16 @@ section h1.title {
   padding: 5px 10px;
   height: 40px;
   line-height: 40px; }
+  @media screen and (max-width: 414px) {
+    .search-title {
+      overflow: hidden;
+      padding: 0;
+      height: 30px;
+      display: flex;
+      line-height: 0px;
+      font-size: 15px;
+      align-items: center;
+      margin: 5px 0; } }
   .search-title .total-num {
     padding-right: 5px;
     font-weight: bold;
@@ -1063,6 +1108,9 @@ section h1.title {
 .panel-list {
   overflow: hidden;
   margin-right: -15px; }
+  @media screen and (max-width: 414px) {
+    .panel-list {
+      margin: 0; } }
   .panel-list > .panel {
     float: left;
     box-sizing: border-box;
@@ -1073,6 +1121,11 @@ section h1.title {
     text-decoration: none;
     line-height: 1.2em;
     margin-bottom: 10px; }
+    @media screen and (max-width: 414px) {
+      .panel-list > .panel {
+        box-sizing: none;
+        padding-right: 0;
+        width: 50%; } }
     .panel-list > .panel img {
       width: 150px;
       height: 150px;

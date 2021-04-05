@@ -73,7 +73,7 @@ $(function () {
 $(function () {
 	$(".js-menu__item__link_open").each(function () {
 		$(this).on("click", function () {
-			$("+.submenu", this).slideToggle();
+			$("+.left_submenu", this).slideToggle();
 			$("i", this).toggleClass("fas fa-arrow-circle-down fa-2x");
 			$("i", this).toggleClass("fas fa-arrow-circle-up fa-2x");
 			$(this).toggleClass("Retentioncolor_blue");

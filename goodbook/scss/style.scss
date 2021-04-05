@@ -350,10 +350,13 @@ a {
 		}
 		&_element2_icon_div {
 			display: flex;
-			padding: 10px 0%;
+			padding: $space_m 0%;
 			border-radius: 5px;
 			width: 33.3%;
 			justify-content: center;
+			@include mq() {
+				font-size: 13px;
+			}
 			&:hover {
 				background: $background-color_hover;
 				transition: $transition_time;
@@ -397,6 +400,9 @@ a {
 		display: flex;
 		margin-left: $space_l;
 		padding: 11px $space_l;
+		@include mq() {
+			margin: 0;
+		}
 	}
 	&_right {
 		position: fixed;
@@ -419,10 +425,7 @@ a {
 	height: 94%;
 	position: fixed;
 	overflow-y: scroll;
-}
-@include mq() {
-	// TODO:リファクタ必要（PCで修正が入る際も考えてincludeはクラスの中に書く）
-	#main_left_wrapper {
+	@include mq() {
 		display: inline-block;
 		top: 0;
 		background: rgba(0, 0, 0, 1);
@@ -431,12 +434,17 @@ a {
 		height: 100vh;
 		padding-top: 60px;
 		transition: $transition_time;
+		height: 92%;
 		&.active {
 			transition: $transition_time;
 			transform: translateX(-100%);
 			z-index: 4;
 		}
 	}
+}
+
+.left_submenu {
+	display: none;
 }
 .hamberger_menu {
 	display: none;
@@ -785,6 +793,24 @@ a {
 	border-radius: $border-radius_m;
 	transition: $transition_time;
 }
+/* 「「「「「「「「「「「
+friends list page
+「「「「「「「「「「「　*/
+.main_friendlist {
+	padding: 2% 17%;
+	@include mq() {
+		padding: 0;
+	}
+	&_wrapper {
+		width: 900px;
+		margin: 0 auto;
+		font-size: 17px;
+		@include mq() {
+			width: 100%;
+		}
+	}
+}
+
 .friendMsg {
 	float: right;
 	padding: $space_s;
@@ -1158,6 +1184,9 @@ body.fixed {
 }
 .listOfFriendsInside {
 	padding: 2% 17% 2% 17%;
+	@include mq() {
+		padding: 2% 5% 0% 5%;
+	}
 	& > .orverall {
 		min-height: 90vh;
 		background-color: #191919;
@@ -1178,6 +1207,13 @@ body.fixed {
 	min-height: 600px;
 	width: 200px;
 	background: #303030;
+	@include mq() {
+		float: none;
+		box-sizing: none;
+		margin: 0;
+		min-height: 0;
+		width: 100%;
+	}
 	& .title {
 		text-align: left;
 		font-size: $font-size_m;
@@ -1241,6 +1277,16 @@ section h1.title {
 		padding: $space_s $space_m;
 		height: $space_3l;
 		line-height: $space_3l;
+		@include mq() {
+			overflow: hidden;
+			padding: 0;
+			height: 30px;
+			display: flex;
+			line-height: 0px;
+			font-size: 15px;
+			align-items: center;
+			margin: 5px 0;
+		}
 		& .total-num {
 			padding-right: $space_s;
 			font-weight: bold;
@@ -1263,6 +1309,9 @@ section h1.title {
 .panel-list {
 	overflow: hidden;
 	margin-right: -$space_l;
+	@include mq() {
+		margin: 0;
+	}
 	& > .panel {
 		float: left;
 		box-sizing: border-box;
@@ -1273,6 +1322,11 @@ section h1.title {
 		text-decoration: none;
 		line-height: 1.2em;
 		margin-bottom: $space_m;
+		@include mq() {
+			box-sizing: none;
+			padding-right: 0;
+			width: 50%;
+		}
 		& img {
 			width: 150px;
 			height: 150px;

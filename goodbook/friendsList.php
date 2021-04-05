@@ -27,8 +27,8 @@ require('goodbook_head.php');
     <div>
         <article>
             <div class="main">
-                <div class="inside_padding" style="padding: 2% 17%;">
-                    <div style="width: 900px; margin: 0 auto; font-size: 17px;">
+                <div class="main_friendlist">
+                    <div class="main_friendlist_wrapper">
                         <div>
                             <h1>friends List</h1>
                         </div>
