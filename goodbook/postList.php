@@ -9,11 +9,15 @@ debugLogStart();
 
 //ログイン認証
 auth();
-
+$f_id = (!empty($_GET["f_id"])) ? $_GET["f_id"] : "";
+$u_id = (!empty($_GET["u_id"])) ? $_GET["u_id"] : "";
 // user data 取得
+if (empty($f_id)) {
+    $dbPostData = getPost($u_id);
+} else {
+    $dbPostData = getPost($f_id);
+}
 $dbFormData = getUser($_SESSION["user_id"]);
-$dbPostData = getPost($_SESSION["user_id"]);
-debug(print_r($dbPostData, true));
 ?>
 
 <?php
@@ -26,10 +30,10 @@ require('goodbook_head.php');
     <div>
         <article>
             <div class="main">
-                <div class="inside_padding" style="padding: 2% 17%;">
-                    <div style="width: 900px; margin: 0 auto; font-size: 17px;">
+                <div class="main_postlist">
+                    <div class="main_postlist_wrapper">
                         <div>
-                            <h1>My posts</h1>
+                            <h1>posts</h1>
                         </div>
                         <?php if (!empty($dbPostData["data"])) {
                             require("post.php");
@@ -37,7 +41,7 @@ require('goodbook_head.php');
                             <div class="msgRoom">
                                 <div class="createMsg">
                                     <a href="homepage.php">
-                                        <p>postはありません、投稿しましょう。</p>
+                                        <p>postはありません。</p>
                                     </a>
                                 </div>
                             </div>

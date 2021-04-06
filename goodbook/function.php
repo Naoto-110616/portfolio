@@ -1825,7 +1825,7 @@ function getfriendsList($id)
 {
     try {
         $dbh = dbConnect();
-        $sql = "SELECT friend_id AS f_id ,u.username,u.profpic
+        $sql = "SELECT friend_id AS f_id ,u.username, u.profpic, u.myBio
         FROM friends AS f
         INNER JOIN users AS u
         ON f.friend_id = u.id

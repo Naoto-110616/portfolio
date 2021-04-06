@@ -77,7 +77,7 @@ require('goodbook_head.php');
                 <div class="main_top_content main_top_content_user_info">
                     <div class="main_top_content main_top_content_user_info_inside">
                         <nav class="main_top_content main_top_content_user_info_list1">
-                            <a href="postList.php">
+                            <a href="postList.php?f_id=<?php echo $viewData["id"] ?>">
                                 <div class="info_list"><span>Posts</span></div>
                             </a>
                             <div class="info_list"><span>Data</span></div>
@@ -86,6 +86,21 @@ require('goodbook_head.php');
                             </a>
                             <div class="info_list"><span>Photos</span></div>
                         </nav>
+                        <div class="button_more">more
+                            <i class="fas fa-caret-down"></i>
+                            <ul class="menu">
+                                <ul class="sub">
+                                    <a href="postList.php">
+                                        <div class="info_list"><span>Posts</span></div>
+                                    </a>
+                                    <div class="info_list"><span>Data</span></div>
+                                    <a href="friendsList.php<?php echo "?u_id=" . $viewData["id"] ?>">
+                                        <div class="info_list"><span>Friends</span></div>
+                                    </a>
+                                    <div class="info_list"><span>Photos</span></div>
+                                </ul>
+                            </ul>
+                        </div>
                         <div class="main_top_content main_top_content_user_detail_info_list2">
                             <span class="friendMsg js-click-like <?php if (isLike($_SESSION['user_id'], $viewData['id'])) echo 'active'; ?>" aria-hidden="true" data-friendid="<?php echo sanitize($viewData['id']); ?>">Follow</span>
                             <form action="" method="post">
@@ -152,6 +167,13 @@ require('goodbook_head.php');
                                     </div>
                                 </div>
                             </div>
+                            <?php if (empty($dbPostData["data"])) { ?>
+                                <div class="share_post_content">
+                                    <div class="noPostyet">
+                                        <h3>No Post yet</h3>
+                                    </div>
+                                </div>
+                            <?php } ?>
                             <?php require("post.php"); ?>
                         </div>
                     </div>
