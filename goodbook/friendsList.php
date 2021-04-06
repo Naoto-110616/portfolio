@@ -15,6 +15,7 @@ $u_id = (!empty($_GET['u_id'])) ? $_GET['u_id'] : '';
 $friendsList = getfriendsList($u_id);
 // myinfo取得
 $dbFormData = getUser($_SESSION["user_id"]);
+debug(print_r($friendsList, true));
 ?>
 
 <?php
@@ -42,7 +43,10 @@ require('goodbook_head.php');
                                         <div class="msgRoom">
                                             <div class="msgShelf">
                                                 <img src="<?php echo $val["profpic"]; ?>" alt="<?php echo $val["username"] ?>">
-                                                <p><?php echo $val["username"]; ?></p>
+                                                <div class="msgRoomList_userInfo">
+                                                    <p><?php echo $val["username"]; ?></p>
+                                                    <p><?php echo $val["myBio"]; ?></p>
+                                                </div>
                                             </div>
                                         </div>
                                         </a>
