@@ -94,25 +94,25 @@ require('goodbook_head.php');
                             <div class="msg-cnt msg-left">
                                 <div class="avatar">
                                     <img src="<?php echo sanitize(showImg($partnerUserInfo['profpic'])); ?>" alt="" class="avatar">
+                                    <div class="date_send"><?php echo createTime($val['send_date']); ?></div>
                                 </div>
                                 <p class="msg-inrTxt">
                                     <span class="triangle"></span>
                                     <?php echo sanitize($val['msg']); ?>
                                 </p>
-                                <div style="font-size:.5em;"><?php echo createTime($val['send_date']); ?></div>
                             </div>
                         <?php
                         } else {
                         ?>
                             <div class="msg-cnt msg-right">
-                                <div class="avatar">
-                                    <img src="<?php echo sanitize(showImg($myUserInfo['profpic'])); ?>" alt="" class="avatar">
-                                </div>
                                 <p class="msg-inrTxt">
                                     <span class="triangle"></span>
                                     <?php echo sanitize($val['msg']); ?>
                                 </p>
-                                <div style="font-size:.5em;text-align:right;"><?php echo createTime($val['send_date']); ?></div>
+                                <div class="avatar">
+                                    <img src="<?php echo sanitize(showImg($myUserInfo['profpic'])); ?>" alt="" class="avatar">
+                                    <div class="date_send"><?php echo createTime($val['send_date']); ?></div>
+                                </div>
                             </div>
                     <?php
                         }
