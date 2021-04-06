@@ -144,7 +144,7 @@ require('goodbook_head.php');
                 <div class="main_top_content main_top_content_user_info">
                     <div class="main_top_content main_top_content_user_info_inside">
                         <nav class="main_top_content main_top_content_user_info_list1">
-                            <a href="postList.php">
+                            <a href="postList.php?u_id=<?php echo $_SESSION["user_id"] ?>">
                                 <div class="info_list"><span>Posts</span></div>
                             </a>
                             <a href="msgRoomList.php">
@@ -185,7 +185,7 @@ require('goodbook_head.php');
                             </ul>
                         </div>
                         <div class="main_top_content main_top_content_user_info_list2">
-                            <div class="edit">
+                            <div class="info_list edit">
                                 <i class="fas fa-pen"></i>
                                 <p>EditProfile</p>
                             </div>
