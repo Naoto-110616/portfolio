@@ -11,33 +11,33 @@
     </div>
     <div class="head_center">
 
-        <a class="header_center_icon to_homepage chenge_color" href="homepage.php">
+        <a class="header_center_icon to_homepage" href="homepage.php">
             <div>
                 <i class="fas fa-home fa-2x <?php buttonColor($siteTitle, "homepage"); ?>"></i>
             </div>
         </a>
 
-        <a class="header_center_icon to_friendsList chenge_color" href="friendsList.php<?php echo "?u_id=" . $_SESSION["user_id"] ?>">
+        <a class="header_center_icon to_friendsList" href="friendsList.php<?php echo "?u_id=" . $_SESSION["user_id"] ?>">
             <div>
                 <i class=" fas fa-user-friends fa-2x <?php buttonColor($siteTitle, "frineds list"); ?>"></i>
             </div>
         </a>
 
-        <div class="header_center_icon chenge_color"><i class="fas fa-tv fa-2x"></i></div>
+        <div class="header_center_icon"><i class="fas fa-tv fa-2x"></i></div>
 
-        <a class="header_center_icon to_friends chenge_color" href="friends.php">
+        <a class="header_center_icon to_friends" href="friends.php">
             <div>
                 <i class="left_icon far fa-user fa-2x <?php buttonColor($siteTitle, "friends") ?>"></i>
             </div>
         </a>
 
-        <div class="header_center_icon menu-trigger js-toggle-sp-menu">
+        <div class="header_center_icon_responsive menu-trigger js-toggle-sp-menu">
             <span></span>
             <span></span>
             <span></span>
         </div>
 
-        <div class="header_center_icon chenge_color"><i class="fas fa-dice-d6 fa-2x"></i></div>
+        <div class="header_center_icon"><i class="fas fa-dice-d6 fa-2x"></i></div>
 
     </div>
     <div class="head_right">
@@ -67,7 +67,7 @@
                                 <i class="fas fa-user-circle fa-4x"></i>
                             </div>
                         <?php } else { ?>
-                            <img class="icon_img" src="<?php echo sanitize($dbFormData["profpic"]) ?>" style="margin-top: 6px; margin-left: 8px;">
+                            <img class="icon_img" src="<?php echo sanitize($dbFormData["profpic"]) ?>">
                         <?php } ?>
                         <div class=" myInfo">
                             <p><?php userInfoIndicate($dbFormData, "username"); ?></p>

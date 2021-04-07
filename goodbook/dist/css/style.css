@@ -79,7 +79,9 @@ a {
     width: 50px;
     border-radius: 75px;
     object-fit: cover;
-    margin-right: 5px; }
+    margin-right: 5px;
+    margin-top: 6px;
+    margin-left: 8px; }
     .icon_img_div {
       height: 50px;
       width: 95%;
@@ -115,13 +117,12 @@ a {
 .to_homepage {
   color: #dddddd; }
 
-.chenge_color {
+.header_center_icon {
   display: inline;
   padding: 15px 4%;
   border-radius: 3px; }
-  .chenge_color:hover {
+  .header_center_icon:hover {
     background-color: rgba(198, 198, 198, 0.25);
-    color: #2d88ff;
     transition: 0.25s; }
 
 .head_left {
@@ -149,7 +150,7 @@ a {
   right: 0;
   display: none;
   background-color: #303030;
-  border-radius: 20px;
+  border-radius: 10px;
   margin-top: 15px;
   padding: 5px; }
   @media screen and (max-width: 414px) {
@@ -158,14 +159,13 @@ a {
 
 .myprofile {
   display: flex;
-  margin-bottom: 5px; }
+  padding-bottom: 5px; }
+  .myprofile:hover {
+    background: rgba(198, 198, 198, 0.25);
+    border-radius: 10px; }
 
 .myicon {
   margin-left: 10px; }
-
-.account_menu_a {
-  color: #dddddd;
-  display: flex; }
 
 .myInfo {
   margin: 15px; }
@@ -173,6 +173,9 @@ a {
 .feedback {
   display: flex;
   padding: 0 20px; }
+  .feedback:hover {
+    background: rgba(198, 198, 198, 0.25);
+    border-radius: 10px; }
   .feedback_comment {
     margin: 15px; }
   .feedbackIcon {
@@ -180,11 +183,18 @@ a {
 
 .Menu_element {
   display: flex;
-  padding: 0 20px; }
+  padding: 3px 20px;
+  align-items: center; }
+  .Menu_element:hover {
+    background: rgba(198, 198, 198, 0.25);
+    border-radius: 10px; }
   .Menu_element_comment {
     margin: 20px; }
-  .Menu_elementIcon {
-    margin-top: 15px; }
+
+.account_menu_a {
+  color: #dddddd;
+  display: flex;
+  align-items: center; }
 
 .logout,
 .logout:active,
@@ -1039,10 +1049,9 @@ body.fixed {
 #sidebar {
   float: left;
   box-sizing: border-box;
+  border-radius: 5px;
   margin-right: 20px;
   padding: 15px;
-  min-height: 600px;
-  width: 200px;
   background: #303030; }
   @media screen and (max-width: 414px) {
     #sidebar {
@@ -1214,13 +1223,6 @@ select,
 .bio_btn,
 input {
   cursor: pointer; }
-
-.main_left_icon:hover,
-.myprofile:hover,
-.feedback:hover,
-.Menu_element:hover,
-.account_menu_a:hover {
-  color: #2d88ff; }
 
 .Retentioncolor_blue {
   color: #2d88ff; }

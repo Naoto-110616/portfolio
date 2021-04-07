@@ -143,6 +143,8 @@ a {
 		border-radius: 75px;
 		object-fit: cover;
 		margin-right: 5px;
+		margin-top: 6px;
+		margin-left: 8px;
 		&_div {
 			height: 50px;
 			width: 95%;
@@ -184,13 +186,12 @@ a {
 .to_homepage {
 	color: $font-color_default;
 }
-.chenge_color {
+.header_center_icon {
 	display: inline;
 	padding: $space_l 4%;
 	border-radius: $border-radius_s;
 	&:hover {
 		background-color: $background-color_hover;
-		color: $goodbook_color;
 		transition: $transition_time;
 	}
 }
@@ -221,7 +222,7 @@ a {
 	right: 0;
 	display: none;
 	background-color: $background-color_sub1;
-	border-radius: 20px;
+	border-radius: 10px;
 	margin-top: $space_l;
 	padding: $space_s;
 	@include mq() {
@@ -230,14 +231,14 @@ a {
 }
 .myprofile {
 	display: flex;
-	margin-bottom: $space_s;
+	padding-bottom: $space_s;
+	&:hover {
+		background: $background-color_hover;
+		border-radius: 10px;
+	}
 }
 .myicon {
 	margin-left: $space_m;
-}
-.account_menu_a {
-	color: $font-color_default;
-	display: flex;
 }
 .myInfo {
 	margin: $space_l;
@@ -245,6 +246,10 @@ a {
 .feedback {
 	display: flex;
 	padding: 0 $space_xl;
+	&:hover {
+		background: $background-color_hover;
+		border-radius: 10px;
+	}
 	&_comment {
 		margin: $space_l;
 	}
@@ -254,13 +259,20 @@ a {
 }
 .Menu_element {
 	display: flex;
-	padding: 0 $space_xl;
+	padding: 3px $space_xl;
+	align-items: center;
+	&:hover {
+		background: $background-color_hover;
+		border-radius: 10px;
+	}
 	&_comment {
 		margin: $space_xl;
 	}
-	&Icon {
-		margin-top: $space_l;
-	}
+}
+.account_menu_a {
+	color: $font-color_default;
+	display: flex;
+	align-items: center;
 }
 .logout,
 .logout:active,
@@ -1228,10 +1240,9 @@ body.fixed {
 #sidebar {
 	float: left;
 	box-sizing: border-box;
+	border-radius: 5px;
 	margin-right: $space_xl;
 	padding: $space_l;
-	min-height: 600px;
-	width: 200px;
 	background: $background-color_sub1;
 	@include mq() {
 		float: none;
@@ -1428,13 +1439,6 @@ select,
 .bio_btn,
 input {
 	cursor: pointer;
-}
-.main_left_icon:hover,
-.myprofile:hover,
-.feedback:hover,
-.Menu_element:hover,
-.account_menu_a:hover {
-	color: $goodbook_color;
 }
 .Retentioncolor_blue {
 	color: $goodbook_color;
