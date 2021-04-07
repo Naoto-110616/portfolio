@@ -43,7 +43,7 @@
                 <td>
                   <a href="goodbook/login.php">goodbook</a>
                 </td>
-                <td>6ヶ月</td>
+                <td>5ヶ月</td>
                 <td>
                   <div>HTML/CSS</div>
                   <div>SCSS</div>
@@ -51,7 +51,6 @@
                   <div>jQuaery</div>
                   <div>PHP</div>
                   <div>node.js</div>
-                  <div>scss</div>
                   <div>gulp</div>
                   <div>npm</div>
                 </td>
@@ -62,11 +61,13 @@
                 <td>6ヶ月</td>
                 <td>
                   <div>HTML/CSS</div>
-                  <div>PHP</div>
+                  <div>SCSS</div>
                   <div>javascript</div>
                   <div>jQuaery</div>
-                  <div>SQL</div>
-                  <div>Github</div>
+                  <div>PHP</div>
+                  <div>node.js</div>
+                  <div>gulp</div>
+                  <div>npm</div>
                 </td>
                 <td>模写</td>
               </tr>
