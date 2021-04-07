@@ -158,9 +158,9 @@ if ($birth_month === $now_month) {
                                 <td>
                                     <div>2020/7</div>
                                     <div>-</div>
-                                    <div>2020/11</div>
+                                    <div>2020/12</div>
                                 </td>
-                                <td>5カ月</td>
+                                <td>6カ月</td>
                                 <td class="sentence">
                                     株式会社ダスキン（派遣）<br>
                                     【業務内容】<br>
