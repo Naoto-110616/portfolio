@@ -214,7 +214,7 @@ require("goodbook_head.php");
                                     <?php } ?>
                                 </a>
                                 <div class="main_center_comment2">
-                                    <h3>What's on your mind, <?php echo $dbFormData["username"]; ?></h3>
+                                    <h3>What's on your mind, <?php echo $dbFormData["username"]; ?>?</h3>
                                 </div>
                             </div>
                         </div>

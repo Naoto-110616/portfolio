@@ -9,9 +9,7 @@ debugLogStart();
 
 auth();
 
-// login(isset($email), isset($pass), isset($pass_save), "email");
 login($email, $pass, $pass_save, "email");
-
 
 debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
 ?>
@@ -68,6 +66,7 @@ require("head.php");
                 <div class="createPagediv">
                     <a href="" class="createPage">Create a Page</a> for a celebrity, band or business.
                 </div>
+                <p style="position: absolute;">※ email: aaa@aaa pass aaaaaa で Login もしくは、適当なアカウントを作ってください。</p>
             </div>
         </div>
     </div>
