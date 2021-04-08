@@ -157,13 +157,6 @@ a {
     .accountMenu {
       width: 100%; } }
 
-.myprofile {
-  display: flex;
-  padding-bottom: 5px; }
-  .myprofile:hover {
-    background: rgba(198, 198, 198, 0.25);
-    border-radius: 10px; }
-
 .myicon {
   margin-left: 10px; }
 
@@ -727,18 +720,23 @@ main lower part
       margin: 0 0 10px 0;
       height: none; } }
 
-.myprofile_inside {
-  padding: 0 20px;
-  padding-bottom: 10px; }
-  @media screen and (max-width: 414px) {
-    .myprofile_inside {
-      margin-top: 10px; } }
-  .myprofile_inside h2 {
-    font-size: 22px; }
-
-.myprofile_title {
-  display: inline-block;
-  margin: 10px 0; }
+.myprofile {
+  display: flex;
+  padding-bottom: 5px; }
+  .myprofile_inside {
+    padding: 0 20px;
+    padding-bottom: 10px; }
+    @media screen and (max-width: 414px) {
+      .myprofile_inside {
+        margin-top: 10px; } }
+    .myprofile_inside h2 {
+      font-size: 22px; }
+  .myprofile_title {
+    display: inline-block;
+    margin: 10px 0; }
+  .myprofile:hover {
+    background: rgba(198, 198, 198, 0.25);
+    border-radius: 10px; }
 
 .profile_list {
   display: flex;
