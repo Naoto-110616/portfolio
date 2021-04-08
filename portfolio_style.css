@@ -121,18 +121,18 @@ footer a {
 .color {
 	background: #dddddd;
 }
-.oasobi_top_img {
+.practice_top_img {
 	height: 400px;
 	box-sizing: border-box;
 	box-shadow: 17px 17px 20px #b8b8b8;
 	transition: all 0.5s;
 	object-fit: cover;
 }
-.oasobi_top_img:hover {
+.practice_top_img:hover {
 	transform: rotate(1800deg);
-	content: url("Oasobi/oasobi1/img/unnamed.jpg");
+	content: url("practice/practice1/img/unnamed.jpg");
 }
-.section_oasobi {
+.section_practice {
 	display: flex;
 	width: 900px;
 	margin: 10px auto;
@@ -140,15 +140,15 @@ footer a {
 	padding: 10px;
 	text-align: center;
 }
-.section_oasobi a {
+.section_practice a {
 	width: 50%;
 }
-.oasobi_page_name {
+.practice_page_name {
 	padding: 30px;
 	color: black;
 	transition: 0.3s;
 }
-.oasobi_page_name:hover {
+.practice_page_name:hover {
 	background-color: #3e8e41;
 	color: white;
 	cursor: pointer;

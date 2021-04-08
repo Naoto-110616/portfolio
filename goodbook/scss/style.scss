@@ -229,14 +229,6 @@ a {
 		width: 100%;
 	}
 }
-.myprofile {
-	display: flex;
-	padding-bottom: $space_s;
-	&:hover {
-		background: $background-color_hover;
-		border-radius: 10px;
-	}
-}
 .myicon {
 	margin-left: $space_m;
 }
@@ -881,6 +873,8 @@ main lower part
 	}
 }
 .myprofile {
+	display: flex;
+	padding-bottom: $space_s;
 	&_inside {
 		padding: 0 20px;
 		padding-bottom: $space_m;
@@ -894,6 +888,10 @@ main lower part
 	&_title {
 		display: inline-block;
 		margin: $space_m 0;
+	}
+	&:hover {
+		background: $background-color_hover;
+		border-radius: 10px;
 	}
 }
 .profile_list {
