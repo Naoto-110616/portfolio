@@ -68,6 +68,7 @@
                   <div>node.js</div>
                   <div>gulp</div>
                   <div>npm</div>
+                  <div>WordPress</div>
                 </td>
                 <td>模写</td>
               </tr>
@@ -84,6 +85,9 @@
           </a>
         </div>
         <div>
+          ※アイコン押下でホームページへ遷移
+        </div>
+        <div>
           <h3>概要</h3>
           <p>
             HTML,CSS,jQuaery,PHPのサンプルです．facebookのレイアウトを模写しました.
@@ -98,8 +102,11 @@
           <p>
             -ログイン
             -ログアウト
-            -お気に入り作成
-            -お気に入り登録
+            -アカウント作成
+            -アカウント削除
+            -マイページ
+            -写真投稿
+            -チャット
             etc.</p>
         </div>
         <h3>Skills</h3>
