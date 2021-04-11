@@ -928,6 +928,9 @@ body.fixed {
   resize: none;
   color: #dddddd;
   background-color: #303030; }
+  @media screen and (max-width: 414px) {
+    .posttextarea {
+      font-size: 14px; } }
   .posttextarea:focus {
     outline: none; }
 

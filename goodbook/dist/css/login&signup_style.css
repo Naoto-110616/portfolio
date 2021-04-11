@@ -1,6 +1,9 @@
 @charset "UTF-8";
 body {
-  font-family: 'Trebuchet'; }
+  font-family: "Trebuchet"; }
+  @media screen and (max-width: 414px) {
+    body {
+      color: #2d88ff; } }
 
 .home {
   background: #f0f2f5;
@@ -8,9 +11,10 @@ body {
   padding-bottom: 11%; }
 
 .center {
+  display: flex;
   max-width: 980px;
   margin: 0 auto;
-  padding: 20px; }
+  justify-content: space-between; }
 
 .massage {
   text-align: left; }
@@ -24,15 +28,9 @@ body {
   padding-bottom: 15px;
   margin-top: 40px;
   box-shadow: 0 0 8px gray; }
-  .formentire {
-    display: block;
-    float: right; }
 
 .icon {
   width: 250px; }
-
-.left {
-  display: inline-block; }
 
 .logo {
   padding-top: 85px;
@@ -106,7 +104,7 @@ label.err input {
 
 .newAccountPage:hover,
 .loginPage:hover {
-  background: #348C20;
+  background: #348c20;
   text-decoration: none; }
 
 .form,
@@ -191,11 +189,11 @@ input[type="password"]:focus {
   outline: 0; }
 
 :focus::placeholder {
-  color: #A3AFC1; }
+  color: #a3afc1; }
 
 .boder1 {
   padding-top: 8px;
-  border-bottom: 1px solid #A3AFC1;
+  border-bottom: 1px solid #a3afc1;
   display: block;
   width: 356px;
   text-align: center;
@@ -203,7 +201,7 @@ input[type="password"]:focus {
 
 .boder2 {
   padding-top: 8px;
-  border-bottom: 1px solid #DDE1E8; }
+  border-bottom: 1px solid #dde1e8; }
 
 .portfolio {
   font-size: 11px; }

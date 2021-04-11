@@ -1111,6 +1111,9 @@ body.fixed {
 	resize: none;
 	color: $font-color_default;
 	background-color: $background-color_sub1;
+	@include mq() {
+		font-size: $font-size_m;
+	}
 	&:focus {
 		outline: none;
 	}
