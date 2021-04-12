@@ -16,16 +16,9 @@ body {
   background-color: #333333;
   border-bottom: solid 1px #4c4c4c; }
   .header_center_icon {
-    font-size: 14px;
     display: inline;
-    padding: 15px 4%;
-    border-radius: 3px; }
-    @media screen and (max-width: 414px) {
-      .header_center_icon {
-        padding: 15px 5px; } }
-    .header_center_icon:hover {
-      background-color: rgba(198, 198, 198, 0.25);
-      transition: 0.25s; }
+    border-radius: 3px;
+    font-size: 14px; }
     @media screen and (max-width: 414px) {
       .header_center_icon:last-child {
         display: none; } }
@@ -85,14 +78,17 @@ a {
     height: 50px;
     width: 50px;
     border-radius: 75px;
-    object-fit: cover; }
+    object-fit: cover;
+    margin-right: 5px;
+    margin-top: 6px;
+    margin-left: 8px; }
     .icon_img_div {
       height: 50px;
       width: 95%;
       margin: auto;
       padding: 10px;
       display: flex;
-      align-items: center; }
+      margin-right: 5px; }
       .icon_img_div > .info_list {
         height: 15px;
         width: 15px;
@@ -120,6 +116,14 @@ a {
 
 .to_homepage {
   color: #dddddd; }
+
+.header_center_icon {
+  display: inline;
+  padding: 15px 4%;
+  border-radius: 3px; }
+  .header_center_icon:hover {
+    background-color: rgba(198, 198, 198, 0.25);
+    transition: 0.25s; }
 
 .head_left {
   display: flex;
@@ -149,6 +153,9 @@ a {
   border-radius: 10px;
   margin-top: 15px;
   padding: 5px; }
+  @media screen and (max-width: 414px) {
+    .accountMenu {
+      width: 100%; } }
 
 .myicon {
   margin-left: 10px; }
@@ -292,8 +299,7 @@ a {
   .main_icon, .main_icon2 {
     display: flex;
     margin-left: 15px;
-    padding: 11px 15px;
-    align-items: center; }
+    padding: 11px 15px; }
     @media screen and (max-width: 414px) {
       .main_icon, .main_icon2 {
         margin: 0; } }
@@ -713,13 +719,10 @@ main lower part
     .my_profile {
       margin: 0 0 10px 0;
       height: none; } }
-  .my_profile_left_menu {
-    align-items: center; }
 
 .myprofile {
   display: flex;
-  padding: 0 10px;
-  align-items: center; }
+  padding-bottom: 5px; }
   .myprofile_inside {
     padding: 0 20px;
     padding-bottom: 10px; }
@@ -734,12 +737,6 @@ main lower part
   .myprofile:hover {
     background: rgba(198, 198, 198, 0.25);
     border-radius: 10px; }
-
-.mypage_notSet_icon {
-  font-size: 162px; }
-  @media screen and (max-width: 414px) {
-    .mypage_notSet_icon {
-      font-size: 142px; } }
 
 .profile_list {
   display: flex;
@@ -1178,7 +1175,7 @@ a.panel:hover {
 .pagination {
   position: relative;
   overflow: hidden;
-  margin: 20px 0px; }
+  margin-top: 20px; }
   .pagination-list {
     position: relative;
     left: 50%;
@@ -1470,9 +1467,9 @@ label.err input {
     margin-left: 10px; }
 
 .msgShelf > img {
-  border-radius: 50%;
-  object-fit: cover;
-  width: 5%; }
+  width: 5%;
+  border-radius: 70px;
+  object-fit: cover; }
   @media screen and (max-width: 414px) {
     .msgShelf > img {
       width: 11%; } }
@@ -1482,25 +1479,6 @@ label.err input {
 
 .msgShelf:hover {
   background-color: #565656; }
-
-.trim {
-  position: relative;
-  overflow: hidden;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%; }
-  @media screen and (max-width: 414px) {
-    .trim {
-      width: 50px;
-      height: 50px; } }
-  .trim img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    height: 100%; }
 
 /* ~~~~~~~~~~~~~~~ */
 /* postmenu */
