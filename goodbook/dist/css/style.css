@@ -22,7 +22,7 @@ body {
     border-radius: 3px; }
     @media screen and (max-width: 414px) {
       .header_center_icon {
-        padding: 15px 5px; } }
+        padding: 15px 10px; } }
     .header_center_icon:hover {
       background-color: rgba(198, 198, 198, 0.25);
       transition: 0.25s; }
