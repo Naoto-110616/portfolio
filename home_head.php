@@ -4,6 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="../reset.css">
-    <link rel="stylesheet" href="portfolio_style.css">
+    <link rel="stylesheet" href="/dist/css/reset.css">
+    <link rel="stylesheet" href="/dist/css/portfolio_style.css">
 </head>
