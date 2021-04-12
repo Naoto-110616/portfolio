@@ -5,8 +5,8 @@
                 <a href="mypage.php">
                     <li class="main_left_icon">
                         <?php if (empty($dbFormData["profpic"])) { ?>
-                            <div><i class="left_icon fas fa-user-circle fa-2x"></i></div>
-                            <div class="icon_name_div"><span class="icon_name">name</span></div>
+                            <img class="icon_img" src="./img/not_set_icon.png">
+                            <div class="icon_name_div"><span class="icon_name"><?php echo sanitize($dbFormData["username"]); ?></span></span></div>
                         <?php } else { ?>
                             <img class="icon_img" src="<?php echo sanitize($dbFormData["profpic"]) ?>">
                             <div class="icon_name_div"><span class="icon_name"><?php echo sanitize($dbFormData["username"]); ?></span></div>

@@ -96,9 +96,7 @@ require('goodbook_head.php');
                             </div>
                             <div class="myIcon_img_div">
                                 <?php if (empty($dbFormData["profpic"])) { ?>
-                                    <div class="myIcon_img">
-                                        <i class="fas fa-user-circle fa-4x" style="font-size: 162px;"></i>
-                                    </div>
+                                    <img class="myIcon_img" src="./img/not_set_icon.png">
                                 <?php } else { ?>
                                     <img class="myIcon_img" src="<?php echo sanitize($dbFormData["profpic"]) ?>">
                                 <?php } ?>
@@ -257,7 +255,7 @@ require('goodbook_head.php');
                                     <div class="share_icon_div">
                                         <?php if (empty($dbFormData["profpic"])) { ?>
                                             <div class="icon_img">
-                                                <i class="fas fa-user-circle fa-3x"></i>
+                                                <img class="icon_img" src="./img/not_set_icon.png">
                                             </div>
                                         <?php } else { ?>
                                             <img class="icon_img" src="<?php echo sanitize($dbFormData["profpic"]) ?>">
