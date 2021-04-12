@@ -244,7 +244,7 @@ function dbConnect()
 {
     $dsn = 'mysql:dbname=goodbook;host=localhost;charset=utf8';
     $user = 'root';
-    $password = 'root';
+    $password = 'Naoto110616';
     $options = array(
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
@@ -623,286 +623,285 @@ function editMyBio()
 // password
 //================================
 // chenge pass 関数
-function chengePass($userData, $pass_new)
-{
-    global $userData;
-    global $pass_old;
-    global $pass_new;
-    global $pass_new_re;
-    global $err_msg;
+// function chengePass($userData, $pass_new)
+// {
+//     global $userData;
+//     global $pass_old;
+//     global $pass_new;
+//     global $pass_new_re;
+//     global $err_msg;
 
-    $userData = getUser($_SESSION['user_id']);
-    debug('取得したユーザー情報：' . print_r($userData, true));
-    if (!empty($_POST)) {
-        debug('POST送信があります。');
-        debug('POST情報：' . print_r($_POST, true));
+//     $userData = getUser($_SESSION['user_id']);
+//     debug('取得したユーザー情報：' . print_r($userData, true));
+//     if (!empty($_POST)) {
+//         debug('POST送信があります。');
+//         debug('POST情報：' . print_r($_POST, true));
 
-        //変数にユーザー情報を代入
-        $pass_old = $_POST['pass_old'];
-        $pass_new = $_POST['pass_new'];
-        $pass_new_re = $_POST['pass_new_re'];
+//         //変数にユーザー情報を代入
+//         $pass_old = $_POST['pass_old'];
+//         $pass_new = $_POST['pass_new'];
+//         $pass_new_re = $_POST['pass_new_re'];
 
-        //未入力チェック
-        validRequired($pass_old, 'pass_old');
-        validRequired($pass_new, 'pass_new');
-        validRequired($pass_new_re, 'pass_new_re');
+//         //未入力チェック
+//         validRequired($pass_old, 'pass_old');
+//         validRequired($pass_new, 'pass_new');
+//         validRequired($pass_new_re, 'pass_new_re');
 
-        if (empty($err_msg)) {
-            debug('未入力チェックOK。');
+//         if (empty($err_msg)) {
+//             debug('未入力チェックOK。');
 
-            //古いパスワードのチェック
-            validPass($pass_old, 'pass_old');
-            //新しいパスワードのチェック
-            validPass($pass_new, 'pass_new');
-            //古いパスワードとDBパスワードを照合（DBに入っているデータと同じであれば、半角英数字チェックや最大文字チェックは行わなくても問題ない）
-            dbPassMatch($pass_old, $userData, "pass", "pass_old");
-            //新しいパスワードと古いパスワードが同じかチェック
-            passNewOldMatch($pass_old, $pass_new, "pass_new");
-            //パスワードとパスワード再入力が合っているかチェック（ログイン画面では最大、最小チェックもしていたがパスワードの方でチェックしているので実は必要ない）
-            validMatch($pass_new, $pass_new_re, 'pass_new_re');
+//             //古いパスワードのチェック
+//             validPass($pass_old, 'pass_old');
+//             //新しいパスワードのチェック
+//             validPass($pass_new, 'pass_new');
+//             //古いパスワードとDBパスワードを照合（DBに入っているデータと同じであれば、半角英数字チェックや最大文字チェックは行わなくても問題ない）
+//             dbPassMatch($pass_old, $userData, "pass", "pass_old");
+//             //新しいパスワードと古いパスワードが同じかチェック
+//             passNewOldMatch($pass_old, $pass_new, "pass_new");
+//             //パスワードとパスワード再入力が合っているかチェック（ログイン画面では最大、最小チェックもしていたがパスワードの方でチェックしているので実は必要ない）
+//             validMatch($pass_new, $pass_new_re, 'pass_new_re');
 
-            if (empty($err_msg)) {
-                debug('バリデーションOK');
+//             if (empty($err_msg)) {
+//                 debug('バリデーションOK');
 
-                //例外処理
-                try {
-                    $dbh = dbConnect();
-                    // SQL文作成
-                    $sql = 'UPDATE users SET pass = :pass WHERE id = :id';
-                    $data = array(
-                        ':id' => $_SESSION['user_id'],
-                        ':pass' => password_hash($pass_new, PASSWORD_DEFAULT)
-                    );
-                    // クエリ実行
-                    $stmt = queryPost($dbh, $sql, $data, "common");
+//                 //例外処理
+//                 try {
+//                     $dbh = dbConnect();
+//                     // SQL文作成
+//                     $sql = 'UPDATE users SET pass = :pass WHERE id = :id';
+//                     $data = array(
+//                         ':id' => $_SESSION['user_id'],
+//                         ':pass' => password_hash($pass_new, PASSWORD_DEFAULT)
+//                     );
+//                     // クエリ実行
+//                     $stmt = queryPost($dbh, $sql, $data, "common");
 
-                    // クエリ成功の場合
-                    if ($stmt) {
-                        $_SESSION['msg_success'] = SUC01;
+//                     // クエリ成功の場合
+//                     if ($stmt) {
+//                         $_SESSION['msg_success'] = SUC01;
 
-                        //メールを送信
-                        $username = ($userData['username']) ? $userData['username'] : '名無し';
-                        $from = 'info@goodbook.com';
-                        $to = $userData['email'];
-                        $subject = 'パスワード変更通知｜goodbook';
-                        //EOTはEndOfFileの略。ABCでもなんでもいい。先頭の<<<の後の文字列と合わせること。最後のEOTの前後に空白など何も入れてはいけない。
-                        //EOT内の半角空白も全てそのまま半角空白として扱われるのでインデントはしないこと
-                        $comment = <<<EOT
-                        {$username}　さん
-                        パスワードが変更されました。
+//                         //メールを送信
+//                         $username = ($userData['username']) ? $userData['username'] : '名無し';
+//                         $from = 'info@goodbook.com';
+//                         $to = $userData['email'];
+//                         $subject = 'パスワード変更通知｜goodbook';
+//                         //EOTはEndOfFileの略。ABCでもなんでもいい。先頭の<<<の後の文字列と合わせること。最後のEOTの前後に空白など何も入れてはいけない。
+//                         //EOT内の半角空白も全てそのまま半角空白として扱われるのでインデントはしないこと
+//                         $comment = <<<EOT
+//                         {$username}　さん
+//                         パスワードが変更されました。
 
-                        ////////////////////////////////////////
-                        goodbookカスタマーセンター
-                        URL  http://goodbook.com
-                        E-mail info@goodbook.com
-                        ////////////////////////////////////////
-                        EOT;
-                        sendMail($from, $to, $subject, $comment);
+//                         ////////////////////////////////////////
+//                         goodbookカスタマーセンター
+//                         URL  http://goodbook.com
+//                         E-mail info@goodbook.com
+//                         ////////////////////////////////////////
+//                         EOT;
+//                         sendMail($from, $to, $subject, $comment);
 
-                        header("Location:mypage.php"); //マイページへ
-                    }
-                    // chengePass($userData, $pass_new);
-                } catch (Exception $e) {
-                    error_log('エラー発生:' . $e->getMessage());
-                    $err_msg['common'] = MSG09;
-                }
-            }
-        }
-    }
-    debug("===========================");
-    debug("end chengePass function");
-    debug("===========================");
-}
-function passRemindSend($email)
-{
-    debug("===========================");
-    debug("start passremind function");
-    debug("===========================");
-    global $err_msg;
-    global $email;
+//                         header("Location:mypage.php"); //マイページへ
+//                     }
+//                 } catch (Exception $e) {
+//                     error_log('エラー発生:' . $e->getMessage());
+//                     $err_msg['common'] = MSG09;
+//                 }
+//             }
+//         }
+//     }
+//     debug("===========================");
+//     debug("end chengePass function");
+//     debug("===========================");
+// }
+// function passRemindSend($email)
+// {
+//     debug("===========================");
+//     debug("start passremind function");
+//     debug("===========================");
+//     global $err_msg;
+//     global $email;
 
-    //post送信されていた場合
-    if (!empty($_POST)) {
-        debug('POST送信があります。');
-        debug('POST情報：' . print_r($_POST, true));
+//     //post送信されていた場合
+//     if (!empty($_POST)) {
+//         debug('POST送信があります。');
+//         debug('POST情報：' . print_r($_POST, true));
 
-        //変数にPOST情報代入
-        $email = $_POST['email'];
+//         //変数にPOST情報代入
+//         $email = $_POST['email'];
 
-        //未入力チェック
-        validRequired($email, 'email');
+//         //未入力チェック
+//         validRequired($email, 'email');
 
-        if (empty($err_msg)) {
-            debug('未入力チェックOK。');
+//         if (empty($err_msg)) {
+//             debug('未入力チェックOK。');
 
-            //emailの形式チェック
-            validEmail($email, 'email');
-            //emailの最大文字数チェック
-            validMaxLen($email, 'email');
+//             //emailの形式チェック
+//             validEmail($email, 'email');
+//             //emailの最大文字数チェック
+//             validMaxLen($email, 'email');
 
-            if (empty($err_msg)) {
-                debug('バリデーションOK。');
+//             if (empty($err_msg)) {
+//                 debug('バリデーションOK。');
 
-                //例外処理
-                try {
-                    $dbh = dbConnect();
-                    // SQL文作成
-                    $sql = 'SELECT count(*) FROM users WHERE email = :email AND delete_flg = 0';
-                    $data = array(':email' => $email);
-                    // クエリ実行
-                    $stmt = queryPost($dbh, $sql, $data, "email");
-                    // クエリ結果の値を取得
-                    $result = $stmt->fetch(PDO::FETCH_ASSOC);
-                    // EmailがDBに登録されている場合
-                    if ($stmt && array_shift($result)) {
-                        debug('クエリ成功。DB登録あり。');
-                        $_SESSION['msg_success'] = SUC03;
+//                 //例外処理
+//                 try {
+//                     $dbh = dbConnect();
+//                     // SQL文作成
+//                     $sql = 'SELECT count(*) FROM users WHERE email = :email AND delete_flg = 0';
+//                     $data = array(':email' => $email);
+//                     // クエリ実行
+//                     $stmt = queryPost($dbh, $sql, $data, "email");
+//                     // クエリ結果の値を取得
+//                     $result = $stmt->fetch(PDO::FETCH_ASSOC);
+//                     // EmailがDBに登録されている場合
+//                     if ($stmt && array_shift($result)) {
+//                         debug('クエリ成功。DB登録あり。');
+//                         $_SESSION['msg_success'] = SUC03;
 
-                        $auth_key = makeRandKey(); //認証キー生成
+//                         $auth_key = makeRandKey(); //認証キー生成
 
-                        //メールを送信
-                        $from = 'info@goodbook.com';
-                        $to = $email;
-                        $subject = '【パスワード再発行認証】｜goodbook';
-                        //EOTはEndOfFileの略。ABCでもなんでもいい。先頭の<<<の後の文字列と合わせること。最後のEOTの前後に空白など何も入れてはいけない。
-                        //EOT内の半角空白も全てそのまま半角空白として扱われるのでインデントはしないこと
-                        $comment = <<<EOT
-                        本メールアドレス宛にパスワード再発行のご依頼がありました。
-                        下記のURLにて認証キーをご入力頂くとパスワードが再発行されます。
+//                         //メールを送信
+//                         $from = 'info@goodbook.com';
+//                         $to = $email;
+//                         $subject = '【パスワード再発行認証】｜goodbook';
+//                         //EOTはEndOfFileの略。ABCでもなんでもいい。先頭の<<<の後の文字列と合わせること。最後のEOTの前後に空白など何も入れてはいけない。
+//                         //EOT内の半角空白も全てそのまま半角空白として扱われるのでインデントはしないこと
+//                         $comment = <<<EOT
+//                         本メールアドレス宛にパスワード再発行のご依頼がありました。
+//                         下記のURLにて認証キーをご入力頂くとパスワードが再発行されます。
 
-                        パスワード再発行認証キー入力ページ：http://localhost/Github/portfolio/goodbook/passRemindRecieve.php
-                        認証キー：{$auth_key}
-                        ※認証キーの有効期限は30分となります
+//                         パスワード再発行認証キー入力ページ：http://localhost/Github/portfolio/goodbook/passRemindRecieve.php
+//                         認証キー：{$auth_key}
+//                         ※認証キーの有効期限は30分となります
 
-                        認証キーを再発行されたい場合は下記ページより再度再発行をお願い致します。
-                        http://localhost/Github/portfolio/goodbook/passRemindSend.php
+//                         認証キーを再発行されたい場合は下記ページより再度再発行をお願い致します。
+//                         http://localhost/Github/portfolio/goodbook/passRemindSend.php
 
-                        ////////////////////////////////////////
-                        goodbookカスタマーセンター
-                        URL  http://goodbook.com/
-                        E-mail info@goodbook.com
-                        ////////////////////////////////////////
-                        EOT;
-                        sendMail($from, $to, $subject, $comment);
+//                         ////////////////////////////////////////
+//                         goodbookカスタマーセンター
+//                         URL  http://goodbook.com/
+//                         E-mail info@goodbook.com
+//                         ////////////////////////////////////////
+//                         EOT;
+//                         sendMail($from, $to, $subject, $comment);
 
-                        //認証に必要な情報をセッションへ保存
-                        $_SESSION['auth_key'] = $auth_key;
-                        $_SESSION['auth_email'] = $email;
-                        $_SESSION['auth_key_limit'] = time() + (60 * 30); //現在時刻より30分後のUNIXタイムスタンプを入れる
-                        debug('セッション変数の中身：' . print_r($_SESSION, true));
+//                         //認証に必要な情報をセッションへ保存
+//                         $_SESSION['auth_key'] = $auth_key;
+//                         $_SESSION['auth_email'] = $email;
+//                         $_SESSION['auth_key_limit'] = time() + (60 * 30); //現在時刻より30分後のUNIXタイムスタンプを入れる
+//                         debug('セッション変数の中身：' . print_r($_SESSION, true));
 
-                        header("Location:passRemindRecieve.php"); //認証キー入力ページへ
+//                         header("Location:passRemindRecieve.php"); //認証キー入力ページへ
 
-                    } else {
-                        debug('クエリに失敗したかDBに登録のないEmailが入力されました。');
-                        global $err_msg;
-                        $err_msg['email'] = MSG09;
-                    }
-                } catch (Exception $e) {
-                    error_log('エラー発生:' . $e->getMessage());
-                    $err_msg['email'] = MSG09;
-                }
-            }
-        }
-    }
-    debug("===========================");
-    debug("end signup function");
-    debug("===========================");
-}
-function passRemindRecieve($pass)
-{
-    debug("===========================");
-    debug("start pass remind recieve function");
-    debug("===========================");
-    global $err_msg;
-    global $pass;
-    global $auth_key;
+//                     } else {
+//                         debug('クエリに失敗したかDBに登録のないEmailが入力されました。');
+//                         global $err_msg;
+//                         $err_msg['email'] = MSG09;
+//                     }
+//                 } catch (Exception $e) {
+//                     error_log('エラー発生:' . $e->getMessage());
+//                     $err_msg['email'] = MSG09;
+//                 }
+//             }
+//         }
+//     }
+//     debug("===========================");
+//     debug("end signup function");
+//     debug("===========================");
+// }
+// function passRemindRecieve($pass)
+// {
+//     debug("===========================");
+//     debug("start pass remind recieve function");
+//     debug("===========================");
+//     global $err_msg;
+//     global $pass;
+//     global $auth_key;
 
-    if (!empty($_POST)) {
-        debug('POST送信があります。');
-        debug('POST情報：' . print_r($_POST, true));
+//     if (!empty($_POST)) {
+//         debug('POST送信があります。');
+//         debug('POST情報：' . print_r($_POST, true));
 
-        //変数に認証キーを代入
-        $auth_key = $_POST['token'];
+//         //変数に認証キーを代入
+//         $auth_key = $_POST['token'];
 
-        //未入力チェック
-        validRequired($auth_key, 'token');
+//         //未入力チェック
+//         validRequired($auth_key, 'token');
 
-        if (empty($err_msg)) {
-            debug('未入力チェックOK。');
+//         if (empty($err_msg)) {
+//             debug('未入力チェックOK。');
 
-            //固定長チェック
-            validLength($auth_key, 'token');
-            //半角チェック
-            validHalf($auth_key, 'token');
+//             //固定長チェック
+//             validLength($auth_key, 'token');
+//             //半角チェック
+//             validHalf($auth_key, 'token');
 
-            if (empty($err_msg)) {
-                debug('バリデーションOK。');
+//             if (empty($err_msg)) {
+//                 debug('バリデーションOK。');
 
-                validAuthKeyMuth($auth_key);
-                validAuthKeyExpired();
+//                 validAuthKeyMuth($auth_key);
+//                 validAuthKeyExpired();
 
-                if (empty($err_msg)) {
-                    debug('認証OK。');
+//                 if (empty($err_msg)) {
+//                     debug('認証OK。');
 
-                    $pass = makeRandKey(); //パスワード生成
+//                     $pass = makeRandKey(); //パスワード生成
 
-                    //例外処理
-                    try {
-                        $dbh = dbConnect();
-                        // SQL文作成
-                        $sql = 'UPDATE users SET pass = :pass WHERE email = :email AND delete_flg = 0';
-                        $data = array(
-                            ':email' => $_SESSION['auth_email'],
-                            ':pass' => password_hash($pass, PASSWORD_DEFAULT)
-                        );
-                        // クエリ実行
-                        $stmt = queryPost($dbh, $sql, $data, "email");
+//                     //例外処理
+//                     try {
+//                         $dbh = dbConnect();
+//                         // SQL文作成
+//                         $sql = 'UPDATE users SET pass = :pass WHERE email = :email AND delete_flg = 0';
+//                         $data = array(
+//                             ':email' => $_SESSION['auth_email'],
+//                             ':pass' => password_hash($pass, PASSWORD_DEFAULT)
+//                         );
+//                         // クエリ実行
+//                         $stmt = queryPost($dbh, $sql, $data, "email");
 
-                        // クエリ成功の場合
-                        if ($stmt) {
-                            //メールを送信
-                            $from = 'info@goodbook.com';
-                            $to = $_SESSION['auth_email'];
-                            $subject = '【パスワード再発行完了】｜goodbook';
-                            //EOTはEndOfFileの略。ABCでもなんでもいい。先頭の<<<の後の文字列と合わせること。最後のEOTの前後に空白など何も入れてはいけない。
-                            //EOT内の半角空白も全てそのまま半角空白として扱われるのでインデントはしないこと
-                            $comment = <<<EOT
-                            本メールアドレス宛にパスワードの再発行を致しました。
-                            下記のURLにて再発行パスワードをご入力頂き、ログインください。
+//                         // クエリ成功の場合
+//                         if ($stmt) {
+//                             //メールを送信
+//                             $from = 'info@goodbook.com';
+//                             $to = $_SESSION['auth_email'];
+//                             $subject = '【パスワード再発行完了】｜goodbook';
+//                             //EOTはEndOfFileの略。ABCでもなんでもいい。先頭の<<<の後の文字列と合わせること。最後のEOTの前後に空白など何も入れてはいけない。
+//                             //EOT内の半角空白も全てそのまま半角空白として扱われるのでインデントはしないこと
+//                             $comment = <<<EOT
+//                             本メールアドレス宛にパスワードの再発行を致しました。
+//                             下記のURLにて再発行パスワードをご入力頂き、ログインください。
 
-                            ログインページ：http://localhost/Github/portfolio/goodbook/login.php
-                            再発行パスワード：{$pass}
-                            ※ログイン後、パスワードのご変更をお願い致します
+//                             ログインページ：http://localhost/Github/portfolio/goodbook/login.php
+//                             再発行パスワード：{$pass}
+//                             ※ログイン後、パスワードのご変更をお願い致します
 
-                            ////////////////////////////////////////
-                            goodbookカスタマーセンター
-                            URL  http://goodbook.com/
-                            E-mail info@goodbook.com
-                            ////////////////////////////////////////
-                            EOT;
-                            sendMail($from, $to, $subject, $comment);
+//                             ////////////////////////////////////////
+//                             goodbookカスタマーセンター
+//                             URL  http://goodbook.com/
+//                             E-mail info@goodbook.com
+//                             ////////////////////////////////////////
+//                             EOT;
+//                             sendMail($from, $to, $subject, $comment);
 
-                            //セッション削除
-                            session_unset();
-                            $_SESSION['msg_success'] = SUC03;
-                            debug('セッション変数の中身：' . print_r($_SESSION, true));
+//                             //セッション削除
+//                             session_unset();
+//                             $_SESSION['msg_success'] = SUC03;
+//                             debug('セッション変数の中身：' . print_r($_SESSION, true));
 
-                            debug("===========================");
-                            debug("end pass remind recieve function");
-                            debug("===========================");
-                            header("Location:login.php"); //ログインページへ
-                        }
-                        // passRemindRecieve($pass);
-                    } catch (Exception $e) {
-                        error_log('エラー発生:' . $e->getMessage());
-                        $err_msg['token'] = MSG09;
-                    }
-                }
-            }
-        }
-    }
-}
+//                             debug("===========================");
+//                             debug("end pass remind recieve function");
+//                             debug("===========================");
+//                             header("Location:login.php"); //ログインページへ
+//                         }
+//                         // passRemindRecieve($pass);
+//                     } catch (Exception $e) {
+//                         error_log('エラー発生:' . $e->getMessage());
+//                         $err_msg['token'] = MSG09;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
 
 // user情報を取得
 function getUser($u_id)
@@ -1340,7 +1339,7 @@ function userInfoIndicate($dbFormData, $key)
     if (!empty($dbFormData[$key])) {
         echo $dbFormData[$key];
     } else {
-        echo "Not entered";
+        echo "";
     };
 }
 
