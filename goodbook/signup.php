@@ -23,6 +23,9 @@ require("head.php");
     <div class="home">
         <div class="center">
             <?php require("logo_title.php") ?>
+            <div class="title">
+                <h1>goodbook</h1>
+            </div>
             <div class="formentire">
                 <section class="form">
                     <form method="post">
@@ -67,6 +70,11 @@ require("head.php");
             </div>
         </div>
     </div>
+    <section class="">
+        <div class="portfolio-top">
+            <p><a href="../Portfolio.php" class="portfolio">portfolio top</a></p>
+        </div>
+    </section>
     <?php
     require("login&signup_footer.php");
     require("jssrc.php");
