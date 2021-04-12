@@ -68,10 +68,10 @@ require("goodbook_head.php");
                     <div id="contents">
                         <ul>
                             <a href="mypage.php">
-                                <li class="main_left_icon">
+                                <li class="main_left_icon my_profile_left_menu">
                                     <?php if (empty($dbFormData["profpic"])) { ?>
-                                        <div><i class="left_icon fas fa-user-circle fa-2x"></i></div>
-                                        <div class="icon_name_div"><span class="icon_name">name</span></div>
+                                        <img class="icon_img" src="./img/not_set_icon.png">
+                                        <div class="icon_name_div"><span class="icon_name"><?php echo sanitize($dbFormData["username"]); ?></span></div>
                                     <?php } else { ?>
                                         <img class="icon_img" src="<?php echo sanitize($dbFormData["profpic"]) ?>">
                                         <div class="icon_name_div"><span class="icon_name"><?php echo sanitize($dbFormData["username"]); ?></span></div>
@@ -206,7 +206,9 @@ require("goodbook_head.php");
                             <div class="main_icon2">
                                 <a href="mypage.php">
                                     <?php if (empty($dbFormData["profpic"])) { ?>
-                                        <i class="fas fa-user-circle fa-3x"></i>
+                                        <span class="main_center_icon">
+                                            <img class="icon_img" src="./img/not_set_icon.png">
+                                        </span>
                                     <?php } else { ?>
                                         <span class="main_center_icon">
                                             <img class="icon_img" src="<?php echo sanitize($dbFormData["profpic"]) ?>">

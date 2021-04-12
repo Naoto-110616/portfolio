@@ -43,23 +43,35 @@ $breakpoints: (
 
 body {
 	font-family: "Trebuchet";
-	@include mq() {
-		color: #2d88ff;
-	}
 }
 .home {
 	background: $background-color_default;
 	padding-top: 5%;
 	padding-bottom: 11%;
+	@include mq() {
+		background-color: #fff;
+	}
+}
+.title {
+	display: none;
+	text-align: center;
+	margin: 10px 0px;
+	@include mq() {
+		display: block;
+	}
 }
 .center {
 	display: flex;
 	max-width: $site-width;
 	margin: 0 auto;
 	justify-content: space-between;
+	@include mq() {
+		display: inline;
+	}
 }
 .left {
 	@include mq() {
+		display: none;
 	}
 }
 .massage {
@@ -74,6 +86,12 @@ body {
 	padding-bottom: $space_l;
 	margin-top: 40px;
 	box-shadow: 0 0 8px gray;
+	@include mq() {
+		box-shadow: none;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
 }
 .icon {
 	width: 250px;
@@ -184,6 +202,9 @@ label.err input {
 		height: 136px;
 		margin: 0 auto;
 	}
+	@include mq() {
+		display: none;
+	}
 }
 .language {
 	list-style-type: none;
@@ -255,6 +276,9 @@ input[type="password"]:focus {
 	width: 356px;
 	text-align: center;
 	margin: 8px 20px;
+	@include mq() {
+		width: 0;
+	}
 }
 .boder2 {
 	padding-top: 8px;

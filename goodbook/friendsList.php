@@ -42,7 +42,9 @@ require('goodbook_head.php');
                                         <?php } ?>
                                         <div class="msgRoom">
                                             <div class="msgShelf">
-                                                <img src="<?php echo $val["profpic"]; ?>" alt="<?php echo $val["username"] ?>">
+                                                <div class="trim">
+                                                    <img src="<?php echo $val["profpic"]; ?>" alt="<?php echo $val["username"] ?>">
+                                                </div>
                                                 <div class="msgRoomList_userInfo">
                                                     <p><?php echo $val["username"]; ?></p>
                                                     <p><?php echo $val["myBio"]; ?></p>

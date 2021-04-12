@@ -23,6 +23,9 @@ require("head.php");
     <div class="home">
         <div class="center">
             <?php require("logo_title.php") ?>
+            <div class="title">
+                <h1>goodbook</h1>
+            </div>
             <div class="formentire">
                 <div class="form">
                     <form method="post">
@@ -68,6 +71,11 @@ require("head.php");
                 </div>
                 <p style="position: absolute;">※ email: aaa@aaa pass aaaaaa で Login もしくは、適当なアカウントを作ってください。</p>
             </div>
+        </div>
+    </div>
+    <div>
+        <div class="portfolio-top">
+            <p><a href="../Portfolio.php" class="portfolio">portfolio top</a></p>
         </div>
     </div>
     <?php

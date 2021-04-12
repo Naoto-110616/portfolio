@@ -1,20 +1,35 @@
 @charset "UTF-8";
 body {
   font-family: "Trebuchet"; }
-  @media screen and (max-width: 414px) {
-    body {
-      color: #2d88ff; } }
 
 .home {
   background: #f0f2f5;
   padding-top: 5%;
   padding-bottom: 11%; }
+  @media screen and (max-width: 414px) {
+    .home {
+      background-color: #fff; } }
+
+.title {
+  display: none;
+  text-align: center;
+  margin: 10px 0px; }
+  @media screen and (max-width: 414px) {
+    .title {
+      display: block; } }
 
 .center {
   display: flex;
   max-width: 980px;
   margin: 0 auto;
   justify-content: space-between; }
+  @media screen and (max-width: 414px) {
+    .center {
+      display: inline; } }
+
+@media screen and (max-width: 414px) {
+  .left {
+    display: none; } }
 
 .massage {
   text-align: left; }
@@ -28,6 +43,12 @@ body {
   padding-bottom: 15px;
   margin-top: 40px;
   box-shadow: 0 0 8px gray; }
+  @media screen and (max-width: 414px) {
+    .form {
+      box-shadow: none;
+      width: 100%;
+      padding: 0;
+      margin: 0; } }
 
 .icon {
   width: 250px; }
@@ -135,6 +156,9 @@ label.err input {
     width: 980px;
     height: 136px;
     margin: 0 auto; }
+  @media screen and (max-width: 414px) {
+    .foo {
+      display: none; } }
 
 .language {
   list-style-type: none;
@@ -198,6 +222,9 @@ input[type="password"]:focus {
   width: 356px;
   text-align: center;
   margin: 8px 20px; }
+  @media screen and (max-width: 414px) {
+    .boder1 {
+      width: 0; } }
 
 .boder2 {
   padding-top: 8px;

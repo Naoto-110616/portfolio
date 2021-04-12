@@ -63,9 +63,17 @@ body {
 	background-color: #333333;
 	border-bottom: solid 1px #4c4c4c;
 	&_center_icon {
-		display: inline;
-		border-radius: $border-radius_s;
 		font-size: $font-size_m;
+		display: inline;
+		padding: $space_l 4%;
+		border-radius: $border-radius_s;
+		@include mq() {
+			padding: $space_l $space_m;
+		}
+		&:hover {
+			background-color: $background-color_hover;
+			transition: $transition_time;
+		}
 		&:last-child {
 			@include mq() {
 				display: none;
@@ -142,16 +150,13 @@ a {
 		width: 50px;
 		border-radius: 75px;
 		object-fit: cover;
-		margin-right: 5px;
-		margin-top: 6px;
-		margin-left: 8px;
 		&_div {
 			height: 50px;
 			width: 95%;
 			margin: auto;
 			padding: $space_m;
 			display: flex;
-			margin-right: 5px;
+			align-items: center;
 			& > .info_list {
 				height: $space_l;
 				width: $space_l;
@@ -186,15 +191,6 @@ a {
 .to_homepage {
 	color: $font-color_default;
 }
-.header_center_icon {
-	display: inline;
-	padding: $space_l 4%;
-	border-radius: $border-radius_s;
-	&:hover {
-		background-color: $background-color_hover;
-		transition: $transition_time;
-	}
-}
 .head {
 	&_left {
 		display: flex;
@@ -225,9 +221,6 @@ a {
 	border-radius: 10px;
 	margin-top: $space_l;
 	padding: $space_s;
-	@include mq() {
-		width: 100%;
-	}
 }
 .myicon {
 	margin-left: $space_m;
@@ -405,6 +398,7 @@ a {
 		display: flex;
 		margin-left: $space_l;
 		padding: 11px $space_l;
+		align-items: center;
 		@include mq() {
 			margin: 0;
 		}
@@ -871,10 +865,14 @@ main lower part
 		margin: 0 0 10px 0;
 		height: none;
 	}
+	&_left_menu {
+		align-items: center;
+	}
 }
 .myprofile {
 	display: flex;
-	padding-bottom: $space_s;
+	padding: 0 10px;
+	align-items: center;
 	&_inside {
 		padding: 0 20px;
 		padding-bottom: $space_m;
@@ -892,6 +890,12 @@ main lower part
 	&:hover {
 		background: $background-color_hover;
 		border-radius: 10px;
+	}
+}
+.mypage_notSet_icon {
+	font-size: 162px;
+	@include mq() {
+		font-size: 142px;
 	}
 }
 .profile_list {
@@ -1384,7 +1388,7 @@ a.panel:hover {
 .pagination {
 	position: relative;
 	overflow: hidden;
-	margin-top: $space_xl;
+	margin: $space_xl 0px;
 	&-list {
 		position: relative;
 		left: 50%;
@@ -1714,9 +1718,9 @@ label.err input {
 }
 .msgShelf {
 	& > img {
-		width: 5%;
-		border-radius: 70px;
+		border-radius: 50%;
 		object-fit: cover;
+		width: 5%;
 		@include mq() {
 			width: 11%;
 		}
@@ -1726,6 +1730,26 @@ label.err input {
 	}
 	&:hover {
 		background-color: #565656;
+	}
+}
+.trim {
+	position: relative;
+	overflow: hidden;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	@include mq() {
+		width: 50px;
+		height: 50px;
+	}
+	& img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		height: 100%;
 	}
 }
 /* ~~~~~~~~~~~~~~~ */

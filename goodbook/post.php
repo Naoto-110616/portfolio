@@ -11,9 +11,7 @@ foreach ($dbPostData['data'] as $key => $val) :
                     <a href="userDetail.php?u_id=<?php echo $val['id'] ?>">
                     <?php } ?>
                     <?php if (empty($val["profpic"])) { ?>
-                        <div class="icon_img">
-                            <i class="fas fa-user-circle fa-3x"></i>
-                        </div>
+                        <img class="icon_img" src="./img/not_set_icon.png">
                     <?php } else { ?>
                         <img class="icon_img" src="<?php echo sanitize($val["profpic"]) ?>">
                     <?php } ?>

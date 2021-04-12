@@ -44,7 +44,7 @@
         <div class="header_right_icon"><a class="account_menu_a to_mypage" href="mypage.php">
                 <?php if (empty($dbFormData["profpic"])) { ?>
                     <div class="myicon">
-                        <i class="fas fa-user-circle fa-2x"></i>
+                        <img class="icon_img" src="./img/not_set_icon.png">
                     </div>
                 <?php } else { ?>
                     <img class="icon_img" src="<?php echo sanitize($dbFormData["profpic"]) ?>">
@@ -64,7 +64,7 @@
                     <a class="account_menu_a to_mypage" href="mypage.php">
                         <?php if (empty($dbFormData["profpic"])) { ?>
                             <div class="myicon">
-                                <i class="fas fa-user-circle fa-4x"></i>
+                                <img class="icon_img" src="./img/not_set_icon.png">
                             </div>
                         <?php } else { ?>
                             <img class="icon_img" src="<?php echo sanitize($dbFormData["profpic"]) ?>">

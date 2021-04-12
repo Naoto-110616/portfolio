@@ -71,7 +71,6 @@ require("goodbook_head.php");
                         </div>
                     </form>
                 </div>
-                <!-- Main -->
                 <section id="main">
                     <div class="search-title">
                         <div class="search-left">
