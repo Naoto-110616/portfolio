@@ -40,7 +40,9 @@ require('goodbook_head.php');
                                 <a href="msg.php?m_id=<?php echo $val["b_id"] ?>">
                                     <div class="msgRoom">
                                         <div class="msgShelf">
-                                            <img src="<?php echo $val["profpic"]; ?>" alt="<?php echo $val["username"] ?>">
+                                            <div class="trim">
+                                                <img src="<?php echo $val["profpic"]; ?>" alt="<?php echo $val["username"] ?>">
+                                            </div>
                                             <div class="latestMessage">
                                                 <p><?php echo $val["username"]; ?></p>
                                                 <?php if (!empty($msg["msg"])) { ?>
@@ -61,7 +63,9 @@ require('goodbook_head.php');
                                 <a href="msg.php?m_id=<?php echo $val["b_id"] ?>">
                                     <div class="msgRoom">
                                         <div class="msgShelf">
-                                            <img src="<?php echo $val["profpic"]; ?>" alt="<?php echo $val["username"] ?>">
+                                            <div class="trim">
+                                                <img src="<?php echo $val["profpic"]; ?>" alt="<?php echo $val["username"] ?>">
+                                            </div>
                                             <div class="latestMessage">
                                                 <p><?php echo $val["username"]; ?></p>
                                                 <?php if (!empty($msg["msg"])) { ?>
