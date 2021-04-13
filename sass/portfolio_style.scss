@@ -1,0 +1,177 @@
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+// 変数
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+$default_color: #353535;
+$default_border_color: #dddddd;
+
+$breakpoints: (
+	"sm": "screen and (max-width: 414px);",
+	"md": "screen and (max-width: 768px);",
+	"lg": "screen and (max-width: 1000px);",
+	"xl": "screen and (max-width: 1200px);",
+) !default;
+
+@mixin mq($breakpoint: sm) {
+	@media #{map-get($breakpoints,$breakpoint)} {
+		@content;
+	}
+}
+
+body {
+	font-family: Verdana;
+	color: $default_color;
+}
+main {
+	position: relative;
+	min-height: 100vh;
+}
+.content-wrapper {
+	width: 85%;
+	margin: 0 auto;
+	@include mq() {
+		width: 100%;
+	}
+}
+header {
+	margin-bottom: 30px;
+	& h1 {
+		display: block;
+		font-size: 2em;
+		padding-left: 4%;
+		color: $default_color;
+		margin: 10px;
+	}
+}
+a {
+	text-decoration: none;
+	color: $default_color;
+}
+.Experience {
+	text-align: center;
+	margin-bottom: 17px;
+	font-size: 23px;
+}
+.table {
+	width: 680px;
+	margin: 0 auto 64px auto;
+	text-align: center;
+	border-collapse: collapse;
+	@include mq() {
+		width: 100%;
+	}
+	&2 {
+		margin: 0 auto 64px auto;
+		border-spacing: 0;
+		color: $default_color;
+		text-align: center;
+		border-collapse: collapse;
+	}
+	& td,
+	& th {
+		padding: 7px 10px;
+		border: solid 1px black;
+		border-color: $default_border_color;
+		@include mq() {
+			padding: 0;
+		}
+	}
+}
+.thead {
+	background: $default_border_color;
+}
+.sentence {
+	text-align: left;
+}
+.content-wrapper h2 {
+	text-align: center;
+	margin-bottom: 10px;
+}
+.item {
+	background: #f2f2f2;
+	border-radius: 8px;
+	padding: 10px;
+	margin-bottom: 30px;
+}
+.good {
+	width: 250px;
+	transition: 0.3s;
+}
+.item .good:hover {
+	animation: favPushAnimation 0.7s ease;
+	overflow: hidden;
+}
+@keyframes favPushAnimation {
+	0% {
+		transform: translateY(-30px) rotate(-50deg);
+	}
+	100% {
+		transform: translateY(0) rotate(0);
+	}
+}
+.item {
+	& h3 {
+		padding-top: 12px;
+		padding-left: 9px;
+	}
+	& ul {
+		padding-left: 60px;
+		margin: 16px 0px;
+	}
+}
+.icon {
+	width: 250px;
+}
+.github_urldiv {
+	margin-top: 10px;
+}
+.footer {
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	height: 110vh;
+	position: relative;
+	width: 100%;
+	& .content {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		@include mq() {
+			width: 100%;
+			font-size: 15px;
+		}
+	}
+	& a {
+		color: #fff;
+	}
+}
+.color {
+	background: $default_border_color;
+}
+.section_practice {
+	display: flex;
+	width: 900px;
+	margin: 10px auto;
+	background: $default_border_color;
+	padding: 10px;
+	text-align: center;
+	@include mq() {
+		width: 100%;
+	}
+	& a {
+		width: 50%;
+	}
+}
+.practice_page_name {
+	padding: 30px;
+	color: black;
+	transition: 0.3s;
+	&:hover {
+		background-color: #3e8e41;
+		color: white;
+		cursor: pointer;
+	}
+}

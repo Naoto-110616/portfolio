@@ -26,7 +26,16 @@ gulp.task("default", gulp.task("minify-css"));
 
 // sassをコンパイル
 gulp.task("sass", function () {
-	return gulp.src("../scss/*.scss").pipe(sass()).pipe(gulp.dest("../dist/css/"));
+	return gulp
+		.src("../scss/*.scss")
+		.pipe(sass())
+		.pipe(gulp.dest("../dist/css/"));
+});
+gulp.task("sass_top_page", function () {
+	return gulp
+		.src("../../sass/portfolio_style.scss")
+		.pipe(sass())
+		.pipe(gulp.dest("../../dist/css/"));
 });
 
 // 画像圧縮
@@ -59,6 +68,12 @@ gulp.task("imagemin", function () {
 gulp.task("watch_imagemin", function () {
 	return gulp.watch(paths.srcDir + "/**/*", gulp.task("imagemin"));
 });
-gulp.task("watch_scss_compile", function () {
+gulp.task("watch_scss_compile_goodbook_page", function () {
 	return gulp.watch("../scss/*.scss", gulp.task("sass"));
+});
+gulp.task("watch_scss_compile_top_page", function () {
+	return gulp.watch(
+		"../../sass/portfolio_style.scss",
+		gulp.task("sass_top_page")
+	);
 });

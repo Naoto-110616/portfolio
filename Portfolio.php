@@ -131,7 +131,6 @@
         <div class="icon">
           <a href="practice/practice_homepage.php">
             <h3>practice</h3>
-            <img src="practice/practice1/img/22177000005.jpg" alt="" class="practice_top_img" />
           </a>
         </div>
         <h3>Skills</h3>
