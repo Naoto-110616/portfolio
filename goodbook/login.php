@@ -74,7 +74,7 @@ require("head.php");
         </div>
     </div>
     <div>
-        <div class="portfolio-top">
+        <div class="portfolio-top-sp">
             <p><a href="../Portfolio.php" class="portfolio">portfolio top</a></p>
         </div>
     </div>

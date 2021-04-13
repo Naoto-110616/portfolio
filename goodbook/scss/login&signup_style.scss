@@ -289,6 +289,12 @@ input[type="password"]:focus {
 	&-top {
 		margin-top: 16px;
 		padding-bottom: 12px;
+		&-sp {
+			display: none;
+			@include mq() {
+				display: block;
+			}
+		}
 	}
 }
 /*バリデーション*/
