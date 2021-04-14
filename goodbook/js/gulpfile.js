@@ -37,6 +37,12 @@ gulp.task("sass_top_page", function () {
 		.pipe(sass())
 		.pipe(gulp.dest("../../dist/css/"));
 });
+gulp.task("sass_practice", function () {
+	return gulp
+		.src("../../practice/scss/app.scss")
+		.pipe(sass())
+		.pipe(gulp.dest("../../practice/dist/css/"));
+});
 
 // 画像圧縮
 // 圧縮前と圧縮後のlディレクトリを定義
@@ -76,4 +82,7 @@ gulp.task("watch_scss_compile_top_page", function () {
 		"../../sass/portfolio_style.scss",
 		gulp.task("sass_top_page")
 	);
+});
+gulp.task("watch_scss_compile_practice", function () {
+	return gulp.watch("../../practice/scss/app.scss", gulp.task("sass_practice"));
 });
