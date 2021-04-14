@@ -1,0 +1,63 @@
+body {
+  font-family: Verdana;
+  color: #353535; }
+
+main {
+  position: relative;
+  min-height: 100vh; }
+
+.page_title {
+  text-align: center;
+  margin: 10px 0 0 0; }
+
+.content-wrapper {
+  width: 85%;
+  margin: 0 auto; }
+  @media screen and (max-width: 414px) {
+    .content-wrapper {
+      width: 100%; } }
+
+.section_practice {
+  display: flex;
+  width: 900px;
+  margin: 10px auto;
+  background: #dddddd;
+  padding: 10px;
+  text-align: center; }
+  @media screen and (max-width: 414px) {
+    .section_practice {
+      width: 100%;
+      box-sizing: border-box;
+      flex-wrap: wrap; } }
+  .section_practice a {
+    width: 100%; }
+
+.practice_page_name {
+  padding: 30px;
+  color: black;
+  transition: 0.3s; }
+  .practice_page_name:hover {
+    background-color: #3e8e41;
+    color: white;
+    cursor: pointer; }
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  height: 110vh;
+  position: relative;
+  width: 100%; }
+  .footer .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+    @media screen and (max-width: 414px) {
+      .footer .content {
+        width: 100%;
+        font-size: 15px; } }
+  .footer a {
+    color: #fff; }
