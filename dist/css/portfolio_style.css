@@ -146,25 +146,3 @@ a {
 
 .color {
   background: #dddddd; }
-
-.section_practice {
-  display: flex;
-  width: 900px;
-  margin: 10px auto;
-  background: #dddddd;
-  padding: 10px;
-  text-align: center; }
-  @media screen and (max-width: 414px) {
-    .section_practice {
-      width: 100%; } }
-  .section_practice a {
-    width: 50%; }
-
-.practice_page_name {
-  padding: 30px;
-  color: black;
-  transition: 0.3s; }
-  .practice_page_name:hover {
-    background-color: #3e8e41;
-    color: white;
-    cursor: pointer; }

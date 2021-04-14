@@ -39,7 +39,7 @@ gulp.task("sass_top_page", function () {
 });
 gulp.task("sass_practice", function () {
 	return gulp
-		.src("../../practice/scss/app.scss")
+		.src("../../practice/scss/*.scss")
 		.pipe(sass())
 		.pipe(gulp.dest("../../practice/dist/css/"));
 });
@@ -84,5 +84,5 @@ gulp.task("watch_scss_compile_top_page", function () {
 	);
 });
 gulp.task("watch_scss_compile_practice", function () {
-	return gulp.watch("../../practice/scss/app.scss", gulp.task("sass_practice"));
+	return gulp.watch("../../practice/scss/*.scss", gulp.task("sass_practice"));
 });
