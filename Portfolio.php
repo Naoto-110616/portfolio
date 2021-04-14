@@ -31,11 +31,15 @@
                 <td>自習</td>
               </tr>
               <td>
-                <a href="practice/practice_homepage.php">practice</a>
+                <a href="practice/practice_homepage.php">CSS設計</a>
               </td>
-              <td>3時間</td>
+              <td>4時間</td>
               <td>
                 <div>HTML/CSS</div>
+                <div>OOCSS</div>
+                <div>BEM</div>
+                <div>SMACSS</div>
+                <div>FLOCSS</div>
               </td>
               <td>自習</td>
               </tr>
@@ -46,7 +50,7 @@
                 <td>5ヶ月</td>
                 <td>
                   <div>HTML/CSS</div>
-                  <div>Sass</div>
+                  <div>sass</div>
                   <div>javascript</div>
                   <div>jQuaery</div>
                   <div>PHP</div>
@@ -61,7 +65,11 @@
                 <td>6ヶ月</td>
                 <td>
                   <div>HTML/CSS</div>
-                  <div>Sass</div>
+                  <div>OOCSS</div>
+                  <div>BEM</div>
+                  <div>SMACSS</div>
+                  <div>FLOCSS</div>
+                  <div>sass</div>
                   <div>javascript</div>
                   <div>jQuaery</div>
                   <div>PHP</div>
@@ -111,8 +119,7 @@
         </div>
         <h3>Skills</h3>
         <ul>
-          <li>HTML</li>
-          <li>CSS</li>
+          <li>HTML/CSS</li>
           <li>Sass</li>
           <li>javascript</li>
           <li>jQuery</li>
@@ -126,16 +133,28 @@
           <a href="https://github.com/Naoto-110616/portfolio">https://github.com/Naoto-110616/portfolio</a>
         </div>
       </section>
-      </section>
       <section class="item">
         <div class="icon">
           <a href="practice/practice_homepage.php">
-            <h3>practice</h3>
+            <h3>CSS設計</h3>
           </a>
+        </div>
+        <h3>概要</h3>
+        <p>
+          CSS設計のサンプルコードです。
+        </p>
+        <div>
+          <h3>目的</h3>
+          <p>CSSをコーディングする上で最低限のルールを知るため.</p>
+        </div>
+        <div>
         </div>
         <h3>Skills</h3>
         <ul>
-          <li>CSS(transform)</li>
+          <li>OOCSS</li>
+          <li>BEM</li>
+          <li>SMACSS</li>
+          <li>FLOCSS</li>
         </ul>
         <h3>Github Repo</h3>
         <div class="github_urldiv">

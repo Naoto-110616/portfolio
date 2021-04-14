@@ -1,0 +1,95 @@
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+// 変数
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+$breakpoints: (
+	"sm": "screen and (max-width: 414px);",
+	"md": "screen and (max-width: 768px);",
+	"lg": "screen and (max-width: 1000px);",
+	"xl": "screen and (max-width: 1200px);",
+) !default;
+
+@mixin mq($breakpoint: sm) {
+	@media #{map-get($breakpoints,$breakpoint)} {
+		@content;
+	}
+}
+
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+// base
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+body {
+	background: #333;
+}
+a {
+	color: #dddddd;
+	text-decoration: none;
+}
+
+#l-main {
+	background: #fff;
+	width: 1120px;
+	height: 1000px;
+	padding: 20px;
+	box-sizing: border-box;
+	margin: 100px auto;
+	@include mq() {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		text-align: center;
+		padding: 0;
+	}
+}
+.manga {
+	&_item {
+		margin: 30px 30px 0px 0px;
+		float: left;
+		@include mq() {
+			float: none;
+			margin: 30px 0px 0px 0px;
+		}
+	}
+	&Artist {
+		width: 330px;
+		height: 400px;
+		box-sizing: border-box;
+		box-shadow: 17px 17px 20px #b8b8b8;
+		transition: all 0.5s;
+		object-fit: cover;
+		&:hover {
+			transition: all 0.5s;
+			object-fit: cover;
+		}
+	}
+}
+.is-mori:hover {
+	transform: rotate(1800deg);
+	content: url("../../practice_smacss/img/mori.jpg");
+}
+.is-togashi:hover {
+	transform: rotate(1800deg);
+	content: url("../../practice_smacss/img/t02000303_0200030312791232772.jpg");
+}
+.is-inoue:hover {
+	transform: rotate(1800deg);
+	content: url("../../practice_smacss/img/licensed-image.jpeg");
+}
+.is-iwaaki:hover {
+	transform: rotate(1800deg);
+	content: url("../../practice_smacss/img/16-1.jpg");
+}
+.is-otomo:hover {
+	transform: rotate(1800deg);
+	content: url("../../practice_smacss/img/main.jpg");
+}
+.is-oima:hover {
+	transform: rotate(1800deg);
+	content: url("../../practice_smacss/img/unnamed.png");
+}
+.thema-color {
+	color: aquamarine;
+}
+.to_back_page {
+	display: block;
+	margin: 20px 0;
+}
