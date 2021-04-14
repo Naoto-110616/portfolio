@@ -35,12 +35,18 @@ main {
 }
 header {
 	margin-bottom: 30px;
+	@include mq() {
+		margin: 0;
+	}
 	& h1 {
 		display: block;
 		font-size: 2em;
 		padding-left: 4%;
 		color: $default_color;
 		margin: 10px;
+		@include mq() {
+			padding: 0;
+		}
 	}
 }
 a {
@@ -60,20 +66,39 @@ a {
 	@include mq() {
 		width: 100%;
 	}
+	& td,
+	& th {
+		padding: 7px 10px;
+		border: solid 1px $default_border_color;
+		@include mq() {
+			padding: 0;
+		}
+	}
 	&2 {
 		margin: 0 auto 64px auto;
 		border-spacing: 0;
 		color: $default_color;
 		text-align: center;
 		border-collapse: collapse;
-	}
-	& td,
-	& th {
-		padding: 7px 10px;
-		border: solid 1px black;
-		border-color: $default_border_color;
 		@include mq() {
-			padding: 0;
+			margin: 0 auto 20px auto;
+			width: 100%;
+		}
+		& td,
+		& th {
+			padding: 7px 10px;
+			border: solid 1px $default_border_color;
+			@include mq() {
+				padding: 0;
+				font-size: 10px;
+				float: left;
+				width: 100%;
+			}
+		}
+	}
+	&_of_contents {
+		@include mq() {
+			display: none;
 		}
 	}
 }
@@ -87,19 +112,14 @@ a {
 	text-align: center;
 	margin-bottom: 10px;
 }
-.item {
-	background: #f2f2f2;
-	border-radius: 8px;
-	padding: 10px;
-	margin-bottom: 30px;
+.elec-power {
+	@include mq() {
+		width: 100%;
+	}
 }
 .good {
 	width: 250px;
 	transition: 0.3s;
-}
-.item .good:hover {
-	animation: favPushAnimation 0.7s ease;
-	overflow: hidden;
 }
 @keyframes favPushAnimation {
 	0% {
@@ -110,6 +130,10 @@ a {
 	}
 }
 .item {
+	background: #f2f2f2;
+	border-radius: 8px;
+	padding: 10px;
+	margin-bottom: 30px;
 	& h3 {
 		padding-top: 12px;
 		padding-left: 9px;
@@ -117,6 +141,10 @@ a {
 	& ul {
 		padding-left: 60px;
 		margin: 16px 0px;
+	}
+	& .good:hover {
+		animation: favPushAnimation 0.7s ease;
+		overflow: hidden;
 	}
 }
 .icon {

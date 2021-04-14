@@ -15,12 +15,18 @@ main {
 
 header {
   margin-bottom: 30px; }
+  @media screen and (max-width: 414px) {
+    header {
+      margin: 0; } }
   header h1 {
     display: block;
     font-size: 2em;
     padding-left: 4%;
     color: #353535;
     margin: 10px; }
+    @media screen and (max-width: 414px) {
+      header h1 {
+        padding: 0; } }
 
 a {
   text-decoration: none;
@@ -39,21 +45,38 @@ a {
   @media screen and (max-width: 414px) {
     .table {
       width: 100%; } }
+  .table td,
+  .table th {
+    padding: 7px 10px;
+    border: solid 1px #dddddd; }
+    @media screen and (max-width: 414px) {
+      .table td,
+      .table th {
+        padding: 0; } }
   .table2 {
     margin: 0 auto 64px auto;
     border-spacing: 0;
     color: #353535;
     text-align: center;
     border-collapse: collapse; }
-  .table td,
-  .table th {
-    padding: 7px 10px;
-    border: solid 1px black;
-    border-color: #dddddd; }
     @media screen and (max-width: 414px) {
-      .table td,
-      .table th {
-        padding: 0; } }
+      .table2 {
+        margin: 0 auto 20px auto;
+        width: 100%; } }
+    .table2 td,
+    .table2 th {
+      padding: 7px 10px;
+      border: solid 1px #dddddd; }
+      @media screen and (max-width: 414px) {
+        .table2 td,
+        .table2 th {
+          padding: 0;
+          font-size: 10px;
+          float: left;
+          width: 100%; } }
+  @media screen and (max-width: 414px) {
+    .table_of_contents {
+      display: none; } }
 
 .thead {
   background: #dddddd; }
@@ -65,19 +88,13 @@ a {
   text-align: center;
   margin-bottom: 10px; }
 
-.item {
-  background: #f2f2f2;
-  border-radius: 8px;
-  padding: 10px;
-  margin-bottom: 30px; }
+@media screen and (max-width: 414px) {
+  .elec-power {
+    width: 100%; } }
 
 .good {
   width: 250px;
   transition: 0.3s; }
-
-.item .good:hover {
-  animation: favPushAnimation 0.7s ease;
-  overflow: hidden; }
 
 @keyframes favPushAnimation {
   0% {
@@ -85,13 +102,20 @@ a {
   100% {
     transform: translateY(0) rotate(0); } }
 
-.item h3 {
-  padding-top: 12px;
-  padding-left: 9px; }
-
-.item ul {
-  padding-left: 60px;
-  margin: 16px 0px; }
+.item {
+  background: #f2f2f2;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 30px; }
+  .item h3 {
+    padding-top: 12px;
+    padding-left: 9px; }
+  .item ul {
+    padding-left: 60px;
+    margin: 16px 0px; }
+  .item .good:hover {
+    animation: favPushAnimation 0.7s ease;
+    overflow: hidden; }
 
 .icon {
   width: 250px; }

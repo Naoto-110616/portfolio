@@ -1,8 +1,8 @@
 <?php
 $pseudonym = "おおかわなおと";
 $name = "大川尚斗";
-$addr = "千葉県松戸市根本238-1";
-$nearStation = "松戸駅";
+$addr = "大阪市平野区長吉出戸2-1-8-804";
+$nearStation = "長原";
 $sex = "男";
 $programmingLanguage = array("HTML", "CSS", "JavaScript", "jQuery", "PHP", "MySQL", "WordPress", "Node.js", "SCSS", "gulp", "npm");
 // 生年月日からタイムスタンプを取得
@@ -33,8 +33,9 @@ if ($birth_month === $now_month) {
 <head>
     <meta charset="UTF-8">
     <title>SkillSheet</title>
-    <link rel="stylesheet" href="../reset.css">
-    <link rel="stylesheet" href="../portfolio_style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../dist/css/reset.css">
+    <link rel="stylesheet" href="../dist/css/portfolio_style.css">
 </head>
 
 <body>
@@ -90,7 +91,7 @@ if ($birth_month === $now_month) {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr class="table_of_contents">
                                 <td class="color">順番</td>
                                 <td colspan="2" class="color">期間</td>
                                 <td class="color">業務名/業種</td>
@@ -217,8 +218,7 @@ if ($birth_month === $now_month) {
                                     ・またかなり勤勉で、毎日ひたすら分からないことを調べたり聞いたりと、コツコツ努力することもできております。<br>
 
                                     【将来のエンジニア像】<br>
-                                    　環境的にjavaやSQLから勉強しておりますが、しっかりとITパスポートも勉強しており、将来は開発にこだわることなく<br>
-                                    　様々な業界に関わることができるエンジニアになりたいと考えております。
+                                    技術を得て、自分に与えられたタスクをこなし、その後、会社の利益になり、プロジェクトを責任持って、動かせる人間になりたい。
                                 </td>
                             </tr>
                         </tbody>
