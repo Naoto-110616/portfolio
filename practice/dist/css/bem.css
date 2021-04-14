@@ -1,0 +1,59 @@
+@charset "UTF-8";
+body {
+  background: #333; }
+
+a {
+  color: #dddddd;
+  text-decoration: none; }
+
+#main {
+  background: #fff;
+  width: 1120px;
+  height: 1000px;
+  padding: 20px;
+  /* widthを固定するこの場合はpaddingwを含む980pxの長さになる */
+  box-sizing: border-box;
+  margin: 100px auto; }
+  @media screen and (max-width: 414px) {
+    #main {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      text-align: center;
+      padding: 0; } }
+
+.artworks {
+  margin: 30px 30px 0px 0px;
+  float: left; }
+  @media screen and (max-width: 414px) {
+    .artworks {
+      float: none;
+      margin: 30px 0px 0px 0px; } }
+  .artworks__item {
+    width: 330px;
+    height: 400px;
+    box-sizing: border-box;
+    box-shadow: 17px 17px 20px #b8b8b8;
+    transition: all 0.5s;
+    object-fit: cover; }
+    .artworks__item:hover {
+      transition: all 0.5s;
+      object-fit: cover; }
+    .artworks__item--picasso:hover {
+      transform: rotate(1800deg);
+      content: url("../../practice_bem/img/picasso.jpg"); }
+    .artworks__item--dali:hover {
+      transform: rotate(1800deg);
+      content: url("../../practice_bem/img/img17.png"); }
+    .artworks__item--gogh:hover {
+      transform: rotate(1800deg);
+      content: url("../../practice_bem/img/11779543176244f4cdc3e257e07483ea.jpg"); }
+    .artworks__item--munch:hover {
+      transform: rotate(1800deg);
+      content: url("../../practice_bem/img/Portrait-of-Edvard-Munch-1863-1944-c.-1889.-National-Library-of-Norway (1).jpg"); }
+    .artworks__item--davinci:hover {
+      transform: rotate(1800deg);
+      content: url("../../practice_bem/img/davinci-edited-1-1573367640.jpg"); }
+    .artworks__item--cecily:hover {
+      transform: rotate(1800deg);
+      content: url("../../practice_bem/img/9_Cecily_Brown_medium.webp"); }
