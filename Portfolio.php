@@ -7,7 +7,7 @@
   <main>
     <div class="content-wrapper">
       <article class="experience">
-        <h2 class="Experience">Experience</h2>
+        <h2>Experience</h2>
         <section class="elec-power">
           <table class="table" border="1">
             <thead class="thead">
@@ -73,10 +73,12 @@
                   <div>javascript</div>
                   <div>jQuaery</div>
                   <div>PHP</div>
+                  <div>fuelPHP</div>
                   <div>node.js</div>
                   <div>gulp</div>
                   <div>npm</div>
                   <div>WordPress</div>
+                  <div>Bootstrap</div>
                 </td>
                 <td>模写</td>
               </tr>
@@ -165,6 +167,7 @@
         <a href="skillsheet/skillsheet.php">
           <h3>skillsheet</h3>
         </a>
+        <h3>概要</h3>
         <p>HTML,CSSで自身のスキルシートをまとめました．</p>
         <h3>Skills</h3>
         <ul>
