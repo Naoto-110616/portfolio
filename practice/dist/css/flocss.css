@@ -1,0 +1,61 @@
+body {
+  background: #333; }
+
+a {
+  color: #dddddd;
+  text-decoration: none; }
+
+#main {
+  background: #fff;
+  width: 1120px;
+  height: 1000px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 100px auto; }
+  @media screen and (max-width: 414px) {
+    #main {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      text-align: center;
+      padding: 0; } }
+
+.c-film {
+  margin: 30px 30px 0px 0px;
+  float: left; }
+  @media screen and (max-width: 414px) {
+    .c-film {
+      float: none;
+      margin: 30px 0px 0px 0px; } }
+  .c-film__work {
+    width: 330px;
+    height: 400px;
+    box-sizing: border-box;
+    box-shadow: 17px 17px 20px #b8b8b8;
+    transition: all 0.5s;
+    object-fit: cover; }
+    .c-film__work:hover {
+      transition: all 0.5s;
+      object-fit: cover; }
+    .c-film__work--landis:hover {
+      transform: rotate(1800deg);
+      content: url("../../practice_flocss/img/randith.jpeg"); }
+    .c-film__work--phillips:hover {
+      transform: rotate(1800deg);
+      content: url("../../practice_flocss/img/Todd_Phillips.jpg"); }
+    .c-film__work--burton:hover {
+      transform: rotate(1800deg);
+      content: url("../../practice_flocss/img/Tim_Burton.jpg"); }
+    .c-film__work--lasseter:hover {
+      transform: rotate(1800deg);
+      content: url("../../practice_flocss/img/john.jpeg"); }
+    .c-film__work--darabont:hover {
+      transform: rotate(1800deg);
+      content: url("../../practice_flocss/img/frunk.jpeg"); }
+    .c-film__work--scorsese:hover {
+      transform: rotate(1800deg);
+      content: url("../../practice_flocss/img/martin.jpeg"); }
+
+.u-back__page {
+  display: block;
+  margin: 20px 0; }

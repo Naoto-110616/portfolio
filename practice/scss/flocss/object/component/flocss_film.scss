@@ -1,0 +1,44 @@
+.c-film {
+	margin: 30px 30px 0px 0px;
+	float: left;
+	@include mq() {
+		float: none;
+		margin: 30px 0px 0px 0px;
+	}
+	&__work {
+		width: 330px;
+		height: 400px;
+		box-sizing: border-box;
+		box-shadow: 17px 17px 20px #b8b8b8;
+		transition: all 0.5s;
+		object-fit: cover;
+		&:hover {
+			transition: all 0.5s;
+			object-fit: cover;
+		}
+		&--landis:hover {
+			transform: rotate(1800deg);
+			content: url("../../practice_flocss/img/randith.jpeg");
+		}
+		&--phillips:hover {
+			transform: rotate(1800deg);
+			content: url("../../practice_flocss/img/Todd_Phillips.jpg");
+		}
+		&--burton:hover {
+			transform: rotate(1800deg);
+			content: url("../../practice_flocss/img/Tim_Burton.jpg");
+		}
+		&--lasseter:hover {
+			transform: rotate(1800deg);
+			content: url("../../practice_flocss/img/john.jpeg");
+		}
+		&--darabont:hover {
+			transform: rotate(1800deg);
+			content: url("../../practice_flocss/img/frunk.jpeg");
+		}
+		&--scorsese:hover {
+			transform: rotate(1800deg);
+			content: url("../../practice_flocss/img/martin.jpeg");
+		}
+	}
+}
