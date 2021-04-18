@@ -67,6 +67,41 @@ $(function () {
 	});
 });
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// signup formが全て入力されるまでinputを無効化
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// $(function () {
+// 	$(".js-form-validate-login").on("keyup", function () {
+// 		if ($(".email").val() && $(".password").val()) {
+// 			$(".js-disabled-submit").prop("disabled", false);
+// 		} else {
+// 			$(".js-disabled-submit").prop("disabled", true);
+// 		}
+// 	});
+// });
+$(function () {
+	$(".js-form-validate-signup").on("keyup", function () {
+		if (
+			$(".email").val() &&
+			$(".password").val() &&
+			$(".password_retype").val()
+		) {
+			$(".js-disabled-submit").prop("disabled", false);
+		} else {
+			$(".js-disabled-submit").prop("disabled", true);
+		}
+	});
+});
+// =========================
+// 自動ログイン
+// =========================
+$(function () {
+	$(".js-auto-login").on("click", function () {
+		document.getElementById("email").value = "aaa@aaa";
+		document.getElementById("password").value = "aaaaaa";
+	});
+});
+
 // =========================
 // main_left_menuの表示，非表示
 // =========================
@@ -224,26 +259,26 @@ $(function () {
 	});
 });
 
-$(function () {
-	// var $ftr = $("#footer");
-	// if (window.innerHeight > $ftr.offset().top + $ftr.outerHeight()) {
-	// 	$ftr.attr({
-	// 		style:
-	// 			"position:fixed; top:" +
-	// 			(window.innerHeight - $ftr.outerHeight()) +
-	// 			"px;",
-	// 	});
-	// }
-	// メッセージ表示
-	var $jsShowMsg = $("#js-show-msg");
-	var msg = $jsShowMsg.text();
-	if (msg.replace(/^[\s　]+|[\s　]+$/g, "").length) {
-		$jsShowMsg.slideToggle("slow");
-		setTimeout(function () {
-			$jsShowMsg.slideToggle("slow");
-		}, 5000);
-	}
-});
+// $(function () {
+// 	var $ftr = $("#footer");
+// 	if (window.innerHeight > $ftr.offset().top + $ftr.outerHeight()) {
+// 		$ftr.attr({
+// 			style:
+// 				"position:fixed; top:" +
+// 				(window.innerHeight - $ftr.outerHeight()) +
+// 				"px;",
+// 		});
+// 	}
+// 	// メッセージ表示
+// 	var $jsShowMsg = $("#js-show-msg");
+// 	var msg = $jsShowMsg.text();
+// 	if (msg.replace(/^[\s　]+|[\s　]+$/g, "").length) {
+// 		$jsShowMsg.slideToggle("slow");
+// 		setTimeout(function () {
+// 			$jsShowMsg.slideToggle("slow");
+// 		}, 5000);
+// 	}
+// });
 $(function () {
 	// テキストエリアカウント
 	var $countUp = $("#js-count"),
@@ -351,32 +386,6 @@ goodList.forEach((good) => {
 				.fail(function (msg) {
 					console.log("Ajax Error");
 				});
-		}
-	});
-});
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// formが全て入力されるまでinputを無効化
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-$(function () {
-	$(".js-form-validate-login").on("keyup", function () {
-		if ($(".email").val() && $(".password").val()) {
-			$(".js-disabled-submit").prop("disabled", false);
-		} else {
-			$(".js-disabled-submit").prop("disabled", true);
-		}
-	});
-});
-$(function () {
-	$(".js-form-validate-signup").on("keyup", function () {
-		if (
-			$(".email").val() &&
-			$(".password").val() &&
-			$(".password_retype").val()
-		) {
-			$(".js-disabled-submit").prop("disabled", false);
-		} else {
-			$(".js-disabled-submit").prop("disabled", true);
 		}
 	});
 });

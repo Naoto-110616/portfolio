@@ -66,6 +66,41 @@ $(function () {
 	});
 });
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// signup formが全て入力されるまでinputを無効化
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// $(function () {
+// 	$(".js-form-validate-login").on("keyup", function () {
+// 		if ($(".email").val() && $(".password").val()) {
+// 			$(".js-disabled-submit").prop("disabled", false);
+// 		} else {
+// 			$(".js-disabled-submit").prop("disabled", true);
+// 		}
+// 	});
+// });
+$(function () {
+	$(".js-form-validate-signup").on("keyup", function () {
+		if (
+			$(".email").val() &&
+			$(".password").val() &&
+			$(".password_retype").val()
+		) {
+			$(".js-disabled-submit").prop("disabled", false);
+		} else {
+			$(".js-disabled-submit").prop("disabled", true);
+		}
+	});
+});
+// =========================
+// 自動ログイン
+// =========================
+$(function () {
+	$(".js-auto-login").on("click", function () {
+		document.getElementById("email").value = "aaa@aaa";
+		document.getElementById("password").value = "aaaaaa";
+	});
+});
+
 // =========================
 // main_left_menuの表示，非表示
 // =========================
@@ -350,32 +385,6 @@ goodList.forEach((good) => {
 				.fail(function (msg) {
 					console.log("Ajax Error");
 				});
-		}
-	});
-});
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// formが全て入力されるまでinputを無効化
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-$(function () {
-	$(".js-form-validate-login").on("keyup", function () {
-		if ($(".email").val() && $(".password").val()) {
-			$(".js-disabled-submit").prop("disabled", false);
-		} else {
-			$(".js-disabled-submit").prop("disabled", true);
-		}
-	});
-});
-$(function () {
-	$(".js-form-validate-signup").on("keyup", function () {
-		if (
-			$(".email").val() &&
-			$(".password").val() &&
-			$(".password_retype").val()
-		) {
-			$(".js-disabled-submit").prop("disabled", false);
-		} else {
-			$(".js-disabled-submit").prop("disabled", true);
 		}
 	});
 });

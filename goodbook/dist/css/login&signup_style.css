@@ -5,7 +5,7 @@ body {
 .home {
   background: #f0f2f5;
   padding-top: 5%;
-  padding-bottom: 11%; }
+  padding-bottom: 8%; }
   @media screen and (max-width: 414px) {
     .home {
       background-color: #fff; } }
@@ -240,6 +240,22 @@ input[type="password"]:focus {
       @media screen and (max-width: 414px) {
         .portfolio-top-sp {
           display: block; } }
+
+.button-auto-login {
+  width: 100%;
+  height: 40px;
+  border: none;
+  background: #ff0000;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 20px; }
+  @media screen and (max-width: 414px) {
+    .button-auto-login {
+      width: 50%; } }
+  .button-auto-login:hover {
+    background-color: #cc0000;
+    cursor: pointer; }
 
 /*バリデーション*/
 .help-block {
