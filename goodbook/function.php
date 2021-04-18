@@ -20,7 +20,7 @@ ini_set("display_errors", "0");
 // デバッグ
 //================================
 //デバッグフラグ
-$debug_flg = true;
+$debug_flg = false;
 //デバッグログ関数
 function debug($str)
 {
