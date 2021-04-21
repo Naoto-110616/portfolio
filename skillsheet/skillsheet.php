@@ -4,7 +4,7 @@ $name = "大川尚斗";
 $addr = "大阪市平野区長吉出戸2-1-8-804";
 $nearStation = "長原";
 $sex = "男";
-$programmingLanguage = array("HTML", "CSS", "JavaScript", "jQuery", "PHP", "MySQL", "WordPress", "Node.js", "SCSS", "gulp", "npm");
+$programmingLanguage = array("HTML", "CSS", "JavaScript", "jQuery", "PHP", "MySQL", "WordPress", "Node.js", "SCSS", "gulp", "npm", "OOCSS", "BEM", "SMACSS", "FLOCSS", "Bootstrap", "fuelPHP");
 // 生年月日からタイムスタンプを取得
 $birthday = ("1999-6-16");
 $birthdayTimeStamp = strtotime($birthday);
@@ -185,7 +185,7 @@ if ($birth_month === $now_month) {
                                 </td>
                                 <td>-</td>
                                 <td class="sentence">【オンライン学習ツールにて言語の勉強】<br>
-                                    現在は平日３時間、休日4時間の学習をしております。<br>
+                                    現在は平日、休日5時間の学習をしております。<br>
 
                                     【学習内容】<br>
                                     ゼロワンという会社のオンライン教材「ウェブカツ」<br>
@@ -193,7 +193,7 @@ if ($birth_month === $now_month) {
                                     <?php
                                     $count = count($programmingLanguage);
                                     for ($i = 0; $i < $count; ++$i) {
-                                        echo $programmingLanguage[$i];
+                                        echo $programmingLanguage[$i] . "." . "<br>";
                                     }
                                     ?>の練習<br></td>
                                 <td>

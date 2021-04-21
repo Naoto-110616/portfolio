@@ -74,6 +74,7 @@
                   <div>jQuaery</div>
                   <div>PHP</div>
                   <div>fuelPHP</div>
+                  <div>laravel</div>
                   <div>node.js</div>
                   <div>gulp</div>
                   <div>npm</div>
@@ -122,7 +123,7 @@
         <h3>Skills</h3>
         <ul>
           <li>HTML/CSS</li>
-          <li>Sass</li>
+          <li>sass</li>
           <li>javascript</li>
           <li>jQuery</li>
           <li>PHP</li>
@@ -140,6 +141,9 @@
           <a href="practice/practice_homepage.php">
             <h3>CSS設計</h3>
           </a>
+        </div>
+        <div>
+          ※題名押下で遷移
         </div>
         <h3>概要</h3>
         <p>
@@ -160,13 +164,16 @@
         </ul>
         <h3>Github Repo</h3>
         <div class="github_urldiv">
-          <a href="https://github.com/Naoto-110616/portfolio">https://github.com/Naoto-110616/portfolio/tree/master/practice</a>
+          <a href="https://github.com/Naoto-110616/portfolio/tree/master/practice">https://github.com/Naoto-110616/portfolio/tree/master/practice</a>
         </div>
       </section>
       <section class="item">
         <a href="skillsheet/skillsheet.php">
           <h3>skillsheet</h3>
         </a>
+        <div>
+          ※題名押下で遷移
+        </div>
         <h3>概要</h3>
         <p>HTML,CSSで自身のスキルシートをまとめました．</p>
         <h3>Skills</h3>
