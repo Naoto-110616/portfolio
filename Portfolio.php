@@ -138,12 +138,40 @@
       </section>
       <section class="item">
         <div class="icon">
+          <a href="https://busainu.com/sample_laravel_ver5.8/public/">
+            <h3>sample_laravel</h3>
+          </a>
+        </div>
+        <div>
+          ※タイトル押下で遷移
+        </div>
+        <div>
+          <h3>概要</h3>
+          <p>
+            laravelでECサイトを製作中です。
+          </p>
+        </div>
+        <div>
+          <h3>目的</h3>
+          <p>laravelの基礎を学ぶ為</p>
+        </div>
+        <h3>Skills</h3>
+        <ul>
+          <div>laravel</div>
+        </ul>
+        <h3>Github Repo</h3>
+        <div class="github_urldiv">
+          <a href="https://github.com/Naoto-110616/portfolio">https://github.com/Naoto-110616/portfolio</a>
+        </div>
+      </section>
+      <section class="item">
+        <div class="icon">
           <a href="practice/practice_homepage.php">
             <h3>CSS設計</h3>
           </a>
         </div>
         <div>
-          ※題名押下で遷移
+          ※タイトル押下で遷移
         </div>
         <h3>概要</h3>
         <p>
@@ -172,7 +200,7 @@
           <h3>skillsheet</h3>
         </a>
         <div>
-          ※題名押下で遷移
+          ※タイトル押下で遷移
         </div>
         <h3>概要</h3>
         <p>HTML,CSSで自身のスキルシートをまとめました．</p>
