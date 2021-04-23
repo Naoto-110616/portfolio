@@ -133,7 +133,7 @@
         </ul>
         <h3>Github Repo</h3>
         <div class="github_urldiv">
-          <a href="https://github.com/Naoto-110616/portfolio">https://github.com/Naoto-110616/portfolio</a>
+          <a href="https://github.com/Naoto-110616/portfolio/tree/master/goodbook">https://github.com/Naoto-110616/portfolio/tree/master/goodbook</a>
         </div>
       </section>
       <section class="item">
@@ -161,7 +161,7 @@
         </ul>
         <h3>Github Repo</h3>
         <div class="github_urldiv">
-          <a href="https://github.com/Naoto-110616/portfolio">https://github.com/Naoto-110616/portfolio</a>
+          <a href="https://github.com/Naoto-110616/portfolio/tree/master/sample_laravel_ver5.8">https://github.com/Naoto-110616/portfolio/tree/master/sample_laravel_ver5.8</a>
         </div>
       </section>
       <section class="item">
