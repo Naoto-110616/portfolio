@@ -55,9 +55,7 @@ require('goodbook_head.php');
                             </div>
                             <div class="myIcon_img_div">
                                 <?php if (empty($viewData["profpic"])) { ?>
-                                    <div class="myIcon_img">
-                                        <i class="fas fa-user-circle fa-4x"></i>
-                                    </div>
+                                    <img class="myIcon_img" src="./img/not_set_icon.png">
                                 <?php } else { ?>
                                     <img class="myIcon_img" src="<?php echo sanitize($viewData["profpic"]) ?>">
                                 <?php } ?>
