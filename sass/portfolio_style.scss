@@ -52,6 +52,7 @@ header {
 a {
 	text-decoration: none;
 	color: $default_color;
+	word-wrap: break-word;
 }
 h2 {
 	text-align: center;

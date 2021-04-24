@@ -30,7 +30,8 @@ header {
 
 a {
   text-decoration: none;
-  color: #353535; }
+  color: #353535;
+  word-wrap: break-word; }
 
 h2 {
   text-align: center;
