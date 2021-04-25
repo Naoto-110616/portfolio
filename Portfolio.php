@@ -7,6 +7,12 @@
   <main>
     <div class="content-wrapper">
       <article class="experience">
+        <h2>profile</h2>
+        <div class="resumeLink">
+          <a href="resume.zip" download="resume.zip">履歴書・職務経歴書ダウンロードリンク</a>
+        </div>
+      </article>
+      <article class="experience">
         <h2>Experience</h2>
         <section class="elec-power">
           <table class="table" border="1">

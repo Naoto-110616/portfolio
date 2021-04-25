@@ -59,6 +59,13 @@ h2 {
 	margin-bottom: 17px;
 	font-size: 23px;
 }
+.resumeLink {
+	text-align: center;
+	margin: 20px 0;
+	& a:hover {
+		color: lightcoral;
+	}
+}
 .table {
 	width: 680px;
 	margin: 0 auto 64px auto;
