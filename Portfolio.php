@@ -7,7 +7,7 @@
   <main>
     <div class="content-wrapper">
       <article class="experience">
-        <h2>profile</h2>
+        <h2>Profile</h2>
         <div class="resumeLink">
           <a href="resume.zip" download="resume.zip">履歴書・職務経歴書ダウンロードリンク</a>
         </div>
@@ -163,7 +163,7 @@
         </div>
         <h3>Skills</h3>
         <ul>
-          <div>laravel</div>
+          <li>laravel</li>
         </ul>
         <h3>Github Repo</h3>
         <div class="github_urldiv">
