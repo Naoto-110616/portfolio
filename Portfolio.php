@@ -7,10 +7,10 @@
   <main>
     <div class="content-wrapper">
       <article class="experience">
-        <h2>Profile</h2>
-        <div class="resumeLink">
+        <!-- <h2>Profile</h2> -->
+        <!-- <div class="resumeLink">
           <a href="resume.zip" download="resume.zip">履歴書・職務経歴書ダウンロードリンク</a>
-        </div>
+        </div> -->
       </article>
       <article class="experience">
         <h2>Experience</h2>
