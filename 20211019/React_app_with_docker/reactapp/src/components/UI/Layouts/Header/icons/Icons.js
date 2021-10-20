@@ -1,6 +1,6 @@
 import classes from "./Icons.module.css";
 import Icon from "./Icon";
-import { GITHUB_URL, LINKED_IN } from "../../../../util/consts";
+import { GITHUB_URL, LINKED_IN } from "../../../../../util/consts";
 
 const Icons = () => {
 	return (

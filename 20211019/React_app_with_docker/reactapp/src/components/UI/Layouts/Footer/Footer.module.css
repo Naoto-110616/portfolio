@@ -1,0 +1,10 @@
+.footer {
+	position: fixed;
+	height: 5rem;
+	background-color: #5f9ea0;
+	bottom: 0;
+	width: 100%;
+}
+.icon {
+	justify-content: end;
+}
