@@ -1,0 +1,12 @@
+.section {
+	height: 30vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 25rem;
+	margin: 0 auto;
+}
+.message {
+	text-align: center;
+	color: #5f9ea0;
+}

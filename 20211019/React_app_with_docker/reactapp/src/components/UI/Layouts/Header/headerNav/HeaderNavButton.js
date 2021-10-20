@@ -1,5 +1,5 @@
 import classes from "./HeaderNavButton.module.css";
-import Card from "../../../Card";
+import Card from "../../../Card/Card";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const HeaderNavButton = (props) => {
