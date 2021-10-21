@@ -1,0 +1,29 @@
+.workCard {
+	width: 45%;
+	margin: 0 0 4rem 0;
+}
+.workLog {
+	border-bottom: 3px solid #395e5f;
+	padding: 1rem 0;
+}
+.workLog h3 {
+	margin: 0;
+}
+.workLog h4 {
+	margin: 0 0 1rem 0;
+	font-weight: 300;
+}
+.card-skill {
+	background-color: #5f9ea0;
+	padding: 0.5rem;
+	margin: 0.3rem 0.3rem 1rem 0.3rem;
+}
+.wasWork {
+	padding: 0.5rem 0;
+}
+.wrap {
+	display: flex;
+	justify-content: center;
+	color: #fff;
+	flex-wrap: wrap;
+}

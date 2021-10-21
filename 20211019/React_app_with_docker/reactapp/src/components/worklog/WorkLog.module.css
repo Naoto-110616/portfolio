@@ -1,0 +1,9 @@
+.worklog-section {
+	background-color: #f5f5f5;
+}
+.worklog-cards {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	text-align: center;
+}
