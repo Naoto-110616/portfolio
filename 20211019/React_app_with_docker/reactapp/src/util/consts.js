@@ -11,6 +11,7 @@ export const HTML_CODER = "HTML coder";
 
 export const HTML5 = "HTML5";
 export const CSS3 = "CSS3";
+export const SASS = "SASS";
 export const JAVA_SCRIPT = "JavaScript";
 export const J_QUERY = "jQuery";
 export const REACT = "React.js";
@@ -18,6 +19,7 @@ export const REACT = "React.js";
 export const JAVA = "Java";
 export const PHP = "PHP";
 export const WORDPRESS = "WordPress";
+export const GULP = "gulp";
 
 export const NODE = "Node.js";
 export const EXPRESS = "Express";

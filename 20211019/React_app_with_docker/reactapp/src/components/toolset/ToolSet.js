@@ -4,10 +4,12 @@ import Item from "./item/item";
 import {
 	HTML5,
 	CSS3,
+	SASS,
 	JAVA_SCRIPT,
 	J_QUERY,
 	REACT,
 	PHP,
+	GULP,
 	GIT,
 	GITLAB,
 	GITHUB,
@@ -41,6 +43,11 @@ const FRONT_DATA = [
 		iconClassName: "fab fa-css3-alt",
 		rate: "☆☆☆☆☆",
 	},
+	{
+		title: SASS,
+		iconClassName: "fab fa-sass",
+		rate: "☆☆☆☆☆",
+	},
 ];
 const BACK_DATA = [
 	{
@@ -54,17 +61,20 @@ const BACK_DATA = [
 		rate: "☆☆",
 	},
 ];
-const CMS_DATA = [
+const TOOLS = [
 	{
 		title: WORDPRESS,
 		iconClassName: "fab fa-wordpress",
 		rate: "☆☆☆",
 	},
-];
-const INFRA_DATA = [
 	{
 		title: DOCKER,
 		iconClassName: "fab fa-docker",
+		rate: "☆☆",
+	},
+	{
+		title: GULP,
+		iconClassName: "fab fa-gulp",
 		rate: "☆☆",
 	},
 	{
@@ -90,12 +100,7 @@ const ToolSet = () => {
 	const backItems = BACK_DATA.map((data) => (
 		<Item key={data.title} data={data} />
 	));
-	const cmsItems = CMS_DATA.map((data) => (
-		<Item key={data.title} data={data} />
-	));
-	const infraItems = INFRA_DATA.map((data) => (
-		<Item key={data.title} data={data} />
-	));
+	const tools = TOOLS.map((data) => <Item key={data.title} data={data} />);
 	return (
 		<section id="toolset" className={classes["toolset-wrap"]}>
 			<SectionTItle title={"Toolset"} />
@@ -103,10 +108,8 @@ const ToolSet = () => {
 			<div className={classes["toolset-item"]}>{frontItems}</div>
 			<h3>Backend</h3>
 			<div className={classes["toolset-item"]}>{backItems}</div>
-			<h3>CMS</h3>
-			<div className={classes["toolset-item"]}>{cmsItems}</div>
-			<h3>Infrastructure</h3>
-			<div className={classes["toolset-item"]}>{infraItems}</div>
+			<h3>Tools</h3>
+			<div className={classes["toolset-item"]}>{tools}</div>
 		</section>
 	);
 };
