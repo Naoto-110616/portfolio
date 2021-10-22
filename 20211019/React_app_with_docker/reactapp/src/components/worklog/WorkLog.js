@@ -10,9 +10,7 @@ import {
 	PHP,
 	CODING,
 	J_QUERY,
-	REACT,
 	GIT,
-	GITHUB,
 	GITLAB,
 	DOCKER,
 	WORDPRESS,
@@ -47,8 +45,8 @@ const WorkLog = () => {
 		<WorkCard key={data.id} data={data} />
 	));
 	return (
-		<section className={classes["worklog-section"]}>
-			<SectionTitle id="worklog" title="Work Log" className={classes.title} />
+		<section id="worklog" className={classes["worklog-section"]}>
+			<SectionTitle title="Work Log" className={classes.title} />
 			<div className={classes["worklog-cards"]}>{workCard}</div>
 		</section>
 	);

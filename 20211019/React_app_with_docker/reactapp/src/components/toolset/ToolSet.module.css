@@ -1,0 +1,16 @@
+.toolset-wrap {
+	text-align: center;
+	width: 70%;
+	margin: 0 auto;
+}
+.toolset-wrap h3 {
+	color: #5f9ea0;
+	text-decoration: underline #5f9ea0;
+	font-size: 1rem;
+}
+.toolset-item {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin: 0 0 3rem 0;
+}

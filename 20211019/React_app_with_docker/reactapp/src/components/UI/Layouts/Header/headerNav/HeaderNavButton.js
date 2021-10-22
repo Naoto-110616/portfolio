@@ -4,7 +4,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const HeaderNavButton = (props) => {
 	return (
-		<AnchorLink href={props.href}>
+		<AnchorLink href={props.href} offset={props.offset}>
 			<Card className={classes["header-nav-item"]}>{props.navItem}</Card>
 		</AnchorLink>
 	);
