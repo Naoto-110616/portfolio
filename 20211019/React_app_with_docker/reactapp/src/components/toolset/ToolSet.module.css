@@ -6,6 +6,7 @@
 .toolset-wrap h3 {
 	color: #5f9ea0;
 	text-decoration: underline #5f9ea0;
+	font-weight: 300;
 	font-size: 1rem;
 }
 .toolset-item {

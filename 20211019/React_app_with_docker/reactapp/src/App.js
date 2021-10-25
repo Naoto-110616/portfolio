@@ -3,6 +3,7 @@ import ToolSet from "./components/toolset/ToolSet";
 import Layouts from "./components/UI/Layouts/Layouts";
 import Welcome from "./components/welcome/Welcome";
 import WorkLog from "./components/worklog/WorkLog";
+import SideProjects from "./components/sideProjects/SideProjects";
 
 function App() {
 	return (
@@ -11,6 +12,7 @@ function App() {
 				<Welcome />
 				<WorkLog />
 				<ToolSet />
+				<SideProjects />
 			</Layouts>
 		</>
 	);
