@@ -1,0 +1,39 @@
+.sideProjectsItem {
+	width: 45%;
+	background: #9fc4c5;
+	border: solid 3px #5f9ea0;
+	padding: 0.8rem;
+	text-align: center;
+}
+.icon-wrap {
+	font-size: 3rem;
+	background: #7fb1b2;
+	border-radius: 10px;
+	width: 80%;
+	padding: 1rem;
+	justify-content: center;
+	display: flex;
+	align-self: center;
+	margin: 0 auto 1rem;
+	color: #fff;
+}
+.projects-type {
+	background: #fff;
+	font-weight: 700;
+	color: #5f9ea0;
+	padding: 0.3rem;
+}
+.projects-detail {
+	background: #fff;
+	color: #5f9ea0;
+}
+.projects-using_skills {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.projects-links {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}

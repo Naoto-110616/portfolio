@@ -12,7 +12,7 @@ const HeaderNav = () => {
 					offset={OFFSET_WORK_LOG}
 				/>
 				<HeaderNavButton navItem={"Toolset"} href={"#toolset"} />
-				<HeaderNavButton navItem={"Side Projects"} href={"#sideProjects"} />
+				<HeaderNavButton navItem={"Side Projects"} href={"#side-projects"} />
 			</ul>
 		</nav>
 	);
