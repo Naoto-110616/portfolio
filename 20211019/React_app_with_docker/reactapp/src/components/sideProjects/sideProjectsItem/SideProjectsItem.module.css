@@ -24,16 +24,35 @@
 	padding: 0.3rem;
 }
 .projects-detail {
+	padding: 10px 10px 0 10px;
 	background: #fff;
 	color: #5f9ea0;
+}
+.projects-description {
+	margin: 10px;
 }
 .projects-using_skills {
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
+	border-top: 2px solid #9fc4c5;
+}
+.projects-skills {
+	background-color: #5f9ea0;
+	color: #fff;
+	padding: 3px;
+	margin: 10px 0;
 }
 .projects-links {
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
+	background-color: #5f9ea0;
+	margin: 20px 0 0;
+}
+.projects-links a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.5rem;
+	padding: 3px 0;
 }

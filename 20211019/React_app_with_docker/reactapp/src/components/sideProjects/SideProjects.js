@@ -1,23 +1,15 @@
 import SectionTitle from "../sectionTitle/SectionTitle";
 import classes from "./SideProjects.module.css";
 import SideProjectsItem from "./sideProjectsItem/SideProjectsItem";
-import { REACT } from "../../util/consts";
+import { REACT, DOCKER, GIT, GITHUB } from "../../util/consts";
 const PROJECTS = [
 	{
 		id: 1,
-		title: "DAMMY APP",
-		descrioption: "DAMMY APP",
-		skills: [REACT],
-		githubUrl: "https:dammy.com",
-		demoUrl: "https://demo.com",
-		personal: true,
-	},
-	{
-		id: 1,
-		title: "DAMMY APP",
-		descrioption: "DAMMY APP",
-		skills: [REACT],
-		githubUrl: "https:dammy.com",
+		title: "Portfolio Page",
+		iconClasses: "far fa-id-badge",
+		descrioption: "This portoflio page.",
+		skills: [REACT, DOCKER, GIT, GITHUB],
+		gitHubUrl: "https://github.com/Naoto-110616/portfolio",
 		demoUrl: "https://demo.com",
 		personal: true,
 	},

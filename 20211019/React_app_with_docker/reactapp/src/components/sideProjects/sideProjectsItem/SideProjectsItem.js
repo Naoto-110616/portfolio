@@ -1,29 +1,51 @@
 import classes from "./SideProjectsItem.module.css";
 
-const SideProjectsItem = () => {
+const SideProjectsItem = (props) => {
+	const skills = props.data.skills.map((skill) => (
+		<div
+			key={`${props.data.id}${skill}`}
+			className={classes["projects-skills"]}
+		>
+			{skill}
+		</div>
+	));
+	let gitHubUrl = "";
+	if (props.data.gitHubUrl) {
+		gitHubUrl = (
+			<a href={props.data.gitHubUrl} target="_brank" rel="noopener noreferrer">
+				<i className={`fab fa-github ${classes["github-icon"]}`}></i>
+			</a>
+		);
+	}
+	let demoUrl = "";
+	if (props.data.demoUrl) {
+		demoUrl = (
+			<a href={props.data.demoUrl} target="_brank" rel="noopener noreferrer">
+				<i className={`fas fa-search ${classes["github-icon"]}`}></i>
+			</a>
+		);
+	}
 	return (
 		<div className={classes.sideProjectsItem}>
 			<div className={classes["icon-wrap"]}>
-				<i class="fas fa-question"></i>
+				<i class={`${props.data.iconClasses}`}></i>
 			</div>
-			<p className={classes["projects-type"]}>Personal</p>
+			<p className={classes["projects-type"]}>
+				{props.data.personal ? "Personal" : "Group"}
+			</p>
 			<div className={classes["projects-detail"]}>
-				<h2 className={classes["projects-title"]}>DAMMY APP</h2>
-				<p className={classes["projects-description"]}>DAMMY APP</p>
-				<div className={classes["projects-using_skills"]}>
-					<div>skills</div>
-					<div>skills</div>
-					<div>skills</div>
+				<h2 className={classes["projects-title"]}>{props.data.title}</h2>
+				<p className={classes["projects-description"]}>
+					{props.data.descrioption}
+				</p>
+				<div className={classes["projects-using_skills"]}>{skills}</div>
+			</div>
+			{(props.data.gitHubUrl || props.data.demoUrl) && (
+				<div className={classes["projects-links"]}>
+					{gitHubUrl}
+					{demoUrl}
 				</div>
-			</div>
-			<div className={classes["projects-links"]}>
-				<a href="/#" target="_brank" rel="noopener noreferrer">
-					Git Hub
-				</a>
-				<a href="/#" target="_brank" rel="noopener noreferrer">
-					URL
-				</a>
-			</div>
+			)}
 		</div>
 	);
 };

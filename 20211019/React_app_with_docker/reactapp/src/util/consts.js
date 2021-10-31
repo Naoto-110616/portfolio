@@ -43,7 +43,7 @@ export const FIREBASE = "Firebase";
 export const VBA = "VBA";
 
 export const OFFSET_WORK_LOG = "75";
-export const OFFSET_TOOL_SET = "90";
+export const OFFSET_TOOL_SET = "80";
 export const OFFSET_SIDE_PROJECTS = "70";
 
 export const GITHUB_URL = "https://github.com/Naoto-110616/portfolio";
