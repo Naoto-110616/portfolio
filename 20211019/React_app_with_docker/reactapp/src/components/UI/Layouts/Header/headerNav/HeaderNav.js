@@ -2,6 +2,7 @@ import classes from "./HeaderNav.module.css";
 import HeaderNavButton from "./HeaderNavButton";
 import { OFFSET_WORK_LOG, OFFSET_TOOL_SET } from "../../../../../util/consts";
 import MediaQuery from "react-responsive";
+import BurgerMenu from "../burgerMenu/BurgerMenu";
 
 const HeaderNav = () => {
   return (
@@ -22,8 +23,8 @@ const HeaderNav = () => {
         </ul>
       </MediaQuery>
       <MediaQuery query="(max-width:767px)">
-		  
-	  </MediaQuery>
+        <BurgerMenu />
+      </MediaQuery>
     </nav>
   );
 };
