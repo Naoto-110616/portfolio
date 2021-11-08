@@ -1,18 +1,24 @@
 .header {
-	background-color: #5f9ea0;
-	position: fixed;
-	width: 100%;
-	color: #fff;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0 5rem;
-	height: 5rem;
+  background-color: #5f9ea0;
+  position: fixed;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5rem;
+  height: 5rem;
 }
 .header a {
-	text-decoration: none;
-	color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 .header-item {
-	display: flex;
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding: 0;
+  }
 }

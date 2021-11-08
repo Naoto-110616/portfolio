@@ -6,6 +6,7 @@ services:
     tty: true
     environment:
       - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
     volumes:
       - ./:/usr/src/app
     command: sh -c "cd reactapp && npm start"
