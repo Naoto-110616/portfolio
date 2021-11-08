@@ -1,10 +1,17 @@
 .item-wrap {
-	color: #395e5f;
-	width: 5rem;
+  color: #395e5f;
+  width: 5rem;
 }
 .item-icon {
-	font-size: 3rem;
+  font-size: 3rem;
 }
 .item-name {
-	margin: 0;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .item-wrap {
+    width: 33%;
+    margin: 0 0 1.5rem 0;
+  }
 }
