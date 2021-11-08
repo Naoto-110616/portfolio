@@ -13,6 +13,16 @@ const PROJECTS = [
 		demoUrl: "https://demo.com",
 		personal: true,
 	},
+	{
+		id: 2,
+		title: "goodbook",
+		iconClasses: "fab fa-facebook",
+		descrioption: "I made it based on facebook.",
+		skills: [REACT, DOCKER, GIT, GITHUB],
+		gitHubUrl: "https://github.com/Naoto-110616/Goodbook_react-app",
+		demoUrl: "https://demo.com",
+		personal: true,
+	},
 ];
 
 const SideProjects = () => {
