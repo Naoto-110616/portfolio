@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { fallDown as Menu } from "react-burger-menu";
 import BurgerNav from "./BurgerNav";
 import {
@@ -7,15 +8,34 @@ import {
 } from "../../../../../util/consts";
 
 const BurderMenu = () => {
+  const [isOpen, setOpen] = useState(false);
+  const handleIsOpen = () => {
+    setOpen(!isOpen);
+  };
+  const closeSideBar = () => {
+    setOpen(false);
+  };
   return (
-    <Menu right>
-      <BurgerNav href={"#worklog"} offset={OFFSET_WORK_LOG}>
+    <Menu right isOpen={isOpen} onOpen={handleIsOpen} onClose={handleIsOpen}>
+      <BurgerNav
+        closeSideBar={closeSideBar}
+        href={"#worklog"}
+        offset={OFFSET_WORK_LOG}
+      >
         Work Log
       </BurgerNav>
-      <BurgerNav href={"#toolset"} offset={OFFSET_TOOL_SET}>
+      <BurgerNav
+        closeSideBar={closeSideBar}
+        href={"#toolset"}
+        offset={OFFSET_TOOL_SET}
+      >
         Toolset
       </BurgerNav>
-      <BurgerNav href={"#side-projects"} offset={OFFSET_SIDE_PROJECTS}>
+      <BurgerNav
+        closeSideBar={closeSideBar}
+        href={"#side-projects"}
+        offset={OFFSET_SIDE_PROJECTS}
+      >
         Side Projects
       </BurgerNav>
     </Menu>
