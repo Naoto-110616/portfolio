@@ -8,7 +8,7 @@ const Layouts = (props) => {
 	return (
 		<>
 			<MediaQuery query="(max-width: 767px)">
-				<BurgerMenu />
+				<BurgerMenu width={250} />
 			</MediaQuery>
 			<Header />
 			<main className={classes.main}>{props.children}</main>
