@@ -15,29 +15,44 @@ const BurderMenu = () => {
   const closeSideBar = () => {
     setOpen(false);
   };
+  const BURGERNAV = [
+    {
+      id: "workLog",
+      name: "Work Log",
+      handler: closeSideBar,
+      href: "#worklog",
+      offset: OFFSET_WORK_LOG,
+    },
+    {
+      id: "toolset",
+      name: "Toolset",
+      handler: closeSideBar,
+      href: "#toolset",
+      offset: OFFSET_TOOL_SET,
+    },
+    {
+      id: "side-projects",
+      name: "Side Projects",
+      handler: closeSideBar,
+      href: "#side-projects",
+      offset: OFFSET_SIDE_PROJECTS,
+    },
+  ];
+  const burgerNav = BURGERNAV.map((data) => {
+    return (
+      <BurgerNav
+        id={data.id}
+        onClick={data.handler}
+        href={data.href}
+        offset={data.offset}
+      >
+        {data.name}
+      </BurgerNav>
+    );
+  });
   return (
     <Menu right isOpen={isOpen} onOpen={handleIsOpen} onClose={handleIsOpen}>
-      <BurgerNav
-        closeSideBar={closeSideBar}
-        href={"#worklog"}
-        offset={OFFSET_WORK_LOG}
-      >
-        Work Log
-      </BurgerNav>
-      <BurgerNav
-        closeSideBar={closeSideBar}
-        href={"#toolset"}
-        offset={OFFSET_TOOL_SET}
-      >
-        Toolset
-      </BurgerNav>
-      <BurgerNav
-        closeSideBar={closeSideBar}
-        href={"#side-projects"}
-        offset={OFFSET_SIDE_PROJECTS}
-      >
-        Side Projects
-      </BurgerNav>
+      {burgerNav}
     </Menu>
   );
 };
