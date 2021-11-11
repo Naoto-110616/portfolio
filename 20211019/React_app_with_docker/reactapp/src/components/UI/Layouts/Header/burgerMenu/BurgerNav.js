@@ -3,6 +3,8 @@ const BurgerNav = (props) => {
   return (
     <div>
       <AnchorLink
+        id={props.id}
+        key={props.id}
         onClick={props.onClick}
         href={props.href}
         offset={props.offset}

@@ -15,33 +15,34 @@ const BurderMenu = () => {
   const closeSideBar = () => {
     setOpen(false);
   };
-  const BURGERNAV = [
+  const BURGER_NAV = [
     {
-      id: "workLog",
+      id: "burger_worklog",
       name: "Work Log",
       handler: closeSideBar,
       href: "#worklog",
       offset: OFFSET_WORK_LOG,
     },
     {
-      id: "toolset",
+      id: "burger_toolset",
       name: "Toolset",
       handler: closeSideBar,
       href: "#toolset",
       offset: OFFSET_TOOL_SET,
     },
     {
-      id: "side-projects",
+      id: "burger_side-projects",
       name: "Side Projects",
       handler: closeSideBar,
       href: "#side-projects",
       offset: OFFSET_SIDE_PROJECTS,
     },
   ];
-  const burgerNav = BURGERNAV.map((data) => {
+  const burgerNav = BURGER_NAV.map((data) => {
     return (
       <BurgerNav
         id={data.id}
+        key={data.id}
         onClick={data.handler}
         href={data.href}
         offset={data.offset}
