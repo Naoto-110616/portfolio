@@ -71,9 +71,13 @@ code {
 .bm-item-list {
 	color: #fff;
 }
-.bm-item-list div a {
-	color: #fff;
+.bm-item-list a {
 	text-decoration: none;
+}
+.bm-item-list a div {
+	padding: 0.5rem;
+	background-color: #5f9ea0;
+	color: #fff;
 }
 
 /* Individual item */
