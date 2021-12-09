@@ -22,7 +22,7 @@ const FRONT_DATA = [
 	{
 		title: REACT,
 		iconClassName: "fab fa-react",
-		rate: "☆☆",
+		rate: "☆☆☆",
 	},
 	{
 		title: JAVA_SCRIPT,
@@ -58,7 +58,7 @@ const BACK_DATA = [
 	},
 	{
 		title: MY_SQL,
-		iconClassName: "fas fa-database",
+		iconClassName: "fas fa-server",
 		rate: "☆☆",
 	},
 	{
@@ -108,14 +108,14 @@ const ToolSet = () => {
 	));
 	const tools = TOOLS.map((data) => <Item key={data.title} data={data} />);
 	return (
-		<section id="toolset" className={classes["toolset-wrap"]}>
-			<SectionTItle title={"Toolset"} />
+		<section id="toolSet" className={classes["toolSet-wrap"]}>
+			<SectionTItle title={"ToolSet"} />
 			<h3>Frontend</h3>
-			<div className={classes["toolset-item"]}>{frontItems}</div>
+			<div className={classes["toolSet-item"]}>{frontItems}</div>
 			<h3>Backend</h3>
-			<div className={classes["toolset-item"]}>{backItems}</div>
+			<div className={classes["toolSet-item"]}>{backItems}</div>
 			<h3>Tools</h3>
-			<div className={classes["toolset-item"]}>{tools}</div>
+			<div className={classes["toolSet-item"]}>{tools}</div>
 		</section>
 	);
 };

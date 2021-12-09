@@ -1,22 +1,22 @@
-.toolset-wrap {
+.toolSet-wrap {
   text-align: center;
   width: 70%;
   margin: 0 auto;
 }
-.toolset-wrap h3 {
+.toolSet-wrap h3 {
   color: #5f9ea0;
   text-decoration: underline #5f9ea0;
   font-weight: 300;
   font-size: 1rem;
 }
-.toolset-item {
+.toolSet-item {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   margin: 0 0 3rem 0;
 }
 @media (max-width: 767px) {
-  .toolset-wrap {
+  .toolSet-wrap {
     width: 90%;
   }
 }

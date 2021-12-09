@@ -36,7 +36,7 @@ const SideProjectsItem = (props) => {
 			<div className={classes["projects-detail"]}>
 				<h2 className={classes["projects-title"]}>{props.data.title}</h2>
 				<p className={classes["projects-description"]}>
-					{props.data.descrioption}
+					{props.data.description}
 				</p>
 				<div className={classes["projects-using_skills"]}>{skills}</div>
 			</div>

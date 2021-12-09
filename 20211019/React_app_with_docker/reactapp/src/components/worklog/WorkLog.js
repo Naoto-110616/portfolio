@@ -45,9 +45,9 @@ const WorkLog = () => {
 		<WorkCard key={data.id} data={data} />
 	));
 	return (
-		<section id="worklog" className={classes["worklog-section"]}>
+		<section id="workLog" className={classes["workLog-section"]}>
 			<SectionTitle title="Work Log" className={classes.title} />
-			<div className={classes["worklog-cards"]}>{workCard}</div>
+			<div className={classes["workLog-cards"]}>{workCard}</div>
 		</section>
 	);
 };
