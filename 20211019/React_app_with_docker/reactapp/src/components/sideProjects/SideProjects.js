@@ -7,7 +7,7 @@ const PROJECTS = [
 		id: 1,
 		title: "Portfolio Page",
 		iconClasses: "far fa-id-badge",
-		descrioption: "This portoflio site.",
+		description: "This portfolio site.",
 		skills: [REACT, DOCKER, GIT, GITHUB],
 		gitHubUrl: "https://github.com/Naoto-110616/portfolio",
 		demoUrl: "https://demo.com",
@@ -17,7 +17,7 @@ const PROJECTS = [
 		id: 2,
 		title: "goodbook",
 		iconClasses: "fab fa-facebook",
-		descrioption: "I made it based on facebook.",
+		description: "I made it based on facebook.",
 		skills: [REACT, DOCKER, GIT, GITHUB],
 		gitHubUrl: "https://github.com/Naoto-110616/Goodbook_react-app",
 		demoUrl: "https://demo.com",
@@ -30,7 +30,7 @@ const SideProjects = () => {
 		<SideProjectsItem key={projects.id} data={projects} />
 	));
 	return (
-		<section id="side-projects" className={classes["side-propjects"]}>
+		<section id="side-projects" className={classes["side-projects"]}>
 			<SectionTitle title={"Side Projects"} />
 			<div className={classes["side-projects_list"]}>{sideProject}</div>
 		</section>

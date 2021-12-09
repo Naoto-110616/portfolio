@@ -1,7 +1,7 @@
-.worklog-section {
+.workLog-section {
   background-color: #f5f5f5;
 }
-.worklog-cards {
+.workLog-cards {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;

@@ -7,7 +7,7 @@ import {
 	OFFSET_SIDE_PROJECTS,
 } from "../../../../../util/consts";
 
-const BurderMenu = () => {
+const BurgerMenu = () => {
 	const [isOpen, setOpen] = useState(false);
 	const handleIsOpen = () => {
 		setOpen(!isOpen);
@@ -17,17 +17,17 @@ const BurderMenu = () => {
 	};
 	const BURGER_NAV = [
 		{
-			id: "burger_worklog",
+			id: "burger_workLog",
 			name: "Work Log",
 			handler: closeSideBar,
-			href: "#worklog",
+			href: "#workLog",
 			offset: OFFSET_WORK_LOG,
 		},
 		{
-			id: "burger_toolset",
-			name: "Toolset",
+			id: "burger_toolSet",
+			name: "ToolSet",
 			handler: closeSideBar,
-			href: "#toolset",
+			href: "#toolSet",
 			offset: OFFSET_TOOL_SET,
 		},
 		{
@@ -58,4 +58,4 @@ const BurderMenu = () => {
 	);
 };
 
-export default BurderMenu;
+export default BurgerMenu;

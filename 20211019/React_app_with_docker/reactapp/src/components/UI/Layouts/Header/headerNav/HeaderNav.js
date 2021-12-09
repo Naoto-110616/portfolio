@@ -9,15 +9,15 @@ import {
 const HeaderNav = () => {
 	const HEADER_NAV = [
 		{
-			id: "header_worklog",
+			id: "header_workLog",
 			navItem: "Work Log",
-			href: "#worklog",
+			href: "#workLog",
 			offset: OFFSET_WORK_LOG,
 		},
 		{
-			id: "header_toolset",
-			navItem: "Toolset",
-			href: "#toolset",
+			id: "header_toolSet",
+			navItem: "ToolSet",
+			href: "#toolSet",
 			offset: OFFSET_TOOL_SET,
 		},
 		{
