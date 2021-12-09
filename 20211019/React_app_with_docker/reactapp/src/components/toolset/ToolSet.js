@@ -17,6 +17,9 @@ import {
 	WORDPRESS,
 	MY_SQL,
 	FIREBASE,
+	WEBPACK,
+	NPM,
+	NODE,
 } from "../../util/consts";
 const FRONT_DATA = [
 	{
@@ -52,6 +55,11 @@ const FRONT_DATA = [
 ];
 const BACK_DATA = [
 	{
+		title: NODE,
+		iconClassName: "fab fa-node",
+		rate: "☆",
+	},
+	{
 		title: PHP,
 		iconClassName: "fab fa-php",
 		rate: "☆☆☆",
@@ -84,13 +92,23 @@ const TOOLS = [
 		rate: "☆☆",
 	},
 	{
+		title: WEBPACK,
+		iconClassName: "fas fa-cube",
+		rate: "☆☆",
+	},
+	{
+		title: NPM,
+		iconClassName: "fab fa-npm",
+		rate: "☆☆",
+	},
+	{
 		title: GIT,
 		iconClassName: "fab fa-git-alt",
 		rate: "☆☆☆",
 	},
 	{
 		title: GITHUB,
-		iconClassName: "fab fa-github-square",
+		iconClassName: "fab fa-github",
 		rate: "☆☆☆",
 	},
 	{
