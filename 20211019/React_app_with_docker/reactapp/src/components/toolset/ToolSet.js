@@ -17,6 +17,7 @@ import {
   WORDPRESS,
   MY_SQL,
   FIREBASE,
+  WEBPACK,
 } from "../../util/consts";
 const FRONT_DATA = [
   {
@@ -82,6 +83,11 @@ const TOOLS = [
     title: GULP,
     iconClassName: "fab fa-gulp",
     rate: "☆☆",
+  },
+  {
+    title: WEBPACK,
+    iconClassName: "fas fa-cube",
+    rate: "☆",
   },
   {
     title: GIT,

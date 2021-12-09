@@ -25,6 +25,7 @@ export const NODE = "Node.js";
 export const EXPRESS = "Express";
 export const GRAPHQL = "Graphql";
 export const SOCKET_IO = "Socket.IO";
+export const WEBPACK = "webpack";
 
 export const SQL_SERVER = "SQL Server";
 export const POSTGRE_SQL = "PostgreSQL";
