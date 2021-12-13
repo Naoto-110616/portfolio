@@ -20,6 +20,8 @@ export const JAVA = "Java";
 export const PHP = "PHP";
 export const WORDPRESS = "WordPress";
 export const GULP = "gulp";
+export const WEBPACK = "webpack";
+export const NPM = "npm";
 
 export const NODE = "Node.js";
 export const EXPRESS = "Express";
