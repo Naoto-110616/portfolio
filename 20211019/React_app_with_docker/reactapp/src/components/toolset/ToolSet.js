@@ -94,7 +94,7 @@ const TOOLS = [
 	{
 		title: WEBPACK,
 		iconClassName: "fas fa-cube",
-		rate: "☆☆",
+		rate: "☆☆☆",
 	},
 	{
 		title: NPM,
