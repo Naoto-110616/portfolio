@@ -7,7 +7,7 @@ const WorkCard = (props) => {
 			{task}
 		</div>
 	));
-	const usings = props.data.usings.map((using) => (
+	const using = props.data.using.map((using) => (
 		<div key={`${props.data.id}_${using}`} className={classes["card-skill"]}>
 			{using}
 		</div>
@@ -25,7 +25,7 @@ const WorkCard = (props) => {
 				<div>Tasks</div>
 				<div className={classes.wrap}>{tasks}</div>
 				<div>Using</div>
-				<div className={classes.wrap}>{usings}</div>
+				<div className={classes.wrap}>{using}</div>
 			</div>
 		</Card>
 	);

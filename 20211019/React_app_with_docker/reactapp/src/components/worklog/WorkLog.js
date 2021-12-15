@@ -25,7 +25,7 @@ const DATA_LIST = [
 		term: "May 2021 - Present",
 		place: OSAKA_JAPAN,
 		tasks: ["Create web pages", CODING],
-		usings: [
+		using: [
 			JAVA_SCRIPT,
 			HTML5,
 			CSS3,
