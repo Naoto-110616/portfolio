@@ -108,7 +108,7 @@ const TOOLS = [
 	},
 	{
 		title: GITHUB,
-		iconClassName: "fab fa-github",
+		iconClassName: "fab fa-github-square",
 		rate: "☆☆☆",
 	},
 	{
