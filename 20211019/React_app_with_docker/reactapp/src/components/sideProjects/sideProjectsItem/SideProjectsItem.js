@@ -28,7 +28,7 @@ const SideProjectsItem = (props) => {
 	return (
 		<div className={classes.sideProjectsItem}>
 			<div className={classes["icon-wrap"]}>
-				<i class={`${props.data.iconClasses}`}></i>
+				<i className={`${props.data.iconClasses}`}></i>
 			</div>
 			<p className={classes["projects-type"]}>
 				{props.data.personal ? "Personal" : "Group"}
