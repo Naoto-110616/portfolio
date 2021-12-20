@@ -1,130 +1,101 @@
+import { useEffect, useState } from "react";
 import classes from "./ToolSet.module.css";
 import SectionTItle from "../sectionTitle/SectionTitle";
 import Item from "./item/Item";
-import {
-	HTML5,
-	CSS3,
-	SASS,
-	JAVA_SCRIPT,
-	J_QUERY,
-	REACT,
-	PHP,
-	GULP,
-	GIT,
-	GITLAB,
-	GITHUB,
-	DOCKER,
-	WORDPRESS,
-	MY_SQL,
-	FIREBASE,
-	WEBPACK,
-	NPM,
-	NODE,
-} from "../../util/consts";
-const FRONT_DATA = [
-	{
-		title: REACT,
-		iconClassName: "fab fa-react",
-		rate: "☆☆☆",
-	},
-	{
-		title: JAVA_SCRIPT,
-		iconClassName: "fab fa-js-square",
-		rate: "☆☆☆",
-	},
-	{
-		title: J_QUERY,
-		iconClassName: "fab fa-js",
-		rate: "☆☆",
-	},
-	{
-		title: HTML5,
-		iconClassName: "fab fa-html5",
-		rate: "☆☆☆☆☆",
-	},
-	{
-		title: CSS3,
-		iconClassName: "fab fa-css3-alt",
-		rate: "☆☆☆☆☆",
-	},
-	{
-		title: SASS,
-		iconClassName: "fab fa-sass",
-		rate: "☆☆☆☆☆",
-	},
-];
-const BACK_DATA = [
-	{
-		title: NODE,
-		iconClassName: "fab fa-node",
-		rate: "☆",
-	},
-	{
-		title: PHP,
-		iconClassName: "fab fa-php",
-		rate: "☆☆☆",
-	},
-	{
-		title: MY_SQL,
-		iconClassName: "fas fa-server",
-		rate: "☆☆",
-	},
-	{
-		title: FIREBASE,
-		iconClassName: "fas fa-server",
-		rate: "☆☆",
-	},
-];
-const TOOLS = [
-	{
-		title: WORDPRESS,
-		iconClassName: "fab fa-wordpress",
-		rate: "☆☆☆",
-	},
-	{
-		title: DOCKER,
-		iconClassName: "fab fa-docker",
-		rate: "☆☆",
-	},
-	{
-		title: GULP,
-		iconClassName: "fab fa-gulp",
-		rate: "☆☆",
-	},
-	{
-		title: WEBPACK,
-		iconClassName: "fas fa-cube",
-		rate: "☆☆☆",
-	},
-	{
-		title: NPM,
-		iconClassName: "fab fa-npm",
-		rate: "☆☆",
-	},
-	{
-		title: GIT,
-		iconClassName: "fab fa-git-alt",
-		rate: "☆☆☆",
-	},
-	{
-		title: GITHUB,
-		iconClassName: "fab fa-github-square",
-		rate: "☆☆☆",
-	},
-	{
-		title: GITLAB,
-		iconClassName: "fab fa-gitlab",
-		rate: "☆☆",
-	},
-];
+
 const ToolSet = () => {
-	const frontItems = FRONT_DATA.map((data) => (
-		<Item key={data.title} data={data} />
+	const [frontSkills, setFrontSkills] = useState([]);
+	const [backendSkills, setBackendSkills] = useState([]);
+	const [toolSkills, setToolSkills] = useState([]);
+
+	useEffect(() => {
+		const fetchFrontSkills = async () => {
+			const response = await fetch(
+				"https://portfolio-page-react-default-rtdb.firebaseio.com/skills/frontSkills.json"
+			);
+			const responseData = await response.json();
+
+			const loadedFrontSkills = [];
+			for (const key in responseData) {
+				loadedFrontSkills.push({
+					id: key,
+					title: responseData[key].title,
+					rate: responseData[key].rate,
+					iconClassName: responseData[key].iconClassName,
+				});
+			}
+			setFrontSkills(loadedFrontSkills);
+		};
+		fetchFrontSkills();
+	}, []);
+	useEffect(() => {
+		const fetchBackendSkills = async () => {
+			const response = await fetch(
+				"https://portfolio-page-react-default-rtdb.firebaseio.com/skills/backendSkills.json"
+			);
+			const responseData = await response.json();
+
+			const loadedBackendSkills = [];
+			for (const key in responseData) {
+				loadedBackendSkills.push({
+					id: key,
+					title: responseData[key].title,
+					rate: responseData[key].rate,
+					iconClassName: responseData[key].iconClassName,
+				});
+			}
+			setBackendSkills(loadedBackendSkills);
+		};
+		fetchBackendSkills();
+	}, []);
+	useEffect(() => {
+		const fetchToolSkills = async () => {
+			const response = await fetch(
+				"https://portfolio-page-react-default-rtdb.firebaseio.com/skills/ToolSkills.json"
+			);
+			const responseData = await response.json();
+
+			const loadedToolSkills = [];
+			for (const key in responseData) {
+				loadedToolSkills.push({
+					id: key,
+					title: responseData[key].title,
+					rate: responseData[key].rate,
+					iconClassName: responseData[key].iconClassName,
+				});
+			}
+			setToolSkills(loadedToolSkills);
+		};
+		fetchToolSkills();
+	}, []);
+
+	const frontItems = frontSkills.map((frontSkill) => (
+		<Item
+			key={frontSkill.id}
+			id={frontSkill.id}
+			title={frontSkill.title}
+			rate={frontSkill.rate}
+			iconClassName={frontSkill.iconClassName}
+		/>
 	));
-	const backItems = BACK_DATA.map((data) => (
-		<Item key={data.title} data={data} />
+	const backItems = backendSkills.map((backendSkill) => (
+		<Item
+			key={backendSkill.id}
+			id={backendSkill.id}
+			title={backendSkill.title}
+			rate={backendSkill.rate}
+			iconClassName={backendSkill.iconClassName}
+		/>
 	));
-	const tools = TOOLS.map((data) => <Item key={data.title} data={data} />);
+	const tools = toolSkills.map((tool) => (
+		<Item
+			key={tool.id}
+			id={tool.id}
+			title={tool.title}
+			rate={tool.rate}
+			iconClassName={tool.iconClassName}
+		/>
+	));
 	return (
 		<section id="toolSet" className={classes["toolSet-wrap"]}>
 			<SectionTItle title={"ToolSet"} />

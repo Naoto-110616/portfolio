@@ -1,8 +1,8 @@
 import React from "react";
-import ToolSet from "./components/toolset/ToolSet";
+import ToolSet from "./components/toolSet/ToolSet";
 import Layouts from "./components/UI/Layouts/Layouts";
 import Welcome from "./components/welcome/Welcome";
-import WorkLog from "./components/worklog/WorkLog";
+import WorkLog from "./components/workLog/WorkLog";
 import SideProjects from "./components/sideProjects/SideProjects";
 
 function App() {
