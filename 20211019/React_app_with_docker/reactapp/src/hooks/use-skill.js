@@ -1,37 +1,33 @@
-import Item from "../components/toolSet/item/Item";
-
 import { useEffect, useState } from "react";
 
-const useSkills = () => {
+const useSkill = (url) => {
 	const [getSkills, setGetSkills] = useState([]);
 
-	useEffect((enteredUrl) => {
+	useEffect(() => {
 		const fetchSkills = async () => {
-			const response = await fetch(enteredUrl);
+			const response = await fetch(url);
 			const responseData = await response.json();
 
-			const loadedFrontSkills = [];
+			const loadedSkills = [];
 			for (const key in responseData) {
-				loadedFrontSkills.push({
+				loadedSkills.push({
 					id: key,
 					title: responseData[key].title,
 					rate: responseData[key].rate,
 					iconClassName: responseData[key].iconClassName,
 				});
 			}
-			setGetSkills(loadedFrontSkills);
+			setGetSkills(loadedSkills);
 		};
 		fetchSkills();
-	}, []);
-	const frontItems = getSkills.map((skill) => (
-		<Item
-			key={skill.id}
-			id={skill.id}
-			title={skill.title}
-			rate={skill.rate}
-			iconClassName={skill.iconClassName}
-		/>
-	));
+	}, [url]);
+	return {
+		key: getSkills.id,
+		id: getSkills.id,
+		title: getSkills.title,
+		rate: getSkills.rate,
+		iconClassName: getSkills.iconClassName,
+	};
 };
 
-export default useSkills;
+export default useSkill;

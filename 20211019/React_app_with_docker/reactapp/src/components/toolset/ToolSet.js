@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import classes from "./ToolSet.module.css";
 import SectionTItle from "../sectionTitle/SectionTitle";
 import Item from "./item/Item";
+import useSkill from "../../hooks/use-skill";
 
 const ToolSet = () => {
 	const [frontSkills, setFrontSkills] = useState([]);
@@ -68,6 +69,12 @@ const ToolSet = () => {
 		};
 		fetchToolSkills();
 	}, []);
+
+	console.log(
+		useSkill(
+			"https://portfolio-page-react-default-rtdb.firebaseio.com/skills/frontSkills.json"
+		)
+	);
 
 	const frontItems = frontSkills.map((frontSkill) => (
 		<Item
