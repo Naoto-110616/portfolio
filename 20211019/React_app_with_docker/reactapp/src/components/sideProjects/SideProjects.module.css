@@ -1,9 +1,0 @@
-.side-projects {
-  background-color: #f5f5f5;
-  padding: 0 0 3rem 0;
-}
-.side-projects_list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
