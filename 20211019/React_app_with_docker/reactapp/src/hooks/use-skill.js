@@ -22,11 +22,7 @@ const useSkill = (url) => {
 		fetchSkills();
 	}, [url]);
 	return {
-		key: getSkills.id,
-		id: getSkills.id,
-		title: getSkills.title,
-		rate: getSkills.rate,
-		iconClassName: getSkills.iconClassName,
+		getSkills,
 	};
 };
 
