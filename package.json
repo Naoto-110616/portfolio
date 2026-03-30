@@ -1,0 +1,42 @@
+{
+  "name": "zexora",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Next.js starter package with Contentful, Resend, and TanStack Query.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "nextjs",
+    "contentful",
+    "resend",
+    "tanstack-query",
+    "starter"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tanstack/react-query": "^5.90.21",
+    "contentful": "^11.10.7",
+    "next": "^16.1.7",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "resend": "^6.9.4",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.5",
+    "@tailwindcss/postcss": "^4.2.1",
+    "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.1.7",
+    "tailwindcss": "^4.2.1",
+    "typescript": "^5.9.3"
+  }
+}
