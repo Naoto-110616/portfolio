@@ -31,7 +31,7 @@ function HeroRow({ label, value, isHighlighted = false }: HeroItem) {
 				{isHighlighted ? (
 					<span
 						aria-hidden="true"
-						className="absolute left-0 top-[24px] h-[6px] w-[45px] bg-accent md:top-[42px] md:w-[84px] md:h-2"
+						className="absolute left-0 top-[24px] h-[6px] w-[45px] bg-accent md:top-[36px] md:w-[84px] md:h-2"
 					/>
 				) : null}
 			</div>
