@@ -8,7 +8,7 @@ type LinkProps = {
 
 export function Link({ label, className = "", iconClassName = "" }: LinkProps) {
 	const classes = [
-		"inline-flex items-center text-caption text-accent",
+		"inline-flex items-center text-caption text-accent md:text-body",
 		className,
 	]
 		.filter(Boolean)

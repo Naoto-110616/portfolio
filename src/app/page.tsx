@@ -12,12 +12,10 @@ export const revalidate = 300;
 
 export default async function HomePage() {
 	return (
-		<div id="top" className="relative flex flex-col gap-[56px]">
+		<div id="top" className="relative flex flex-col gap-[56px] wide:gap-[80px]">
 			<LayoutGuides lineClassName="bg-foreground/10" />
 			<Header />
-			<main
-				className="mx-auto flex min-h-screen w-full max-w-content flex-col gap-[96px] px-[4.071%] md:px-0 z-20"
-			>
+			<main className="mx-auto flex min-h-screen w-full max-w-content flex-col gap-[96px] px-[4.071%] md:px-0 z-20">
 				<HeroSection />
 				<WorkSection />
 				<MoreProjectsSection />

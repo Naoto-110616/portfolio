@@ -1,3 +1,5 @@
+import type { CSSProperties } from "react";
+
 import { AnimatedSectionTitle } from "@/components/motion/animated-section-title";
 import { StaggerGroup } from "@/components/motion/stagger-group";
 import { StaggerItem } from "@/components/motion/stagger-item";
@@ -56,16 +58,20 @@ const defaultItems: MoreProjectItem[] = [
 ];
 
 function MoreProjectCard({ imageUrl, height, href, alt }: MoreProjectItem) {
+	const style = {
+		"--card-height": `${height}px`,
+	} as CSSProperties;
+
 	return (
 		<a
-			className="block w-full overflow-hidden transition-opacity hover:opacity-90"
+			className="block w-full overflow-hidden transition-opacity hover:opacity-90 md:mx-auto md:w-[512px]"
 			href={href}
+			style={style}
 		>
 			<img
 				alt={alt}
-				className="w-full object-cover"
+				className="h-(--card-height) w-full object-cover md:h-[130px]"
 				src={imageUrl}
-				style={{ height: `${height}px` }}
 			/>
 		</a>
 	);
@@ -75,15 +81,15 @@ export function MoreProjectsSection({
 	items = defaultItems,
 }: MoreProjectsSectionProps) {
 	return (
-		<section className="flex w-full flex-col gap-stack-sm">
+		<section className="flex w-full flex-col gap-stack-sm md:gap-section-lg">
 			<AnimatedSectionTitle
 				title="More Projects"
-				titleClassName="text-heading"
+				titleClassName="text-heading md:text-section-lg md:font-black"
 				withDivider
 			/>
 
 			<StaggerGroup
-				className="flex w-full flex-col gap-stack-sm overflow-hidden"
+				className="flex w-full flex-col gap-stack-sm overflow-hidden md:gap-block-lg"
 				delayChildren={0.08}
 				staggerChildren={0.1}
 			>

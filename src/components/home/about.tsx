@@ -54,9 +54,11 @@ const defaultBlocks: AboutBlock[] = [
 
 function AboutContentBlock({ title, paragraphs }: AboutBlock) {
 	return (
-		<section className="flex flex-col gap-stack">
-			<h3 className="text-heading text-foreground">{title}</h3>
-			<div className="flex flex-col gap-stack text-caption leading-normal text-foreground">
+		<section className="flex flex-col gap-stack md:grid md:grid-cols-[256px_minmax(0,1fr)] md:gap-0">
+			<h3 className="text-heading text-foreground md:text-section md:font-bold">
+				{title}
+			</h3>
+			<div className="flex flex-col gap-stack text-caption leading-normal text-foreground md:text-body">
 				{paragraphs.map((paragraph) => (
 					<p key={paragraph}>{paragraph}</p>
 				))}
@@ -67,32 +69,41 @@ function AboutContentBlock({ title, paragraphs }: AboutBlock) {
 
 export function AboutSection({ blocks = defaultBlocks }: AboutSectionProps) {
 	return (
-		<section id="about" className="flex w-full flex-col gap-block">
-			<AnimatedSectionTitle title="About" />
+		<section id="about" className="flex w-full flex-col gap-block md:gap-section-lg">
+			<AnimatedSectionTitle
+				title="About"
+				titleClassName="md:text-section-lg md:font-black"
+			/>
 
-			<SectionReveal>
-				<img
-					alt="Naoto Okawa portrait"
-					className="aspect-1536/2048 w-full object-cover"
-					src={aboutImage}
-				/>
-			</SectionReveal>
+			<div className="flex flex-col gap-block md:grid md:grid-cols-[368px_minmax(0,1fr)] md:items-start md:gap-4">
+				<SectionReveal>
+					<img
+						alt="Naoto Okawa portrait"
+						className="aspect-1536/2048 w-full object-cover md:h-[491px] md:w-[368px] md:aspect-auto"
+						src={aboutImage}
+					/>
+				</SectionReveal>
 
-			<SectionReveal y={20}>
-				<p className="text-section text-foreground">{leadText}</p>
-			</SectionReveal>
+				<div className="flex flex-col gap-block md:gap-section-lg">
+					<SectionReveal y={20}>
+						<p className="text-section text-foreground md:max-w-[512px] md:text-[40px] md:font-black md:leading-[1.4]">
+							{leadText}
+						</p>
+					</SectionReveal>
 
-			<StaggerGroup
-				className="flex flex-col gap-block-md"
-				delayChildren={0.08}
-				staggerChildren={0.14}
-			>
-				{blocks.map((block) => (
-					<StaggerItem key={block.title}>
-						<AboutContentBlock {...block} />
-					</StaggerItem>
-				))}
-			</StaggerGroup>
+					<StaggerGroup
+						className="flex flex-col gap-block-md md:gap-section-lg"
+						delayChildren={0.08}
+						staggerChildren={0.14}
+					>
+						{blocks.map((block) => (
+							<StaggerItem key={block.title}>
+								<AboutContentBlock {...block} />
+							</StaggerItem>
+						))}
+					</StaggerGroup>
+				</div>
+			</div>
 		</section>
 	);
 }

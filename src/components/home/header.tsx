@@ -30,36 +30,68 @@ export function Header({
 	return (
 		<header>
 			<SectionReveal
-				className="mx-auto flex w-full max-w-content flex-col gap-block px-[4.071%] pt-4 md:px-0 md:py-6"
+				className="mx-auto flex w-full max-w-content flex-col gap-block px-[4.071%] pt-4 md:px-0 md:pt-6"
 				y={20}
 			>
-				<div className="flex items-start justify-between gap-stack-lg">
-					<p className="text-caption-sm leading-none">{sinceLabel}</p>
+				<div className="md:hidden">
+					<div className="flex items-start justify-between gap-stack-lg">
+						<p className="text-caption-sm leading-none">{sinceLabel}</p>
 
-					<CurrentTime className="gap-stack text-right text-caption-sm leading-none" />
+						<CurrentTime className="gap-stack wide:gap-[14px] text-right text-caption-sm leading-none" />
+					</div>
+
+					<nav aria-label="Primary" className="mt-block">
+						<StaggerGroup
+							as="ul"
+							className="grid grid-cols-8 text-caption-sm leading-none"
+							delayChildren={0.1}
+							staggerChildren={0.08}
+						>
+							{links.map((link) => (
+								<li key={link.label} className="col-span-2 list-none">
+									<StaggerItem>
+										<a
+											className="inline-flex w-full transition-opacity hover:opacity-70"
+											href={link.href}
+										>
+											{link.label}
+										</a>
+									</StaggerItem>
+								</li>
+							))}
+						</StaggerGroup>
+					</nav>
 				</div>
 
-				<nav aria-label="Primary">
-					<StaggerGroup
-						as="ul"
-						className="grid grid-cols-8 text-caption-sm leading-none md:grid-cols-8 md:gap-0"
-						delayChildren={0.1}
-						staggerChildren={0.08}
-					>
-						{links.map((link) => (
-							<li key={link.label} className="col-span-2 list-none">
-								<StaggerItem>
-									<a
-										className="inline-flex w-full transition-opacity hover:opacity-70"
-										href={link.href}
-									>
-										{link.label}
-									</a>
-								</StaggerItem>
-							</li>
-						))}
-					</StaggerGroup>
-				</nav>
+				<div className="hidden md:grid md:grid-cols-8 md:items-start">
+					<p className="text-body leading-normal">{sinceLabel}</p>
+
+					<nav aria-label="Primary" className="col-span-2">
+						<StaggerGroup
+							as="ul"
+							className="grid grid-cols-2 gap-y-4 text-body leading-normal"
+							delayChildren={0.1}
+							staggerChildren={0.08}
+						>
+							{links.map((link) => (
+								<li key={link.label} className="list-none">
+									<StaggerItem y={12}>
+										<a
+											className="inline-flex w-full transition-opacity hover:opacity-70"
+											href={link.href}
+										>
+											{link.label}
+										</a>
+									</StaggerItem>
+								</li>
+							))}
+						</StaggerGroup>
+					</nav>
+
+					<div className="col-span-4" />
+
+					<CurrentTime className="col-span-1 gap-0 text-body leading-normal" />
+				</div>
 			</SectionReveal>
 		</header>
 	);

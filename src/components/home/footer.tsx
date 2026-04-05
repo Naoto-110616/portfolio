@@ -31,13 +31,13 @@ export function Footer() {
 			/>
 
 			<SectionReveal
-				className="relative mx-auto flex max-w-content flex-col gap-6 px-[4.071%] pb-16 pt-4 md:px-0 md:pb-40 md:pt-6"
+				className="relative mx-auto flex max-w-content flex-col gap-6 px-[4.071%] pb-16 pt-4 md:gap-10 md:px-0 md:pb-40 md:pt-10"
 				y={40}
 			>
 				<div className="flex flex-col gap-block">
 					<div className="grid grid-cols-8 items-start">
 						<StaggerGroup
-							className="col-span-6 flex flex-col gap-stack-sm"
+							className="col-span-6 wide:col-span-7 grid grid-cols-2 gap-y-[14px] md:w-[256px] md:text-body"
 							staggerChildren={0.08}
 						>
 							{socialLinks.map((link) => (
@@ -47,22 +47,24 @@ export function Footer() {
 							))}
 						</StaggerGroup>
 
-						<CurrentTime className="col-span-2 text-caption text-accent" />
+						<CurrentTime className="col-span-2 wide:col-span-1 wide:gap-[14px] text-caption text-accent md:text-body" />
 					</div>
 
 					<a
-						className="w-fit text-caption text-accent transition-opacity hover:opacity-80"
+						className="w-fit text-caption text-accent transition-opacity hover:opacity-80 md:text-body md:leading-normal"
 						href="mailto:naoto.okawa0616@gmail.com"
 					>
 						naoto.okawa0616@gmail.com
 					</a>
 				</div>
 				<div>
-					<div className="grid grid-cols-8 items-center justify-between text-caption text-accent">
-						<p className="col-span-6">© 2026, All rights reserved</p>
+					<div className="grid grid-cols-8 items-center justify-between text-caption text-accent md:text-body md:leading-normal">
+						<p className="col-span-6 wide:col-span-7">
+							© 2026, All rights reserved
+						</p>
 
 						<a
-							className="col-span-2 transition-opacity hover:opacity-80"
+							className="col-span-2 wide:col-span-1 transition-opacity hover:opacity-80"
 							href="#top"
 						>
 							<Link
@@ -72,17 +74,17 @@ export function Footer() {
 							/>
 						</a>
 					</div>
-					<hr className="border-accent-soft" />
+					<hr className="mt-2 border-accent-soft md:mt-0" />
 				</div>
 
-				<SectionReveal className="pointer-events-none absolute bottom-[-18px] left-1/2 w-[clamp(360px,58vw,1024px)] -translate-x-1/2">
+				<SectionReveal className="pointer-events-none absolute bottom-[-18px] left-1/2 w-[clamp(360px,58vw,1024px)] -translate-x-1/2 md:bottom-[-107px] md:w-[1024px]">
 					<Image
 						alt=""
-						className="block h-auto w-full max-w-[clamp(360px,58vw,1024px)]"
-						height={66}
+						className="block h-auto w-full max-w-[clamp(360px,58vw,1024px)] md:max-w-[1024px]"
+						height={309}
 						priority
 						src="/name.svg"
-						width={360}
+						width={1024}
 					/>
 				</SectionReveal>
 			</SectionReveal>

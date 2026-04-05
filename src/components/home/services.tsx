@@ -54,11 +54,15 @@ const defaultItems: ServiceItem[] = [
 
 function ServiceGroup({ title, points }: ServiceItem) {
 	return (
-		<section className="flex flex-col gap-8">
-			<h3 className="text-section text-foreground">{title}</h3>
-			<div className="flex flex-col gap-16 text-caption leading-normal text-foreground">
+		<section className="flex flex-col gap-8 md:gap-[72px]">
+			<h3 className="text-section text-foreground md:w-full md:text-right md:text-[72px] md:font-bold md:leading-none">
+				{title}
+			</h3>
+			<div className="flex flex-col gap-16 text-caption leading-normal text-foreground md:flex-row md:flex-wrap md:gap-4 md:text-body">
 				{points.map((point) => (
-					<p key={point}>{point}</p>
+					<p key={point} className="md:w-[240px]">
+						{point}
+					</p>
 				))}
 			</div>
 		</section>
@@ -67,10 +71,13 @@ function ServiceGroup({ title, points }: ServiceItem) {
 
 export function ServicesSection({ items = defaultItems }: ServicesSectionProps) {
 	return (
-		<section id="services" className="flex w-full flex-col gap-block">
-			<AnimatedSectionTitle title="Services" />
+		<section id="services" className="flex w-full flex-col gap-block md:gap-section-lg">
+			<AnimatedSectionTitle
+				title="Services"
+				titleClassName="md:text-section-lg md:font-black"
+			/>
 
-			<div className="flex flex-col gap-block-lg">
+			<div className="flex flex-col gap-block-lg md:gap-section-lg">
 				{items.map((item, index) => (
 					<SectionReveal key={item.title} delay={index * 0.06} y={24}>
 						<ServiceGroup {...item} />

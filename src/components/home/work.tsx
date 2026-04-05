@@ -46,8 +46,8 @@ function WorkCard({
 	href,
 }: WorkItem) {
 	return (
-		<article className="flex flex-col gap-6">
-			<div className="relative aspect-361/203 w-full overflow-hidden bg-surface">
+		<article className="flex flex-col gap-6 md:flex-row md:items-center md:gap-4">
+			<div className="relative aspect-361/203 w-full overflow-hidden bg-surface md:h-[279px] md:w-[496px] md:shrink-0 md:aspect-auto">
 				<img
 					alt={`${title} preview`}
 					className="h-full w-full object-cover"
@@ -59,47 +59,59 @@ function WorkCard({
 				</div>
 			</div>
 
-			<div className="flex flex-col gap-4 pt-0">
-				<div className="flex items-end justify-between gap-4">
-					<h3 className="text-heading text-foreground">{title}</h3>
+			<div className="flex flex-col gap-4 pt-0 md:min-h-[279px] md:flex-1 md:justify-between">
+				<div className="flex flex-col gap-4 md:gap-4">
+					<div className="flex items-end justify-between gap-4">
+						<h3 className="text-heading text-foreground md:text-[40px] md:font-bold md:leading-none">
+							{title}
+						</h3>
 
-					<a
-						className="inline-flex items-center gap-1 text-caption text-foreground transition-opacity hover:opacity-80"
-						href={href}
-						target={href.startsWith("http") ? "_blank" : undefined}
-						rel={href.startsWith("http") ? "noreferrer" : undefined}
-					>
-						<span>Visit site</span>
-						<ArrowRight
-							aria-hidden="true"
-							className="size-3 shrink-0 -rotate-45"
-							strokeWidth={2}
-						/>
-					</a>
+						<a
+							className="inline-flex items-center gap-1 text-caption text-foreground transition-opacity hover:opacity-80 md:text-body md:leading-normal"
+							href={href}
+							target={href.startsWith("http") ? "_blank" : undefined}
+							rel={href.startsWith("http") ? "noreferrer" : undefined}
+						>
+							<span>Visit site</span>
+							<ArrowRight
+								aria-hidden="true"
+								className="size-3 shrink-0 -rotate-45 md:size-4"
+								strokeWidth={2}
+							/>
+						</a>
+					</div>
+
+					<p className="max-w-[180.5px] text-caption leading-normal text-primary md:max-w-[256px] md:text-body">
+						{description}
+					</p>
+
+					<div className="flex flex-col gap-1 text-caption leading-none md:text-body">
+						<p className="text-foreground md:leading-normal">with:</p>
+						<p className="text-caption-sm text-primary md:text-caption">
+							{partner}
+						</p>
+					</div>
+
+					<div className="grid grid-cols-2 gap-4 md:gap-0">
+						<div className="flex flex-col gap-1 text-caption leading-none md:w-[256px] md:text-body">
+							<p className="text-foreground md:leading-normal">Published:</p>
+							<p className="text-caption-sm text-primary md:text-caption">
+								{published}
+							</p>
+						</div>
+
+						<div className="flex flex-col gap-1 text-caption leading-none md:text-body">
+							<p className="text-foreground md:leading-normal">Role:</p>
+							<p className="text-caption-sm text-primary md:text-caption">
+								{role}
+							</p>
+						</div>
+					</div>
 				</div>
 
-				<p className="max-w-[180.5px] text-caption leading-normal text-primary">
-					{description}
+				<p className="text-caption leading-none text-foreground md:text-caption md:self-start">
+					{stack}
 				</p>
-
-				<div className="flex flex-col gap-1 text-caption leading-none">
-					<p className="text-foreground">with:</p>
-					<p className="text-caption-sm text-primary">{partner}</p>
-				</div>
-
-				<div className="grid grid-cols-2 gap-4">
-					<div className="flex flex-col gap-1 text-caption leading-none">
-						<p className="text-foreground">Published:</p>
-						<p className="text-caption-sm text-primary">{published}</p>
-					</div>
-
-					<div className="flex flex-col gap-1 text-caption leading-none">
-						<p className="text-foreground">Role:</p>
-						<p className="text-caption-sm text-primary">{role}</p>
-					</div>
-				</div>
-
-				<p className="text-caption leading-none text-foreground">{stack}</p>
 			</div>
 		</article>
 	);
@@ -107,10 +119,13 @@ function WorkCard({
 
 export function WorkSection({ items = defaultItems }: WorkSectionProps) {
 	return (
-		<section id="work" className="flex w-full flex-col gap-6">
-			<AnimatedSectionTitle title="Work" />
+		<section id="work" className="flex w-full flex-col gap-6 md:gap-section-lg">
+			<AnimatedSectionTitle
+				title="Work"
+				titleClassName="md:text-section-lg md:font-black"
+			/>
 
-			<GsapStaggerGroup className="flex flex-col gap-6">
+			<GsapStaggerGroup className="flex flex-col gap-6 md:gap-block-lg">
 				{items.map((item, index) => (
 					<div key={`${item.title}-${index}`} data-gsap-item>
 						<WorkCard {...item} />
