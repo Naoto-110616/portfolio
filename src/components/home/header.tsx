@@ -1,6 +1,7 @@
  "use client";
 
 import { CurrentTime } from "@/components/ui/current-time";
+import { RollingText } from "@/components/ui/rolling-text";
 import { SectionReveal } from "@/components/motion/section-reveal";
 import { StaggerGroup } from "@/components/motion/stagger-group";
 import { StaggerItem } from "@/components/motion/stagger-item";
@@ -64,10 +65,10 @@ export function Header({
 								>
 									<StaggerItem>
 										<a
-											className="inline-flex w-full transition-opacity hover:opacity-70"
+											className="group inline-flex w-fit whitespace-nowrap transition-opacity hover:opacity-70"
 											href={link.href}
 										>
-											{link.label}
+											<RollingText text={link.label} durationMs={420} staggerMs={18} />
 										</a>
 									</StaggerItem>
 								</li>
@@ -90,10 +91,10 @@ export function Header({
 								<li key={`${link.href}-${link.label}`} className="list-none">
 									<StaggerItem y={12}>
 										<a
-											className="inline-flex w-full transition-opacity hover:opacity-70"
+											className="group inline-flex w-fit whitespace-nowrap transition-opacity hover:opacity-70"
 											href={link.href}
 										>
-											{link.label}
+											<RollingText text={link.label} durationMs={420} staggerMs={18} />
 										</a>
 									</StaggerItem>
 								</li>
