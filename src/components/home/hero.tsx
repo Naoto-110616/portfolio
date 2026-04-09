@@ -397,7 +397,7 @@ function ViewMore({ isInteractive = true }: { isInteractive?: boolean }) {
 				<span>Or scroll down</span>
 				<ArrowRight
 					aria-hidden="true"
-					className="size-3 rotate-90 shrink-0"
+					className="size-3 shrink-0 animate-scroll-cue-bounce"
 					strokeWidth={2}
 				/>
 			</div>
@@ -427,7 +427,7 @@ function ViewMore({ isInteractive = true }: { isInteractive?: boolean }) {
 							<span>Or scroll down</span>
 							<ArrowRight
 								aria-hidden="true"
-								className="size-6 rotate-90 shrink-0"
+								className="size-6 shrink-0 animate-scroll-cue-bounce"
 								strokeWidth={1.75}
 							/>
 						</div>

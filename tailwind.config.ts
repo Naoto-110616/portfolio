@@ -16,6 +16,17 @@ const config: Config = {
 							"translate3d(0, calc(var(--rolling-text-row-height) * -1), 0)",
 					},
 				},
+				"scroll-cue-bounce": {
+					"0%, 100%": {
+						transform: "rotate(90deg) translateX(0)",
+					},
+					"50%": {
+						transform: "rotate(90deg) translateX(6px)",
+					},
+				},
+			},
+			animation: {
+				"scroll-cue-bounce": "scroll-cue-bounce 1.4s ease-in-out infinite",
 			},
 			colors: {
 				bg: "#F4F7F8",
