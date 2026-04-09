@@ -25,6 +25,7 @@ export function RollingText({
 	const rowHeightEm = 1.2;
 	const rowStyle = {
 		"--rolling-text-row-height": `${rowHeightEm}em`,
+		"--rolling-text-duration": `${Math.max(durationMs, 240)}ms`,
 	} as CSSProperties;
 
 	if (shouldReduceMotion) {
@@ -47,10 +48,9 @@ export function RollingText({
 						className="relative inline-flex h-(--rolling-text-row-height) overflow-hidden align-baseline"
 					>
 						<span
-							className="flex flex-col transform-[translate3d(0,0,0)] transition-transform will-change-transform ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:transform-[translate3d(0,calc(var(--rolling-text-row-height)*-1),0)] group-focus-visible:transform-[translate3d(0,calc(var(--rolling-text-row-height)*-1),0)]"
+							className="flex flex-col transform-[translate3d(0,0,0)] will-change-transform group-hover:animate-[rolling-text-loop_var(--rolling-text-duration)_linear_infinite] group-focus-visible:animate-[rolling-text-loop_var(--rolling-text-duration)_linear_infinite]"
 							style={{
-								transitionDelay: `${index * staggerMs}ms`,
-								transitionDuration: `${durationMs}ms`,
+								animationDelay: `${index * staggerMs}ms`,
 							}}
 						>
 							<span className="block h-(--rolling-text-row-height) leading-[1.15]">

@@ -8,6 +8,15 @@ const config: Config = {
 			wide: "1440px",
 		},
 		extend: {
+			keyframes: {
+				"rolling-text-loop": {
+					from: { transform: "translate3d(0, 0, 0)" },
+					to: {
+						transform:
+							"translate3d(0, calc(var(--rolling-text-row-height) * -1), 0)",
+					},
+				},
+			},
 			colors: {
 				bg: "#F4F7F8",
 				surface: "#E1E6E8",
