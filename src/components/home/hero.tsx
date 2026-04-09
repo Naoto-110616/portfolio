@@ -40,29 +40,18 @@ function HeroLabel({
 	);
 }
 
-function HeroValue({
-	value,
-	isHighlighted = false,
-}: Pick<HeroItem, "value" | "isHighlighted">) {
-	if (isHighlighted) {
-		return (
-			<>
-				<p className="w-full max-w-content-sp text-[44px] leading-[1.4] font-bold text-foreground md:hidden">
+function HeroValue({ value }: Pick<HeroItem, "value">) {
+	return (
+		<>
+			<p className="w-full max-w-content-sp text-[44px] leading-[1.4] font-bold text-foreground md:hidden">
+				{value}
+			</p>
+			<Frame className="hidden md:flex">
+				<p className="text-hero-lg leading-none font-black text-foreground">
 					{value}
 				</p>
-				<Frame className="hidden md:flex">
-					<p className="text-hero-lg leading-none font-black text-foreground">
-						{value}
-					</p>
-				</Frame>
-			</>
-		);
-	}
-
-	return (
-		<p className="w-full max-w-content-sp text-[44px] leading-[1.4] font-bold text-foreground md:max-w-none md:text-hero-lg md:leading-none md:font-black">
-			{value}
-		</p>
+			</Frame>
+		</>
 	);
 }
 
@@ -70,7 +59,7 @@ function HeroRow({ label, value, isHighlighted = false }: HeroItem) {
 	return (
 		<div className="flex flex-col">
 			<HeroLabel label={label} isHighlighted={isHighlighted} />
-			<HeroValue value={value} isHighlighted={isHighlighted} />
+			<HeroValue value={value} />
 		</div>
 	);
 }
