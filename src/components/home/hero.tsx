@@ -36,6 +36,9 @@ const HIGHLIGHT_LOOP_HOLD_DURATION = 2.4;
 const HIGHLIGHT_COLLAPSE_DURATION = 1.2;
 const HIGHLIGHT_ZERO_HOLD_DURATION = 0.2;
 const HIGHLIGHT_BOUNCE_DURATION = 2;
+const TYPING_FRAME_DURATION = 0.06;
+const FRONTEND_TYPING_CORRECTION_HOLD_DURATION = 0.3;
+const FRONTEND_TYPING_CORRECTION_BLINK_COUNT = 2;
 const SCRAMBLE_CHARACTERS = `普段からメイクしない君が 薄化粧した朝
 始まりと終わりの狭間で
 忘れぬ約束した
@@ -82,6 +85,29 @@ Prisoner of Love (2024 Mix)
 君に 君に
 君に 君に`;
 const SCRAMBLE_DURATION = 0.8;
+type TypingPhase = {
+	text: string;
+	holdDuration?: number;
+	blinkCaretCountAfter?: number;
+};
+
+type TypingStep = {
+	text: string;
+	duration: number;
+	caretVisible: boolean;
+};
+
+const SPECIAL_TYPING_PHASES: Record<string, TypingPhase[]> = {
+	"Frontend Engineer": [
+		{
+			text: "Frontend Enginner",
+			blinkCaretCountAfter: FRONTEND_TYPING_CORRECTION_BLINK_COUNT,
+			holdDuration: FRONTEND_TYPING_CORRECTION_HOLD_DURATION,
+		},
+		{ text: "Frontend Engin" },
+		{ text: "Frontend Engineer" },
+	],
+};
 const localizedHeroValues: Record<string, string> = {
 	"Naoto Okawa": "大川 尚斗",
 	"Frontend Engineer": "フロントエンドエンジニア",
@@ -92,12 +118,108 @@ function shouldBlinkCaretBeforeTyping(value: string) {
 	return value === "Naoto Okawa";
 }
 
+function getTypingPhases(value: string) {
+	return SPECIAL_TYPING_PHASES[value] ?? [{ text: value }];
+}
+
+function buildTypingSteps(phases: TypingPhase[]) {
+	const steps: TypingStep[] = [];
+	let currentValue = "";
+	const pushStep = (
+		text: string,
+		duration = TYPING_FRAME_DURATION,
+		caretVisible = true,
+	) => {
+		steps.push({
+			text,
+			duration,
+			caretVisible,
+		});
+	};
+
+	for (const phase of phases) {
+		const nextValue = phase.text;
+
+		if (nextValue === currentValue) {
+			continue;
+		}
+
+		if (nextValue.startsWith(currentValue)) {
+			for (let length = currentValue.length + 1; length <= nextValue.length; length += 1) {
+				pushStep(nextValue.slice(0, length));
+			}
+		} else if (currentValue.startsWith(nextValue)) {
+			for (let length = currentValue.length - 1; length >= nextValue.length; length -= 1) {
+				pushStep(currentValue.slice(0, length));
+			}
+		} else {
+			let sharedPrefixLength = 0;
+
+			while (
+				sharedPrefixLength < currentValue.length &&
+				sharedPrefixLength < nextValue.length &&
+				currentValue[sharedPrefixLength] === nextValue[sharedPrefixLength]
+			) {
+				sharedPrefixLength += 1;
+			}
+
+			for (
+				let length = currentValue.length - 1;
+				length >= sharedPrefixLength;
+				length -= 1
+			) {
+				pushStep(currentValue.slice(0, length));
+			}
+
+			for (
+				let length = sharedPrefixLength + 1;
+				length <= nextValue.length;
+				length += 1
+			) {
+				pushStep(nextValue.slice(0, length));
+			}
+		}
+
+		currentValue = nextValue;
+
+		for (
+			let blinkIndex = 0;
+			blinkIndex < (phase.blinkCaretCountAfter ?? 0);
+			blinkIndex += 1
+		) {
+			pushStep(nextValue, CARET_BLINK_STEP_DURATION, false);
+			pushStep(nextValue, CARET_BLINK_STEP_DURATION, true);
+		}
+
+		if ((phase.holdDuration ?? 0) > 0) {
+			pushStep(nextValue, phase.holdDuration, true);
+		}
+	}
+
+	return steps.length > 0
+		? steps
+		: [
+				{
+					text: phases.at(-1)?.text ?? "",
+					duration: TYPING_FRAME_DURATION,
+					caretVisible: true,
+				},
+			];
+}
+
 function getTypingDuration(value: string) {
 	const blinkLeadDuration = shouldBlinkCaretBeforeTyping(value)
 		? CARET_BLINK_COUNT * CARET_BLINK_STEP_DURATION * 2
 		: 0;
+	const steps = buildTypingSteps(getTypingPhases(value));
 
-	return blinkLeadDuration + Math.max(Math.max(value.length, 1) * 0.1, 0.3);
+	return (
+		blinkLeadDuration +
+		Math.max(
+			steps.reduce((total, step) => total + step.duration, 0),
+			0.5,
+		)
+	);
 }
 
 function getHeroRowTimings(items: HeroItem[]) {
@@ -151,9 +273,7 @@ function TypingText({
 	onScrambleStateChange?: (isScrambling: boolean) => void;
 }) {
 	const shouldReduceMotion = useReducedMotion();
-	const [displayedLength, setDisplayedLength] = useState(
-		shouldReduceMotion ? value.length : 0,
-	);
+	const [displayedText, setDisplayedText] = useState(shouldReduceMotion ? value : "");
 	const [isCaretVisible, setIsCaretVisible] = useState(false);
 	const [hasAnimatedOnce, setHasAnimatedOnce] = useState(false);
 	const [scrambledValue, setScrambledValue] = useState(value);
@@ -169,13 +289,11 @@ function TypingText({
 			return;
 		}
 
-		const characterCount = Math.max(value.length, 1);
-		const duration = Math.max(characterCount * 0.06, 0.5);
-		const counter = { value: 0 };
+		const steps = buildTypingSteps(getTypingPhases(value));
 		const timeline = gsap.timeline({
 			delay,
 			onStart: () => {
-				setDisplayedLength(0);
+				setDisplayedText("");
 				setIsCaretVisible(shouldBlinkBeforeTyping);
 			},
 		});
@@ -207,20 +325,20 @@ function TypingText({
 			}
 		}
 
-		timeline.to(counter, {
-			value: characterCount,
-			duration,
-			ease: `steps(${characterCount})`,
-			onStart: () => {
-				setIsCaretVisible(true);
-			},
-			onUpdate: () => {
-				setDisplayedLength(Math.round(counter.value));
-			},
-			onComplete: () => {
-				setHasAnimatedOnce(true);
-				setIsCaretVisible(false);
-			},
+		for (const step of steps) {
+			timeline.to({}, {
+				duration: step.duration,
+				onStart: () => {
+					setDisplayedText(step.text);
+					setIsCaretVisible(step.caretVisible);
+				},
+			});
+		}
+
+		timeline.call(() => {
+			setDisplayedText(value);
+			setHasAnimatedOnce(true);
+			setIsCaretVisible(false);
 		});
 
 		return () => {
@@ -307,11 +425,8 @@ function TypingText({
 		? isScrambling
 			? scrambledValue
 			: value
-		: value.slice(0, displayedLength);
-	const showCaret =
-		!shouldRenderStaticValue &&
-		isCaretVisible &&
-		displayedLength < value.length;
+		: displayedText;
+	const showCaret = !shouldRenderStaticValue && isCaretVisible;
 
 	return (
 		<span
