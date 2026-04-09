@@ -36,6 +36,11 @@ const HIGHLIGHT_LOOP_HOLD_DURATION = 2.4;
 const HIGHLIGHT_COLLAPSE_DURATION = 1.2;
 const HIGHLIGHT_ZERO_HOLD_DURATION = 0.2;
 const HIGHLIGHT_BOUNCE_DURATION = 2;
+const localizedHeroValues: Record<string, string> = {
+	"Naoto Okawa": "大川 尚斗",
+	"Frontend Engineer": "フロントエンドエンジニア",
+	Work: "仕事",
+};
 
 function shouldBlinkCaretBeforeTyping(value: string) {
 	return value === "Naoto Okawa";
@@ -68,25 +73,40 @@ function getHeroRowTimings(items: HeroItem[]) {
 	});
 }
 
+function getLocalizedHeroValue(value: string, isSwitchedOn: boolean) {
+	if (!isSwitchedOn) {
+		return value;
+	}
+
+	return localizedHeroValues[value] ?? value;
+}
+
 function TypingText({
 	value,
 	delay = 0,
 	className = "",
 	shouldBlinkBeforeTyping = false,
+	animateOnValueChange = true,
 }: {
 	value: string;
 	delay?: number;
 	className?: string;
 	shouldBlinkBeforeTyping?: boolean;
+	animateOnValueChange?: boolean;
 }) {
 	const shouldReduceMotion = useReducedMotion();
 	const [displayedLength, setDisplayedLength] = useState(
 		shouldReduceMotion ? value.length : 0,
 	);
 	const [isCaretVisible, setIsCaretVisible] = useState(false);
+	const [hasAnimatedOnce, setHasAnimatedOnce] = useState(false);
 
 	useEffect(() => {
 		if (shouldReduceMotion) {
+			return;
+		}
+
+		if (hasAnimatedOnce && !animateOnValueChange) {
 			return;
 		}
 
@@ -139,6 +159,7 @@ function TypingText({
 				setDisplayedLength(Math.round(counter.value));
 			},
 			onComplete: () => {
+				setHasAnimatedOnce(true);
 				setIsCaretVisible(false);
 			},
 		});
@@ -146,14 +167,25 @@ function TypingText({
 		return () => {
 			timeline.kill();
 		};
-	}, [delay, shouldBlinkBeforeTyping, shouldReduceMotion, value]);
+	}, [
+		animateOnValueChange,
+		delay,
+		hasAnimatedOnce,
+		shouldBlinkBeforeTyping,
+		shouldReduceMotion,
+		value,
+	]);
 
 	if (shouldReduceMotion) {
 		return <span className={className}>{value}</span>;
 	}
 
-	const displayedValue = value.slice(0, displayedLength);
-	const showCaret = isCaretVisible && displayedLength < value.length;
+	const shouldRenderStaticValue = hasAnimatedOnce && !animateOnValueChange;
+	const displayedValue = shouldRenderStaticValue
+		? value
+		: value.slice(0, displayedLength);
+	const showCaret =
+		!shouldRenderStaticValue && isCaretVisible && displayedLength < value.length;
 
 	return (
 		<span
@@ -360,13 +392,20 @@ function HeroValue({
 				dragMomentum={false}
 			>
 				<Frame isInteractive={isInteractive}>
-					<p className="text-hero-lg leading-none font-black text-foreground">
-						<TypingText
-							value={value}
-							delay={delay}
-							shouldBlinkBeforeTyping={shouldBlinkCaretBeforeTyping(value)}
-						/>
-					</p>
+					{({ isSwitchedOn }) => {
+						const displayValue = getLocalizedHeroValue(value, isSwitchedOn);
+
+						return (
+							<p className="text-hero-lg leading-none font-black text-foreground">
+								<TypingText
+									value={displayValue}
+									delay={delay}
+									animateOnValueChange={false}
+									shouldBlinkBeforeTyping={shouldBlinkCaretBeforeTyping(value)}
+								/>
+							</p>
+						);
+					}}
 				</Frame>
 			</motion.div>
 		</>

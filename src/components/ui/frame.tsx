@@ -1,7 +1,11 @@
 import { ReactNode, useState } from "react";
 
+type FrameRenderProps = {
+	isSwitchedOn: boolean;
+};
+
 type FrameProps = {
-	children: ReactNode;
+	children: ReactNode | ((props: FrameRenderProps) => ReactNode);
 	text?: string;
 	className?: string;
 	showBottomIndicator?: boolean;
@@ -17,17 +21,21 @@ export function Frame({
 	isInteractive = true,
 	bottomIndicatorLabel,
 }: FrameProps) {
-	const [isBottomIndicatorOn, setIsBottomIndicatorOn] = useState(true);
+	const [isBottomIndicatorOn, setIsBottomIndicatorOn] = useState(false);
 	const classes = ["group relative flex w-fit flex-col", className]
 		.filter(Boolean)
 		.join(" ");
+	const content =
+		typeof children === "function"
+			? children({ isSwitchedOn: isBottomIndicatorOn })
+			: children;
 
 	return (
 		<div className={classes}>
 			<div
 				className={`relative z-10 w-fit ${isInteractive ? "cursor-grab" : "cursor-default"}`}
 			>
-				{children}
+				{content}
 			</div>
 
 			<div className="pointer-events-none absolute inset-0 z-20 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100">
