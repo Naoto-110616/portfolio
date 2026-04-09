@@ -77,9 +77,7 @@ export function Footer({
 				</div>
 				<div>
 					<div className="grid grid-cols-8 items-center justify-between text-caption text-accent md:text-body md:leading-normal">
-						<p className="col-span-6 wide:col-span-7">
-							{copyright}
-						</p>
+						<p className="col-span-6 wide:col-span-7">{copyright}</p>
 
 						<a
 							className="group col-span-2 wide:col-span-1 transition-opacity hover:opacity-80"
@@ -95,7 +93,7 @@ export function Footer({
 					<hr className="mt-2 border-accent-soft md:mt-0" />
 				</div>
 
-				<SectionReveal className="pointer-events-none absolute bottom-[-18px] left-1/2 w-[clamp(360px,58vw,1024px)] -translate-x-1/2 md:bottom-[-107px] md:w-[1024px]">
+				<SectionReveal className="pointer-events-none absolute bottom-[-18px] left-1/2 w-[clamp(360px,58vw,1024px)] -translate-x-1/2 md:bottom-[-50px] md:w-[1024px]">
 					<Image
 						alt=""
 						className="block h-auto w-full max-w-[clamp(360px,58vw,1024px)] md:max-w-[1024px]"
