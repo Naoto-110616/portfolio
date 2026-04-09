@@ -30,7 +30,7 @@ const ROW_GAP_DURATION = 0.2;
 const CARET_BLINK_COUNT = 3;
 const CARET_BLINK_STEP_DURATION = 0.5;
 const HIGHLIGHT_REVEAL_DURATION = 0.7;
-const HIGHLIGHT_REVEAL_OFFSET = 0.08;
+const HIGHLIGHT_REVEAL_OFFSET = 1;
 
 function shouldBlinkCaretBeforeTyping(value: string) {
 	return value === "Naoto Okawa";
@@ -41,11 +41,11 @@ function getTypingDuration(value: string) {
 		? CARET_BLINK_COUNT * CARET_BLINK_STEP_DURATION * 2
 		: 0;
 
-	return blinkLeadDuration + Math.max(Math.max(value.length, 1) * 0.06, 0.5);
+	return blinkLeadDuration + Math.max(Math.max(value.length, 1) * 0.1, 0.3);
 }
 
 function getHeroRowTimings(items: HeroItem[]) {
-	let currentDelay = 0;
+	let currentDelay = 0.5;
 
 	return items.map((item) => {
 		const labelDelay = currentDelay;
