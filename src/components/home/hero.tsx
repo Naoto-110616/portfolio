@@ -27,11 +27,24 @@ const defaultItems: HeroItem[] = [
 
 const LABEL_REVEAL_DURATION = 0.45;
 const ROW_GAP_DURATION = 0.2;
+const CARET_BLINK_COUNT = 3;
+const CARET_BLINK_STEP_DURATION = 0.2;
 const HIGHLIGHT_REVEAL_DURATION = 0.7;
 const HIGHLIGHT_REVEAL_OFFSET = 0.08;
 
+function shouldBlinkCaretBeforeTyping(value: string) {
+	return value === "Naoto Okawa";
+}
+
 function getTypingDuration(value: string) {
-	return Math.max(Math.max(value.length, 1) * 0.06, 0.5);
+	const blinkLeadDuration = shouldBlinkCaretBeforeTyping(value)
+		? CARET_BLINK_COUNT * CARET_BLINK_STEP_DURATION * 2
+		: 0;
+
+	return (
+		blinkLeadDuration +
+		Math.max(Math.max(value.length, 1) * 0.06, 0.5)
+	);
 }
 
 function getHeroRowTimings(items: HeroItem[]) {
@@ -57,15 +70,18 @@ function TypingText({
 	value,
 	delay = 0,
 	className = "",
+	shouldBlinkBeforeTyping = false,
 }: {
 	value: string;
 	delay?: number;
 	className?: string;
+	shouldBlinkBeforeTyping?: boolean;
 }) {
 	const shouldReduceMotion = useReducedMotion();
 	const [displayedLength, setDisplayedLength] = useState(
 		shouldReduceMotion ? value.length : 0,
 	);
+	const [isCaretVisible, setIsCaretVisible] = useState(false);
 
 	useEffect(() => {
 		if (shouldReduceMotion) {
@@ -75,31 +91,57 @@ function TypingText({
 		const characterCount = Math.max(value.length, 1);
 		const duration = Math.max(characterCount * 0.06, 0.5);
 		const counter = { value: 0 };
-
-		const tween = gsap.to(counter, {
-			value: characterCount,
+		const timeline = gsap.timeline({
 			delay,
+			onStart: () => {
+				setDisplayedLength(0);
+				setIsCaretVisible(shouldBlinkBeforeTyping);
+			},
+		});
+
+		if (shouldBlinkBeforeTyping) {
+			for (let blinkIndex = 0; blinkIndex < CARET_BLINK_COUNT; blinkIndex += 1) {
+				timeline.to({}, {
+					duration: CARET_BLINK_STEP_DURATION,
+					onStart: () => {
+						setIsCaretVisible(false);
+					},
+				});
+				timeline.to({}, {
+					duration: CARET_BLINK_STEP_DURATION,
+					onStart: () => {
+						setIsCaretVisible(true);
+					},
+				});
+			}
+		}
+
+		timeline.to(counter, {
+			value: characterCount,
 			duration,
 			ease: `steps(${characterCount})`,
 			onStart: () => {
-				setDisplayedLength(0);
+				setIsCaretVisible(true);
 			},
 			onUpdate: () => {
 				setDisplayedLength(Math.round(counter.value));
 			},
+			onComplete: () => {
+				setIsCaretVisible(false);
+			},
 		});
 
 		return () => {
-			tween.kill();
+			timeline.kill();
 		};
-	}, [delay, shouldReduceMotion, value]);
+	}, [delay, shouldBlinkBeforeTyping, shouldReduceMotion, value]);
 
 	if (shouldReduceMotion) {
 		return <span className={className}>{value}</span>;
 	}
 
 	const displayedValue = value.slice(0, displayedLength);
-	const showCaret = displayedLength > 0 && displayedLength < value.length;
+	const showCaret = isCaretVisible && displayedLength < value.length;
 
 	return (
 		<span
@@ -271,7 +313,11 @@ function HeroValue({
 	return (
 		<>
 			<p className="w-full max-w-content-sp text-[44px] leading-[1.4] font-bold text-foreground md:hidden">
-				<TypingText value={value} delay={delay} />
+				<TypingText
+					value={value}
+					delay={delay}
+					shouldBlinkBeforeTyping={shouldBlinkCaretBeforeTyping(value)}
+				/>
 			</p>
 			<motion.div
 				ref={dragRef}
@@ -283,7 +329,11 @@ function HeroValue({
 			>
 				<Frame isInteractive={isInteractive}>
 					<p className="text-hero-lg leading-none font-black text-foreground">
-						<TypingText value={value} delay={delay} />
+						<TypingText
+							value={value}
+							delay={delay}
+							shouldBlinkBeforeTyping={shouldBlinkCaretBeforeTyping(value)}
+						/>
 					</p>
 				</Frame>
 			</motion.div>
