@@ -22,7 +22,7 @@ export function RollingText({
 	durationMs = 480,
 }: RollingTextProps) {
 	const shouldReduceMotion = useReducedMotion();
-	const rowHeightEm = 1.15;
+	const rowHeightEm = 1.2;
 	const rowStyle = {
 		"--rolling-text-row-height": `${rowHeightEm}em`,
 	} as CSSProperties;
