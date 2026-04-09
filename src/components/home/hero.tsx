@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
+import { NAME, NAME_JA } from "@/constans/const";
 import { Frame } from "@/components/ui/frame";
 import { RollingText } from "@/components/ui/rolling-text";
 
@@ -21,7 +22,7 @@ type HeroSectionProps = {
 };
 
 const defaultItems: HeroItem[] = [
-	{ label: "Name:", value: "Naoto Okawa" },
+	{ label: "Name:", value: NAME },
 	{ label: "Title:", value: "Frontend Engineer" },
 	{ label: "Dislikes:", value: "Work", isHighlighted: true },
 ];
@@ -39,6 +40,7 @@ const HIGHLIGHT_BOUNCE_DURATION = 2;
 const TYPING_FRAME_DURATION = 0.06;
 const FRONTEND_TYPING_CORRECTION_HOLD_DURATION = 0.3;
 const FRONTEND_TYPING_CORRECTION_BLINK_COUNT = 2;
+const FRONTEND_TYPING_DELETE_FRAME_DURATION = 0.09;
 const SCRAMBLE_CHARACTERS = `普段からメイクしない君が 薄化粧した朝
 始まりと終わりの狭間で
 忘れぬ約束した
@@ -89,6 +91,7 @@ type TypingPhase = {
 	text: string;
 	holdDuration?: number;
 	blinkCaretCountAfter?: number;
+	deleteFrameDuration?: number;
 };
 
 type TypingStep = {
@@ -104,18 +107,21 @@ const SPECIAL_TYPING_PHASES: Record<string, TypingPhase[]> = {
 			blinkCaretCountAfter: FRONTEND_TYPING_CORRECTION_BLINK_COUNT,
 			holdDuration: FRONTEND_TYPING_CORRECTION_HOLD_DURATION,
 		},
-		{ text: "Frontend Engin" },
+		{
+			text: "Frontend Engin",
+			deleteFrameDuration: FRONTEND_TYPING_DELETE_FRAME_DURATION,
+		},
 		{ text: "Frontend Engineer" },
 	],
 };
 const localizedHeroValues: Record<string, string> = {
-	"Naoto Okawa": "大川 尚斗",
+	[NAME]: NAME_JA,
 	"Frontend Engineer": "フロントエンドエンジニア",
 	Work: "仕事",
 };
 
 function shouldBlinkCaretBeforeTyping(value: string) {
-	return value === "Naoto Okawa";
+	return value === NAME;
 }
 
 function getTypingPhases(value: string) {
@@ -150,7 +156,10 @@ function buildTypingSteps(phases: TypingPhase[]) {
 			}
 		} else if (currentValue.startsWith(nextValue)) {
 			for (let length = currentValue.length - 1; length >= nextValue.length; length -= 1) {
-				pushStep(currentValue.slice(0, length));
+				pushStep(
+					currentValue.slice(0, length),
+					phase.deleteFrameDuration ?? TYPING_FRAME_DURATION,
+				);
 			}
 		} else {
 			let sharedPrefixLength = 0;
@@ -168,7 +177,10 @@ function buildTypingSteps(phases: TypingPhase[]) {
 				length >= sharedPrefixLength;
 				length -= 1
 			) {
-				pushStep(currentValue.slice(0, length));
+				pushStep(
+					currentValue.slice(0, length),
+					phase.deleteFrameDuration ?? TYPING_FRAME_DURATION,
+				);
 			}
 
 			for (

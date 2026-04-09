@@ -2,6 +2,7 @@ import { AnimatedSectionTitle } from "@/components/motion/animated-section-title
 import { SectionReveal } from "@/components/motion/section-reveal";
 import { StaggerGroup } from "@/components/motion/stagger-group";
 import { StaggerItem } from "@/components/motion/stagger-item";
+import { NAME_PORTRAIT_ALT } from "@/constans/const";
 
 export type AboutBlock = {
 	id?: string;
@@ -76,7 +77,7 @@ export function AboutSection({
 	title = "About",
 	leadText = defaultLeadText,
 	imageUrl = aboutImage,
-	imageAlt = "Naoto Okawa portrait",
+	imageAlt = NAME_PORTRAIT_ALT,
 	blocks = defaultBlocks,
 }: AboutSectionProps) {
 	return (

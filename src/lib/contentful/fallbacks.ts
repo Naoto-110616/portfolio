@@ -1,4 +1,8 @@
-import { socialLinks as defaultSocialLinks } from "@/constans/const";
+import {
+	NAME,
+	NAME_PORTRAIT_ALT,
+	socialLinks as defaultSocialLinks,
+} from "@/constans/const";
 
 import type { HomePageContent, ProjectsResult, SiteSettings } from "@/lib/contentful/types";
 
@@ -30,7 +34,7 @@ export const fallbackSiteSettings: SiteSettings = {
 
 export const fallbackHomePage: HomePageContent = {
   heroItems: [
-    { label: "Name:", value: "Naoto Okawa" },
+    { label: "Name:", value: NAME },
     { label: "Title:", value: "Frontend Engineer" },
     { label: "Dislikes:", value: "Work", isHighlighted: true },
   ],
@@ -47,7 +51,7 @@ export const fallbackHomePage: HomePageContent = {
     leadText: "モダンなWebに、体験と仕組みをデザインするフロントエンドエンジニア",
     portraitImageUrl:
       "https://www.figma.com/api/mcp/asset/1d9e5c05-e456-414b-9635-956928c1245c",
-    portraitImageAlt: "Naoto Okawa portrait",
+    portraitImageAlt: NAME_PORTRAIT_ALT,
     blocks: [
       {
         title: "Hello",

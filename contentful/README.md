@@ -60,13 +60,13 @@ npm run contentful:migrate -- --from=004-create-about-block-and-about-section --
 
 ```json
 {
-  "items": [{ "label": "Work", "href": "#work" }]
+	"items": [{ "label": "Work", "href": "#work" }]
 }
 ```
 
 ```json
 {
-  "items": [{ "label": "Name:", "value": "Naoto Okawa" }]
+	"items": [{ "label": "Name:", "value": "Naoto Ôkawa" }]
 }
 ```
 
