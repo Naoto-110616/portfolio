@@ -5,6 +5,7 @@ type FrameProps = {
 	text?: string;
 	className?: string;
 	showBottomIndicator?: boolean;
+	isInteractive?: boolean;
 };
 
 export function Frame({
@@ -12,6 +13,7 @@ export function Frame({
 	text = "Text",
 	className = "",
 	showBottomIndicator = true,
+	isInteractive = true,
 }: FrameProps) {
 	const classes = ["group relative flex w-fit flex-col", className]
 		.filter(Boolean)
@@ -19,7 +21,11 @@ export function Frame({
 
 	return (
 		<div className={classes}>
-			<div className="relative z-10 w-fit cursor-grab">{children}</div>
+			<div
+				className={`relative z-10 w-fit ${isInteractive ? "cursor-grab" : "cursor-default"}`}
+			>
+				{children}
+			</div>
 
 			<div
 				aria-hidden="true"

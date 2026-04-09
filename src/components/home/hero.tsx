@@ -224,8 +224,10 @@ function HeroLabel({
 function HeroValue({
 	value,
 	delay = 0,
+	isInteractive = true,
 }: Pick<HeroItem, "value"> & {
 	delay?: number;
+	isInteractive?: boolean;
 }) {
 	const { dragRef, dragConstraints } =
 		useViewportDragConstraints<HTMLDivElement>();
@@ -237,13 +239,13 @@ function HeroValue({
 			</p>
 			<motion.div
 				ref={dragRef}
-				className="hidden w-fit md:block"
-				drag
+				className={`hidden w-fit md:block ${isInteractive ? "" : "pointer-events-none"}`}
+				drag={isInteractive}
 				dragConstraints={dragConstraints}
 				dragElastic={0}
 				dragMomentum={false}
 			>
-				<Frame>
+				<Frame isInteractive={isInteractive}>
 					<p className="text-hero-lg leading-none font-black text-foreground">
 						<TypingText value={value} delay={delay} />
 					</p>
@@ -259,7 +261,12 @@ function HeroRow({
 	isHighlighted = false,
 	labelDelay = 0,
 	valueDelay = 0,
-}: HeroItem & { labelDelay?: number; valueDelay?: number }) {
+	isInteractive = true,
+}: HeroItem & {
+	labelDelay?: number;
+	valueDelay?: number;
+	isInteractive?: boolean;
+}) {
 	return (
 		<div className="flex flex-col">
 			<HeroLabel
@@ -267,12 +274,12 @@ function HeroRow({
 				isHighlighted={isHighlighted}
 				delay={labelDelay}
 			/>
-			<HeroValue value={value} delay={valueDelay} />
+			<HeroValue value={value} delay={valueDelay} isInteractive={isInteractive} />
 		</div>
 	);
 }
 
-function ViewMore() {
+function ViewMore({ isInteractive = true }: { isInteractive?: boolean }) {
 	const { dragRef, dragConstraints } =
 		useViewportDragConstraints<HTMLDivElement>();
 
@@ -296,13 +303,17 @@ function ViewMore() {
 
 			<motion.div
 				ref={dragRef}
-				className="hidden w-fit md:block"
-				drag
+				className={`hidden w-fit md:block ${isInteractive ? "" : "pointer-events-none"}`}
+				drag={isInteractive}
 				dragConstraints={dragConstraints}
 				dragElastic={0}
 				dragMomentum={false}
 			>
-				<Frame className="md:flex md:items-end" showBottomIndicator={false}>
+				<Frame
+					className="md:flex md:items-end"
+					isInteractive={isInteractive}
+					showBottomIndicator={false}
+				>
 					<div className="flex flex-col items-start gap-1">
 						<a
 							className="inline-flex items-center overflow-hidden rounded-[24px] border border-primary bg-accent px-4 py-2 text-body leading-normal text-primary transition-opacity hover:opacity-80"
@@ -364,6 +375,7 @@ export function HeroSection({
 							<div key={`${item.label}-${item.value}-${index}`}>
 								<HeroRow
 									{...item}
+									isInteractive={introComplete}
 									labelDelay={timings[index]?.labelDelay}
 									valueDelay={timings[index]?.valueDelay}
 								/>
@@ -380,7 +392,7 @@ export function HeroSection({
 						: "pointer-events-none translate-y-2 opacity-0 transition-all duration-500 ease-out"
 				}
 			>
-				<ViewMore />
+				<ViewMore isInteractive={introComplete} />
 			</div>
 		</section>
 	);

@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import { Header, type HeaderLink } from "@/components/home/header";
 import { HeroSection, type HeroItem } from "@/components/home/hero";
@@ -17,6 +17,28 @@ export function HomeIntro({
 	heroItems,
 }: HomeIntroProps) {
 	const [isIntroComplete, setIsIntroComplete] = useState(false);
+
+	useEffect(() => {
+		if (isIntroComplete) {
+			return;
+		}
+
+		const html = document.documentElement;
+		const body = document.body;
+		const previousHtmlOverflow = html.style.overflow;
+		const previousBodyOverflow = body.style.overflow;
+		const previousBodyTouchAction = body.style.touchAction;
+
+		html.style.overflow = "hidden";
+		body.style.overflow = "hidden";
+		body.style.touchAction = "none";
+
+		return () => {
+			html.style.overflow = previousHtmlOverflow;
+			body.style.overflow = previousBodyOverflow;
+			body.style.touchAction = previousBodyTouchAction;
+		};
+	}, [isIntroComplete]);
 
 	const handleIntroComplete = useCallback(() => {
 		setIsIntroComplete(true);
