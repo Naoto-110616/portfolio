@@ -30,7 +30,7 @@ export function Frame({
 				{children}
 			</div>
 
-			<div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100">
+			<div className="pointer-events-none absolute inset-0 z-20 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100">
 				<div
 					aria-hidden="true"
 					className="absolute left-[-8px] top-[-12px] -translate-y-full rounded bg-primary px-2 py-0.5 text-caption-sm leading-none text-accent"
@@ -53,13 +53,16 @@ export function Frame({
 				</div>
 
 				{showBottomIndicator ? (
-					<div className="pointer-events-auto absolute bottom-[-12px] right-[-8px] translate-y-full">
+					<div className="pointer-events-auto absolute bottom-[-12px] right-[-8px] z-30 translate-y-full">
 						<button
 							aria-checked={isBottomIndicatorOn}
 							aria-label={bottomIndicatorLabel ?? `${text} switch`}
-							className="cursor-pointer rounded bg-primary px-2 py-0.5 outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+							className="relative z-10 cursor-pointer rounded bg-primary px-2 py-0.5 outline-none before:absolute before:-inset-2 before:content-[''] focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
 							onClick={() => {
 								setIsBottomIndicatorOn((current) => !current);
+							}}
+							onPointerDown={(event) => {
+								event.stopPropagation();
 							}}
 							role="switch"
 							type="button"
@@ -67,7 +70,7 @@ export function Frame({
 							<span className="flex h-4 w-8 items-center rounded-full bg-accent px-0.5">
 								<span
 									className={`size-3.5 rounded-full bg-primary transition-transform duration-200 ease-out ${
-										isBottomIndicatorOn ? "translate-x-0" : "translate-x-4"
+										isBottomIndicatorOn ? "translate-x-0" : "translate-x-[14px]"
 									}`}
 								/>
 							</span>
