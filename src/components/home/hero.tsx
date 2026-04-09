@@ -27,6 +27,8 @@ const defaultItems: HeroItem[] = [
 
 const LABEL_REVEAL_DURATION = 0.45;
 const ROW_GAP_DURATION = 0.2;
+const HIGHLIGHT_REVEAL_DURATION = 0.7;
+const HIGHLIGHT_REVEAL_OFFSET = 0.08;
 
 function getTypingDuration(value: string) {
 	return Math.max(Math.max(value.length, 1) * 0.06, 0.5);
@@ -46,6 +48,7 @@ function getHeroRowTimings(items: HeroItem[]) {
 			labelDelay,
 			valueDelay,
 			valueDuration,
+			highlightDelay: valueDelay + valueDuration + HIGHLIGHT_REVEAL_OFFSET,
 		};
 	});
 }
@@ -167,8 +170,13 @@ function HeroLabel({
 	label,
 	isHighlighted = false,
 	delay = 0,
-}: Pick<HeroItem, "label" | "isHighlighted"> & { delay?: number }) {
+	highlightDelay = 0,
+}: Pick<HeroItem, "label" | "isHighlighted"> & {
+	delay?: number;
+	highlightDelay?: number;
+}) {
 	const labelRef = useRef<HTMLDivElement>(null);
+	const highlightRef = useRef<HTMLSpanElement>(null);
 	const shouldReduceMotion = useReducedMotion();
 
 	useEffect(() => {
@@ -198,6 +206,32 @@ function HeroLabel({
 		};
 	}, [delay, shouldReduceMotion]);
 
+	useEffect(() => {
+		const element = highlightRef.current;
+
+		if (!element || !isHighlighted || shouldReduceMotion) {
+			return;
+		}
+
+		const tween = gsap.fromTo(
+			element,
+			{
+				scaleX: 0,
+				transformOrigin: "left center",
+			},
+			{
+				scaleX: 1,
+				delay: highlightDelay,
+				duration: HIGHLIGHT_REVEAL_DURATION,
+				ease: "back.out(2.2)",
+			},
+		);
+
+		return () => {
+			tween.kill();
+		};
+	}, [highlightDelay, isHighlighted, shouldReduceMotion]);
+
 	return (
 		<div
 			className="relative w-full max-w-content-sp"
@@ -211,6 +245,12 @@ function HeroLabel({
 				<span
 					aria-hidden="true"
 					className="absolute left-0 top-[24px] h-[6px] w-[45px] bg-accent md:top-[36px] md:w-[84px] md:h-2"
+					ref={highlightRef}
+					style={
+						shouldReduceMotion
+							? undefined
+							: { transform: "scaleX(0)", transformOrigin: "left center" }
+					}
 				/>
 			) : null}
 		</div>
@@ -257,10 +297,12 @@ function HeroRow({
 	isHighlighted = false,
 	labelDelay = 0,
 	valueDelay = 0,
+	highlightDelay = 0,
 	isInteractive = true,
 }: HeroItem & {
 	labelDelay?: number;
 	valueDelay?: number;
+	highlightDelay?: number;
 	isInteractive?: boolean;
 }) {
 	return (
@@ -269,8 +311,13 @@ function HeroRow({
 				label={label}
 				isHighlighted={isHighlighted}
 				delay={labelDelay}
+				highlightDelay={highlightDelay}
 			/>
-			<HeroValue value={value} delay={valueDelay} isInteractive={isInteractive} />
+			<HeroValue
+				value={value}
+				delay={valueDelay}
+				isInteractive={isInteractive}
+			/>
 		</div>
 	);
 }
@@ -353,7 +400,10 @@ export function HeroSection({
 
 		const lastTiming = timings.at(-1);
 		const totalDuration = lastTiming
-			? lastTiming.valueDelay + lastTiming.valueDuration
+			? Math.max(
+					lastTiming.valueDelay + lastTiming.valueDuration,
+					lastTiming.highlightDelay + HIGHLIGHT_REVEAL_DURATION,
+				)
 			: 0;
 		const delayedCall = gsap.delayedCall(totalDuration, onIntroComplete);
 
@@ -374,6 +424,7 @@ export function HeroSection({
 									isInteractive={introComplete}
 									labelDelay={timings[index]?.labelDelay}
 									valueDelay={timings[index]?.valueDelay}
+									highlightDelay={timings[index]?.highlightDelay}
 								/>
 							</div>
 						))}
