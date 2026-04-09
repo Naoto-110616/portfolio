@@ -32,6 +32,10 @@ const CARET_BLINK_COUNT = 3;
 const CARET_BLINK_STEP_DURATION = 0.5;
 const HIGHLIGHT_REVEAL_DURATION = 0.7;
 const HIGHLIGHT_REVEAL_OFFSET = 1;
+const HIGHLIGHT_LOOP_HOLD_DURATION = 2.4;
+const HIGHLIGHT_COLLAPSE_DURATION = 1.2;
+const HIGHLIGHT_ZERO_HOLD_DURATION = 0.2;
+const HIGHLIGHT_BOUNCE_DURATION = 2;
 
 function shouldBlinkCaretBeforeTyping(value: string) {
 	return value === "Naoto Okawa";
@@ -263,22 +267,42 @@ function HeroLabel({
 			return;
 		}
 
-		const tween = gsap.fromTo(
-			element,
-			{
+		gsap.set(element, {
+			scaleX: 0,
+			transformOrigin: "left center",
+		});
+
+		const loopTimeline = gsap
+			.timeline({
+				paused: true,
+				repeat: -1,
+			})
+			.to({}, { duration: HIGHLIGHT_LOOP_HOLD_DURATION })
+			.to(element, {
 				scaleX: 0,
-				transformOrigin: "left center",
-			},
-			{
+				duration: HIGHLIGHT_COLLAPSE_DURATION,
+				ease: "power2.in",
+			})
+			.to({}, { duration: HIGHLIGHT_ZERO_HOLD_DURATION })
+			.to(element, {
 				scaleX: 1,
-				delay: highlightDelay,
-				duration: HIGHLIGHT_REVEAL_DURATION,
-				ease: "back.out(2.2)",
+				duration: HIGHLIGHT_BOUNCE_DURATION,
+				ease: "elastic.out(2, 0.28)",
+			});
+
+		const revealTween = gsap.to(element, {
+			scaleX: 1,
+			delay: highlightDelay,
+			duration: HIGHLIGHT_REVEAL_DURATION,
+			ease: "back.out(2.2)",
+			onComplete: () => {
+				loopTimeline.play(0);
 			},
-		);
+		});
 
 		return () => {
-			tween.kill();
+			revealTween.kill();
+			loopTimeline.kill();
 		};
 	}, [highlightDelay, isHighlighted, shouldReduceMotion]);
 
