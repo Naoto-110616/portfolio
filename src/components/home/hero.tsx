@@ -5,9 +5,6 @@ import { ArrowRight } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
-import { SectionReveal } from "@/components/motion/section-reveal";
-import { StaggerGroup } from "@/components/motion/stagger-group";
-import { StaggerItem } from "@/components/motion/stagger-item";
 import { Frame } from "@/components/ui/frame";
 
 export type HeroItem = {
@@ -18,6 +15,8 @@ export type HeroItem = {
 
 type HeroSectionProps = {
 	items?: HeroItem[];
+	introComplete?: boolean;
+	onIntroComplete?: () => void;
 };
 
 const defaultItems: HeroItem[] = [
@@ -25,6 +24,31 @@ const defaultItems: HeroItem[] = [
 	{ label: "Title:", value: "Frontend Engineer" },
 	{ label: "Dislikes:", value: "Work", isHighlighted: true },
 ];
+
+const LABEL_REVEAL_DURATION = 0.45;
+const ROW_GAP_DURATION = 0.2;
+
+function getTypingDuration(value: string) {
+	return Math.max(Math.max(value.length, 1) * 0.06, 0.5);
+}
+
+function getHeroRowTimings(items: HeroItem[]) {
+	let currentDelay = 0;
+
+	return items.map((item) => {
+		const labelDelay = currentDelay;
+		const valueDelay = labelDelay + LABEL_REVEAL_DURATION;
+		const valueDuration = getTypingDuration(item.value);
+
+		currentDelay = valueDelay + valueDuration + ROW_GAP_DURATION;
+
+		return {
+			labelDelay,
+			valueDelay,
+			valueDuration,
+		};
+	});
+}
 
 function TypingText({
 	value,
@@ -143,9 +167,44 @@ function useViewportDragConstraints<T extends HTMLDivElement>() {
 function HeroLabel({
 	label,
 	isHighlighted = false,
-}: Pick<HeroItem, "label" | "isHighlighted">) {
+	delay = 0,
+}: Pick<HeroItem, "label" | "isHighlighted"> & { delay?: number }) {
+	const labelRef = useRef<HTMLDivElement>(null);
+	const shouldReduceMotion = useReducedMotion();
+
+	useEffect(() => {
+		const element = labelRef.current;
+
+		if (!element || shouldReduceMotion) {
+			return;
+		}
+
+		const tween = gsap.fromTo(
+			element,
+			{
+				autoAlpha: 0,
+				y: 16,
+			},
+			{
+				autoAlpha: 1,
+				y: 0,
+				delay,
+				duration: LABEL_REVEAL_DURATION,
+				ease: "power2.out",
+			},
+		);
+
+		return () => {
+			tween.kill();
+		};
+	}, [delay, shouldReduceMotion]);
+
 	return (
-		<div className="relative w-full max-w-content-sp">
+		<div
+			className="relative w-full max-w-content-sp"
+			ref={labelRef}
+			style={shouldReduceMotion ? undefined : { opacity: 0 }}
+		>
 			<p className="text-hero-sub text-foreground md:text-hero-sub-lg md:leading-none">
 				{label}
 			</p>
@@ -161,17 +220,16 @@ function HeroLabel({
 
 function HeroValue({
 	value,
-	index,
+	delay = 0,
 }: Pick<HeroItem, "value"> & {
-	index: number;
+	delay?: number;
 }) {
 	const { dragRef, dragConstraints } = useViewportDragConstraints<HTMLDivElement>();
-	const typingDelay = 0.15 + index * 0.35;
 
 	return (
 		<>
 			<p className="w-full max-w-content-sp text-[44px] leading-[1.4] font-bold text-foreground md:hidden">
-				<TypingText value={value} delay={typingDelay} />
+				<TypingText value={value} delay={delay} />
 			</p>
 			<motion.div
 				ref={dragRef}
@@ -183,7 +241,7 @@ function HeroValue({
 			>
 				<Frame>
 					<p className="text-hero-lg leading-none font-black text-foreground">
-						<TypingText value={value} delay={typingDelay} />
+						<TypingText value={value} delay={delay} />
 					</p>
 				</Frame>
 			</motion.div>
@@ -195,12 +253,13 @@ function HeroRow({
 	label,
 	value,
 	isHighlighted = false,
-	index,
-}: HeroItem & { index: number }) {
+	labelDelay = 0,
+	valueDelay = 0,
+}: HeroItem & { labelDelay?: number; valueDelay?: number }) {
 	return (
 		<div className="flex flex-col">
-			<HeroLabel label={label} isHighlighted={isHighlighted} />
-			<HeroValue value={value} index={index} />
+			<HeroLabel label={label} isHighlighted={isHighlighted} delay={labelDelay} />
+			<HeroValue value={value} delay={valueDelay} />
 		</div>
 	);
 }
@@ -258,28 +317,62 @@ function ViewMore() {
 	);
 }
 
-export function HeroSection({ items = defaultItems }: HeroSectionProps) {
+export function HeroSection({
+	items = defaultItems,
+	introComplete = false,
+	onIntroComplete,
+}: HeroSectionProps) {
+	const shouldReduceMotion = useReducedMotion();
+	const timings = getHeroRowTimings(items);
+
+	useEffect(() => {
+		if (!onIntroComplete || introComplete) {
+			return;
+		}
+
+		if (shouldReduceMotion) {
+			onIntroComplete();
+			return;
+		}
+
+		const lastTiming = timings.at(-1);
+		const totalDuration = lastTiming
+			? lastTiming.valueDelay + lastTiming.valueDuration
+			: 0;
+		const delayedCall = gsap.delayedCall(totalDuration, onIntroComplete);
+
+		return () => {
+			delayedCall.kill();
+		};
+	}, [introComplete, onIntroComplete, shouldReduceMotion, timings]);
+
 	return (
 		<section className="flex w-full flex-col items-center gap-[56px] md:gap-[20px]">
-			<StaggerGroup
-				className="w-full"
-				delayChildren={0.08}
-				staggerChildren={0.14}
-			>
+			<div className="w-full">
 				<div className="grid grid-cols-8">
 					<div className="col-span-8 flex flex-col gap-block md:col-span-8 md:gap-10">
 						{items.map((item, index) => (
-							<StaggerItem key={`${item.label}-${item.value}-${index}`}>
-								<HeroRow {...item} index={index} />
-							</StaggerItem>
+							<div key={`${item.label}-${item.value}-${index}`}>
+								<HeroRow
+									{...item}
+									labelDelay={timings[index]?.labelDelay}
+									valueDelay={timings[index]?.valueDelay}
+								/>
+							</div>
 						))}
 					</div>
 				</div>
-			</StaggerGroup>
+			</div>
 
-			<SectionReveal y={16}>
+			<div
+				className={
+					introComplete
+						? "translate-y-0 opacity-100 transition-all duration-500 delay-300 ease-out"
+						: "pointer-events-none translate-y-2 opacity-0 transition-all duration-500 ease-out"
+				}
+			>
 				<ViewMore />
-			</SectionReveal>
+			</div>
 		</section>
 	);
 }

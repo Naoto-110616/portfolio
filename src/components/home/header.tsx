@@ -1,3 +1,5 @@
+ "use client";
+
 import { CurrentTime } from "@/components/ui/current-time";
 import { SectionReveal } from "@/components/motion/section-reveal";
 import { StaggerGroup } from "@/components/motion/stagger-group";
@@ -11,6 +13,7 @@ export type HeaderLink = {
 type HeaderProps = {
 	sinceLabel?: string;
 	links?: HeaderLink[];
+	isVisible?: boolean;
 };
 
 const defaultLinks: HeaderLink[] = [
@@ -26,9 +29,16 @@ const defaultLinks: HeaderLink[] = [
 export function Header({
 	sinceLabel = "Since 2021",
 	links = defaultLinks,
+	isVisible = true,
 }: HeaderProps) {
 	return (
-		<header>
+		<header
+			className={
+				isVisible
+					? "translate-y-0 opacity-100 transition-all duration-500 delay-200 ease-out"
+					: "pointer-events-none translate-y-2 opacity-0 transition-all duration-500 ease-out"
+			}
+		>
 			<SectionReveal
 				className="mx-auto flex w-full max-w-content flex-col gap-block px-[4.071%] pt-4 md:px-0 md:pt-6"
 				y={20}

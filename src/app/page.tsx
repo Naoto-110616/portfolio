@@ -1,8 +1,7 @@
 import { AboutSection } from "@/components/home/about";
 import { ChatSection } from "@/components/home/chat";
 import { Footer } from "@/components/home/footer";
-import { Header } from "@/components/home/header";
-import { HeroSection } from "@/components/home/hero";
+import { HomeIntro } from "@/components/home/home-intro";
 import { MoreProjectsSection } from "@/components/home/more-projects";
 import { ServicesSection } from "@/components/home/services";
 import { WorkSection } from "@/components/home/work";
@@ -31,12 +30,12 @@ export default async function HomePage() {
 	return (
 		<div id="top" className="relative flex flex-col gap-[56px]">
 			<LayoutGuides lineClassName="bg-foreground/10" />
-			<Header
-				links={siteSettings.header.links}
+			<HomeIntro
+				headerLinks={siteSettings.header.links}
+				heroItems={homePage.heroItems}
 				sinceLabel={siteSettings.header.sinceLabel}
 			/>
-			<main className="mx-auto flex min-h-screen w-full max-w-content flex-col gap-[96px] px-[4.071%] md:px-0 z-20 md:gap-[240px]">
-				<HeroSection items={homePage.heroItems} />
+			<main className="mx-auto z-20 flex w-full max-w-content flex-col gap-[96px] px-[4.071%] md:gap-[240px] md:px-0">
 				<WorkSection title={homePage.sectionTitles.work} items={workItems} />
 				<MoreProjectsSection
 					items={moreProjectItems}
