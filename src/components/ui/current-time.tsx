@@ -54,7 +54,7 @@ export function CurrentTime({ className = "" }: CurrentTimeProps) {
 		};
 	}, []);
 
-	const classes = ["flex flex-col gap-stack", className]
+	const classes = ["flex flex-col gap-stack h-full justify-between", className]
 		.filter(Boolean)
 		.join(" ");
 
