@@ -96,7 +96,7 @@ function TypingText({
 	}
 
 	const displayedValue = value.slice(0, displayedLength);
-	const showCaret = displayedLength < value.length;
+	const showCaret = displayedLength > 0 && displayedLength < value.length;
 
 	return (
 		<span
@@ -108,7 +108,10 @@ function TypingText({
 				className="invisible col-start-1 row-start-1 inline-flex items-center"
 			>
 				{value}
-				<span aria-hidden="true" className="ml-1 inline-block w-[2px]" />
+				<span
+					aria-hidden="true"
+					className="ml-1 inline-block w-px origin-left scale-x-50"
+				/>
 			</span>
 			<span
 				aria-hidden="true"
@@ -118,7 +121,7 @@ function TypingText({
 				{showCaret ? (
 					<span
 						aria-hidden="true"
-						className="ml-1 inline-block h-[0.9em] w-[2px] bg-current"
+						className="ml-1 inline-block h-[0.9em] w-px origin-left scale-x-50 bg-current opacity-80"
 					/>
 				) : null}
 			</span>
@@ -224,7 +227,8 @@ function HeroValue({
 }: Pick<HeroItem, "value"> & {
 	delay?: number;
 }) {
-	const { dragRef, dragConstraints } = useViewportDragConstraints<HTMLDivElement>();
+	const { dragRef, dragConstraints } =
+		useViewportDragConstraints<HTMLDivElement>();
 
 	return (
 		<>
@@ -258,14 +262,19 @@ function HeroRow({
 }: HeroItem & { labelDelay?: number; valueDelay?: number }) {
 	return (
 		<div className="flex flex-col">
-			<HeroLabel label={label} isHighlighted={isHighlighted} delay={labelDelay} />
+			<HeroLabel
+				label={label}
+				isHighlighted={isHighlighted}
+				delay={labelDelay}
+			/>
 			<HeroValue value={value} delay={valueDelay} />
 		</div>
 	);
 }
 
 function ViewMore() {
-	const { dragRef, dragConstraints } = useViewportDragConstraints<HTMLDivElement>();
+	const { dragRef, dragConstraints } =
+		useViewportDragConstraints<HTMLDivElement>();
 
 	return (
 		<div className="w-fit text-primary">
