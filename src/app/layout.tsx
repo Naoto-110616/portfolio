@@ -23,6 +23,14 @@ const caveat = Caveat({
 	weight: ["400", "700"],
 });
 
+const devtoolsMessage = `\n
+┌───────────────────────────────────────────────┐
+│  👀 ソース、見に来ると思っていました。
+│
+│  いつもの実装は Cursor + Claude Code で進めています。
+└───────────────────────────────────────────────┘
+`;
+
 export async function generateMetadata(): Promise<Metadata> {
 	const siteSettings = await getSiteSettings();
 
@@ -39,6 +47,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
 			<body
 				className={`${zenKakuGothicNew.variable} ${caveat.variable} font-jp bg-bg text-foreground`}
 			>
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `(function(){const message=${JSON.stringify(devtoolsMessage)};const firstChild=document.body.firstChild;if(firstChild&&firstChild.nodeType===8&&firstChild.nodeValue===message){return;}document.body.prepend(document.createComment(message));})();`,
+					}}
+				/>
 				<QueryProvider>
 					<MotionProvider>{children}</MotionProvider>
 				</QueryProvider>
