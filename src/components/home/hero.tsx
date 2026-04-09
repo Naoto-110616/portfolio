@@ -169,7 +169,7 @@ function TypingText({
 				{showCaret ? (
 					<span
 						aria-hidden="true"
-						className="ml-1 inline-block h-[0.9em] w-px origin-left scale-x-50 bg-current opacity-80"
+						className="ml-1 inline-block h-[0.9em] w-px origin-left scale-x-20 bg-current opacity-80"
 					/>
 				) : null}
 			</span>
