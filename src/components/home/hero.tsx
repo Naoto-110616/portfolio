@@ -83,7 +83,10 @@ function ViewMore() {
 				/>
 			</div>
 
-			<Frame className="hidden md:flex md:items-end">
+			<Frame
+				className="hidden md:flex md:items-end"
+				showBottomIndicator={false}
+			>
 				<div className="flex flex-col items-start gap-1">
 					<a
 						className="inline-flex items-center overflow-hidden rounded-[24px] border border-primary bg-accent px-4 py-2 text-body leading-normal text-primary transition-opacity hover:opacity-80"

@@ -4,16 +4,22 @@ type FrameProps = {
 	children: ReactNode;
 	text?: string;
 	className?: string;
+	showBottomIndicator?: boolean;
 };
 
-export function Frame({ children, text = "Text", className = "" }: FrameProps) {
+export function Frame({
+	children,
+	text = "Text",
+	className = "",
+	showBottomIndicator = true,
+}: FrameProps) {
 	const classes = ["group relative flex w-fit flex-col", className]
 		.filter(Boolean)
 		.join(" ");
 
 	return (
 		<div className={classes}>
-			<div className="relative z-10 w-fit cursor-pointer">{children}</div>
+			<div className="relative z-10 w-fit cursor-grab">{children}</div>
 
 			<div
 				aria-hidden="true"
@@ -34,11 +40,13 @@ export function Frame({ children, text = "Text", className = "" }: FrameProps) {
 					<span className="absolute bottom-0 right-0 size-1 translate-x-1/2 translate-y-1/2 bg-primary" />
 				</div>
 
-				<div className="absolute bottom-[-12px] right-[-8px] translate-y-full rounded bg-primary px-2 py-0.5">
-					<div className="flex h-4 w-8 items-center rounded-full bg-accent px-0.5">
-						<div className="size-3.5 rounded-full bg-primary" />
+				{showBottomIndicator ? (
+					<div className="absolute bottom-[-12px] right-[-8px] translate-y-full rounded bg-primary px-2 py-0.5">
+						<div className="flex h-4 w-8 items-center rounded-full bg-accent px-0.5">
+							<div className="size-3.5 rounded-full bg-primary" />
+						</div>
 					</div>
-				</div>
+				) : null}
 			</div>
 		</div>
 	);
