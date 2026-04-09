@@ -1,7 +1,8 @@
-import { ReactNode, useState } from "react";
+import { Dispatch, ReactNode, SetStateAction, useState } from "react";
 
 type FrameRenderProps = {
 	isSwitchedOn: boolean;
+	setIsSwitchDisabled: Dispatch<SetStateAction<boolean>>;
 };
 
 type FrameProps = {
@@ -22,12 +23,16 @@ export function Frame({
 	bottomIndicatorLabel,
 }: FrameProps) {
 	const [isBottomIndicatorOn, setIsBottomIndicatorOn] = useState(false);
+	const [isSwitchDisabled, setIsSwitchDisabled] = useState(false);
 	const classes = ["group relative flex w-fit flex-col", className]
 		.filter(Boolean)
 		.join(" ");
 	const content =
 		typeof children === "function"
-			? children({ isSwitchedOn: isBottomIndicatorOn })
+			? children({
+					isSwitchedOn: isBottomIndicatorOn,
+					setIsSwitchDisabled,
+				})
 			: children;
 
 	return (
@@ -64,8 +69,14 @@ export function Frame({
 					<div className="pointer-events-auto absolute bottom-[-12px] right-[-8px] z-30 translate-y-full">
 						<button
 							aria-checked={isBottomIndicatorOn}
+							aria-disabled={isSwitchDisabled}
 							aria-label={bottomIndicatorLabel ?? `${text} switch`}
-							className="relative z-10 cursor-pointer rounded bg-primary px-2 py-0.5 outline-none before:absolute before:-inset-2 before:content-[''] focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+							className={`relative z-10 rounded bg-primary px-2 py-0.5 outline-none before:absolute before:-inset-2 before:content-[''] focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background ${
+								isSwitchDisabled
+									? "cursor-not-allowed opacity-60"
+									: "cursor-pointer"
+							}`}
+							disabled={isSwitchDisabled}
 							onClick={() => {
 								setIsBottomIndicatorOn((current) => !current);
 							}}

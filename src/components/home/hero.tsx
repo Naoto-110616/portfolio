@@ -36,6 +36,52 @@ const HIGHLIGHT_LOOP_HOLD_DURATION = 2.4;
 const HIGHLIGHT_COLLAPSE_DURATION = 1.2;
 const HIGHLIGHT_ZERO_HOLD_DURATION = 0.2;
 const HIGHLIGHT_BOUNCE_DURATION = 2;
+const SCRAMBLE_CHARACTERS = `普段からメイクしない君が 薄化粧した朝
+始まりと終わりの狭間で
+忘れぬ約束した
+
+花束を君に贈ろう
+愛おしい人 愛おしい人
+どんな言葉並べても
+真実にはならないから
+今日は贈ろう 涙色の花束を君に
+
+毎日の 人知れぬ苦労や淋しみも無く ただ
+楽しいこと ばかりだったら
+愛なんて 知らずに済んだのにな
+
+花束を君に贈ろう
+言いたいこと 言いたいこと
+きっと山ほどあるけど
+神様しか知らないまま
+今日は贈ろう 涙色の花束を君に
+
+両手でも抱えきれない
+眩い風景の数々を ありがとう
+
+世界中が雨の日も
+君の笑顔が僕の太陽だったよ
+今は伝わらなくても
+真実には変わりないさ
+抱きしめてよ たった一度 さよならの前に
+You might also like
+COLORS (2024 Mix)
+宇多田ヒカル (Hikaru Utada)
+Prisoner of Love (2024 Mix)
+宇多田ヒカル (Hikaru Utada)
+光 (Hikari) (Re-Recording)
+宇多田ヒカル (Hikaru Utada)
+花束を君に贈ろう
+愛おしい人 愛おしい人
+どんな言葉並べても
+君を讃えるには 足りないから
+今日は贈ろう 涙色の花束を君に
+
+君に 君に
+君に 君に
+君に 君に
+君に 君に`;
+const SCRAMBLE_DURATION = 0.8;
 const localizedHeroValues: Record<string, string> = {
 	"Naoto Okawa": "大川 尚斗",
 	"Frontend Engineer": "フロントエンドエンジニア",
@@ -81,18 +127,28 @@ function getLocalizedHeroValue(value: string, isSwitchedOn: boolean) {
 	return localizedHeroValues[value] ?? value;
 }
 
+function getScrambleCharacter() {
+	return SCRAMBLE_CHARACTERS[
+		Math.floor(Math.random() * SCRAMBLE_CHARACTERS.length)
+	];
+}
+
 function TypingText({
 	value,
 	delay = 0,
 	className = "",
 	shouldBlinkBeforeTyping = false,
 	animateOnValueChange = true,
+	scrambleOnValueChange = false,
+	onScrambleStateChange,
 }: {
 	value: string;
 	delay?: number;
 	className?: string;
 	shouldBlinkBeforeTyping?: boolean;
 	animateOnValueChange?: boolean;
+	scrambleOnValueChange?: boolean;
+	onScrambleStateChange?: (isScrambling: boolean) => void;
 }) {
 	const shouldReduceMotion = useReducedMotion();
 	const [displayedLength, setDisplayedLength] = useState(
@@ -100,6 +156,9 @@ function TypingText({
 	);
 	const [isCaretVisible, setIsCaretVisible] = useState(false);
 	const [hasAnimatedOnce, setHasAnimatedOnce] = useState(false);
+	const [scrambledValue, setScrambledValue] = useState(value);
+	const [isScrambling, setIsScrambling] = useState(false);
+	const previousValueRef = useRef(value);
 
 	useEffect(() => {
 		if (shouldReduceMotion) {
@@ -176,16 +235,83 @@ function TypingText({
 		value,
 	]);
 
+	useEffect(() => {
+		if (
+			shouldReduceMotion ||
+			!hasAnimatedOnce ||
+			animateOnValueChange ||
+			!scrambleOnValueChange ||
+			previousValueRef.current === value
+		) {
+			previousValueRef.current = value;
+			onScrambleStateChange?.(false);
+			return;
+		}
+
+		const previousValue = previousValueRef.current;
+		const maxLength = Math.max(previousValue.length, value.length, 1);
+		const progress = { revealedCount: 0 };
+
+		const tween = gsap.to(progress, {
+			revealedCount: maxLength,
+			duration: SCRAMBLE_DURATION,
+			ease: "none",
+			onStart: () => {
+				setIsScrambling(true);
+				onScrambleStateChange?.(true);
+			},
+			onUpdate: () => {
+				const revealedCount = Math.floor(progress.revealedCount);
+				const nextValue = Array.from({ length: maxLength }, (_, index) => {
+					if (index < revealedCount) {
+						return value[index] ?? "";
+					}
+
+					if (index >= value.length) {
+						return "";
+					}
+
+					const targetCharacter = value[index];
+					return targetCharacter === " " ? " " : getScrambleCharacter();
+				}).join("");
+
+				setScrambledValue(nextValue);
+			},
+			onComplete: () => {
+				previousValueRef.current = value;
+				setScrambledValue(value);
+				setIsScrambling(false);
+				onScrambleStateChange?.(false);
+			},
+		});
+
+		return () => {
+			tween.kill();
+			onScrambleStateChange?.(false);
+		};
+	}, [
+		animateOnValueChange,
+		hasAnimatedOnce,
+		onScrambleStateChange,
+		scrambleOnValueChange,
+		shouldReduceMotion,
+		value,
+	]);
+
 	if (shouldReduceMotion) {
 		return <span className={className}>{value}</span>;
 	}
 
 	const shouldRenderStaticValue = hasAnimatedOnce && !animateOnValueChange;
 	const displayedValue = shouldRenderStaticValue
-		? value
+		? isScrambling
+			? scrambledValue
+			: value
 		: value.slice(0, displayedLength);
 	const showCaret =
-		!shouldRenderStaticValue && isCaretVisible && displayedLength < value.length;
+		!shouldRenderStaticValue &&
+		isCaretVisible &&
+		displayedLength < value.length;
 
 	return (
 		<span
@@ -392,7 +518,7 @@ function HeroValue({
 				dragMomentum={false}
 			>
 				<Frame isInteractive={isInteractive}>
-					{({ isSwitchedOn }) => {
+					{({ isSwitchedOn, setIsSwitchDisabled }) => {
 						const displayValue = getLocalizedHeroValue(value, isSwitchedOn);
 
 						return (
@@ -401,6 +527,8 @@ function HeroValue({
 									value={displayValue}
 									delay={delay}
 									animateOnValueChange={false}
+									onScrambleStateChange={setIsSwitchDisabled}
+									scrambleOnValueChange
 									shouldBlinkBeforeTyping={shouldBlinkCaretBeforeTyping(value)}
 								/>
 							</p>
