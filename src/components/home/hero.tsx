@@ -108,10 +108,6 @@ function TypingText({
 				className="invisible col-start-1 row-start-1 inline-flex items-center"
 			>
 				{value}
-				<span
-					aria-hidden="true"
-					className="ml-1 inline-block w-px origin-left scale-x-50"
-				/>
 			</span>
 			<span
 				aria-hidden="true"
