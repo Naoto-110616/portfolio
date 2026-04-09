@@ -1,14 +1,26 @@
 import Image from "next/image";
 
-import { socialLinks } from "@/constans/const";
 import { SectionReveal } from "@/components/motion/section-reveal";
 import { StaggerGroup } from "@/components/motion/stagger-group";
 import { StaggerItem } from "@/components/motion/stagger-item";
 import { CurrentTime } from "@/components/ui/current-time";
 import { Link } from "@/components/ui/link";
+import { socialLinks as defaultSocialLinks } from "@/constans/const";
 import { LayoutGuides } from "../ui/layout-guides";
 
-function FooterLink({ href, label }: { href: string; label: string }) {
+export type FooterLinkItem = {
+	label: string;
+	href: string;
+};
+
+type FooterProps = {
+	socialLinks?: FooterLinkItem[];
+	email?: string;
+	copyright?: string;
+	backToTopLabel?: string;
+};
+
+function FooterLink({ href, label }: FooterLinkItem) {
 	return (
 		<a
 			className="transition-opacity hover:opacity-80"
@@ -21,7 +33,12 @@ function FooterLink({ href, label }: { href: string; label: string }) {
 	);
 }
 
-export function Footer() {
+export function Footer({
+	socialLinks = defaultSocialLinks,
+	email = "naoto.okawa0616@gmail.com",
+	copyright = "© 2026, All rights reserved",
+	backToTopLabel = "Back to top",
+}: FooterProps) {
 	return (
 		<footer className="relative overflow-hidden bg-primary text-accent">
 			<LayoutGuides lineClassName="bg-accent/10" />
@@ -41,7 +58,7 @@ export function Footer() {
 							staggerChildren={0.08}
 						>
 							{socialLinks.map((link) => (
-								<StaggerItem key={link.label}>
+								<StaggerItem key={`${link.href}-${link.label}`}>
 									<FooterLink {...link} />
 								</StaggerItem>
 							))}
@@ -52,15 +69,15 @@ export function Footer() {
 
 					<a
 						className="w-fit text-caption text-accent transition-opacity hover:opacity-80 md:text-body md:leading-normal"
-						href="mailto:naoto.okawa0616@gmail.com"
+						href={`mailto:${email}`}
 					>
-						naoto.okawa0616@gmail.com
+						{email}
 					</a>
 				</div>
 				<div>
 					<div className="grid grid-cols-8 items-center justify-between text-caption text-accent md:text-body md:leading-normal">
 						<p className="col-span-6 wide:col-span-7">
-							© 2026, All rights reserved
+							{copyright}
 						</p>
 
 						<a
@@ -70,7 +87,7 @@ export function Footer() {
 							<Link
 								className="text-inherit"
 								iconClassName="-rotate-90"
-								label="Back to top"
+								label={backToTopLabel}
 							/>
 						</a>
 					</div>

@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { AnimatedSectionTitle } from "@/components/motion/animated-section-title";
 import { GsapStaggerGroup } from "@/components/motion/gsap-stagger-group";
 
-type WorkItem = {
+export type WorkItem = {
 	title: string;
 	description: string;
 	partner: string;
@@ -16,6 +16,7 @@ type WorkItem = {
 };
 
 type WorkSectionProps = {
+	title?: string;
 	items?: WorkItem[];
 };
 
@@ -117,11 +118,14 @@ function WorkCard({
 	);
 }
 
-export function WorkSection({ items = defaultItems }: WorkSectionProps) {
+export function WorkSection({
+	title = "Work",
+	items = defaultItems,
+}: WorkSectionProps) {
 	return (
 		<section id="work" className="flex w-full flex-col gap-6 md:gap-section-lg">
 			<AnimatedSectionTitle
-				title="Work"
+				title={title}
 				titleClassName="md:text-section-lg md:font-black"
 			/>
 

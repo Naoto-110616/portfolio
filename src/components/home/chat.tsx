@@ -8,13 +8,25 @@ import { SectionTitle } from "@/components/ui/section-title";
 
 const MAX_PROMPT_LENGTH = 500;
 
-const description =
+const defaultDescription =
 	"プロフィール以外で私について知りたいことがあれば、こちらのAIに聞いてみてください。日々のメモや過去の仕事を学習しているので、技術的な質問から個人的な考え方まで、私の代わりにお答えします。";
 
-const helperText =
+const defaultHelperText =
 	"AIが自動で回答するため、時々おかしなことを言うかもしれません。";
 
-export function ChatSection() {
+type ChatSectionProps = {
+	title?: string;
+	description?: string;
+	helperText?: string;
+	placeholder?: string;
+};
+
+export function ChatSection({
+	title = "Pick My Brain!",
+	description = defaultDescription,
+	helperText = defaultHelperText,
+	placeholder = "人生で一番好きな映画は？",
+}: ChatSectionProps) {
 	const [prompt, setPrompt] = useState("");
 	const shouldReduceMotion = useReducedMotion();
 
@@ -34,7 +46,7 @@ export function ChatSection() {
 		>
 			<div className="flex flex-col gap-block">
 				<SectionTitle
-					title="Pick My Brain!"
+					title={title}
 					titleClassName="md:text-section-lg md:font-black"
 				/>
 				<p className="text-caption leading-normal text-foreground md:text-section md:font-bold md:leading-[1.4]">
@@ -56,7 +68,7 @@ export function ChatSection() {
 						id="chat-prompt"
 						className="w-full bg-transparent text-caption-sm leading-none text-primary outline-none placeholder:text-caption-sm placeholder:text-primary md:text-body md:leading-normal md:placeholder:text-body"
 						maxLength={MAX_PROMPT_LENGTH}
-						placeholder="人生で一番好きな映画は？"
+						placeholder={placeholder}
 						type="text"
 						value={prompt}
 						onChange={(event) => setPrompt(event.target.value)}

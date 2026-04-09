@@ -4,16 +4,8 @@ import { ReactNode } from "react";
 
 import { MotionProvider } from "@/components/providers/motion-provider";
 import { QueryProvider } from "@/components/providers/query-provider";
+import { getSiteSettings } from "@/lib/contentful/queries";
 import "./globals.css";
-
-export const metadata: Metadata = {
-	title: "Zexora Starter Package",
-	description:
-		"Next.js starter package with Contentful, Resend, and TanStack Query integration.",
-	metadataBase: new URL(
-		process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
-	),
-};
 
 type RootLayoutProps = Readonly<{
 	children: ReactNode;
@@ -30,6 +22,16 @@ const caveat = Caveat({
 	subsets: ["latin"],
 	weight: ["400", "700"],
 });
+
+export async function generateMetadata(): Promise<Metadata> {
+	const siteSettings = await getSiteSettings();
+
+	return {
+		title: siteSettings.metadata.title,
+		description: siteSettings.metadata.description,
+		metadataBase: new URL(siteSettings.metadata.siteUrl),
+	};
+}
 
 export default function RootLayout({ children }: RootLayoutProps) {
 	return (

@@ -35,8 +35,9 @@ npm run dev
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
 
 CONTENTFUL_SPACE_ID=your_space_id
-CONTENTFUL_ACCESS_TOKEN=your_delivery_api_token
+CONTENTFUL_DELIVERY_ACCESS_TOKEN=your_delivery_api_token
 CONTENTFUL_ENVIRONMENT=master
+CONTENTFUL_MANAGEMENT_TOKEN=your_content_management_token
 
 RESEND_API_KEY=re_xxxxxxxxx
 RESEND_FROM_EMAIL=hello@your-domain.com
@@ -46,14 +47,15 @@ CONTACT_TO_EMAIL=team@your-domain.com
 ### Contentful
 
 - `CONTENTFUL_SPACE_ID`: 対象 Space の ID
-- `CONTENTFUL_ACCESS_TOKEN`: Content Delivery API Token
+- `CONTENTFUL_DELIVERY_ACCESS_TOKEN`: Content Delivery API Token
 - `CONTENTFUL_ENVIRONMENT`: 通常は `master`
+- `CONTENTFUL_MANAGEMENT_TOKEN`: Content Management API Token（migration 実行用）
 
 補足:
 
-- 取得対象の Content Model は固定していません
-- 公開済み Entry を新しい順に取得し、`title` / `name` / `headline` など代表的なフィールド名から表示用データを組み立てます
-- Entry がない場合や接続失敗時はローカルのフォールバックカードを表示します
+- `contentful/` 配下に Content Model の migration を置き、`npm run contentful:migrate -- --yes` で適用します
+- ホーム画面では `siteSettings`, `homePage`, `project` を取得し、ヘッダー・フッター・Work・About・Services を組み立てます
+- Entry がない場合や接続失敗時はローカルのフォールバックデータを表示します
 
 ### Resend
 
@@ -75,6 +77,7 @@ npm run build
 npm run start
 npm run lint
 npm run typecheck
+npm run contentful:migrate -- --yes
 ```
 
 ## Project Structure
@@ -94,8 +97,15 @@ src/
   lib/
     contact/
     contentful/
+      mappers/
+      queries/
+      types/
     resend/
     env.ts
+contentful/
+  config/
+  migrations/
+  scripts/
 ```
 
 ## Deploy To Vercel

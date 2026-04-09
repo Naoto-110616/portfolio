@@ -5,7 +5,7 @@ import { StaggerGroup } from "@/components/motion/stagger-group";
 import { StaggerItem } from "@/components/motion/stagger-item";
 import { Frame } from "@/components/ui/frame";
 
-type HeroItem = {
+export type HeroItem = {
 	label: string;
 	value: string;
 	isHighlighted?: boolean;
@@ -21,37 +21,56 @@ const defaultItems: HeroItem[] = [
 	{ label: "Dislikes:", value: "Work", isHighlighted: true },
 ];
 
+function HeroLabel({
+	label,
+	isHighlighted = false,
+}: Pick<HeroItem, "label" | "isHighlighted">) {
+	return (
+		<div className="relative w-full max-w-content-sp">
+			<p className="text-hero-sub text-foreground md:text-hero-sub-lg md:leading-none">
+				{label}
+			</p>
+			{isHighlighted ? (
+				<span
+					aria-hidden="true"
+					className="absolute left-0 top-[24px] h-[6px] w-[45px] bg-accent md:top-[36px] md:w-[84px] md:h-2"
+				/>
+			) : null}
+		</div>
+	);
+}
+
+function HeroValue({
+	value,
+	isHighlighted = false,
+}: Pick<HeroItem, "value" | "isHighlighted">) {
+	if (isHighlighted) {
+		return (
+			<>
+				<p className="w-full max-w-content-sp text-[44px] leading-[1.4] font-bold text-foreground md:hidden">
+					{value}
+				</p>
+				<Frame className="hidden md:flex">
+					<p className="text-hero-lg leading-none font-black text-foreground">
+						{value}
+					</p>
+				</Frame>
+			</>
+		);
+	}
+
+	return (
+		<p className="w-full max-w-content-sp text-[44px] leading-[1.4] font-bold text-foreground md:max-w-none md:text-hero-lg md:leading-none md:font-black">
+			{value}
+		</p>
+	);
+}
+
 function HeroRow({ label, value, isHighlighted = false }: HeroItem) {
 	return (
 		<div className="flex flex-col">
-			<div className="relative w-full max-w-content-sp">
-				<p className="text-hero-sub text-foreground md:text-hero-sub-lg md:leading-none">
-					{label}
-				</p>
-				{isHighlighted ? (
-					<span
-						aria-hidden="true"
-						className="absolute left-0 top-[24px] h-[6px] w-[45px] bg-accent md:top-[36px] md:w-[84px] md:h-2"
-					/>
-				) : null}
-			</div>
-
-			{isHighlighted ? (
-				<>
-					<p className="w-full max-w-content-sp text-[44px] leading-[1.4] font-bold text-foreground md:hidden">
-						{value}
-					</p>
-					<Frame className="hidden md:flex">
-						<p className="text-hero-lg leading-none font-black text-foreground">
-							{value}
-						</p>
-					</Frame>
-				</>
-			) : (
-				<p className="w-full max-w-content-sp text-[44px] leading-[1.4] font-bold text-foreground md:max-w-none md:text-hero-lg md:leading-none md:font-black">
-					{value}
-				</p>
-			)}
+			<HeroLabel label={label} isHighlighted={isHighlighted} />
+			<HeroValue value={value} isHighlighted={isHighlighted} />
 		</div>
 	);
 }
@@ -84,7 +103,7 @@ function ViewMore() {
 						Get to know me
 					</a>
 
-					<div className="flex w-full flex-col items-center justify-center gap-1 text-caption text-primary transition-opacity hover:opacity-80">
+					<div className="flex w-full flex-col items-center justify-center gap-1 text-caption text-primary transition-opacity">
 						<span>Or scroll down</span>
 						<ArrowRight
 							aria-hidden="true"
@@ -100,7 +119,7 @@ function ViewMore() {
 
 export function HeroSection({ items = defaultItems }: HeroSectionProps) {
 	return (
-		<section className="flex w-full flex-col items-center gap-[56px] md:gap-section">
+		<section className="flex w-full flex-col items-center gap-[56px] md:gap-[20px]">
 			<StaggerGroup
 				className="w-full"
 				delayChildren={0.08}
@@ -108,8 +127,8 @@ export function HeroSection({ items = defaultItems }: HeroSectionProps) {
 			>
 				<div className="grid grid-cols-8">
 					<div className="col-span-8 flex flex-col gap-block md:col-span-8 md:gap-10">
-						{items.map((item) => (
-							<StaggerItem key={item.label}>
+						{items.map((item, index) => (
+							<StaggerItem key={`${item.label}-${item.value}-${index}`}>
 								<HeroRow {...item} />
 							</StaggerItem>
 						))}

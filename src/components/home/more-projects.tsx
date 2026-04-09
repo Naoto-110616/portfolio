@@ -4,7 +4,7 @@ import { AnimatedSectionTitle } from "@/components/motion/animated-section-title
 import { StaggerGroup } from "@/components/motion/stagger-group";
 import { StaggerItem } from "@/components/motion/stagger-item";
 
-type MoreProjectItem = {
+export type MoreProjectItem = {
 	imageUrl: string;
 	height: number;
 	href: string;
@@ -12,6 +12,7 @@ type MoreProjectItem = {
 };
 
 type MoreProjectsSectionProps = {
+	title?: string;
 	items?: MoreProjectItem[];
 };
 
@@ -78,12 +79,13 @@ function MoreProjectCard({ imageUrl, height, href, alt }: MoreProjectItem) {
 }
 
 export function MoreProjectsSection({
+	title = "More Projects",
 	items = defaultItems,
 }: MoreProjectsSectionProps) {
 	return (
 		<section className="flex w-full flex-col gap-stack-sm md:gap-section-lg">
 			<AnimatedSectionTitle
-				title="More Projects"
+				title={title}
 				titleClassName="text-heading md:text-section-lg md:font-black"
 				withDivider
 			/>

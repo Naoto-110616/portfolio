@@ -3,19 +3,24 @@ import { SectionReveal } from "@/components/motion/section-reveal";
 import { StaggerGroup } from "@/components/motion/stagger-group";
 import { StaggerItem } from "@/components/motion/stagger-item";
 
-type AboutBlock = {
+export type AboutBlock = {
+	id?: string;
 	title: string;
 	paragraphs: string[];
 };
 
 type AboutSectionProps = {
+	title?: string;
+	leadText?: string;
+	imageUrl?: string;
+	imageAlt?: string;
 	blocks?: AboutBlock[];
 };
 
 const aboutImage =
 	"https://www.figma.com/api/mcp/asset/1d9e5c05-e456-414b-9635-956928c1245c";
 
-const leadText =
+const defaultLeadText =
 	"モダンなWebに、体験と仕組みをデザインするフロントエンドエンジニア";
 
 const defaultBlocks: AboutBlock[] = [
@@ -59,28 +64,34 @@ function AboutContentBlock({ title, paragraphs }: AboutBlock) {
 				{title}
 			</h3>
 			<div className="flex flex-col gap-stack text-caption leading-normal text-foreground md:text-body">
-				{paragraphs.map((paragraph) => (
-					<p key={paragraph}>{paragraph}</p>
+				{paragraphs.map((paragraph, index) => (
+					<p key={`${title}-${index}`}>{paragraph}</p>
 				))}
 			</div>
 		</section>
 	);
 }
 
-export function AboutSection({ blocks = defaultBlocks }: AboutSectionProps) {
+export function AboutSection({
+	title = "About",
+	leadText = defaultLeadText,
+	imageUrl = aboutImage,
+	imageAlt = "Naoto Okawa portrait",
+	blocks = defaultBlocks,
+}: AboutSectionProps) {
 	return (
 		<section id="about" className="flex w-full flex-col gap-block md:gap-section-lg">
 			<AnimatedSectionTitle
-				title="About"
+				title={title}
 				titleClassName="md:text-section-lg md:font-black"
 			/>
 
 			<div className="flex flex-col gap-block md:grid md:grid-cols-[368px_minmax(0,1fr)] md:items-start md:gap-4">
 				<SectionReveal>
 					<img
-						alt="Naoto Okawa portrait"
+						alt={imageAlt}
 						className="aspect-1536/2048 w-full object-cover md:h-[491px] md:w-[368px] md:aspect-auto"
-						src={aboutImage}
+						src={imageUrl}
 					/>
 				</SectionReveal>
 
@@ -96,8 +107,8 @@ export function AboutSection({ blocks = defaultBlocks }: AboutSectionProps) {
 						delayChildren={0.08}
 						staggerChildren={0.14}
 					>
-						{blocks.map((block) => (
-							<StaggerItem key={block.title}>
+						{blocks.map((block, index) => (
+							<StaggerItem key={block.id ?? `${block.title}-${index}`}>
 								<AboutContentBlock {...block} />
 							</StaggerItem>
 						))}

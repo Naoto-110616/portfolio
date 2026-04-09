@@ -1,21 +1,46 @@
 import { z } from "zod";
 
+const emptyStringToUndefined = (value: unknown) => {
+  if (typeof value === "string" && value.trim() === "") {
+    return undefined;
+  }
+
+  return value;
+};
+
+const optionalString = z.preprocess(
+  emptyStringToUndefined,
+  z.string().min(1).optional(),
+);
+
+const optionalUrl = z.preprocess(
+  emptyStringToUndefined,
+  z.string().url().optional(),
+);
+
+const optionalEmail = z.preprocess(
+  emptyStringToUndefined,
+  z.string().email().optional(),
+);
+
 const serverEnvSchema = z.object({
   NODE_ENV: z.enum(["development", "test", "production"]).default("development"),
-  NEXT_PUBLIC_SITE_URL: z.string().url().optional(),
-  CONTENTFUL_SPACE_ID: z.string().min(1).optional(),
-  CONTENTFUL_ACCESS_TOKEN: z.string().min(1).optional(),
+  NEXT_PUBLIC_SITE_URL: optionalUrl,
+  CONTENTFUL_SPACE_ID: optionalString,
+  CONTENTFUL_DELIVERY_ACCESS_TOKEN: optionalString,
+  CONTENTFUL_PREVIEW_ACCESS_TOKEN: optionalString,
   CONTENTFUL_ENVIRONMENT: z.string().min(1).default("master"),
-  RESEND_API_KEY: z.string().min(1).optional(),
-  RESEND_FROM_EMAIL: z.string().email().optional(),
-  CONTACT_TO_EMAIL: z.string().email().optional(),
+  RESEND_API_KEY: optionalString,
+  RESEND_FROM_EMAIL: optionalEmail,
+  CONTACT_TO_EMAIL: optionalEmail,
 });
 
 const parsedEnv = serverEnvSchema.safeParse({
   NODE_ENV: process.env.NODE_ENV,
   NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
   CONTENTFUL_SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
-  CONTENTFUL_ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN,
+  CONTENTFUL_DELIVERY_ACCESS_TOKEN: process.env.CONTENTFUL_DELIVERY_ACCESS_TOKEN,
+  CONTENTFUL_PREVIEW_ACCESS_TOKEN: process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN,
   CONTENTFUL_ENVIRONMENT: process.env.CONTENTFUL_ENVIRONMENT,
   RESEND_API_KEY: process.env.RESEND_API_KEY,
   RESEND_FROM_EMAIL: process.env.RESEND_FROM_EMAIL,
@@ -33,7 +58,7 @@ export const env = {
 };
 
 export const integrationStatus = {
-  hasContentful: Boolean(env.CONTENTFUL_SPACE_ID && env.CONTENTFUL_ACCESS_TOKEN),
+  hasContentful: Boolean(env.CONTENTFUL_SPACE_ID && env.CONTENTFUL_DELIVERY_ACCESS_TOKEN),
   hasResend: Boolean(
     env.RESEND_API_KEY && env.RESEND_FROM_EMAIL && env.CONTACT_TO_EMAIL,
   ),
@@ -42,13 +67,13 @@ export const integrationStatus = {
 export function requireContentfulEnv() {
   if (!integrationStatus.hasContentful) {
     throw new Error(
-      "Contentful environment variables are missing. Set CONTENTFUL_SPACE_ID and CONTENTFUL_ACCESS_TOKEN.",
+      "Contentful environment variables are missing. Set CONTENTFUL_SPACE_ID and CONTENTFUL_DELIVERY_ACCESS_TOKEN.",
     );
   }
 
   return {
     space: env.CONTENTFUL_SPACE_ID!,
-    accessToken: env.CONTENTFUL_ACCESS_TOKEN!,
+    accessToken: env.CONTENTFUL_DELIVERY_ACCESS_TOKEN!,
     environment: env.CONTENTFUL_ENVIRONMENT,
   };
 }

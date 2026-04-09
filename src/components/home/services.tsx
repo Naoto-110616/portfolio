@@ -1,12 +1,14 @@
 import { AnimatedSectionTitle } from "@/components/motion/animated-section-title";
 import { SectionReveal } from "@/components/motion/section-reveal";
 
-type ServiceItem = {
+export type ServiceItem = {
+	id?: string;
 	title: string;
 	points: string[];
 };
 
 type ServicesSectionProps = {
+	title?: string;
 	items?: ServiceItem[];
 };
 
@@ -59,8 +61,8 @@ function ServiceGroup({ title, points }: ServiceItem) {
 				{title}
 			</h3>
 			<div className="flex flex-col gap-16 text-caption leading-normal text-foreground md:flex-row md:flex-wrap md:gap-4 md:text-body">
-				{points.map((point) => (
-					<p key={point} className="md:w-[240px]">
+				{points.map((point, index) => (
+					<p key={`${title}-${index}`} className="md:w-[240px]">
 						{point}
 					</p>
 				))}
@@ -69,17 +71,24 @@ function ServiceGroup({ title, points }: ServiceItem) {
 	);
 }
 
-export function ServicesSection({ items = defaultItems }: ServicesSectionProps) {
+export function ServicesSection({
+	title = "Services",
+	items = defaultItems,
+}: ServicesSectionProps) {
 	return (
 		<section id="services" className="flex w-full flex-col gap-block md:gap-section-lg">
 			<AnimatedSectionTitle
-				title="Services"
+				title={title}
 				titleClassName="md:text-section-lg md:font-black"
 			/>
 
 			<div className="flex flex-col gap-block-lg md:gap-section-lg">
 				{items.map((item, index) => (
-					<SectionReveal key={item.title} delay={index * 0.06} y={24}>
+					<SectionReveal
+						key={item.id ?? `${item.title}-${index}`}
+						delay={index * 0.06}
+						y={24}
+					>
 						<ServiceGroup {...item} />
 					</SectionReveal>
 				))}

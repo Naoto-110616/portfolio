@@ -3,7 +3,7 @@ import { SectionReveal } from "@/components/motion/section-reveal";
 import { StaggerGroup } from "@/components/motion/stagger-group";
 import { StaggerItem } from "@/components/motion/stagger-item";
 
-type HeaderLink = {
+export type HeaderLink = {
 	label: string;
 	href: string;
 };
@@ -48,7 +48,10 @@ export function Header({
 							staggerChildren={0.08}
 						>
 							{links.map((link) => (
-								<li key={link.label} className="col-span-2 list-none">
+								<li
+									key={`${link.href}-${link.label}`}
+									className="col-span-2 list-none"
+								>
 									<StaggerItem>
 										<a
 											className="inline-flex w-full transition-opacity hover:opacity-70"
@@ -74,7 +77,7 @@ export function Header({
 							staggerChildren={0.08}
 						>
 							{links.map((link) => (
-								<li key={link.label} className="list-none">
+								<li key={`${link.href}-${link.label}`} className="list-none">
 									<StaggerItem y={12}>
 										<a
 											className="inline-flex w-full transition-opacity hover:opacity-70"
