@@ -1,4 +1,8 @@
+"use client";
+
 import { ArrowRight } from "lucide-react";
+import { motion } from "motion/react";
+import { useEffect, useRef, useState } from "react";
 
 import { SectionReveal } from "@/components/motion/section-reveal";
 import { StaggerGroup } from "@/components/motion/stagger-group";
@@ -21,6 +25,44 @@ const defaultItems: HeroItem[] = [
 	{ label: "Dislikes:", value: "Work", isHighlighted: true },
 ];
 
+function useViewportDragConstraints<T extends HTMLDivElement>() {
+	const dragRef = useRef<T>(null);
+	const [dragConstraints, setDragConstraints] = useState({
+		top: 0,
+		right: 0,
+		bottom: 0,
+		left: 0,
+	});
+
+	useEffect(() => {
+		const updateDragConstraints = () => {
+			const element = dragRef.current;
+
+			if (!element) {
+				return;
+			}
+
+			const rect = element.getBoundingClientRect();
+
+			setDragConstraints({
+				top: -rect.top,
+				right: window.innerWidth - rect.right,
+				bottom: window.innerHeight - rect.bottom,
+				left: -rect.left,
+			});
+		};
+
+		updateDragConstraints();
+		window.addEventListener("resize", updateDragConstraints);
+
+		return () => {
+			window.removeEventListener("resize", updateDragConstraints);
+		};
+	}, []);
+
+	return { dragRef, dragConstraints };
+}
+
 function HeroLabel({
 	label,
 	isHighlighted = false,
@@ -41,16 +83,27 @@ function HeroLabel({
 }
 
 function HeroValue({ value }: Pick<HeroItem, "value">) {
+	const { dragRef, dragConstraints } = useViewportDragConstraints<HTMLDivElement>();
+
 	return (
 		<>
 			<p className="w-full max-w-content-sp text-[44px] leading-[1.4] font-bold text-foreground md:hidden">
 				{value}
 			</p>
-			<Frame className="hidden md:flex">
-				<p className="text-hero-lg leading-none font-black text-foreground">
-					{value}
-				</p>
-			</Frame>
+			<motion.div
+				ref={dragRef}
+				className="hidden w-fit md:block"
+				drag
+				dragConstraints={dragConstraints}
+				dragElastic={0}
+				dragMomentum={false}
+			>
+				<Frame>
+					<p className="text-hero-lg leading-none font-black text-foreground">
+						{value}
+					</p>
+				</Frame>
+			</motion.div>
 		</>
 	);
 }
@@ -65,6 +118,8 @@ function HeroRow({ label, value, isHighlighted = false }: HeroItem) {
 }
 
 function ViewMore() {
+	const { dragRef, dragConstraints } = useViewportDragConstraints<HTMLDivElement>();
+
 	return (
 		<div className="w-fit text-primary">
 			<a
@@ -83,28 +138,34 @@ function ViewMore() {
 				/>
 			</div>
 
-			<Frame
-				className="hidden md:flex md:items-end"
-				showBottomIndicator={false}
+			<motion.div
+				ref={dragRef}
+				className="hidden w-fit md:block"
+				drag
+				dragConstraints={dragConstraints}
+				dragElastic={0}
+				dragMomentum={false}
 			>
-				<div className="flex flex-col items-start gap-1">
-					<a
-						className="inline-flex items-center overflow-hidden rounded-[24px] border border-primary bg-accent px-4 py-2 text-body leading-normal text-primary transition-opacity hover:opacity-80"
-						href="#work"
-					>
-						Get to know me
-					</a>
+				<Frame className="md:flex md:items-end" showBottomIndicator={false}>
+					<div className="flex flex-col items-start gap-1">
+						<a
+							className="inline-flex items-center overflow-hidden rounded-[24px] border border-primary bg-accent px-4 py-2 text-body leading-normal text-primary transition-opacity hover:opacity-80"
+							href="#work"
+						>
+							Get to know me
+						</a>
 
-					<div className="flex w-full flex-col items-center justify-center gap-1 text-caption text-primary transition-opacity">
-						<span>Or scroll down</span>
-						<ArrowRight
-							aria-hidden="true"
-							className="size-6 rotate-90 shrink-0"
-							strokeWidth={1.75}
-						/>
+						<div className="flex w-full flex-col items-center justify-center gap-1 text-caption text-primary transition-opacity">
+							<span>Or scroll down</span>
+							<ArrowRight
+								aria-hidden="true"
+								className="size-6 rotate-90 shrink-0"
+								strokeWidth={1.75}
+							/>
+						</div>
 					</div>
-				</div>
-			</Frame>
+				</Frame>
+			</motion.div>
 		</div>
 	);
 }
