@@ -67,7 +67,11 @@ export function Frame({
 							role="switch"
 							type="button"
 						>
-							<span className="flex h-4 w-8 items-center rounded-full bg-accent px-0.5">
+							<span
+								className={`flex h-4 w-8 items-center rounded-full px-0.5 transition-colors duration-200 ${
+									isBottomIndicatorOn ? "bg-accent/60" : "bg-accent"
+								}`}
+							>
 								<span
 									className={`size-3.5 rounded-full bg-primary transition-transform duration-200 ease-out ${
 										isBottomIndicatorOn ? "translate-x-0" : "translate-x-[14px]"
