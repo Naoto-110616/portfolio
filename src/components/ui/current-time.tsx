@@ -14,20 +14,28 @@ function formatTokyoDateTime(date: Date) {
 		timeZone: "Asia/Tokyo",
 	}).format(date);
 
-	const timeLabel = `${new Intl.DateTimeFormat("en-US", {
+	const timeParts = new Intl.DateTimeFormat("en-US", {
 		hour: "numeric",
 		minute: "2-digit",
 		hour12: true,
 		timeZone: "Asia/Tokyo",
-	}).format(date)} [JP]`;
+	}).formatToParts(date);
 
-	return { dateLabel, timeLabel };
+	const hourLabel =
+		timeParts.find((part) => part.type === "hour")?.value ?? "12";
+	const minuteLabel =
+		timeParts.find((part) => part.type === "minute")?.value ?? "00";
+	const periodLabel =
+		timeParts.find((part) => part.type === "dayPeriod")?.value ?? "AM";
+
+	return { dateLabel, hourLabel, minuteLabel, periodLabel };
 }
 
 export function CurrentTime({ className = "" }: CurrentTimeProps) {
 	const [currentTime, setCurrentTime] = useState(() =>
 		formatTokyoDateTime(new Date()),
 	);
+	const [isColonVisible, setIsColonVisible] = useState(true);
 
 	useEffect(() => {
 		let intervalId: ReturnType<typeof setInterval> | undefined;
@@ -54,6 +62,16 @@ export function CurrentTime({ className = "" }: CurrentTimeProps) {
 		};
 	}, []);
 
+	useEffect(() => {
+		const intervalId = setInterval(() => {
+			setIsColonVisible((current) => !current);
+		}, 700);
+
+		return () => {
+			clearInterval(intervalId);
+		};
+	}, []);
+
 	const classes = ["flex flex-col gap-stack h-full justify-between", className]
 		.filter(Boolean)
 		.join(" ");
@@ -61,7 +79,21 @@ export function CurrentTime({ className = "" }: CurrentTimeProps) {
 	return (
 		<div className={classes}>
 			<p suppressHydrationWarning>{currentTime.dateLabel}</p>
-			<p suppressHydrationWarning>{currentTime.timeLabel}</p>
+			<p
+				className="inline-flex items-baseline whitespace-nowrap tabular-nums"
+				suppressHydrationWarning
+			>
+				<span>{currentTime.hourLabel}</span>
+				<span
+					className={`transition-opacity duration-150 ${
+						isColonVisible ? "opacity-100" : "opacity-0"
+					}`}
+				>
+					:
+				</span>
+				<span>{currentTime.minuteLabel}</span>
+				<span className="ml-[0.25em]">{currentTime.periodLabel} [JP]</span>
+			</p>
 		</div>
 	);
 }
