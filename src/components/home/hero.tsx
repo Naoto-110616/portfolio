@@ -28,7 +28,7 @@ const defaultItems: HeroItem[] = [
 const LABEL_REVEAL_DURATION = 0.45;
 const ROW_GAP_DURATION = 0.2;
 const CARET_BLINK_COUNT = 3;
-const CARET_BLINK_STEP_DURATION = 0.2;
+const CARET_BLINK_STEP_DURATION = 0.5;
 const HIGHLIGHT_REVEAL_DURATION = 0.7;
 const HIGHLIGHT_REVEAL_OFFSET = 0.08;
 
@@ -41,10 +41,7 @@ function getTypingDuration(value: string) {
 		? CARET_BLINK_COUNT * CARET_BLINK_STEP_DURATION * 2
 		: 0;
 
-	return (
-		blinkLeadDuration +
-		Math.max(Math.max(value.length, 1) * 0.06, 0.5)
-	);
+	return blinkLeadDuration + Math.max(Math.max(value.length, 1) * 0.06, 0.5);
 }
 
 function getHeroRowTimings(items: HeroItem[]) {
@@ -100,19 +97,29 @@ function TypingText({
 		});
 
 		if (shouldBlinkBeforeTyping) {
-			for (let blinkIndex = 0; blinkIndex < CARET_BLINK_COUNT; blinkIndex += 1) {
-				timeline.to({}, {
-					duration: CARET_BLINK_STEP_DURATION,
-					onStart: () => {
-						setIsCaretVisible(false);
+			for (
+				let blinkIndex = 0;
+				blinkIndex < CARET_BLINK_COUNT;
+				blinkIndex += 1
+			) {
+				timeline.to(
+					{},
+					{
+						duration: CARET_BLINK_STEP_DURATION,
+						onStart: () => {
+							setIsCaretVisible(false);
+						},
 					},
-				});
-				timeline.to({}, {
-					duration: CARET_BLINK_STEP_DURATION,
-					onStart: () => {
-						setIsCaretVisible(true);
+				);
+				timeline.to(
+					{},
+					{
+						duration: CARET_BLINK_STEP_DURATION,
+						onStart: () => {
+							setIsCaretVisible(true);
+						},
 					},
-				});
+				);
 			}
 		}
 
