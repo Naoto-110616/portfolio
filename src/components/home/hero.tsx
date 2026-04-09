@@ -414,6 +414,7 @@ function ViewMore({ isInteractive = true }: { isInteractive?: boolean }) {
 					className="md:flex md:items-end"
 					isInteractive={isInteractive}
 					showBottomIndicator={false}
+					text="Group"
 				>
 					<div className="flex flex-col items-start gap-1">
 						<a
