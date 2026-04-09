@@ -6,6 +6,7 @@ import { motion, useReducedMotion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
 import { Frame } from "@/components/ui/frame";
+import { RollingText } from "@/components/ui/rolling-text";
 
 export type HeroItem = {
 	label: string;
@@ -386,10 +387,10 @@ function ViewMore({ isInteractive = true }: { isInteractive?: boolean }) {
 	return (
 		<div className="w-fit text-primary">
 			<a
-				className="inline-flex items-center overflow-hidden rounded-[24px] border border-primary bg-accent px-4 py-2 text-caption text-primary transition-opacity hover:opacity-80 md:hidden"
+				className="group inline-flex items-center overflow-hidden rounded-[24px] border border-primary bg-accent px-4 py-2 text-caption text-primary transition-opacity hover:opacity-80 md:hidden"
 				href="#work"
 			>
-				Get to know me
+				<RollingText text="Get to know me" />
 			</a>
 
 			<div className="md:hidden flex w-full flex-col items-center justify-center gap-1 text-caption text-primary transition-opacity hover:opacity-80">
@@ -416,10 +417,10 @@ function ViewMore({ isInteractive = true }: { isInteractive?: boolean }) {
 				>
 					<div className="flex flex-col items-start gap-1">
 						<a
-							className="inline-flex items-center overflow-hidden rounded-[24px] border border-primary bg-accent px-4 py-2 text-body leading-normal text-primary transition-opacity hover:opacity-80"
+							className="group inline-flex items-center overflow-hidden rounded-[24px] border border-primary bg-accent px-4 py-2 text-body leading-normal text-primary transition-opacity hover:opacity-80"
 							href="#work"
 						>
-							Get to know me
+							<RollingText text="Get to know me" />
 						</a>
 
 						<div className="flex w-full flex-col items-center justify-center gap-1 text-caption text-primary transition-opacity">

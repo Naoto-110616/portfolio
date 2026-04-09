@@ -5,6 +5,7 @@ import { StaggerGroup } from "@/components/motion/stagger-group";
 import { StaggerItem } from "@/components/motion/stagger-item";
 import { CurrentTime } from "@/components/ui/current-time";
 import { Link } from "@/components/ui/link";
+import { RollingText } from "@/components/ui/rolling-text";
 import { socialLinks as defaultSocialLinks } from "@/constans/const";
 import { LayoutGuides } from "../ui/layout-guides";
 
@@ -23,7 +24,7 @@ type FooterProps = {
 function FooterLink({ href, label }: FooterLinkItem) {
 	return (
 		<a
-			className="transition-opacity hover:opacity-80"
+			className="group transition-opacity hover:opacity-80"
 			href={href}
 			target={href.startsWith("http") ? "_blank" : undefined}
 			rel={href.startsWith("http") ? "noreferrer" : undefined}
@@ -68,10 +69,10 @@ export function Footer({
 					</div>
 
 					<a
-						className="w-fit text-caption text-accent transition-opacity hover:opacity-80 md:text-body md:leading-normal"
+						className="group w-fit text-caption text-accent transition-opacity hover:opacity-80 md:text-body md:leading-normal"
 						href={`mailto:${email}`}
 					>
-						{email}
+						<RollingText text={email} />
 					</a>
 				</div>
 				<div>
@@ -81,7 +82,7 @@ export function Footer({
 						</p>
 
 						<a
-							className="col-span-2 wide:col-span-1 transition-opacity hover:opacity-80"
+							className="group col-span-2 wide:col-span-1 transition-opacity hover:opacity-80"
 							href="#top"
 						>
 							<Link

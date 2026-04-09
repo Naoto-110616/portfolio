@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 import { AnimatedSectionTitle } from "@/components/motion/animated-section-title";
 import { GsapStaggerGroup } from "@/components/motion/gsap-stagger-group";
+import { RollingText } from "@/components/ui/rolling-text";
 
 export type WorkItem = {
 	title: string;
@@ -68,12 +69,12 @@ function WorkCard({
 						</h3>
 
 						<a
-							className="inline-flex items-center gap-1 text-caption text-foreground transition-opacity hover:opacity-80 md:text-body md:leading-normal"
+							className="group inline-flex items-center gap-1 text-caption text-foreground transition-opacity hover:opacity-80 md:text-body md:leading-normal"
 							href={href}
 							target={href.startsWith("http") ? "_blank" : undefined}
 							rel={href.startsWith("http") ? "noreferrer" : undefined}
 						>
-							<span>Visit site</span>
+							<RollingText text="Visit site" />
 							<ArrowRight
 								aria-hidden="true"
 								className="size-3 shrink-0 -rotate-45 md:size-4"

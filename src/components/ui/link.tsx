@@ -1,5 +1,7 @@
 import { ArrowRight } from "lucide-react";
 
+import { RollingText } from "@/components/ui/rolling-text";
+
 type LinkProps = {
 	label: string;
 	className?: string;
@@ -16,7 +18,7 @@ export function Link({ label, className = "", iconClassName = "" }: LinkProps) {
 
 	return (
 		<span className={classes}>
-			<span>{label}</span>
+			<RollingText text={label} />
 			<ArrowRight
 				aria-hidden="true"
 				className={["size-3 shrink-0 -rotate-45", iconClassName]
