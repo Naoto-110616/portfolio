@@ -1,7 +1,8 @@
 "use client";
 
+import gsap from "gsap";
 import { ArrowRight } from "lucide-react";
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
 import { SectionReveal } from "@/components/motion/section-reveal";
@@ -24,6 +25,82 @@ const defaultItems: HeroItem[] = [
 	{ label: "Title:", value: "Frontend Engineer" },
 	{ label: "Dislikes:", value: "Work", isHighlighted: true },
 ];
+
+function TypingText({
+	value,
+	delay = 0,
+	className = "",
+}: {
+	value: string;
+	delay?: number;
+	className?: string;
+}) {
+	const shouldReduceMotion = useReducedMotion();
+	const [displayedLength, setDisplayedLength] = useState(
+		shouldReduceMotion ? value.length : 0,
+	);
+
+	useEffect(() => {
+		if (shouldReduceMotion) {
+			return;
+		}
+
+		const characterCount = Math.max(value.length, 1);
+		const duration = Math.max(characterCount * 0.06, 0.5);
+		const counter = { value: 0 };
+
+		const tween = gsap.to(counter, {
+			value: characterCount,
+			delay,
+			duration,
+			ease: `steps(${characterCount})`,
+			onStart: () => {
+				setDisplayedLength(0);
+			},
+			onUpdate: () => {
+				setDisplayedLength(Math.round(counter.value));
+			},
+		});
+
+		return () => {
+			tween.kill();
+		};
+	}, [delay, shouldReduceMotion, value]);
+
+	if (shouldReduceMotion) {
+		return <span className={className}>{value}</span>;
+	}
+
+	const displayedValue = value.slice(0, displayedLength);
+	const showCaret = displayedLength < value.length;
+
+	return (
+		<span
+			aria-label={value}
+			className={`inline-grid whitespace-nowrap ${className}`.trim()}
+		>
+			<span
+				aria-hidden="true"
+				className="invisible col-start-1 row-start-1 inline-flex items-center"
+			>
+				{value}
+				<span aria-hidden="true" className="ml-1 inline-block w-[2px]" />
+			</span>
+			<span
+				aria-hidden="true"
+				className="col-start-1 row-start-1 inline-flex items-center"
+			>
+				{displayedValue}
+				{showCaret ? (
+					<span
+						aria-hidden="true"
+						className="ml-1 inline-block h-[0.9em] w-[2px] bg-current"
+					/>
+				) : null}
+			</span>
+		</span>
+	);
+}
 
 function useViewportDragConstraints<T extends HTMLDivElement>() {
 	const dragRef = useRef<T>(null);
@@ -82,13 +159,19 @@ function HeroLabel({
 	);
 }
 
-function HeroValue({ value }: Pick<HeroItem, "value">) {
+function HeroValue({
+	value,
+	index,
+}: Pick<HeroItem, "value"> & {
+	index: number;
+}) {
 	const { dragRef, dragConstraints } = useViewportDragConstraints<HTMLDivElement>();
+	const typingDelay = 0.15 + index * 0.35;
 
 	return (
 		<>
 			<p className="w-full max-w-content-sp text-[44px] leading-[1.4] font-bold text-foreground md:hidden">
-				{value}
+				<TypingText value={value} delay={typingDelay} />
 			</p>
 			<motion.div
 				ref={dragRef}
@@ -100,7 +183,7 @@ function HeroValue({ value }: Pick<HeroItem, "value">) {
 			>
 				<Frame>
 					<p className="text-hero-lg leading-none font-black text-foreground">
-						{value}
+						<TypingText value={value} delay={typingDelay} />
 					</p>
 				</Frame>
 			</motion.div>
@@ -108,11 +191,16 @@ function HeroValue({ value }: Pick<HeroItem, "value">) {
 	);
 }
 
-function HeroRow({ label, value, isHighlighted = false }: HeroItem) {
+function HeroRow({
+	label,
+	value,
+	isHighlighted = false,
+	index,
+}: HeroItem & { index: number }) {
 	return (
 		<div className="flex flex-col">
 			<HeroLabel label={label} isHighlighted={isHighlighted} />
-			<HeroValue value={value} />
+			<HeroValue value={value} index={index} />
 		</div>
 	);
 }
@@ -182,7 +270,7 @@ export function HeroSection({ items = defaultItems }: HeroSectionProps) {
 					<div className="col-span-8 flex flex-col gap-block md:col-span-8 md:gap-10">
 						{items.map((item, index) => (
 							<StaggerItem key={`${item.label}-${item.value}-${index}`}>
-								<HeroRow {...item} />
+								<HeroRow {...item} index={index} />
 							</StaggerItem>
 						))}
 					</div>
