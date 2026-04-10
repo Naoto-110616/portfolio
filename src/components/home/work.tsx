@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 import { AnimatedSectionTitle } from "@/components/motion/animated-section-title";
 import { GsapStaggerGroup } from "@/components/motion/gsap-stagger-group";
+import { HomeMainInner } from "@/components/ui/home-main-inner";
 import { RollingText } from "@/components/ui/rolling-text";
 
 export type WorkItem = {
@@ -26,7 +27,8 @@ const workPreviewImage =
 
 const defaultItems: WorkItem[] = Array.from({ length: 3 }, () => ({
 	title: "muwmaze",
-	description: "ウィキメディア文書の適法ををこと要件改変に方針助け理解しライセン。",
+	description:
+		"ウィキメディア文書の適法ををこと要件改変に方針助け理解しライセン。",
 	partner: "KOSÉ",
 	published: "2025",
 	role: "Frontend Creative",
@@ -124,19 +126,21 @@ export function WorkSection({
 	items = defaultItems,
 }: WorkSectionProps) {
 	return (
-		<section id="work" className="flex w-full flex-col gap-6 md:gap-section-lg">
-			<AnimatedSectionTitle
-				title={title}
-				titleClassName="md:text-section-lg md:font-black"
-			/>
+		<section id="work" className="w-full">
+			<HomeMainInner className="flex flex-col gap-6 md:gap-section-lg">
+				<AnimatedSectionTitle
+					title={title}
+					titleClassName="md:text-section-lg md:font-black"
+				/>
 
-			<GsapStaggerGroup className="flex flex-col gap-6 md:gap-block-lg">
-				{items.map((item, index) => (
-					<div key={`${item.title}-${index}`} data-gsap-item>
-						<WorkCard {...item} />
-					</div>
-				))}
-			</GsapStaggerGroup>
+				<GsapStaggerGroup className="flex flex-col gap-6 md:gap-block-lg">
+					{items.map((item, index) => (
+						<div key={`${item.title}-${index}`} data-gsap-item>
+							<WorkCard {...item} />
+						</div>
+					))}
+				</GsapStaggerGroup>
+			</HomeMainInner>
 		</section>
 	);
 }

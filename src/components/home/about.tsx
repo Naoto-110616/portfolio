@@ -3,6 +3,7 @@
 import { useLayoutEffect, useRef } from "react";
 
 import { AnimatedSectionTitle } from "@/components/motion/animated-section-title";
+import { HomeMainInner } from "@/components/ui/home-main-inner";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { NAME_PORTRAIT_ALT } from "@/constans/const";
 
@@ -184,51 +185,50 @@ export function AboutSection({
 	}, [blocks.length, imageUrl, leadText, unpinPanelIndex]);
 
 	return (
-		<section
-			id="about"
-			className="flex w-full flex-col gap-block md:gap-section-lg md:pb-block-xl"
-		>
-			<AnimatedSectionTitle
-				title={title}
-				titleClassName="md:text-section-lg md:font-black"
-			/>
-
-			<div
-				ref={scrollRootRef}
-				className="flex flex-col gap-block md:grid md:grid-cols-[368px_minmax(0,1fr)] md:items-start md:gap-4"
-			>
-				<div ref={pinRef} className="md:self-start">
-					<img
-						alt={imageAlt}
-						className="aspect-1536/2048 w-full object-cover md:h-[491px] md:w-[368px] md:aspect-auto"
-						src={imageUrl}
-						onLoad={() => {
-							ScrollTrigger.refresh();
-						}}
-					/>
-				</div>
+		<section id="about" className="w-full md:pb-block-xl">
+			<HomeMainInner className="flex flex-col gap-block md:gap-section-lg">
+				<AnimatedSectionTitle
+					title={title}
+					titleClassName="md:text-section-lg md:font-black"
+				/>
 
 				<div
-					ref={contentRef}
-					className="flex flex-col gap-[48px] md:gap-[480px]"
+					ref={scrollRootRef}
+					className="flex flex-col gap-block md:grid md:grid-cols-[368px_minmax(0,1fr)] md:items-start md:gap-4"
 				>
-					<div data-about-scroll-panel>
-						<p className="text-section text-foreground md:max-w-[512px] md:text-[40px] md:font-black md:leading-[1.4]">
-							{leadText}
-						</p>
+					<div ref={pinRef} className="md:self-start">
+						<img
+							alt={imageAlt}
+							className="aspect-1536/2048 w-full object-cover md:h-[491px] md:w-[368px] md:aspect-auto"
+							src={imageUrl}
+							onLoad={() => {
+								ScrollTrigger.refresh();
+							}}
+						/>
 					</div>
 
-					{blocks.map((block, index) => (
-						<div
-							key={block.id ?? `${block.title}-${index}`}
-							ref={index === unpinPanelIndex ? beyondPanelRef : undefined}
-							data-about-scroll-panel
-						>
-							<AboutContentBlock {...block} />
+					<div
+						ref={contentRef}
+						className="flex flex-col gap-[48px] md:gap-[480px]"
+					>
+						<div data-about-scroll-panel>
+							<p className="text-section text-foreground md:max-w-[512px] md:text-[40px] md:font-black md:leading-[1.4]">
+								{leadText}
+							</p>
 						</div>
-					))}
+
+						{blocks.map((block, index) => (
+							<div
+								key={block.id ?? `${block.title}-${index}`}
+								ref={index === unpinPanelIndex ? beyondPanelRef : undefined}
+								data-about-scroll-panel
+							>
+								<AboutContentBlock {...block} />
+							</div>
+						))}
+					</div>
 				</div>
-			</div>
+			</HomeMainInner>
 		</section>
 	);
 }

@@ -1,5 +1,6 @@
 import { AnimatedSectionTitle } from "@/components/motion/animated-section-title";
 import { SectionReveal } from "@/components/motion/section-reveal";
+import { HomeMainInner } from "@/components/ui/home-main-inner";
 
 export type ServiceItem = {
 	id?: string;
@@ -76,23 +77,25 @@ export function ServicesSection({
 	items = defaultItems,
 }: ServicesSectionProps) {
 	return (
-		<section id="services" className="flex w-full flex-col gap-block md:gap-section-lg">
-			<AnimatedSectionTitle
-				title={title}
-				titleClassName="md:text-section-lg md:font-black"
-			/>
+		<section id="services" className="w-full">
+			<HomeMainInner className="flex flex-col gap-block md:gap-section-lg">
+				<AnimatedSectionTitle
+					title={title}
+					titleClassName="md:text-section-lg md:font-black"
+				/>
 
-			<div className="flex flex-col gap-block-lg md:gap-section-lg">
-				{items.map((item, index) => (
-					<SectionReveal
-						key={item.id ?? `${item.title}-${index}`}
-						delay={index * 0.06}
-						y={24}
-					>
-						<ServiceGroup {...item} />
-					</SectionReveal>
-				))}
-			</div>
+				<div className="flex flex-col gap-block-lg md:gap-section-lg">
+					{items.map((item, index) => (
+						<SectionReveal
+							key={item.id ?? `${item.title}-${index}`}
+							delay={index * 0.06}
+							y={24}
+						>
+							<ServiceGroup {...item} />
+						</SectionReveal>
+					))}
+				</div>
+			</HomeMainInner>
 		</section>
 	);
 }

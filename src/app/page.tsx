@@ -35,7 +35,7 @@ export default async function HomePage() {
 				heroItems={homePage.heroItems}
 				sinceLabel={siteSettings.header.sinceLabel}
 			/>
-			<main className="mx-auto z-20 flex w-full max-w-content flex-col gap-[96px] px-[4.071%] md:gap-[240px] md:px-0">
+			<main className="relative z-20 flex w-full flex-col gap-[96px] md:gap-[240px]">
 				<WorkSection title={homePage.sectionTitles.work} items={workItems} />
 				<MoreProjectsSection
 					items={moreProjectItems}

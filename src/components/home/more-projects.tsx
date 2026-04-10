@@ -3,6 +3,7 @@ import type { CSSProperties } from "react";
 import { AnimatedSectionTitle } from "@/components/motion/animated-section-title";
 import { StaggerGroup } from "@/components/motion/stagger-group";
 import { StaggerItem } from "@/components/motion/stagger-item";
+import { HomeMainInner } from "@/components/ui/home-main-inner";
 
 export type MoreProjectItem = {
 	imageUrl: string;
@@ -83,24 +84,26 @@ export function MoreProjectsSection({
 	items = defaultItems,
 }: MoreProjectsSectionProps) {
 	return (
-		<section className="flex w-full flex-col gap-stack-sm md:gap-section-lg">
-			<AnimatedSectionTitle
-				title={title}
-				titleClassName="text-heading md:text-section-lg md:font-black"
-				withDivider
-			/>
+		<section className="w-full">
+			<HomeMainInner className="flex flex-col gap-stack-sm md:gap-section-lg">
+				<AnimatedSectionTitle
+					title={title}
+					titleClassName="text-heading md:text-section-lg md:font-black"
+					withDivider
+				/>
 
-			<StaggerGroup
-				className="flex w-full flex-col gap-stack-sm overflow-hidden md:gap-block-lg"
-				delayChildren={0.08}
-				staggerChildren={0.1}
-			>
-				{items.map((item, index) => (
-					<StaggerItem key={`${item.alt}-${index}`}>
-						<MoreProjectCard {...item} />
-					</StaggerItem>
-				))}
-			</StaggerGroup>
+				<StaggerGroup
+					className="flex w-full flex-col gap-stack-sm overflow-hidden md:gap-block-lg"
+					delayChildren={0.08}
+					staggerChildren={0.1}
+				>
+					{items.map((item, index) => (
+						<StaggerItem key={`${item.alt}-${index}`}>
+							<MoreProjectCard {...item} />
+						</StaggerItem>
+					))}
+				</StaggerGroup>
+			</HomeMainInner>
 		</section>
 	);
 }
