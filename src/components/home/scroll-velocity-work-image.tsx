@@ -33,6 +33,15 @@ uniform vec2 uQuadSize;
 uniform float uTime;
 uniform float uScrollVelocity;
 uniform float uVelocityStrength;
+uniform float uWaveFreqX;
+uniform float uWaveFreqY;
+uniform float uPhaseX;
+uniform float uPhaseY;
+uniform float uTimeScale;
+uniform float uTimeSecondary;
+uniform float uDistortAmp;
+uniform float uWaveMix;
+uniform float uRgbSplit;
 
 in vec2 vUv;
 in vec2 vUvCover;
@@ -40,18 +49,38 @@ out vec4 fragColor;
 
 void main() {
   vec2 texCoords = vUvCover;
-  float amt = 0.03 * uVelocityStrength;
-  float t = uTime * 0.8;
-  texCoords.y += sin((texCoords.x * 8.0) + t) * amt;
-  texCoords.x += cos((texCoords.y * 6.0) - t * 0.8) * amt * 0.6;
+  float amt = uDistortAmp * uVelocityStrength;
+  float t = uTime * uTimeScale;
+  texCoords.y += sin((texCoords.x * uWaveFreqX) + t + uPhaseX) * amt;
+  texCoords.x += cos((texCoords.y * uWaveFreqY) - t * uTimeSecondary + uPhaseY) * amt * uWaveMix;
   float dir = sign(uScrollVelocity);
   vec2 tc = texCoords;
-  float r = texture(uTexture, tc + vec2(amt * 0.50 * dir, 0.0)).r;
-  float g = texture(uTexture, tc + vec2(amt * 0.25 * dir, 0.0)).g;
-  float b = texture(uTexture, tc + vec2(-amt * 0.35 * dir, 0.0)).b;
+  float split = uRgbSplit;
+  float r = texture(uTexture, tc + vec2(amt * 0.50 * dir * split, 0.0)).r;
+  float g = texture(uTexture, tc + vec2(amt * 0.25 * dir * split, 0.0)).g;
+  float b = texture(uTexture, tc + vec2(-amt * 0.35 * dir * split, 0.0)).b;
   fragColor = vec4(r, g, b, 1.0);
 }
 `;
+
+function randomInRange(min: number, max: number): number {
+	return min + Math.random() * (max - min);
+}
+
+/** カードごとに波形・強度・RGB ずれをばらつかせる */
+function createDistortionVariant() {
+	return {
+		uWaveFreqX: randomInRange(5.2, 11.5),
+		uWaveFreqY: randomInRange(3.8, 8.8),
+		uPhaseX: randomInRange(0, Math.PI * 2),
+		uPhaseY: randomInRange(0, Math.PI * 2),
+		uTimeScale: randomInRange(0.52, 1.05),
+		uTimeSecondary: randomInRange(0.62, 1.05),
+		uDistortAmp: randomInRange(0.022, 0.038),
+		uWaveMix: randomInRange(0.42, 0.78),
+		uRgbSplit: randomInRange(0.72, 1.35),
+	};
+}
 
 type ScrollVelocityWorkImageProps = {
 	imageUrl: string;
@@ -76,6 +105,7 @@ export function ScrollVelocityWorkImage({
 		if (!container) return;
 
 		const unsubscribeVelocity = subscribeScrollVelocityForShaders();
+		const variant = createDistortionVariant();
 
 		const renderer = new THREE.WebGLRenderer({
 			antialias: true,
@@ -99,6 +129,15 @@ export function ScrollVelocityWorkImage({
 			uTime: { value: 0 },
 			uScrollVelocity: { value: 0 },
 			uVelocityStrength: { value: 0 },
+			uWaveFreqX: { value: variant.uWaveFreqX },
+			uWaveFreqY: { value: variant.uWaveFreqY },
+			uPhaseX: { value: variant.uPhaseX },
+			uPhaseY: { value: variant.uPhaseY },
+			uTimeScale: { value: variant.uTimeScale },
+			uTimeSecondary: { value: variant.uTimeSecondary },
+			uDistortAmp: { value: variant.uDistortAmp },
+			uWaveMix: { value: variant.uWaveMix },
+			uRgbSplit: { value: variant.uRgbSplit },
 		};
 
 		const mat = new THREE.ShaderMaterial({
