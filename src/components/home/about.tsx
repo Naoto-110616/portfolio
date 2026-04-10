@@ -1,7 +1,9 @@
+"use client";
+
+import { useLayoutEffect, useRef } from "react";
+
 import { AnimatedSectionTitle } from "@/components/motion/animated-section-title";
-import { SectionReveal } from "@/components/motion/section-reveal";
-import { StaggerGroup } from "@/components/motion/stagger-group";
-import { StaggerItem } from "@/components/motion/stagger-item";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { NAME_PORTRAIT_ALT } from "@/constans/const";
 
 export type AboutBlock = {
@@ -23,6 +25,9 @@ const aboutImage =
 
 const defaultLeadText =
 	"モダンなWebに、体験と仕組みをデザインするフロントエンドエンジニア";
+
+/** ピン開始位置（`ScrollTrigger.start` と画像中央の推定に併用） */
+const ABOUT_PIN_START_VIEWPORT_PCT = 12;
 
 const defaultBlocks: AboutBlock[] = [
 	{
@@ -80,40 +85,148 @@ export function AboutSection({
 	imageAlt = NAME_PORTRAIT_ALT,
 	blocks = defaultBlocks,
 }: AboutSectionProps) {
+	const beyondIndex = blocks.findIndex((b) => b.title === "Beyond");
+	const unpinPanelIndex =
+		beyondIndex >= 0 ? beyondIndex : Math.max(0, blocks.length - 1);
+
+	const scrollRootRef = useRef<HTMLDivElement>(null);
+	const pinRef = useRef<HTMLDivElement>(null);
+	const contentRef = useRef<HTMLDivElement>(null);
+	const beyondPanelRef = useRef<HTMLDivElement>(null);
+
+	useLayoutEffect(() => {
+		const root = scrollRootRef.current;
+		const pinEl = pinRef.current;
+		const contentEl = contentRef.current;
+		const beyondPanelEl = beyondPanelRef.current;
+
+		if (!root || !pinEl || !contentEl) {
+			return;
+		}
+
+		if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+			return;
+		}
+
+		const mm = gsap.matchMedia();
+
+		const ctx = gsap.context(() => {
+			mm.add("(min-width: 768px)", () => {
+				const pinHeight = pinEl.offsetHeight || 491;
+				const beyondUnpinEnd = () => {
+					const vh = window.innerHeight;
+					const imgMidPercent =
+						ABOUT_PIN_START_VIEWPORT_PCT +
+						(pinHeight / 2 / vh) * 100;
+					const clamped = Math.min(56, Math.max(20, imgMidPercent));
+					return `top ${clamped.toFixed(2)}%`;
+				};
+
+				// Beyond ブロック上端が写真の縦中央付近（ビューポート割合）に来たらピン解除
+				if (beyondPanelEl) {
+					ScrollTrigger.create({
+						trigger: root,
+						start: `top ${ABOUT_PIN_START_VIEWPORT_PCT}%`,
+						endTrigger: beyondPanelEl,
+						end: beyondUnpinEnd,
+						pin: pinEl,
+						pinSpacing: true,
+						anticipatePin: 1,
+						invalidateOnRefresh: true,
+					});
+				} else {
+					ScrollTrigger.create({
+						trigger: root,
+						start: `top ${ABOUT_PIN_START_VIEWPORT_PCT}%`,
+						endTrigger: contentEl,
+						end: "bottom bottom",
+						pin: pinEl,
+						pinSpacing: true,
+						anticipatePin: 1,
+						invalidateOnRefresh: true,
+					});
+				}
+			});
+
+			const panels = gsap.utils.toArray<HTMLElement>(
+				"[data-about-scroll-panel]",
+				root,
+			);
+
+			panels.forEach((panel) => {
+				gsap.fromTo(
+					panel,
+					{ autoAlpha: 0, y: 28 },
+					{
+						autoAlpha: 1,
+						y: 0,
+						duration: 0.85,
+						ease: "power3.out",
+						scrollTrigger: {
+							trigger: panel,
+							start: "top 88%",
+							toggleActions: "play none none none",
+						},
+					},
+				);
+			});
+		}, root);
+
+		const refresh = () => {
+			ScrollTrigger.refresh();
+		};
+		requestAnimationFrame(refresh);
+
+		return () => {
+			mm.revert();
+			ctx.revert();
+		};
+	}, [blocks.length, imageUrl, leadText, unpinPanelIndex]);
+
 	return (
-		<section id="about" className="flex w-full flex-col gap-block md:gap-section-lg">
+		<section
+			id="about"
+			className="flex w-full flex-col gap-block md:gap-section-lg md:pb-block-xl"
+		>
 			<AnimatedSectionTitle
 				title={title}
 				titleClassName="md:text-section-lg md:font-black"
 			/>
 
-			<div className="flex flex-col gap-block md:grid md:grid-cols-[368px_minmax(0,1fr)] md:items-start md:gap-4">
-				<SectionReveal>
+			<div
+				ref={scrollRootRef}
+				className="flex flex-col gap-block md:grid md:grid-cols-[368px_minmax(0,1fr)] md:items-start md:gap-4"
+			>
+				<div ref={pinRef} className="md:self-start">
 					<img
 						alt={imageAlt}
 						className="aspect-1536/2048 w-full object-cover md:h-[491px] md:w-[368px] md:aspect-auto"
 						src={imageUrl}
+						onLoad={() => {
+							ScrollTrigger.refresh();
+						}}
 					/>
-				</SectionReveal>
+				</div>
 
-				<div className="flex flex-col gap-block md:gap-section-lg">
-					<SectionReveal y={20}>
+				<div
+					ref={contentRef}
+					className="flex flex-col gap-[48px] md:gap-[480px]"
+				>
+					<div data-about-scroll-panel>
 						<p className="text-section text-foreground md:max-w-[512px] md:text-[40px] md:font-black md:leading-[1.4]">
 							{leadText}
 						</p>
-					</SectionReveal>
+					</div>
 
-					<StaggerGroup
-						className="flex flex-col gap-block-md md:gap-section-lg"
-						delayChildren={0.08}
-						staggerChildren={0.14}
-					>
-						{blocks.map((block, index) => (
-							<StaggerItem key={block.id ?? `${block.title}-${index}`}>
-								<AboutContentBlock {...block} />
-							</StaggerItem>
-						))}
-					</StaggerGroup>
+					{blocks.map((block, index) => (
+						<div
+							key={block.id ?? `${block.title}-${index}`}
+							ref={index === unpinPanelIndex ? beyondPanelRef : undefined}
+							data-about-scroll-panel
+						>
+							<AboutContentBlock {...block} />
+						</div>
+					))}
 				</div>
 			</div>
 		</section>
