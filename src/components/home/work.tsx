@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { AnimatedSectionTitle } from "@/components/motion/animated-section-title";
 import { GsapStaggerGroup } from "@/components/motion/gsap-stagger-group";
 import { HomeMainInner } from "@/components/ui/home-main-inner";
+import { ScrollVelocityWorkImage } from "@/components/home/scroll-velocity-work-image";
 import { RollingText } from "@/components/ui/rolling-text";
 
 export type WorkItem = {
@@ -52,13 +53,13 @@ function WorkCard({
 	return (
 		<article className="flex flex-col gap-6 md:flex-row md:items-center md:gap-4">
 			<div className="relative aspect-361/203 w-full overflow-hidden bg-surface md:h-[279px] md:w-[496px] md:shrink-0 md:aspect-auto">
-				<img
+				<ScrollVelocityWorkImage
 					alt={`${title} preview`}
-					className="h-full w-full object-cover"
-					src={imageUrl}
+					className="absolute inset-0 z-0 h-full w-full"
+					imageUrl={imageUrl}
 				/>
 
-				<div className="absolute right-2 top-2 border border-primary bg-accent px-1 py-1 text-caption-sm leading-none text-primary">
+				<div className="absolute right-2 top-2 z-10 border border-primary bg-accent px-1 py-1 text-caption-sm leading-none text-primary">
 					{tag}
 				</div>
 			</div>
