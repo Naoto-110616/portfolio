@@ -1,8 +1,9 @@
 "use client";
 
 import Lenis from "lenis";
-import { ReactNode, useLayoutEffect } from "react";
+import { ReactNode, useLayoutEffect, useState } from "react";
 
+import { LenisContext } from "@/components/providers/lenis-context";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 import {
 	setLenisForShaderVelocity,
@@ -13,11 +14,15 @@ type SmoothScrollProviderProps = {
 	children: ReactNode;
 };
 
+type LenisInitializerProps = {
+	setLenisInstance: (instance: Lenis | null) => void;
+};
+
 /**
  * 先にマウントして Lenis + scrollerProxy を子の ScrollTrigger より前に初期化する。
  * （兄弟ツリー順で、このコンポーネントの layout effect がページより先に走る）
  */
-function LenisInitializer() {
+function LenisInitializer({ setLenisInstance }: LenisInitializerProps) {
 	useLayoutEffect(() => {
 		if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
 			return;
@@ -36,6 +41,7 @@ function LenisInitializer() {
 		});
 
 		setLenisForShaderVelocity(lenis);
+		setLenisInstance(lenis);
 
 		const html = document.documentElement;
 		ScrollTrigger.scrollerProxy(html, {
@@ -84,6 +90,7 @@ function LenisInitializer() {
 			unsubScroll();
 			lenis.destroy();
 			setLenisForShaderVelocity(null);
+			setLenisInstance(null);
 
 			ScrollTrigger.scrollerProxy(html, {
 				scrollTop(value) {
@@ -110,16 +117,18 @@ function LenisInitializer() {
 			});
 			ScrollTrigger.refresh();
 		};
-	}, []);
+	}, [setLenisInstance]);
 
 	return null;
 }
 
 export function SmoothScrollProvider({ children }: SmoothScrollProviderProps) {
+	const [lenis, setLenis] = useState<Lenis | null>(null);
+
 	return (
-		<>
-			<LenisInitializer />
+		<LenisContext.Provider value={lenis}>
+			<LenisInitializer setLenisInstance={setLenis} />
 			{children}
-		</>
+		</LenisContext.Provider>
 	);
 }

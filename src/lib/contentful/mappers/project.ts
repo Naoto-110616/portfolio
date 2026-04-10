@@ -77,9 +77,16 @@ export function mapProjectsToMoreProjectItems(items: Project[]) {
   return items
     .filter((item) => item.showInMoreProjects)
     .map((item) => ({
+      title: item.title,
+      description: item.description,
+      partner: item.partner,
+      published: item.publishedYear,
+      role: item.role,
+      stack: item.stack.join(", "),
+      tag: item.tag,
       imageUrl: item.imageUrl,
-      height: item.moreProjectHeightPx ?? 102,
       href: item.href,
-      alt: item.imageAlt,
+      closedImageHeight: item.moreProjectHeightPx ?? 102,
+      imageAlt: item.imageAlt,
     }));
 }
