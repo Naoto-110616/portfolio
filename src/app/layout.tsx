@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 
 import { MotionProvider } from "@/components/providers/motion-provider";
 import { QueryProvider } from "@/components/providers/query-provider";
+import { SmoothScrollProvider } from "@/components/providers/smooth-scroll-provider";
 import { getSiteSettings } from "@/lib/contentful/queries";
 import "./globals.css";
 
@@ -53,7 +54,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
 					}}
 				/>
 				<QueryProvider>
-					<MotionProvider>{children}</MotionProvider>
+					<MotionProvider>
+						<SmoothScrollProvider>{children}</SmoothScrollProvider>
+					</MotionProvider>
 				</QueryProvider>
 			</body>
 		</html>
