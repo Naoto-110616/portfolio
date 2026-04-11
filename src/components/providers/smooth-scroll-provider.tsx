@@ -5,10 +5,6 @@ import { ReactNode, useLayoutEffect, useState } from "react";
 
 import { LenisContext } from "@/components/providers/lenis-context";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
-import {
-	setLenisForShaderVelocity,
-	tickLenisShaderVelocity,
-} from "@/lib/work-scroll-velocity-trigger";
 
 type SmoothScrollProviderProps = {
 	children: ReactNode;
@@ -40,7 +36,6 @@ function LenisInitializer({ setLenisInstance }: LenisInitializerProps) {
 			touchInertiaExponent: 1.48,
 		});
 
-		setLenisForShaderVelocity(lenis);
 		setLenisInstance(lenis);
 
 		const html = document.documentElement;
@@ -73,7 +68,6 @@ function LenisInitializer({ setLenisInstance }: LenisInitializerProps) {
 
 		const onTicker = (time: number) => {
 			lenis.raf(time * 1000);
-			tickLenisShaderVelocity();
 		};
 		gsap.ticker.add(onTicker);
 		gsap.ticker.lagSmoothing(0);
@@ -89,7 +83,6 @@ function LenisInitializer({ setLenisInstance }: LenisInitializerProps) {
 			gsap.ticker.lagSmoothing(1000, 33);
 			unsubScroll();
 			lenis.destroy();
-			setLenisForShaderVelocity(null);
 			setLenisInstance(null);
 
 			ScrollTrigger.scrollerProxy(html, {
