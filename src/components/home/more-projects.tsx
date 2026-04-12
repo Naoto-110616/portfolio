@@ -1,13 +1,6 @@
 "use client";
 
-import type Lenis from "lenis";
-import {
-	useCallback,
-	useEffect,
-	useLayoutEffect,
-	useRef,
-	useState,
-} from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import {
 	ProjectWorkCard,
@@ -18,7 +11,6 @@ import { StaggerGroup } from "@/components/motion/stagger-group";
 import { StaggerItem } from "@/components/motion/stagger-item";
 import { useLenis } from "@/components/providers/lenis-context";
 import { HomeMainInner } from "@/components/ui/home-main-inner";
-import { ScrollTrigger } from "@/lib/gsap";
 
 export type MoreProjectItem = Omit<
 	ProjectWorkCardExpandableProps,
@@ -33,40 +25,6 @@ type MoreProjectsSectionProps = {
 	title?: string;
 	items?: MoreProjectItem[];
 };
-
-/** 中央寄せスクロール完了後に呼ぶ（開いた直後の自動スクロールとユーザー操作を区別する） */
-function scrollCardToViewportCenter(
-	element: HTMLElement,
-	lenis: Lenis | null,
-	onScrollAnimationDone?: () => void,
-) {
-	const reduceMotion = window.matchMedia(
-		"(prefers-reduced-motion: reduce)",
-	).matches;
-
-	const signalDone = () => {
-		onScrollAnimationDone?.();
-	};
-
-	if (lenis && !reduceMotion) {
-		const rect = element.getBoundingClientRect();
-		const delta = rect.top + rect.height / 2 - window.innerHeight / 2;
-		lenis.scrollTo(lenis.scroll + delta, {
-			duration: 1.15,
-			easing: (t) => 1 - Math.pow(1 - t, 3),
-			onComplete: signalDone,
-		});
-		return;
-	}
-
-	element.scrollIntoView({
-		behavior: reduceMotion ? "auto" : "smooth",
-		block: "center",
-	});
-	setTimeout(signalDone, reduceMotion ? 0 : 550);
-}
-
-const SCROLL_CLOSE_ARM_DELAY_MS = 100;
 
 const moreProjectsPreviewImage =
 	"https://www.figma.com/api/mcp/asset/a55382d9-c6ac-4dbb-b366-268d7183254a";
@@ -158,77 +116,23 @@ export function MoreProjectsSection({
 }: MoreProjectsSectionProps) {
 	const lenis = useLenis();
 	const [allExpanded, setAllExpanded] = useState(false);
-	const [focusedIndex, setFocusedIndex] = useState<number | null>(null);
-	const rowRefs = useRef<(HTMLDivElement | null)[]>([]);
-	const scrollCloseArmedRef = useRef(false);
-	const armCloseTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-	const handleOpenCard = useCallback((index: number) => {
-		setFocusedIndex(index);
+	const handleOpenCard = useCallback(() => {
 		setAllExpanded(true);
 	}, []);
 
 	const handleCloseAll = useCallback(() => {
 		setAllExpanded(false);
-		setFocusedIndex(null);
-		scrollCloseArmedRef.current = false;
-		if (armCloseTimerRef.current) {
-			clearTimeout(armCloseTimerRef.current);
-			armCloseTimerRef.current = null;
-		}
 	}, []);
-
-	useLayoutEffect(() => {
-		scrollCloseArmedRef.current = false;
-		if (armCloseTimerRef.current) {
-			clearTimeout(armCloseTimerRef.current);
-			armCloseTimerRef.current = null;
-		}
-
-		if (!allExpanded || focusedIndex === null) return;
-		const el = rowRefs.current[focusedIndex];
-		if (!el) return;
-
-		ScrollTrigger.refresh();
-
-		const fallbackArm = setTimeout(() => {
-			scrollCloseArmedRef.current = true;
-		}, 1400);
-
-		const id = requestAnimationFrame(() => {
-			requestAnimationFrame(() => {
-				scrollCardToViewportCenter(el, lenis, () => {
-					if (armCloseTimerRef.current) {
-						clearTimeout(armCloseTimerRef.current);
-					}
-					armCloseTimerRef.current = setTimeout(() => {
-						scrollCloseArmedRef.current = true;
-						armCloseTimerRef.current = null;
-					}, SCROLL_CLOSE_ARM_DELAY_MS);
-				});
-			});
-		});
-
-		return () => {
-			cancelAnimationFrame(id);
-			clearTimeout(fallbackArm);
-			if (armCloseTimerRef.current) {
-				clearTimeout(armCloseTimerRef.current);
-				armCloseTimerRef.current = null;
-			}
-		};
-	}, [allExpanded, focusedIndex, lenis]);
 
 	useEffect(() => {
 		if (!allExpanded) return;
 
 		const onScrollIntentClose = () => {
-			if (!scrollCloseArmedRef.current) return;
 			handleCloseAll();
 		};
 
 		const onKeyDown = (e: KeyboardEvent) => {
-			if (!scrollCloseArmedRef.current) return;
 			const keys = new Set([
 				"ArrowDown",
 				"ArrowUp",
@@ -281,18 +185,13 @@ export function MoreProjectsSection({
 				>
 					{items.map((item, index) => (
 						<StaggerItem key={`${item.title}-${index}`}>
-							<div
-								className="w-full"
-								ref={(node) => {
-									rowRefs.current[index] = node;
-								}}
-							>
+							<div className="w-full">
 								<ProjectWorkCard
 									{...item}
 									expanded={allExpanded}
 									showCloseButton={false}
 									variant="expandable"
-									onOpenRequest={() => handleOpenCard(index)}
+									onOpenRequest={handleOpenCard}
 								/>
 							</div>
 						</StaggerItem>
