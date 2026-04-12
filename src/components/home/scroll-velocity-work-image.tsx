@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { useId, useLayoutEffect, useRef } from "react";
 
+import { MosaicHoverImage } from "@/components/home/mosaic-hover-image";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 
 type ScrollVelocityWorkImageProps = {
@@ -166,11 +166,10 @@ export function ScrollVelocityWorkImage({
 					transform: "translate3d(0, 0, 0) scale(1.04)",
 				}}
 			>
-				<Image
+				<MosaicHoverImage
 					fill
 					alt={alt}
 					className="object-cover"
-					sizes="(min-width: 768px) 496px, 100vw"
 					src={imageUrl}
 				/>
 			</div>

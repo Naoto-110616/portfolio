@@ -2,6 +2,7 @@
 
 import { useLayoutEffect, useRef } from "react";
 
+import { MosaicHoverImage } from "@/components/home/mosaic-hover-image";
 import { AnimatedSectionTitle } from "@/components/motion/animated-section-title";
 import { HomeMainInner } from "@/components/ui/home-main-inner";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
@@ -117,8 +118,7 @@ export function AboutSection({
 				const beyondUnpinEnd = () => {
 					const vh = window.innerHeight;
 					const imgMidPercent =
-						ABOUT_PIN_START_VIEWPORT_PCT +
-						(pinHeight / 2 / vh) * 100;
+						ABOUT_PIN_START_VIEWPORT_PCT + (pinHeight / 2 / vh) * 100;
 					const clamped = Math.min(56, Math.max(20, imgMidPercent));
 					return `top ${clamped.toFixed(2)}%`;
 				};
@@ -197,7 +197,7 @@ export function AboutSection({
 					className="flex flex-col gap-block md:grid md:grid-cols-[368px_minmax(0,1fr)] md:items-start md:gap-4"
 				>
 					<div ref={pinRef} className="md:self-start">
-						<img
+						<MosaicHoverImage
 							alt={imageAlt}
 							className="aspect-1536/2048 w-full object-cover md:h-[491px] md:w-[368px] md:aspect-auto"
 							src={imageUrl}
