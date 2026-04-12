@@ -39,8 +39,8 @@ const HIGHLIGHT_ZERO_HOLD_DURATION = 0.2;
 const HIGHLIGHT_BOUNCE_DURATION = 2;
 const TYPING_FRAME_DURATION = 0.06;
 const FRONTEND_TYPING_CORRECTION_HOLD_DURATION = 0.3;
-const FRONTEND_TYPING_CORRECTION_BLINK_COUNT = 2;
-const FRONTEND_TYPING_DELETE_FRAME_DURATION = 0.09;
+const FRONTEND_TYPING_CORRECTION_BLINK_COUNT = 1;
+const FRONTEND_TYPING_DELETE_FRAME_DURATION = 0.4;
 const SCRAMBLE_CHARACTERS = `普段からメイクしない君が 薄化粧した朝
 始まりと終わりの狭間で
 忘れぬ約束した
@@ -151,11 +151,19 @@ function buildTypingSteps(phases: TypingPhase[]) {
 		}
 
 		if (nextValue.startsWith(currentValue)) {
-			for (let length = currentValue.length + 1; length <= nextValue.length; length += 1) {
+			for (
+				let length = currentValue.length + 1;
+				length <= nextValue.length;
+				length += 1
+			) {
 				pushStep(nextValue.slice(0, length));
 			}
 		} else if (currentValue.startsWith(nextValue)) {
-			for (let length = currentValue.length - 1; length >= nextValue.length; length -= 1) {
+			for (
+				let length = currentValue.length - 1;
+				length >= nextValue.length;
+				length -= 1
+			) {
 				pushStep(
 					currentValue.slice(0, length),
 					phase.deleteFrameDuration ?? TYPING_FRAME_DURATION,
@@ -285,7 +293,9 @@ function TypingText({
 	onScrambleStateChange?: (isScrambling: boolean) => void;
 }) {
 	const shouldReduceMotion = useReducedMotion();
-	const [displayedText, setDisplayedText] = useState(shouldReduceMotion ? value : "");
+	const [displayedText, setDisplayedText] = useState(
+		shouldReduceMotion ? value : "",
+	);
 	const [isCaretVisible, setIsCaretVisible] = useState(false);
 	const [hasAnimatedOnce, setHasAnimatedOnce] = useState(false);
 	const [scrambledValue, setScrambledValue] = useState(value);
@@ -338,13 +348,16 @@ function TypingText({
 		}
 
 		for (const step of steps) {
-			timeline.to({}, {
-				duration: step.duration,
-				onStart: () => {
-					setDisplayedText(step.text);
-					setIsCaretVisible(step.caretVisible);
+			timeline.to(
+				{},
+				{
+					duration: step.duration,
+					onStart: () => {
+						setDisplayedText(step.text);
+						setIsCaretVisible(step.caretVisible);
+					},
 				},
-			});
+			);
 		}
 
 		timeline.call(() => {
