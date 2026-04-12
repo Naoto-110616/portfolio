@@ -11,11 +11,7 @@ type HomeIntroProps = {
 	heroItems?: HeroItem[];
 };
 
-export function HomeIntro({
-	sinceLabel,
-	headerLinks,
-	heroItems,
-}: HomeIntroProps) {
+export function HomeIntro({ sinceLabel, headerLinks, heroItems }: HomeIntroProps) {
 	const [isIntroComplete, setIsIntroComplete] = useState(false);
 
 	const handleIntroComplete = useCallback(() => {
@@ -24,12 +20,8 @@ export function HomeIntro({
 
 	return (
 		<>
-			<Header
-				isVisible={isIntroComplete}
-				links={headerLinks}
-				sinceLabel={sinceLabel}
-			/>
-			<main className="mx-auto z-20 flex min-h-screen w-full max-w-content flex-col gap-[96px] px-[4.071%] md:gap-[240px] md:px-0">
+			<Header isVisible={isIntroComplete} links={headerLinks} sinceLabel={sinceLabel} />
+			<main className="max-w-content z-20 mx-auto flex min-h-screen w-full flex-col gap-[96px] px-[4.071%] md:gap-[240px] md:px-0">
 				<HeroSection
 					introComplete={isIntroComplete}
 					items={heroItems}

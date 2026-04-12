@@ -12,8 +12,7 @@ const config: Config = {
 				"rolling-text-loop": {
 					from: { transform: "translate3d(0, 0, 0)" },
 					to: {
-						transform:
-							"translate3d(0, calc(var(--rolling-text-row-height) * -1), 0)",
+						transform: "translate3d(0, calc(var(--rolling-text-row-height) * -1), 0)",
 					},
 				},
 				"scroll-cue-bounce": {

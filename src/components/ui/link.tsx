@@ -9,10 +9,7 @@ type LinkProps = {
 };
 
 export function Link({ label, className = "", iconClassName = "" }: LinkProps) {
-	const classes = [
-		"inline-flex items-center text-caption text-accent md:text-body",
-		className,
-	]
+	const classes = ["inline-flex items-center text-caption text-accent md:text-body", className]
 		.filter(Boolean)
 		.join(" ");
 
@@ -21,9 +18,7 @@ export function Link({ label, className = "", iconClassName = "" }: LinkProps) {
 			<RollingText text={label} />
 			<ArrowRight
 				aria-hidden="true"
-				className={["size-3 shrink-0 -rotate-45", iconClassName]
-					.filter(Boolean)
-					.join(" ")}
+				className={["size-3 shrink-0 -rotate-45", iconClassName].filter(Boolean).join(" ")}
 				strokeWidth={2}
 			/>
 		</span>

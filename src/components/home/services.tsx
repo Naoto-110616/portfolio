@@ -58,10 +58,10 @@ const defaultItems: ServiceItem[] = [
 function ServiceGroup({ title, points }: ServiceItem) {
 	return (
 		<section className="flex flex-col gap-8 md:gap-[72px]">
-			<h3 className="text-section text-foreground md:w-full md:text-right md:text-[72px] md:font-bold md:leading-none">
+			<h3 className="text-section text-foreground md:w-full md:text-right md:text-[72px] md:leading-none md:font-bold">
 				{title}
 			</h3>
-			<div className="flex flex-col gap-16 text-caption leading-normal text-foreground md:flex-row md:flex-wrap md:gap-4 md:text-body">
+			<div className="text-caption text-foreground md:text-body flex flex-col gap-16 leading-normal md:flex-row md:flex-wrap md:gap-4">
 				{points.map((point, index) => (
 					<p key={`${title}-${index}`} className="md:w-[240px]">
 						{point}
@@ -78,19 +78,12 @@ export function ServicesSection({
 }: ServicesSectionProps) {
 	return (
 		<section id="services" className="w-full">
-			<HomeMainInner className="flex flex-col gap-block md:gap-section-lg">
-				<AnimatedSectionTitle
-					title={title}
-					titleClassName="md:text-section-lg md:font-black"
-				/>
+			<HomeMainInner className="gap-block md:gap-section-lg flex flex-col">
+				<AnimatedSectionTitle title={title} titleClassName="md:text-section-lg md:font-black" />
 
-				<div className="flex flex-col gap-block-lg md:gap-section-lg">
+				<div className="gap-block-lg md:gap-section-lg flex flex-col">
 					{items.map((item, index) => (
-						<SectionReveal
-							key={item.id ?? `${item.title}-${index}`}
-							delay={index * 0.06}
-							y={24}
-						>
+						<SectionReveal key={item.id ?? `${item.title}-${index}`} delay={index * 0.06} y={24}>
 							<ServiceGroup {...item} />
 						</SectionReveal>
 					))}

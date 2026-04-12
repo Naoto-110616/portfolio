@@ -6,15 +6,8 @@ import { MoreProjectsSection } from "@/components/home/more-projects";
 import { ServicesSection } from "@/components/home/services";
 import { WorkSection } from "@/components/home/work";
 import { LayoutGuides } from "@/components/ui/layout-guides";
-import {
-	mapProjectsToMoreProjectItems,
-	mapProjectsToWorkItems,
-} from "@/lib/contentful/mappers";
-import {
-	getHomePage,
-	getProjects,
-	getSiteSettings,
-} from "@/lib/contentful/queries";
+import { mapProjectsToMoreProjectItems, mapProjectsToWorkItems } from "@/lib/contentful/mappers";
+import { getHomePage, getProjects, getSiteSettings } from "@/lib/contentful/queries";
 
 export const revalidate = 300;
 
@@ -37,10 +30,7 @@ export default async function HomePage() {
 			/>
 			<main className="relative z-20 flex w-full flex-col gap-[96px] md:gap-[240px]">
 				<WorkSection title={homePage.sectionTitles.work} items={workItems} />
-				<MoreProjectsSection
-					items={moreProjectItems}
-					title={homePage.sectionTitles.moreProjects}
-				/>
+				<MoreProjectsSection items={moreProjectItems} title={homePage.sectionTitles.moreProjects} />
 				<AboutSection
 					blocks={homePage.about.blocks}
 					imageAlt={homePage.about.portraitImageAlt}
@@ -54,10 +44,7 @@ export default async function HomePage() {
 					placeholder={homePage.chat.placeholder}
 					title={homePage.chat.title}
 				/>
-				<ServicesSection
-					items={homePage.services.items}
-					title={homePage.services.title}
-				/>
+				<ServicesSection items={homePage.services.items} title={homePage.services.title} />
 			</main>
 			<Footer
 				backToTopLabel={siteSettings.footer.backToTopLabel}

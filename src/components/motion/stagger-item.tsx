@@ -9,11 +9,7 @@ type StaggerItemProps = {
 	y?: number;
 };
 
-export function StaggerItem({
-	children,
-	className = "",
-	y = 24,
-}: StaggerItemProps) {
+export function StaggerItem({ children, className = "", y = 24 }: StaggerItemProps) {
 	const shouldReduceMotion = useReducedMotion();
 
 	return (

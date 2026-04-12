@@ -1,9 +1,6 @@
 "use client";
 
-import {
-	SectionTitle,
-	type SectionTitleProps,
-} from "@/components/ui/section-title";
+import { SectionTitle, type SectionTitleProps } from "@/components/ui/section-title";
 
 import { SectionReveal } from "./section-reveal";
 

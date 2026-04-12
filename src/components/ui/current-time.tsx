@@ -21,20 +21,15 @@ function formatTokyoDateTime(date: Date) {
 		timeZone: "Asia/Tokyo",
 	}).formatToParts(date);
 
-	const hourLabel =
-		timeParts.find((part) => part.type === "hour")?.value ?? "12";
-	const minuteLabel =
-		timeParts.find((part) => part.type === "minute")?.value ?? "00";
-	const periodLabel =
-		timeParts.find((part) => part.type === "dayPeriod")?.value ?? "AM";
+	const hourLabel = timeParts.find((part) => part.type === "hour")?.value ?? "12";
+	const minuteLabel = timeParts.find((part) => part.type === "minute")?.value ?? "00";
+	const periodLabel = timeParts.find((part) => part.type === "dayPeriod")?.value ?? "AM";
 
 	return { dateLabel, hourLabel, minuteLabel, periodLabel };
 }
 
 export function CurrentTime({ className = "" }: CurrentTimeProps) {
-	const [currentTime, setCurrentTime] = useState(() =>
-		formatTokyoDateTime(new Date()),
-	);
+	const [currentTime, setCurrentTime] = useState(() => formatTokyoDateTime(new Date()));
 	const [isColonVisible, setIsColonVisible] = useState(true);
 
 	useEffect(() => {

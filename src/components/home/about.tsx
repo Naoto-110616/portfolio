@@ -22,11 +22,9 @@ type AboutSectionProps = {
 	blocks?: AboutBlock[];
 };
 
-const aboutImage =
-	"https://www.figma.com/api/mcp/asset/1d9e5c05-e456-414b-9635-956928c1245c";
+const aboutImage = "https://www.figma.com/api/mcp/asset/1d9e5c05-e456-414b-9635-956928c1245c";
 
-const defaultLeadText =
-	"モダンなWebに、体験と仕組みをデザインするフロントエンドエンジニア";
+const defaultLeadText = "モダンなWebに、体験と仕組みをデザインするフロントエンドエンジニア";
 
 /** ピン開始位置（`ScrollTrigger.start` と画像中央の推定に併用） */
 const ABOUT_PIN_START_VIEWPORT_PCT = 12;
@@ -67,11 +65,9 @@ const defaultBlocks: AboutBlock[] = [
 
 function AboutContentBlock({ title, paragraphs }: AboutBlock) {
 	return (
-		<section className="flex flex-col gap-stack md:grid md:grid-cols-[256px_minmax(0,1fr)] md:gap-0">
-			<h3 className="text-heading text-foreground md:text-section md:font-bold">
-				{title}
-			</h3>
-			<div className="flex flex-col gap-stack text-caption leading-normal text-foreground md:text-body">
+		<section className="gap-stack flex flex-col md:grid md:grid-cols-[256px_minmax(0,1fr)] md:gap-0">
+			<h3 className="text-heading text-foreground md:text-section md:font-bold">{title}</h3>
+			<div className="gap-stack text-caption text-foreground md:text-body flex flex-col leading-normal">
 				{paragraphs.map((paragraph, index) => (
 					<p key={`${title}-${index}`}>{paragraph}</p>
 				))}
@@ -88,8 +84,7 @@ export function AboutSection({
 	blocks = defaultBlocks,
 }: AboutSectionProps) {
 	const beyondIndex = blocks.findIndex((b) => b.title === "Beyond");
-	const unpinPanelIndex =
-		beyondIndex >= 0 ? beyondIndex : Math.max(0, blocks.length - 1);
+	const unpinPanelIndex = beyondIndex >= 0 ? beyondIndex : Math.max(0, blocks.length - 1);
 
 	const scrollRootRef = useRef<HTMLDivElement>(null);
 	const pinRef = useRef<HTMLDivElement>(null);
@@ -117,8 +112,7 @@ export function AboutSection({
 				const pinHeight = pinEl.offsetHeight || 491;
 				const beyondUnpinEnd = () => {
 					const vh = window.innerHeight;
-					const imgMidPercent =
-						ABOUT_PIN_START_VIEWPORT_PCT + (pinHeight / 2 / vh) * 100;
+					const imgMidPercent = ABOUT_PIN_START_VIEWPORT_PCT + (pinHeight / 2 / vh) * 100;
 					const clamped = Math.min(56, Math.max(20, imgMidPercent));
 					return `top ${clamped.toFixed(2)}%`;
 				};
@@ -149,10 +143,7 @@ export function AboutSection({
 				}
 			});
 
-			const panels = gsap.utils.toArray<HTMLElement>(
-				"[data-about-scroll-panel]",
-				root,
-			);
+			const panels = gsap.utils.toArray<HTMLElement>("[data-about-scroll-panel]", root);
 
 			panels.forEach((panel) => {
 				gsap.fromTo(
@@ -185,21 +176,18 @@ export function AboutSection({
 	}, [blocks.length, imageUrl, leadText, unpinPanelIndex]);
 
 	return (
-		<section id="about" className="w-full md:pb-block-xl">
-			<HomeMainInner className="flex flex-col gap-block md:gap-section-lg">
-				<AnimatedSectionTitle
-					title={title}
-					titleClassName="md:text-section-lg md:font-black"
-				/>
+		<section id="about" className="md:pb-block-xl w-full">
+			<HomeMainInner className="gap-block md:gap-section-lg flex flex-col">
+				<AnimatedSectionTitle title={title} titleClassName="md:text-section-lg md:font-black" />
 
 				<div
 					ref={scrollRootRef}
-					className="flex flex-col gap-block md:grid md:grid-cols-[368px_minmax(0,1fr)] md:items-start md:gap-4"
+					className="gap-block flex flex-col md:grid md:grid-cols-[368px_minmax(0,1fr)] md:items-start md:gap-4"
 				>
 					<div ref={pinRef} className="md:self-start">
 						<MosaicHoverImage
 							alt={imageAlt}
-							className="aspect-1536/2048 w-full object-cover md:h-[491px] md:w-[368px] md:aspect-auto"
+							className="aspect-1536/2048 w-full object-cover md:aspect-auto md:h-[491px] md:w-[368px]"
 							src={imageUrl}
 							onLoad={() => {
 								ScrollTrigger.refresh();
@@ -207,12 +195,9 @@ export function AboutSection({
 						/>
 					</div>
 
-					<div
-						ref={contentRef}
-						className="flex flex-col gap-[48px] md:gap-[480px]"
-					>
+					<div ref={contentRef} className="flex flex-col gap-[48px] md:gap-[480px]">
 						<div data-about-scroll-panel>
-							<p className="text-section text-foreground md:max-w-[512px] md:text-[40px] md:font-black md:leading-[1.4]">
+							<p className="text-section text-foreground md:max-w-[512px] md:text-[40px] md:leading-[1.4] md:font-black">
 								{leadText}
 							</p>
 						</div>

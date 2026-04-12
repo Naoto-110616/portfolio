@@ -28,22 +28,20 @@ const desktopGuideOffsets = [
 /**
  * Reusable page guides matching the mobile and desktop grid system.
  */
-export function LayoutGuides({
-	lineClassName = "bg-foreground/10",
-}: LayoutGuidesProps) {
+export function LayoutGuides({ lineClassName = "bg-foreground/10" }: LayoutGuidesProps) {
 	const lineClasses = ["absolute top-0 bottom-0 block w-px", lineClassName]
 		.filter(Boolean)
 		.join(" ");
 
 	return (
-		<div className="pointer-events-none absolute inset-y-0 left-0 w-full z-10">
+		<div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-full">
 			<div className="md:hidden">
 				{mobileGuideOffsets.map((offset) => (
 					<span key={offset} className={lineClasses} style={{ left: offset }} />
 				))}
 			</div>
 
-			<div className="absolute inset-y-0 inset-x-0 mx-auto hidden w-full max-w-content md:block z-10">
+			<div className="max-w-content absolute inset-x-0 inset-y-0 z-10 mx-auto hidden w-full md:block">
 				{desktopGuideOffsets.map((offset) => (
 					<span key={offset} className={lineClasses} style={{ left: offset }} />
 				))}

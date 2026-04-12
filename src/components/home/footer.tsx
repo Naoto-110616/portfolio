@@ -40,21 +40,18 @@ export function Footer({
 	backToTopLabel = "Back to top",
 }: FooterProps) {
 	return (
-		<footer className="relative overflow-hidden bg-primary text-accent">
+		<footer className="bg-primary text-accent relative overflow-hidden">
 			<LayoutGuides lineClassName="bg-accent/10" />
-			<div
-				aria-hidden="true"
-				className="pointer-events-none absolute inset-0 opacity-40"
-			/>
+			<div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-40" />
 
 			<SectionReveal
-				className="relative mx-auto flex max-w-content flex-col gap-6 px-[4.071%] pb-16 pt-4 md:gap-10 md:px-0 md:pb-40 md:pt-10"
+				className="max-w-content relative mx-auto flex flex-col gap-6 px-[4.071%] pt-4 pb-16 md:gap-10 md:px-0 md:pt-10 md:pb-40"
 				y={40}
 			>
-				<div className="flex flex-col gap-block">
+				<div className="gap-block flex flex-col">
 					<div className="grid grid-cols-8 items-start">
 						<StaggerGroup
-							className="col-span-6 wide:col-span-7 grid grid-cols-2 gap-y-[14px] md:w-[256px] md:text-body"
+							className="wide:col-span-7 md:text-body col-span-6 grid grid-cols-2 gap-y-[14px] md:w-[256px]"
 							staggerChildren={0.08}
 						>
 							{socialLinks.map((link) => (
@@ -64,32 +61,28 @@ export function Footer({
 							))}
 						</StaggerGroup>
 
-						<CurrentTime className="col-span-2 wide:col-span-1 wide:gap-[14px] text-caption text-accent md:text-body" />
+						<CurrentTime className="wide:col-span-1 wide:gap-[14px] text-caption text-accent md:text-body col-span-2" />
 					</div>
 
 					<a
-						className="group w-fit text-caption text-accent transition-opacity hover:opacity-80 md:text-body md:leading-normal"
+						className="group text-caption text-accent md:text-body w-fit transition-opacity hover:opacity-80 md:leading-normal"
 						href={`mailto:${email}`}
 					>
 						<RollingText text={email} />
 					</a>
 				</div>
 				<div>
-					<div className="grid grid-cols-8 items-center justify-between text-caption text-accent md:text-body md:leading-normal">
-						<p className="col-span-6 wide:col-span-7">{copyright}</p>
+					<div className="text-caption text-accent md:text-body grid grid-cols-8 items-center justify-between md:leading-normal">
+						<p className="wide:col-span-7 col-span-6">{copyright}</p>
 
 						<a
-							className="group col-span-2 wide:col-span-1 transition-opacity hover:opacity-80"
+							className="group wide:col-span-1 col-span-2 transition-opacity hover:opacity-80"
 							href="#top"
 						>
-							<Link
-								className="text-inherit"
-								iconClassName="-rotate-90"
-								label={backToTopLabel}
-							/>
+							<Link className="text-inherit" iconClassName="-rotate-90" label={backToTopLabel} />
 						</a>
 					</div>
-					<hr className="mt-2 border-accent-soft md:mt-0" />
+					<hr className="border-accent-soft mt-2 md:mt-0" />
 				</div>
 
 				<SectionReveal className="pointer-events-none absolute bottom-[-18px] left-1/2 w-[clamp(360px,58vw,1024px)] -translate-x-1/2 md:bottom-[-50px] md:w-[1024px]">

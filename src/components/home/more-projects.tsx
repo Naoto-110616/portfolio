@@ -14,11 +14,7 @@ import { HomeMainInner } from "@/components/ui/home-main-inner";
 
 export type MoreProjectItem = Omit<
 	ProjectWorkCardExpandableProps,
-	| "variant"
-	| "expanded"
-	| "onOpenRequest"
-	| "onCloseRequest"
-	| "showCloseButton"
+	"variant" | "expanded" | "onOpenRequest" | "onCloseRequest" | "showCloseButton"
 >;
 
 type MoreProjectsSectionProps = {
@@ -133,15 +129,7 @@ export function MoreProjectsSection({
 		};
 
 		const onKeyDown = (e: KeyboardEvent) => {
-			const keys = new Set([
-				"ArrowDown",
-				"ArrowUp",
-				"PageDown",
-				"PageUp",
-				" ",
-				"Home",
-				"End",
-			]);
+			const keys = new Set(["ArrowDown", "ArrowUp", "PageDown", "PageUp", " ", "Home", "End"]);
 			if (keys.has(e.key)) {
 				handleCloseAll();
 			}
@@ -152,10 +140,7 @@ export function MoreProjectsSection({
 		let unsubVirtualScroll: (() => void) | undefined;
 
 		if (lenis) {
-			unsubVirtualScroll = lenis.on(
-				"virtual-scroll",
-				onScrollIntentClose,
-			);
+			unsubVirtualScroll = lenis.on("virtual-scroll", onScrollIntentClose);
 		} else {
 			window.addEventListener("wheel", onScrollIntentClose, wheelOpts);
 			window.addEventListener("touchmove", onScrollIntentClose, wheelOpts);
@@ -171,7 +156,7 @@ export function MoreProjectsSection({
 
 	return (
 		<section className="w-full">
-			<HomeMainInner className="flex flex-col gap-stack-sm md:gap-section-lg">
+			<HomeMainInner className="gap-stack-sm md:gap-section-lg flex flex-col">
 				<AnimatedSectionTitle
 					title={title}
 					titleClassName="text-heading md:text-section-lg md:font-black"
@@ -179,7 +164,7 @@ export function MoreProjectsSection({
 				/>
 
 				<StaggerGroup
-					className="flex w-full flex-col gap-stack-sm overflow-hidden md:gap-block-lg"
+					className="gap-stack-sm md:gap-block-lg flex w-full flex-col overflow-hidden"
 					delayChildren={0.08}
 					staggerChildren={0.1}
 				>

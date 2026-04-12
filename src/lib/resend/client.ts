@@ -3,7 +3,7 @@ import { Resend } from "resend";
 import { requireResendEnv } from "@/lib/env";
 
 export function getResendClient() {
-  const { apiKey } = requireResendEnv();
+	const { apiKey } = requireResendEnv();
 
-  return new Resend(apiKey);
+	return new Resend(apiKey);
 }

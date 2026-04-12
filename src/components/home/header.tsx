@@ -1,4 +1,4 @@
- "use client";
+"use client";
 
 import { CurrentTime } from "@/components/ui/current-time";
 import { RollingText } from "@/components/ui/rolling-text";
@@ -36,33 +36,30 @@ export function Header({
 		<header
 			className={
 				isVisible
-					? "translate-y-0 opacity-100 transition-all duration-500 delay-200 ease-out"
+					? "translate-y-0 opacity-100 transition-all delay-200 duration-500 ease-out"
 					: "pointer-events-none translate-y-2 opacity-0 transition-all duration-500 ease-out"
 			}
 		>
 			<SectionReveal
-				className="mx-auto flex w-full max-w-content flex-col gap-block px-[4.071%] pt-4 md:px-0 md:pt-6"
+				className="max-w-content gap-block mx-auto flex w-full flex-col px-[4.071%] pt-4 md:px-0 md:pt-6"
 				y={20}
 			>
 				<div className="md:hidden">
-					<div className="flex items-start justify-between gap-stack-lg">
+					<div className="gap-stack-lg flex items-start justify-between">
 						<p className="text-caption-sm leading-none">{sinceLabel}</p>
 
-						<CurrentTime className="gap-stack wide:gap-[14px] text-right text-caption-sm leading-none" />
+						<CurrentTime className="gap-stack wide:gap-[14px] text-caption-sm text-right leading-none" />
 					</div>
 
 					<nav aria-label="Primary" className="mt-block">
 						<StaggerGroup
 							as="ul"
-							className="grid grid-cols-8 text-caption-sm leading-none"
+							className="text-caption-sm grid grid-cols-8 leading-none"
 							delayChildren={0.1}
 							staggerChildren={0.08}
 						>
 							{links.map((link) => (
-								<li
-									key={`${link.href}-${link.label}`}
-									className="col-span-2 list-none"
-								>
+								<li key={`${link.href}-${link.label}`} className="col-span-2 list-none">
 									<StaggerItem>
 										<a
 											className="group inline-flex w-fit whitespace-nowrap transition-opacity hover:opacity-70"
@@ -83,7 +80,7 @@ export function Header({
 					<nav aria-label="Primary" className="col-span-2">
 						<StaggerGroup
 							as="ul"
-							className="grid grid-cols-2 gap-y-4 text-body leading-normal"
+							className="text-body grid grid-cols-2 gap-y-4 leading-normal"
 							delayChildren={0.1}
 							staggerChildren={0.08}
 						>
@@ -104,7 +101,7 @@ export function Header({
 
 					<div className="col-span-4" />
 
-					<CurrentTime className="col-span-1 gap-0 text-body leading-normal" />
+					<CurrentTime className="text-body col-span-1 gap-0 leading-normal" />
 				</div>
 			</SectionReveal>
 		</header>

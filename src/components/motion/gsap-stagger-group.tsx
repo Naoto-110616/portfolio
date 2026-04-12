@@ -10,11 +10,7 @@ type GsapStaggerGroupProps = {
 	selector?: string;
 };
 
-export function GsapStaggerGroup({
-	children,
-	className = "",
-	selector,
-}: GsapStaggerGroupProps) {
+export function GsapStaggerGroup({ children, className = "", selector }: GsapStaggerGroupProps) {
 	const scopeRef = useRef<HTMLDivElement>(null);
 
 	useGsapStagger(scopeRef, { selector });

@@ -14,9 +14,7 @@ export function SectionTitle({
 	const classes = [withDivider ? "border-b border-primary-soft" : "", className]
 		.filter(Boolean)
 		.join(" ");
-	const titleClasses = ["text-section text-foreground", titleClassName]
-		.filter(Boolean)
-		.join(" ");
+	const titleClasses = ["text-section text-foreground", titleClassName].filter(Boolean).join(" ");
 
 	return (
 		<div className={classes}>

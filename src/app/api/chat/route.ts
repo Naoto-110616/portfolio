@@ -45,10 +45,7 @@ export async function POST(request: Request) {
 
 		return NextResponse.json({ reply });
 	} catch (error) {
-		if (
-			error instanceof Error &&
-			error.message.includes("Gemini environment variables")
-		) {
+		if (error instanceof Error && error.message.includes("Gemini environment variables")) {
 			return NextResponse.json(
 				{
 					message:

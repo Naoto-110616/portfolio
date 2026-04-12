@@ -24,9 +24,7 @@ export function Frame({
 }: FrameProps) {
 	const [isBottomIndicatorOn, setIsBottomIndicatorOn] = useState(false);
 	const [isSwitchDisabled, setIsSwitchDisabled] = useState(false);
-	const classes = ["group relative flex w-fit flex-col", className]
-		.filter(Boolean)
-		.join(" ");
+	const classes = ["group relative flex w-fit flex-col", className].filter(Boolean).join(" ");
 	const content =
 		typeof children === "function"
 			? children({
@@ -37,44 +35,37 @@ export function Frame({
 
 	return (
 		<div className={classes}>
-			<div
-				className={`relative z-10 w-fit ${isInteractive ? "cursor-grab" : "cursor-default"}`}
-			>
+			<div className={`relative z-10 w-fit ${isInteractive ? "cursor-grab" : "cursor-default"}`}>
 				{content}
 			</div>
 
-			<div className="pointer-events-none absolute inset-0 z-20 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100">
+			<div className="pointer-events-none absolute inset-0 z-20 opacity-0 transition-opacity group-focus-within:opacity-100 group-hover:opacity-100">
 				<div
 					aria-hidden="true"
-					className="absolute left-[-8px] top-[-12px] -translate-y-full rounded bg-primary px-2 py-0.5 text-caption-sm leading-none text-accent"
+					className="bg-primary text-caption-sm text-accent absolute top-[-12px] left-[-8px] -translate-y-full rounded px-2 py-0.5 leading-none"
 				>
 					{text}
 				</div>
 
-				<div
-					aria-hidden="true"
-					className="absolute -inset-2 border border-primary"
-				>
-					<span className="absolute left-0 top-0 size-1 -translate-x-1/2 -translate-y-1/2 bg-primary" />
-					<span className="absolute left-1/2 top-0 size-1 -translate-x-1/2 -translate-y-1/2 bg-primary" />
-					<span className="absolute right-0 top-0 size-1 translate-x-1/2 -translate-y-1/2 bg-primary" />
-					<span className="absolute left-0 top-1/2 size-1 -translate-x-1/2 -translate-y-1/2 bg-primary" />
-					<span className="absolute right-0 top-1/2 size-1 translate-x-1/2 -translate-y-1/2 bg-primary" />
-					<span className="absolute bottom-0 left-0 size-1 -translate-x-1/2 translate-y-1/2 bg-primary" />
-					<span className="absolute bottom-0 left-1/2 size-1 -translate-x-1/2 translate-y-1/2 bg-primary" />
-					<span className="absolute bottom-0 right-0 size-1 translate-x-1/2 translate-y-1/2 bg-primary" />
+				<div aria-hidden="true" className="border-primary absolute -inset-2 border">
+					<span className="bg-primary absolute top-0 left-0 size-1 -translate-x-1/2 -translate-y-1/2" />
+					<span className="bg-primary absolute top-0 left-1/2 size-1 -translate-x-1/2 -translate-y-1/2" />
+					<span className="bg-primary absolute top-0 right-0 size-1 translate-x-1/2 -translate-y-1/2" />
+					<span className="bg-primary absolute top-1/2 left-0 size-1 -translate-x-1/2 -translate-y-1/2" />
+					<span className="bg-primary absolute top-1/2 right-0 size-1 translate-x-1/2 -translate-y-1/2" />
+					<span className="bg-primary absolute bottom-0 left-0 size-1 -translate-x-1/2 translate-y-1/2" />
+					<span className="bg-primary absolute bottom-0 left-1/2 size-1 -translate-x-1/2 translate-y-1/2" />
+					<span className="bg-primary absolute right-0 bottom-0 size-1 translate-x-1/2 translate-y-1/2" />
 				</div>
 
 				{showBottomIndicator ? (
-					<div className="pointer-events-auto absolute bottom-[-12px] right-[-8px] z-30 translate-y-full">
+					<div className="pointer-events-auto absolute right-[-8px] bottom-[-12px] z-30 translate-y-full">
 						<button
 							aria-checked={isBottomIndicatorOn}
 							aria-disabled={isSwitchDisabled}
 							aria-label={bottomIndicatorLabel ?? `${text} switch`}
-							className={`relative z-10 rounded bg-primary px-2 py-0.5 outline-none before:absolute before:-inset-2 before:content-[''] focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background ${
-								isSwitchDisabled
-									? "cursor-not-allowed opacity-60"
-									: "cursor-pointer"
+							className={`bg-primary focus-visible:ring-primary focus-visible:ring-offset-background relative z-10 rounded px-2 py-0.5 outline-none before:absolute before:-inset-2 before:content-[''] focus-visible:ring-2 focus-visible:ring-offset-2 ${
+								isSwitchDisabled ? "cursor-not-allowed opacity-60" : "cursor-pointer"
 							}`}
 							disabled={isSwitchDisabled}
 							onClick={() => {
@@ -92,7 +83,7 @@ export function Frame({
 								}`}
 							>
 								<span
-									className={`size-3.5 rounded-full bg-primary transition-transform duration-200 ease-out ${
+									className={`bg-primary size-3.5 rounded-full transition-transform duration-200 ease-out ${
 										isBottomIndicatorOn ? "translate-x-0" : "translate-x-[14px]"
 									}`}
 								/>

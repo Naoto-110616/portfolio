@@ -35,8 +35,8 @@ export function RollingText({
 	} as CSSProperties;
 	const [isRolling, setIsRolling] = useState(false);
 	const [stopAtNextCycle, setStopAtNextCycle] = useState(false);
-	const [stoppedCharacters, setStoppedCharacters] = useState<boolean[]>(
-		() => createStoppedCharacters(characters.length),
+	const [stoppedCharacters, setStoppedCharacters] = useState<boolean[]>(() =>
+		createStoppedCharacters(characters.length),
 	);
 	const safeStoppedCharacters =
 		stoppedCharacters.length === characters.length
@@ -60,9 +60,7 @@ export function RollingText({
 	const handleCharacterIteration = (index: number) => {
 		setStoppedCharacters((current) => {
 			const nextState =
-				current.length === characters.length
-					? current
-					: createStoppedCharacters(characters.length);
+				current.length === characters.length ? current : createStoppedCharacters(characters.length);
 
 			if (!stopAtNextCycle || nextState[index]) {
 				return nextState;
@@ -86,7 +84,7 @@ export function RollingText({
 
 	return (
 		<span
-			className={`inline-flex whitespace-nowrap align-baseline ${className}`.trim()}
+			className={`inline-flex align-baseline whitespace-nowrap ${className}`.trim()}
 			onBlur={requestStopAtNextCycle}
 			onFocus={startRolling}
 			onMouseEnter={startRolling}
@@ -94,10 +92,7 @@ export function RollingText({
 			style={rowStyle}
 		>
 			<span className="sr-only">{text}</span>
-			<span
-				aria-hidden="true"
-				className="inline-flex whitespace-pre align-baseline"
-			>
+			<span aria-hidden="true" className="inline-flex align-baseline whitespace-pre">
 				{characters.map((character, index) => (
 					<span
 						key={`${character}-${index}`}

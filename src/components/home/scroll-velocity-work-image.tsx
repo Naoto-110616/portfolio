@@ -58,8 +58,7 @@ export function ScrollVelocityWorkImage({
 				`${state.frequencyX.toFixed(4)} ${state.frequencyY.toFixed(4)}`,
 			);
 			displacement.setAttribute("scale", state.displacement.toFixed(2));
-			imageWrap.style.transform =
-				`translate3d(0, ${state.yPercent.toFixed(2)}%, 0) scale(1.04) skewY(${state.skewY.toFixed(2)}deg)`;
+			imageWrap.style.transform = `translate3d(0, ${state.yPercent.toFixed(2)}%, 0) scale(1.04) skewY(${state.skewY.toFixed(2)}deg)`;
 		};
 
 		const relax = () => {
@@ -88,16 +87,8 @@ export function ScrollVelocityWorkImage({
 				const direction = velocity < 0 ? -1 : 1;
 
 				gsap.to(state, {
-					frequencyX: gsap.utils.interpolate(
-						BASE_FREQUENCY_X,
-						MAX_FREQUENCY_X,
-						intensity,
-					),
-					frequencyY: gsap.utils.interpolate(
-						BASE_FREQUENCY_Y,
-						MAX_FREQUENCY_Y,
-						intensity,
-					),
+					frequencyX: gsap.utils.interpolate(BASE_FREQUENCY_X, MAX_FREQUENCY_X, intensity),
+					frequencyY: gsap.utils.interpolate(BASE_FREQUENCY_Y, MAX_FREQUENCY_Y, intensity),
 					displacement: gsap.utils.interpolate(0, MAX_DISPLACEMENT, intensity),
 					yPercent: direction * MAX_IMAGE_SHIFT * intensity,
 					skewY: direction * MAX_SKEW * intensity,
@@ -113,24 +104,15 @@ export function ScrollVelocityWorkImage({
 		return () => {
 			gsap.killTweensOf(state);
 			trigger.kill();
-			turbulence.setAttribute(
-				"baseFrequency",
-				`${BASE_FREQUENCY_X} ${BASE_FREQUENCY_Y}`,
-			);
+			turbulence.setAttribute("baseFrequency", `${BASE_FREQUENCY_X} ${BASE_FREQUENCY_Y}`);
 			displacement.setAttribute("scale", "0");
 			imageWrap.style.transform = "translate3d(0, 0, 0) scale(1.04)";
 		};
 	}, [filterId]);
 
 	return (
-		<div
-			ref={rootRef}
-			className={`relative overflow-hidden bg-surface ${className ?? ""}`}
-		>
-			<svg
-				aria-hidden="true"
-				className="pointer-events-none absolute h-0 w-0 overflow-hidden"
-			>
+		<div ref={rootRef} className={`bg-surface relative overflow-hidden ${className ?? ""}`}>
+			<svg aria-hidden="true" className="pointer-events-none absolute h-0 w-0 overflow-hidden">
 				<filter
 					id={filterId}
 					x="-20%"
@@ -166,12 +148,7 @@ export function ScrollVelocityWorkImage({
 					transform: "translate3d(0, 0, 0) scale(1.04)",
 				}}
 			>
-				<MosaicHoverImage
-					fill
-					alt={alt}
-					className="object-cover"
-					src={imageUrl}
-				/>
+				<MosaicHoverImage fill alt={alt} className="object-cover" src={imageUrl} />
 			</div>
 		</div>
 	);

@@ -1,13 +1,6 @@
 "use client";
 
-import {
-	type MouseEvent,
-	useCallback,
-	useEffect,
-	useLayoutEffect,
-	useRef,
-	useState,
-} from "react";
+import { type MouseEvent, useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 
 const CURSOR_RADIUS_PX = 60;
 const MOSAIC_BLOCK_PX = 8;
@@ -213,15 +206,7 @@ export function MosaicHoverImage({
 		}
 
 		if (insideRef.current && posRef.current) {
-			drawMosaicCircle(
-				ctx,
-				octx,
-				off,
-				posRef.current.x,
-				posRef.current.y,
-				dpr,
-				1,
-			);
+			drawMosaicCircle(ctx, octx, off, posRef.current.x, posRef.current.y, dpr, 1);
 		}
 	}, []);
 
@@ -253,32 +238,29 @@ export function MosaicHoverImage({
 		}
 	}, []);
 
-	const pushTrailFromMovement = useCallback(
-		(x: number, y: number) => {
-			const prev = posRef.current;
-			if (!prev) {
-				posRef.current = { x, y };
-				return;
-			}
-
-			const dx = x - prev.x;
-			const dy = y - prev.y;
-			const dist = Math.hypot(dx, dy);
-			if (dist < TRAIL_SAMPLE_MIN_PX) {
-				posRef.current = { x, y };
-				return;
-			}
-
-			const trail = trailRef.current;
-			trail.push({ x: prev.x, y: prev.y, opacity: 1 });
-			if (trail.length > MAX_TRAIL_POINTS) {
-				trail.shift();
-			}
-
+	const pushTrailFromMovement = useCallback((x: number, y: number) => {
+		const prev = posRef.current;
+		if (!prev) {
 			posRef.current = { x, y };
-		},
-		[],
-	);
+			return;
+		}
+
+		const dx = x - prev.x;
+		const dy = y - prev.y;
+		const dist = Math.hypot(dx, dy);
+		if (dist < TRAIL_SAMPLE_MIN_PX) {
+			posRef.current = { x, y };
+			return;
+		}
+
+		const trail = trailRef.current;
+		trail.push({ x: prev.x, y: prev.y, opacity: 1 });
+		if (trail.length > MAX_TRAIL_POINTS) {
+			trail.shift();
+		}
+
+		posRef.current = { x, y };
+	}, []);
 
 	const handleMove = useCallback(
 		(e: MouseEvent<HTMLDivElement>) => {
@@ -353,9 +335,7 @@ export function MosaicHoverImage({
 	}, [stopLoop]);
 
 	const wrapClassName = [
-		fill
-			? "absolute inset-0 isolate h-full w-full"
-			: "relative isolate",
+		fill ? "absolute inset-0 isolate h-full w-full" : "relative isolate",
 		wrapperClassName,
 	]
 		.filter(Boolean)

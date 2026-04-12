@@ -1,51 +1,56 @@
 {
-  "name": "zexora",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Next.js starter package with Contentful, Resend, and TanStack Query.",
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint .",
-    "typecheck": "tsc --noEmit",
-    "contentful:migrate": "tsx contentful/scripts/migrate.ts --yes"
-  },
-  "keywords": [
-    "nextjs",
-    "contentful",
-    "resend",
-    "tanstack-query",
-    "starter"
-  ],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@google/generative-ai": "^0.24.1",
-    "@tanstack/react-query": "^5.90.21",
-    "contentful": "^11.10.7",
-    "contentful-management": "^12.2.0",
-    "gsap": "^3.14.2",
-    "lenis": "^1.3.21",
-    "lucide-react": "^1.7.0",
-    "motion": "^12.38.0",
-    "next": "^16.1.7",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "resend": "^6.9.4",
-    "zod": "^4.3.6"
-  },
-  "devDependencies": {
-    "@eslint/eslintrc": "^3.3.5",
-    "@tailwindcss/postcss": "^4.2.1",
-    "@types/node": "^25.5.0",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
-    "contentful-migration": "^4.32.0",
-    "eslint": "^9.39.4",
-    "eslint-config-next": "^16.1.7",
-    "tailwindcss": "^4.2.1",
-    "tsx": "^4.21.0",
-    "typescript": "^5.9.3"
-  }
+	"name": "zexora",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Next.js starter package with Contentful, Resend, and TanStack Query.",
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"lint": "eslint .",
+		"fix": "eslint . --fix && prettier --write .",
+		"typecheck": "tsc --noEmit",
+		"contentful:migrate": "tsx contentful/scripts/migrate.ts --yes"
+	},
+	"keywords": [
+		"nextjs",
+		"contentful",
+		"resend",
+		"tanstack-query",
+		"starter"
+	],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@google/generative-ai": "^0.24.1",
+		"@tanstack/react-query": "^5.90.21",
+		"contentful": "^11.10.7",
+		"contentful-management": "^12.2.0",
+		"gsap": "^3.14.2",
+		"lenis": "^1.3.21",
+		"lucide-react": "^1.7.0",
+		"motion": "^12.38.0",
+		"next": "^16.1.7",
+		"react": "^19.2.4",
+		"react-dom": "^19.2.4",
+		"resend": "^6.9.4",
+		"zod": "^4.3.6"
+	},
+	"devDependencies": {
+		"@eslint/eslintrc": "^3.3.5",
+		"@tailwindcss/postcss": "^4.2.1",
+		"@types/node": "^25.5.0",
+		"@types/react": "^19.2.14",
+		"@types/react-dom": "^19.2.3",
+		"contentful-migration": "^4.32.0",
+		"eslint": "^9.39.4",
+		"eslint-config-next": "^16.1.7",
+		"prettier": "^3.8.2",
+		"prettier-plugin-tailwindcss": "^0.7.2",
+		"tailwindcss": "^4.2.1",
+		"tsx": "^4.21.0",
+		"typescript": "^5.9.3"
+	}
 }

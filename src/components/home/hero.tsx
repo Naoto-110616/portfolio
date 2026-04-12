@@ -131,11 +131,7 @@ function getTypingPhases(value: string) {
 function buildTypingSteps(phases: TypingPhase[]) {
 	const steps: TypingStep[] = [];
 	let currentValue = "";
-	const pushStep = (
-		text: string,
-		duration = TYPING_FRAME_DURATION,
-		caretVisible = true,
-	) => {
+	const pushStep = (text: string, duration = TYPING_FRAME_DURATION, caretVisible = true) => {
 		steps.push({
 			text,
 			duration,
@@ -151,23 +147,12 @@ function buildTypingSteps(phases: TypingPhase[]) {
 		}
 
 		if (nextValue.startsWith(currentValue)) {
-			for (
-				let length = currentValue.length + 1;
-				length <= nextValue.length;
-				length += 1
-			) {
+			for (let length = currentValue.length + 1; length <= nextValue.length; length += 1) {
 				pushStep(nextValue.slice(0, length));
 			}
 		} else if (currentValue.startsWith(nextValue)) {
-			for (
-				let length = currentValue.length - 1;
-				length >= nextValue.length;
-				length -= 1
-			) {
-				pushStep(
-					currentValue.slice(0, length),
-					phase.deleteFrameDuration ?? TYPING_FRAME_DURATION,
-				);
+			for (let length = currentValue.length - 1; length >= nextValue.length; length -= 1) {
+				pushStep(currentValue.slice(0, length), phase.deleteFrameDuration ?? TYPING_FRAME_DURATION);
 			}
 		} else {
 			let sharedPrefixLength = 0;
@@ -180,33 +165,18 @@ function buildTypingSteps(phases: TypingPhase[]) {
 				sharedPrefixLength += 1;
 			}
 
-			for (
-				let length = currentValue.length - 1;
-				length >= sharedPrefixLength;
-				length -= 1
-			) {
-				pushStep(
-					currentValue.slice(0, length),
-					phase.deleteFrameDuration ?? TYPING_FRAME_DURATION,
-				);
+			for (let length = currentValue.length - 1; length >= sharedPrefixLength; length -= 1) {
+				pushStep(currentValue.slice(0, length), phase.deleteFrameDuration ?? TYPING_FRAME_DURATION);
 			}
 
-			for (
-				let length = sharedPrefixLength + 1;
-				length <= nextValue.length;
-				length += 1
-			) {
+			for (let length = sharedPrefixLength + 1; length <= nextValue.length; length += 1) {
 				pushStep(nextValue.slice(0, length));
 			}
 		}
 
 		currentValue = nextValue;
 
-		for (
-			let blinkIndex = 0;
-			blinkIndex < (phase.blinkCaretCountAfter ?? 0);
-			blinkIndex += 1
-		) {
+		for (let blinkIndex = 0; blinkIndex < (phase.blinkCaretCountAfter ?? 0); blinkIndex += 1) {
 			pushStep(nextValue, CARET_BLINK_STEP_DURATION, false);
 			pushStep(nextValue, CARET_BLINK_STEP_DURATION, true);
 		}
@@ -270,9 +240,7 @@ function getLocalizedHeroValue(value: string, isSwitchedOn: boolean) {
 }
 
 function getScrambleCharacter() {
-	return SCRAMBLE_CHARACTERS[
-		Math.floor(Math.random() * SCRAMBLE_CHARACTERS.length)
-	];
+	return SCRAMBLE_CHARACTERS[Math.floor(Math.random() * SCRAMBLE_CHARACTERS.length)];
 }
 
 function TypingText({
@@ -293,9 +261,7 @@ function TypingText({
 	onScrambleStateChange?: (isScrambling: boolean) => void;
 }) {
 	const shouldReduceMotion = useReducedMotion();
-	const [displayedText, setDisplayedText] = useState(
-		shouldReduceMotion ? value : "",
-	);
+	const [displayedText, setDisplayedText] = useState(shouldReduceMotion ? value : "");
 	const [isCaretVisible, setIsCaretVisible] = useState(false);
 	const [hasAnimatedOnce, setHasAnimatedOnce] = useState(false);
 	const [scrambledValue, setScrambledValue] = useState(value);
@@ -321,11 +287,7 @@ function TypingText({
 		});
 
 		if (shouldBlinkBeforeTyping) {
-			for (
-				let blinkIndex = 0;
-				blinkIndex < CARET_BLINK_COUNT;
-				blinkIndex += 1
-			) {
+			for (let blinkIndex = 0; blinkIndex < CARET_BLINK_COUNT; blinkIndex += 1) {
 				timeline.to(
 					{},
 					{
@@ -454,20 +416,14 @@ function TypingText({
 	const showCaret = !shouldRenderStaticValue && isCaretVisible;
 
 	return (
-		<span
-			aria-label={value}
-			className={`inline-grid whitespace-nowrap ${className}`.trim()}
-		>
+		<span aria-label={value} className={`inline-grid whitespace-nowrap ${className}`.trim()}>
 			<span
 				aria-hidden="true"
 				className="invisible col-start-1 row-start-1 inline-flex items-center"
 			>
 				{value}
 			</span>
-			<span
-				aria-hidden="true"
-				className="col-start-1 row-start-1 inline-flex items-center"
-			>
+			<span aria-hidden="true" className="col-start-1 row-start-1 inline-flex items-center">
 				{displayedValue}
 				{showCaret ? (
 					<span
@@ -606,17 +562,15 @@ function HeroLabel({
 
 	return (
 		<div
-			className="relative w-full max-w-content-sp"
+			className="max-w-content-sp relative w-full"
 			ref={labelRef}
 			style={shouldReduceMotion ? undefined : { opacity: 0 }}
 		>
-			<p className="text-hero-sub text-foreground md:text-hero-sub-lg md:leading-none">
-				{label}
-			</p>
+			<p className="text-hero-sub text-foreground md:text-hero-sub-lg md:leading-none">{label}</p>
 			{isHighlighted ? (
 				<span
 					aria-hidden="true"
-					className="absolute left-0 top-[24px] h-[6px] w-[45px] bg-accent md:top-[36px] md:w-[84px] md:h-2"
+					className="bg-accent absolute top-[24px] left-0 h-[6px] w-[45px] md:top-[36px] md:h-2 md:w-[84px]"
 					ref={highlightRef}
 					style={
 						shouldReduceMotion
@@ -637,12 +591,11 @@ function HeroValue({
 	delay?: number;
 	isInteractive?: boolean;
 }) {
-	const { dragRef, dragConstraints } =
-		useViewportDragConstraints<HTMLDivElement>();
+	const { dragRef, dragConstraints } = useViewportDragConstraints<HTMLDivElement>();
 
 	return (
 		<>
-			<p className="w-full max-w-content-sp text-[44px] leading-[1.4] font-bold text-foreground md:hidden">
+			<p className="max-w-content-sp text-foreground w-full text-[44px] leading-[1.4] font-bold md:hidden">
 				<TypingText
 					value={value}
 					delay={delay}
@@ -662,7 +615,7 @@ function HeroValue({
 						const displayValue = getLocalizedHeroValue(value, isSwitchedOn);
 
 						return (
-							<p className="text-hero-lg leading-none font-black text-foreground">
+							<p className="text-hero-lg text-foreground leading-none font-black">
 								<TypingText
 									value={displayValue}
 									delay={delay}
@@ -702,33 +655,28 @@ function HeroRow({
 				delay={labelDelay}
 				highlightDelay={highlightDelay}
 			/>
-			<HeroValue
-				value={value}
-				delay={valueDelay}
-				isInteractive={isInteractive}
-			/>
+			<HeroValue value={value} delay={valueDelay} isInteractive={isInteractive} />
 		</div>
 	);
 }
 
 function ViewMore({ isInteractive = true }: { isInteractive?: boolean }) {
-	const { dragRef, dragConstraints } =
-		useViewportDragConstraints<HTMLDivElement>();
+	const { dragRef, dragConstraints } = useViewportDragConstraints<HTMLDivElement>();
 
 	return (
-		<div className="w-fit text-primary">
+		<div className="text-primary w-fit">
 			<a
-				className="group inline-flex items-center overflow-hidden rounded-[24px] border border-primary bg-accent px-4 py-2 text-caption text-primary transition-opacity hover:opacity-80 md:hidden"
+				className="group border-primary bg-accent text-caption text-primary inline-flex items-center overflow-hidden rounded-[24px] border px-4 py-2 transition-opacity hover:opacity-80 md:hidden"
 				href="#work"
 			>
 				<RollingText text="Get to know me" />
 			</a>
 
-			<div className="md:hidden flex w-full flex-col items-center justify-center gap-1 text-caption text-primary transition-opacity hover:opacity-80">
+			<div className="text-caption text-primary flex w-full flex-col items-center justify-center gap-1 transition-opacity hover:opacity-80 md:hidden">
 				<span>Or scroll down</span>
 				<ArrowRight
 					aria-hidden="true"
-					className="size-3 shrink-0 animate-scroll-cue-bounce"
+					className="animate-scroll-cue-bounce size-3 shrink-0"
 					strokeWidth={2}
 				/>
 			</div>
@@ -749,17 +697,17 @@ function ViewMore({ isInteractive = true }: { isInteractive?: boolean }) {
 				>
 					<div className="flex flex-col items-start gap-1">
 						<a
-							className="group inline-flex items-center overflow-hidden rounded-[24px] border border-primary bg-accent px-4 py-2 text-body leading-normal text-primary transition-opacity hover:opacity-80"
+							className="group border-primary bg-accent text-body text-primary inline-flex items-center overflow-hidden rounded-[24px] border px-4 py-2 leading-normal transition-opacity hover:opacity-80"
 							href="#work"
 						>
 							<RollingText text="Get to know me" />
 						</a>
 
-						<div className="flex w-full flex-col items-center justify-center gap-1 text-caption text-primary transition-opacity">
+						<div className="text-caption text-primary flex w-full flex-col items-center justify-center gap-1 transition-opacity">
 							<span>Or scroll down</span>
 							<ArrowRight
 								aria-hidden="true"
-								className="size-6 shrink-0 animate-scroll-cue-bounce"
+								className="animate-scroll-cue-bounce size-6 shrink-0"
 								strokeWidth={1.75}
 							/>
 						</div>
@@ -806,7 +754,7 @@ export function HeroSection({
 		<section className="flex w-full flex-col items-center gap-[56px] md:gap-[20px]">
 			<div className="w-full">
 				<div className="grid grid-cols-8">
-					<div className="col-span-8 flex flex-col gap-block md:col-span-8 md:gap-10">
+					<div className="gap-block col-span-8 flex flex-col md:col-span-8 md:gap-10">
 						{items.map((item, index) => (
 							<div key={`${item.label}-${item.value}-${index}`}>
 								<HeroRow
@@ -825,7 +773,7 @@ export function HeroSection({
 			<div
 				className={
 					introComplete
-						? "translate-y-0 opacity-100 transition-all duration-500 delay-300 ease-out"
+						? "translate-y-0 opacity-100 transition-all delay-300 duration-500 ease-out"
 						: "pointer-events-none translate-y-2 opacity-0 transition-all duration-500 ease-out"
 				}
 			>
