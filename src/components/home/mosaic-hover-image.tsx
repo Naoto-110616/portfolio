@@ -11,6 +11,13 @@ import {
 
 const CURSOR_RADIUS_PX = 60;
 const MOSAIC_BLOCK_PX = 8;
+/** 1 フレームあたりの不透明度の減り（小さいほど長く残る） */
+const TRAIL_DECAY = 0.965;
+const MAX_TRAIL_POINTS = 40;
+/** 前位置からこの距離以上動いたらトレイルに残す（CSS px） */
+const TRAIL_SAMPLE_MIN_PX = 5;
+
+type TrailPoint = { x: number; y: number; opacity: number };
 
 type MosaicHoverImageProps = {
 	src: string;
@@ -24,6 +31,97 @@ type MosaicHoverImageProps = {
 	height?: number;
 	fetchPriority?: "high" | "low" | "auto";
 };
+
+function drawMosaicCircle(
+	ctx: CanvasRenderingContext2D,
+	octx: CanvasRenderingContext2D,
+	off: HTMLCanvasElement,
+	cssX: number,
+	cssY: number,
+	dpr: number,
+	opacity: number,
+) {
+	if (opacity < 0.02) return;
+
+	const mx = cssX * dpr;
+	const my = cssY * dpr;
+	const r = CURSOR_RADIUS_PX * dpr;
+	const block = Math.max(2, Math.round(MOSAIC_BLOCK_PX * dpr));
+
+	const left = Math.max(0, Math.floor(mx - r));
+	const top = Math.max(0, Math.floor(my - r));
+	const right = Math.min(off.width, Math.ceil(mx + r));
+	const bottom = Math.min(off.height, Math.ceil(my + r));
+	const w = right - left;
+	const h = bottom - top;
+	if (w <= 0 || h <= 0) return;
+
+	let data: ImageData;
+	try {
+		data = octx.getImageData(left, top, w, h);
+	} catch {
+		return;
+	}
+
+	const arr = data.data;
+	const cx = mx - left;
+	const cy = my - top;
+	const r2 = r * r;
+
+	for (let by = 0; by < h; by += block) {
+		for (let bx = 0; bx < w; bx += block) {
+			let sumR = 0;
+			let sumG = 0;
+			let sumB = 0;
+			let sumA = 0;
+			let count = 0;
+			const bw = Math.min(block, w - bx);
+			const bh = Math.min(block, h - by);
+			for (let yy = 0; yy < bh; yy++) {
+				for (let xx = 0; xx < bw; xx++) {
+					const ix = bx + xx;
+					const iy = by + yy;
+					const i = (iy * w + ix) * 4;
+					sumR += arr[i];
+					sumG += arr[i + 1];
+					sumB += arr[i + 2];
+					sumA += arr[i + 3];
+					count++;
+				}
+			}
+			if (!count) continue;
+			const ar = Math.round(sumR / count);
+			const ag = Math.round(sumG / count);
+			const ab = Math.round(sumB / count);
+			const aa = Math.round(sumA / count);
+			for (let yy = 0; yy < bh; yy++) {
+				for (let xx = 0; xx < bw; xx++) {
+					const ix = bx + xx;
+					const iy = by + yy;
+					const ddx = ix + 0.5 - cx;
+					const ddy = iy + 0.5 - cy;
+					if (ddx * ddx + ddy * ddy > r2) continue;
+					const i = (iy * w + ix) * 4;
+					arr[i] = ar;
+					arr[i + 1] = ag;
+					arr[i + 2] = ab;
+					arr[i + 3] = aa;
+				}
+			}
+		}
+	}
+
+	for (let i = 3; i < arr.length; i += 4) {
+		arr[i] = Math.round(arr[i] * opacity);
+	}
+
+	ctx.save();
+	ctx.beginPath();
+	ctx.arc(mx, my, r, 0, Math.PI * 2);
+	ctx.clip();
+	ctx.putImageData(data, left, top);
+	ctx.restore();
+}
 
 export function MosaicHoverImage({
 	src,
@@ -40,8 +138,10 @@ export function MosaicHoverImage({
 	const imgRef = useRef<HTMLImageElement>(null);
 	const canvasRef = useRef<HTMLCanvasElement>(null);
 	const offscreenRef = useRef<HTMLCanvasElement | null>(null);
-	const rafRef = useRef<number>(0);
+	const loopRef = useRef(0);
 	const posRef = useRef<{ x: number; y: number } | null>(null);
+	const insideRef = useRef(false);
+	const trailRef = useRef<TrailPoint[]>([]);
 	const [motionOk, setMotionOk] = useState(true);
 
 	useEffect(() => {
@@ -61,10 +161,11 @@ export function MosaicHoverImage({
 		const nh = img.naturalHeight;
 		if (!nw || !nh) return;
 
-		const dpr = Math.min(window.devicePixelRatio ?? 1, 2);
 		const cw = wrap.clientWidth;
 		const ch = wrap.clientHeight;
 		if (!cw || !ch) return;
+
+		const dpr = Math.min(window.devicePixelRatio ?? 1, 2);
 
 		let off = offscreenRef.current;
 		if (!off) {
@@ -97,101 +198,127 @@ export function MosaicHoverImage({
 		const wrap = wrapRef.current;
 		const canvas = canvasRef.current;
 		const off = offscreenRef.current;
-		const pos = posRef.current;
-		if (!wrap || !canvas || !off || !pos) return;
+		if (!wrap || !canvas || !off) return;
 
-		const dpr = Math.min(window.devicePixelRatio ?? 1, 2);
-		const cw = wrap.clientWidth;
-		const ch = wrap.clientHeight;
 		const ctx = canvas.getContext("2d");
 		const octx = off.getContext("2d");
 		if (!ctx || !octx) return;
 
-		const mx = pos.x * dpr;
-		const my = pos.y * dpr;
-		const r = CURSOR_RADIUS_PX * dpr;
-		const block = Math.max(2, Math.round(MOSAIC_BLOCK_PX * dpr));
-
+		const dpr = Math.min(window.devicePixelRatio ?? 1, 2);
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-		const left = Math.max(0, Math.floor(mx - r));
-		const top = Math.max(0, Math.floor(my - r));
-		const right = Math.min(off.width, Math.ceil(mx + r));
-		const bottom = Math.min(off.height, Math.ceil(my + r));
-		const w = right - left;
-		const h = bottom - top;
-		if (w <= 0 || h <= 0) return;
-
-		let data: ImageData;
-		try {
-			data = octx.getImageData(left, top, w, h);
-		} catch {
-			return;
+		for (const p of trailRef.current) {
+			if (p.opacity < 0.02) continue;
+			drawMosaicCircle(ctx, octx, off, p.x, p.y, dpr, p.opacity);
 		}
 
-		const arr = data.data;
-		const cx = mx - left;
-		const cy = my - top;
-		const r2 = r * r;
-
-		for (let by = 0; by < h; by += block) {
-			for (let bx = 0; bx < w; bx += block) {
-				let sumR = 0;
-				let sumG = 0;
-				let sumB = 0;
-				let sumA = 0;
-				let count = 0;
-				const bw = Math.min(block, w - bx);
-				const bh = Math.min(block, h - by);
-				for (let yy = 0; yy < bh; yy++) {
-					for (let xx = 0; xx < bw; xx++) {
-						const ix = bx + xx;
-						const iy = by + yy;
-						const i = (iy * w + ix) * 4;
-						sumR += arr[i];
-						sumG += arr[i + 1];
-						sumB += arr[i + 2];
-						sumA += arr[i + 3];
-						count++;
-					}
-				}
-				if (!count) continue;
-				const ar = Math.round(sumR / count);
-				const ag = Math.round(sumG / count);
-				const ab = Math.round(sumB / count);
-				const aa = Math.round(sumA / count);
-				for (let yy = 0; yy < bh; yy++) {
-					for (let xx = 0; xx < bw; xx++) {
-						const ix = bx + xx;
-						const iy = by + yy;
-						const ddx = ix + 0.5 - cx;
-						const ddy = iy + 0.5 - cy;
-						if (ddx * ddx + ddy * ddy > r2) continue;
-						const i = (iy * w + ix) * 4;
-						arr[i] = ar;
-						arr[i + 1] = ag;
-						arr[i + 2] = ab;
-						arr[i + 3] = aa;
-					}
-				}
-			}
+		if (insideRef.current && posRef.current) {
+			drawMosaicCircle(
+				ctx,
+				octx,
+				off,
+				posRef.current.x,
+				posRef.current.y,
+				dpr,
+				1,
+			);
 		}
-
-		ctx.save();
-		ctx.beginPath();
-		ctx.arc(mx, my, r, 0, Math.PI * 2);
-		ctx.clip();
-		ctx.putImageData(data, left, top);
-		ctx.restore();
 	}, []);
 
-	const schedulePaint = useCallback(() => {
-		if (rafRef.current) cancelAnimationFrame(rafRef.current);
-		rafRef.current = requestAnimationFrame(() => {
-			rafRef.current = 0;
+	/** トレイルのフェード専用。トレイルが空なら停止（カーソル追従は mousemove の paintFrame で描く） */
+	const runDecayLoop = useCallback(() => {
+		if (loopRef.current) return;
+
+		const tick = () => {
+			trailRef.current = trailRef.current
+				.map((p) => ({ ...p, opacity: p.opacity * TRAIL_DECAY }))
+				.filter((p) => p.opacity > 0.015);
+
 			paintFrame();
-		});
+
+			if (trailRef.current.length > 0) {
+				loopRef.current = requestAnimationFrame(tick);
+			} else {
+				loopRef.current = 0;
+			}
+		};
+
+		loopRef.current = requestAnimationFrame(tick);
 	}, [paintFrame]);
+
+	const stopLoop = useCallback(() => {
+		if (loopRef.current) {
+			cancelAnimationFrame(loopRef.current);
+			loopRef.current = 0;
+		}
+	}, []);
+
+	const pushTrailFromMovement = useCallback(
+		(x: number, y: number) => {
+			const prev = posRef.current;
+			if (!prev) {
+				posRef.current = { x, y };
+				return;
+			}
+
+			const dx = x - prev.x;
+			const dy = y - prev.y;
+			const dist = Math.hypot(dx, dy);
+			if (dist < TRAIL_SAMPLE_MIN_PX) {
+				posRef.current = { x, y };
+				return;
+			}
+
+			const trail = trailRef.current;
+			trail.push({ x: prev.x, y: prev.y, opacity: 1 });
+			if (trail.length > MAX_TRAIL_POINTS) {
+				trail.shift();
+			}
+
+			posRef.current = { x, y };
+		},
+		[],
+	);
+
+	const handleMove = useCallback(
+		(e: MouseEvent<HTMLDivElement>) => {
+			if (!motionOk) return;
+			const wrap = wrapRef.current;
+			if (!wrap) return;
+			const rect = wrap.getBoundingClientRect();
+			const x = e.clientX - rect.left;
+			const y = e.clientY - rect.top;
+			pushTrailFromMovement(x, y);
+			paintFrame();
+			if (trailRef.current.length > 0) {
+				runDecayLoop();
+			}
+		},
+		[motionOk, paintFrame, pushTrailFromMovement, runDecayLoop],
+	);
+
+	const handleEnter = useCallback(() => {
+		if (!motionOk) return;
+		insideRef.current = true;
+	}, [motionOk]);
+
+	const handleLeave = useCallback(() => {
+		if (!motionOk) return;
+		insideRef.current = false;
+		const last = posRef.current;
+		posRef.current = null;
+		if (last) {
+			const trail = trailRef.current;
+			trail.push({ x: last.x, y: last.y, opacity: 1 });
+			if (trail.length > MAX_TRAIL_POINTS) {
+				trail.shift();
+			}
+		}
+		paintFrame();
+		if (trailRef.current.length > 0) {
+			runDecayLoop();
+		}
+	}, [motionOk, paintFrame, runDecayLoop]);
 
 	useLayoutEffect(() => {
 		const wrap = wrapRef.current;
@@ -207,38 +334,23 @@ export function MosaicHoverImage({
 			canvas.style.width = `${w}px`;
 			canvas.style.height = `${h}px`;
 			drawCoverToOffscreen();
-			schedulePaint();
+			paintFrame();
 		};
 
 		syncSize();
 		const ro = new ResizeObserver(syncSize);
 		ro.observe(wrap);
-		return () => ro.disconnect();
-	}, [drawCoverToOffscreen, motionOk, schedulePaint]);
+		return () => {
+			ro.disconnect();
+			stopLoop();
+		};
+	}, [drawCoverToOffscreen, motionOk, paintFrame, stopLoop]);
 
-	const handleMove = useCallback(
-		(e: MouseEvent<HTMLDivElement>) => {
-			if (!motionOk) return;
-			const wrap = wrapRef.current;
-			if (!wrap) return;
-			const rect = wrap.getBoundingClientRect();
-			posRef.current = {
-				x: e.clientX - rect.left,
-				y: e.clientY - rect.top,
-			};
-			schedulePaint();
-		},
-		[motionOk, schedulePaint],
-	);
-
-	const handleLeave = useCallback(() => {
-		posRef.current = null;
-		const canvas = canvasRef.current;
-		if (canvas) {
-			const ctx = canvas.getContext("2d");
-			if (ctx) ctx.clearRect(0, 0, canvas.width, canvas.height);
-		}
-	}, []);
+	useEffect(() => {
+		return () => {
+			stopLoop();
+		};
+	}, [stopLoop]);
 
 	const wrapClassName = [
 		fill
@@ -257,8 +369,9 @@ export function MosaicHoverImage({
 		<div
 			ref={wrapRef}
 			className={wrapClassName}
-			onMouseMove={handleMove}
+			onMouseEnter={handleEnter}
 			onMouseLeave={handleLeave}
+			onMouseMove={handleMove}
 		>
 			<img
 				ref={imgRef}
@@ -272,7 +385,7 @@ export function MosaicHoverImage({
 				width={width}
 				onLoad={() => {
 					drawCoverToOffscreen();
-					schedulePaint();
+					paintFrame();
 					onLoad?.();
 				}}
 			/>
