@@ -2,11 +2,12 @@
 
 import { ArrowRight, Loader2 } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type SubmitEvent } from "react";
 
 import { HomeMainInner } from "@/components/ui/home-main-inner";
 import { SectionTitle } from "@/components/ui/section-title";
 import { stripMarkdownDecorations } from "@/lib/chat/format-reply";
+import { getRandomChatUnavailableReply } from "@/lib/chat/unavailable-replies";
 
 const MAX_PROMPT_LENGTH = 500;
 
@@ -37,10 +38,9 @@ export function ChatSection({
 }: ChatSectionProps) {
 	const [prompt, setPrompt] = useState("");
 	const [messages, setMessages] = useState<ChatMessage[]>([]);
-	const [error, setError] = useState<string | null>(null);
 	const [isLoading, setIsLoading] = useState(false);
 	const shouldReduceMotion = useReducedMotion();
-	const scrollEndRef = useRef<HTMLDivElement>(null);
+	const chatLogRef = useRef<HTMLDivElement | null>(null);
 
 	const remainingCount = useMemo(
 		() => `${prompt.length}/${MAX_PROMPT_LENGTH}`,
@@ -50,17 +50,18 @@ export function ChatSection({
 	const showChatLog = messages.length > 0 || isLoading;
 
 	useEffect(() => {
-		const el = scrollEndRef.current;
-		if (!el) {
+		const chatLog = chatLogRef.current;
+		if (!chatLog || !showChatLog) {
 			return;
 		}
-		el.scrollIntoView({
-			behavior: shouldReduceMotion ? "auto" : "smooth",
-			block: "end",
-		});
-	}, [messages, isLoading, shouldReduceMotion]);
 
-	async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+		chatLog.scrollTo({
+			top: chatLog.scrollHeight,
+			behavior: shouldReduceMotion ? "auto" : "smooth",
+		});
+	}, [messages, isLoading, shouldReduceMotion, showChatLog]);
+
+	async function handleSubmit(event: SubmitEvent<HTMLFormElement>) {
 		event.preventDefault();
 		const trimmed = prompt.trim();
 		if (!trimmed || isLoading) {
@@ -73,10 +74,20 @@ export function ChatSection({
 			content: trimmed,
 		};
 
-		setError(null);
 		setPrompt("");
 		setMessages((prev) => [...prev, userMessage]);
 		setIsLoading(true);
+
+		const pushUnavailableAssistant = () => {
+			setMessages((prev) => [
+				...prev,
+				{
+					id: crypto.randomUUID(),
+					role: "assistant",
+					content: getRandomChatUnavailableReply(),
+				},
+			]);
+		};
 
 		try {
 			const response = await fetch("/api/chat", {
@@ -88,14 +99,7 @@ export function ChatSection({
 			const data: unknown = await response.json();
 
 			if (!response.ok) {
-				const message =
-					typeof data === "object" &&
-					data !== null &&
-					"message" in data &&
-					typeof (data as { message: unknown }).message === "string"
-						? (data as { message: string }).message
-						: "回答を取得できませんでした。";
-				setError(message);
+				pushUnavailableAssistant();
 				return;
 			}
 
@@ -105,17 +109,22 @@ export function ChatSection({
 				"reply" in data &&
 				typeof (data as { reply: unknown }).reply === "string"
 			) {
+				const raw = stripMarkdownDecorations((data as { reply: string }).reply);
+				if (!raw.trim()) {
+					pushUnavailableAssistant();
+					return;
+				}
 				const assistantMessage: ChatMessage = {
 					id: crypto.randomUUID(),
 					role: "assistant",
-					content: stripMarkdownDecorations((data as { reply: string }).reply),
+					content: raw,
 				};
 				setMessages((prev) => [...prev, assistantMessage]);
 			} else {
-				setError("回答の形式が正しくありませんでした。");
+				pushUnavailableAssistant();
 			}
 		} catch {
-			setError("通信に失敗しました。ネットワークを確認してください。");
+			pushUnavailableAssistant();
 		} finally {
 			setIsLoading(false);
 		}
@@ -141,51 +150,52 @@ export function ChatSection({
 					</p>
 				</div>
 
-				<div className="flex flex-col gap-block md:gap-block-md">
+				<div className="flex min-h-0 flex-col gap-block md:gap-block-md">
 					{showChatLog ? (
 						<div
 							aria-label="チャット履歴"
-							className="flex max-h-[min(500px,70vh)] min-h-[200px] flex-col gap-3 overflow-y-auto overscroll-y-contain rounded-[20px] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] md:max-h-[min(560px,65vh)] md:gap-4"
+							data-lenis-prevent
+							data-lenis-prevent-touch
+							data-lenis-prevent-wheel
+							ref={chatLogRef}
+							className="max-h-[min(500px,70vh)] min-h-[200px] w-full touch-pan-y overflow-y-auto overflow-x-hidden overscroll-y-contain shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] md:max-h-[min(560px,65vh)]"
 							role="log"
 						>
-							{messages.map((message) =>
-								message.role === "user" ? (
-									<div
-										key={message.id}
-										className="ml-auto flex max-w-[min(85%,420px)] flex-col items-end"
-									>
-										<div className="rounded-2xl rounded-br-sm border-2 border-accent bg-white px-4 py-3 text-caption leading-relaxed text-foreground shadow-sm md:rounded-[20px] md:rounded-br-md md:px-5 md:py-3.5 md:text-body md:leading-relaxed">
-											<p className="whitespace-pre-wrap">{message.content}</p>
+							<div className="flex flex-col gap-3 md:gap-4">
+								{messages.map((message) =>
+									message.role === "user" ? (
+										<div
+											key={message.id}
+											className="ml-auto flex max-w-[min(85%,420px)] flex-col items-end"
+										>
+											<div className="rounded-2xl rounded-br-sm border-2 border-accent bg-white px-4 py-3 text-caption leading-relaxed text-foreground shadow-sm md:rounded-[20px] md:rounded-br-md md:px-5 md:py-3.5 md:text-body md:leading-relaxed">
+												<p className="whitespace-pre-wrap">{message.content}</p>
+											</div>
 										</div>
-									</div>
-								) : (
-									<div
-										key={message.id}
-										className="mr-auto flex max-w-[min(85%,520px)] flex-col items-start"
-									>
-										<div className="rounded-2xl rounded-bl-sm bg-accent px-4 py-3 text-caption leading-relaxed text-primary shadow-sm md:rounded-[20px] md:rounded-bl-md md:px-5 md:py-3.5 md:text-body md:leading-relaxed">
-											<p className="whitespace-pre-wrap">{message.content}</p>
+									) : (
+										<div
+											key={message.id}
+											className="mr-auto flex max-w-[min(85%,520px)] flex-col items-start"
+										>
+											<div className="rounded-2xl rounded-bl-sm bg-accent px-4 py-3 text-caption leading-relaxed text-primary shadow-sm md:rounded-[20px] md:rounded-bl-md md:px-5 md:py-3.5 md:text-body md:leading-relaxed">
+												<p className="whitespace-pre-wrap">{message.content}</p>
+											</div>
 										</div>
+									),
+								)}
+
+								{isLoading ? (
+									<div
+										className="mr-auto flex max-w-[min(85%,520px)] rounded-2xl rounded-bl-sm bg-accent px-4 py-3 text-primary shadow-sm md:rounded-[20px] md:rounded-bl-md md:px-5 md:py-3.5"
+										role="status"
+										aria-live="polite"
+									>
+										<p className="text-caption leading-relaxed md:text-body md:leading-relaxed">
+											...
+										</p>
 									</div>
-								),
-							)}
-
-							{isLoading ? (
-								<div className="mr-auto flex max-w-[min(85%,520px)] items-center gap-2 rounded-2xl rounded-bl-sm bg-accent px-4 py-3 text-primary shadow-sm md:rounded-[20px] md:rounded-bl-md md:px-5 md:py-3.5">
-									<Loader2
-										aria-hidden="true"
-										className="size-5 shrink-0 animate-spin"
-										strokeWidth={2}
-									/>
-									<span className="text-caption md:text-body">…</span>
-								</div>
-							) : null}
-
-							<div
-								ref={scrollEndRef}
-								aria-hidden="true"
-								className="h-px w-full shrink-0"
-							/>
+								) : null}
+							</div>
 						</div>
 					) : null}
 
@@ -248,15 +258,6 @@ export function ChatSection({
 							<p className="min-w-0 flex-1 md:max-w-[512px]">{helperText}</p>
 							<p className="shrink-0 tabular-nums">{remainingCount}</p>
 						</div>
-
-						{error ? (
-							<p
-								className="rounded-[16px] border border-red-500/35 bg-red-500/10 px-4 py-3 text-caption leading-normal text-red-900 md:text-body"
-								role="alert"
-							>
-								{error}
-							</p>
-						) : null}
 					</form>
 				</div>
 			</HomeMainInner>

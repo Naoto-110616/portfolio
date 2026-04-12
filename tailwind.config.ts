@@ -38,8 +38,8 @@ const config: Config = {
 				"accent-soft": "rgba(199, 255, 74, 0.1)",
 			},
 			fontFamily: {
-        jp: ["var(--font-jp)", "sans-serif"],
-        accent: ["var(--font-accent)", "cursive"],
+				jp: ["var(--font-jp)", "sans-serif"],
+				accent: ["var(--font-accent)", "cursive"],
 			},
 			fontSize: {
 				hero: ["32px", { lineHeight: "1.4", fontWeight: "700" }],
