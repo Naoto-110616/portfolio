@@ -33,6 +33,8 @@ const serverEnvSchema = z.object({
   RESEND_API_KEY: optionalString,
   RESEND_FROM_EMAIL: optionalEmail,
   CONTACT_TO_EMAIL: optionalEmail,
+  GEMINI_API_KEY: optionalString,
+  GEMINI_MODEL: optionalString,
 });
 
 const parsedEnv = serverEnvSchema.safeParse({
@@ -45,6 +47,8 @@ const parsedEnv = serverEnvSchema.safeParse({
   RESEND_API_KEY: process.env.RESEND_API_KEY,
   RESEND_FROM_EMAIL: process.env.RESEND_FROM_EMAIL,
   CONTACT_TO_EMAIL: process.env.CONTACT_TO_EMAIL,
+  GEMINI_API_KEY: process.env.GEMINI_API_KEY,
+  GEMINI_MODEL: process.env.GEMINI_MODEL,
 });
 
 if (!parsedEnv.success) {
@@ -62,6 +66,7 @@ export const integrationStatus = {
   hasResend: Boolean(
     env.RESEND_API_KEY && env.RESEND_FROM_EMAIL && env.CONTACT_TO_EMAIL,
   ),
+  hasGemini: Boolean(env.GEMINI_API_KEY),
 };
 
 export function requireContentfulEnv() {
@@ -89,5 +94,18 @@ export function requireResendEnv() {
     apiKey: env.RESEND_API_KEY!,
     from: env.RESEND_FROM_EMAIL!,
     to: env.CONTACT_TO_EMAIL!,
+  };
+}
+
+export function requireGeminiEnv() {
+  if (!integrationStatus.hasGemini) {
+    throw new Error(
+      "Gemini environment variables are missing. Set GEMINI_API_KEY.",
+    );
+  }
+
+  return {
+    apiKey: env.GEMINI_API_KEY!,
+    model: env.GEMINI_MODEL ?? "gemini-2.0-flash",
   };
 }

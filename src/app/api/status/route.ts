@@ -8,6 +8,7 @@ export async function GET() {
     integrations: {
       contentful: integrationStatus.hasContentful,
       resend: integrationStatus.hasResend,
+      gemini: integrationStatus.hasGemini,
       tanstackQuery: true,
     },
     timestamp: new Date().toISOString(),
