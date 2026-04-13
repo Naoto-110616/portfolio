@@ -1,6 +1,7 @@
 "use client";
 
-import { MosaicHoverImage } from "@/components/home/mosaic-hover-image";
+import Image from "next/image";
+
 import { SectionReveal } from "@/components/motion/section-reveal";
 import { StaggerGroup } from "@/components/motion/stagger-group";
 import { StaggerItem } from "@/components/motion/stagger-item";
@@ -99,14 +100,13 @@ export function Footer({
 				</div>
 
 				<SectionReveal className="pointer-events-none absolute bottom-[-18px] left-1/2 w-[clamp(360px,58vw,1024px)] -translate-x-1/2 md:bottom-[-50px] md:w-[1024px]">
-					<MosaicHoverImage
+					<Image
 						alt=""
 						className="block h-auto w-full max-w-[clamp(360px,58vw,1024px)] md:max-w-[1024px]"
-						fetchPriority="high"
 						height={309}
+						priority
 						src="/name.svg"
 						width={1024}
-						wrapperClassName="pointer-events-auto"
 					/>
 				</SectionReveal>
 			</SectionReveal>

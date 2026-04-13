@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { type MouseEvent, useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 
 const CURSOR_RADIUS_PX = 60;
@@ -267,17 +268,18 @@ export function MosaicHoverImage({
 			onMouseLeave={handleLeave}
 			onMouseMove={handleMove}
 		>
-			<img
-				ref={imgRef}
+			<Image
 				alt={alt}
 				className={imgClassName || undefined}
 				crossOrigin="anonymous"
 				decoding="async"
 				fetchPriority={fetchPriority}
-				height={height}
+				height={fill ? undefined : (height ?? 2048)}
+				fill={fill}
 				src={src}
-				width={width}
-				onLoad={() => {
+				width={fill ? undefined : (width ?? 1536)}
+				onLoad={(event) => {
+					imgRef.current = event.currentTarget;
 					drawCoverToOffscreen();
 					paintFrame();
 					onLoad?.();
