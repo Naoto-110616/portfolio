@@ -1,5 +1,4 @@
 import { ProjectWorkCard, type WorkItem } from "@/components/home/project-work-card";
-import { WORK_CARD_IMAGE_URL } from "@/constans/const";
 import { AnimatedSectionTitle } from "@/components/motion/animated-section-title";
 import { GsapStaggerGroup } from "@/components/motion/gsap-stagger-group";
 import { HomeMainInner } from "@/components/ui/home-main-inner";
@@ -11,19 +10,7 @@ type WorkSectionProps = {
 	items?: WorkItem[];
 };
 
-const defaultItems: WorkItem[] = Array.from({ length: 3 }, () => ({
-	title: "muwmaze",
-	description: "ウィキメディア文書の適法ををこと要件改変に方針助け理解しライセン。",
-	with: "KOSÉ",
-	published: "2025",
-	role: "Frontend Creative",
-	stack: "shopify,React",
-	tag: "shopify",
-	imageUrl: WORK_CARD_IMAGE_URL,
-	href: "#",
-}));
-
-export function WorkSection({ title = "Work", items = defaultItems }: WorkSectionProps) {
+export function WorkSection({ title = "Work", items = [] }: WorkSectionProps) {
 	return (
 		<section id="work" className="w-full">
 			<HomeMainInner className="md:gap-section-lg flex flex-col gap-6">

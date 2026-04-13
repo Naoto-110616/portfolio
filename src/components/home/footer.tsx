@@ -8,7 +8,6 @@ import { CurrentTime } from "@/components/ui/current-time";
 import { HashLink } from "@/components/ui/hash-link";
 import { Link } from "@/components/ui/link";
 import { RollingText } from "@/components/ui/rolling-text";
-import { socialLinks as defaultSocialLinks } from "@/constans/const";
 import { LayoutGuides } from "../ui/layout-guides";
 
 export type FooterLinkItem = {
@@ -48,7 +47,7 @@ function FooterLink({ href, label }: FooterLinkItem) {
 }
 
 export function Footer({
-	socialLinks = defaultSocialLinks,
+	socialLinks = [],
 	email = "naoto.okawa0616@gmail.com",
 	copyright = "© 2026, All rights reserved",
 	backToTopLabel = "Back to top",
