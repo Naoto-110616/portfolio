@@ -196,6 +196,7 @@ export function ContactSection() {
 									<RollingText
 										text={isSubmitting ? "Sending..." : "Submit"}
 										isActive={isSubmitHovered}
+										className="font-medium"
 									/>
 									<ArrowRight
 										aria-hidden="true"

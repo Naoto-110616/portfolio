@@ -64,12 +64,18 @@ export function RollingText({
 			return;
 		}
 
-		if (isActive) {
-			startRolling();
-			return;
-		}
+		const frameId = window.requestAnimationFrame(() => {
+			if (isActive) {
+				startRolling();
+				return;
+			}
 
-		requestStopAtNextCycle();
+			requestStopAtNextCycle();
+		});
+
+		return () => {
+			window.cancelAnimationFrame(frameId);
+		};
 	}, [isActive]);
 
 	const handleCharacterIteration = (index: number) => {

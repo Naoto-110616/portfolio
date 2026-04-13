@@ -54,7 +54,7 @@ export function Footer({
 	backToTopLabel = "Back to top",
 }: FooterProps) {
 	return (
-		<footer className="bg-primary text-accent relative overflow-hidden">
+		<footer className="bg-primary text-accent relative overflow-hidden md:mt-[184px]">
 			<LayoutGuides lineClassName="bg-accent/10" />
 			<div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-40" />
 
