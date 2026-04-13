@@ -36,7 +36,7 @@ function ContactField({ label, error, children }: ContactFieldProps) {
 			<span className="text-heading text-foreground md:text-[72px] md:leading-none md:font-bold">
 				{label}
 			</span>
-			<div className="border-primary focus-within:border-foreground relative border-b transition-colors">
+			<div className="after:bg-primary hover:before:bg-primary focus-within:before:bg-foreground relative before:pointer-events-none before:absolute before:inset-x-0 before:bottom-0 before:h-0.5 before:bg-transparent before:transition-colors before:content-[''] after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:content-[''] focus-within:after:opacity-0 hover:after:opacity-0">
 				{children}
 			</div>
 			{error ? <span className="text-caption text-primary">{error}</span> : null}
@@ -153,7 +153,7 @@ export function ContactSection() {
 						<div className="md:col-start-2 md:row-start-1 md:w-[384px] md:justify-self-end">
 							<ContactField error={errors[nameField.key]} label={nameField.label}>
 								<input
-									className="text-body text-primary placeholder:text-primary md:text-heading block w-full bg-transparent py-2 pr-8 outline-none"
+									className="text-body text-primary placeholder:text-primary md:text-heading block w-full bg-transparent py-2 pr-8 transition-all duration-300 outline-none"
 									name={nameField.key}
 									type={nameField.type}
 									value={values[nameField.key]}
@@ -168,7 +168,7 @@ export function ContactSection() {
 								<div className="relative">
 									<select
 										className={[
-											"text-body block w-full appearance-none bg-transparent py-2 pr-8 outline-none",
+											"text-body block w-full appearance-none bg-transparent py-2 pr-8 transition-all duration-300 outline-none",
 											values.topic ? "text-primary" : "text-primary/80",
 										].join(" ")}
 										name="topic"
@@ -196,7 +196,7 @@ export function ContactSection() {
 								<span className="text-heading text-foreground md:text-[72px] md:leading-none md:font-bold">
 									{contactField.label}
 								</span>
-								<div className="border-primary focus-within:border-foreground relative border-b transition-colors">
+								<div className="after:bg-primary hover:before:bg-primary focus-within:before:bg-foreground relative before:pointer-events-none before:absolute before:inset-x-0 before:bottom-0 before:h-0.5 before:bg-transparent before:transition-colors before:content-[''] after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:content-[''] focus-within:after:opacity-0 hover:after:opacity-0">
 									<input
 										className="text-body text-primary placeholder:text-primary md:text-heading block w-full bg-transparent py-2 pr-8 outline-none"
 										name={contactField.key}
