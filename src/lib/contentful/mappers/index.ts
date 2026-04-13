@@ -1,4 +1,5 @@
-export * from "./home-page";
+export * from "./contact";
 export * from "./project";
+export * from "./service";
 export * from "./shared";
-export * from "./site-settings";
+export * from "./sns-link";

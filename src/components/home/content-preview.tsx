@@ -13,7 +13,7 @@ function PreviewCard({ item }: { item: ContentPreview }) {
 			</div>
 			<h3 className="text-lg font-semibold text-white">{item.title}</h3>
 			<p className="mt-3 text-sm leading-6 text-slate-300">{item.description}</p>
-			<p className="mt-4 text-xs text-slate-500">slug: {item.slug}</p>
+			<p className="mt-4 text-xs text-slate-500">url: {item.url}</p>
 		</article>
 	);
 }

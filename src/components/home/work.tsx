@@ -14,7 +14,7 @@ type WorkSectionProps = {
 const defaultItems: WorkItem[] = Array.from({ length: 3 }, () => ({
 	title: "muwmaze",
 	description: "ウィキメディア文書の適法ををこと要件改変に方針助け理解しライセン。",
-	partner: "KOSÉ",
+	with: "KOSÉ",
 	published: "2025",
 	role: "Frontend Creative",
 	stack: "shopify,React",

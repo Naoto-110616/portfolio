@@ -9,11 +9,10 @@ contentful/
   config/
     env.ts
   migrations/
-    001-create-site-settings.ts
-    002-create-project.ts
-    003-create-service-and-services-section.ts
-    004-create-about-block-and-about-section.ts
-    005-create-home-page.ts
+    001-create-projects.ts
+    002-create-services.ts
+    003-create-sns-links.ts
+    004-create-contact.ts
   scripts/
     migrate.ts
 ```
@@ -28,7 +27,7 @@ CONTENTFUL_ENVIRONMENT=master
 CONTENTFUL_MANAGEMENT_TOKEN=your_content_management_token
 ```
 
-公開データの取得には既存の `CONTENTFUL_ACCESS_TOKEN` を使い、モデル定義の反映には `CONTENTFUL_MANAGEMENT_TOKEN` を使います。
+公開データの取得には `CONTENTFUL_DELIVERY_ACCESS_TOKEN` を使い、モデル定義の反映には `CONTENTFUL_MANAGEMENT_TOKEN` を使います。
 
 ## Run migrations
 
@@ -41,33 +40,56 @@ npm run contentful:migrate -- --yes
 途中まで成功した migration 以降だけを再実行したい場合は `--from` を使えます。
 
 ```bash
-npm run contentful:migrate -- --from=004-create-about-block-and-about-section --yes
+npm run contentful:migrate -- --from=003-create-sns-links --yes
 ```
 
 ## Managed content types
 
-- `siteSettings`
-- `project`
-- `service`
-- `servicesSection`
-- `aboutBlock`
-- `aboutSection`
-- `homePage`
+- `projects`
+- `services`
+- `snsLinks`
+- `contact`
 
-## Object field shapes
+## Field definitions
 
-`siteSettings.headerLinks`, `siteSettings.socialLinks`, `homePage.heroItems` は Object field です。入力する JSON は以下の形を想定しています。
+### `projects`
 
-```json
-{
-	"items": [{ "label": "Work", "href": "#work" }]
-}
-```
+- `img`: Asset
+- `tag`: Symbol
+- `title`: Symbol
+- `url`: Symbol
+- `description`: Text
+- `with`: Symbol
+- `published`: Date
+- `role`: Symbol
+- `stack`: Symbol array
 
-```json
-{
-	"items": [{ "label": "Name:", "value": "Naoto Ôkawa" }]
-}
-```
+### `services`
 
-運用上は singleton 想定の Content Type も、Contentful では 1 entry 制約がないため、各 type につき 1 件だけ published 状態にするルールで管理します。
+- `title`: Symbol
+- `point`: Symbol array
+
+### `snsLinks`
+
+- `title`: Symbol
+- `url`: Symbol
+
+### `contact`
+
+- `title`: Symbol
+- `description`: Text
+- `email`: Symbol
+
+## App-side usage
+
+- `projects`: Work / More Projects セクションで使用
+- `services`: Services セクションで使用
+- `snsLinks`: フッターのSNSリンクで使用
+- `contact`: フッターのメールアドレスで使用
+- `hero` / `about` / `chat` / ヘッダーリンク / サイトメタデータは現在コード内定数で管理
+
+## Initial content notes
+
+- `contact` は singleton 想定です。運用上は 1 件だけ published にしてください。
+- `projects` は `published` の新しい順で並びます。Work には先頭3件、More Projects には4件目以降を表示します。
+- `services` と `snsLinks` は作成順で表示します。

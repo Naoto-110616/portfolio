@@ -12,15 +12,15 @@ export const getProjects = cache(async (): Promise<ProjectsResult> => {
 	}
 
 	try {
-		const entries = await getEntriesByContentType("project", {
+		const entries = await getEntriesByContentType("projects", {
 			include: 1,
-			order: ["fields.sortOrder", "sys.createdAt"],
+			order: ["-fields.published", "-sys.createdAt"],
 		});
 
 		if (entries.length === 0) {
 			return {
 				...fallbackProjects,
-				reason: "No published project entries were found in Contentful.",
+				reason: "No published projects entries were found in Contentful.",
 			};
 		}
 

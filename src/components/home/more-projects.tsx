@@ -27,7 +27,7 @@ const defaultItems: MoreProjectItem[] = [
 	{
 		title: "Project Alpha",
 		description: "コーポレートサイトのリニューアルとデザインシステム整備。",
-		partner: "Client A",
+		with: "Client A",
 		published: "2025",
 		role: "Frontend",
 		stack: "Next.js, TypeScript",
@@ -40,7 +40,7 @@ const defaultItems: MoreProjectItem[] = [
 	{
 		title: "Project Beta",
 		description: "ヘッドレスCMSを用いたメディア基盤の構築。",
-		partner: "Client B",
+		with: "Client B",
 		published: "2024",
 		role: "Lead Dev",
 		stack: "Contentful, React",
@@ -53,7 +53,7 @@ const defaultItems: MoreProjectItem[] = [
 	{
 		title: "Project Gamma",
 		description: "EC向けカスタムテーマとパフォーマンス最適化。",
-		partner: "Client C",
+		with: "Client C",
 		published: "2024",
 		role: "Shopify",
 		stack: "Shopify, Liquid",
@@ -66,7 +66,7 @@ const defaultItems: MoreProjectItem[] = [
 	{
 		title: "Project Delta",
 		description: "インタラクティブなランディングページ。",
-		partner: "Client D",
+		with: "Client D",
 		published: "2023",
 		role: "Creative Dev",
 		stack: "GSAP, Three.js",
@@ -79,7 +79,7 @@ const defaultItems: MoreProjectItem[] = [
 	{
 		title: "Project Epsilon",
 		description: "管理画面のUI共通化とテーブルコンポーネント。",
-		partner: "Client E",
+		with: "Client E",
 		published: "2023",
 		role: "Frontend",
 		stack: "TanStack Table, shadcn",
@@ -92,7 +92,7 @@ const defaultItems: MoreProjectItem[] = [
 	{
 		title: "Project Zeta",
 		description: "アクセシビリティを意識したコンポーネントライブラリ。",
-		partner: "Client F",
+		with: "Client F",
 		published: "2023",
 		role: "UI Engineer",
 		stack: "React, Storybook",

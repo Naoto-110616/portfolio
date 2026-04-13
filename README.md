@@ -54,7 +54,8 @@ CONTACT_TO_EMAIL=team@your-domain.com
 補足:
 
 - `contentful/` 配下に Content Model の migration を置き、`npm run contentful:migrate -- --yes` で適用します
-- ホーム画面では `siteSettings`, `homePage`, `project` を取得し、ヘッダー・フッター・Work・About・Services を組み立てます
+- ホーム画面では `projects`, `services`, `snsLinks`, `contact` を取得します
+- `hero` / `about` / `chat` / ヘッダーリンク / サイトメタデータはコード内定数で管理しています
 - Entry がない場合や接続失敗時はローカルのフォールバックデータを表示します
 
 ### Resend

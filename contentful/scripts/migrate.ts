@@ -2,11 +2,10 @@ import { loadEnvConfig } from "@next/env";
 import { runMigration, type MigrationFunction } from "contentful-migration";
 
 import { requireContentfulManagementEnv } from "../config/env";
-import createSiteSettings from "../migrations/001-create-site-settings";
-import createProject from "../migrations/002-create-project";
-import createServiceAndServicesSection from "../migrations/003-create-service-and-services-section";
-import createAboutBlockAndAboutSection from "../migrations/004-create-about-block-and-about-section";
-import createHomePage from "../migrations/005-create-home-page";
+import createProjects from "../migrations/001-create-projects";
+import createServices from "../migrations/002-create-services";
+import createSnsLinks from "../migrations/003-create-sns-links";
+import createContact from "../migrations/004-create-contact";
 
 loadEnvConfig(process.cwd());
 
@@ -16,17 +15,10 @@ type NamedMigration = {
 };
 
 const migrations: NamedMigration[] = [
-	{ id: "001-create-site-settings", migrationFunction: createSiteSettings },
-	{ id: "002-create-project", migrationFunction: createProject },
-	{
-		id: "003-create-service-and-services-section",
-		migrationFunction: createServiceAndServicesSection,
-	},
-	{
-		id: "004-create-about-block-and-about-section",
-		migrationFunction: createAboutBlockAndAboutSection,
-	},
-	{ id: "005-create-home-page", migrationFunction: createHomePage },
+	{ id: "001-create-projects", migrationFunction: createProjects },
+	{ id: "002-create-services", migrationFunction: createServices },
+	{ id: "003-create-sns-links", migrationFunction: createSnsLinks },
+	{ id: "004-create-contact", migrationFunction: createContact },
 ];
 
 function getFlagValue(flagName: string) {

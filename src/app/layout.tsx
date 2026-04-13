@@ -5,7 +5,8 @@ import { ReactNode } from "react";
 import { MotionProvider } from "@/components/providers/motion-provider";
 import { QueryProvider } from "@/components/providers/query-provider";
 import { SmoothScrollProvider } from "@/components/providers/smooth-scroll-provider";
-import { getSiteSettings } from "@/lib/contentful/queries";
+import { env } from "@/lib/env";
+import { staticSiteMetadata } from "@/lib/site-content";
 import "./globals.css";
 
 type RootLayoutProps = Readonly<{
@@ -33,12 +34,10 @@ const devtoolsMessage = `\n
 `;
 
 export async function generateMetadata(): Promise<Metadata> {
-	const siteSettings = await getSiteSettings();
-
 	return {
-		title: siteSettings.metadata.title,
-		description: siteSettings.metadata.description,
-		metadataBase: new URL(siteSettings.metadata.siteUrl),
+		title: staticSiteMetadata.title,
+		description: staticSiteMetadata.description,
+		metadataBase: new URL(env.NEXT_PUBLIC_SITE_URL),
 	};
 }
 

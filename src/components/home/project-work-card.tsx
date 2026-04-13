@@ -11,7 +11,7 @@ import { ScrollTrigger } from "@/lib/gsap";
 export type WorkItem = {
 	title: string;
 	description: string;
-	partner: string;
+	with: string;
 	published: string;
 	role: string;
 	stack: string;
@@ -49,7 +49,7 @@ export function ProjectWorkCard(props: ProjectWorkCardProps) {
 	const open = controlledExpandable ? Boolean(props.expanded) : internalOpen;
 	const panelId = useId();
 
-	const { title, description, partner, published, role, stack, tag, imageUrl, href } = props;
+	const { title, description, with: withName, published, role, stack, tag, imageUrl, href } = props;
 
 	const previewAlt = expandable ? props.imageAlt : `${title} preview`;
 
@@ -94,7 +94,7 @@ export function ProjectWorkCard(props: ProjectWorkCardProps) {
 
 				<div className="text-caption md:text-body flex flex-col gap-1 leading-none">
 					<p className="text-foreground md:leading-normal">with:</p>
-					<p className="text-caption-sm text-primary md:text-caption">{partner}</p>
+					<p className="text-caption-sm text-primary md:text-caption">{withName}</p>
 				</div>
 
 				<div className="grid grid-cols-2 gap-4 md:gap-0">

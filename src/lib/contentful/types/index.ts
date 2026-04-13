@@ -1,3 +1,4 @@
-export * from "./home-page";
+export * from "./contact";
 export * from "./project";
-export * from "./site-settings";
+export * from "./service";
+export * from "./sns-link";

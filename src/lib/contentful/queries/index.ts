@@ -1,14 +1,15 @@
 import { getProjects } from "@/lib/contentful/queries/get-projects";
 
-export * from "./get-home-page";
+export * from "./get-contact";
 export * from "./get-projects";
-export * from "./get-site-settings";
+export * from "./get-services";
+export * from "./get-sns-links";
 
 export type ContentPreview = {
 	id: string;
 	title: string;
 	description: string;
-	slug: string;
+	url: string;
 	contentType: string;
 	updatedAt: string;
 };
@@ -27,9 +28,9 @@ export async function getHomepageContent(limit = 3): Promise<HomepageContentResu
 			id: item.id,
 			title: item.title,
 			description: item.description,
-			slug: item.slug,
-			contentType: "project",
-			updatedAt: item.publishedYear,
+			url: item.href,
+			contentType: "projects",
+			updatedAt: item.published,
 		})),
 		source: result.source,
 		reason: result.reason,
