@@ -23,6 +23,7 @@ const defaultLinks: HeaderLink[] = [
 	{ label: "About", href: "#about" },
 	{ label: "Pick My Brain!", href: "#chat" },
 	{ label: "Services", href: "#services" },
+	{ label: "Contact", href: "#contact" },
 ];
 
 /**

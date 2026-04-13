@@ -1,9 +1,10 @@
 import type {
-	Contact,
+	ContactFormSettings,
 	ProjectsResult,
 	ServicesResult,
 	SnsLinksResult,
 } from "@/lib/contentful/types";
+import { contactTopics } from "@/lib/contact/topics";
 
 export const fallbackProjects: ProjectsResult = {
 	items: [],
@@ -23,11 +24,10 @@ export const fallbackSnsLinks: SnsLinksResult = {
 	reason: "Contentful credentials are not configured yet.",
 };
 
-export const fallbackContact: Contact = {
-	id: "fallback-contact",
-	title: "Contact",
-	description: "お問い合わせやご相談はメールからご連絡ください。",
-	email: "naoto.okawa0616@gmail.com",
+export const fallbackContactFormSettings: ContactFormSettings = {
+	id: "fallback-contact-form-settings",
+	title: "Contact Form Settings",
+	topicOptions: [...contactTopics],
 	source: "fallback",
 	reason: "Contentful credentials are not configured yet.",
 };

@@ -11,10 +11,6 @@ import { mapProjectsToMoreProjectItems, mapProjectsToWorkItems } from "@/lib/con
 import type { ProjectsResult, ServicesResult, SnsLinksResult } from "@/lib/contentful/types";
 import { staticFooterContent, staticSectionTitles } from "@/lib/site-content";
 
-type HomeFooterContentProps = {
-	contactEmail: string;
-};
-
 async function fetchContentfulResource<T>(url: string) {
 	const response = await fetch(url);
 
@@ -53,7 +49,7 @@ export function HomeServicesContent() {
 	return <ServicesSection items={services.items} title={staticSectionTitles.services} />;
 }
 
-export function HomeFooterContent({ contactEmail }: HomeFooterContentProps) {
+export function HomeFooterContent() {
 	const { data: snsLinks = fallbackSnsLinks } = useQuery({
 		queryKey: ["contentful", "sns-links"],
 		queryFn: () => fetchContentfulResource<SnsLinksResult>("/api/contentful/sns-links"),
@@ -64,7 +60,7 @@ export function HomeFooterContent({ contactEmail }: HomeFooterContentProps) {
 		<Footer
 			backToTopLabel={staticFooterContent.backToTopLabel}
 			copyright={staticFooterContent.copyright}
-			email={contactEmail}
+			email={staticFooterContent.email}
 			socialLinks={snsLinks.items.map((item) => ({ label: item.title, href: item.url }))}
 		/>
 	);

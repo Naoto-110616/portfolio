@@ -13,6 +13,7 @@ export const staticHeaderContent = {
 		{ label: "About", href: "#about" },
 		{ label: "Pick My Brain!", href: "#chat" },
 		{ label: "Services", href: "#services" },
+		{ label: "Contact", href: "#contact" },
 	],
 };
 
@@ -77,4 +78,5 @@ export const staticSectionTitles = {
 export const staticFooterContent = {
 	backToTopLabel: "Back to top",
 	copyright: "© 2026, All rights reserved",
+	email: "naoto.okawa0616@gmail.com",
 };

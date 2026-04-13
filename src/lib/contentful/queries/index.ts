@@ -1,6 +1,6 @@
 import { getProjects } from "@/lib/contentful/queries/get-projects";
 
-export * from "./get-contact";
+export * from "./get-contact-form-settings";
 export * from "./get-projects";
 export * from "./get-services";
 export * from "./get-sns-links";

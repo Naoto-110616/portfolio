@@ -21,6 +21,7 @@ const serverEnvSchema = z.object({
 	CONTENTFUL_DELIVERY_ACCESS_TOKEN: optionalString,
 	CONTENTFUL_PREVIEW_ACCESS_TOKEN: optionalString,
 	CONTENTFUL_ENVIRONMENT: z.string().min(1).default("master"),
+	CONTENTFUL_MANAGEMENT_TOKEN: optionalString,
 	RESEND_API_KEY: optionalString,
 	RESEND_FROM_EMAIL: optionalEmail,
 	CONTACT_TO_EMAIL: optionalEmail,
@@ -35,6 +36,7 @@ const parsedEnv = serverEnvSchema.safeParse({
 	CONTENTFUL_DELIVERY_ACCESS_TOKEN: process.env.CONTENTFUL_DELIVERY_ACCESS_TOKEN,
 	CONTENTFUL_PREVIEW_ACCESS_TOKEN: process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN,
 	CONTENTFUL_ENVIRONMENT: process.env.CONTENTFUL_ENVIRONMENT,
+	CONTENTFUL_MANAGEMENT_TOKEN: process.env.CONTENTFUL_MANAGEMENT_TOKEN,
 	RESEND_API_KEY: process.env.RESEND_API_KEY,
 	RESEND_FROM_EMAIL: process.env.RESEND_FROM_EMAIL,
 	CONTACT_TO_EMAIL: process.env.CONTACT_TO_EMAIL,
@@ -54,6 +56,7 @@ export const env = {
 
 export const integrationStatus = {
 	hasContentful: Boolean(env.CONTENTFUL_SPACE_ID && env.CONTENTFUL_DELIVERY_ACCESS_TOKEN),
+	hasContentfulManagement: Boolean(env.CONTENTFUL_SPACE_ID && env.CONTENTFUL_MANAGEMENT_TOKEN),
 	hasResend: Boolean(env.RESEND_API_KEY && env.RESEND_FROM_EMAIL && env.CONTACT_TO_EMAIL),
 	hasGemini: Boolean(env.GEMINI_API_KEY),
 };
@@ -83,6 +86,20 @@ export function requireResendEnv() {
 		apiKey: env.RESEND_API_KEY!,
 		from: env.RESEND_FROM_EMAIL!,
 		to: env.CONTACT_TO_EMAIL!,
+	};
+}
+
+export function requireContentfulManagementEnv() {
+	if (!integrationStatus.hasContentfulManagement) {
+		throw new Error(
+			"Contentful management environment variables are missing. Set CONTENTFUL_SPACE_ID and CONTENTFUL_MANAGEMENT_TOKEN.",
+		);
+	}
+
+	return {
+		spaceId: env.CONTENTFUL_SPACE_ID!,
+		accessToken: env.CONTENTFUL_MANAGEMENT_TOKEN!,
+		environmentId: env.CONTENTFUL_ENVIRONMENT,
 	};
 }
 

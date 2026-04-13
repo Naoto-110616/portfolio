@@ -1,5 +1,6 @@
 "use client";
 
+import { useQuery } from "@tanstack/react-query";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { ChangeEvent, type FormEventHandler, ReactNode, useMemo, useState } from "react";
 
@@ -8,14 +9,18 @@ import { SectionReveal } from "@/components/motion/section-reveal";
 import { HomeMainInner } from "@/components/ui/home-main-inner";
 import { RollingText } from "@/components/ui/rolling-text";
 import { contactSchema, type ContactFormValues } from "@/lib/contact/schema";
+import { fallbackContactFormSettings } from "@/lib/contentful/fallbacks";
+import type { ContactFormSettings } from "@/lib/contentful/types";
 
-const initialValues: ContactFormValues = {
+type ContactFormState = Omit<ContactFormValues, "topic"> & {
+	topic: ContactFormValues["topic"] | "";
+};
+
+const initialValues: ContactFormState = {
 	name: "",
 	topic: "",
 	contact: "",
 };
-
-const topicOptions = ["Webサイト制作", "UI実装", "フロントエンド改善", "その他"] as const;
 
 type FieldErrors = Partial<Record<keyof ContactFormValues, string>>;
 
@@ -39,12 +44,27 @@ function ContactField({ label, error, children }: ContactFieldProps) {
 	);
 }
 
+async function fetchContactFormSettings() {
+	const response = await fetch("/api/contentful/contact-form-settings");
+
+	if (!response.ok) {
+		throw new Error("Failed to load contact form settings.");
+	}
+
+	return (await response.json()) as ContactFormSettings;
+}
+
 export function ContactSection() {
-	const [values, setValues] = useState<ContactFormValues>(initialValues);
+	const [values, setValues] = useState<ContactFormState>(initialValues);
 	const [errors, setErrors] = useState<FieldErrors>({});
 	const [status, setStatus] = useState("");
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [isSubmitHovered, setIsSubmitHovered] = useState(false);
+	const { data: contactFormSettings = fallbackContactFormSettings } = useQuery({
+		queryKey: ["contentful", "contact-form-settings"],
+		queryFn: fetchContactFormSettings,
+		placeholderData: fallbackContactFormSettings,
+	});
 
 	const fields = useMemo(
 		() =>
@@ -154,7 +174,7 @@ export function ContactSection() {
 										onChange={handleChange}
 									>
 										<option value="">Select</option>
-										{topicOptions.map((option) => (
+										{contactFormSettings.topicOptions.map((option) => (
 											<option key={option} value={option}>
 												{option}
 											</option>
