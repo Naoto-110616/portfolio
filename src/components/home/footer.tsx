@@ -1,8 +1,11 @@
+"use client";
+
 import { MosaicHoverImage } from "@/components/home/mosaic-hover-image";
 import { SectionReveal } from "@/components/motion/section-reveal";
 import { StaggerGroup } from "@/components/motion/stagger-group";
 import { StaggerItem } from "@/components/motion/stagger-item";
 import { CurrentTime } from "@/components/ui/current-time";
+import { HashLink } from "@/components/ui/hash-link";
 import { Link } from "@/components/ui/link";
 import { RollingText } from "@/components/ui/rolling-text";
 import { socialLinks as defaultSocialLinks } from "@/constans/const";
@@ -21,14 +24,25 @@ type FooterProps = {
 };
 
 function FooterLink({ href, label }: FooterLinkItem) {
+	const className = "group transition-opacity hover:opacity-80";
+	const content = <Link label={label} />;
+
+	if (href.startsWith("#")) {
+		return (
+			<HashLink className={className} href={href}>
+				{content}
+			</HashLink>
+		);
+	}
+
 	return (
 		<a
-			className="group transition-opacity hover:opacity-80"
+			className={className}
 			href={href}
 			target={href.startsWith("http") ? "_blank" : undefined}
 			rel={href.startsWith("http") ? "noreferrer" : undefined}
 		>
-			<Link label={label} />
+			{content}
 		</a>
 	);
 }
@@ -75,12 +89,12 @@ export function Footer({
 					<div className="text-caption text-accent md:text-body grid grid-cols-8 items-center justify-between md:leading-normal">
 						<p className="wide:col-span-7 col-span-6">{copyright}</p>
 
-						<a
+						<HashLink
 							className="group wide:col-span-1 col-span-2 transition-opacity hover:opacity-80"
 							href="#top"
 						>
 							<Link className="text-inherit" iconClassName="-rotate-90" label={backToTopLabel} />
-						</a>
+						</HashLink>
 					</div>
 					<hr className="border-accent-soft mt-2 md:mt-0" />
 				</div>

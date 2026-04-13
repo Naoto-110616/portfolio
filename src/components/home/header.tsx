@@ -1,5 +1,6 @@
 "use client";
 
+import { HashLink } from "@/components/ui/hash-link";
 import { CurrentTime } from "@/components/ui/current-time";
 import { RollingText } from "@/components/ui/rolling-text";
 import { SectionReveal } from "@/components/motion/section-reveal";
@@ -87,12 +88,12 @@ export function Header({
 							{links.map((link) => (
 								<li key={`${link.href}-${link.label}`} className="list-none">
 									<StaggerItem y={12}>
-										<a
+										<HashLink
 											className="group inline-flex w-fit whitespace-nowrap transition-opacity hover:opacity-70"
 											href={link.href}
 										>
 											<RollingText text={link.label} durationMs={420} staggerMs={18} />
-										</a>
+										</HashLink>
 									</StaggerItem>
 								</li>
 							))}

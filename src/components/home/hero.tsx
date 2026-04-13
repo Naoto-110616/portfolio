@@ -7,6 +7,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { NAME, NAME_JA } from "@/constans/const";
 import { Frame } from "@/components/ui/frame";
+import { HashLink } from "@/components/ui/hash-link";
 import { RollingText } from "@/components/ui/rolling-text";
 
 export type HeroItem = {
@@ -665,12 +666,12 @@ function ViewMore({ isInteractive = true }: { isInteractive?: boolean }) {
 
 	return (
 		<div className="text-primary w-fit">
-			<a
+			<HashLink
 				className="group border-primary bg-accent text-caption text-primary inline-flex items-center overflow-hidden rounded-[24px] border px-4 py-2 transition-opacity hover:opacity-80 md:hidden"
 				href="#work"
 			>
 				<RollingText text="Get to know me" />
-			</a>
+			</HashLink>
 
 			<div className="text-caption text-primary flex w-full flex-col items-center justify-center gap-1 transition-opacity hover:opacity-80 md:hidden">
 				<span>Or scroll down</span>
@@ -696,12 +697,12 @@ function ViewMore({ isInteractive = true }: { isInteractive?: boolean }) {
 					text="Group"
 				>
 					<div className="flex flex-col items-start gap-1">
-						<a
+						<HashLink
 							className="group border-primary bg-accent text-body text-primary inline-flex items-center overflow-hidden rounded-[24px] border px-4 py-2 leading-normal transition-opacity hover:opacity-80"
 							href="#work"
 						>
 							<RollingText text="Get to know me" />
-						</a>
+						</HashLink>
 
 						<div className="text-caption text-primary flex w-full flex-col items-center justify-center gap-1 transition-opacity">
 							<span>Or scroll down</span>
