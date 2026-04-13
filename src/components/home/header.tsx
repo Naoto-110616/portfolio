@@ -56,7 +56,7 @@ export function Header({
 					<nav aria-label="Primary" className="mt-block">
 						<StaggerGroup
 							as="ul"
-							className="text-caption-sm grid grid-cols-8 leading-none"
+							className="text-caption-sm grid grid-cols-4 gap-y-4 leading-none md:grid-cols-8 md:gap-0"
 							delayChildren={0.1}
 							staggerChildren={0.08}
 						>
@@ -79,10 +79,10 @@ export function Header({
 				<div className="hidden md:grid md:grid-cols-8 md:items-start">
 					<p className="text-body leading-normal">{sinceLabel}</p>
 
-					<nav aria-label="Primary" className="col-span-2">
+					<nav aria-label="Primary" className="col-span-3">
 						<StaggerGroup
 							as="ul"
-							className="text-body grid grid-cols-2 gap-y-4 leading-normal"
+							className="text-body grid grid-cols-3 gap-y-4 leading-normal"
 							delayChildren={0.1}
 							staggerChildren={0.08}
 						>
@@ -101,7 +101,7 @@ export function Header({
 						</StaggerGroup>
 					</nav>
 
-					<div className="col-span-4" />
+					<div className="col-span-3" />
 
 					<CurrentTime className="text-body col-span-1 gap-0 leading-normal" />
 				</div>
