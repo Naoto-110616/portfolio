@@ -29,7 +29,7 @@ export function HomeCmsContent() {
 	const { data: projects = fallbackProjects } = useQuery({
 		queryKey: ["contentful", "projects"],
 		queryFn: () => fetchContentfulResource<ProjectsResult>("/api/contentful/projects"),
-		initialData: fallbackProjects,
+		placeholderData: fallbackProjects,
 	});
 
 	const workItems = mapProjectsToWorkItems(projects.items);
@@ -47,7 +47,7 @@ export function HomeServicesContent() {
 	const { data: services = fallbackServices } = useQuery({
 		queryKey: ["contentful", "services"],
 		queryFn: () => fetchContentfulResource<ServicesResult>("/api/contentful/services"),
-		initialData: fallbackServices,
+		placeholderData: fallbackServices,
 	});
 
 	return <ServicesSection items={services.items} title={staticSectionTitles.services} />;
@@ -57,7 +57,7 @@ export function HomeFooterContent({ contactEmail }: HomeFooterContentProps) {
 	const { data: snsLinks = fallbackSnsLinks } = useQuery({
 		queryKey: ["contentful", "sns-links"],
 		queryFn: () => fetchContentfulResource<SnsLinksResult>("/api/contentful/sns-links"),
-		initialData: fallbackSnsLinks,
+		placeholderData: fallbackSnsLinks,
 	});
 
 	return (

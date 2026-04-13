@@ -63,6 +63,7 @@ npm run contentful:migrate -- --from=003-create-sns-links --yes
 - `published`: Date
 - `role`: Symbol
 - `stack`: Symbol array
+- `displaySections`: Symbol array (`work`, `moreProjects`)
 
 ### `services`
 
@@ -91,5 +92,9 @@ npm run contentful:migrate -- --from=003-create-sns-links --yes
 ## Initial content notes
 
 - `contact` は singleton 想定です。運用上は 1 件だけ published にしてください。
-- `projects` は `published` の新しい順で並びます。Work には先頭3件、More Projects には4件目以降を表示します。
+- `projects.displaySections` で表示先を制御します。
+- `work`: Work セクションに表示
+- `moreProjects`: More Projects セクションに表示
+- 両方に表示したい場合は両値を入れます。
+- 未設定の既存 entry は後方互換のため `work` 扱いになります。
 - `services` と `snsLinks` は作成順で表示します。

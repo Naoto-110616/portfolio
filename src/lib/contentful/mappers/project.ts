@@ -4,10 +4,12 @@ import {
 	asString,
 	asStringArray,
 	getAssetUrl,
+	normalizeHref,
 	type ContentfulEntry,
 } from "@/lib/contentful/mappers/shared";
 import {
 	projectSchema,
+	projectDisplaySectionSchema,
 	projectsResultSchema,
 	type Project,
 	type ProjectsResult,
@@ -42,6 +44,15 @@ function compareProjectsByPublishedDate(left: Project, right: Project) {
 	return left.title.localeCompare(right.title);
 }
 
+function parseDisplaySections(value: unknown) {
+	const parsedSections = asStringArray(value)
+		.map((item) => projectDisplaySectionSchema.safeParse(item))
+		.filter((result) => result.success)
+		.map((result) => result.data);
+
+	return parsedSections.length > 0 ? parsedSections : ["work"];
+}
+
 export function mapProjectEntry(entry: ContentfulEntry): Project | null {
 	const fields = entry.fields ?? {};
 	const asset = asAsset(fields.img);
@@ -60,7 +71,8 @@ export function mapProjectEntry(entry: ContentfulEntry): Project | null {
 			asset?.fields?.description ??
 			asset?.fields?.title ??
 			`${asString(fields.title) ?? "Project"} preview`,
-		href: asString(fields.url),
+		href: normalizeHref(asString(fields.url)),
+		displaySections: parseDisplaySections(fields.displaySections),
 	});
 
 	return parsedProject.success ? parsedProject.data : null;
@@ -79,31 +91,35 @@ export function mapProjects(entries: ContentfulEntry[]): ProjectsResult {
 }
 
 export function mapProjectsToWorkItems(items: Project[]) {
-	return items.slice(0, 3).map((item) => ({
-		title: item.title,
-		description: item.description,
-		with: item.with,
-		published: item.published,
-		role: item.role,
-		stack: item.stack.join(", "),
-		tag: item.tag,
-		imageUrl: item.imageUrl,
-		href: item.href,
-	}));
+	return items
+		.filter((item) => item.displaySections.includes("work"))
+		.map((item) => ({
+			title: item.title,
+			description: item.description,
+			with: item.with,
+			published: item.published,
+			role: item.role,
+			stack: item.stack.join(", "),
+			tag: item.tag,
+			imageUrl: item.imageUrl,
+			href: item.href,
+		}));
 }
 
 export function mapProjectsToMoreProjectItems(items: Project[]) {
-	return items.slice(3).map((item, index) => ({
-		title: item.title,
-		description: item.description,
-		with: item.with,
-		published: item.published,
-		role: item.role,
-		stack: item.stack.join(", "),
-		tag: item.tag,
-		imageUrl: item.imageUrl,
-		href: item.href,
-		closedImageHeight: index === 0 ? 85 : 102,
-		imageAlt: item.imageAlt,
-	}));
+	return items
+		.filter((item) => item.displaySections.includes("moreProjects"))
+		.map((item, index) => ({
+			title: item.title,
+			description: item.description,
+			with: item.with,
+			published: item.published,
+			role: item.role,
+			stack: item.stack.join(", "),
+			tag: item.tag,
+			imageUrl: item.imageUrl,
+			href: item.href,
+			closedImageHeight: index === 0 ? 85 : 102,
+			imageAlt: item.imageAlt,
+		}));
 }

@@ -6,6 +6,7 @@ import createProjects from "../migrations/001-create-projects";
 import createServices from "../migrations/002-create-services";
 import createSnsLinks from "../migrations/003-create-sns-links";
 import createContact from "../migrations/004-create-contact";
+import addProjectDisplaySections from "../migrations/005-add-project-display-sections";
 
 loadEnvConfig(process.cwd());
 
@@ -19,6 +20,7 @@ const migrations: NamedMigration[] = [
 	{ id: "002-create-services", migrationFunction: createServices },
 	{ id: "003-create-sns-links", migrationFunction: createSnsLinks },
 	{ id: "004-create-contact", migrationFunction: createContact },
+	{ id: "005-add-project-display-sections", migrationFunction: addProjectDisplaySections },
 ];
 
 function getFlagValue(flagName: string) {

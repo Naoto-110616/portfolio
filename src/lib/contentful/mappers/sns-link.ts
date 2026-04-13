@@ -1,5 +1,5 @@
 import { fallbackSnsLinks } from "@/lib/contentful/fallbacks";
-import { asString, type ContentfulEntry } from "@/lib/contentful/mappers/shared";
+import { asString, normalizeHref, type ContentfulEntry } from "@/lib/contentful/mappers/shared";
 import {
 	snsLinkSchema,
 	snsLinksResultSchema,
@@ -13,7 +13,7 @@ export function mapSnsLinkEntry(entry: ContentfulEntry): SnsLink | null {
 	const parsedSnsLink = snsLinkSchema.safeParse({
 		id: entry.sys.id,
 		title: asString(fields.title),
-		url: asString(fields.url),
+		url: normalizeHref(asString(fields.url)),
 	});
 
 	return parsedSnsLink.success ? parsedSnsLink.data : null;

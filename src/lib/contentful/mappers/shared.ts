@@ -33,6 +33,24 @@ export function asString(value: unknown) {
 	return typeof value === "string" && value.trim() ? value.trim() : undefined;
 }
 
+export function normalizeHref(value: string | undefined) {
+	if (!value) {
+		return undefined;
+	}
+
+	if (
+		value.startsWith("http://") ||
+		value.startsWith("https://") ||
+		value.startsWith("mailto:") ||
+		value.startsWith("#") ||
+		value.startsWith("/")
+	) {
+		return value;
+	}
+
+	return `https://${value}`;
+}
+
 export function asBoolean(value: unknown) {
 	return typeof value === "boolean" ? value : undefined;
 }

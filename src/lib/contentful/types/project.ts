@@ -1,5 +1,7 @@
 import { z } from "zod";
 
+export const projectDisplaySectionSchema = z.enum(["work", "moreProjects"]);
+
 export const projectSchema = z.object({
 	id: z.string().min(1),
 	title: z.string().min(1),
@@ -12,6 +14,7 @@ export const projectSchema = z.object({
 	imageUrl: z.string().min(1),
 	imageAlt: z.string().min(1),
 	href: z.string().min(1),
+	displaySections: z.array(projectDisplaySectionSchema).min(1),
 });
 
 export const projectsResultSchema = z.object({
@@ -22,3 +25,4 @@ export const projectsResultSchema = z.object({
 
 export type Project = z.infer<typeof projectSchema>;
 export type ProjectsResult = z.infer<typeof projectsResultSchema>;
+export type ProjectDisplaySection = z.infer<typeof projectDisplaySectionSchema>;
