@@ -1,9 +1,56 @@
-import { ABOUT_PORTRAIT_IMAGE_URL, NAME, NAME_PORTRAIT_ALT } from "@/constans/const";
+import {
+	ABOUT_PORTRAIT_IMAGE_URL,
+	NAME,
+	NAME_JA,
+	NAME_JA_HIRAGANA,
+	NAME_JA_KATAKANA,
+	NAME_PORTRAIT_ALT,
+} from "@/constans/const";
 
 export const staticSiteMetadata = {
-	title: "Naoto Ohkawa | Frontend Engineer",
+	title: `${NAME_JA} | 大阪市平野区のフロントエンドエンジニア / ${NAME}`,
 	description:
-		"フロントエンドエンジニア大川尚斗のポートフォリオ。Next.js と Headless CMS を軸に、体験と運用を両立するWeb実装を行っています。",
+		`${NAME_JA}（${NAME_JA_HIRAGANA} / ${NAME_JA_KATAKANA}）のポートフォリオサイト。大阪市平野区を拠点に、サイト制作、LP制作、WordPressリプレイス、Next.jsを使った実装、表示速度や運用の最適化に対応しています。`,
+	siteName: `${NAME} Portfolio`,
+	locale: "ja_JP",
+	keywords: [
+		NAME_JA,
+		NAME_JA_HIRAGANA,
+		NAME_JA_KATAKANA,
+		"大川",
+		"おおかわ",
+		"オオカワ",
+		"尚斗",
+		"なおと",
+		"ナオト",
+		"フロントエンドエンジニア",
+		"大阪",
+		"平野区",
+		"大阪市平野区",
+		"サイト制作",
+		"LP制作",
+		"WordPressリプレイス",
+		"Webサイト最適化",
+		"フロントエンド開発",
+		"Next.js",
+	],
+	person: {
+		name: NAME_JA,
+		alternateNames: [NAME_JA_HIRAGANA, NAME_JA_KATAKANA, NAME],
+		jobTitle: "フロントエンドエンジニア",
+		addressRegion: "大阪府",
+		addressLocality: "大阪市平野区",
+		areaServed: ["大阪", "大阪市平野区", "関西", "全国"],
+		knowsAbout: [
+			"サイト制作",
+			"LP制作",
+			"WordPressリプレイス",
+			"Webサイト最適化",
+			"フロントエンド開発",
+			"Next.js",
+			"Headless CMS",
+		],
+	},
 };
 
 export const staticHeaderContent = {
@@ -25,22 +72,23 @@ export const staticHeroItems = [
 
 export const staticAboutContent = {
 	title: "About",
-	leadText: "モダンなWebに、体験と仕組みをデザインするフロントエンドエンジニア",
+	leadText:
+		"大阪市平野区を拠点に、サイト制作やLP制作、WordPressリプレイス、Webサイト最適化まで伴走するフロントエンドエンジニア",
 	portraitImageUrl: ABOUT_PORTRAIT_IMAGE_URL,
 	portraitImageAlt: NAME_PORTRAIT_ALT,
 	blocks: [
 		{
 			title: "Hello",
 			paragraphs: [
-				"使いやすさとつくりやすさを両立させたいフロントエンドエンジニアです。",
-				"Next.jsとヘッドレスCMSを中心に、LPやコーポレートサイト、ECまわりを担当しています。",
+				`${NAME_JA}（${NAME_JA_HIRAGANA} / ${NAME_JA_KATAKANA}）です。使いやすさとつくりやすさを両立させたいフロントエンドエンジニアとして活動しています。`,
+				"Next.jsとヘッドレスCMSを中心に、LP制作、コーポレートサイト制作、ECまわりの実装まで担当しています。",
 			],
 		},
 		{
 			title: "Journey",
 			paragraphs: [
 				"デザインの意図を汲み取った高精度な実装から、運用を見据えた設計まで一気通貫で手がけています。",
-				"Next.js を軸に、管理画面開発や Headless CMS、EC構築まで、事業フェーズに応じた技術選定と実装を行っています。",
+				"Next.js を軸に、管理画面開発や Headless CMS、EC構築、WordPressリプレイスまで、事業フェーズに応じた技術選定と実装を行っています。",
 			],
 		},
 		{
@@ -48,6 +96,14 @@ export const staticAboutContent = {
 			paragraphs: [
 				"緻密に設計したコンポーネントが、意図したレイアウトにはまる瞬間にいちばんやりがいを感じます。",
 				"余白設計と責務分離を大切にし、見た目の美しさと再利用性を両立した、保守しやすいUIを組み立てています。",
+				"公開後の更新しやすさや表示速度も重視し、改善し続けられるWebサイトの最適化まで見据えて設計します。",
+			],
+		},
+		{
+			title: "Location",
+			paragraphs: [
+				"大阪府大阪市平野区を拠点に、関西圏を中心としながらオンラインで全国のご相談にも対応しています。",
+				"サイト制作、LP制作、新規構築だけでなく、既存WordPressサイトのリプレイスや情報整理、UI改善の相談も歓迎です。",
 			],
 		},
 		{

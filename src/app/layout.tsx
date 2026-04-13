@@ -34,14 +34,65 @@ const devtoolsMessage = `\n
 `;
 
 export async function generateMetadata(): Promise<Metadata> {
+	const metadataBase = new URL(env.NEXT_PUBLIC_SITE_URL);
+
 	return {
 		title: staticSiteMetadata.title,
 		description: staticSiteMetadata.description,
-		metadataBase: new URL(env.NEXT_PUBLIC_SITE_URL),
+		keywords: staticSiteMetadata.keywords,
+		metadataBase,
+		alternates: {
+			canonical: "/",
+		},
+		openGraph: {
+			title: staticSiteMetadata.title,
+			description: staticSiteMetadata.description,
+			url: "/",
+			siteName: staticSiteMetadata.siteName,
+			locale: staticSiteMetadata.locale,
+			type: "website",
+		},
+		twitter: {
+			card: "summary_large_image",
+			title: staticSiteMetadata.title,
+			description: staticSiteMetadata.description,
+		},
+		authors: [{ name: staticSiteMetadata.person.name }],
+		creator: staticSiteMetadata.person.name,
+		publisher: staticSiteMetadata.person.name,
+		robots: {
+			index: true,
+			follow: true,
+			googleBot: {
+				index: true,
+				follow: true,
+				"max-image-preview": "large",
+				"max-snippet": -1,
+				"max-video-preview": -1,
+			},
+		},
 	};
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
+	const personStructuredData = {
+		"@context": "https://schema.org",
+		"@type": "Person",
+		name: staticSiteMetadata.person.name,
+		alternateName: staticSiteMetadata.person.alternateNames,
+		url: env.NEXT_PUBLIC_SITE_URL,
+		description: staticSiteMetadata.description,
+		jobTitle: staticSiteMetadata.person.jobTitle,
+		address: {
+			"@type": "PostalAddress",
+			addressCountry: "JP",
+			addressRegion: staticSiteMetadata.person.addressRegion,
+			addressLocality: staticSiteMetadata.person.addressLocality,
+		},
+		areaServed: staticSiteMetadata.person.areaServed,
+		knowsAbout: staticSiteMetadata.person.knowsAbout,
+	};
+
 	return (
 		<html lang="ja">
 			<body
@@ -50,6 +101,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
 				<script
 					dangerouslySetInnerHTML={{
 						__html: `(function(){const message=${JSON.stringify(devtoolsMessage)};const firstChild=document.body.firstChild;if(firstChild&&firstChild.nodeType===8&&firstChild.nodeValue===message){return;}document.body.prepend(document.createComment(message));})();`,
+					}}
+				/>
+				<script
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{
+						__html: JSON.stringify(personStructuredData),
 					}}
 				/>
 				<QueryProvider>
