@@ -189,9 +189,12 @@ export function ContactSection() {
 							</ContactField>
 						</div>
 
-						<div className="flex flex-col gap-6 pt-2 md:col-start-2 md:row-start-3 md:w-[512px] md:flex-row md:items-end md:gap-0 md:justify-self-end md:pt-0">
-							<div className="md:w-[384px]">
-								<ContactField error={errors[contactField.key]} label={contactField.label}>
+						<div className="flex flex-col gap-6 pt-2 md:col-start-2 md:row-start-3 md:grid md:w-[512px] md:grid-cols-[384px_minmax(0,1fr)] md:grid-rows-[auto_auto] md:gap-x-0 md:gap-y-3 md:justify-self-end md:pt-0">
+							<label className="flex w-full flex-col gap-4 md:col-start-1 md:row-start-1">
+								<span className="text-heading text-foreground md:text-[72px] md:leading-none md:font-bold">
+									{contactField.label}
+								</span>
+								<div className="border-primary focus-within:border-foreground relative border-b transition-colors">
 									<input
 										className="text-body text-primary placeholder:text-primary md:text-heading block w-full bg-transparent py-2 pr-8 outline-none"
 										name={contactField.key}
@@ -200,10 +203,16 @@ export function ContactSection() {
 										onChange={handleChange}
 										placeholder={contactField.placeholder}
 									/>
-								</ContactField>
-							</div>
+								</div>
+							</label>
 
-							<div className="flex flex-col gap-4 md:min-w-0 md:flex-1 md:gap-3">
+							{errors[contactField.key] ? (
+								<p className="text-caption text-primary md:col-start-1 md:row-start-2">
+									{errors[contactField.key]}
+								</p>
+							) : null}
+
+							<div className="flex flex-col gap-4 md:col-start-2 md:row-start-1 md:min-w-0 md:self-end md:gap-3">
 								<button
 									className="group border-primary bg-accent text-body text-primary md:text-heading inline-flex w-fit cursor-pointer items-center gap-2 rounded-[22px] border px-4 py-1.5 transition-opacity hover:opacity-80 disabled:cursor-not-allowed disabled:opacity-50 md:w-full md:justify-between md:px-6 md:py-2 md:leading-none"
 									type="submit"
@@ -224,9 +233,11 @@ export function ContactSection() {
 										strokeWidth={1.75}
 									/>
 								</button>
-
-								{status ? <p className="text-body text-primary">{status}</p> : null}
 							</div>
+
+							{status ? (
+								<p className="text-body text-primary md:col-start-2 md:row-start-2">{status}</p>
+							) : null}
 						</div>
 					</form>
 				</SectionReveal>
