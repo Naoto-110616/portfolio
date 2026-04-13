@@ -122,7 +122,9 @@ export function AboutSection({
 						end: beyondUnpinEnd,
 						pin: pinEl,
 						pinSpacing: true,
-						anticipatePin: 1,
+						anticipatePin: 0,
+						pinReparent: false,
+						fastScrollEnd: true,
 						invalidateOnRefresh: true,
 					});
 				} else {
@@ -133,7 +135,9 @@ export function AboutSection({
 						end: "bottom bottom",
 						pin: pinEl,
 						pinSpacing: true,
-						anticipatePin: 1,
+						anticipatePin: 0,
+						pinReparent: false,
+						fastScrollEnd: true,
 						invalidateOnRefresh: true,
 					});
 				}
@@ -186,7 +190,9 @@ export function AboutSection({
 							className="aspect-1536/2048 w-full object-cover md:aspect-auto md:h-[491px] md:w-[368px]"
 							src={imageUrl}
 							onLoad={() => {
-								ScrollTrigger.refresh();
+								requestAnimationFrame(() => {
+									requestAnimationFrame(() => ScrollTrigger.refresh());
+								});
 							}}
 						/>
 					</div>
