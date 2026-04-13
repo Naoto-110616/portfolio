@@ -1,7 +1,7 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight, Check, ChevronDown } from "lucide-react";
 import { ChangeEvent, type FormEventHandler, ReactNode, useMemo, useState } from "react";
 
 import { AnimatedSectionTitle } from "@/components/motion/animated-section-title";
@@ -57,9 +57,9 @@ async function fetchContactFormSettings() {
 export function ContactSection() {
 	const [values, setValues] = useState<ContactFormState>(initialValues);
 	const [errors, setErrors] = useState<FieldErrors>({});
-	const [status, setStatus] = useState("");
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [isSubmitHovered, setIsSubmitHovered] = useState(false);
+	const [isSubmitSuccess, setIsSubmitSuccess] = useState(false);
 	const { data: contactFormSettings = fallbackContactFormSettings } = useQuery({
 		queryKey: ["contentful", "contact-form-settings"],
 		queryFn: fetchContactFormSettings,
@@ -88,6 +88,7 @@ export function ContactSection() {
 
 	function handleChange(event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
 		const { name, value } = event.target;
+		setIsSubmitSuccess(false);
 
 		setValues((current) => ({
 			...current,
@@ -97,7 +98,7 @@ export function ContactSection() {
 
 	const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
 		event.preventDefault();
-		setStatus("");
+		setIsSubmitSuccess(false);
 
 		const parsed = contactSchema.safeParse(values);
 
@@ -129,10 +130,11 @@ export function ContactSection() {
 				throw new Error(data.message ?? "送信に失敗しました。");
 			}
 
-			setStatus(data.message ?? "お問い合わせを送信しました。");
+			setIsSubmitSuccess(true);
 			setValues(initialValues);
 		} catch (error) {
-			setStatus(error instanceof Error ? error.message : "送信に失敗しました。");
+			setIsSubmitSuccess(false);
+			console.error(error instanceof Error ? error.message : "送信に失敗しました。");
 		} finally {
 			setIsSubmitting(false);
 		}
@@ -212,32 +214,43 @@ export function ContactSection() {
 								</p>
 							) : null}
 
-							<div className="flex flex-col gap-4 md:col-start-2 md:row-start-1 md:min-w-0 md:self-end md:gap-3">
+							<div className="flex flex-col gap-4 md:col-start-2 md:row-start-1 md:min-w-0 md:gap-3 md:self-end">
 								<button
-									className="group border-primary bg-accent text-body text-primary md:text-heading inline-flex w-fit cursor-pointer items-center gap-2 rounded-[22px] border px-4 py-1.5 transition-opacity hover:opacity-80 disabled:cursor-not-allowed disabled:opacity-50 md:w-full md:justify-between md:px-6 md:py-2 md:leading-none"
+									className={[
+										"group border-primary bg-accent text-body text-primary md:text-heading inline-flex h-10 cursor-pointer items-center overflow-hidden border transition-[width,border-radius,padding,opacity,transform] duration-300 ease-out hover:opacity-80 disabled:cursor-not-allowed md:h-10 md:leading-none",
+										isSubmitSuccess
+											? "w-10 justify-center rounded-full px-0 md:w-10"
+											: "w-fit gap-2 rounded-[22px] px-4 py-1.5 md:w-full md:justify-between md:px-6 md:py-2",
+									].join(" ")}
 									type="submit"
-									disabled={isSubmitting}
+									disabled={isSubmitting || isSubmitSuccess}
 									onMouseEnter={() => setIsSubmitHovered(true)}
 									onMouseLeave={() => setIsSubmitHovered(false)}
 									onFocus={() => setIsSubmitHovered(true)}
 									onBlur={() => setIsSubmitHovered(false)}
 								>
-									<RollingText
-										text={isSubmitting ? "Sending..." : "Submit"}
-										isActive={isSubmitHovered}
-										className="font-medium"
-									/>
-									<ArrowRight
-										aria-hidden="true"
-										className="size-4 transition-transform duration-500 md:size-6"
-										strokeWidth={1.75}
-									/>
+									{isSubmitSuccess ? (
+										<Check
+											aria-hidden="true"
+											className="size-4 transition-all duration-300 ease-out md:size-6"
+											strokeWidth={1.75}
+										/>
+									) : (
+										<>
+											<RollingText
+												text={isSubmitting ? "Sending..." : "Submit"}
+												isActive={isSubmitHovered}
+												className="font-medium"
+											/>
+											<ArrowRight
+												aria-hidden="true"
+												className="size-4 transition-transform duration-500 md:size-6"
+												strokeWidth={1.75}
+											/>
+										</>
+									)}
 								</button>
 							</div>
-
-							{status ? (
-								<p className="text-body text-primary md:col-start-2 md:row-start-2">{status}</p>
-							) : null}
 						</div>
 					</form>
 				</SectionReveal>
