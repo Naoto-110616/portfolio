@@ -4,13 +4,6 @@ import { type MouseEvent, useCallback, useEffect, useLayoutEffect, useRef, useSt
 
 const CURSOR_RADIUS_PX = 60;
 const MOSAIC_BLOCK_PX = 8;
-/** 1 フレームあたりの不透明度の減り（小さいほど長く残る） */
-const TRAIL_DECAY = 0.965;
-const MAX_TRAIL_POINTS = 40;
-/** 前位置からこの距離以上動いたらトレイルに残す（CSS px） */
-const TRAIL_SAMPLE_MIN_PX = 5;
-
-type TrailPoint = { x: number; y: number; opacity: number };
 
 type MosaicHoverImageProps = {
 	src: string;
@@ -131,10 +124,8 @@ export function MosaicHoverImage({
 	const imgRef = useRef<HTMLImageElement>(null);
 	const canvasRef = useRef<HTMLCanvasElement>(null);
 	const offscreenRef = useRef<HTMLCanvasElement | null>(null);
-	const loopRef = useRef(0);
 	const posRef = useRef<{ x: number; y: number } | null>(null);
 	const insideRef = useRef(false);
-	const trailRef = useRef<TrailPoint[]>([]);
 	const [motionOk, setMotionOk] = useState(true);
 
 	useEffect(() => {
@@ -200,66 +191,9 @@ export function MosaicHoverImage({
 		const dpr = Math.min(window.devicePixelRatio ?? 1, 2);
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-		for (const p of trailRef.current) {
-			if (p.opacity < 0.02) continue;
-			drawMosaicCircle(ctx, octx, off, p.x, p.y, dpr, p.opacity);
-		}
-
 		if (insideRef.current && posRef.current) {
 			drawMosaicCircle(ctx, octx, off, posRef.current.x, posRef.current.y, dpr, 1);
 		}
-	}, []);
-
-	/** トレイルのフェード専用。トレイルが空なら停止（カーソル追従は mousemove の paintFrame で描く） */
-	const runDecayLoop = useCallback(() => {
-		if (loopRef.current) return;
-
-		const tick = () => {
-			trailRef.current = trailRef.current
-				.map((p) => ({ ...p, opacity: p.opacity * TRAIL_DECAY }))
-				.filter((p) => p.opacity > 0.015);
-
-			paintFrame();
-
-			if (trailRef.current.length > 0) {
-				loopRef.current = requestAnimationFrame(tick);
-			} else {
-				loopRef.current = 0;
-			}
-		};
-
-		loopRef.current = requestAnimationFrame(tick);
-	}, [paintFrame]);
-
-	const stopLoop = useCallback(() => {
-		if (loopRef.current) {
-			cancelAnimationFrame(loopRef.current);
-			loopRef.current = 0;
-		}
-	}, []);
-
-	const pushTrailFromMovement = useCallback((x: number, y: number) => {
-		const prev = posRef.current;
-		if (!prev) {
-			posRef.current = { x, y };
-			return;
-		}
-
-		const dx = x - prev.x;
-		const dy = y - prev.y;
-		const dist = Math.hypot(dx, dy);
-		if (dist < TRAIL_SAMPLE_MIN_PX) {
-			posRef.current = { x, y };
-			return;
-		}
-
-		const trail = trailRef.current;
-		trail.push({ x: prev.x, y: prev.y, opacity: 1 });
-		if (trail.length > MAX_TRAIL_POINTS) {
-			trail.shift();
-		}
-
-		posRef.current = { x, y };
 	}, []);
 
 	const handleMove = useCallback(
@@ -270,13 +204,10 @@ export function MosaicHoverImage({
 			const rect = wrap.getBoundingClientRect();
 			const x = e.clientX - rect.left;
 			const y = e.clientY - rect.top;
-			pushTrailFromMovement(x, y);
+			posRef.current = { x, y };
 			paintFrame();
-			if (trailRef.current.length > 0) {
-				runDecayLoop();
-			}
 		},
-		[motionOk, paintFrame, pushTrailFromMovement, runDecayLoop],
+		[motionOk, paintFrame],
 	);
 
 	const handleEnter = useCallback(() => {
@@ -287,20 +218,9 @@ export function MosaicHoverImage({
 	const handleLeave = useCallback(() => {
 		if (!motionOk) return;
 		insideRef.current = false;
-		const last = posRef.current;
 		posRef.current = null;
-		if (last) {
-			const trail = trailRef.current;
-			trail.push({ x: last.x, y: last.y, opacity: 1 });
-			if (trail.length > MAX_TRAIL_POINTS) {
-				trail.shift();
-			}
-		}
 		paintFrame();
-		if (trailRef.current.length > 0) {
-			runDecayLoop();
-		}
-	}, [motionOk, paintFrame, runDecayLoop]);
+	}, [motionOk, paintFrame]);
 
 	useLayoutEffect(() => {
 		const wrap = wrapRef.current;
@@ -324,18 +244,12 @@ export function MosaicHoverImage({
 		ro.observe(wrap);
 		return () => {
 			ro.disconnect();
-			stopLoop();
 		};
-	}, [drawCoverToOffscreen, motionOk, paintFrame, stopLoop]);
-
-	useEffect(() => {
-		return () => {
-			stopLoop();
-		};
-	}, [stopLoop]);
+	}, [drawCoverToOffscreen, motionOk, paintFrame]);
 
 	const wrapClassName = [
 		fill ? "absolute inset-0 isolate h-full w-full" : "relative isolate",
+		motionOk ? "cursor-none" : "",
 		wrapperClassName,
 	]
 		.filter(Boolean)
