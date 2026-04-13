@@ -11,6 +11,7 @@ import { StaggerGroup } from "@/components/motion/stagger-group";
 import { StaggerItem } from "@/components/motion/stagger-item";
 import { useLenis } from "@/components/providers/lenis-context";
 import { HomeMainInner } from "@/components/ui/home-main-inner";
+import { WORK_CARD_IMAGE_URL } from "@/constans/const";
 
 export type MoreProjectItem = Omit<
 	ProjectWorkCardExpandableProps,
@@ -22,9 +23,6 @@ type MoreProjectsSectionProps = {
 	items?: MoreProjectItem[];
 };
 
-const moreProjectsPreviewImage =
-	"https://www.figma.com/api/mcp/asset/a55382d9-c6ac-4dbb-b366-268d7183254a";
-
 const defaultItems: MoreProjectItem[] = [
 	{
 		title: "Project Alpha",
@@ -34,7 +32,7 @@ const defaultItems: MoreProjectItem[] = [
 		role: "Frontend",
 		stack: "Next.js, TypeScript",
 		tag: "web",
-		imageUrl: moreProjectsPreviewImage,
+		imageUrl: WORK_CARD_IMAGE_URL,
 		href: "#",
 		closedImageHeight: 85.5,
 		imageAlt: "Project preview 1",
@@ -47,7 +45,7 @@ const defaultItems: MoreProjectItem[] = [
 		role: "Lead Dev",
 		stack: "Contentful, React",
 		tag: "cms",
-		imageUrl: moreProjectsPreviewImage,
+		imageUrl: WORK_CARD_IMAGE_URL,
 		href: "#",
 		closedImageHeight: 101.5,
 		imageAlt: "Project preview 2",
@@ -60,7 +58,7 @@ const defaultItems: MoreProjectItem[] = [
 		role: "Shopify",
 		stack: "Shopify, Liquid",
 		tag: "commerce",
-		imageUrl: moreProjectsPreviewImage,
+		imageUrl: WORK_CARD_IMAGE_URL,
 		href: "#",
 		closedImageHeight: 101.5,
 		imageAlt: "Project preview 3",
@@ -73,7 +71,7 @@ const defaultItems: MoreProjectItem[] = [
 		role: "Creative Dev",
 		stack: "GSAP, Three.js",
 		tag: "interactive",
-		imageUrl: moreProjectsPreviewImage,
+		imageUrl: WORK_CARD_IMAGE_URL,
 		href: "#",
 		closedImageHeight: 101.5,
 		imageAlt: "Project preview 4",
@@ -86,7 +84,7 @@ const defaultItems: MoreProjectItem[] = [
 		role: "Frontend",
 		stack: "TanStack Table, shadcn",
 		tag: "admin",
-		imageUrl: moreProjectsPreviewImage,
+		imageUrl: WORK_CARD_IMAGE_URL,
 		href: "#",
 		closedImageHeight: 101.5,
 		imageAlt: "Project preview 5",
@@ -99,7 +97,7 @@ const defaultItems: MoreProjectItem[] = [
 		role: "UI Engineer",
 		stack: "React, Storybook",
 		tag: "a11y",
-		imageUrl: moreProjectsPreviewImage,
+		imageUrl: WORK_CARD_IMAGE_URL,
 		href: "#",
 		closedImageHeight: 101.5,
 		imageAlt: "Project preview 6",

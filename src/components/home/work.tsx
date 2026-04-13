@@ -1,4 +1,5 @@
 import { ProjectWorkCard, type WorkItem } from "@/components/home/project-work-card";
+import { WORK_CARD_IMAGE_URL } from "@/constans/const";
 import { AnimatedSectionTitle } from "@/components/motion/animated-section-title";
 import { GsapStaggerGroup } from "@/components/motion/gsap-stagger-group";
 import { HomeMainInner } from "@/components/ui/home-main-inner";
@@ -10,8 +11,6 @@ type WorkSectionProps = {
 	items?: WorkItem[];
 };
 
-const workPreviewImage = "https://www.figma.com/api/mcp/asset/f7b1a698-5cc0-4044-805e-39ed777c4ad0";
-
 const defaultItems: WorkItem[] = Array.from({ length: 3 }, () => ({
 	title: "muwmaze",
 	description: "ウィキメディア文書の適法ををこと要件改変に方針助け理解しライセン。",
@@ -20,7 +19,7 @@ const defaultItems: WorkItem[] = Array.from({ length: 3 }, () => ({
 	role: "Frontend Creative",
 	stack: "shopify,React",
 	tag: "shopify",
-	imageUrl: workPreviewImage,
+	imageUrl: WORK_CARD_IMAGE_URL,
 	href: "#",
 }));
 

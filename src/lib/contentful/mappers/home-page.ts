@@ -1,3 +1,4 @@
+import { ABOUT_PORTRAIT_IMAGE_URL } from "@/constans/const";
 import { fallbackHomePage } from "@/lib/contentful/fallbacks";
 import {
 	asAsset,
@@ -7,7 +8,6 @@ import {
 	asRecord,
 	asString,
 	asStringArray,
-	getAssetUrl,
 	type ContentfulEntry,
 } from "@/lib/contentful/mappers/shared";
 import {
@@ -30,7 +30,7 @@ function mapAboutSection(entry: ContentfulEntry | undefined) {
 	return {
 		title: asString(fields.title) ?? fallbackHomePage.about.title,
 		leadText: asString(fields.leadText) ?? fallbackHomePage.about.leadText,
-		portraitImageUrl: getAssetUrl(portraitAsset) ?? fallbackHomePage.about.portraitImageUrl,
+		portraitImageUrl: ABOUT_PORTRAIT_IMAGE_URL,
 		portraitImageAlt:
 			asString(fields.portraitAlt) ??
 			portraitAsset?.fields?.description ??

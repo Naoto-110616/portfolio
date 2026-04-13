@@ -5,8 +5,8 @@ import { useLayoutEffect, useRef } from "react";
 import { MosaicHoverImage } from "@/components/home/mosaic-hover-image";
 import { AnimatedSectionTitle } from "@/components/motion/animated-section-title";
 import { HomeMainInner } from "@/components/ui/home-main-inner";
+import { ABOUT_PORTRAIT_IMAGE_URL, NAME_PORTRAIT_ALT } from "@/constans/const";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
-import { NAME_PORTRAIT_ALT } from "@/constans/const";
 
 export type AboutBlock = {
 	id?: string;
@@ -21,8 +21,6 @@ type AboutSectionProps = {
 	imageAlt?: string;
 	blocks?: AboutBlock[];
 };
-
-const aboutImage = "https://www.figma.com/api/mcp/asset/1d9e5c05-e456-414b-9635-956928c1245c";
 
 const defaultLeadText = "モダンなWebに、体験と仕組みをデザインするフロントエンドエンジニア";
 
@@ -77,7 +75,7 @@ function AboutContentBlock({ title, paragraphs }: AboutBlock) {
 export function AboutSection({
 	title = "About",
 	leadText = defaultLeadText,
-	imageUrl = aboutImage,
+	imageUrl = ABOUT_PORTRAIT_IMAGE_URL,
 	imageAlt = NAME_PORTRAIT_ALT,
 	blocks = defaultBlocks,
 }: AboutSectionProps) {

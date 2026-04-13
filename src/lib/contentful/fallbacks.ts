@@ -1,4 +1,10 @@
-import { NAME, NAME_PORTRAIT_ALT, socialLinks as defaultSocialLinks } from "@/constans/const";
+import {
+	ABOUT_PORTRAIT_IMAGE_URL,
+	NAME,
+	NAME_PORTRAIT_ALT,
+	WORK_CARD_IMAGE_URL,
+	socialLinks as defaultSocialLinks,
+} from "@/constans/const";
 
 import type { HomePageContent, ProjectsResult, SiteSettings } from "@/lib/contentful/types";
 
@@ -43,7 +49,7 @@ export const fallbackHomePage: HomePageContent = {
 	about: {
 		title: "About",
 		leadText: "モダンなWebに、体験と仕組みをデザインするフロントエンドエンジニア",
-		portraitImageUrl: "https://www.figma.com/api/mcp/asset/1d9e5c05-e456-414b-9635-956928c1245c",
+		portraitImageUrl: ABOUT_PORTRAIT_IMAGE_URL,
 		portraitImageAlt: NAME_PORTRAIT_ALT,
 		blocks: [
 			{
@@ -141,7 +147,7 @@ export const fallbackProjects: ProjectsResult = {
 			role: "Frontend Creative",
 			stack: ["shopify", "React"],
 			tag: "shopify",
-			imageUrl: "https://www.figma.com/api/mcp/asset/f7b1a698-5cc0-4044-805e-39ed777c4ad0",
+			imageUrl: WORK_CARD_IMAGE_URL,
 			imageAlt: "muwmaze preview",
 			href: "#",
 			featuredOnHome: true,
@@ -159,7 +165,7 @@ export const fallbackProjects: ProjectsResult = {
 			role: "Frontend Creative",
 			stack: ["shopify", "React"],
 			tag: "shopify",
-			imageUrl: "https://www.figma.com/api/mcp/asset/f7b1a698-5cc0-4044-805e-39ed777c4ad0",
+			imageUrl: WORK_CARD_IMAGE_URL,
 			imageAlt: "Project preview 2",
 			href: "#",
 			featuredOnHome: true,
@@ -177,7 +183,7 @@ export const fallbackProjects: ProjectsResult = {
 			role: "Frontend Creative",
 			stack: ["shopify", "React"],
 			tag: "shopify",
-			imageUrl: "https://www.figma.com/api/mcp/asset/f7b1a698-5cc0-4044-805e-39ed777c4ad0",
+			imageUrl: WORK_CARD_IMAGE_URL,
 			imageAlt: "Project preview 3",
 			href: "#",
 			featuredOnHome: true,
@@ -195,7 +201,7 @@ export const fallbackProjects: ProjectsResult = {
 			role: "Frontend Creative",
 			stack: ["shopify", "React"],
 			tag: "shopify",
-			imageUrl: "https://www.figma.com/api/mcp/asset/a55382d9-c6ac-4dbb-b366-268d7183254a",
+			imageUrl: WORK_CARD_IMAGE_URL,
 			imageAlt: "Project preview 4",
 			href: "#",
 			featuredOnHome: false,
@@ -213,7 +219,7 @@ export const fallbackProjects: ProjectsResult = {
 			role: "Frontend Creative",
 			stack: ["shopify", "React"],
 			tag: "shopify",
-			imageUrl: "https://www.figma.com/api/mcp/asset/a55382d9-c6ac-4dbb-b366-268d7183254a",
+			imageUrl: WORK_CARD_IMAGE_URL,
 			imageAlt: "Project preview 5",
 			href: "#",
 			featuredOnHome: false,
@@ -231,7 +237,7 @@ export const fallbackProjects: ProjectsResult = {
 			role: "Frontend Creative",
 			stack: ["shopify", "React"],
 			tag: "shopify",
-			imageUrl: "https://www.figma.com/api/mcp/asset/a55382d9-c6ac-4dbb-b366-268d7183254a",
+			imageUrl: WORK_CARD_IMAGE_URL,
 			imageAlt: "Project preview 6",
 			href: "#",
 			featuredOnHome: false,

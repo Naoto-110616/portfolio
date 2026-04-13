@@ -1,3 +1,4 @@
+import { WORK_CARD_IMAGE_URL } from "@/constans/const";
 import { fallbackProjects } from "@/lib/contentful/fallbacks";
 import {
 	asAsset,
@@ -68,7 +69,7 @@ export function mapProjectsToWorkItems(items: Project[]) {
 			role: item.role,
 			stack: item.stack.join(", "),
 			tag: item.tag,
-			imageUrl: item.imageUrl,
+			imageUrl: WORK_CARD_IMAGE_URL,
 			href: item.href,
 		}));
 }
@@ -84,7 +85,7 @@ export function mapProjectsToMoreProjectItems(items: Project[]) {
 			role: item.role,
 			stack: item.stack.join(", "),
 			tag: item.tag,
-			imageUrl: item.imageUrl,
+			imageUrl: WORK_CARD_IMAGE_URL,
 			href: item.href,
 			closedImageHeight: item.moreProjectHeightPx ?? 102,
 			imageAlt: item.imageAlt,
