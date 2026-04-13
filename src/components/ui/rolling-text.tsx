@@ -1,7 +1,7 @@
 "use client";
 
 import type { CSSProperties } from "react";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { useReducedMotion } from "motion/react";
 
@@ -10,6 +10,7 @@ type RollingTextProps = {
 	className?: string;
 	staggerMs?: number;
 	durationMs?: number;
+	isActive?: boolean;
 };
 
 function getDisplayCharacter(character: string) {
@@ -25,6 +26,7 @@ export function RollingText({
 	className = "",
 	staggerMs = 24,
 	durationMs = 480,
+	isActive,
 }: RollingTextProps) {
 	const shouldReduceMotion = useReducedMotion();
 	const characters = useMemo(() => Array.from(text), [text]);
@@ -56,6 +58,19 @@ export function RollingText({
 
 		setStopAtNextCycle(true);
 	};
+
+	useEffect(() => {
+		if (isActive === undefined) {
+			return;
+		}
+
+		if (isActive) {
+			startRolling();
+			return;
+		}
+
+		requestStopAtNextCycle();
+	}, [isActive]);
 
 	const handleCharacterIteration = (index: number) => {
 		setStoppedCharacters((current) => {

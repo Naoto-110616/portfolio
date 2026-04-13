@@ -1,5 +1,6 @@
 import { AboutSection } from "@/components/home/about";
 import { ChatSection } from "@/components/home/chat";
+import { ContactSection } from "@/components/home/contact-form";
 import {
 	HomeCmsContent,
 	HomeFooterContent,
@@ -44,6 +45,7 @@ export default async function HomePage() {
 					title={staticChatContent.title}
 				/>
 				<HomeServicesContent />
+				<ContactSection />
 			</main>
 			<HomeFooterContent contactEmail={contact.email} />
 		</div>

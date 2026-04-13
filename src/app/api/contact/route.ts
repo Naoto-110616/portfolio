@@ -13,27 +13,23 @@ function escapeHtml(value: string) {
 		.replaceAll("'", "&#39;");
 }
 
-function buildContactEmailHtml(input: {
-	name: string;
-	email: string;
-	company?: string;
-	message: string;
-}) {
+function buildContactEmailHtml(input: { name: string; topic: string; contact: string }) {
 	const name = escapeHtml(input.name);
-	const email = escapeHtml(input.email);
-	const company = escapeHtml(input.company ?? "Not provided");
-	const message = escapeHtml(input.message).replace(/\n/g, "<br />");
+	const topic = escapeHtml(input.topic);
+	const contact = escapeHtml(input.contact);
 
 	return `
     <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #0f172a;">
       <h2>New contact inquiry</h2>
       <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Company:</strong> ${company}</p>
-      <p><strong>Message:</strong></p>
-      <p>${message}</p>
+      <p><strong>Topic:</strong> ${topic}</p>
+      <p><strong>Contact:</strong> ${contact}</p>
     </div>
   `;
+}
+
+function getReplyTo(contact: string) {
+	return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact) ? contact : undefined;
 }
 
 export async function POST(request: Request) {
@@ -57,7 +53,7 @@ export async function POST(request: Request) {
 		await resend.emails.send({
 			from,
 			to,
-			replyTo: parsed.data.email,
+			replyTo: getReplyTo(parsed.data.contact),
 			subject: `New inquiry from ${parsed.data.name}`,
 			html: buildContactEmailHtml(parsed.data),
 		});

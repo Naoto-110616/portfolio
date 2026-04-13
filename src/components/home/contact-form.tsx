@@ -1,40 +1,72 @@
 "use client";
 
-import { ChangeEvent, FormEvent, useMemo, useState } from "react";
+import { ArrowRight, ChevronDown } from "lucide-react";
+import { ChangeEvent, type FormEventHandler, ReactNode, useMemo, useState } from "react";
 
+import { AnimatedSectionTitle } from "@/components/motion/animated-section-title";
+import { SectionReveal } from "@/components/motion/section-reveal";
+import { HomeMainInner } from "@/components/ui/home-main-inner";
+import { RollingText } from "@/components/ui/rolling-text";
 import { contactSchema, type ContactFormValues } from "@/lib/contact/schema";
 
 const initialValues: ContactFormValues = {
 	name: "",
-	email: "",
-	company: "",
-	message: "",
+	topic: "",
+	contact: "",
 };
+
+const topicOptions = ["Webサイト制作", "UI実装", "フロントエンド改善", "その他"] as const;
 
 type FieldErrors = Partial<Record<keyof ContactFormValues, string>>;
 
-export function ContactForm() {
+type ContactFieldProps = {
+	label: string;
+	error?: string;
+	children: ReactNode;
+};
+
+function ContactField({ label, error, children }: ContactFieldProps) {
+	return (
+		<label className="flex w-full flex-col gap-4">
+			<span className="text-heading text-foreground md:text-[72px] md:leading-none md:font-bold">
+				{label}
+			</span>
+			<div className="border-primary focus-within:border-foreground relative border-b transition-colors">
+				{children}
+			</div>
+			{error ? <span className="text-caption text-primary">{error}</span> : null}
+		</label>
+	);
+}
+
+export function ContactSection() {
 	const [values, setValues] = useState<ContactFormValues>(initialValues);
 	const [errors, setErrors] = useState<FieldErrors>({});
-	const [status, setStatus] = useState<string>("");
+	const [status, setStatus] = useState("");
 	const [isSubmitting, setIsSubmitting] = useState(false);
+	const [isSubmitHovered, setIsSubmitHovered] = useState(false);
 
 	const fields = useMemo(
 		() =>
 			[
-				{ key: "name", label: "お名前", type: "text", placeholder: "山田 太郎" },
 				{
-					key: "email",
-					label: "メールアドレス",
-					type: "email",
-					placeholder: "hello@example.com",
+					key: "name",
+					label: "My name is",
+					placeholder: "Your name",
+					type: "text",
 				},
-				{ key: "company", label: "会社名", type: "text", placeholder: "Zexora Inc." },
+				{
+					key: "contact",
+					label: "My contact",
+					placeholder: "Comfort way to contact you",
+					type: "text",
+				},
 			] as const,
 		[],
 	);
+	const [nameField, contactField] = fields;
 
-	function handleChange(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+	function handleChange(event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
 		const { name, value } = event.target;
 
 		setValues((current) => ({
@@ -43,7 +75,7 @@ export function ContactForm() {
 		}));
 	}
 
-	async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+	const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
 		event.preventDefault();
 		setStatus("");
 
@@ -54,9 +86,8 @@ export function ContactForm() {
 
 			setErrors({
 				name: fieldErrors.name?.[0],
-				email: fieldErrors.email?.[0],
-				company: fieldErrors.company?.[0],
-				message: fieldErrors.message?.[0],
+				topic: fieldErrors.topic?.[0],
+				contact: fieldErrors.contact?.[0],
 			});
 			return;
 		}
@@ -72,7 +103,6 @@ export function ContactForm() {
 				},
 				body: JSON.stringify(parsed.data),
 			});
-
 			const data = (await response.json()) as { message?: string };
 
 			if (!response.ok) {
@@ -86,71 +116,100 @@ export function ContactForm() {
 		} finally {
 			setIsSubmitting(false);
 		}
-	}
+	};
 
 	return (
-		<section className="rounded-[2rem] border border-white/10 bg-slate-950/40 p-8">
-			<div className="flex flex-col gap-2">
-				<p className="text-sm tracking-[0.3em] text-cyan-200/80 uppercase">Resend</p>
-				<h2 className="text-2xl font-semibold text-white">Contact form starter</h2>
-				<p className="text-sm leading-6 text-slate-300">
-					デザインだけ差し替えれば使えるように、問い合わせ API
-					と送信フローをすぐ確認できるフォームを同梱しています。
-				</p>
-			</div>
+		<section id="contact" className="w-full">
+			<HomeMainInner className="gap-block flex flex-col md:gap-[120px]">
+				<AnimatedSectionTitle title="Contact" titleClassName="md:text-section-lg md:font-black" />
 
-			<form className="mt-6 space-y-4" onSubmit={handleSubmit}>
-				<div className="grid gap-4 md:grid-cols-3">
-					{fields.map((field) => (
-						<label key={field.key} className="space-y-2">
-							<span className="text-sm text-slate-200">{field.label}</span>
-							<input
-								className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white transition outline-none focus:border-cyan-300"
-								name={field.key}
-								type={field.type}
-								value={values[field.key]}
-								onChange={handleChange}
-								placeholder={field.placeholder}
-							/>
-							{errors[field.key] ? (
-								<span className="text-xs text-rose-200">{errors[field.key]}</span>
-							) : null}
-						</label>
-					))}
-				</div>
-
-				<label className="block space-y-2">
-					<span className="text-sm text-slate-200">お問い合わせ内容</span>
-					<textarea
-						className="min-h-40 w-full rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white transition outline-none focus:border-cyan-300"
-						name="message"
-						value={values.message}
-						onChange={handleChange}
-						placeholder="導入したい機能や、デザイン実装で使いたい構成を入力してください。"
-					/>
-					{errors.message ? <span className="text-xs text-rose-200">{errors.message}</span> : null}
-				</label>
-
-				<div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-					<button
-						className="inline-flex min-w-44 items-center justify-center rounded-full bg-cyan-300 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200 disabled:cursor-not-allowed disabled:bg-slate-400"
-						type="submit"
-						disabled={isSubmitting}
+				<SectionReveal className="max-w-content-sp flex flex-col gap-6 md:max-w-full" y={24}>
+					<form
+						className="flex flex-col gap-0 md:grid md:grid-cols-2 md:gap-y-[120px]"
+						onSubmit={handleSubmit}
 					>
-						{isSubmitting ? "Sending..." : "Send inquiry"}
-					</button>
+						<div className="md:col-start-2 md:row-start-1 md:w-[384px] md:justify-self-end">
+							<ContactField error={errors[nameField.key]} label={nameField.label}>
+								<input
+									className="text-body text-primary placeholder:text-primary md:text-heading block w-full bg-transparent py-2 pr-8 outline-none"
+									name={nameField.key}
+									type={nameField.type}
+									value={values[nameField.key]}
+									onChange={handleChange}
+									placeholder={nameField.placeholder}
+								/>
+							</ContactField>
+						</div>
 
-					<p className="text-sm text-slate-400">
-						Resend のキー未設定時は API がエラーを返し、設定漏れにすぐ気づけます。
-					</p>
-				</div>
+						<div className="md:col-start-1 md:row-start-2 md:w-[512px]">
+							<ContactField error={errors.topic} label="Let's talk about">
+								<div className="relative">
+									<select
+										className={[
+											"text-body block w-full appearance-none bg-transparent py-2 pr-8 outline-none",
+											values.topic ? "text-primary" : "text-primary/80",
+										].join(" ")}
+										name="topic"
+										value={values.topic}
+										onChange={handleChange}
+									>
+										<option value="">Select</option>
+										{topicOptions.map((option) => (
+											<option key={option} value={option}>
+												{option}
+											</option>
+										))}
+									</select>
+									<ChevronDown
+										aria-hidden="true"
+										className="text-primary pointer-events-none absolute top-1/2 right-0 size-[14px] -translate-y-1/2 md:size-6"
+										strokeWidth={1.75}
+									/>
+								</div>
+							</ContactField>
+						</div>
 
-				{status ? (
-					<p className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-slate-100">
-						{status}
-					</p>
-				) : null}
-			</form>
+						<div className="flex flex-col gap-6 pt-2 md:col-start-2 md:row-start-3 md:w-[512px] md:flex-row md:items-end md:gap-0 md:justify-self-end md:pt-0">
+							<div className="md:w-[384px]">
+								<ContactField error={errors[contactField.key]} label={contactField.label}>
+									<input
+										className="text-body text-primary placeholder:text-primary md:text-heading block w-full bg-transparent py-2 pr-8 outline-none"
+										name={contactField.key}
+										type={contactField.type}
+										value={values[contactField.key]}
+										onChange={handleChange}
+										placeholder={contactField.placeholder}
+									/>
+								</ContactField>
+							</div>
+
+							<div className="flex flex-col gap-4 md:min-w-0 md:flex-1 md:gap-3">
+								<button
+									className="group border-primary bg-accent text-body text-primary md:text-heading inline-flex w-fit cursor-pointer items-center gap-2 rounded-[22px] border px-4 py-1.5 transition-opacity hover:opacity-80 disabled:cursor-not-allowed disabled:opacity-50 md:w-full md:justify-between md:px-6 md:py-2 md:leading-none"
+									type="submit"
+									disabled={isSubmitting}
+									onMouseEnter={() => setIsSubmitHovered(true)}
+									onMouseLeave={() => setIsSubmitHovered(false)}
+									onFocus={() => setIsSubmitHovered(true)}
+									onBlur={() => setIsSubmitHovered(false)}
+								>
+									<RollingText
+										text={isSubmitting ? "Sending..." : "Submit"}
+										isActive={isSubmitHovered}
+									/>
+									<ArrowRight
+										aria-hidden="true"
+										className="size-4 transition-transform duration-500 md:size-6"
+										strokeWidth={1.75}
+									/>
+								</button>
+
+								{status ? <p className="text-body text-primary">{status}</p> : null}
+							</div>
+						</div>
+					</form>
+				</SectionReveal>
+			</HomeMainInner>
 		</section>
 	);
 }

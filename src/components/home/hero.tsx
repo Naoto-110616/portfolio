@@ -663,14 +663,19 @@ function HeroRow({
 
 function ViewMore({ isInteractive = true }: { isInteractive?: boolean }) {
 	const { dragRef, dragConstraints } = useViewportDragConstraints<HTMLDivElement>();
+	const [isViewMoreHovered, setIsViewMoreHovered] = useState(false);
 
 	return (
-		<div className="text-primary w-fit">
+		<div
+			className="text-primary w-fit"
+			onMouseEnter={() => setIsViewMoreHovered(true)}
+			onMouseLeave={() => setIsViewMoreHovered(false)}
+		>
 			<HashLink
 				className="group border-primary bg-accent text-caption text-primary inline-flex items-center overflow-hidden rounded-[24px] border px-4 py-2 transition-opacity hover:opacity-80 md:hidden"
 				href="#work"
 			>
-				<RollingText text="Get to know me" />
+				<RollingText text="Get to know me" isActive={isViewMoreHovered} />
 			</HashLink>
 
 			<div className="text-caption text-primary flex w-full flex-col items-center justify-center gap-1 transition-opacity hover:opacity-80 md:hidden">
@@ -701,7 +706,7 @@ function ViewMore({ isInteractive = true }: { isInteractive?: boolean }) {
 							className="group border-primary bg-accent text-body text-primary inline-flex items-center overflow-hidden rounded-[24px] border px-4 py-2 leading-normal transition-opacity hover:opacity-80"
 							href="#work"
 						>
-							<RollingText text="Get to know me" />
+							<RollingText text="Get to know me" isActive={isViewMoreHovered} />
 						</HashLink>
 
 						<div className="text-caption text-primary flex w-full flex-col items-center justify-center gap-1 transition-opacity">
