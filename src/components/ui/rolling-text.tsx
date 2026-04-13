@@ -1,7 +1,7 @@
 "use client";
 
 import type { CSSProperties } from "react";
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 import { useReducedMotion } from "motion/react";
 
@@ -45,19 +45,19 @@ export function RollingText({
 			? stoppedCharacters
 			: createStoppedCharacters(characters.length);
 
-	const startRolling = () => {
+	const startRolling = useCallback(() => {
 		setIsRolling(true);
 		setStopAtNextCycle(false);
 		setStoppedCharacters(createStoppedCharacters(characters.length));
-	};
+	}, [characters.length]);
 
-	const requestStopAtNextCycle = () => {
+	const requestStopAtNextCycle = useCallback(() => {
 		if (!isRolling) {
 			return;
 		}
 
 		setStopAtNextCycle(true);
-	};
+	}, [isRolling]);
 
 	useEffect(() => {
 		if (isActive === undefined) {
@@ -76,7 +76,7 @@ export function RollingText({
 		return () => {
 			window.cancelAnimationFrame(frameId);
 		};
-	}, [isActive]);
+	}, [isActive, requestStopAtNextCycle, startRolling]);
 
 	const handleCharacterIteration = (index: number) => {
 		setStoppedCharacters((current) => {
