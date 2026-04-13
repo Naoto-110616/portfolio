@@ -99,10 +99,10 @@ export function Footer({
 					<hr className="border-accent-soft mt-2 md:mt-0" />
 				</div>
 
-				<SectionReveal className="pointer-events-none absolute bottom-[-18px] left-1/2 w-[clamp(360px,58vw,1024px)] -translate-x-1/2 md:bottom-[-50px] md:w-[1024px]">
+				<SectionReveal className="pointer-events-none absolute bottom-[-18px] left-1/2 w-screen max-w-screen -translate-x-1/2 md:bottom-[-84px]">
 					<Image
 						alt=""
-						className="block h-auto w-full max-w-[clamp(360px,58vw,1024px)] md:max-w-[1024px]"
+						className="block h-auto w-full max-w-screen"
 						height={309}
 						priority
 						src="/name.svg"
