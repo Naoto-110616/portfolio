@@ -35,6 +35,7 @@ const devtoolsMessage = `\n
 
 export async function generateMetadata(): Promise<Metadata> {
 	const metadataBase = new URL(env.NEXT_PUBLIC_SITE_URL);
+	const ogImage = "/ogp.png";
 
 	return {
 		title: staticSiteMetadata.title,
@@ -51,11 +52,18 @@ export async function generateMetadata(): Promise<Metadata> {
 			siteName: staticSiteMetadata.siteName,
 			locale: staticSiteMetadata.locale,
 			type: "website",
+			images: [
+				{
+					url: ogImage,
+					alt: staticSiteMetadata.title,
+				},
+			],
 		},
 		twitter: {
 			card: "summary_large_image",
 			title: staticSiteMetadata.title,
 			description: staticSiteMetadata.description,
+			images: [ogImage],
 		},
 		authors: [{ name: staticSiteMetadata.person.name }],
 		creator: staticSiteMetadata.person.name,
