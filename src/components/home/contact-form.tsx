@@ -180,7 +180,7 @@ export function ContactSection() {
 									<select
 										className={[
 											"text-body block w-full appearance-none bg-transparent py-2 pr-8 font-normal transition-all duration-300 outline-none",
-											values.topic ? "text-primary" : "text-primary/80",
+											"text-primary",
 										].join(" ")}
 										name="topic"
 										value={values.topic}
