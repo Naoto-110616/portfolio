@@ -12,6 +12,7 @@ type FrameProps = {
 	showBottomIndicator?: boolean;
 	isInteractive?: boolean;
 	bottomIndicatorLabel?: string;
+	isAlwaysVisible?: boolean;
 };
 
 export function Frame({
@@ -21,6 +22,7 @@ export function Frame({
 	showBottomIndicator = true,
 	isInteractive = true,
 	bottomIndicatorLabel,
+	isAlwaysVisible = false,
 }: FrameProps) {
 	const [isBottomIndicatorOn, setIsBottomIndicatorOn] = useState(false);
 	const [isSwitchDisabled, setIsSwitchDisabled] = useState(false);
@@ -39,7 +41,13 @@ export function Frame({
 				{content}
 			</div>
 
-			<div className="pointer-events-none absolute inset-0 z-20 opacity-0 transition-opacity group-focus-within:opacity-100 group-hover:opacity-100">
+			<div
+				className={`pointer-events-none absolute inset-0 z-20 ${
+					isAlwaysVisible
+						? "opacity-100"
+						: "opacity-0 transition-opacity group-focus-within:opacity-100 group-hover:opacity-100"
+				}`}
+			>
 				<div
 					aria-hidden="true"
 					className="bg-primary text-caption-sm text-accent absolute top-[-12px] left-[-8px] -translate-y-full rounded px-2 py-0.5 leading-none"

@@ -9,8 +9,7 @@ import {
 
 export const staticSiteMetadata = {
 	title: `${NAME_JA} | 大阪市平野区のフロントエンドエンジニア / ${NAME}`,
-	description:
-		`${NAME_JA}（${NAME_JA_HIRAGANA} / ${NAME_JA_KATAKANA}）のポートフォリオサイト。大阪市平野区を拠点に、サイト制作、LP制作、WordPressリプレイス、Next.jsを使った実装、表示速度や運用の最適化に対応しています。`,
+	description: `${NAME_JA}（${NAME_JA_HIRAGANA} / ${NAME_JA_KATAKANA}）のポートフォリオサイト。大阪市平野区を拠点に、サイト制作、LP制作、WordPressリプレイス、Next.jsを使った実装、表示速度や運用の最適化に対応しています。`,
 	siteName: `${NAME} Portfolio`,
 	locale: "ja_JP",
 	keywords: [

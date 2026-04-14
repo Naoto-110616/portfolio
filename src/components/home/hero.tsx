@@ -252,6 +252,7 @@ function TypingText({
 	animateOnValueChange = true,
 	scrambleOnValueChange = false,
 	onScrambleStateChange,
+	disableAnimation = false,
 }: {
 	value: string;
 	delay?: number;
@@ -260,9 +261,11 @@ function TypingText({
 	animateOnValueChange?: boolean;
 	scrambleOnValueChange?: boolean;
 	onScrambleStateChange?: (isScrambling: boolean) => void;
+	disableAnimation?: boolean;
 }) {
 	const shouldReduceMotion = useReducedMotion();
-	const [displayedText, setDisplayedText] = useState(shouldReduceMotion ? value : "");
+	const shouldRenderWithoutAnimation = shouldReduceMotion || disableAnimation;
+	const [displayedText, setDisplayedText] = useState(shouldRenderWithoutAnimation ? value : "");
 	const [isCaretVisible, setIsCaretVisible] = useState(false);
 	const [hasAnimatedOnce, setHasAnimatedOnce] = useState(false);
 	const [scrambledValue, setScrambledValue] = useState(value);
@@ -270,7 +273,16 @@ function TypingText({
 	const previousValueRef = useRef(value);
 
 	useEffect(() => {
-		if (shouldReduceMotion) {
+		if (!shouldRenderWithoutAnimation) {
+			return;
+		}
+
+		previousValueRef.current = value;
+		onScrambleStateChange?.(false);
+	}, [onScrambleStateChange, shouldRenderWithoutAnimation, value]);
+
+	useEffect(() => {
+		if (shouldRenderWithoutAnimation) {
 			return;
 		}
 
@@ -335,15 +347,16 @@ function TypingText({
 	}, [
 		animateOnValueChange,
 		delay,
+		disableAnimation,
 		hasAnimatedOnce,
 		shouldBlinkBeforeTyping,
-		shouldReduceMotion,
+		shouldRenderWithoutAnimation,
 		value,
 	]);
 
 	useEffect(() => {
 		if (
-			shouldReduceMotion ||
+			shouldRenderWithoutAnimation ||
 			!hasAnimatedOnce ||
 			animateOnValueChange ||
 			!scrambleOnValueChange ||
@@ -400,11 +413,11 @@ function TypingText({
 		hasAnimatedOnce,
 		onScrambleStateChange,
 		scrambleOnValueChange,
-		shouldReduceMotion,
+		shouldRenderWithoutAnimation,
 		value,
 	]);
 
-	if (shouldReduceMotion) {
+	if (shouldRenderWithoutAnimation) {
 		return <span className={className}>{value}</span>;
 	}
 
@@ -475,7 +488,44 @@ function useViewportDragConstraints<T extends HTMLDivElement>() {
 	return { dragRef, dragConstraints };
 }
 
-function HeroLabel({
+function useIsMobileViewport() {
+	const [isMobileViewport, setIsMobileViewport] = useState(false);
+
+	useEffect(() => {
+		const mediaQuery = window.matchMedia("(max-width: 767px)");
+		const updateIsMobileViewport = () => {
+			setIsMobileViewport(mediaQuery.matches);
+		};
+
+		updateIsMobileViewport();
+		mediaQuery.addEventListener("change", updateIsMobileViewport);
+
+		return () => {
+			mediaQuery.removeEventListener("change", updateIsMobileViewport);
+		};
+	}, []);
+
+	return isMobileViewport;
+}
+
+function MobileHeroLabel({
+	label,
+	isHighlighted = false,
+}: Pick<HeroItem, "label" | "isHighlighted">) {
+	return (
+		<div className="max-w-content-sp relative w-full md:hidden">
+			<p className="text-hero-sub text-foreground">{label}</p>
+			{isHighlighted ? (
+				<span
+					aria-hidden="true"
+					className="bg-accent absolute top-[24px] left-0 h-[6px] w-[45px]"
+				/>
+			) : null}
+		</div>
+	);
+}
+
+function DesktopHeroLabel({
 	label,
 	isHighlighted = false,
 	delay = 0,
@@ -487,11 +537,12 @@ function HeroLabel({
 	const labelRef = useRef<HTMLDivElement>(null);
 	const highlightRef = useRef<HTMLSpanElement>(null);
 	const shouldReduceMotion = useReducedMotion();
+	const shouldSkipAnimation = shouldReduceMotion;
 
 	useEffect(() => {
 		const element = labelRef.current;
 
-		if (!element || shouldReduceMotion) {
+		if (!element || shouldSkipAnimation) {
 			return;
 		}
 
@@ -513,12 +564,12 @@ function HeroLabel({
 		return () => {
 			tween.kill();
 		};
-	}, [delay, shouldReduceMotion]);
+	}, [delay, shouldSkipAnimation]);
 
 	useEffect(() => {
 		const element = highlightRef.current;
 
-		if (!element || !isHighlighted || shouldReduceMotion) {
+		if (!element || !isHighlighted || shouldSkipAnimation) {
 			return;
 		}
 
@@ -559,13 +610,14 @@ function HeroLabel({
 			revealTween.kill();
 			loopTimeline.kill();
 		};
-	}, [highlightDelay, isHighlighted, shouldReduceMotion]);
+	}, [highlightDelay, isHighlighted, shouldSkipAnimation]);
 
 	return (
 		<div
-			className="max-w-content-sp relative w-full"
+			className={`max-w-content-sp relative hidden w-full md:block ${
+				shouldSkipAnimation ? "" : "opacity-0"
+			}`.trim()}
 			ref={labelRef}
-			style={shouldReduceMotion ? undefined : { opacity: 0 }}
 		>
 			<p className="text-hero-sub text-foreground md:text-hero-sub-lg md:leading-none">{label}</p>
 			{isHighlighted ? (
@@ -574,7 +626,7 @@ function HeroLabel({
 					className="bg-accent absolute top-[24px] left-0 h-[6px] w-[45px] md:top-[36px] md:h-2 md:w-[84px]"
 					ref={highlightRef}
 					style={
-						shouldReduceMotion
+						shouldSkipAnimation
 							? undefined
 							: { transform: "scaleX(0)", transformOrigin: "left center" }
 					}
@@ -584,53 +636,62 @@ function HeroLabel({
 	);
 }
 
-function HeroValue({
+function MobileHeroValue({
 	value,
 	delay = 0,
-	isInteractive = true,
 }: Pick<HeroItem, "value"> & {
 	delay?: number;
+}) {
+	return (
+		<p className="max-w-content-sp text-foreground w-full text-[44px] leading-[1.4] font-bold md:hidden">
+			<TypingText
+				value={value}
+				delay={delay}
+				disableAnimation
+				shouldBlinkBeforeTyping={shouldBlinkCaretBeforeTyping(value)}
+			/>
+		</p>
+	);
+}
+
+function DesktopHeroValue({
+	value,
+	isInteractive = true,
+	delay = 0,
+}: Pick<HeroItem, "value"> & {
 	isInteractive?: boolean;
+	delay?: number;
 }) {
 	const { dragRef, dragConstraints } = useViewportDragConstraints<HTMLDivElement>();
 
 	return (
-		<>
-			<p className="max-w-content-sp text-foreground w-full text-[44px] leading-[1.4] font-bold md:hidden">
-				<TypingText
-					value={value}
-					delay={delay}
-					shouldBlinkBeforeTyping={shouldBlinkCaretBeforeTyping(value)}
-				/>
-			</p>
-			<motion.div
-				ref={dragRef}
-				className={`hidden w-fit md:block ${isInteractive ? "" : "pointer-events-none"}`}
-				drag={isInteractive}
-				dragConstraints={dragConstraints}
-				dragElastic={0}
-				dragMomentum={false}
-			>
-				<Frame isInteractive={isInteractive}>
-					{({ isSwitchedOn, setIsSwitchDisabled }) => {
-						const displayValue = getLocalizedHeroValue(value, isSwitchedOn);
+		<motion.div
+			ref={dragRef}
+			className={`hidden w-fit md:block ${isInteractive ? "" : "pointer-events-none"}`}
+			drag={isInteractive}
+			dragConstraints={dragConstraints}
+			dragElastic={0}
+			dragMomentum={false}
+		>
+			<Frame isInteractive={isInteractive}>
+				{({ isSwitchedOn, setIsSwitchDisabled }) => {
+					const displayValue = getLocalizedHeroValue(value, isSwitchedOn);
 
-						return (
-							<p className="text-hero-lg text-foreground leading-none font-black">
-								<TypingText
-									value={displayValue}
-									delay={delay}
-									animateOnValueChange={false}
-									onScrambleStateChange={setIsSwitchDisabled}
-									scrambleOnValueChange
-									shouldBlinkBeforeTyping={shouldBlinkCaretBeforeTyping(value)}
-								/>
-							</p>
-						);
-					}}
-				</Frame>
-			</motion.div>
-		</>
+					return (
+						<p className="text-hero-lg text-foreground leading-none font-black">
+							<TypingText
+								value={displayValue}
+								delay={delay}
+								animateOnValueChange={false}
+								onScrambleStateChange={setIsSwitchDisabled}
+								scrambleOnValueChange
+								shouldBlinkBeforeTyping={shouldBlinkCaretBeforeTyping(value)}
+							/>
+						</p>
+					);
+				}}
+			</Frame>
+		</motion.div>
 	);
 }
 
@@ -650,46 +711,50 @@ function HeroRow({
 }) {
 	return (
 		<div className="flex flex-col">
-			<HeroLabel
+			<MobileHeroLabel label={label} isHighlighted={isHighlighted} />
+			<DesktopHeroLabel
 				label={label}
 				isHighlighted={isHighlighted}
 				delay={labelDelay}
 				highlightDelay={highlightDelay}
 			/>
-			<HeroValue value={value} delay={valueDelay} isInteractive={isInteractive} />
+			<MobileHeroValue value={value} delay={valueDelay} />
+			<DesktopHeroValue value={value} delay={valueDelay} isInteractive={isInteractive} />
 		</div>
 	);
 }
 
-function ViewMore({ isInteractive = true }: { isInteractive?: boolean }) {
+function MobileViewMore() {
+	return (
+		<div className="md:hidden">
+			<HashLink
+				className="group border-primary bg-accent text-caption text-primary inline-flex items-center overflow-hidden rounded-[24px] border px-4 py-2 transition-opacity hover:opacity-80"
+				href="#work"
+			>
+				<RollingText text="Get to know me" isActive={false} />
+			</HashLink>
+
+			<div className="text-caption text-primary flex w-full flex-col items-center justify-center gap-1 transition-opacity hover:opacity-80">
+				<span>Or scroll down</span>
+				<ArrowRight aria-hidden="true" className="size-3 shrink-0" strokeWidth={2} />
+			</div>
+		</div>
+	);
+}
+
+function DesktopViewMore({ isInteractive = true }: { isInteractive?: boolean }) {
 	const { dragRef, dragConstraints } = useViewportDragConstraints<HTMLDivElement>();
 	const [isViewMoreHovered, setIsViewMoreHovered] = useState(false);
 
 	return (
 		<div
-			className="text-primary w-fit"
+			className="text-primary hidden w-fit md:block"
 			onMouseEnter={() => setIsViewMoreHovered(true)}
 			onMouseLeave={() => setIsViewMoreHovered(false)}
 		>
-			<HashLink
-				className="group border-primary bg-accent text-caption text-primary inline-flex items-center overflow-hidden rounded-[24px] border px-4 py-2 transition-opacity hover:opacity-80 md:hidden"
-				href="#work"
-			>
-				<RollingText text="Get to know me" isActive={isViewMoreHovered} />
-			</HashLink>
-
-			<div className="text-caption text-primary flex w-full flex-col items-center justify-center gap-1 transition-opacity hover:opacity-80 md:hidden">
-				<span>Or scroll down</span>
-				<ArrowRight
-					aria-hidden="true"
-					className="animate-scroll-cue-bounce size-3 shrink-0"
-					strokeWidth={2}
-				/>
-			</div>
-
 			<motion.div
 				ref={dragRef}
-				className={`hidden w-fit md:block ${isInteractive ? "" : "pointer-events-none"}`}
+				className={`w-fit ${isInteractive ? "" : "pointer-events-none"}`}
 				drag={isInteractive}
 				dragConstraints={dragConstraints}
 				dragElastic={0}
@@ -730,6 +795,10 @@ export function HeroSection({
 	onIntroComplete,
 }: HeroSectionProps) {
 	const shouldReduceMotion = useReducedMotion();
+	const isMobileViewport = useIsMobileViewport();
+	const shouldDisableHeroAnimation = shouldReduceMotion || isMobileViewport;
+	const shouldShowViewMore = introComplete || shouldDisableHeroAnimation;
+	const isDesktopInteractive = introComplete && !isMobileViewport;
 	const timings = getHeroRowTimings(items);
 
 	useEffect(() => {
@@ -737,7 +806,7 @@ export function HeroSection({
 			return;
 		}
 
-		if (shouldReduceMotion) {
+		if (shouldDisableHeroAnimation) {
 			onIntroComplete();
 			return;
 		}
@@ -754,7 +823,7 @@ export function HeroSection({
 		return () => {
 			delayedCall.kill();
 		};
-	}, [introComplete, onIntroComplete, shouldReduceMotion, timings]);
+	}, [introComplete, onIntroComplete, shouldDisableHeroAnimation, timings]);
 
 	return (
 		<section className="flex w-full flex-col items-center gap-[56px] md:gap-[20px]">
@@ -765,7 +834,7 @@ export function HeroSection({
 							<div key={`${item.label}-${item.value}-${index}`}>
 								<HeroRow
 									{...item}
-									isInteractive={introComplete}
+									isInteractive={isDesktopInteractive}
 									labelDelay={timings[index]?.labelDelay}
 									valueDelay={timings[index]?.valueDelay}
 									highlightDelay={timings[index]?.highlightDelay}
@@ -778,12 +847,13 @@ export function HeroSection({
 
 			<div
 				className={
-					introComplete
+					shouldShowViewMore
 						? "translate-y-0 opacity-100 transition-all delay-300 duration-500 ease-out"
 						: "pointer-events-none translate-y-2 opacity-0 transition-all duration-500 ease-out"
 				}
 			>
-				<ViewMore isInteractive={introComplete} />
+				<MobileViewMore />
+				<DesktopViewMore isInteractive={isDesktopInteractive} />
 			</div>
 		</section>
 	);
