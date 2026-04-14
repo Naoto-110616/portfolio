@@ -110,7 +110,7 @@ export function ProjectWorkCard(props: ProjectWorkCardProps) {
 				</div>
 			</div>
 
-			<p className="text-caption text-foreground md:text-caption leading-none md:self-start">
+			<p className="text-caption text-foreground md:text-caption leading-normal md:self-start">
 				{stack}
 			</p>
 		</div>
