@@ -96,7 +96,7 @@ export function Footer({
 							<Link className="text-inherit" iconClassName="-rotate-90" label={backToTopLabel} />
 						</HashLink>
 					</div>
-					<hr className="border-accent-soft mt-2 md:mt-0" />
+					<hr className="border-accent-soft" />
 				</div>
 
 				<SectionReveal className="pointer-events-none absolute bottom-[-18px] left-1/2 w-screen max-w-screen -translate-x-1/2 md:bottom-[-84px]">

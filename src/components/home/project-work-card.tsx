@@ -88,7 +88,7 @@ export function ProjectWorkCard(props: ProjectWorkCardProps) {
 					</a>
 				</div>
 
-				<p className="text-caption text-primary md:text-body max-w-[180.5px] leading-normal md:max-w-[256px]">
+				<p className="text-caption text-primary md:text-body leading-normal md:max-w-[256px]">
 					{description}
 				</p>
 

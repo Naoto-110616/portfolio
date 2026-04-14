@@ -736,7 +736,7 @@ function MobileViewMore() {
 
 			<div className="text-caption text-primary flex w-full flex-col items-center justify-center gap-1 transition-opacity hover:opacity-80">
 				<span>Or scroll down</span>
-				<ArrowRight aria-hidden="true" className="size-3 shrink-0" strokeWidth={2} />
+				<ArrowRight aria-hidden="true" className="size-3 shrink-0 rotate-90" strokeWidth={2} />
 			</div>
 		</div>
 	);

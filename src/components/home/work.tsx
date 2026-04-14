@@ -16,7 +16,7 @@ export function WorkSection({ title = "Work", items = [] }: WorkSectionProps) {
 			<HomeMainInner className="md:gap-section-lg flex flex-col gap-6">
 				<AnimatedSectionTitle title={title} titleClassName="md:text-section-lg md:font-black" />
 
-				<GsapStaggerGroup className="md:gap-block-lg flex flex-col gap-6">
+				<GsapStaggerGroup className="gap-block-lg flex flex-col">
 					{items.map((item, index) => (
 						<div key={`${item.title}-${index}`} data-gsap-item>
 							<ProjectWorkCard {...item} />

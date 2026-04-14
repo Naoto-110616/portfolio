@@ -19,7 +19,7 @@ export const revalidate = 300;
 
 export default async function HomePage() {
 	return (
-		<div id="top" className="relative flex flex-col gap-[56px]">
+		<div id="top" className="relative flex flex-col gap-[28px] md:gap-[56px]">
 			<LayoutGuides lineClassName="bg-foreground/10" />
 			<HomeIntro
 				headerLinks={staticHeaderContent.links}
