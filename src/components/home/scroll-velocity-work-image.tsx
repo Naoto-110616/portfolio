@@ -111,43 +111,8 @@ export function ScrollVelocityWorkImage({
 	}, [filterId]);
 
 	return (
-		<div ref={rootRef} className={`bg-surface relative overflow-hidden ${className ?? ""}`}>
-			<svg aria-hidden="true" className="pointer-events-none absolute h-0 w-0 overflow-hidden">
-				<filter
-					id={filterId}
-					x="-20%"
-					y="-20%"
-					width="140%"
-					height="140%"
-					colorInterpolationFilters="sRGB"
-				>
-					<feTurbulence
-						ref={turbulenceRef}
-						baseFrequency={`${BASE_FREQUENCY_X} ${BASE_FREQUENCY_Y}`}
-						numOctaves="2"
-						result="noise"
-						seed="2"
-						type="fractalNoise"
-					/>
-					<feDisplacementMap
-						ref={displacementRef}
-						in="SourceGraphic"
-						in2="noise"
-						scale="0"
-						xChannelSelector="R"
-						yChannelSelector="B"
-					/>
-				</filter>
-			</svg>
-
-			<div
-				ref={imageWrapRef}
-				className="absolute inset-0 will-change-transform"
-				style={{
-					filter: `url(#${filterId})`,
-					transform: "translate3d(0, 0, 0) scale(1.04)",
-				}}
-			>
+		<>
+			<div className={`bg-surface relative overflow-hidden md:hidden ${className ?? ""}`}>
 				<Image
 					fill
 					alt={alt}
@@ -156,6 +121,56 @@ export function ScrollVelocityWorkImage({
 					src={imageUrl}
 				/>
 			</div>
-		</div>
+
+			<div
+				ref={rootRef}
+				className={`bg-surface relative hidden overflow-hidden md:block ${className ?? ""}`}
+			>
+				<svg aria-hidden="true" className="pointer-events-none absolute h-0 w-0 overflow-hidden">
+					<filter
+						id={filterId}
+						x="-20%"
+						y="-20%"
+						width="140%"
+						height="140%"
+						colorInterpolationFilters="sRGB"
+					>
+						<feTurbulence
+							ref={turbulenceRef}
+							baseFrequency={`${BASE_FREQUENCY_X} ${BASE_FREQUENCY_Y}`}
+							numOctaves="2"
+							result="noise"
+							seed="2"
+							type="fractalNoise"
+						/>
+						<feDisplacementMap
+							ref={displacementRef}
+							in="SourceGraphic"
+							in2="noise"
+							scale="0"
+							xChannelSelector="R"
+							yChannelSelector="B"
+						/>
+					</filter>
+				</svg>
+
+				<div
+					ref={imageWrapRef}
+					className="absolute inset-0 will-change-transform"
+					style={{
+						filter: `url(#${filterId})`,
+						transform: "translate3d(0, 0, 0) scale(1.04)",
+					}}
+				>
+					<Image
+						fill
+						alt={alt}
+						className="object-cover"
+						sizes="(min-width: 768px) 496px, 100vw"
+						src={imageUrl}
+					/>
+				</div>
+			</div>
+		</>
 	);
 }
