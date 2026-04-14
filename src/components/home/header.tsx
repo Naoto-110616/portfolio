@@ -48,7 +48,7 @@ export function Header({
 			>
 				<div className="md:hidden">
 					<div className="gap-stack-lg flex items-start justify-between">
-						<p className="text-caption-sm leading-none">{sinceLabel}</p>
+						<p className="text-caption-sm leading-[24px] md:leading-none">{sinceLabel}</p>
 
 						<CurrentTime className="gap-stack wide:gap-[14px] text-caption-sm text-right leading-none" />
 					</div>

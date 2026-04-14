@@ -30,16 +30,27 @@ type ContactFieldProps = {
 	children: ReactNode;
 };
 
+function FieldErrorMessage({ error, className = "" }: { error?: string; className?: string }) {
+	return (
+		<span
+			aria-live="polite"
+			className={`text-caption text-primary mt-2 min-h-6 leading-tight md:mt-0 md:min-h-0 ${className}`.trim()}
+		>
+			{error ?? "\u00A0"}
+		</span>
+	);
+}
+
 function ContactField({ label, error, children }: ContactFieldProps) {
 	return (
-		<label className="flex w-full flex-col gap-4">
+		<label className="flex w-full flex-col md:gap-4">
 			<span className="text-heading text-foreground md:text-[72px] md:leading-none md:font-bold">
 				{label}
 			</span>
 			<div className="after:bg-primary hover:before:bg-primary focus-within:before:bg-foreground relative before:pointer-events-none before:absolute before:inset-x-0 before:bottom-0 before:h-0.5 before:bg-transparent before:transition-colors before:content-[''] after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:content-[''] focus-within:after:opacity-0 hover:after:opacity-0">
 				{children}
 			</div>
-			{error ? <span className="text-caption text-primary">{error}</span> : null}
+			<FieldErrorMessage error={error} />
 		</label>
 	);
 }
@@ -145,9 +156,9 @@ export function ContactSection() {
 			<HomeMainInner className="gap-block flex flex-col md:gap-[120px]">
 				<AnimatedSectionTitle title="Contact" titleClassName="md:text-section-lg md:font-black" />
 
-				<SectionReveal className="max-w-content-sp flex flex-col gap-6 md:max-w-full" y={24}>
+				<SectionReveal className="flex flex-col gap-6" y={24}>
 					<form
-						className="flex flex-col gap-0 md:grid md:grid-cols-2 md:gap-y-[120px]"
+						className="flex flex-col gap-10 md:grid md:grid-cols-2 md:gap-y-[120px]"
 						onSubmit={handleSubmit}
 					>
 						<div className="md:col-start-2 md:row-start-1 md:w-[384px] md:justify-self-end">
@@ -168,7 +179,7 @@ export function ContactSection() {
 								<div className="relative">
 									<select
 										className={[
-											"text-body block w-full appearance-none bg-transparent py-2 pr-8 transition-all duration-300 outline-none",
+											"text-body block w-full appearance-none bg-transparent py-2 pr-8 font-normal transition-all duration-300 outline-none",
 											values.topic ? "text-primary" : "text-primary/80",
 										].join(" ")}
 										name="topic"
@@ -184,35 +195,36 @@ export function ContactSection() {
 									</select>
 									<ChevronDown
 										aria-hidden="true"
-										className="text-primary pointer-events-none absolute top-1/2 right-0 size-[14px] -translate-y-1/2 md:size-6"
+										className="text-primary pointer-events-none absolute top-1/2 right-0 size-5 -translate-y-1/2 md:size-6"
 										strokeWidth={1.75}
 									/>
 								</div>
 							</ContactField>
 						</div>
 
-						<div className="flex flex-col gap-6 pt-2 md:col-start-2 md:row-start-3 md:grid md:w-[512px] md:grid-cols-[384px_minmax(0,1fr)] md:grid-rows-[auto_auto] md:gap-x-0 md:gap-y-3 md:justify-self-end md:pt-0">
-							<label className="flex w-full flex-col gap-4 md:col-start-1 md:row-start-1">
-								<span className="text-heading text-foreground md:text-[72px] md:leading-none md:font-bold">
-									{contactField.label}
-								</span>
-								<div className="after:bg-primary hover:before:bg-primary focus-within:before:bg-foreground relative before:pointer-events-none before:absolute before:inset-x-0 before:bottom-0 before:h-0.5 before:bg-transparent before:transition-colors before:content-[''] after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:content-[''] focus-within:after:opacity-0 hover:after:opacity-0">
-									<input
-										className="text-body text-primary placeholder:text-primary md:text-heading block w-full bg-transparent py-2 pr-8 outline-none"
-										name={contactField.key}
-										type={contactField.type}
-										value={values[contactField.key]}
-										onChange={handleChange}
-										placeholder={contactField.placeholder}
-									/>
-								</div>
-							</label>
+						<div className="flex flex-col gap-12 md:col-start-2 md:row-start-3 md:grid md:w-[512px] md:grid-cols-[384px_minmax(0,1fr)] md:grid-rows-[auto_auto] md:gap-6 md:gap-x-0 md:gap-y-3 md:justify-self-end">
+							<div className="flex flex-col gap-0 md:contents">
+								<label className="flex w-full flex-col md:col-start-1 md:row-start-1 md:gap-4">
+									<span className="text-heading text-foreground md:text-[72px] md:leading-none md:font-bold">
+										{contactField.label}
+									</span>
+									<div className="after:bg-primary hover:before:bg-primary focus-within:before:bg-foreground relative before:pointer-events-none before:absolute before:inset-x-0 before:bottom-0 before:h-0.5 before:bg-transparent before:transition-colors before:content-[''] after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:content-[''] focus-within:after:opacity-0 hover:after:opacity-0">
+										<input
+											className="text-body text-primary placeholder:text-primary md:text-heading block w-full bg-transparent py-2 pr-8 outline-none"
+											name={contactField.key}
+											type={contactField.type}
+											value={values[contactField.key]}
+											onChange={handleChange}
+											placeholder={contactField.placeholder}
+										/>
+									</div>
+								</label>
 
-							{errors[contactField.key] ? (
-								<p className="text-caption text-primary md:col-start-1 md:row-start-2">
-									{errors[contactField.key]}
-								</p>
-							) : null}
+								<FieldErrorMessage
+									className="md:col-start-1 md:row-start-2"
+									error={errors[contactField.key]}
+								/>
+							</div>
 
 							<div className="flex flex-col gap-4 md:col-start-2 md:row-start-1 md:min-w-0 md:gap-3 md:self-end">
 								<button

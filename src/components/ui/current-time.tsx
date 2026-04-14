@@ -73,9 +73,11 @@ export function CurrentTime({ className = "" }: CurrentTimeProps) {
 
 	return (
 		<div className={classes}>
-			<p suppressHydrationWarning>{currentTime.dateLabel}</p>
+			<p suppressHydrationWarning className="leading-[24px]">
+				{currentTime.dateLabel}
+			</p>
 			<p
-				className="inline-flex items-baseline whitespace-nowrap tabular-nums"
+				className="inline-flex items-baseline leading-[24px] whitespace-nowrap tabular-nums"
 				suppressHydrationWarning
 			>
 				<span>{currentTime.hourLabel}</span>
