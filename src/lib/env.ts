@@ -27,6 +27,11 @@ const serverEnvSchema = z.object({
 	CONTACT_TO_EMAIL: optionalEmail,
 	GEMINI_API_KEY: optionalString,
 	GEMINI_MODEL: optionalString,
+	OCTOPUSENERGY_API_KEY: optionalString,
+	OCTOPUSENERGY_REFRESH_TOKEN: optionalString,
+	OCTOPUSENERGY_GRAPHQL_URL: optionalUrl,
+	OCTOPUSENERGY_ACCOUNT_NUMBER: optionalString,
+	OCTOPUSENERGY_TIMEZONE: optionalString,
 });
 
 const parsedEnv = serverEnvSchema.safeParse({
@@ -42,6 +47,11 @@ const parsedEnv = serverEnvSchema.safeParse({
 	CONTACT_TO_EMAIL: process.env.CONTACT_TO_EMAIL,
 	GEMINI_API_KEY: process.env.GEMINI_API_KEY,
 	GEMINI_MODEL: process.env.GEMINI_MODEL,
+	OCTOPUSENERGY_API_KEY: process.env.OCTOPUSENERGY_API_KEY,
+	OCTOPUSENERGY_REFRESH_TOKEN: process.env.OCTOPUSENERGY_REFRESH_TOKEN,
+	OCTOPUSENERGY_GRAPHQL_URL: process.env.OCTOPUSENERGY_GRAPHQL_URL,
+	OCTOPUSENERGY_ACCOUNT_NUMBER: process.env.OCTOPUSENERGY_ACCOUNT_NUMBER,
+	OCTOPUSENERGY_TIMEZONE: process.env.OCTOPUSENERGY_TIMEZONE,
 });
 
 if (!parsedEnv.success) {
@@ -59,6 +69,7 @@ export const integrationStatus = {
 	hasContentfulManagement: Boolean(env.CONTENTFUL_SPACE_ID && env.CONTENTFUL_MANAGEMENT_TOKEN),
 	hasResend: Boolean(env.RESEND_API_KEY && env.RESEND_FROM_EMAIL && env.CONTACT_TO_EMAIL),
 	hasGemini: Boolean(env.GEMINI_API_KEY),
+	hasOctopusEnergy: Boolean(env.OCTOPUSENERGY_REFRESH_TOKEN || env.OCTOPUSENERGY_API_KEY),
 };
 
 export function requireContentfulEnv() {

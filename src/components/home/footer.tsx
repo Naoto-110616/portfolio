@@ -10,6 +10,7 @@ import { HashLink } from "@/components/ui/hash-link";
 import { Link } from "@/components/ui/link";
 import { RollingText } from "@/components/ui/rolling-text";
 import { LayoutGuides } from "../ui/layout-guides";
+import { ElectricityMonth } from "./electricity-month";
 
 export type FooterLinkItem = {
 	label: string;
@@ -75,15 +76,17 @@ export function Footer({
 							))}
 						</StaggerGroup>
 
-						<CurrentTime className="wide:col-span-1 wide:gap-[14px] text-caption text-accent md:text-body col-span-2" />
+						<CurrentTime className="wide:col-span-1 wide:gap-[14px] text-caption text-accent md:text-body col-span-1" />
 					</div>
-
-					<a
-						className="group text-caption text-accent md:text-body w-fit transition-opacity hover:opacity-80 md:leading-normal"
-						href={`mailto:${email}`}
-					>
-						<RollingText text={email} />
-					</a>
+					<div className="grid grid-cols-8">
+						<a
+							className="group text-caption text-accent md:text-body col-span-6 w-fit transition-opacity hover:opacity-80 md:leading-normal"
+							href={`mailto:${email}`}
+						>
+							<RollingText text={email} />
+						</a>
+						<ElectricityMonth className="col-span-2" />
+					</div>
 				</div>
 				<div>
 					<div className="text-caption text-accent md:text-body grid grid-cols-8 items-center justify-between md:leading-normal">
