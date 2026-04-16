@@ -60,7 +60,7 @@ export function Footer({
 			<div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-40" />
 
 			<SectionReveal
-				className="max-w-content relative mx-auto flex flex-col gap-6 px-[4.071%] pt-4 pb-16 md:gap-10 md:px-0 md:pt-10 md:pb-40"
+				className="max-w-content relative mx-auto flex flex-col gap-12 px-[4.071%] pt-4 pb-16 md:gap-10 md:px-0 md:pt-10 md:pb-40"
 				y={40}
 			>
 				<div className="gap-block flex flex-col">
@@ -76,16 +76,16 @@ export function Footer({
 							))}
 						</StaggerGroup>
 
-						<CurrentTime className="wide:col-span-1 wide:gap-[14px] text-caption text-accent md:text-body col-span-1" />
+						<CurrentTime className="wide:col-span-1 wide:gap-[14px] text-caption text-accent md:text-body col-span-2" />
 					</div>
-					<div className="grid grid-cols-8">
+					<div className="wide:grid-cols-8 wide:gap-0 gap-block grid grid-cols-6">
 						<a
 							className="group text-caption text-accent md:text-body col-span-6 w-fit transition-opacity hover:opacity-80 md:leading-normal"
 							href={`mailto:${email}`}
 						>
 							<RollingText text={email} />
 						</a>
-						<ElectricityMonth className="col-span-2" />
+						<ElectricityMonth className="wide:col-span-2 col-span-6" />
 					</div>
 				</div>
 				<div>

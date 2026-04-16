@@ -55,7 +55,7 @@ export function ElectricityMonth({ className = "" }: { className?: string }) {
 		maximumFractionDigits: 1,
 	}).format(data.kwh);
 
-	const classes = ["text-caption text-accent leading-[24px] text-base", className]
+	const classes = ["text-caption text-accent leading-[24px] text-sm wide:text-base", className]
 		.filter(Boolean)
 		.join(" ");
 
