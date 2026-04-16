@@ -82,7 +82,10 @@ const OBTAIN_MUTATION = `
 	}
 `;
 
-async function obtainKrakenToken(graphqlUrl: string, input: Record<string, unknown>): Promise<string> {
+async function obtainKrakenToken(
+	graphqlUrl: string,
+	input: Record<string, unknown>,
+): Promise<string> {
 	const data = await graphqlRequest<ObtainResult>(graphqlUrl, {
 		query: OBTAIN_MUTATION,
 		variables: { input },

@@ -75,8 +75,8 @@ export const integrationStatus = {
 	hasGemini: Boolean(env.GEMINI_API_KEY),
 	hasOctopusEnergy: Boolean(
 		env.OCTOPUSENERGY_REFRESH_TOKEN ||
-			env.OCTOPUSENERGY_API_KEY ||
-			(env.OCTOPUSENERGY_EMAIL && env.OCTOPUSENERGY_PASSWORD),
+		env.OCTOPUSENERGY_API_KEY ||
+		(env.OCTOPUSENERGY_EMAIL && env.OCTOPUSENERGY_PASSWORD),
 	),
 };
 

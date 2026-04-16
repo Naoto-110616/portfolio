@@ -103,8 +103,8 @@ export async function fetchThisMonthElectricityKwh(
 	);
 
 	const readings =
-		data.account?.properties?.flatMap((p) =>
-			p?.electricitySupplyPoints?.flatMap((s) => s?.halfHourlyReadings ?? []) ?? [],
+		data.account?.properties?.flatMap(
+			(p) => p?.electricitySupplyPoints?.flatMap((s) => s?.halfHourlyReadings ?? []) ?? [],
 		) ?? [];
 
 	const rows = readings.filter((r): r is NonNullable<typeof r> => Boolean(r));
