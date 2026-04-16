@@ -1,8 +1,8 @@
 {
-	"name": "zexora",
+	"name": "portfolio",
 	"version": "1.0.0",
 	"private": true,
-	"description": "Next.js starter package with Contentful, Resend, and TanStack Query.",
+	"description": "Personal portfolio site built with Next.js, Contentful, Resend, and TanStack Query.",
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
@@ -15,11 +15,11 @@
 		"contentful:migrate": "tsx contentful/scripts/migrate.ts --yes"
 	},
 	"keywords": [
+		"portfolio",
 		"nextjs",
 		"contentful",
 		"resend",
-		"tanstack-query",
-		"starter"
+		"tanstack-query"
 	],
 	"author": "",
 	"license": "ISC",
