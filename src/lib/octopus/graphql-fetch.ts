@@ -1,9 +1,20 @@
-type GraphqlError = { message: string };
+type GraphqlError = { message: string; extensions?: { errorCode?: string } };
 
 type GraphqlResponse<T> = {
 	data?: T;
 	errors?: GraphqlError[];
 };
+
+export class OctopusGraphqlError extends Error {
+	readonly errorCodes: string[];
+
+	constructor(message: string, errorCodes: string[]) {
+		super(message);
+		this.name = "OctopusGraphqlError";
+		this.errorCodes = errorCodes;
+		Object.setPrototypeOf(this, OctopusGraphqlError.prototype);
+	}
+}
 
 export async function graphqlRequest<T>(
 	graphqlUrl: string,
@@ -30,7 +41,11 @@ export async function graphqlRequest<T>(
 	}
 
 	if (json.errors?.length) {
-		throw new Error(json.errors.map((e) => e.message).join("; "));
+		const errorCodes = json.errors.flatMap((e) => {
+			const code = e.extensions?.errorCode;
+			return code ? [code] : [];
+		});
+		throw new OctopusGraphqlError(json.errors.map((e) => e.message).join("; "), errorCodes);
 	}
 
 	if (!json.data) {
