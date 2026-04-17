@@ -31,33 +31,40 @@ export function useGsapStagger(
 			return;
 		}
 
-		const context = gsap.context(() => {
-			const elements = gsap.utils.toArray<HTMLElement>(selector);
+		const mm = gsap.matchMedia();
+		mm.add("(min-width: 768px)", () => {
+			const context = gsap.context(() => {
+				const elements = gsap.utils.toArray<HTMLElement>(selector);
 
-			if (!elements.length) {
-				return;
-			}
+				if (!elements.length) {
+					return;
+				}
 
-			gsap.fromTo(
-				elements,
-				{ autoAlpha: 0, y },
-				{
-					autoAlpha: 1,
-					y: 0,
-					duration,
-					stagger,
-					ease: "power3.out",
-					scrollTrigger: {
-						trigger: scope.current,
-						start,
-						once: true,
+				gsap.fromTo(
+					elements,
+					{ autoAlpha: 0, y },
+					{
+						autoAlpha: 1,
+						y: 0,
+						duration,
+						stagger,
+						ease: "power3.out",
+						scrollTrigger: {
+							trigger: scope.current,
+							start,
+							once: true,
+						},
 					},
-				},
-			);
-		}, scope);
+				);
+			}, scope);
+
+			return () => {
+				context.revert();
+			};
+		});
 
 		return () => {
-			context.revert();
+			mm.revert();
 		};
 	}, [scope, selector, start, stagger, y, duration]);
 }

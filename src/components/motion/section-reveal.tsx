@@ -3,6 +3,8 @@
 import { ReactNode } from "react";
 import { motion, useReducedMotion } from "motion/react";
 
+import { useDesktopMotion } from "@/hooks/use-desktop-motion";
+
 type SectionRevealProps = {
 	children: ReactNode;
 	className?: string;
@@ -21,12 +23,18 @@ export function SectionReveal({
 	once = true,
 }: SectionRevealProps) {
 	const shouldReduceMotion = useReducedMotion();
+	const isDesktop = useDesktopMotion();
+	const allowMotion = isDesktop && !shouldReduceMotion;
+
+	if (!allowMotion) {
+		return <div className={className}>{children}</div>;
+	}
 
 	return (
 		<motion.div
 			className={className}
-			initial={shouldReduceMotion ? false : { opacity: 0, y }}
-			whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+			initial={{ opacity: 0, y }}
+			whileInView={{ opacity: 1, y: 0 }}
 			viewport={{ amount, once }}
 			transition={{
 				duration: 0.8,

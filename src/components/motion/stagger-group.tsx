@@ -3,6 +3,8 @@
 import { ReactNode } from "react";
 import { motion, useReducedMotion } from "motion/react";
 
+import { useDesktopMotion } from "@/hooks/use-desktop-motion";
+
 type StaggerGroupProps = {
 	children: ReactNode;
 	className?: string;
@@ -23,13 +25,22 @@ export function StaggerGroup({
 	as = "div",
 }: StaggerGroupProps) {
 	const shouldReduceMotion = useReducedMotion();
+	const isDesktop = useDesktopMotion();
+	const allowMotion = isDesktop && !shouldReduceMotion;
 	const Component = as === "ul" ? motion.ul : motion.div;
+
+	if (!allowMotion) {
+		if (as === "ul") {
+			return <ul className={className}>{children}</ul>;
+		}
+		return <div className={className}>{children}</div>;
+	}
 
 	return (
 		<Component
 			className={className}
-			initial={shouldReduceMotion ? false : "hidden"}
-			whileInView={shouldReduceMotion ? undefined : "visible"}
+			initial="hidden"
+			whileInView="visible"
 			viewport={{ amount, once }}
 			variants={{
 				hidden: {},

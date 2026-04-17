@@ -6,6 +6,7 @@ import { useEffect, useMemo, useRef, useState, type SubmitEvent } from "react";
 
 import { HomeMainInner } from "@/components/ui/home-main-inner";
 import { SectionTitle } from "@/components/ui/section-title";
+import { useDesktopMotion } from "@/hooks/use-desktop-motion";
 import { stripMarkdownDecorations } from "@/lib/chat/format-reply";
 import { getRandomChatUnavailableReply } from "@/lib/chat/unavailable-replies";
 
@@ -39,6 +40,8 @@ export function ChatSection({
 	const [messages, setMessages] = useState<ChatMessage[]>([]);
 	const [isLoading, setIsLoading] = useState(false);
 	const shouldReduceMotion = useReducedMotion();
+	const isDesktop = useDesktopMotion();
+	const allowUiMotion = isDesktop && !shouldReduceMotion;
 	const chatLogRef = useRef<HTMLDivElement | null>(null);
 
 	const remainingCount = useMemo(() => `${prompt.length}/${MAX_PROMPT_LENGTH}`, [prompt]);
@@ -53,9 +56,9 @@ export function ChatSection({
 
 		chatLog.scrollTo({
 			top: chatLog.scrollHeight,
-			behavior: shouldReduceMotion ? "auto" : "smooth",
+			behavior: allowUiMotion ? "smooth" : "auto",
 		});
-	}, [messages, isLoading, shouldReduceMotion, showChatLog]);
+	}, [allowUiMotion, messages, isLoading, showChatLog]);
 
 	async function handleSubmit(event: SubmitEvent<HTMLFormElement>) {
 		event.preventDefault();
@@ -130,8 +133,8 @@ export function ChatSection({
 		<motion.section
 			id="chat"
 			className="w-full"
-			initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
-			whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+			initial={allowUiMotion ? { opacity: 0, y: 24 } : false}
+			whileInView={allowUiMotion ? { opacity: 1, y: 0 } : undefined}
 			viewport={{ amount: 0.2, once: true }}
 			transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
 		>
@@ -200,7 +203,7 @@ export function ChatSection({
 						<motion.div
 							className="border-primary bg-accent flex items-center gap-3 overflow-hidden rounded-[25px] border-2 px-4 py-3 md:rounded-[30px] md:px-5 md:py-4"
 							transition={{ duration: 0.2 }}
-							whileHover={shouldReduceMotion ? undefined : { y: -2 }}
+							whileHover={allowUiMotion ? { y: -2 } : undefined}
 						>
 							<input
 								id="chat-prompt"
@@ -220,13 +223,13 @@ export function ChatSection({
 								className="bg-primary text-accent flex size-6 shrink-0 items-center justify-center rounded-full transition-opacity hover:opacity-80 disabled:pointer-events-none disabled:opacity-50 md:size-[30px] md:rounded-[16px]"
 								disabled={isLoading || prompt.trim().length === 0}
 								type="submit"
-								whileHover={shouldReduceMotion || isLoading ? undefined : { scale: 1.06 }}
-								whileTap={shouldReduceMotion || isLoading ? undefined : { scale: 0.94 }}
+								whileHover={allowUiMotion && !isLoading ? { scale: 1.06 } : undefined}
+								whileTap={allowUiMotion && !isLoading ? { scale: 0.94 } : undefined}
 							>
 								{isLoading ? (
 									<Loader2
 										aria-hidden="true"
-										className="size-4 animate-spin md:size-6"
+										className="size-4 md:animate-spin md:size-6"
 										strokeWidth={2}
 									/>
 								) : (

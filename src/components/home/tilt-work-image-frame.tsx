@@ -44,13 +44,16 @@ export function TiltWorkImageFrame({
 	const [tiltEnabled, setTiltEnabled] = useState(false);
 
 	useLayoutEffect(() => {
+		const desktop = window.matchMedia("(min-width: 768px)");
 		const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
 		const coarse = window.matchMedia("(pointer: coarse)");
-		const update = () => setTiltEnabled(!reduce.matches && !coarse.matches);
+		const update = () => setTiltEnabled(desktop.matches && !reduce.matches && !coarse.matches);
 		update();
+		desktop.addEventListener("change", update);
 		reduce.addEventListener("change", update);
 		coarse.addEventListener("change", update);
 		return () => {
+			desktop.removeEventListener("change", update);
 			reduce.removeEventListener("change", update);
 			coarse.removeEventListener("change", update);
 		};

@@ -39,82 +39,89 @@ export function ScrollVelocityWorkImage({
 	const filterId = useId().replace(/:/g, "");
 
 	useLayoutEffect(() => {
-		const root = rootRef.current;
-		const imageWrap = imageWrapRef.current;
-		const turbulence = turbulenceRef.current;
-		const displacement = displacementRef.current;
-
-		if (!root || !imageWrap || !turbulence || !displacement) {
-			return;
-		}
-
 		if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
 			return;
 		}
 
-		const state = {
-			frequencyX: BASE_FREQUENCY_X,
-			frequencyY: BASE_FREQUENCY_Y,
-			displacement: 0,
-			yPercent: 0,
-			skewY: 0,
-		};
+		const mm = gsap.matchMedia();
+		mm.add("(min-width: 768px)", () => {
+			const root = rootRef.current;
+			const imageWrap = imageWrapRef.current;
+			const turbulence = turbulenceRef.current;
+			const displacement = displacementRef.current;
 
-		const render = () => {
-			turbulence.setAttribute(
-				"baseFrequency",
-				`${state.frequencyX.toFixed(4)} ${state.frequencyY.toFixed(4)}`,
-			);
-			displacement.setAttribute("scale", state.displacement.toFixed(2));
-			imageWrap.style.transform = `translate3d(0, ${state.yPercent.toFixed(2)}%, 0) scale(1.04) skewY(${state.skewY.toFixed(2)}deg)`;
-		};
+			if (!root || !imageWrap || !turbulence || !displacement) {
+				return;
+			}
 
-		const relax = () => {
-			gsap.to(state, {
+			const state = {
 				frequencyX: BASE_FREQUENCY_X,
 				frequencyY: BASE_FREQUENCY_Y,
 				displacement: 0,
 				yPercent: 0,
 				skewY: 0,
-				duration: 0.85,
-				ease: "power3.out",
-				overwrite: true,
-				onUpdate: render,
-			});
-		};
+			};
 
-		render();
+			const render = () => {
+				turbulence.setAttribute(
+					"baseFrequency",
+					`${state.frequencyX.toFixed(4)} ${state.frequencyY.toFixed(4)}`,
+				);
+				displacement.setAttribute("scale", state.displacement.toFixed(2));
+				imageWrap.style.transform = `translate3d(0, ${state.yPercent.toFixed(2)}%, 0) scale(1.04) skewY(${state.skewY.toFixed(2)}deg)`;
+			};
 
-		const trigger = ScrollTrigger.create({
-			trigger: root,
-			start: "top bottom",
-			end: "bottom top",
-			onUpdate(self) {
-				const velocity = self.getVelocity();
-				const intensity = gsap.utils.clamp(0, 1, Math.abs(velocity) / 2200);
-				const direction = velocity < 0 ? -1 : 1;
-
+			const relax = () => {
 				gsap.to(state, {
-					frequencyX: gsap.utils.interpolate(BASE_FREQUENCY_X, MAX_FREQUENCY_X, intensity),
-					frequencyY: gsap.utils.interpolate(BASE_FREQUENCY_Y, MAX_FREQUENCY_Y, intensity),
-					displacement: gsap.utils.interpolate(0, MAX_DISPLACEMENT, intensity),
-					yPercent: direction * MAX_IMAGE_SHIFT * intensity,
-					skewY: direction * MAX_SKEW * intensity,
-					duration: 0.18,
-					ease: "power2.out",
+					frequencyX: BASE_FREQUENCY_X,
+					frequencyY: BASE_FREQUENCY_Y,
+					displacement: 0,
+					yPercent: 0,
+					skewY: 0,
+					duration: 0.85,
+					ease: "power3.out",
 					overwrite: true,
 					onUpdate: render,
-					onComplete: relax,
 				});
-			},
+			};
+
+			render();
+
+			const trigger = ScrollTrigger.create({
+				trigger: root,
+				start: "top bottom",
+				end: "bottom top",
+				onUpdate(self) {
+					const velocity = self.getVelocity();
+					const intensity = gsap.utils.clamp(0, 1, Math.abs(velocity) / 2200);
+					const direction = velocity < 0 ? -1 : 1;
+
+					gsap.to(state, {
+						frequencyX: gsap.utils.interpolate(BASE_FREQUENCY_X, MAX_FREQUENCY_X, intensity),
+						frequencyY: gsap.utils.interpolate(BASE_FREQUENCY_Y, MAX_FREQUENCY_Y, intensity),
+						displacement: gsap.utils.interpolate(0, MAX_DISPLACEMENT, intensity),
+						yPercent: direction * MAX_IMAGE_SHIFT * intensity,
+						skewY: direction * MAX_SKEW * intensity,
+						duration: 0.18,
+						ease: "power2.out",
+						overwrite: true,
+						onUpdate: render,
+						onComplete: relax,
+					});
+				},
+			});
+
+			return () => {
+				gsap.killTweensOf(state);
+				trigger.kill();
+				turbulence.setAttribute("baseFrequency", `${BASE_FREQUENCY_X} ${BASE_FREQUENCY_Y}`);
+				displacement.setAttribute("scale", "0");
+				imageWrap.style.transform = "translate3d(0, 0, 0) scale(1.04)";
+			};
 		});
 
 		return () => {
-			gsap.killTweensOf(state);
-			trigger.kill();
-			turbulence.setAttribute("baseFrequency", `${BASE_FREQUENCY_X} ${BASE_FREQUENCY_Y}`);
-			displacement.setAttribute("scale", "0");
-			imageWrap.style.transform = "translate3d(0, 0, 0) scale(1.04)";
+			mm.revert();
 		};
 	}, [filterId]);
 

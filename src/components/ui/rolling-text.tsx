@@ -5,6 +5,8 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 
 import { useReducedMotion } from "motion/react";
 
+import { useDesktopMotion } from "@/hooks/use-desktop-motion";
+
 type RollingTextProps = {
 	text: string;
 	className?: string;
@@ -29,6 +31,7 @@ export function RollingText({
 	isActive,
 }: RollingTextProps) {
 	const shouldReduceMotion = useReducedMotion();
+	const isDesktop = useDesktopMotion();
 	const characters = useMemo(() => Array.from(text), [text]);
 	const rowHeightEm = 1.2;
 	const rowStyle = {
@@ -99,7 +102,7 @@ export function RollingText({
 		});
 	};
 
-	if (shouldReduceMotion) {
+	if (shouldReduceMotion || !isDesktop) {
 		return <span className={className}>{text}</span>;
 	}
 

@@ -141,26 +141,26 @@ export function AboutSection({
 						invalidateOnRefresh: true,
 					});
 				}
-			});
 
-			const panels = gsap.utils.toArray<HTMLElement>("[data-about-scroll-panel]", root);
+				const panels = gsap.utils.toArray<HTMLElement>("[data-about-scroll-panel]", root);
 
-			panels.forEach((panel) => {
-				gsap.fromTo(
-					panel,
-					{ autoAlpha: 0, y: 28 },
-					{
-						autoAlpha: 1,
-						y: 0,
-						duration: 0.85,
-						ease: "power3.out",
-						scrollTrigger: {
-							trigger: panel,
-							start: "top 88%",
-							toggleActions: "play none none none",
+				panels.forEach((panel) => {
+					gsap.fromTo(
+						panel,
+						{ autoAlpha: 0, y: 28 },
+						{
+							autoAlpha: 1,
+							y: 0,
+							duration: 0.85,
+							ease: "power3.out",
+							scrollTrigger: {
+								trigger: panel,
+								start: "top 88%",
+								toggleActions: "play none none none",
+							},
 						},
-					},
-				);
+					);
+				});
 			});
 		}, root);
 

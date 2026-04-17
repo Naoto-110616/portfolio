@@ -2,6 +2,8 @@
 
 import { motion, useReducedMotion } from "motion/react";
 
+import { useDesktopMotion } from "@/hooks/use-desktop-motion";
+
 type LayoutGuidesProps = {
 	lineClassName?: string;
 };
@@ -37,41 +39,37 @@ export function LayoutGuides({ lineClassName = "bg-foreground/10" }: LayoutGuide
 		.filter(Boolean)
 		.join(" ");
 	const shouldReduceMotion = useReducedMotion();
+	const isDesktop = useDesktopMotion();
+	const allowLineMotion = isDesktop && !shouldReduceMotion;
 	const animationDuration = 0.7;
 	const animationDelayStep = 0.08;
 
-	const renderGuideLine = (offset: string, index: number, key: string) => (
-		<motion.span
-			key={key}
-			animate={
-				shouldReduceMotion
-					? undefined
-					: {
-							scaleY: 1,
-							opacity: 1,
-						}
-			}
-			className={lineClasses}
-			initial={
-				shouldReduceMotion
-					? false
-					: {
-							scaleY: 0,
-							opacity: 0,
-						}
-			}
-			style={{ left: offset, originY: 0 }}
-			transition={
-				shouldReduceMotion
-					? undefined
-					: {
-							duration: animationDuration,
-							delay: index * animationDelayStep,
-							ease: [0.22, 1, 0.36, 1],
-						}
-			}
-		/>
-	);
+	const renderGuideLine = (offset: string, index: number, key: string) => {
+		if (!allowLineMotion) {
+			return <span key={key} className={lineClasses} style={{ left: offset, transformOrigin: "0 0" }} />;
+		}
+
+		return (
+			<motion.span
+				key={key}
+				animate={{
+					scaleY: 1,
+					opacity: 1,
+				}}
+				className={lineClasses}
+				initial={{
+					scaleY: 0,
+					opacity: 0,
+				}}
+				style={{ left: offset, originY: 0 }}
+				transition={{
+					duration: animationDuration,
+					delay: index * animationDelayStep,
+					ease: [0.22, 1, 0.36, 1],
+				}}
+			/>
+		);
+	};
 
 	return (
 		<div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-full">

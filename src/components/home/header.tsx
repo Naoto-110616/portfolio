@@ -1,11 +1,12 @@
 "use client";
 
-import { HashLink } from "@/components/ui/hash-link";
-import { CurrentTime } from "@/components/ui/current-time";
-import { RollingText } from "@/components/ui/rolling-text";
 import { SectionReveal } from "@/components/motion/section-reveal";
 import { StaggerGroup } from "@/components/motion/stagger-group";
 import { StaggerItem } from "@/components/motion/stagger-item";
+import { HashLink } from "@/components/ui/hash-link";
+import { CurrentTime } from "@/components/ui/current-time";
+import { RollingText } from "@/components/ui/rolling-text";
+import { useDesktopMotion } from "@/hooks/use-desktop-motion";
 
 export type HeaderLink = {
 	label: string;
@@ -34,12 +35,18 @@ export function Header({
 	links = defaultLinks,
 	isVisible = true,
 }: HeaderProps) {
+	const isDesktop = useDesktopMotion();
+
 	return (
 		<header
 			className={
 				isVisible
-					? "translate-y-0 opacity-100 transition-all delay-200 duration-500 ease-out"
-					: "pointer-events-none translate-y-2 opacity-0 transition-all duration-500 ease-out"
+					? isDesktop
+						? "translate-y-0 opacity-100 transition-all delay-200 duration-500 ease-out"
+						: "translate-y-0 opacity-100"
+					: isDesktop
+						? "pointer-events-none translate-y-2 opacity-0 transition-all duration-500 ease-out"
+						: "pointer-events-none translate-y-2 opacity-0"
 			}
 		>
 			<SectionReveal

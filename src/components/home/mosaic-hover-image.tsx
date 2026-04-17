@@ -130,11 +130,16 @@ export function MosaicHoverImage({
 	const [motionOk, setMotionOk] = useState(true);
 
 	useEffect(() => {
-		const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-		const update = () => setMotionOk(!mq.matches);
+		const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+		const desktop = window.matchMedia("(min-width: 768px)");
+		const update = () => setMotionOk(desktop.matches && !reduce.matches);
 		update();
-		mq.addEventListener("change", update);
-		return () => mq.removeEventListener("change", update);
+		desktop.addEventListener("change", update);
+		reduce.addEventListener("change", update);
+		return () => {
+			desktop.removeEventListener("change", update);
+			reduce.removeEventListener("change", update);
+		};
 	}, []);
 
 	const drawCoverToOffscreen = useCallback(() => {

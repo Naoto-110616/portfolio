@@ -9,6 +9,7 @@ import { NAME, NAME_JA } from "@/constans/const";
 import { Frame } from "@/components/ui/frame";
 import { HashLink } from "@/components/ui/hash-link";
 import { RollingText } from "@/components/ui/rolling-text";
+import { useDesktopMotion } from "@/hooks/use-desktop-motion";
 
 export type HeroItem = {
 	label: string;
@@ -264,7 +265,8 @@ function TypingText({
 	disableAnimation?: boolean;
 }) {
 	const shouldReduceMotion = useReducedMotion();
-	const shouldRenderWithoutAnimation = shouldReduceMotion || disableAnimation;
+	const isDesktop = useDesktopMotion();
+	const shouldRenderWithoutAnimation = shouldReduceMotion || disableAnimation || !isDesktop;
 	const [displayedText, setDisplayedText] = useState(shouldRenderWithoutAnimation ? value : "");
 	const [isCaretVisible, setIsCaretVisible] = useState(false);
 	const [hasAnimatedOnce, setHasAnimatedOnce] = useState(false);
@@ -488,26 +490,6 @@ function useViewportDragConstraints<T extends HTMLDivElement>() {
 	return { dragRef, dragConstraints };
 }
 
-function useIsMobileViewport() {
-	const [isMobileViewport, setIsMobileViewport] = useState(false);
-
-	useEffect(() => {
-		const mediaQuery = window.matchMedia("(max-width: 767px)");
-		const updateIsMobileViewport = () => {
-			setIsMobileViewport(mediaQuery.matches);
-		};
-
-		updateIsMobileViewport();
-		mediaQuery.addEventListener("change", updateIsMobileViewport);
-
-		return () => {
-			mediaQuery.removeEventListener("change", updateIsMobileViewport);
-		};
-	}, []);
-
-	return isMobileViewport;
-}
-
 function MobileHeroLabel({
 	label,
 	isHighlighted = false,
@@ -537,7 +519,8 @@ function DesktopHeroLabel({
 	const labelRef = useRef<HTMLDivElement>(null);
 	const highlightRef = useRef<HTMLSpanElement>(null);
 	const shouldReduceMotion = useReducedMotion();
-	const shouldSkipAnimation = shouldReduceMotion;
+	const isDesktop = useDesktopMotion();
+	const shouldSkipAnimation = shouldReduceMotion || !isDesktop;
 
 	useEffect(() => {
 		const element = labelRef.current;
@@ -663,12 +646,13 @@ function DesktopHeroValue({
 	delay?: number;
 }) {
 	const { dragRef, dragConstraints } = useViewportDragConstraints<HTMLDivElement>();
+	const isDesktop = useDesktopMotion();
 
 	return (
 		<motion.div
 			ref={dragRef}
 			className={`hidden w-fit md:block ${isInteractive ? "" : "pointer-events-none"}`}
-			drag={isInteractive}
+			drag={isInteractive && isDesktop}
 			dragConstraints={dragConstraints}
 			dragElastic={0}
 			dragMomentum={false}
@@ -745,6 +729,7 @@ function MobileViewMore() {
 function DesktopViewMore({ isInteractive = true }: { isInteractive?: boolean }) {
 	const { dragRef, dragConstraints } = useViewportDragConstraints<HTMLDivElement>();
 	const [isViewMoreHovered, setIsViewMoreHovered] = useState(false);
+	const isDesktop = useDesktopMotion();
 
 	return (
 		<div
@@ -755,7 +740,7 @@ function DesktopViewMore({ isInteractive = true }: { isInteractive?: boolean }) 
 			<motion.div
 				ref={dragRef}
 				className={`w-fit ${isInteractive ? "" : "pointer-events-none"}`}
-				drag={isInteractive}
+				drag={isInteractive && isDesktop}
 				dragConstraints={dragConstraints}
 				dragElastic={0}
 				dragMomentum={false}
@@ -795,10 +780,10 @@ export function HeroSection({
 	onIntroComplete,
 }: HeroSectionProps) {
 	const shouldReduceMotion = useReducedMotion();
-	const isMobileViewport = useIsMobileViewport();
-	const shouldDisableHeroAnimation = shouldReduceMotion || isMobileViewport;
+	const isDesktop = useDesktopMotion();
+	const shouldDisableHeroAnimation = shouldReduceMotion || !isDesktop;
 	const shouldShowViewMore = introComplete || shouldDisableHeroAnimation;
-	const isDesktopInteractive = introComplete && !isMobileViewport;
+	const isDesktopInteractive = introComplete && isDesktop;
 	const timings = getHeroRowTimings(items);
 
 	useEffect(() => {
@@ -848,8 +833,12 @@ export function HeroSection({
 			<div
 				className={
 					shouldShowViewMore
-						? "translate-y-0 opacity-100 transition-all delay-300 duration-500 ease-out"
-						: "pointer-events-none translate-y-2 opacity-0 transition-all duration-500 ease-out"
+						? isDesktop
+							? "translate-y-0 opacity-100 transition-all delay-300 duration-500 ease-out"
+							: "translate-y-0 opacity-100"
+						: isDesktop
+							? "pointer-events-none translate-y-2 opacity-0 transition-all duration-500 ease-out"
+							: "pointer-events-none translate-y-2 opacity-0"
 				}
 			>
 				<MobileViewMore />
