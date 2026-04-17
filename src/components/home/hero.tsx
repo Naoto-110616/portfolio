@@ -265,8 +265,7 @@ function TypingText({
 	disableAnimation?: boolean;
 }) {
 	const shouldReduceMotion = useReducedMotion();
-	const isDesktop = useDesktopMotion();
-	const shouldRenderWithoutAnimation = shouldReduceMotion || disableAnimation || !isDesktop;
+	const shouldRenderWithoutAnimation = shouldReduceMotion || disableAnimation;
 	const [displayedText, setDisplayedText] = useState(shouldRenderWithoutAnimation ? value : "");
 	const [isCaretVisible, setIsCaretVisible] = useState(false);
 	const [hasAnimatedOnce, setHasAnimatedOnce] = useState(false);
@@ -630,7 +629,6 @@ function MobileHeroValue({
 			<TypingText
 				value={value}
 				delay={delay}
-				disableAnimation
 				shouldBlinkBeforeTyping={shouldBlinkCaretBeforeTyping(value)}
 			/>
 		</p>
@@ -664,9 +662,11 @@ function DesktopHeroValue({
 					return (
 						<p className="text-hero-lg text-foreground leading-none font-black">
 							<TypingText
+								key={isDesktop ? "desktop" : "narrow"}
 								value={displayValue}
 								delay={delay}
 								animateOnValueChange={false}
+								disableAnimation={!isDesktop}
 								onScrambleStateChange={setIsSwitchDisabled}
 								scrambleOnValueChange
 								shouldBlinkBeforeTyping={shouldBlinkCaretBeforeTyping(value)}
@@ -781,7 +781,7 @@ export function HeroSection({
 }: HeroSectionProps) {
 	const shouldReduceMotion = useReducedMotion();
 	const isDesktop = useDesktopMotion();
-	const shouldDisableHeroAnimation = shouldReduceMotion || !isDesktop;
+	const shouldDisableHeroAnimation = shouldReduceMotion;
 	const shouldShowViewMore = introComplete || shouldDisableHeroAnimation;
 	const isDesktopInteractive = introComplete && isDesktop;
 	const timings = getHeroRowTimings(items);
