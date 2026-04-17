@@ -1,14 +1,20 @@
 "use client";
 
 import Image from "next/image";
+import type { ReactNode } from "react";
 import { useId, useLayoutEffect, useRef } from "react";
 
+import { TiltWorkImageFrame } from "@/components/home/tilt-work-image-frame";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 
 type ScrollVelocityWorkImageProps = {
 	imageUrl: string;
 	alt: string;
 	className?: string;
+	/** MD 以上でチルト枠内に重ねる（従来の角バッジの代わり） */
+	tiltOverlay?: ReactNode;
+	/** チルト追従ツールチップ（MD・ポインタ精密時のみ） */
+	tiltCaption?: string;
 };
 
 const BASE_FREQUENCY_X = 0.006;
@@ -23,6 +29,8 @@ export function ScrollVelocityWorkImage({
 	imageUrl,
 	alt,
 	className,
+	tiltOverlay,
+	tiltCaption,
 }: ScrollVelocityWorkImageProps) {
 	const rootRef = useRef<HTMLDivElement>(null);
 	const imageWrapRef = useRef<HTMLDivElement>(null);
@@ -110,6 +118,25 @@ export function ScrollVelocityWorkImage({
 		};
 	}, [filterId]);
 
+	const imageWrap = (
+		<div
+			ref={imageWrapRef}
+			className="absolute inset-0 will-change-transform"
+			style={{
+				filter: `url(#${filterId})`,
+				transform: "translate3d(0, 0, 0) scale(1.04)",
+			}}
+		>
+			<Image
+				fill
+				alt={alt}
+				className="object-cover"
+				sizes="(min-width: 768px) 496px, 100vw"
+				src={imageUrl}
+			/>
+		</div>
+	);
+
 	return (
 		<>
 			<div className={`bg-surface relative overflow-hidden md:hidden ${className ?? ""}`}>
@@ -120,11 +147,14 @@ export function ScrollVelocityWorkImage({
 					sizes="(min-width: 768px) 496px, 100vw"
 					src={imageUrl}
 				/>
+				{tiltOverlay ? (
+					<div className="pointer-events-none absolute top-2 right-2 z-10">{tiltOverlay}</div>
+				) : null}
 			</div>
 
 			<div
 				ref={rootRef}
-				className={`bg-surface relative hidden overflow-hidden md:block ${className ?? ""}`}
+				className={`bg-surface relative hidden md:block ${tiltOverlay ? "overflow-visible" : "overflow-hidden"} ${className ?? ""}`}
 			>
 				<svg aria-hidden="true" className="pointer-events-none absolute h-0 w-0 overflow-hidden">
 					<filter
@@ -154,22 +184,13 @@ export function ScrollVelocityWorkImage({
 					</filter>
 				</svg>
 
-				<div
-					ref={imageWrapRef}
-					className="absolute inset-0 will-change-transform"
-					style={{
-						filter: `url(#${filterId})`,
-						transform: "translate3d(0, 0, 0) scale(1.04)",
-					}}
-				>
-					<Image
-						fill
-						alt={alt}
-						className="object-cover"
-						sizes="(min-width: 768px) 496px, 100vw"
-						src={imageUrl}
-					/>
-				</div>
+				{tiltOverlay ? (
+					<TiltWorkImageFrame overlay={tiltOverlay} caption={tiltCaption ?? ""}>
+						{imageWrap}
+					</TiltWorkImageFrame>
+				) : (
+					imageWrap
+				)}
 			</div>
 		</>
 	);

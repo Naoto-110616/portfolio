@@ -53,6 +53,12 @@ export function ProjectWorkCard(props: ProjectWorkCardProps) {
 
 	const previewAlt = expandable ? props.imageAlt : `${title} preview`;
 
+	const tagOverlay = (
+		<span className="border-primary bg-accent text-caption-sm text-primary border px-1 py-1 leading-none">
+			{tag}
+		</span>
+	);
+
 	const closedStyle = (
 		expandable && !open ? { "--card-height": `${props.closedImageHeight}px` } : undefined
 	) as CSSProperties | undefined;
@@ -117,16 +123,14 @@ export function ProjectWorkCard(props: ProjectWorkCardProps) {
 	);
 
 	const imageBlock = (
-		<div className="bg-surface relative aspect-361/203 w-full overflow-hidden md:aspect-auto md:h-[279px] md:w-[496px] md:shrink-0">
+		<div className="bg-surface relative aspect-361/203 w-full overflow-hidden md:aspect-auto md:h-[279px] md:w-[496px] md:shrink-0 md:overflow-visible">
 			<ScrollVelocityWorkImage
 				alt={previewAlt}
 				className="absolute inset-0 z-0 h-full w-full"
 				imageUrl={imageUrl}
+				tiltCaption={title}
+				tiltOverlay={tagOverlay}
 			/>
-
-			<div className="border-primary bg-accent text-caption-sm text-primary absolute top-2 right-2 z-10 border px-1 py-1 leading-none">
-				{tag}
-			</div>
 		</div>
 	);
 
@@ -151,20 +155,18 @@ export function ProjectWorkCard(props: ProjectWorkCardProps) {
 					type="button"
 					aria-controls={panelId}
 					aria-expanded="false"
-					className="block w-full cursor-pointer overflow-hidden text-left transition-opacity hover:opacity-90"
+					className="block w-full cursor-pointer overflow-hidden text-left transition-opacity hover:opacity-90 md:overflow-visible"
 					style={closedStyle}
 					onClick={() => (controlledExpandable ? props.onOpenRequest?.() : setInternalOpen(true))}
 				>
-					<div className="bg-surface relative h-(--card-height) w-full overflow-hidden md:h-[130px]">
+					<div className="bg-surface relative h-(--card-height) w-full overflow-hidden md:h-[130px] md:overflow-visible">
 						<ScrollVelocityWorkImage
 							alt={previewAlt}
 							className="absolute inset-0 z-0 h-full w-full"
 							imageUrl={imageUrl}
+							tiltCaption={title}
+							tiltOverlay={tagOverlay}
 						/>
-
-						<div className="border-primary bg-accent text-caption-sm text-primary absolute top-2 right-2 z-10 border px-1 py-1 leading-none">
-							{tag}
-						</div>
 					</div>
 					<span className="sr-only">{title}の詳細を開く</span>
 				</button>
