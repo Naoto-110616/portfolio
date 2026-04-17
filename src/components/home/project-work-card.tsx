@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
+import { motion, useReducedMotion } from "motion/react";
 import type { CSSProperties } from "react";
 import { useId, useLayoutEffect, useState } from "react";
 
@@ -42,14 +43,20 @@ function isExpandable(props: ProjectWorkCardProps): props is ProjectWorkCardExpa
 	return props.variant === "expandable";
 }
 
+const expandEase = [0.22, 1, 0.36, 1] as const;
+const expandTransition = { duration: 0.45, ease: expandEase };
+
 export function ProjectWorkCard(props: ProjectWorkCardProps) {
 	const expandable = isExpandable(props);
 	const controlledExpandable = expandable && props.expanded !== undefined;
 	const [internalOpen, setInternalOpen] = useState(false);
 	const open = controlledExpandable ? Boolean(props.expanded) : internalOpen;
 	const panelId = useId();
+	const reduceMotion = useReducedMotion();
+	const allowExpandMotion = !reduceMotion;
 
 	const { title, description, with: withName, published, role, stack, tag, imageUrl, href } = props;
+	const mediaLayoutId = `project-work-media-${href}`;
 
 	const previewAlt = expandable ? props.imageAlt : `${title} preview`;
 
@@ -122,16 +129,30 @@ export function ProjectWorkCard(props: ProjectWorkCardProps) {
 		</div>
 	);
 
+	const imageMediaInner = (
+		<ScrollVelocityWorkImage
+			alt={previewAlt}
+			className="absolute inset-0 z-0 h-full w-full"
+			imageUrl={imageUrl}
+			tiltCaption={title}
+			tiltOverlay={tagOverlay}
+		/>
+	);
+
 	const imageBlock = (
 		<div className="bg-surface relative aspect-361/203 w-full overflow-hidden md:aspect-auto md:h-[279px] md:w-[496px] md:shrink-0 md:overflow-visible">
-			<ScrollVelocityWorkImage
-				alt={previewAlt}
-				className="absolute inset-0 z-0 h-full w-full"
-				imageUrl={imageUrl}
-				tiltCaption={title}
-				tiltOverlay={tagOverlay}
-			/>
+			{imageMediaInner}
 		</div>
+	);
+
+	const expandableOpenImage = (
+		<motion.div
+			className="bg-surface relative aspect-361/203 w-full overflow-hidden md:aspect-auto md:h-[279px] md:w-[496px] md:shrink-0 md:overflow-visible"
+			layoutId={allowExpandMotion ? mediaLayoutId : undefined}
+			transition={{ layout: expandTransition }}
+		>
+			{imageMediaInner}
+		</motion.div>
 	);
 
 	const openArticle = (
@@ -139,8 +160,19 @@ export function ProjectWorkCard(props: ProjectWorkCardProps) {
 			className="flex flex-col gap-6 md:flex-row md:items-center md:gap-4"
 			id={expandable ? panelId : undefined}
 		>
-			{imageBlock}
-			{detailBlock}
+			{expandable ? expandableOpenImage : imageBlock}
+			{expandable ? (
+				<motion.div
+					className="w-full md:min-w-0 md:flex-1"
+					initial={allowExpandMotion ? { opacity: 0, y: 18 } : false}
+					animate={{ opacity: 1, y: 0 }}
+					transition={allowExpandMotion ? expandTransition : { duration: 0 }}
+				>
+					{detailBlock}
+				</motion.div>
+			) : (
+				detailBlock
+			)}
 		</article>
 	);
 
@@ -150,7 +182,11 @@ export function ProjectWorkCard(props: ProjectWorkCardProps) {
 
 	if (!open) {
 		return (
-			<div className="w-full md:mx-auto md:w-[512px]">
+			<motion.div
+				className="w-full md:mx-auto md:w-[512px]"
+				layout={allowExpandMotion}
+				transition={{ layout: expandTransition }}
+			>
 				<button
 					type="button"
 					aria-controls={panelId}
@@ -159,25 +195,27 @@ export function ProjectWorkCard(props: ProjectWorkCardProps) {
 					style={closedStyle}
 					onClick={() => (controlledExpandable ? props.onOpenRequest?.() : setInternalOpen(true))}
 				>
-					<div className="bg-surface relative h-(--card-height) w-full overflow-hidden md:h-[130px] md:overflow-visible">
-						<ScrollVelocityWorkImage
-							alt={previewAlt}
-							className="absolute inset-0 z-0 h-full w-full"
-							imageUrl={imageUrl}
-							tiltCaption={title}
-							tiltOverlay={tagOverlay}
-						/>
-					</div>
+					<motion.div
+						className="bg-surface relative h-(--card-height) w-full overflow-hidden md:h-[130px] md:overflow-visible"
+						layoutId={allowExpandMotion ? mediaLayoutId : undefined}
+						transition={{ layout: expandTransition }}
+					>
+						{imageMediaInner}
+					</motion.div>
 					<span className="sr-only">{title}の詳細を開く</span>
 				</button>
-			</div>
+			</motion.div>
 		);
 	}
 
 	const showClose = expandable && props.showCloseButton !== false;
 
 	return (
-		<div className="w-full">
+		<motion.div
+			className="w-full"
+			layout={allowExpandMotion}
+			transition={{ layout: expandTransition }}
+		>
 			{showClose ? (
 				<div className="mb-2 flex justify-end md:mb-3">
 					<button
@@ -194,6 +232,6 @@ export function ProjectWorkCard(props: ProjectWorkCardProps) {
 				</div>
 			) : null}
 			{openArticle}
-		</div>
+		</motion.div>
 	);
 }
