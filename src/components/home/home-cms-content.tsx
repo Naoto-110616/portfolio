@@ -7,7 +7,7 @@ import { Footer } from "@/components/home/footer";
 import { MoreProjectsSection } from "@/components/home/more-projects";
 import { ServicesSection } from "@/components/home/services";
 import { WorkSection } from "@/components/home/work";
-import { fallbackProjects, fallbackServices, fallbackSnsLinks } from "@/lib/contentful/fallbacks";
+import { fallbackProjects, fallbackServices } from "@/lib/contentful/fallbacks";
 import { mapProjectsToMoreProjectItems, mapProjectsToWorkItems } from "@/lib/contentful/mappers";
 import type { ProjectsResult, ServicesResult, SnsLinksResult } from "@/lib/contentful/types";
 import { staticFooterContent, staticSectionTitles } from "@/lib/site-content";
@@ -57,11 +57,15 @@ export function HomeServicesContent() {
 	return <ServicesSection items={services.items} title={staticSectionTitles.services} />;
 }
 
-export function HomeFooterContent() {
-	const { data: snsLinks = fallbackSnsLinks } = useQuery({
+type HomeFooterContentProps = {
+	initialSnsLinks: SnsLinksResult;
+};
+
+export function HomeFooterContent({ initialSnsLinks }: HomeFooterContentProps) {
+	const { data: snsLinks = initialSnsLinks } = useQuery({
 		queryKey: ["contentful", "sns-links"],
 		queryFn: () => fetchContentfulResource<SnsLinksResult>("/api/contentful/sns-links"),
-		placeholderData: fallbackSnsLinks,
+		initialData: initialSnsLinks,
 	});
 
 	return (

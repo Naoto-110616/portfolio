@@ -35,7 +35,12 @@ export function SectionReveal({
 			className={className}
 			initial={{ opacity: 0, y }}
 			whileInView={{ opacity: 1, y: 0 }}
-			viewport={{ amount, once }}
+			viewport={{
+				amount,
+				once,
+				// スクロール復元で下端から表示されるときも交差判定が安定するよう余白を付ける
+				margin: "160px 0px",
+			}}
 			transition={{
 				duration: 0.8,
 				delay,
