@@ -20,7 +20,45 @@ export type MoreProjectItem = Omit<
 type MoreProjectsSectionProps = {
 	title?: string;
 	items?: MoreProjectItem[];
+	/** placeholder 表示中（取得完了までスケルトンで高さを確保） */
+	isPlaceholder?: boolean;
 };
+
+/** 実コンテンツと同じ段組・寸法を目安にしたスケルトン（取得後のレイアウトジャンプを抑える） */
+function MoreProjectsSkeleton() {
+	return (
+		<div
+			aria-busy="true"
+			aria-hidden
+			className="flex w-full flex-col gap-8 md:gap-10"
+		>
+			<div className="w-full max-w-[220px] shrink-0 self-start">
+				<div className="border-primary/10 bg-surface aspect-square w-full animate-pulse rounded-2xl border ring-1 ring-black/5" />
+			</div>
+
+			<div className="w-full shrink-0">
+				<div className="flex flex-col gap-6 md:flex-row md:items-center md:gap-4">
+					<div className="bg-surface aspect-361/203 w-full animate-pulse md:h-[279px] md:w-[496px] md:shrink-0" />
+					<div className="flex w-full flex-col gap-4 md:min-h-[279px] md:flex-1 md:justify-between">
+						<div className="flex flex-col gap-4 md:gap-4">
+							<div className="flex items-end justify-between gap-4">
+								<div className="bg-surface h-8 w-[min(280px,70%)] animate-pulse rounded" />
+								<div className="bg-surface h-4 w-16 animate-pulse rounded md:h-5 md:w-20" />
+							</div>
+							<div className="bg-surface h-4 w-full max-w-[256px] animate-pulse rounded" />
+							<div className="bg-surface h-4 w-full max-w-[200px] animate-pulse rounded" />
+							<div className="grid grid-cols-2 gap-4 md:gap-0">
+								<div className="bg-surface h-14 max-w-[256px] animate-pulse rounded" />
+								<div className="bg-surface h-14 animate-pulse rounded" />
+							</div>
+						</div>
+						<div className="bg-surface h-4 w-full max-w-[280px] animate-pulse rounded" />
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+}
 
 function toWorkItem(item: MoreProjectItem): WorkItem {
 	return {
@@ -91,6 +129,7 @@ function MoreProjectsStackAndDetail({ items }: { items: MoreProjectItem[] }) {
 export function MoreProjectsSection({
 	title = "More Projects",
 	items = [],
+	isPlaceholder = false,
 }: MoreProjectsSectionProps) {
 	const stackKey = useMemo(() => items.map((item) => item.href).join("|"), [items]);
 
@@ -103,7 +142,9 @@ export function MoreProjectsSection({
 					withDivider
 				/>
 
-				{items.length > 0 ? (
+				{isPlaceholder ? (
+					<MoreProjectsSkeleton />
+				) : items.length > 0 ? (
 					<MoreProjectsStackAndDetail key={stackKey} items={items} />
 				) : null}
 			</HomeMainInner>

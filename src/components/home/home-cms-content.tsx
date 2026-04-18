@@ -23,7 +23,7 @@ async function fetchContentfulResource<T>(url: string) {
 }
 
 export function HomeCmsContent() {
-	const { data: projects = fallbackProjects } = useQuery({
+	const { data: projects = fallbackProjects, isPlaceholderData } = useQuery({
 		queryKey: ["contentful", "projects"],
 		queryFn: () => fetchContentfulResource<ProjectsResult>("/api/contentful/projects"),
 		placeholderData: fallbackProjects,
@@ -38,7 +38,11 @@ export function HomeCmsContent() {
 	return (
 		<>
 			<WorkSection title={staticSectionTitles.work} items={workItems} />
-			<MoreProjectsSection items={moreProjectItems} title={staticSectionTitles.moreProjects} />
+			<MoreProjectsSection
+				isPlaceholder={isPlaceholderData}
+				items={moreProjectItems}
+				title={staticSectionTitles.moreProjects}
+			/>
 		</>
 	);
 }
