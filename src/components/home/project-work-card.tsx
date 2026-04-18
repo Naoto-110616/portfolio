@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
 import type { CSSProperties } from "react";
@@ -46,39 +47,44 @@ function isExpandable(props: ProjectWorkCardProps): props is ProjectWorkCardExpa
 const expandEase = [0.22, 1, 0.36, 1] as const;
 const expandTransition = { duration: 0.45, ease: expandEase };
 
-export function ProjectWorkCard(props: ProjectWorkCardProps) {
-	const expandable = isExpandable(props);
-	const controlledExpandable = expandable && props.expanded !== undefined;
-	const [internalOpen, setInternalOpen] = useState(false);
-	const open = controlledExpandable ? Boolean(props.expanded) : internalOpen;
-	const panelId = useId();
-	const reduceMotion = useReducedMotion();
-	const allowExpandMotion = !reduceMotion;
-
-	const { title, description, with: withName, published, role, stack, tag, imageUrl, href } = props;
-	const mediaLayoutId = `project-work-media-${href}`;
-
-	const previewAlt = expandable ? props.imageAlt : `${title} preview`;
-
+function WorkCardImageMedia({
+	imageUrl,
+	previewAlt,
+	title,
+	tag,
+}: {
+	imageUrl: string;
+	previewAlt: string;
+	title: string;
+	tag: string;
+}) {
 	const tagOverlay = (
 		<span className="border-primary bg-accent text-caption-sm text-primary border px-1 py-1 leading-none">
 			{tag}
 		</span>
 	);
 
-	const closedStyle = (
-		expandable && !open ? { "--card-height": `${props.closedImageHeight}px` } : undefined
-	) as CSSProperties | undefined;
+	return (
+		<ScrollVelocityWorkImage
+			alt={previewAlt}
+			className="absolute inset-0 z-0 h-full w-full"
+			imageUrl={imageUrl}
+			tiltCaption={title}
+			tiltOverlay={tagOverlay}
+		/>
+	);
+}
 
-	useLayoutEffect(() => {
-		if (!expandable) return;
-		const id = requestAnimationFrame(() => {
-			ScrollTrigger.refresh();
-		});
-		return () => cancelAnimationFrame(id);
-	}, [expandable, open]);
-
-	const detailBlock = (
+function WorkCardDetailFields({
+	title,
+	description,
+	with: withName,
+	published,
+	role,
+	stack,
+	href,
+}: WorkItem) {
+	return (
 		<div className="flex flex-col gap-4 pt-0 md:min-h-[279px] md:flex-1 md:justify-between">
 			<div className="flex flex-col gap-4 md:gap-4">
 				<div className="flex items-end justify-between gap-4">
@@ -128,14 +134,77 @@ export function ProjectWorkCard(props: ProjectWorkCardProps) {
 			</p>
 		</div>
 	);
+}
+
+export type ProjectWorkStackThumbProps = {
+	imageUrl: string;
+	imageAlt: string;
+};
+
+/** More Projects の Stack 用。装飾なしの静止画像（タグ・ホバー演出なし） */
+export function ProjectWorkStackThumb({ imageUrl, imageAlt }: ProjectWorkStackThumbProps) {
+	return (
+		<div className="pointer-events-auto h-full w-full overflow-hidden rounded-2xl border border-primary/20 bg-surface shadow-lg ring-1 ring-black/10">
+			<div className="relative aspect-square h-full w-full">
+				<Image
+					alt={imageAlt}
+					className="pointer-events-none select-none object-cover"
+					draggable={false}
+					fill
+					sizes="220px"
+					src={imageUrl}
+				/>
+			</div>
+		</div>
+	);
+}
+
+export function ProjectWorkCard(props: ProjectWorkCardProps) {
+	const expandable = isExpandable(props);
+	const controlledExpandable = expandable && props.expanded !== undefined;
+	const [internalOpen, setInternalOpen] = useState(false);
+	const open = controlledExpandable ? Boolean(props.expanded) : internalOpen;
+	const panelId = useId();
+	const reduceMotion = useReducedMotion();
+	const allowExpandMotion = !reduceMotion;
+
+	const { title, description, with: withName, published, role, stack, tag, imageUrl, href } = props;
+	const mediaLayoutId = `project-work-media-${href}`;
+
+	const previewAlt = expandable ? props.imageAlt : `${title} preview`;
+
+	const closedStyle = (
+		expandable && !open ? { "--card-height": `${props.closedImageHeight}px` } : undefined
+	) as CSSProperties | undefined;
+
+	useLayoutEffect(() => {
+		if (!expandable) return;
+		const id = requestAnimationFrame(() => {
+			ScrollTrigger.refresh();
+		});
+		return () => cancelAnimationFrame(id);
+	}, [expandable, open]);
+
+	const detailBlock = (
+		<WorkCardDetailFields
+			description={description}
+			href={href}
+			imageUrl={imageUrl}
+			published={published}
+			role={role}
+			stack={stack}
+			tag={tag}
+			title={title}
+			with={withName}
+		/>
+	);
 
 	const imageMediaInner = (
-		<ScrollVelocityWorkImage
-			alt={previewAlt}
-			className="absolute inset-0 z-0 h-full w-full"
+		<WorkCardImageMedia
 			imageUrl={imageUrl}
-			tiltCaption={title}
-			tiltOverlay={tagOverlay}
+			previewAlt={previewAlt}
+			tag={tag}
+			title={title}
 		/>
 	);
 

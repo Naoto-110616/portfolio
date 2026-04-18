@@ -1,5 +1,6 @@
 "use client";
 
+import { useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 
 import { Footer } from "@/components/home/footer";
@@ -29,7 +30,10 @@ export function HomeCmsContent() {
 	});
 
 	const workItems = mapProjectsToWorkItems(projects.items);
-	const moreProjectItems = mapProjectsToMoreProjectItems(projects.items);
+	const moreProjectItems = useMemo(
+		() => mapProjectsToMoreProjectItems(projects.items),
+		[projects.items],
+	);
 
 	return (
 		<>
