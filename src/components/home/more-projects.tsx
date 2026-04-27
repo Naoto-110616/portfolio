@@ -27,12 +27,8 @@ type MoreProjectsSectionProps = {
 /** 実コンテンツと同じ段組・寸法を目安にしたスケルトン（取得後のレイアウトジャンプを抑える） */
 function MoreProjectsSkeleton() {
 	return (
-		<div
-			aria-busy="true"
-			aria-hidden
-			className="flex w-full flex-col gap-8 md:gap-10"
-		>
-			<div className="w-full max-w-[220px] shrink-0 self-start">
+		<div aria-busy="true" aria-hidden className="flex w-full flex-col gap-8 md:gap-10">
+			<div className="w-full max-w-[110px] shrink-0 self-start md:max-w-[220px]">
 				<div className="border-primary/10 bg-surface aspect-square w-full animate-pulse rounded-2xl border ring-1 ring-black/5" />
 			</div>
 
@@ -91,22 +87,17 @@ function MoreProjectsStackAndDetail({ items }: { items: MoreProjectItem[] }) {
 	);
 
 	const activeWorkItem = useMemo((): WorkItem | null => {
-		const safeId =
-			items.length > 0
-				? Math.min(Math.max(1, activeTopId), items.length)
-				: 1;
+		const safeId = items.length > 0 ? Math.min(Math.max(1, activeTopId), items.length) : 1;
 		const item = items[safeId - 1];
 		return item ? toWorkItem(item) : null;
 	}, [items, activeTopId]);
 
 	return (
 		<div className="flex w-full flex-col gap-8 md:gap-10">
-			<div className="w-full max-w-[220px] shrink-0 self-start">
+			<div className="w-full max-w-[110px] shrink-0 self-start md:max-w-[220px]">
 				<div className="relative aspect-square w-full">
 					<Stack
 						animationConfig={{ damping: 20, stiffness: 260 }}
-						autoplay
-						autoplayDelay={4000}
 						cards={stackCards}
 						pauseOnHover
 						randomRotation={false}
@@ -118,9 +109,7 @@ function MoreProjectsStackAndDetail({ items }: { items: MoreProjectItem[] }) {
 			</div>
 
 			<div className="w-full shrink-0">
-				{activeWorkItem ? (
-					<ProjectWorkCard key={activeWorkItem.href} {...activeWorkItem} />
-				) : null}
+				{activeWorkItem ? <ProjectWorkCard key={activeWorkItem.href} {...activeWorkItem} /> : null}
 			</div>
 		</div>
 	);

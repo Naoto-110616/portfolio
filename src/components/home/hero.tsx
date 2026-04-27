@@ -9,7 +9,7 @@ import { NAME, NAME_JA } from "@/constans/const";
 import { Frame } from "@/components/ui/frame";
 import { HashLink } from "@/components/ui/hash-link";
 import { RollingText } from "@/components/ui/rolling-text";
-import { useDesktopMotion } from "@/hooks/use-desktop-motion";
+import { useDesktopMotion, useSpViewportForIntro } from "@/hooks/use-desktop-motion";
 
 export type HeroItem = {
 	label: string;
@@ -624,12 +624,14 @@ function MobileHeroValue({
 }: Pick<HeroItem, "value"> & {
 	delay?: number;
 }) {
+	const isDesktop = useDesktopMotion();
 	return (
 		<p className="max-w-content-sp text-foreground w-full text-[44px] leading-[1.4] font-bold md:hidden">
 			<TypingText
 				value={value}
 				delay={delay}
 				shouldBlinkBeforeTyping={shouldBlinkCaretBeforeTyping(value)}
+				disableAnimation={!isDesktop}
 			/>
 		</p>
 	);
@@ -781,8 +783,9 @@ export function HeroSection({
 }: HeroSectionProps) {
 	const shouldReduceMotion = useReducedMotion();
 	const isDesktop = useDesktopMotion();
+	const isSpForIntro = useSpViewportForIntro();
 	const shouldDisableHeroAnimation = shouldReduceMotion;
-	const shouldShowViewMore = introComplete || shouldDisableHeroAnimation;
+	const shouldShowViewMore = introComplete || shouldDisableHeroAnimation || isSpForIntro;
 	const isDesktopInteractive = introComplete && isDesktop;
 	const timings = getHeroRowTimings(items);
 
@@ -792,6 +795,11 @@ export function HeroSection({
 		}
 
 		if (shouldDisableHeroAnimation) {
+			onIntroComplete();
+			return;
+		}
+
+		if (isSpForIntro) {
 			onIntroComplete();
 			return;
 		}
@@ -808,7 +816,7 @@ export function HeroSection({
 		return () => {
 			delayedCall.kill();
 		};
-	}, [introComplete, onIntroComplete, shouldDisableHeroAnimation, timings]);
+	}, [introComplete, onIntroComplete, isSpForIntro, shouldDisableHeroAnimation, timings]);
 
 	return (
 		<section className="flex w-full flex-col items-center gap-[56px] md:gap-[20px]">

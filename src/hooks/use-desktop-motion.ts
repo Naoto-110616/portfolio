@@ -26,3 +26,32 @@ function getServerSnapshot() {
 export function useDesktopMotion(): boolean {
 	return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 }
+
+/** 768px 未満。`useDesktopMotion` の逆に近いが、イントロ完了など用に SSR では常に false。 */
+const SP_MOTION_MEDIA = "(max-width: 767.98px)";
+
+function subscribeSpViewport(onStoreChange: () => void) {
+	const mq = window.matchMedia(SP_MOTION_MEDIA);
+	mq.addEventListener("change", onStoreChange);
+	return () => mq.removeEventListener("change", onStoreChange);
+}
+
+function getSpViewportSnapshot() {
+	return window.matchMedia(SP_MOTION_MEDIA).matches;
+}
+
+function getSpViewportServerSnapshot() {
+	return false;
+}
+
+/**
+ * ヒーローイントロの「即完了」など SP 専用分岐用。
+ * SSR では false のまま初回表示を揃え、クライアントで実幅に合わせる。
+ */
+export function useSpViewportForIntro(): boolean {
+	return useSyncExternalStore(
+		subscribeSpViewport,
+		getSpViewportSnapshot,
+		getSpViewportServerSnapshot,
+	);
+}
