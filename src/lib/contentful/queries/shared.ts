@@ -121,7 +121,9 @@ export async function getEntriesByContentType(
 		headers: {
 			Authorization: `Bearer ${accessToken}`,
 		},
-		cache: "no-store",
+		next: {
+			revalidate: 300,
+		},
 	});
 
 	if (!response.ok) {
