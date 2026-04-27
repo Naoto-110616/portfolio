@@ -254,6 +254,8 @@ function TypingText({
 	scrambleOnValueChange = false,
 	onScrambleStateChange,
 	disableAnimation = false,
+	/** 無効理由がビューポートのみのとき、本文を一瞬出さない（SSR では isDesktop が偽扱いになるのを想定） */
+	revealValueWhenAnimDisabled = true,
 }: {
 	value: string;
 	delay?: number;
@@ -263,10 +265,13 @@ function TypingText({
 	scrambleOnValueChange?: boolean;
 	onScrambleStateChange?: (isScrambling: boolean) => void;
 	disableAnimation?: boolean;
+	revealValueWhenAnimDisabled?: boolean;
 }) {
 	const shouldReduceMotion = useReducedMotion();
 	const shouldRenderWithoutAnimation = shouldReduceMotion || disableAnimation;
-	const [displayedText, setDisplayedText] = useState(shouldRenderWithoutAnimation ? value : "");
+	const showStaticValueImmediately =
+		shouldRenderWithoutAnimation && (shouldReduceMotion || revealValueWhenAnimDisabled);
+	const [displayedText, setDisplayedText] = useState(showStaticValueImmediately ? value : "");
 	const [isCaretVisible, setIsCaretVisible] = useState(false);
 	const [hasAnimatedOnce, setHasAnimatedOnce] = useState(false);
 	const [scrambledValue, setScrambledValue] = useState(value);
@@ -419,6 +424,20 @@ function TypingText({
 	]);
 
 	if (shouldRenderWithoutAnimation) {
+		if (shouldReduceMotion) {
+			return <span className={className}>{value}</span>;
+		}
+
+		if (!revealValueWhenAnimDisabled) {
+			return (
+				<span aria-label={value} className={className}>
+					<span className="invisible select-none" aria-hidden="true">
+						{value}
+					</span>
+				</span>
+			);
+		}
+
 		return <span className={className}>{value}</span>;
 	}
 
@@ -594,10 +613,13 @@ function DesktopHeroLabel({
 		};
 	}, [highlightDelay, isHighlighted, shouldSkipAnimation]);
 
+	/** 初回は isDesktop が偽扱いのまま入場アニをスキップし「全文」になるのを防ぐ。reduce のときだけ即表示。 */
+	const showLabelWithoutEntrance = shouldReduceMotion;
+
 	return (
 		<div
 			className={`max-w-content-sp relative hidden w-full md:block ${
-				shouldSkipAnimation ? "" : "opacity-0"
+				showLabelWithoutEntrance ? "" : "opacity-0"
 			}`.trim()}
 			ref={labelRef}
 		>
@@ -608,7 +630,7 @@ function DesktopHeroLabel({
 					className="bg-accent absolute top-[24px] left-0 h-[6px] w-[45px] md:top-[36px] md:h-2 md:w-[84px]"
 					ref={highlightRef}
 					style={
-						shouldSkipAnimation
+						showLabelWithoutEntrance
 							? undefined
 							: { transform: "scaleX(0)", transformOrigin: "left center" }
 					}
@@ -669,6 +691,7 @@ function DesktopHeroValue({
 								delay={delay}
 								animateOnValueChange={false}
 								disableAnimation={!isDesktop}
+								revealValueWhenAnimDisabled={isDesktop}
 								onScrambleStateChange={setIsSwitchDisabled}
 								scrambleOnValueChange
 								shouldBlinkBeforeTyping={shouldBlinkCaretBeforeTyping(value)}
