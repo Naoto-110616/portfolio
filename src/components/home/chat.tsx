@@ -229,7 +229,7 @@ export function ChatSection({
 								{isLoading ? (
 									<Loader2
 										aria-hidden="true"
-										className="size-4 md:animate-spin md:size-6"
+										className="size-4 md:size-6 md:animate-spin"
 										strokeWidth={2}
 									/>
 								) : (

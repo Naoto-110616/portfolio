@@ -106,13 +106,13 @@ export function TiltWorkImageFrame({
 	return (
 		<div
 			ref={ref}
-			className="perspective-midrange absolute inset-0 flex flex-col items-center justify-center"
+			className="absolute inset-0 flex flex-col items-center justify-center perspective-midrange"
 			onMouseMove={handleMouse}
 			onMouseEnter={handleMouseEnter}
 			onMouseLeave={handleMouseLeave}
 		>
 			<motion.div
-				className="transform-3d relative h-full w-full"
+				className="relative h-full w-full transform-3d"
 				style={{
 					rotateX,
 					rotateY,
@@ -128,7 +128,7 @@ export function TiltWorkImageFrame({
 
 			{caption ? (
 				<motion.figcaption
-					className="text-caption-sm text-foreground pointer-events-none absolute top-0 left-0 z-3 hidden rounded-sm border border-primary bg-accent px-2.5 py-1 leading-none opacity-0 md:block"
+					className="text-caption-sm text-foreground border-primary bg-accent pointer-events-none absolute top-0 left-0 z-3 hidden rounded-sm border px-2.5 py-1 leading-none opacity-0 md:block"
 					style={{
 						x,
 						y,

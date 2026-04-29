@@ -1,17 +1,33 @@
-# Zexora Starter Package
+# Portfolio
 
-`Next.js + Contentful + Resend + TanStack Query` を前提にしたスターターパッケージです。デザイン実装だけを手作業で差し替え、CMS 連携・問い合わせ送信・クライアントデータ取得基盤・デプロイ手順はそのまま使える状態を目指しています。
+大阪市平野区を拠点に活動するフロントエンドエンジニアの個人ポートフォリオサイトです。Next.js App Router を中心に、Contentful での実績・サービス管理、Resend による問い合わせ通知、Google Gemini を使ったチャット、Octopus Energy の月次電力使用量表示を組み込んでいます。
 
-## Included
+## 主な機能
+
+- シングルページ構成のポートフォリオサイト
+- Work / More Projects / Services / SNS リンクを Contentful から取得
+- Contentful 未設定時もビルドできるフォールバックデータ
+- Contact フォームの入力検証、Contentful への問い合わせ保存、Resend での通知メール送信
+- Google Gemini API を使った `Pick My Brain!` チャット
+- Octopus Energy API を使ったフッターの当月電力使用量表示
+- Basic 認証による任意の公開制限
+- SEO メタデータ、OGP、構造化データ、`sitemap.xml`、`robots.txt`
+- Lenis / GSAP / Motion を使ったスクロール・表示アニメーション
+
+## 技術スタック
 
 - Next.js 16 App Router
-- TypeScript strict mode
-- Tailwind CSS
-- Contentful fetch layer with fallback content
-- Resend contact API route
-- TanStack Query provider and sample dashboard
-- Environment variable validation and `.env.example`
-- Vercel deployment-ready scripts
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- Contentful / Contentful Management API
+- Resend
+- TanStack Query
+- Google Gemini API
+- Octopus Energy API
+- GSAP, Motion, Lenis
+- Zod
+- ESLint, Prettier
 
 ## Quick Start
 
@@ -21,54 +37,54 @@ cp .env.example .env.local
 npm run dev
 ```
 
-ブラウザで `http://localhost:3000` を開くと、以下を確認できます。
-
-- Contentful の接続状態とフォールバック表示
-- TanStack Query による Integration Status の取得
-- Resend 送信用の問い合わせフォーム
+開発サーバー起動後、ブラウザで `http://localhost:3000` を開きます。
 
 ## Environment Variables
 
-`.env.example` をベースに、以下を設定してください。
+`.env.example` をベースに `.env.local` を作成してください。必須かどうかは利用する機能によって変わります。
 
-```env
-NEXT_PUBLIC_SITE_URL=http://localhost:3000
+### Site
 
-CONTENTFUL_SPACE_ID=your_space_id
-CONTENTFUL_DELIVERY_ACCESS_TOKEN=your_delivery_api_token
-CONTENTFUL_ENVIRONMENT=master
-CONTENTFUL_MANAGEMENT_TOKEN=your_content_management_token
-
-RESEND_API_KEY=re_xxxxxxxxx
-RESEND_FROM_EMAIL=hello@your-domain.com
-CONTACT_TO_EMAIL=team@your-domain.com
-```
+- `NEXT_PUBLIC_SITE_URL`: サイト URL。未設定時は `http://localhost:3000`
+- `BASIC_AUTH_ID`: Basic 認証 ID。`BASIC_AUTH_PASSWORD` と両方設定した場合のみ有効
+- `BASIC_AUTH_PASSWORD`: Basic 認証パスワード
 
 ### Contentful
 
-- `CONTENTFUL_SPACE_ID`: 対象 Space の ID
+- `CONTENTFUL_SPACE_ID`: 対象 Space ID
 - `CONTENTFUL_DELIVERY_ACCESS_TOKEN`: Content Delivery API Token
-- `CONTENTFUL_ENVIRONMENT`: 通常は `master`
-- `CONTENTFUL_MANAGEMENT_TOKEN`: Content Management API Token（migration 実行用）
+- `CONTENTFUL_PREVIEW_ACCESS_TOKEN`: Preview API Token。必要に応じて設定
+- `CONTENTFUL_ENVIRONMENT`: Environment ID。通常は `master`
+- `CONTENTFUL_MANAGEMENT_TOKEN`: Content Management API Token。migration と問い合わせ保存で使用
 
-補足:
+Contentful からは `projects`, `services`, `snsLinks`, `contactFormSettings` を取得します。認証情報が未設定、または取得に失敗した場合はフォールバックデータを返します。
 
-- `contentful/` 配下に Content Model の migration を置き、`npm run contentful:migrate -- --yes` で適用します
-- ホーム画面では `projects`, `services`, `snsLinks`, `contact` を取得します
-- `hero` / `about` / `chat` / ヘッダーリンク / サイトメタデータはコード内定数で管理しています
-- Entry がない場合や接続失敗時はローカルのフォールバックデータを表示します
+### Resend / Contact
 
-### Resend
+- `RESEND_API_KEY`: Resend API Key
+- `RESEND_FROM_EMAIL`: 通知メールの送信元
+- `CONTACT_TO_EMAIL`: 問い合わせ通知の受信先
 
-- `RESEND_API_KEY`: Resend の API Key
-- `RESEND_FROM_EMAIL`: 送信元メールアドレス
-- `CONTACT_TO_EMAIL`: 問い合わせ受信先メールアドレス
+Contact フォームは `POST /api/contact` に送信されます。問い合わせは Contentful に保存したうえで Resend から通知します。
 
-補足:
+### Gemini
 
-- フォーム送信先は `src/app/api/contact/route.ts`
-- バリデーションは `src/lib/contact/schema.ts` で管理しています
-- 設定不足時は API がエラーを返すため、デプロイ後も設定漏れを検出しやすい構成です
+- `GEMINI_API_KEY`: Google AI Studio の API Key
+- `GEMINI_MODEL`: 使用モデル。未設定時は `gemini-2.0-flash`
+
+未設定時、チャット API は利用不可としてレスポンスを返します。
+
+### Octopus Energy
+
+- `OCTOPUSENERGY_EMAIL`: Octopus Energy ログインメール
+- `OCTOPUSENERGY_PASSWORD`: Octopus Energy ログインパスワード
+- `OCTOPUSENERGY_API_KEY`: API Key。必要に応じて設定
+- `OCTOPUSENERGY_REFRESH_TOKEN`: Refresh Token。必要に応じて設定
+- `OCTOPUSENERGY_GRAPHQL_URL`: GraphQL URL の上書き
+- `OCTOPUSENERGY_ACCOUNT_NUMBER`: 対象アカウント番号。未設定時は viewer の最初のアカウント
+- `OCTOPUSENERGY_TIMEZONE`: 電力使用量の集計タイムゾーン。未設定時は `Asia/Tokyo`
+
+フッターの電気使用量表示は `GET /api/octopus/electricity-month` から取得します。Octopus Energy 連携が未設定の場合は何も表示しません。
 
 ## Scripts
 
@@ -78,8 +94,28 @@ npm run build
 npm run start
 npm run lint
 npm run typecheck
-npm run contentful:migrate -- --yes
+npm run format
+npm run format:check
+npm run fix
+npm run contentful:migrate
 ```
+
+`contentful:migrate` には `--yes` が含まれています。途中の migration から再実行したい場合は、次のように追加引数を渡します。
+
+```bash
+npm run contentful:migrate -- --from=003-create-sns-links
+```
+
+## API Routes
+
+- `GET /api/status`: サイト URL と主要連携の設定状態を返す
+- `POST /api/contact`: 問い合わせを検証し、Contentful に保存して Resend で通知する
+- `POST /api/chat`: Gemini からチャット回答を取得する
+- `GET /api/octopus/electricity-month`: 今月の電力使用量を kWh で返す
+- `GET /api/contentful/projects`: Work / More Projects 用のプロジェクト一覧を返す
+- `GET /api/contentful/services`: Services 用の一覧を返す
+- `GET /api/contentful/sns-links`: フッター SNS リンクを返す
+- `GET /api/contentful/contact-form-settings`: Contact フォームの設定を返す
 
 ## Project Structure
 
@@ -87,45 +123,61 @@ npm run contentful:migrate -- --yes
 src/
   app/
     api/
-      contact/route.ts
-      status/route.ts
-    globals.css
+      chat/
+      contact/
+      contentful/
+      octopus/
+      status/
     layout.tsx
     page.tsx
+    robots.ts
+    sitemap.ts
   components/
     home/
+    motion/
     providers/
+    ui/
   lib/
+    chat/
     contact/
     contentful/
-      mappers/
-      queries/
-      types/
+    octopus/
     resend/
     env.ts
+    site-content.ts
 contentful/
   config/
   migrations/
   scripts/
+middleware.ts
+next.config.ts
 ```
+
+## Content Management
+
+Contentful のモデルは `contentful/migrations/` で管理しています。主な content type は次の通りです。
+
+- `projects`: Work / More Projects に表示する実績
+- `services`: Services に表示する提供内容
+- `snsLinks`: フッターの SNS リンク
+- `contactFormSettings`: Contact フォームの選択肢
+- `contact`: Contact フォームから保存される問い合わせ
+
+実績・サービス・SNS リンクは TanStack Query 経由で `/api/contentful/*` から取得します。About、Chat、ヘッダー、SEO メタデータなどの静的文言は `src/lib/site-content.ts` で管理しています。
 
 ## Deploy To Vercel
 
 1. リポジトリを Vercel に接続する
-2. Environment Variables に `.env.example` の値を登録する
-3. Build Command は `npm run build`、Install Command は `npm install` のままで問題ありません
-4. デプロイ後にトップページと `/api/status`、問い合わせフォームを確認する
-
-## Design Replacement Guide
-
-- レイアウト差し替えの入口は `src/app/page.tsx`
-- 共通 Provider は `src/app/layout.tsx`
-- Contentful 取得処理は `src/lib/contentful/queries.ts`
-- Resend 送信処理は `src/app/api/contact/route.ts`
-- クライアントクエリの例は `src/components/home/integration-status.tsx`
+2. `.env.example` を参考に、利用する機能に必要な Environment Variables を登録する
+3. Build Command は `npm run build`、Install Command は `npm install` を使う
+4. 必要に応じて `BASIC_AUTH_ID` と `BASIC_AUTH_PASSWORD` で公開前の Basic 認証を有効にする
+5. デプロイ後にトップページ、`/api/status`、Contact フォーム、チャット、Octopus Energy 表示を確認する
 
 ## Build Notes
 
-- Contentful 未設定でもビルドはフォールバックで通るようにしています
-- Resend のキー未設定時は問い合わせ API の呼び出し時に失敗します
-- 環境変数に不正な URL やメールアドレス形式を入れた場合は起動時に検知します
+- Contentful 未設定でも、Work / Services / SNS / Contact フォーム設定はフォールバックでビルド可能です
+- Contact フォームを本番利用するには Contentful Management API と Resend の設定が必要です
+- Gemini 未設定時はチャット機能が利用不可になります
+- Octopus Energy 未設定時は月次電力使用量を表示しません
+- `NEXT_PUBLIC_SITE_URL` は metadata、OGP、sitemap、robots で使用します
+- `next.config.ts` では Contentful と Figma の外部画像ドメインを許可しています

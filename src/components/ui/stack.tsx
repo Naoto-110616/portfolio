@@ -10,12 +10,7 @@ type CardRotateProps = {
 	disableDrag?: boolean;
 };
 
-function CardRotate({
-	children,
-	onSendToBack,
-	sensitivity,
-	disableDrag = false,
-}: CardRotateProps) {
+function CardRotate({ children, onSendToBack, sensitivity, disableDrag = false }: CardRotateProps) {
 	const x = useMotionValue(0);
 	const y = useMotionValue(0);
 	const rotateX = useTransform(y, [-100, 100], [60, -60]);

@@ -46,7 +46,9 @@ export function LayoutGuides({ lineClassName = "bg-foreground/10" }: LayoutGuide
 
 	const renderGuideLine = (offset: string, index: number, key: string) => {
 		if (!allowLineMotion) {
-			return <span key={key} className={lineClasses} style={{ left: offset, transformOrigin: "0 0" }} />;
+			return (
+				<span key={key} className={lineClasses} style={{ left: offset, transformOrigin: "0 0" }} />
+			);
 		}
 
 		return (

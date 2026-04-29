@@ -144,11 +144,11 @@ export type ProjectWorkStackThumbProps = {
 /** More Projects の Stack 用。装飾なしの静止画像（タグ・ホバー演出なし） */
 export function ProjectWorkStackThumb({ imageUrl, imageAlt }: ProjectWorkStackThumbProps) {
 	return (
-		<div className="pointer-events-auto h-full w-full overflow-hidden rounded-2xl border border-primary/20 bg-surface shadow-lg ring-1 ring-black/10">
+		<div className="border-primary/20 bg-surface pointer-events-auto h-full w-full overflow-hidden rounded-2xl border shadow-lg ring-1 ring-black/10">
 			<div className="relative aspect-square h-full w-full">
 				<Image
 					alt={imageAlt}
-					className="pointer-events-none select-none object-cover"
+					className="pointer-events-none object-cover select-none"
 					draggable={false}
 					fill
 					sizes="220px"
@@ -200,12 +200,7 @@ export function ProjectWorkCard(props: ProjectWorkCardProps) {
 	);
 
 	const imageMediaInner = (
-		<WorkCardImageMedia
-			imageUrl={imageUrl}
-			previewAlt={previewAlt}
-			tag={tag}
-			title={title}
-		/>
+		<WorkCardImageMedia imageUrl={imageUrl} previewAlt={previewAlt} tag={tag} title={title} />
 	);
 
 	const imageBlock = (
