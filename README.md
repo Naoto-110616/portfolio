@@ -27,6 +27,7 @@
 - Octopus Energy API
 - GSAP, Motion, Lenis
 - Zod
+- Vitest, Playwright
 - ESLint, Prettier
 
 ## Quick Start
@@ -94,6 +95,10 @@ npm run build
 npm run start
 npm run lint
 npm run typecheck
+npm run test
+npm run test:watch
+npm run test:e2e
+npm run test:e2e:ui
 npm run format
 npm run format:check
 npm run fix
@@ -116,6 +121,22 @@ npm run contentful:migrate -- --from=003-create-sns-links
 - `GET /api/contentful/services`: Services 用の一覧を返す
 - `GET /api/contentful/sns-links`: フッター SNS リンクを返す
 - `GET /api/contentful/contact-form-settings`: Contact フォームの設定を返す
+
+## Testing
+
+Vitest では、Contact / Chat の入力検証、Contentful のデータ変換、Octopus Energy の日時境界など、外部 API に依存しないロジックを検証します。
+
+```bash
+npm run test
+npm run test:watch
+```
+
+Playwright では、トップページの主要セクション表示、Contact フォームの入力検証、Chat 入力 UI の基本フローを E2E で確認します。
+
+```bash
+npm run test:e2e
+npm run test:e2e:ui
+```
 
 ## Project Structure
 
