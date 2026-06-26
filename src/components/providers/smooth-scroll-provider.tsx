@@ -26,31 +26,56 @@ function LenisInitializer({ setLenisInstance }: LenisInitializerProps) {
 			return;
 		}
 
-		const html = document.documentElement;
 		const desktopMq = window.matchMedia(DESKTOP_MOTION_MEDIA);
 		let lenis: Lenis | null = null;
 		let unsubScroll: (() => void) | undefined;
 
+		// ScrollTrigger が refresh 時に各トリガー位置を計測するとき、本来は
+		// スクロールを 0 に戻して計測する必要がある。しかし Lenis 駆動下では
+		// ST がスクロールを 0 へ戻せず、復元スクロール位置のまま計測してしまい、
+		// ピン開始位置が「現在のスクロール位置付近」に誤算出される
+		// （リロード時に About 画像が直前セクションへ被る真因）。
+		// そこで計測直前（refreshInit）に手動で最上部へ戻し、計測後（refresh）に
+		// 元のスクロール位置へ復元することで、開始位置を必ず正しく算出させる。
+		let scrollBeforeRefresh = 0;
+
+		const onStRefreshInit = () => {
+			scrollBeforeRefresh = window.scrollY;
+			lenis?.stop();
+			window.scrollTo(0, 0);
+		};
+
 		const onStRefresh = () => {
 			lenis?.resize();
+			lenis?.start();
+			window.scrollTo(0, scrollBeforeRefresh);
+			lenis?.scrollTo(scrollBeforeRefresh, { immediate: true, force: true });
 		};
 
 		/**
 		 * ページ途中でのリロード対策。
-		 * ブラウザのスクロール位置復元は、フォントや画像でレイアウト高さが
-		 * 確定するまで遅延するため、Lenis 初期化時点の `lenis.scroll` が
-		 * 実スクロール位置とズレる（多くは 0 のまま）ことがある。
-		 * その状態で ScrollTrigger がピン位置を確定すると、About 画像の
-		 * 追従が崩れる。フルロード後に Lenis を実スクロール位置へ再同期し、
-		 * 基準を取り直してから refresh する。
+		 * リロード時、ブラウザのスクロール位置復元はロード完了の前後まで
+		 * 保留され、その間に ScrollTrigger が計測すると、計測用に最上部へ
+		 * 動かしてもレイアウト参照時に復元位置へ引き戻され、ピン開始位置が
+		 * 「現在のスクロール位置付近」に誤算出される（About 画像が直前
+		 * セクションに被る真因）。復元がいつ確定するかは環境で前後する
+		 * （レース）ため、ロード後しばらくの間 複数回 計測し直し、最後の
+		 * 1 回が必ず復元確定後になるようにしてピンを正しく確定させる。
+		 * 各 refresh は refreshInit のゼロ化計測により正しい開始位置を得る。
 		 */
-		const resyncToActualScroll = () => {
+		const refreshTimers: number[] = [];
+		const refreshAfterLoad = () => {
 			if (!lenis) {
 				return;
 			}
 			lenis.resize();
-			lenis.scrollTo(window.scrollY, { immediate: true, force: true });
 			ScrollTrigger.refresh();
+		};
+		const scheduleRefreshAfterLoad = () => {
+			requestAnimationFrame(refreshAfterLoad);
+			for (const delay of [100, 300, 600, 1000]) {
+				refreshTimers.push(window.setTimeout(refreshAfterLoad, delay));
+			}
 		};
 
 		const onTicker = (time: number) => {
@@ -58,13 +83,14 @@ function LenisInitializer({ setLenisInstance }: LenisInitializerProps) {
 		};
 
 		const teardownLenis = () => {
-			window.removeEventListener("load", resyncToActualScroll);
+			window.removeEventListener("load", scheduleRefreshAfterLoad);
 
 			if (!lenis) {
 				return;
 			}
 
 			ScrollTrigger.removeEventListener("refresh", onStRefresh);
+			ScrollTrigger.removeEventListener("refreshInit", onStRefreshInit);
 			gsap.ticker.remove(onTicker);
 			gsap.ticker.lagSmoothing(1000, 33);
 			unsubScroll?.();
@@ -72,29 +98,7 @@ function LenisInitializer({ setLenisInstance }: LenisInitializerProps) {
 			lenis = null;
 			setLenisInstance(null);
 
-			ScrollTrigger.scrollerProxy(html, {
-				scrollTop(value) {
-					if (arguments.length && typeof value === "number") {
-						window.scrollTo(0, value);
-					}
-					return window.scrollY || html.scrollTop;
-				},
-				getBoundingClientRect() {
-					const w = window.innerWidth;
-					const h = window.innerHeight;
-					return {
-						top: 0,
-						left: 0,
-						right: w,
-						bottom: h,
-						width: w,
-						height: h,
-						x: 0,
-						y: 0,
-						toJSON: () => ({}),
-					} as DOMRect;
-				},
-			});
+			// ネイティブ window スクローラーに戻して計測し直す。
 			ScrollTrigger.refresh();
 		};
 
@@ -122,42 +126,24 @@ function LenisInitializer({ setLenisInstance }: LenisInitializerProps) {
 
 			setLenisInstance(lenis);
 
-			ScrollTrigger.scrollerProxy(html, {
-				scrollTop(value) {
-					if (arguments.length && typeof value === "number") {
-						lenis?.scrollTo(value, { immediate: true });
-					}
-					return lenis?.scroll ?? 0;
-				},
-				getBoundingClientRect() {
-					const w = window.innerWidth;
-					const h = window.innerHeight;
-					return {
-						top: 0,
-						left: 0,
-						right: w,
-						bottom: h,
-						width: w,
-						height: h,
-						x: 0,
-						y: 0,
-						toJSON: () => ({}),
-					} as DOMRect;
-				},
-				pinType: html.style.transform ? "transform" : "fixed",
-			});
-
+			// Lenis はラッパー無し＝ネイティブ window スクロール駆動。
+			// ScrollTrigger は標準の window スクローラーをそのまま使えばよく、
+			// scrollerProxy は不要。むしろ proxy を挟むと refresh 時の計測が
+			// 実スクロール位置とズレ、リロード時にピン開始位置が誤算出されて
+			// About 画像が直前セクションに被る原因になっていた（公式の Lenis +
+			// GSAP 連携でもラッパー無しなら proxy は不要）。
 			unsubScroll = lenis.on("scroll", ScrollTrigger.update);
 			gsap.ticker.add(onTicker);
 			gsap.ticker.lagSmoothing(0);
+			ScrollTrigger.addEventListener("refreshInit", onStRefreshInit);
 			ScrollTrigger.addEventListener("refresh", onStRefresh);
 			ScrollTrigger.refresh();
 
-			// 復元スクロールが確定するフルロード後に基準を取り直す。
+			// ブラウザのスクロール復元が確定するのを待ってから基準を取り直す。
 			if (document.readyState === "complete") {
-				requestAnimationFrame(resyncToActualScroll);
+				scheduleRefreshAfterLoad();
 			} else {
-				window.addEventListener("load", resyncToActualScroll, { once: true });
+				window.addEventListener("load", scheduleRefreshAfterLoad, { once: true });
 			}
 		};
 
@@ -166,7 +152,10 @@ function LenisInitializer({ setLenisInstance }: LenisInitializerProps) {
 
 		return () => {
 			desktopMq.removeEventListener("change", setupLenis);
-			window.removeEventListener("load", resyncToActualScroll);
+			window.removeEventListener("load", scheduleRefreshAfterLoad);
+			for (const timer of refreshTimers) {
+				clearTimeout(timer);
+			}
 			teardownLenis();
 		};
 	}, [setLenisInstance]);
