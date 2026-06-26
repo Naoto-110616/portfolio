@@ -35,11 +35,31 @@ function LenisInitializer({ setLenisInstance }: LenisInitializerProps) {
 			lenis?.resize();
 		};
 
+		/**
+		 * ページ途中でのリロード対策。
+		 * ブラウザのスクロール位置復元は、フォントや画像でレイアウト高さが
+		 * 確定するまで遅延するため、Lenis 初期化時点の `lenis.scroll` が
+		 * 実スクロール位置とズレる（多くは 0 のまま）ことがある。
+		 * その状態で ScrollTrigger がピン位置を確定すると、About 画像の
+		 * 追従が崩れる。フルロード後に Lenis を実スクロール位置へ再同期し、
+		 * 基準を取り直してから refresh する。
+		 */
+		const resyncToActualScroll = () => {
+			if (!lenis) {
+				return;
+			}
+			lenis.resize();
+			lenis.scrollTo(window.scrollY, { immediate: true, force: true });
+			ScrollTrigger.refresh();
+		};
+
 		const onTicker = (time: number) => {
 			lenis?.raf(time * 1000);
 		};
 
 		const teardownLenis = () => {
+			window.removeEventListener("load", resyncToActualScroll);
+
 			if (!lenis) {
 				return;
 			}
@@ -132,6 +152,13 @@ function LenisInitializer({ setLenisInstance }: LenisInitializerProps) {
 			gsap.ticker.lagSmoothing(0);
 			ScrollTrigger.addEventListener("refresh", onStRefresh);
 			ScrollTrigger.refresh();
+
+			// 復元スクロールが確定するフルロード後に基準を取り直す。
+			if (document.readyState === "complete") {
+				requestAnimationFrame(resyncToActualScroll);
+			} else {
+				window.addEventListener("load", resyncToActualScroll, { once: true });
+			}
 		};
 
 		setupLenis();
@@ -139,6 +166,7 @@ function LenisInitializer({ setLenisInstance }: LenisInitializerProps) {
 
 		return () => {
 			desktopMq.removeEventListener("change", setupLenis);
+			window.removeEventListener("load", resyncToActualScroll);
 			teardownLenis();
 		};
 	}, [setLenisInstance]);
