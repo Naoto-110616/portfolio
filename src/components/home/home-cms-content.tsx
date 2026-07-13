@@ -22,11 +22,16 @@ async function fetchContentfulResource<T>(url: string) {
 	return (await response.json()) as T;
 }
 
-export function HomeCmsContent() {
+type HomeCmsContentProps = {
+	initialProjects?: ProjectsResult;
+};
+
+export function HomeCmsContent({ initialProjects }: HomeCmsContentProps) {
 	const { data: projects = fallbackProjects, isPlaceholderData } = useQuery({
 		queryKey: ["contentful", "projects"],
 		queryFn: () => fetchContentfulResource<ProjectsResult>("/api/contentful/projects"),
-		placeholderData: fallbackProjects,
+		initialData: initialProjects,
+		placeholderData: initialProjects ?? fallbackProjects,
 	});
 
 	const workItems = mapProjectsToWorkItems(projects.items);
