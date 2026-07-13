@@ -10,7 +10,11 @@ import { WorkSection } from "@/components/home/work";
 import { fallbackProjects, fallbackServices } from "@/lib/contentful/fallbacks";
 import { mapProjectsToMoreProjectItems, mapProjectsToWorkItems } from "@/lib/contentful/mappers";
 import type { ProjectsResult, ServicesResult, SnsLinksResult } from "@/lib/contentful/types";
-import { staticFooterContent, staticSectionTitles } from "@/lib/site-content";
+import {
+	staticFooterContent,
+	staticProjectsSectionContent,
+	staticSectionTitles,
+} from "@/lib/site-content";
 
 async function fetchContentfulResource<T>(url: string) {
 	const response = await fetch(url);
@@ -37,7 +41,13 @@ export function HomeCmsContent() {
 
 	return (
 		<>
-			<WorkSection title={staticSectionTitles.work} items={workItems} />
+			<WorkSection
+				initialVisibleCount={staticProjectsSectionContent.initialVisibleCount}
+				items={workItems}
+				showLessLabel={staticProjectsSectionContent.showLessLabel}
+				showMoreLabel={staticProjectsSectionContent.showMoreLabel}
+				title={staticSectionTitles.work}
+			/>
 			<MoreProjectsSection
 				isPlaceholder={isPlaceholderData}
 				items={moreProjectItems}
