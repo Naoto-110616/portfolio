@@ -3,13 +3,14 @@
 import { useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 
+import { AboutSection } from "@/components/home/about";
 import { Footer } from "@/components/home/footer";
 import { MoreProjectsSection } from "@/components/home/more-projects";
 import { ServicesSection } from "@/components/home/services";
 import { WorkSection } from "@/components/home/work";
-import { fallbackProjects, fallbackServices } from "@/lib/contentful/fallbacks";
+import { fallbackAboutContent, fallbackProjects, fallbackServices } from "@/lib/contentful/fallbacks";
 import { mapProjectsToMoreProjectItems, mapProjectsToWorkItems } from "@/lib/contentful/mappers";
-import type { ProjectsResult, ServicesResult, SnsLinksResult } from "@/lib/contentful/types";
+import type { AboutContent, ProjectsResult, ServicesResult, SnsLinksResult } from "@/lib/contentful/types";
 import { staticFooterContent, staticSectionTitles } from "@/lib/site-content";
 
 async function fetchContentfulResource<T>(url: string) {
@@ -55,6 +56,24 @@ export function HomeServicesContent() {
 	});
 
 	return <ServicesSection items={services.items} title={staticSectionTitles.services} />;
+}
+
+export function HomeAboutContent() {
+	const { data: about = fallbackAboutContent } = useQuery({
+		queryKey: ["contentful", "about"],
+		queryFn: () => fetchContentfulResource<AboutContent>("/api/contentful/about"),
+		placeholderData: fallbackAboutContent,
+	});
+
+	return (
+		<AboutSection
+			blocks={about.blocks}
+			imageAlt={about.portraitImageAlt}
+			imageUrl={about.portraitImageUrl}
+			leadText={about.leadText}
+			title={about.title}
+		/>
+	);
 }
 
 type HomeFooterContentProps = {
