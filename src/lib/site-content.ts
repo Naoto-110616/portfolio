@@ -130,6 +130,12 @@ export const staticSectionTitles = {
 	services: "Services",
 };
 
+export const staticProjectsSectionContent = {
+	initialVisibleCount: 3,
+	showMoreLabel: "もっと見る",
+	showLessLabel: "表示を閉じる",
+};
+
 export const staticFooterContent = {
 	backToTopLabel: "Back to top",
 	copyright: "© 2026, All rights reserved",
