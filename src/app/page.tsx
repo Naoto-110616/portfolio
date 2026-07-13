@@ -8,7 +8,7 @@ import {
 } from "@/components/home/home-cms-content";
 import { HomeIntro } from "@/components/home/home-intro";
 import { LayoutGuides } from "@/components/ui/layout-guides";
-import { getSnsLinks } from "@/lib/contentful/queries";
+import { getSiteSettings } from "@/lib/contentful/queries";
 import {
 	staticAboutContent,
 	staticChatContent,
@@ -19,7 +19,7 @@ import {
 export const revalidate = 300;
 
 export default async function HomePage() {
-	const snsLinks = await getSnsLinks();
+	const siteSettings = await getSiteSettings();
 
 	return (
 		<div id="top" className="relative flex flex-col gap-[28px] md:gap-[56px]">
@@ -47,7 +47,7 @@ export default async function HomePage() {
 				<HomeServicesContent />
 				<ContactSection />
 			</main>
-			<HomeFooterContent initialSnsLinks={snsLinks} />
+			<HomeFooterContent initialSiteSettings={siteSettings} />
 		</div>
 	);
 }
