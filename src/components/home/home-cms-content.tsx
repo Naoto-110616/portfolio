@@ -9,7 +9,7 @@ import { ServicesSection } from "@/components/home/services";
 import { WorkSection } from "@/components/home/work";
 import { fallbackProjects, fallbackServices } from "@/lib/contentful/fallbacks";
 import { mapProjectsToMoreProjectItems, mapProjectsToWorkItems } from "@/lib/contentful/mappers";
-import type { ProjectsResult, ServicesResult, SnsLinksResult } from "@/lib/contentful/types";
+import type { ProjectsResult, ServicesResult, SiteSettings } from "@/lib/contentful/types";
 import { staticFooterContent, staticSectionTitles } from "@/lib/site-content";
 
 async function fetchContentfulResource<T>(url: string) {
@@ -58,22 +58,22 @@ export function HomeServicesContent() {
 }
 
 type HomeFooterContentProps = {
-	initialSnsLinks: SnsLinksResult;
+	initialSiteSettings: SiteSettings;
 };
 
-export function HomeFooterContent({ initialSnsLinks }: HomeFooterContentProps) {
-	const { data: snsLinks = initialSnsLinks } = useQuery({
-		queryKey: ["contentful", "sns-links"],
-		queryFn: () => fetchContentfulResource<SnsLinksResult>("/api/contentful/sns-links"),
-		initialData: initialSnsLinks,
+export function HomeFooterContent({ initialSiteSettings }: HomeFooterContentProps) {
+	const { data: siteSettings = initialSiteSettings } = useQuery({
+		queryKey: ["contentful", "site-settings"],
+		queryFn: () => fetchContentfulResource<SiteSettings>("/api/contentful/site-settings"),
+		initialData: initialSiteSettings,
 	});
 
 	return (
 		<Footer
-			backToTopLabel={staticFooterContent.backToTopLabel}
-			copyright={staticFooterContent.copyright}
-			email={staticFooterContent.email}
-			socialLinks={snsLinks.items.map((item) => ({ label: item.title, href: item.url }))}
+			backToTopLabel={siteSettings.footerBackToTopLabel ?? staticFooterContent.backToTopLabel}
+			copyright={siteSettings.footerCopyright ?? staticFooterContent.copyright}
+			email={siteSettings.footerEmail ?? staticFooterContent.email}
+			socialLinks={siteSettings.socialLinks.map((item) => ({ label: item.title, href: item.url }))}
 		/>
 	);
 }

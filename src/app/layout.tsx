@@ -5,6 +5,7 @@ import { ReactNode } from "react";
 import { MotionProvider } from "@/components/providers/motion-provider";
 import { QueryProvider } from "@/components/providers/query-provider";
 import { SmoothScrollProvider } from "@/components/providers/smooth-scroll-provider";
+import { getSiteSettings } from "@/lib/contentful/queries";
 import { env } from "@/lib/env";
 import { staticSiteMetadata } from "@/lib/site-content";
 import "./globals.css";
@@ -34,35 +35,37 @@ const devtoolsMessage = `\n
 `;
 
 export async function generateMetadata(): Promise<Metadata> {
+	const siteSettings = await getSiteSettings();
 	const metadataBase = new URL(env.NEXT_PUBLIC_SITE_URL);
 	const ogImage = "/ogp.png";
 
 	return {
-		title: staticSiteMetadata.title,
-		description: staticSiteMetadata.description,
-		keywords: staticSiteMetadata.keywords,
+		title: siteSettings.title,
+		description: siteSettings.description,
+		keywords: siteSettings.keywords,
 		metadataBase,
 		alternates: {
 			canonical: "/",
 		},
 		openGraph: {
-			title: staticSiteMetadata.title,
-			description: staticSiteMetadata.description,
+			title: siteSettings.title,
+			description: siteSettings.description,
 			url: "/",
-			siteName: staticSiteMetadata.siteName,
-			locale: staticSiteMetadata.locale,
+			siteName: siteSettings.siteName,
+			locale: siteSettings.locale,
 			type: "website",
 			images: [
 				{
 					url: ogImage,
-					alt: staticSiteMetadata.title,
+					alt: siteSettings.title,
 				},
 			],
 		},
 		twitter: {
 			card: "summary_large_image",
-			title: staticSiteMetadata.title,
-			description: staticSiteMetadata.description,
+			title: siteSettings.title,
+			description: siteSettings.description,
+			creator: siteSettings.twitterHandle,
 			images: [ogImage],
 		},
 		authors: [{ name: staticSiteMetadata.person.name }],
@@ -82,14 +85,15 @@ export async function generateMetadata(): Promise<Metadata> {
 	};
 }
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default async function RootLayout({ children }: RootLayoutProps) {
+	const siteSettings = await getSiteSettings();
 	const personStructuredData = {
 		"@context": "https://schema.org",
 		"@type": "Person",
 		name: staticSiteMetadata.person.name,
 		alternateName: staticSiteMetadata.person.alternateNames,
 		url: env.NEXT_PUBLIC_SITE_URL,
-		description: staticSiteMetadata.description,
+		description: siteSettings.description,
 		jobTitle: staticSiteMetadata.person.jobTitle,
 		address: {
 			"@type": "PostalAddress",
@@ -99,6 +103,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 		},
 		areaServed: staticSiteMetadata.person.areaServed,
 		knowsAbout: staticSiteMetadata.person.knowsAbout,
+		sameAs: siteSettings.socialLinks.map((item) => item.url),
 	};
 
 	return (

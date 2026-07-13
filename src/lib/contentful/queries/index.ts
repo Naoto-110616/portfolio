@@ -3,6 +3,7 @@ import { getProjects } from "@/lib/contentful/queries/get-projects";
 export * from "./get-contact-form-settings";
 export * from "./get-projects";
 export * from "./get-services";
+export * from "./get-site-settings";
 export * from "./get-sns-links";
 
 export type ContentPreview = {
