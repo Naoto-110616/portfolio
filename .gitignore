@@ -11,3 +11,6 @@ coverage
 .env.development.local
 .env.production.local
 test-results
+
+*storybook.log
+storybook-static
