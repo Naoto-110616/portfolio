@@ -1,13 +1,12 @@
 "use client";
 
 import { useMemo } from "react";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useSuspenseQuery } from "@tanstack/react-query";
 
 import { Footer } from "@/components/home/footer";
 import { MoreProjectsSection } from "@/components/home/more-projects";
 import { ServicesSection } from "@/components/home/services";
 import { WorkSection } from "@/components/home/work";
-import { fallbackProjects, fallbackServices } from "@/lib/contentful/fallbacks";
 import { mapProjectsToMoreProjectItems, mapProjectsToWorkItems } from "@/lib/contentful/mappers";
 import type { ProjectsResult, ServicesResult, SnsLinksResult } from "@/lib/contentful/types";
 import { staticFooterContent, staticSectionTitles } from "@/lib/site-content";
@@ -23,10 +22,9 @@ async function fetchContentfulResource<T>(url: string) {
 }
 
 export function HomeCmsContent() {
-	const { data: projects = fallbackProjects, isPlaceholderData } = useQuery({
+	const { data: projects } = useSuspenseQuery({
 		queryKey: ["contentful", "projects"],
 		queryFn: () => fetchContentfulResource<ProjectsResult>("/api/contentful/projects"),
-		placeholderData: fallbackProjects,
 	});
 
 	const workItems = mapProjectsToWorkItems(projects.items);
@@ -39,7 +37,6 @@ export function HomeCmsContent() {
 		<>
 			<WorkSection title={staticSectionTitles.work} items={workItems} />
 			<MoreProjectsSection
-				isPlaceholder={isPlaceholderData}
 				items={moreProjectItems}
 				title={staticSectionTitles.moreProjects}
 			/>
@@ -48,10 +45,9 @@ export function HomeCmsContent() {
 }
 
 export function HomeServicesContent() {
-	const { data: services = fallbackServices } = useQuery({
+	const { data: services } = useSuspenseQuery({
 		queryKey: ["contentful", "services"],
 		queryFn: () => fetchContentfulResource<ServicesResult>("/api/contentful/services"),
-		placeholderData: fallbackServices,
 	});
 
 	return <ServicesSection items={services.items} title={staticSectionTitles.services} />;
