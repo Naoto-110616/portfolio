@@ -16,7 +16,9 @@
 		"lint": "eslint .",
 		"fix": "eslint . --fix && prettier --write .",
 		"typecheck": "tsc --noEmit",
-		"contentful:migrate": "tsx contentful/scripts/migrate.ts --yes"
+		"contentful:migrate": "tsx contentful/scripts/migrate.ts --yes",
+		"storybook": "storybook dev -p 6006",
+		"build-storybook": "storybook build"
 	},
 	"keywords": [
 		"portfolio",
@@ -45,6 +47,9 @@
 	"devDependencies": {
 		"@eslint/eslintrc": "^3.3.5",
 		"@playwright/test": "^1.59.1",
+		"@storybook/addon-a11y": "^10.5.0",
+		"@storybook/addon-docs": "^10.5.0",
+		"@storybook/nextjs-vite": "^10.5.0",
 		"@tailwindcss/postcss": "^4.2.1",
 		"@types/node": "^25.5.0",
 		"@types/react": "^19.2.14",
@@ -54,9 +59,11 @@
 		"eslint-config-next": "^16.1.7",
 		"prettier": "^3.8.2",
 		"prettier-plugin-tailwindcss": "^0.7.2",
+		"storybook": "^10.5.0",
 		"tailwindcss": "^4.2.1",
 		"tsx": "^4.21.0",
 		"typescript": "^5.9.3",
+		"vite": "^8.1.4",
 		"vitest": "^4.1.5"
 	}
 }
