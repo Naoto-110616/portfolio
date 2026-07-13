@@ -49,6 +49,8 @@ npm run contentful:migrate -- --from=003-create-sns-links --yes
 - `services`
 - `snsLinks`
 - `contact`
+- `about`
+- `aboutBlock`
 
 ## Field definitions
 
@@ -81,13 +83,27 @@ npm run contentful:migrate -- --from=003-create-sns-links --yes
 - `description`: Text
 - `email`: Symbol
 
+### `about`
+
+- `title`: Symbol
+- `leadText`: Text
+- `portraitImageUrl`: Symbol
+- `portraitImageAlt`: Symbol
+- `blocks`: Entry array (`aboutBlock`)
+
+### `aboutBlock`
+
+- `title`: Symbol
+- `paragraphs`: Symbol array
+
 ## App-side usage
 
 - `projects`: Work / More Projects セクションで使用
 - `services`: Services セクションで使用
 - `snsLinks`: フッターのSNSリンクで使用
 - `contact`: フッターのメールアドレスで使用
-- `hero` / `about` / `chat` / ヘッダーリンク / サイトメタデータは現在コード内定数で管理
+- `about`: About セクションで使用
+- `hero` / `chat` / ヘッダーリンク / サイトメタデータは現在コード内定数で管理
 
 ## Initial content notes
 

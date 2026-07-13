@@ -1,7 +1,7 @@
-import { AboutSection } from "@/components/home/about";
 import { ChatSection } from "@/components/home/chat";
 import { ContactSection } from "@/components/home/contact-form";
 import {
+	HomeAboutContent,
 	HomeCmsContent,
 	HomeFooterContent,
 	HomeServicesContent,
@@ -9,12 +9,7 @@ import {
 import { HomeIntro } from "@/components/home/home-intro";
 import { LayoutGuides } from "@/components/ui/layout-guides";
 import { getSnsLinks } from "@/lib/contentful/queries";
-import {
-	staticAboutContent,
-	staticChatContent,
-	staticHeaderContent,
-	staticHeroItems,
-} from "@/lib/site-content";
+import { staticChatContent, staticHeaderContent, staticHeroItems } from "@/lib/site-content";
 
 export const revalidate = 300;
 
@@ -31,13 +26,7 @@ export default async function HomePage() {
 			/>
 			<main className="relative z-20 flex w-full flex-col gap-[96px] md:gap-[240px]">
 				<HomeCmsContent />
-				<AboutSection
-					blocks={staticAboutContent.blocks}
-					imageAlt={staticAboutContent.portraitImageAlt}
-					imageUrl={staticAboutContent.portraitImageUrl}
-					leadText={staticAboutContent.leadText}
-					title={staticAboutContent.title}
-				/>
+				<HomeAboutContent />
 				<ChatSection
 					description={staticChatContent.description}
 					helperText={staticChatContent.helperText}
