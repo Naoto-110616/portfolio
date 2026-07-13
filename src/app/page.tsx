@@ -8,7 +8,7 @@ import {
 } from "@/components/home/home-cms-content";
 import { HomeIntro } from "@/components/home/home-intro";
 import { LayoutGuides } from "@/components/ui/layout-guides";
-import { getSnsLinks } from "@/lib/contentful/queries";
+import { getProjects, getSnsLinks } from "@/lib/contentful/queries";
 import {
 	staticAboutContent,
 	staticChatContent,
@@ -19,7 +19,7 @@ import {
 export const revalidate = 300;
 
 export default async function HomePage() {
-	const snsLinks = await getSnsLinks();
+	const [projects, snsLinks] = await Promise.all([getProjects(), getSnsLinks()]);
 
 	return (
 		<div id="top" className="relative flex flex-col gap-[28px] md:gap-[56px]">
@@ -30,7 +30,7 @@ export default async function HomePage() {
 				sinceLabel={staticHeaderContent.sinceLabel}
 			/>
 			<main className="relative z-20 flex w-full flex-col gap-[96px] md:gap-[240px]">
-				<HomeCmsContent />
+				<HomeCmsContent initialProjects={projects} />
 				<AboutSection
 					blocks={staticAboutContent.blocks}
 					imageAlt={staticAboutContent.portraitImageAlt}

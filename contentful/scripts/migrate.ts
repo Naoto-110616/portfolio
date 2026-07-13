@@ -9,6 +9,7 @@ import createContact from "../migrations/004-create-contact";
 import addProjectDisplaySections from "../migrations/005-add-project-display-sections";
 import createContactInquiries from "../migrations/006-create-contact-inquiries";
 import createContactFormSettings from "../migrations/007-create-contact-form-settings";
+import requireProjectDisplaySections from "../migrations/008-require-project-display-sections";
 
 loadEnvConfig(process.cwd());
 
@@ -25,6 +26,7 @@ const migrations: NamedMigration[] = [
 	{ id: "005-add-project-display-sections", migrationFunction: addProjectDisplaySections },
 	{ id: "006-create-contact-inquiries", migrationFunction: createContactInquiries },
 	{ id: "007-create-contact-form-settings", migrationFunction: createContactFormSettings },
+	{ id: "008-require-project-display-sections", migrationFunction: requireProjectDisplaySections },
 ];
 
 function getFlagValue(flagName: string) {
