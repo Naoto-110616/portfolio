@@ -24,8 +24,8 @@ type AboutSectionProps = {
 
 const defaultLeadText = "モダンなWebに、体験と仕組みをデザインするフロントエンドエンジニア";
 
-/** ピン開始位置（`ScrollTrigger.start` と画像中央の推定に併用） */
-const ABOUT_PIN_START_VIEWPORT_PCT = 12;
+/** sticky 開始位置（desktop） */
+const ABOUT_STICKY_TOP_VIEWPORT_PCT = 12;
 
 const defaultBlocks: AboutBlock[] = [
 	{
@@ -79,21 +79,12 @@ export function AboutSection({
 	imageAlt = NAME_PORTRAIT_ALT,
 	blocks = defaultBlocks,
 }: AboutSectionProps) {
-	const beyondIndex = blocks.findIndex((b) => b.title === "Beyond");
-	const unpinPanelIndex = beyondIndex >= 0 ? beyondIndex : Math.max(0, blocks.length - 1);
-
 	const scrollRootRef = useRef<HTMLDivElement>(null);
-	const pinRef = useRef<HTMLDivElement>(null);
-	const contentRef = useRef<HTMLDivElement>(null);
-	const beyondPanelRef = useRef<HTMLDivElement>(null);
 
 	useLayoutEffect(() => {
 		const root = scrollRootRef.current;
-		const pinEl = pinRef.current;
-		const contentEl = contentRef.current;
-		const beyondPanelEl = beyondPanelRef.current;
 
-		if (!root || !pinEl || !contentEl) {
+		if (!root) {
 			return;
 		}
 
@@ -105,43 +96,6 @@ export function AboutSection({
 
 		const ctx = gsap.context(() => {
 			mm.add("(min-width: 768px)", () => {
-				const pinHeight = pinEl.offsetHeight || 491;
-				const beyondUnpinEnd = () => {
-					const vh = window.innerHeight;
-					const imgMidPercent = ABOUT_PIN_START_VIEWPORT_PCT + (pinHeight / 2 / vh) * 100;
-					const clamped = Math.min(56, Math.max(20, imgMidPercent));
-					return `top ${clamped.toFixed(2)}%`;
-				};
-
-				// Beyond ブロック上端が写真の縦中央付近（ビューポート割合）に来たらピン解除
-				if (beyondPanelEl) {
-					ScrollTrigger.create({
-						trigger: root,
-						start: `top ${ABOUT_PIN_START_VIEWPORT_PCT}%`,
-						endTrigger: beyondPanelEl,
-						end: beyondUnpinEnd,
-						pin: pinEl,
-						pinSpacing: true,
-						anticipatePin: 0,
-						pinReparent: false,
-						fastScrollEnd: true,
-						invalidateOnRefresh: true,
-					});
-				} else {
-					ScrollTrigger.create({
-						trigger: root,
-						start: `top ${ABOUT_PIN_START_VIEWPORT_PCT}%`,
-						endTrigger: contentEl,
-						end: "bottom bottom",
-						pin: pinEl,
-						pinSpacing: true,
-						anticipatePin: 0,
-						pinReparent: false,
-						fastScrollEnd: true,
-						invalidateOnRefresh: true,
-					});
-				}
-
 				const panels = gsap.utils.toArray<HTMLElement>("[data-about-scroll-panel]", root);
 
 				panels.forEach((panel) => {
@@ -173,7 +127,7 @@ export function AboutSection({
 			mm.revert();
 			ctx.revert();
 		};
-	}, [blocks.length, imageUrl, leadText, unpinPanelIndex]);
+	}, [blocks.length]);
 
 	return (
 		<section id="about" className="md:pb-block-xl w-full">
@@ -184,7 +138,10 @@ export function AboutSection({
 					ref={scrollRootRef}
 					className="gap-block flex flex-col md:grid md:grid-cols-[368px_minmax(0,1fr)] md:items-start md:gap-4"
 				>
-					<div ref={pinRef} className="md:self-start">
+					<div
+						className="md:sticky md:self-start"
+						style={{ top: `calc(${ABOUT_STICKY_TOP_VIEWPORT_PCT}vh)` }}
+					>
 						<MosaicHoverImage
 							alt={imageAlt}
 							className="aspect-1536/2048 w-full object-cover md:aspect-auto md:h-[491px] md:w-[368px]"
@@ -197,7 +154,7 @@ export function AboutSection({
 						/>
 					</div>
 
-					<div ref={contentRef} className="flex flex-col gap-[48px] md:gap-[480px]">
+					<div className="flex flex-col gap-[48px] md:gap-[480px]">
 						<div data-about-scroll-panel>
 							<p className="text-section text-foreground md:max-w-[512px] md:text-[40px] md:leading-[1.4] md:font-black">
 								{leadText}
@@ -207,7 +164,6 @@ export function AboutSection({
 						{blocks.map((block, index) => (
 							<div
 								key={block.id ?? `${block.title}-${index}`}
-								ref={index === unpinPanelIndex ? beyondPanelRef : undefined}
 								data-about-scroll-panel
 							>
 								<AboutContentBlock {...block} />
